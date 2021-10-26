@@ -146,29 +146,64 @@
     <section class="u-clearfix u-white u-section-1" id="sec-fd9a">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-grey-75 u-text-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Jobs in India</h2>
+
+
+        <div class="u-expanded-width u-layout-grid u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+
+<?php
+
+  $query="SELECT * FROM Jobs ";
+  $Jobs_list=mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($Jobs_list)){
+
+     $id = $row['id'];
+     $Logo = $row['Logo'];
+     $Job_title = $row['Job_title'];
+     $Company_name = $row['Company_name'];
+     $Location = $row['Location'];
+     $Job_time = $row['Job_time'];
+     $Job_description = $row['Job_description'];
+
+
+?>
+
+
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-custom-item u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-2">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
+                  <!-- <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com"> Senior Software Engineer MacOS</a> -->
+                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com"> <?php echo $Job_title; ?></a>
                 </p>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-2">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-3"> CrysCloud Pvt. Ltd</p>
+                <!-- <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-3"> CrysCloud Pvt. Ltd</p> -->
+                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-3"> <?php echo $Company_name; ?></p>
               </div>
             </div>
             <div class="u-container-style u-custom-item u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-4">India (Remote)</p>
+                <!-- <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-4">India (Remote)</p> -->
+                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-4"><?php echo $Location; ?></p>
               </div>
             </div>
           </div>
         </div>
-        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
-        <div class="u-list u-list-2">
+        <!-- <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113"> -->
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/<?php echo $Logo; ?>" alt="" data-image-width="198" data-image-height="113">
+
+<?php  } ?>
+
+       </div>
+    </div>
+<!-- </section> -->
+
+        <!-- <div class="u-list u-list-2">
           <div class="u-repeater u-repeater-2">
             <div class="u-container-style u-custom-item u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-4">
@@ -278,6 +313,9 @@
         </div>
         <img class="u-image u-image-default u-preserve-proportions u-image-5" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
         <img class="u-image u-image-default u-preserve-proportions u-image-6" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
+ -->
+
+
       </div>
     </section>
     
