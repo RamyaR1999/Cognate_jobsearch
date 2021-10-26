@@ -12,35 +12,29 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
+<link rel="stylesheet" href="Page-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
+    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Profile Icon -->
 
-<!-- Profile Icon -->
-
- <!-- <link rel="stylesheet" href="assets/css/shared/style.css"> -->
-
+ <link rel="stylesheet" href="assets/css/shared/style.css">   
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": "Site2",
+		"name": "",
 		"logo": "images/default-logo.png",
 		"sameAs": []
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Page 1">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-3ee6"><div class="u-clearfix u-sheet u-sheet-1">
-    <div class="u-text u-text-palette-5-dark-2 u-title u-text-1">
-        <a href="Home.php" class="u-image u-logo u-image-1">
+  <body class="u-body"><header class="u-clearfix u-header u-white u-header" id="sec-6baa"><div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
           <img src="images/cognate.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -114,23 +108,16 @@
 
         </ul>
           </div>
-
-
-
-
-
-
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-sidenav-overflow">
+              <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php" style="padding: 10px 20px;">Job seekers</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="View_All_Artists.php" style="padding: 10px 20px;">Hiring</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="padding: 10px 20px;">About us</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
-
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="padding: 10px 20px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
 
  <?php
 
@@ -154,84 +141,40 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      </div></div></header>
-    <section class="u-align-right u-clearfix u-white u-section-1" id="carousel_8813">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <!-- <div class="u-align-left u-container-style u-group u-group-1"> -->
-          <div class="u-container-layout u-container-layout-1">
-            <center><h1 class="u-text u-text-palette-5-dark-2 u-title u-text-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="X">Find Your Job</h1></center>
-            <!-- <a href="Register-Member.php" data-page-id="867430778" class="u-border-none u-btn u-btn-round u-button-style u-palette-1-base u-radius-27 u-text-body-alt-color u-btn-1">Register HERE</a> -->
-
-
-<!-- <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
-
-<style>
-
-.input-group .form-control {
-
-  border-color: grey;
-  box-sizing: inherit;
-  border-style: solid;
-  min-width: 490px;
-  min-height: 50px;
-  text-align: left;
-  /*border: solid 2px #2175d9;*/
-}
-
-input[type="text" i] .form-control{
-
- border: solid 2px #2175d9;
-
-}
-
-.input-group .btn-primary {
-
-  background-color: #057eff;
-  border-color: #057eff;
-  border-style: solid;
-  min-width: 62px;
-  min-height: 50px;
-  cursor: pointer;
-
-}
-
-.input-group .input-group-btn {
-
-  padding-right: 0px;
-
-}
-
-</style>
-
-
-      <!-- <center> -->
-<div class="u-layout-row">
-      <div class="col-md-3">
-        <br><br>
-             <form action="" method="post" autocomplete="off">
-                 <div class="input-group">
-                     <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control">
-                  <!--  </div>
-                   <div class="input-group"> -->
-                     <input name="Name" id="demoB" type="text" placeholder="Enter postcode" class="form-control">
-                        <span class="input-group-btn">
-                            <button name="submit" class="btn btn-primary" type="submit">
-                                <!-- <span class="glyphicon glyphicon-search">Search</span> -->
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                   </div>
-              </form>
-         </div>
-       </div>
-       <!-- </center> -->
-
-          <!-- </div> -->
+      </div></header>
+    <section class="u-clearfix u-lightbox u-white u-section-1" id="sec-de5a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-center u-text u-text-grey-80 u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
+        <div class="u-form u-form-1">
+          <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom">
+            <div class="u-form-group u-form-name">
+              <label for="name-ef64" class="u-form-control-hidden u-label">Name</label>
+              <input type="text" placeholder="Enter job title" id="name-ef64" name="name" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" required="">
+            </div>
+            <div class="u-form-email u-form-group">
+              <label for="email-ef64" class="u-form-control-hidden u-label">Email</label>
+              <input type="email" placeholder="Pincode" id="email-ef64" name="email" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" required="">
+            </div>
+            <div class="u-form-group u-form-submit">
+              <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
+</g>
+</g></svg><img></span>&nbsp;<br>
+              </a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
+            <div class="u-form-send-error u-form-send-message">#FormSendError</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
         </div>
       </div>
     </section>
-
-    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <section class="u-align-center u-clearfix u-section-2" id="sec-fa03">
+      <div class="u-align-left u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+    
+    
+   <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -264,6 +207,3 @@ input[type="text" i] .form-control{
 
   </body>
 </html>
-
-
-
