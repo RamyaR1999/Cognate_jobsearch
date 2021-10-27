@@ -1,9 +1,26 @@
-// #Register Meber.php
+
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php 
 
      if(isset($_POST['submit'])){
+
+      require 'PHPMailer/PHPMailerAutoload.php';
+  
+$mail = new PHPMailer;
+
+
+$rndno=rand(100000, 999999);
+echo $rndno;//OTP generate
+#$mail->SMTPDebug = 3;
+
+$mail->isSMTP();
+
+$mail->Host = 'smtp.gmail.com';
+$mail->Port=587;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure='tls';
+
          
          $Firstname=  $_POST['Firstname'];
          $Lastname=  $_POST['Lastname'];
@@ -18,8 +35,30 @@
          $Salary =$_POST['Salary'];
          $CV = $_FILES['CV']['Name'];
          $upload = "uploads/".$CV;
-         
+         $otp=$_POST['otp'];
+         $otp=$rndno;
          $error = 0;
+    
+
+          $mail->Username = 'barthalomena17@gmail.com';
+          $mail->Password = 'mena@2001';
+          
+          $mail->setFrom ($_POST['email'],$_POST['Firstname']);
+          $mail->addAddress('barthalomena@gmail.com');
+          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+          
+          $mail->isHTML(true);
+          $mail->Subject = $_POST['Firstname'];;
+          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'].$rndno;
+          
+          if(!$mail->send()) {
+             echo "Message could not be sent.". $mail->ErrorInfo;
+          }else{
+            echo " otp sent successfully to ur mail: " ;
+          }
+          //}
+            
+
 
       if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password)){
           
@@ -61,8 +100,8 @@
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,City,Industry,Function,Education,Experience,Salary,CV) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,City,Industry,Function,Education,Experience,Salary,CV,otp) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','{$City}','{$Industry}','{$Function}','{$Education}','{$Experience}','{$Salary}','{$upload}','{$rndno}')";
              
         $register_query = mysqli_query($connection,$query);
             
