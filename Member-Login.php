@@ -11,51 +11,59 @@
         $password = mysqli_real_escape_string($connection,$_POST['password']);
         $password = md5($password);  
     
-        $query = "SELECT * FROM register WHERE email = '{$email}' ";
-        $select_register_query = mysqli_query($connection, $query);
+        $query = "SELECT * FROM users WHERE email = '{$email}' ";
+        $select_users_query = mysqli_query($connection, $query);
         
-        if(!$select_register_query){
+        if(!$select_users_query){
             
             die("Query Failed" . mysqli_error($connection));
             
         }
           
-          while($row = mysqli_fetch_array($select_register_query)){
-              
+          while($row = mysqli_fetch_array($select_users_query)){
                $db_id = $row['id'];
-               $db_phone = $row['phone'];
-               $db_role = $row['role'];
-               $db_email = $row['email'];
-               $db_password = $row['password'];
-               $db_firstname = $row['firstname'];
-               $db_lastname = $row['lastname'];
-               $db_fullname = $row['fullname'];
-               $db_image = $row['image'];
+               $db_Email    = $row['Email'];
+               $db_Password = $row['Password'];
+               $db_Phone=  $row['Phone'];
+               $db_Firstname=  $row['Firstname'];
+               $db_Lastname=  $row['Lastname'];
+               $db_City=  $row['City'];
+               $db_Industry=  $row['Industry'];
+               $db_Function=  $row['Function'];
+               $db_Education =$row['Education'];
+               $db_Experience =$row['Experience'];
+               $db_Salary =$row['Salary'];
+               $db_CV = $row['CV'];
               
           }
         
         
-        if($email === $db_email){
-        if($password === $db_password){
+        if($Email === $db_Email){
+        if($Password === $db_Password){
      
             
-             $_SESSION['email'] = $db_email;
-             $_SESSION['firstname'] = $db_firstname;
-             $_SESSION['lastname'] = $db_lastname;
-             $_SESSION['fullname'] = $db_fullname;
-             $_SESSION['image'] = $db_image;
-             $_SESSION['phone'] = $db_phone;
-             $_SESSION['role'] = $db_role;
+             $_SESSION['Email'] = $$db_Email;
+             $_SESSION['Firstname'] = $db_Firstname;
+             $_SESSION['Lastname'] = $db_Lastname;
+             $_SESSION['City'] = $db_City;
+             $_SESSION['Industry'] = $db_Industry;
+             $_SESSION['Function'] =  $db_Function;
+             $_SESSION['Education'] = $db_Education;
+             $_SESSION['Experience'] = $db_Experience;
+             $_SESSION['Salary'] = $db_Salary;
+             $_SESSION['CV'] = $db_CV;
+             $_SESSION['Phone'] = $db_Phone;
+             
 
  header("Location:Home.php");
            
         }else{
             
-            $message_password = "Incorrect password";
+            $message_Password = "Incorrect password";
         }
          
         }else{
-            $message_email = "Invalid Email";   
+            $message_Email = "Invalid Email";   
               
         }
         
@@ -219,16 +227,16 @@
               <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
                 <div class="u-form-group u-form-name">
                   <label for="email-cd60" class="u-form-control-hidden u-label"></label>
-                  <input type="text" placeholder="Email" id="email-cd60" name="email" value="<?php echo isset($_REQUEST["email"]) ? $_REQUEST["email"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
+                  <input type="text" placeholder="Email" id="email-cd60" name="Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
                   
-                  <h6 class="text-center" style="color:#ff0000"><?php echo $message_email; ?></h6>
+                  <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
                 </div>
                 <div class="u-form-group u-form-password">
                   <label for="password-708d" class="u-form-control-hidden u-label"></label>
-                  <input type="password" placeholder="Password" id="id_password" name="password" value="<?php echo isset($_REQUEST["password"]) ? $_REQUEST["password"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
+                  <input type="Password" placeholder="Password" id="id_password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
                   <!-- <span class="far fa-eye" id="togglePassword" style="margin-left: 350px; cursor: pointer;"></span> -->
                 </div>
-                <h6 class="text-center" style="color:#ff0000"><?php echo $message_password; ?></h6>
+                <h6 class="text-center" style="color:#ff0000"><?php echo $message_Password; ?></h6>
                 <div class="u-form-checkbox u-form-group">
                   <input type="checkbox" id="checkbox-708d" name="remember" value="On">
                   <label for="checkbox-708d" class="u-label">Remember me</label>
