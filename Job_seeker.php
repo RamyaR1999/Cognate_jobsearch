@@ -56,7 +56,7 @@
 
   <?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) === $db_Email){
 
   ?> 
 
@@ -73,18 +73,18 @@
 
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
+              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
 
-  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
+  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['firstname'])){
+                      if(isset($_SESSION['Firstname'])){
                           
-                        echo $_SESSION['firstname']; 
+                        echo $_SESSION['Firstname']; 
                          
                       }
                       
@@ -125,7 +125,7 @@
 
 <?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) == $db_email){
 
   ?> 
 
@@ -240,28 +240,28 @@
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="https://nicepage.com" target="_blank">Information technology</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="Available_jobs.php" target="_blank">Information technology</a>
                 </p>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-3">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-2" href="https://nicepage.com" target="_blank">banking &amp; finance</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-2" href="Available_jobs.php" target="_blank">banking &amp; finance</a>
                 </p>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-3">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-4">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="https://nicepage.com" target="_blank">Manufacturing</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="Available_jobs.php" target="_blank">Manufacturing</a>
                 </p>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-4">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-5">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="https://nicepage.com" target="_blank">See all jobs</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="Available_jobs.php" target="_blank">See all jobs</a>
                 </p>
               </div>
             </div>

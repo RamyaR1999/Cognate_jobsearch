@@ -25,6 +25,7 @@
                $db_Email    = $row['Email'];
                $db_Password = $row['Password'];
                $db_Phone=  $row['Phone'];
+               $db_Image=  $row['Image'];
                $db_Firstname=  $row['Firstname'];
                $db_Lastname=  $row['Lastname'];
                $db_City=  $row['City'];
@@ -42,9 +43,10 @@
         if($Password === $db_Password){
      
             
-             $_SESSION['Email'] = $$db_Email;
+             $_SESSION['Email'] = $db_Email;
              $_SESSION['Firstname'] = $db_Firstname;
              $_SESSION['Lastname'] = $db_Lastname;
+             $_SESSION['Image']=  $db_Image;
              $_SESSION['City'] = $db_City;
              $_SESSION['Industry'] = $db_Industry;
              $_SESSION['Function'] =  $db_Function;
@@ -55,7 +57,7 @@
              $_SESSION['Phone'] = $db_Phone;
              
 
- header("Location:Home.php");
+ header("Location:Job_seeker.php");
            
         }else{
             
@@ -121,56 +123,10 @@
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
 
-  <?php
-
-    if(isset($_SESSION['email']) == $db_email){
-
-  ?> 
-
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Member-Login.php" style="padding: 10px 20px;">Login</a>
 </li>
 
-  <?php 
-              
-      }else{
-              
-    ?> 
-
-
-           <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <div class="dropdown-header text-center">
-
-  <img class="" style="width:60px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
-
-                  <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                      <?php
-                      
-                      if(isset($_SESSION['firstname'])){
-                          
-                        echo $_SESSION['firstname']; 
-                         
-                      }
-                      
-                      ?>
-                      
-                    </p>
-                  
-                </div>
-                <a class="dropdown-item" href="profile.php">My Profile <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
-                 
-                <a class="dropdown-item"href="Logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
-              
-              </div>
-          </li>
-
-<?php 
-              
-      }
-
-    ?> 
+ 
 
         </ul>
           </div>

@@ -27,6 +27,7 @@ $mail->SMTPSecure='tls';
          $Email    = $_POST['Email'];
          $Password = $_POST['Password'];
          $Phone=  $_POST['Phone'];
+         $Image=  $_POST['Image'];
          $City=  $_POST['City'];
          $Industry=  $_POST['Industry'];
          $Function=  $_POST['Function'];
@@ -92,15 +93,15 @@ $mail->SMTPSecure='tls';
 
           $row = mysqli_fetch_assoc($check_users_query);
 
-            if($email==$row['email'])
+            if($Email==$row['Email'])
             {
                 $message_email= "Email already exists";
             }
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload','$rndno')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -218,8 +219,12 @@ $mail->SMTPSecure='tls';
     <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
+<!-- Profile Icon -->
+
+ <link rel="stylesheet" href="assets/css/shared/style.css"> 
+
     <!-- password Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
     
     <script type="application/ld+json">{
     "@context": "http://schema.org",
@@ -255,14 +260,14 @@ $mail->SMTPSecure='tls';
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
 
-  <?php
+ <?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) === $db_Email){
 
   ?> 
 
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Member-Login.php" style="padding: 10px 20px;">Login</a>
-</li>
+
+<li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
   <?php 
               
@@ -271,20 +276,21 @@ $mail->SMTPSecure='tls';
     ?> 
 
 
-           <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+
+        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
+              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
 
-  <img class="" style="width:60px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
+  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['firstname'])){
+                      if(isset($_SESSION['Firstname'])){
                           
-                        echo $_SESSION['firstname']; 
+                        echo $_SESSION['Firstname']; 
                          
                       }
                       
@@ -317,8 +323,7 @@ $mail->SMTPSecure='tls';
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="padding: 10px 20px;">About us</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
-
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
 
  <?php
 
@@ -705,6 +710,10 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
     </section>
+
+      <!-- Profile Icon -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+
   </body>
 </html>
 

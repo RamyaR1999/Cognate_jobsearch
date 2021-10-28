@@ -56,9 +56,9 @@
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About-us.html" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
 
- <?php
+<?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) === $db_Email){
 
   ?> 
 
@@ -75,18 +75,18 @@
 
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
+              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
 
-  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
+  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['firstname'])){
+                      if(isset($_SESSION['Firstname'])){
                           
-                        echo $_SESSION['firstname']; 
+                        echo $_SESSION['Firstname']; 
                          
                       }
                       
@@ -271,7 +271,7 @@
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
                 <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p>
-                <a href="Job_details.php" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
+                <a href="Job_details.php?Job_details=<?php echo $id ?>" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
               </div>
             </div>
 
