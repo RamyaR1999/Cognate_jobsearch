@@ -266,7 +266,7 @@
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>">
                 <p class="u-text u-text-default u-text-1">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php" target="_blank"><?php echo $Job_title; ?></a>
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $id ?>" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>

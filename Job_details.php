@@ -212,7 +212,11 @@
 
 <?php
 
-  $query="SELECT * FROM Jobs WHERE id='1' ";
+  if(isset($_GET['Job_details'])){
+
+  $the_id = $_GET['Job_details'];
+
+  $query="SELECT * FROM Jobs WHERE id='$the_id' ";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
@@ -227,6 +231,8 @@
      $Job_description = $row['Job_description'];
 
 
+   }
+ }
 ?>
 
         <h1 class="u-text u-text-1"><?php echo $Job_title; ?></h1>
@@ -235,7 +241,7 @@
         <p class="u-text u-text-3"><?php echo $Job_posted; ?></p>
         <p class="u-text u-text-4">permanent</p>
 
-<?php } ?>
+
 
       </div>
     </section>
