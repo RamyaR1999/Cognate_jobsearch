@@ -43,13 +43,13 @@ $mail->SMTPSecure='tls';
           $mail->Username = 'barthalomena17@gmail.com';
           $mail->Password = 'mena@2001';
           
-          $mail->setFrom ($_POST['email'],$_POST['Firstname']);
-          $mail->addAddress('barthalomena@gmail.com');
+          $mail->setFrom ($_POST['Email'],$_POST['Firstname']);
+          $mail->addAddress($_POST['Email']);
           #$mail->addReplyTo( $_POST['email'],$_POST['name']);
           
           $mail->isHTML(true);
-          $mail->Subject = $_POST['Firstname'];;
-          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'].$rndno;
+          $mail->Subject = "your otp is here:".$rndno;
+          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'];
           
           if(!$mail->send()) {
              echo "Message could not be sent.". $mail->ErrorInfo;
