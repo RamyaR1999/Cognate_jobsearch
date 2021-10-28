@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Oct 26, 2021 at 08:53 AM
+-- Generation Time: Oct 28, 2021 at 06:10 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -34,6 +34,7 @@ CREATE TABLE `jobs` (
   `Job_title` varchar(60) NOT NULL,
   `Company_name` varchar(60) NOT NULL,
   `Location` varchar(60) NOT NULL,
+  `Job_posted` date DEFAULT NULL,
   `Job_time` varchar(40) NOT NULL,
   `Job_description` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -42,9 +43,9 @@ CREATE TABLE `jobs` (
 -- Dumping data for table `jobs`
 --
 
-INSERT INTO `jobs` (`id`, `Logo`, `Job_title`, `Company_name`, `Location`, `Job_time`, `Job_description`) VALUES
-(1, 'CrysCloud.jpg', 'Senior Software Engineer MacOS', 'CrysCloud Pvt. Ltd', 'India(Remote)', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.'),
-(2, 'CrysCloud.jpg', 'Senior Software Engineer MacOS', 'CrysCloud Pvt. Ltd', 'India(Remote)', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.');
+INSERT INTO `jobs` (`id`, `Logo`, `Job_title`, `Company_name`, `Location`, `Job_posted`, `Job_time`, `Job_description`) VALUES
+(1, 'CrysCloud.jpg', 'Senior Software Engineer MacOS', 'CrysCloud Pvt. Ltd', 'Bangalore', '2021-07-20', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.\r\nA launch pad into various senior management opportunities – within the many business lines of\r\nEurofins globally – or into the management hierarchy in our different corporate functions.\r\nThe opportunity to grow your project management skills in a demanding, fast growing organization.\r\nA chance to become part of a highly motivated international team of professionals.\r\nIn a fast growing group, successful leaders are frequently being offered increased areas of\r\nresponsibility (subject to geographic mobility).'),
+(2, 'CrysCloud.jpg', 'Senior Software Engineer MacOS', 'CrysCloud Pvt. Ltd', 'Chennai', NULL, 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.');
 
 -- --------------------------------------------------------
 
@@ -61,12 +62,19 @@ CREATE TABLE `users` (
   `Phone` varchar(15) NOT NULL,
   `City` varchar(30) NOT NULL,
   `Industry` varchar(30) NOT NULL,
-  `Function` varchar(20) NOT NULL,
+  `Function` varchar(200) NOT NULL,
   `Education` varchar(40) NOT NULL,
   `Experience` varchar(40) NOT NULL,
   `Salary` varchar(40) NOT NULL,
   `CV` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Phone`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`) VALUES
+(1, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'Cuttack', 'Agriculture / Diary', 'IT Software - Mainframe', 'ICWA (CMA)', '1', '0', 'uploads/');
 
 --
 -- Indexes for dumped tables
@@ -98,7 +106,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
