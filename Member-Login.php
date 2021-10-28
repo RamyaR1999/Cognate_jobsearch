@@ -5,13 +5,13 @@
     
     if(isset($_REQUEST['submit'])){
          
-        $email    = $_REQUEST['email'];
-        $password = $_REQUEST['password'];
+        $Email    = $_REQUEST['Email'];
+        $Password = $_REQUEST['Password'];
                         
-        $password = mysqli_real_escape_string($connection,$_POST['password']);
-        $password = md5($password);  
+        $Password = mysqli_real_escape_string($connection,$_POST['Password']);
+        $Password = md5($Password);  
     
-        $query = "SELECT * FROM users WHERE email = '{$email}' ";
+        $query = "SELECT * FROM users WHERE Email = '{$Email}' ";
         $select_users_query = mysqli_query($connection, $query);
         
         if(!$select_users_query){
