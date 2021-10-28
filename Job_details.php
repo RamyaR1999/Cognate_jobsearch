@@ -62,7 +62,7 @@
   ?> 
 
 
-<li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Member-Login.php" style="padding: 6px 0px;">Member-Login</a></li>
+<li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
   <?php 
               
@@ -131,7 +131,7 @@
 
   ?> 
 
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member-Login.php" style="padding: 6px 0px;">Member-Login</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
 <?php 
               
@@ -234,7 +234,7 @@
         <a href="https://nicepage.com/css-templates" class="u-border-2 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-3 u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-1">apply now</a>
         <p class="u-text u-text-3"><?php echo $Job_posted; ?></p>
         <p class="u-text u-text-4">permanent</p>
-        
+
 <?php } ?>
 
       </div>
