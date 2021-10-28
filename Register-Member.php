@@ -1,26 +1,8 @@
-
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php 
 
      if(isset($_POST['submit'])){
-
-      require 'PHPMailer/PHPMailerAutoload.php';
-  
-$mail = new PHPMailer;
-
-
-$rndno=rand(100000, 999999);
-echo $rndno;//OTP generate
-#$mail->SMTPDebug = 3;
-
-$mail->isSMTP();
-
-$mail->Host = 'smtp.gmail.com';
-$mail->Port=587;
-$mail->SMTPAuth = true;
-$mail->SMTPSecure='tls';
-
          
          $Firstname=  $_POST['Firstname'];
          $Lastname=  $_POST['Lastname'];
@@ -35,30 +17,8 @@ $mail->SMTPSecure='tls';
          $Salary =$_POST['Salary'];
          $CV = $_FILES['CV']['Name'];
          $upload = "uploads/".$CV;
-         $otp=$_POST['otp'];
-         $otp=$rndno;
+         
          $error = 0;
-    
-
-          $mail->Username = 'barthalomena17@gmail.com';
-          $mail->Password = 'mena@2001';
-          
-          $mail->setFrom ($_POST['Email'],$_POST['Firstname']);
-          $mail->addAddress($_POST['Email']);
-          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
-          
-          $mail->isHTML(true);
-          $mail->Subject = "your otp is here:".$rndno;
-          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'];
-          
-          if(!$mail->send()) {
-             echo "Message could not be sent.". $mail->ErrorInfo;
-          }else{
-            echo " otp sent successfully to ur mail: " ;
-          }
-          //}
-            
-
 
       if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password)){
           
@@ -100,8 +60,8 @@ $mail->SMTPSecure='tls';
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,City,Industry,Function,Education,Experience,Salary,CV,otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','{$City}','{$Industry}','{$Function}','{$Education}','{$Experience}','{$Salary}','{$upload}','{$rndno}')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,City,Industry,Function,Education,Experience,Salary,CV) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -249,8 +209,8 @@ $mail->SMTPSecure='tls';
           </div>
           <div class="u-custom-menu u-nav-container">
            <ul class="u-nav u-unstyled u-nav-1">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php" style="padding: 10px 20px;">Job seekers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="View_All_Artists.php" style="padding: 10px 20px;">Hiring</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php" style="padding: 10px 20px;">Job seekers</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register-Member.php" style="padding: 10px 20px;">Employers</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.php" style="padding: 10px 20px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
@@ -274,11 +234,11 @@ $mail->SMTPSecure='tls';
 
            <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
+              <img class="" style="width:40px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
 
-  <img class="" style="width:60px" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
+  <img class="" style="width:60px border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -314,7 +274,7 @@ $mail->SMTPSecure='tls';
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php" style="padding: 10px 20px;">Job seekers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="View_All_Artists.php" style="padding: 10px 20px;">Hiring</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Employers</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="padding: 10px 20px;">About us</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>

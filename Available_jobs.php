@@ -11,18 +11,18 @@
     <meta name="keywords" content="Jobs in India">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Available Jobs</title>
+    <title>find a job</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Page-2.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-  
+    
  <!-- Profile Icon -->
 
- <link rel="stylesheet" href="assets/css/shared/style.css">
-
+ <link rel="stylesheet" href="assets/css/shared/style.css"> 
+    
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -35,36 +35,35 @@
     <meta property="og:title" content="Page 2">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body"><header class="u-clearfix u-header u-white u-header" id="sec-6baa"><div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-          <img src="images/cognate.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+  <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
+        <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
+          <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+            <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+              <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
+            </a>
+            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+              <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+                <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-2-base" href="#">
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </symbol>
 </defs></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-             <ul class="u-nav u-unstyled u-nav-1">
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php" style="padding: 10px 20px;">Job seekers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="View_All_Artists.php" style="padding: 10px 20px;">Hiring</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.php" style="padding: 10px 20px;">About us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
+                </a>
+              </div>
+              <div class="u-custom-menu u-nav-container">
+                <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Register-Member.php" style="padding: 6px 0px;">Employers</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About-us.html" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
 
-  <?php
+ <?php
 
     if(isset($_SESSION['email']) == $db_email){
 
   ?> 
 
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Member-Login.php" style="padding: 10px 20px;">Login</a>
-</li>
+
+<li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
   <?php 
               
@@ -73,7 +72,8 @@
     ?> 
 
 
-           <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+
+        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -106,50 +106,141 @@
               
       }
 
-    ?> 
+?> 
 
-        </ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-               <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php" style="padding: 10px 20px;">Job seekers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="View_All_Artists.php" style="padding: 10px 20px;">Hiring</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.php" style="padding: 10px 20px;">About us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 10px 20px;">Submit Your CV</a></li>
+<!-- <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Profile.html" style="padding: 6px 0px;">Profile</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
+</li> -->
 
- <?php
+
+
+</ul>
+              </div>
+              <div class="u-custom-menu u-nav-container-collapse">
+                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                  <div class="u-inner-container-layout u-sidenav-overflow">
+                    <div class="u-menu-close"></div>
+                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register-Member.php" style="padding: 6px 0px;">Employers</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About-us.html" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
+
+<?php
 
     if(isset($_SESSION['email']) == $db_email){
 
   ?> 
 
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member-Login.php" style="padding: 10px 20px;">Login</a>
-</li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
- <?php 
+<?php 
               
     }
               
   ?> 
 
+<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
+</li> -->
+
+
 </ul>
+                  </div>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+              </div>
+            </nav>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+        <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
+          <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <p class="u-text u-text-default u-text-1">
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1 active" href="Available_jobs.php">find a job</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-2">
+                    <p class="u-text u-text-default u-text-2">
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2" href="Register-Member.php">submit your CV</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-3">
+                    <p class="u-text u-text-default u-text-3">
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-3" href="https://nicepage.com">career hub</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-4">
+                    <p class="u-text u-text-default u-text-4">
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-4" href="https://nicepage.com">areas of expertise</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                  <div class="u-container-layout u-similar-container u-container-layout-5">
+                    <p class="u-text u-text-default u-text-5">
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="https://nicepage.com">security advice</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
-        </nav>
+          
+          
+          
+          
+          
+        </div>
       </div></header>
-    <section class="u-clearfix u-white u-section-1" id="sec-fd9a">
+    <section class="u-clearfix u-custom-color-2 u-section-1" id="sec-2d18">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-left u-text u-text-default u-text-1">premium jobs</h1>
+        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">jobs in india.</h1>
+        <p class="u-align-left u-text u-text-default u-text-3">640 jobs in India.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-a8b6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-form u-form-1">
+          <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" style="padding: 10px;">
+            <input type="hidden" id="siteId" name="siteId" value="170795794">
+            <input type="hidden" id="pageId" name="pageId" value="206021425">
+            <div class="u-form-group u-form-name">
+              <label for="name-9c33" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Search Job title" id="name-9c33" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-active-grey-5 u-border-2 u-border-active-grey-5 u-border-grey-5 u-border-hover-palette-1-base u-btn u-btn-submit u-button-style u-grey-5 u-hover-palette-1-base u-text-active-palette-1-base u-text-hover-white u-text-palette-1-base u-btn-1">Search</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-41fd">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-align-center u-text u-text-grey-75 u-text-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Jobs in India</h2>
-
-
-        <div class="u-expanded-width u-layout-grid u-list u-list-1">
+        <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
+
 
 <?php
 
@@ -163,164 +254,106 @@
      $Job_title = $row['Job_title'];
      $Company_name = $row['Company_name'];
      $Location = $row['Location'];
+     $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_description = $row['Job_description'];
+     $Job_description = substr($row['Job_description'],0,200);
 
 
 ?>
 
-
-        <div class="u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+    
+          <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-2">
-                  <!-- <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com"> Senior Software Engineer MacOS</a> -->
-                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com"> <?php echo $Job_title; ?></a>
+                <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>">
+                <p class="u-text u-text-default u-text-1">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
+                <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
+                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
+                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p>
+                <a href="Job_details.php" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
               </div>
             </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <!-- <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-3"> CrysCloud Pvt. Ltd</p> -->
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-3"> <?php echo $Company_name; ?></p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <!-- <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-4">India (Remote)</p> -->
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-4"><?php echo $Location; ?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113"> -->
-        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/<?php echo $Logo; ?>" alt="" data-image-width="198" data-image-height="113">
+
 
 <?php  } ?>
 
-       </div>
-    </div>
-<!-- </section> -->
 
-        <!-- <div class="u-list u-list-2">
-          <div class="u-repeater u-repeater-2">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-5">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
+            <!-- <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
+                <p class="u-text u-text-default u-text-1">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com" target="_blank">Senior software engineer MacOs</a>
                 </p>
+                <p class="u-text u-text-default u-text-2">20 October 2021</p>
+                <p class="u-text u-text-default u-text-3">chennai, Tamil Nadu</p>
+                <p class="u-text u-text-4"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ....</p>
+                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
               </div>
             </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-5">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-6"> CrysCloud Pvt. Ltd</p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-6">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-7">India (Remote)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
-        <img class="u-image u-image-default u-preserve-proportions u-image-3" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
-        <img class="u-image u-image-default u-preserve-proportions u-image-4" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
-        <div class="u-list u-list-3">
-          <div class="u-repeater u-repeater-3">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-7">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-8">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <img alt="" class="u-image u-image-default u-image-2" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
+                <p class="u-text u-text-default u-text-5">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nicepage.com" target="_blank">Senior software engineer MacOs</a>
                 </p>
+                <p class="u-text u-text-default u-text-6"> 20 October 2021</p>
+                <p class="u-text u-text-default u-text-7">Mumbai, Maharashtra&nbsp;</p>
+                <p class="u-text u-text-8"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ....</p>
+                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-4" target="_blank">read more</a>
               </div>
             </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-8">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-9"> CrysCloud Pvt. Ltd</p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-9">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-10">India (Remote)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-list u-list-4">
-          <div class="u-repeater u-repeater-4">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-10">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-11">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <img alt="" class="u-image u-image-default u-image-3" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
+                <p class="u-text u-text-default u-text-9">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" href="https://nicepage.com" target="_blank">Lead engineer simulation tool development</a>
                 </p>
+                <p class="u-text u-text-default u-text-10"> 20 October 2021</p>
+                <p class="u-text u-text-default u-text-11">chennai, Tamil Nadu</p>
+                <p class="u-text u-text-12"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ...</p>
+                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-6" target="_blank">read more</a>
               </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-11">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-12"> CrysCloud Pvt. Ltd</p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-12">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-13">India (Remote)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-list u-list-5">
-          <div class="u-repeater u-repeater-5">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-13">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-14">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-14">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-15"> CrysCloud Pvt. Ltd</p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-15">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-16">India (Remote)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-list u-list-6">
-          <div class="u-repeater u-repeater-6">
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-16">
-                <p class="u-align-left u-custom-item u-text u-text-grey-90 u-text-17">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6" href="https://nicepage.com"> Senior Software Engineer MacOS</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-17">
-                <p class="u-align-left u-custom-item u-text u-text-grey-75 u-text-18"> CrysCloud Pvt. Ltd</p>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-18">
-                <p class="u-align-left u-custom-item u-text u-text-grey-60 u-text-19">India (Remote)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img class="u-image u-image-default u-preserve-proportions u-image-5" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
-        <img class="u-image u-image-default u-preserve-proportions u-image-6" src="images/CrysCloud.jpg" alt="" data-image-width="198" data-image-height="113">
- -->
+            </div> -->
 
 
+          </div>
+        </div>
+        <div class="u-container-style u-group u-group-1">
+          <div class="u-container-layout u-container-layout-4">
+            <p class="u-text u-text-default u-text-13">jobs by region</p>
+            <p class="u-text u-text-default u-text-14">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" href="https://nicepage.com">Andhra Pradesh</a>
+            </p>
+            <p class="u-text u-text-default u-text-15">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" href="https://nicepage.com">Karnataka</a>
+            </p>
+            <p class="u-text u-text-default u-text-16">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9" href="https://nicepage.com">Tamil Nadu</a>
+            </p>
+            <p class="u-text u-text-default u-text-17">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10" href="https://nicepage.com">Kerala</a>
+            </p>
+            <p class="u-text u-text-default u-text-18">job category</p>
+            <p class="u-text u-text-default u-text-19">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="https://nicepage.com">Information Technology</a>
+            </p>
+            <p class="u-text u-text-default u-text-20">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="https://nicepage.com">Andhra Pradesh</a>
+            </p>
+            <p class="u-text u-text-default u-text-21">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="https://nicepage.com">Andhra Pradesh</a>
+            </p>
+            <p class="u-text u-text-default u-text-22">
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="https://nicepage.com">Andhra Pradesh</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     
     
-   <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
