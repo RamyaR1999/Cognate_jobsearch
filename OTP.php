@@ -51,31 +51,27 @@
     
     if(isset($_REQUEST['verify'])){
          
-        $email    = $_REQUEST['email']; 
+        $email    = $_REQUEST['Email'];
+        $otp =$_REQUEST['otp'] ;
+
+        $otp = mysqli_real_escape_string($connection,$_POST['otp']);
+        $otp = md5($otp);  
     
-        $query = "SELECT * FROM register WHERE email = '{$email}' ";
-        $select_register_query = mysqli_query($connection, $query);
+        $query = "SELECT * FROM users WHERE Email = '{$Email}' ";
+        $select_users_query = mysqli_query($connection, $query);
         
-        if(!$select_register_query){
+        if(!$select_users_query){
             
             die("Query Failed" . mysqli_error($connection));
             
         }
           
-          while($row = mysqli_fetch_array($select_register_query)){
+          while($row = mysqli_fetch_array($select_users_query)){
               
-               $db_id = $row['id'];
-               $db_title = $row['title'];
-               $db_firstname = $row['firstname'];
-               $db_lastname = $row['lastname'];
-               $db_image = $row['image'];
-               $db_phone = $row['phone'];
-               $db_email = $row['email'];
-               $db_instagram = $row['instagram'];
-               $db_facebook = $row['facebook'];
-               $db_twitter = $row['twitter'];
-               $db_youtube = $row['youtube'];         
-              
+               
+               $db_Email = $row['Email'];
+               $db_OTP = $row['otp'];
+               
           }
 
             header("Location:Member-Login.php");
@@ -166,6 +162,10 @@
             
             <div class="u-expanded-width u-form u-login-control u-form-1">
               <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
+              <div class="u-form-group u-form-name">
+                  <label for="email_address" class="u-form-control-hidden u-label"></label>
+                  <input type="text" placeholder="Enter your EMAIL" id="email_address" name="email" class="u-grey-5 u-input u-input-rectangle" required="">
+                </div>
                 <div class="u-form-group u-form-name">
                   <label for="email-cd60" class="u-form-control-hidden u-label"></label>
                   <input type="text" placeholder="Enter your OTP" id="email-cd60" name="email" class="u-grey-5 u-input u-input-rectangle" required="">
