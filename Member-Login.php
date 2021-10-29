@@ -144,7 +144,7 @@
 
  <?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 

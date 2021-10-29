@@ -23,7 +23,10 @@
 
  <link rel="stylesheet" href="assets/css/shared/style.css"> 
     
-    
+<!-- Autocomplete -->
+<script type='text/javascript' src='js/autocomplete.js'></script>
+<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -223,11 +226,11 @@
             <input type="hidden" id="pageId" name="pageId" value="206021425">
             <div class="u-form-group u-form-name">
               <label for="name-9c33" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Search Job title" id="name-9c33" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Search Job title" id="" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
               <a href="#" class="u-active-grey-5 u-border-2 u-border-active-grey-5 u-border-grey-5 u-border-hover-palette-1-base u-btn u-btn-submit u-button-style u-grey-5 u-hover-palette-1-base u-text-active-palette-1-base u-text-hover-white u-text-palette-1-base u-btn-1">Search</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" name=submit value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
@@ -386,3 +389,18 @@
 
   </body>
 </html>
+
+<!-- Autocomplete Script -->
+<script>
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "demoB",
+        data: "search.php",
+        post: { type: "Name" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+</script>
