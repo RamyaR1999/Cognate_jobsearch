@@ -58,7 +58,7 @@
 
 <?php
 
-    if(isset($_SESSION['Email']) === $db_Email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 

@@ -21,7 +21,12 @@
  <!-- Profile Icon -->
 
  <link rel="stylesheet" href="assets/css/shared/style.css">     
-    
+  
+<!-- Autocomplete -->
+<script type='text/javascript' src='js/autocomplete.js'></script>
+<link rel="stylesheet" type='text/css' href="css/autocomplete.css"> 
+
+
     <script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -56,7 +61,7 @@
 
   <?php
 
-    if(isset($_SESSION['Email']) === $db_Email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 
@@ -125,7 +130,7 @@
 
 <?php
 
-    if(isset($_SESSION['Email']) == $db_email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 
@@ -208,21 +213,22 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
+          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
             <div class="u-form-group u-form-name">
               <label for="name-ef64" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Enter job title" id="name-ef64" name="name" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" required="">
+              <!-- <input type="text" placeholder="Enter job title" id="demoB" name="name" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"> -->
+              <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control">
             </div>
             <div class="u-form-email u-form-group">
-              <label for="email-ef64" class="u-form-control-hidden u-label">Email</label>
-              <input type="email" placeholder="Pincode" id="email-ef64" name="pincode" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" required="">
+              <label for="email-ef64" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Pincode" id="email-ef64" name="pincode" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
             </div>
             <div class="u-form-group u-form-submit">
-              <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
-</g>
+              <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
+<!-- </g> -->
 </g></svg><img></span>&nbsp;<br>
               </a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
             <div class="u-form-send-error u-form-send-message">#FormSendError</div>
@@ -304,3 +310,18 @@
 
   </body>
 </html>
+
+<!-- Autocomplete Script -->
+<script>
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "demoB",
+        data: "search.php",
+        post: { type: "Name" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+</script>
