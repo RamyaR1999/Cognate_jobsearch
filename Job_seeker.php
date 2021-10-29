@@ -214,10 +214,21 @@
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
           <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
+
+<style>
+
+/*.form-control{
+
+min-width: 80px;
+
+}*/
+
+</style>  
+
             <div class="u-form-group u-form-name">
               <label for="name-ef64" class="u-form-control-hidden u-label"></label>
-              <!-- <input type="text" placeholder="Enter job title" id="demoB" name="name" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"> -->
-              <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control">
+              <input type="text" placeholder="Enter job title" id="" name="name" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
+              <!-- <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control"> -->
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-ef64" class="u-form-control-hidden u-label"></label>
