@@ -11,7 +11,8 @@ $mail = new PHPMailer;
 
 
 $rndno=rand(100000, 999999);
-echo $rndno;//OTP generate
+echo $rndno;
+//OTP generate
 #$mail->SMTPDebug = 3;
 
 $mail->isSMTP();
