@@ -34407,7 +34407,7 @@ a.u-link.u-text-hover-grey-90:hover {
         .u-container-layout.u-custom-color-2:before,
         .u-table-alt-custom-color-2 tr:nth-child(even)
         {
-            /*color: #ffffff;*/
+            color: #ffffff;
             background-color: #e2921f;
         }
 
