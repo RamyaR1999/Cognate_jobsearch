@@ -254,7 +254,7 @@ $mail->SMTPSecure='tls';
           <div class="u-custom-menu u-nav-container">
            <ul class="u-nav u-unstyled u-nav-1">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php" style="padding: 10px 20px;">Job seekers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register-Member.php" style="padding: 10px 20px;">Employers</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="submit-job.php" style="padding: 10px 20px;">Employers</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Available_jobs.php" style="padding: 10px 20px;">Available Jobs</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.php" style="padding: 10px 20px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.php" style="padding: 10px 20px;">Contact us</a></li>
