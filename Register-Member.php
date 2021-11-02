@@ -43,25 +43,10 @@ $mail->SMTPSecure='tls';
          $error = 0;
     
 
-          $mail->Username = 'barthalomena17@gmail.com';
-          $mail->Password = 'mena@2001';
           
-          $mail->setFrom ('barthalomena@gmail.com');
-          $mail->addAddress($_POST['Email'],$_POST['Firstname']);
-          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
-          
-          $mail->isHTML(true);
-          $mail->Subject = $_POST['Firstname'];;
-          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'].$rndno;
-          
-          if(!$mail->send()) {
-             echo "Message could not be sent.". $mail->ErrorInfo;
-          }else{
-            echo " otp sent successfully to ur mail: " ;
-          }
-          //}
+       
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password)){
+      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary) && !empty($upload)){
           
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
@@ -113,34 +98,29 @@ $mail->SMTPSecure='tls';
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
           
-         $_SESSION['status'] = "Registration Was Successful Please Sign In";   
-           
-             // header("Location:Member-Login.php");
-              header( "Location: otp.php" );
-            // header("Location:email_verification.php"); 
-
-// $to=$email;
-// $subject = "OTP";
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: thennarasan1988@gmail.com" . "\r\n";
-// "CC: reshma21@gmail.com";
-// if(mail($to,$subject,$txt,$headers)){
-
-// $_SESSION['firstname']=$_POST['firstname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
+         $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
 
 
-// header( "Location: otp.php" );
-// }else{
-
-// echo "mail send failed";
-
-// }
+          $mail->Username = 'barthalomena17@gmail.com';
+          $mail->Password = 'mena@2001';
           
+          $mail->setFrom ('barthalomena@gmail.com');
+          $mail->addAddress($_POST['Email'],$_POST['Firstname']);
+          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+          
+          $mail->isHTML(true);
+          $mail->Subject = $_POST['Firstname'];;
+          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'].$rndno;
+          
+          if(!$mail->send()) {
+             echo "Message could not be sent.". $mail->ErrorInfo;
+          }else{
+            echo " otp sent successfully to ur mail: " ;
+          }
+
+           
+              header( "Location: otp.php" ); 
+        
  }
 
 }
@@ -170,7 +150,18 @@ $mail->SMTPSecure='tls';
        }
           
           }else{
-        $message = "Fields cannot be Empty";
+             $empty_firstname = "firstname is required";
+             $empty_lastname = "lastname is required";
+             $empty_email = "email is required";
+             $empty_password = "password is required";
+             $empty_phone = "phone number is required";
+             $empty_city = "city is required";
+             $empty_industry = "industry is required";
+             $empty_function = "function is required";
+             $empty_education = "education is required";
+             $empty_experience = "experience is required";
+             $empty_salary = "salary is required";
+             $empty_cv = "CV is required";
        }  
          
           }else {         
@@ -199,9 +190,31 @@ $mail->SMTPSecure='tls';
 // header( "Location: otp.php" );
 
 // }
+
+// $to=$email;
+// $subject = "OTP";
+// $rndno=rand(100000, 999999);//OTP generate
+// $message = urlencode("otp number.".$rndno);
+// $txt = "OTP: ".$rndno."";
+// $headers = "From: thennarasan1988@gmail.com" . "\r\n";
+// "CC: reshma21@gmail.com";
+// if(mail($to,$subject,$txt,$headers)){
+
+// $_SESSION['firstname']=$_POST['firstname'];
+// $_SESSION['email']=$_POST['email'];
+// $_SESSION['phone']=$_POST['phone'];
+// $_SESSION['otp']=$rndno;
+
+
+// header( "Location: otp.php" );
+// }else{
+
+// echo "mail send failed";
+
+// }
+
+
  ?>
-
-
 
 
 <!DOCTYPE html>
@@ -416,37 +429,28 @@ $mail->SMTPSecure='tls';
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-50 u-white u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
-            <div class="u-layout-row">
-               <div class="col-md-6">
-                  <div class="input-group">
-                     <span style="font-weight: 600;" class="col-sm-3 col-form-label">Firstname: </span><br>
-                        <div class="col-sm-12">
+
+                  <div class="u-form-group u-form-name u-form-group-1">
+                     <span style="font-weight: 600;">Firstname: </span><br>
                           <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
-                        </div>
+                          <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
                       </div>
-                    </div>
-                   &nbsp
-                    &nbsp
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Lastname: </span>
-                        <div class="col-sm-12">
+                      
+
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Lastname: </span>
                           <input type="text"  value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="u-layout-row">
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Email: </span><br>
-                        <div class="col-sm-12">
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Email: </span><br>
                           <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
-                        </div>
+                          <h6 style="color:#ff0000"><?php echo $message_email; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
                       </div>
+<<<<<<< Updated upstream
                     </div>
                     &nbsp
                     &nbsp
@@ -458,26 +462,23 @@ $mail->SMTPSecure='tls';
                           <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                         </div>
+=======
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Password: </span>
+                          <input type="text"  value="<?php echo $Password; ?>" class="form-control" name="Password">
+                          <h6 style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
+>>>>>>> Stashed changes
                       </div>
-                    </div>
-                  </div>
-                  <div class="u-layout-row">
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Phone: </span><br>
-                        <div class="col-sm-12">
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Phone: </span><br>
                           <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone">
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Phone; ?></h6>
-                        </div>
+                          <h6 style="color:#ff0000"><?php echo $message_Phone; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
                       </div>
-                    </div>
-                    &nbsp
-                    &nbsp
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >City: </span>
-                        <div class="col-sm-12">
-                          
+
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">City: </span>
                           <select type="text" class="form-control" name="City"id="City">
                             <option value="-1">-- please select --</option>
                             <option value="Agartala">Agartala</option>
@@ -503,18 +504,11 @@ $mail->SMTPSecure='tls';
                             <option value="Ernakulam">Ernakulam</option>
 
                           </select>
-                       
-                      </div>
+                          <h6 style="color:#ff0000"><?php echo $empty_city; ?></h6>
                     </div>
-                  </div>
-                </div>
-                <div class="u-layout-row">
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Industry: </span><br>
-                        <div class="col-sm-12">
-                          
-                             
+
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Industry: </span><br>
                              <select type="text" class="form-control" name="Industry"id="Industry">
                               <option value="-1">-- please select --</option>
                               <option value="Accounting / Finance">Accounting / Finance</option>
@@ -527,21 +521,11 @@ $mail->SMTPSecure='tls';
                               <option value="Internet / Ecommerce">Internet / Ecommerce</option>
                               <option value="IT-Hardware  Networking">IT-Hardware  Networking</option>
                             </select>
-                          
-                        </div>
+                            <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
                       </div>
-                    </div>
-                    &nbsp
-                    &nbsp
-                    
-                    
 
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Function: </span>
-                        <div class="col-sm-12">
-                          
-                           
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Function: </span>
                           <select type="text" class="form-control" name="Function"id="Function"><option value="-1">-- please select --</option>
                           <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
                           <option value="IT Software - Mainframe">IT Software - Mainframe</option>
@@ -549,17 +533,11 @@ $mail->SMTPSecure='tls';
                           <option value="Packaging">Packaging</option>
                           <option value="Production/Maintenance">Production/Maintenance</option>
                         </select>
-                      
-                    </div>
+                        <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
                   </div>
-                </div>
-              </div>
-              <div class="u-layout-row">
-                <div class="col-md-6">
-                  <div class="input-group">
-                    <span style="font-weight: 600;" class="col-sm-3 col-form-label">Education: </span><br>
-                    <div class="col-sm-12">
-                      
+
+                  <div class="u-form-group u-form-name u-form-group-2">
+                    <span style="font-weight: 600;">Education: </span><br>
                         <select type="text" class="form-control" name="Education"id="Education">
                           <option value="-1">-- please select --</option>
                           <option value="B.A">B.A</option>
@@ -586,22 +564,11 @@ $mail->SMTPSecure='tls';
                           <option value="LLB">LLB</option>
                           <option value="LLM">LLM</option>
                         </select>
-                     
-                    </div>
+                        <h6 style="color:#ff0000"><?php echo $empty_education; ?></h6>
                   </div>
-                </div>
-                 &nbsp
-                 &nbsp
-                 &nbsp
-                 &nbsp
-                 &nbsp
-                 
-                
 
-                <div class="col-md-6">
-                  <div class="input-group">
-                    <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Experience: </span>
-                    <div class="col-sm-12">
+                  <div class="u-form-group u-form-name u-form-group-2">
+                    <span style="font-weight: 600;">Experience: </span>
                      
                          <select type="text" class="form-control" name="Experience"id="Experience">
                           <option value="-1">years</option>
@@ -627,17 +594,11 @@ $mail->SMTPSecure='tls';
                           <option value="19">19</option>
                           <option value="20">20</option>
                         </select>
-                      
-                    </div>
+                        <h6 style="color:#ff0000"><?php echo $empty_experience; ?></h6>
                   </div>
-                </div>
-              </div>
-              <div class="u-layout-row">
-                <div class="col-md-6">
-                  <div class="input-group">
-                    <span style="font-weight: 600;" class="col-sm-3 col-form-label">Salary: </span><br>
-                    <div class="col-sm-12">
-                      
+
+                  <div class="u-form-group u-form-name u-form-group-2">
+                    <span style="font-weight: 600;">Salary: </span><br>
                         <select type="text" class="form-control" name="Salary"id="Salary">
                           <option value="-1">lakhs</option>
                           <option value="0">0</option>
@@ -673,52 +634,30 @@ $mail->SMTPSecure='tls';
                           <option value="30">30</option>
                           
                         </select>
-                      
-                    </div>
+                        <h6 style="color:#ff0000"><?php echo $empty_salary; ?></h6>
                   </div>
-                </div>
-                 &nbsp
-                 &nbsp
-                  &nbsp
-                   &nbsp
-                    &nbsp
-                     &nbsp
-                      &nbsp
-                       &nbsp
-                        &nbsp
-                         &nbsp
-                          &nbsp
-                           &nbsp
-                            &nbsp
-                             &nbsp
-                              
 
-                <div class="col-md-6">
-                  <div class="form-group row">
-                    <span style="font-weight: 600;" class="col-sm-3 col-form-label" >CV: </span>
-                    <div class="col-sm-12">
-                      <label for="ctl09_ctl04_CVFileUpload"  class="jbs-apply-form-lbl cv-file-upload is-required"></label>
-                <div class="form-element">
-                    <div class="custom-file-upload">
+              <div class="u-form-group u-form-name u-form-group-2">
+                 <span style="font-weight: 600;">CV: </span>
+                   <div class="form-element">
+                     <div class="custom-file-upload">
                         <div class="custom-file-upload-toggle">
-                            <div class="custom-file-upload-toggle-btn btn btn-prim">
+                          <div class="custom-file-upload-toggle-btn btn btn-prim">
                                 
-                            </div>
+                          </div>
                         </div>
                         <input type="file" name="ctl09$ctl04$CVFileUpload" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
-                    </div>
+                     </div>
                     <span data-bit-output-upload-files="cvFileUpload"></span>
-                    <div> 
-                         <!-- <ul class="cms-icons cms-icons-valid">
-                          <li><span title="Valid extensions:.doc, .docx, .rtf" class="cms-icon cms-icon-text"></span></li><li><span title="Valid extensions:.pdf" class="cms-icon cms-icon-pdf"></span></li>
-                        </ul> --><div  class="cms-file-upload-validator field-error" style="display:none;">
+                      <div> 
+                        <div  class="cms-file-upload-validator field-error" style="display:none;">
                           <span class="cms-file-upload-validator-error-message">CV is required</span>
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
                 </div>
-              </div>
+
               <div class="u-align-center u-form-group u-form-submit">
               <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Register<br>
               </a>

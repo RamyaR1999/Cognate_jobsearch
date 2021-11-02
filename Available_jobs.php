@@ -339,16 +339,16 @@
             </p>
             <p class="u-text u-text-default u-text-18">job category</p>
             <p class="u-text u-text-default u-text-19">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="https://nicepage.com">Information Technology</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="https://nicepage.com">Software Engineer</a>
             </p>
             <p class="u-text u-text-default u-text-20">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="https://nicepage.com">Andhra Pradesh</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="https://nicepage.com">Sales Executive</a>
             </p>
             <p class="u-text u-text-default u-text-21">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="https://nicepage.com">Andhra Pradesh</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="https://nicepage.com">Accountant</a>
             </p>
             <p class="u-text u-text-default u-text-22">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="https://nicepage.com">Andhra Pradesh</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="https://nicepage.com">Project Manager</a>
             </p>
           </div>
         </div>
