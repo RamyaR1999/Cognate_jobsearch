@@ -224,8 +224,8 @@ $mail->SMTPSecure='tls';
 
  <link rel="stylesheet" href="assets/css/shared/style.css"> 
 
-    <!-- password Icon -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <!-- Password Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     
     <script type="application/ld+json">{
     "@context": "http://schema.org",
@@ -454,8 +454,9 @@ $mail->SMTPSecure='tls';
                       <div class="input-group">
                         <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Password: </span>
                         <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Password; ?>" class="form-control" name="Password">
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?>
+                          <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="form-control">
+                          <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span>
+                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                         </div>
                       </div>
                     </div>
@@ -785,15 +786,15 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
 <script>
 
 const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#id_password');
+  const Password = document.querySelector('#id_Password');
  
   togglePassword.addEventListener('click', function (e) {
     // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+    const type = Password.getAttribute('type') === 'Password' ? 'text' : 'Password';
+    Password.setAttribute('type', type);
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
 });
 
-</script> 
+</script>
              

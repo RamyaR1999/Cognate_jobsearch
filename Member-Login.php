@@ -93,8 +93,8 @@
 
  <link rel="stylesheet" href="assets/css/shared/style.css"> 
 
-    <!-- password Icon -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <!-- Password Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     
     <script type="application/ld+json">{
     "@context": "http://schema.org",
@@ -307,7 +307,7 @@
                 <div class="u-form-group u-form-password">
                   <label for="password-708d" class="u-form-control-hidden u-label"></label>
                   <input type="Password" placeholder="Password" id="id_password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
-                  <!-- <span class="far fa-eye" id="togglePassword" style="margin-left: 350px; cursor: pointer;"></span> -->
+                  <span class="far fa-eye" id="togglePassword" style="margin-left: 370px; cursor: pointer;"></span>
                 </div>
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_Password; ?></h6>
                 <div class="u-form-checkbox u-form-group">
@@ -315,7 +315,7 @@
                   <label for="checkbox-708d" class="u-label">Remember me</label>
                 </div>
 <div class="u-form-group">
-               <a href="Forgot_Password.php" class="u-border-1 u-border-active-palette-2-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a>
+               <a href="Forgot password.php" class="u-border-1 u-border-active-palette-2-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a>
 </div>
                 <div class="u-align-center u-form-group u-form-submit">
                   <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
@@ -330,7 +330,7 @@
 
             </div>
 
-            <!-- <a href="Forgot_Password.php" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a> -->
+           <!--  <a href="Forgot password.php" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a> -->
           </div>
         </div>
       </div>
