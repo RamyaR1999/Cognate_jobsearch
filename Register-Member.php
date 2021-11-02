@@ -450,25 +450,18 @@ $mail->SMTPSecure='tls';
                           <h6 style="color:#ff0000"><?php echo $message_email; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
                       </div>
-<<<<<<< Updated upstream
-                    </div>
-                    &nbsp
-                    &nbsp
-                    <div class="col-md-6">
-                      <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Password: </span>
-                        <div class="col-sm-12">
+
+                      <div class="u-form-group u-form-name u-form-group-2">
+                        <span style="font-weight: 600;">Password: </span>
                           <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="form-control">
-                          <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span>
+                          <!-- <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                         </div>
-=======
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 600;">Password: </span>
                           <input type="text"  value="<?php echo $Password; ?>" class="form-control" name="Password">
                           <h6 style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
->>>>>>> Stashed changes
                       </div>
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 600;">Phone: </span><br>
