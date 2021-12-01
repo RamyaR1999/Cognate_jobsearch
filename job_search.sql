@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Oct 28, 2021 at 09:04 AM
+-- Generation Time: Dec 01, 2021 at 07:45 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -54,7 +54,9 @@ CREATE TABLE `jobs` (
 
 INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_description`, `Job_type`, `Location`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
 (1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India(Remote)', '', '', '', '', '', '', ''),
-(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India(Remote)', '', '', '', '', '', '', '');
+(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India(Remote)', '', '', '', '', '', '', ''),
+(7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
+(9, 'CrysCloud.jpg', 'Reshma', 'priya', 'cognate global', 'software developer', 'FullTime', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India', '8798546798', 'reshmasamy21@gmail.com', 'Permanent Recruitment', '29', '1221', 'Containment zone', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.\r\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.                          ');
 
 -- --------------------------------------------------------
 
@@ -67,7 +69,8 @@ CREATE TABLE `users` (
   `Firstname` varchar(15) NOT NULL,
   `Lastname` varchar(15) NOT NULL,
   `Email` varchar(32) NOT NULL,
-  `Password` varchar(40) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  `Confirm_password` varchar(50) NOT NULL,
   `Phone` varchar(15) NOT NULL,
   `Image` varchar(60) NOT NULL,
   `City` varchar(30) NOT NULL,
@@ -84,14 +87,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`, `otp`) VALUES
-(2, 'princy', 'R', 'princy@gmail.com', '9c4a38260049134480b74aa509c56a44', '9657467990', 'profile.png', 'Ernakulam', 'IT-Hardware  Networking', 'IT Software - ERP / CRM', 'ITI', '20', '-1', 'uploads/', 527449),
-(3, 'Ramya', 'R', 'ramya@gmail.com', '69f8ccc05b12ef0f8c94d2d0087124bd', '9657467987', 'profile.png', 'Delhi', 'IT-Hardware  Networking', 'IT Software - Middleware', 'M.A', '20', '20', 'uploads/', 931332),
-(4, 'thivya', 'h', 'thivya@gmail.com', '8a04b706aeeb771d64a3cbb5e9a17240', '9876543211', 'profile.png', 'Agartala', 'Agriculture / Diary', 'IT Software - ERP / CRM', 'M.A', '4', '20', 'uploads/', 707690),
-(5, 'Reshma', 'B', 'Reshma@gmail.com', 'e4695c9ad8ee056baf6c259bb9d5da2c', '9876543216', 'profile.png', 'Agartala', 'Agriculture / Diary', 'IT Software - ERP / CRM', 'M.A', '4', '20', 'uploads/', 238150),
-(6, 'Reshma', 'B', 'reshmasamy21@gmail.com', 'e4695c9ad8ee056baf6c259bb9d5da2c', '9876543216', 'profile.png', 'Agartala', 'Agriculture / Diary', 'IT Software - ERP / CRM', 'M.A', '4', '20', 'uploads/', 417003),
-(8, 'Barthalomena', 'Francis', 'barthalomena@gmail.com', '2a26fdb9cf6ad136597c171459709d02', '9657467997', 'profile.png', '-1', '-1', '-1', '-1', '-1', '-1', 'uploads/', 576320),
-(12, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Dahod', 'Insurance', 'IT Software - ERP / CRM', 'H.Sc/+2/Intermediate', '15', '17', 'uploads/', 571656);
+INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`, `otp`) VALUES
+(35, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'e1e7ea465afc730052fdbe132f519277', 'e1e7ea465afc730052fdbe132f519277', '8798546798', 'profile.png', 'Ahmedabad', 'Auto / Auto Ancillary', 'Architects / Interior Design / Naval Arch.', 'BVSC', '6', '9', 'uploads/', 465630);
 
 --
 -- Indexes for dumped tables
@@ -117,13 +114,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
