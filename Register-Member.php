@@ -1,17 +1,17 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
-<?php 
+<?php
 
-     if(isset($_POST['submit'])){
+    if(isset($_REQUEST['submit'])){ 
+     
+    require 'PHPMailer/PHPMailerAutoload.php';
+   require('phpmailer/class.phpmailer.php');
 
-
-require 'PHPMailer/PHPMailerAutoload.php';
-  
 $mail = new PHPMailer;
 
 
 $rndno=rand(100000, 999999);
-echo $rndno;
+// echo $rndno;
 //OTP generate
 #$mail->SMTPDebug = 3;
 
@@ -20,13 +20,14 @@ $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->Port=587;
 $mail->SMTPAuth = true;
-$mail->SMTPSecure='tls';
+$mail->SMTPSecure='tls'; 
 
          
          $Firstname=  $_POST['Firstname'];
          $Lastname=  $_POST['Lastname'];
          $Email    = $_POST['Email'];
          $Password = $_POST['Password'];
+         $Confirm_password = $_POST['Confirm_password'];
          $Phone=  $_POST['Phone'];
          $Image=  $_POST['Image'];
          $City=  $_POST['City'];
@@ -49,9 +50,9 @@ $mail->SMTPSecure='tls';
       if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary) && !empty($upload)){
           
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
-      // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
+      $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
       $Password = md5($Password);              
-      // $confirm_password = md5($confirm_password);              
+      $Confirm_password = md5($Confirm_password);              
      
       if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
@@ -65,7 +66,7 @@ $mail->SMTPSecure='tls';
 
         if(strlen($Password) >= 8) {
             
-        // if($password == $confirm_password){
+        if($Password == $Confirm_password){
         
         if(preg_match("/^[0-9]{10}$/", $Phone)) {   
 
@@ -81,13 +82,13 @@ $mail->SMTPSecure='tls';
 
             if($Email==$row['Email'])
             {
-                $message_email= "Email already exists";
+                $message_Email= "Email already exists";
             }
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload','$rndno')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -101,23 +102,22 @@ $mail->SMTPSecure='tls';
          $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
 
 
-          $mail->Username = 'barthalomena17@gmail.com';
-          $mail->Password = 'mena@2001';
-          
+         $mail->Username = 'reshmasamy21@gmail.com';
+          $mail->Password = '9789261719';
+
           $mail->setFrom ('barthalomena@gmail.com');
           $mail->addAddress($_POST['Email'],$_POST['Firstname']);
           #$mail->addReplyTo( $_POST['email'],$_POST['name']);
           
           $mail->isHTML(true);
-          $mail->Subject = $_POST['Firstname'];;
-          $mail->Body    = 'name:'.$_POST['Firstname'].'<br>email:'.$_POST['Email'].$rndno;
+          $mail->Subject = "Email Verification";
+          $mail->Body    = 'Hi'.' '.$_POST["Firstname"].'<br><br>To verify your email'.' '.$_POST['Email'].' '.'we sent you an otp, enter the otp in the field'.' '.$rndno;
           
           if(!$mail->send()) {
              echo "Message could not be sent.". $mail->ErrorInfo;
           }else{
             echo " otp sent successfully to ur mail: " ;
-          }
-
+          }  
            
               header( "Location: otp.php" ); 
         
@@ -129,10 +129,10 @@ $mail->SMTPSecure='tls';
             
         }
             
-        //   }else{
+          }else{
             
-        //     $message_cpassword = "password mismatch";
-        // }
+            $message_cpassword = "password mismatch";
+        }
        
           }else{
               $message_strnpassword = "password contain atleast 8 characters";
@@ -154,6 +154,7 @@ $mail->SMTPSecure='tls';
              $empty_lastname = "lastname is required";
              $empty_email = "email is required";
              $empty_password = "password is required";
+             $empty_cpassword = "confirm password is required";
              $empty_phone = "phone number is required";
              $empty_city = "city is required";
              $empty_industry = "industry is required";
@@ -252,9 +253,8 @@ $mail->SMTPSecure='tls';
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body">
-<header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
-        <div class="u-clearfix u-custom-color-1 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
+  <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
+        <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
           <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
             <a href="Job_seeker.php" class="u-image u-logo u-image-1">
               <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
@@ -266,15 +266,15 @@ $mail->SMTPSecure='tls';
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </symbol>
 </defs></svg>
-                </a>
+                 </a>
               </div>
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="submit-job.php" style="padding: 6px 0px;">Employers</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About-us.html" style="padding: 6px 0px;">About us</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact-us.php" style="padding: 6px 0px;">Contact us</a></li>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
 
-  <?php
+<?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
@@ -327,9 +327,10 @@ $mail->SMTPSecure='tls';
 ?> 
 
 <!-- <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.php" style="padding: 6px 0px;">Page 1</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
 </li> -->
+
 
 
 </ul>
@@ -345,7 +346,7 @@ $mail->SMTPSecure='tls';
 
 <?php
 
-    if(isset($_SESSION['Email']) == $db_Email){
+    if(isset($_SESSION['email']) == $db_email){
 
   ?> 
 
@@ -357,9 +358,10 @@ $mail->SMTPSecure='tls';
               
   ?> 
 
-<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a></li> -->
+<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
+</li> -->
 
 
 </ul>
@@ -375,21 +377,21 @@ $mail->SMTPSecure='tls';
           
           
         </div>
-        <div class="u-custom-color-1 u-section-row u-section-row-2" id="sec-56e4">
+        <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-1">
                     <p class="u-text u-text-default u-text-1">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1" href="Available_jobs.php">find a job</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1 active" href="Available_jobs.php">find a job</a>
                     </p>
                   </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <p class="u-text u-text-default u-text-2">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2 active" href="Register-Member.php">submit your CV</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2" href="Register-Member.php">submit your CV</a>
                     </p>
                   </div>
                 </div>
@@ -427,52 +429,55 @@ $mail->SMTPSecure='tls';
   
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-radius-50 u-white u-form-1">
+        <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
 
                   <div class="u-form-group u-form-name u-form-group-1">
-                     <span style="font-weight: 600;">Firstname: </span><br>
-                          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
+                     <span style="font-weight: 600;">Firstname: </span><br>&nbsp
+                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Firstname">
                           <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
                       </div>
                       
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Lastname: </span>
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
+                        <span style="font-weight: 600;">Lastname: </span><br>&nbsp
+                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Lastname">
                           <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
                         </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Email: </span><br>
-                          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-                          <h6 style="color:#ff0000"><?php echo $message_email; ?></h6>
+                        <span style="font-weight: 600;">Email: </span><br>&nbsp
+                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" name="Email">
+                          <h6 style="color:#ff0000"><?php echo $message_Email; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Password: </span>
-                          <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="form-control">
+                        <span style="font-weight: 600;">Password: </span><br>&nbsp
+                          <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-3">
                           <!-- <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
+                           <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
                         </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Password: </span>
-                          <input type="text"  value="<?php echo $Password; ?>" class="form-control" name="Password">
-                          <h6 style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
+                        <span style="font-weight: 600;"> Confirm_password: </span><br>&nbsp
+                          <input type="Password"  value="<?php echo $Confirm_password; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" name="Confirm_password">
+                          <h6 style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
+                      <?php    echo $Password ."<br>";
+echo $Confirm_password;  ?>
                       </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Phone: </span><br>
-                          <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone">
+                        <span style="font-weight: 600;">Phone: </span><br>&nbsp
+                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5" name="Phone">
                           <h6 style="color:#ff0000"><?php echo $message_Phone; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">City: </span>
-                          <select type="text" class="form-control" name="City"id="City">
+                        <span style="font-weight: 600;">City: </span><br>&nbsp
+                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
                             <option value="-1">-- please select --</option>
                             <option value="Agartala">Agartala</option>
                             <option value="Agra">Agra</option>
@@ -501,37 +506,145 @@ $mail->SMTPSecure='tls';
                     </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Industry: </span><br>
-                             <select type="text" class="form-control" name="Industry"id="Industry">
+                        <span style="font-weight: 600;">Industry: </span><br>&nbsp
+                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
                               <option value="-1">-- please select --</option>
                               <option value="Accounting / Finance">Accounting / Finance</option>
+                              <option value="Advertising / PR / MR / Events">Advertising / PR / MR / Events</option>
                               <option value="Agriculture / Diary">Agriculture / Diary</option>
                               <option value="Airlines">Airlines</option>
                               <option value="Animation">Animation</option>
-                              <!-- <option value="Architecture / Interior Design">Architecture / Interior Design</option> -->
+                              <option value="Architecture / Interior Design">Architecture / Interior Design</option>
+                              <option value="Auto / Auto Ancillary">Auto / Auto Ancillary</option>
+                              <option value="Aviation / Aerospace Firm">Aviation / Aerospace Firm</option>
+                              <option value="Banking / Financial Services / Broking / Asset Management">Banking / Financial Services / Broking / Asset Management</option>
+                              <option value="BPO / ITES">BPO / ITES</option>
+                              <option value="Brewery / Distillery">Brewery / Distillery</option>
+                              <option value="Broadcasting">Broadcasting</option>
+                              <option value="Cement">Cement</option>
+                              <option value="Ceramics / Sanitary Ware">Ceramics / Sanitary Ware</option>
+                              <option value="Chemicals / PetroChemical">Chemicals / PetroChemical</option>
+                              <option value="Construction">Construction</option>
+                              <option value="Consumer Durables">Consumer Durables</option>
+                              <option value="Courier / Transportation / Freight">Courier / Transportation / Freight</option>
+                              <option value="Defence / Government">Defence / Government</option>
+                              <option value="Education / Teaching / Training">Education / Teaching / Training</option>
+                              <option value="Electricals / Switchgears">Electricals / Switchgears</option>
+                              <option value="Engineering / Heavy Engg. / EPC">Engineering / Heavy Engg. / EPC</option>
+                              <option value="Export / Import">Export / Import</option>
+                              <option value="Facility Management">Facility Management</option>
+                              <option value="Fertilizers / Pesticides">Fertilizers / Pesticides</option>
+                              <option value="FMCG / Foods / Beverage">FMCG / Foods / Beverage</option>
+                              <option value="Food Processing">Food Processing</option>
+                              <option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
+                              <option value="Glass">Glass</option>
+                              <option value="Heat Ventilation Air Conditioning">Heat Ventilation Air Conditioning</option>
+                              <option value="Hotels / Restaurants / Hospitality">Hotels / Restaurants / Hospitality</option>
+                              <option value="Industrial Products / Heavy Machinery">Industrial Products / Heavy Machinery</option>
                               <option value="Infrastructure">Infrastructure</option>
                               <option value="Insurance">Insurance</option>
                               <option value="Internet / Ecommerce">Internet / Ecommerce</option>
-                              <option value="IT-Hardware  Networking">IT-Hardware  Networking</option>
+                              <option value="IT-Hardware &amp; Networking">IT-Hardware &amp; Networking</option>
+                              <option value="IT-Software / Software Services">IT-Software / Software Services</option>
+                              <option value="KPO / Research / Analytics">KPO / Research / Analytics</option>
+                              <option value="Leather">Leather</option>
+                              <option value="Legal">Legal</option>
+                              <option value="Media / Dotcom / Entertainment">Media / Dotcom / Entertainment</option>
+                              <option value="Medical / Healthcare / Hospital">Medical / Healthcare / Hospital</option>
+                              <option value="Medical Devices / Equipments">Medical Devices / Equipments</option>
+                              <option value="Metals">Metals</option>
+                              <option value="Mining">Mining</option>
+                              <option value="NGO / Social Services">NGO / Social Services</option>
+                              <option value="Office Equipment / Automation">Office Equipment / Automation</option>
+                              <option value="Oil and Gas">Oil and Gas</option>
+                              <option value="Paper">Paper</option>
+                              <option value="Pharma / Biotech / Clinical Research">Pharma / Biotech / Clinical Research</option>
+                              <option value="Plastics">Plastics</option>
+                              <option value="Power / Energy / Non conventional Energy">Power / Energy / Non conventional Energy</option>
+                              <option value="Printing / Packaging">Printing / Packaging</option>
+                              <option value="Private Equity / Venture Capitalists / Incubators">Private Equity / Venture Capitalists / Incubators</option>
+                              <option value="Publishing">Publishing</option>
+                              <option value="Real Estate / Property">Real Estate / Property</option>
+                              <option value="Recruitment / HR services">Recruitment / HR services</option>
+                              <option value="Retail">Retail</option>
+                              <option value="Rubber">Rubber</option>
+                              <option value="Security / Law Enforcement">Security / Law Enforcement</option>
+                              <option value="Semiconductors / Electronics">Semiconductors / Electronics</option>
+                              <option value="Shipping / Marine">Shipping / Marine</option>
+                              <option value="Steel">Steel</option>
+                              <option value="Strategy / Management Consulting Firms">Strategy / Management Consulting Firms</option>
+                              <option value="Sugar">Sugar</option>
+                              <option value="Telecom / ISP">Telecom / ISP</option>
+                              <option value="Textiles / Garments / Accessories">Textiles / Garments / Accessories</option>
+                              <option value="Travel &amp; Tourism">Travel &amp; Tourism</option>
+                              <option value="Tyres">Tyres</option>
+                              <option value="Water Treatment /  Waste Management">Water Treatment /  Waste Management</option>
+                              <option value="Wellness / Fitness / Sports">Wellness / Fitness / Sports</option>                            
                             </select>
                             <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Function: </span>
-                          <select type="text" class="form-control" name="Function"id="Function"><option value="-1">-- please select --</option>
-                          <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
-                          <option value="IT Software - Mainframe">IT Software - Mainframe</option>
-                          <option value="IT Software - Middleware">IT Software - Middleware</option>
-                          <option value="Packaging">Packaging</option>
-                          <option value="Production/Maintenance">Production/Maintenance</option>
+                        <span style="font-weight: 600;">Function: </span><br>&nbsp
+                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
+                            <option value="-1">-- please select --</option>
+                            <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
+                            <option value="Agent">Agent</option>
+                            <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
+                            <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
+                            <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
+                            <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch.</option>
+                            <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
+                            <option value="Banking / Insurance">Banking / Insurance</option>
+                            <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
+                            <option value="Content / Journalism">Content / Journalism</option>
+                            <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
+                            <option value="CSR &amp; Sustainability">CSR &amp; Sustainability</option>
+                            <option value="Engineering Design / R&amp;D">Engineering Design / R&amp;D</option>
+                            <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
+                            <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
+                            <option value="Guards / Security Services">Guards / Security Services</option>
+                            <option value="Hotels / Restaurants">Hotels / Restaurants</option>
+                            <option value="HR / Administration / IR">HR / Administration / IR</option>
+                            <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
+                            <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
+                            <option value="IT Software - Client Server">IT Software - Client Server</option>
+                            <option value="IT Software - DBA / Datawarehousing">IT Software - DBA / Datawarehousing</option>
+                            <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
+                            <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
+                            <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
+                            <option value="IT Software - Mainframe">IT Software - Mainframe</option>
+                            <option value="IT Software - Middleware">IT Software - Middleware</option>
+                            <option value="IT Software - Mobile">IT Software - Mobile</option>
+                            <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
+                            <option value="IT Software - QA &amp; Testing">IT Software - QA &amp; Testing</option>
+                            <option value="IT Software - System Programming">IT Software - System Programming</option>
+                            <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
+                            <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
+                            <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
+                            <option value="Legal">Legal</option>
+                            <option value="Marketing / Advertising / MR / PR">Marketing / Advertising / MR / PR</option>
+                            <option value="Packaging">Packaging</option>
+                            <option value="Pharma / Biotech / Healthcare / Medical / R&amp;D">Pharma / Biotech / Healthcare / Medical / R&amp;D</option>
+                            <option value="Production / Maintenance / Quality">Production / Maintenance / Quality</option>
+                            <option value="Purchase / Logistics / Supply Chain">Purchase / Logistics / Supply Chain</option>
+                            <option value="Sales / BD">Sales / BD</option>
+                            <option value="Secretary / Front Office / Data Entry">Secretary / Front Office / Data Entry</option>
+                            <option value="Self Employed / Consultants">Self Employed / Consultants</option>
+                            <option value="Shipping">Shipping</option>
+                            <option value="Site Engineering / Project Management">Site Engineering / Project Management</option>
+                            <option value="Teaching / Education">Teaching / Education</option>
+                            <option value="Ticketing / Travel / Airlines">Ticketing / Travel / Airlines</option>
+                            <option value="Top Management">Top Management</option>
+                            <option value="TV / Films / Production">TV / Films / Production</option>
+                            <option value="Web / Graphic Design / Visualiser">Web / Graphic Design / Visualiser</option>
                         </select>
                         <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Education: </span><br>
-                        <select type="text" class="form-control" name="Education"id="Education">
+                    <span style="font-weight: 600;">Education: </span><br>&nbsp
+                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
                           <option value="-1">-- please select --</option>
                           <option value="B.A">B.A</option>
                           <option value="B.Arch">B.Arch</option>
@@ -561,9 +674,9 @@ $mail->SMTPSecure='tls';
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Experience: </span>
+                    <span style="font-weight: 600;">Experience: </span><br>&nbsp
                      
-                         <select type="text" class="form-control" name="Experience"id="Experience">
+                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience"id="Experience">
                           <option value="-1">years</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
@@ -591,8 +704,8 @@ $mail->SMTPSecure='tls';
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Salary: </span><br>
-                        <select type="text" class="form-control" name="Salary"id="Salary">
+                    <span style="font-weight: 600;">Salary: </span><br>&nbsp
+                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Salary"id="Salary">
                           <option value="-1">lakhs</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
@@ -661,7 +774,7 @@ $mail->SMTPSecure='tls';
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
-            <div class="u-social-icons u-spacing-10 u-social-icons-1">
+           <!--  <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ecf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0ecf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
           </a>
@@ -676,12 +789,12 @@ z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.
 C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
 c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
           </a>
-        </div>
+        </div> -->
       </div>
     </section>
     
     
-    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <!-- <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -701,13 +814,13 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
             C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
-        </div>
-      </div></footer>
+        </div> -->
+      </div><!-- </footer>
     <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
-    </section>
+    </section> -->
 
       <!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>

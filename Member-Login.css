@@ -1,5 +1,5 @@
 .u-section-1 {
-  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  background-image: linear-gradient(to right, #f2f2f2 , #f2f2f2 );
 }
 .u-section-1 .u-sheet-1 {
   min-height: 820px;
@@ -8,7 +8,7 @@
 .u-section-1 .u-group-1 {
   width: 470px;
   min-height: 413px;
-  box-shadow: -2px -2px 14px 0 rgba(128,128,128,1);
+ /* box-shadow: -2px -2px 14px 0 rgba(128,128,128,1);*/
   height: auto;
   margin: 60px auto 60px 319px;
 }
@@ -54,7 +54,7 @@
 
 @media (max-width: 991px) {
   .u-section-1 .u-group-1 {
-    margin-left: 250px;
+    margin-left: 150px;
   }
 }
 

@@ -188,9 +188,7 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body">
-
-    <header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
+  <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
         <div class="u-clearfix u-custom-color-1 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
           <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
             <a href="Job_seeker.php" class="u-image u-logo u-image-1">
@@ -363,47 +361,45 @@
       </div></header>
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-radius-50 u-white u-form-1">
+        <div class="u-form u-radius-10 u-#f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
             <div class="u-layout-row">
-               <div class="col-md-6">
+               <div class="col-md-12">
                   <div class="input-group">
-                     <span style="font-weight: 600;" class="col-sm-3 col-form-label">Firstname: </span>
+                     <span style="font-weight: 600;" class="col-sm-3 col-form-label">Firstname: </span><br>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
+                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Firstname">
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                         </div>
                       </div>
                     </div>
-                   &nbsp
-                    &nbsp
-                    <div class="col-md-6">
+                   
+                    <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Lastname: </span>
+                        <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Lastname: </span> 
                         <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
+                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Lastname">
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="u-layout-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Email: </span>
+                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Email: </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
+                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Email">
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
                         </div>
                       </div>
                     </div>
-                    &nbsp
-                    &nbsp
-                    <div class="col-md-6">
+                   
+                    <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Phone: </span>
+                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Phone: </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone">
+                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Phone">
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Phone; ?></h6>
                         </div>
                         </div>
@@ -411,23 +407,22 @@
                     
                   </div>
                   <div class="u-layout-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Job_designation: </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_designation; ?>" class="form-control" name="Job_designation">
+                          <input type="text" value="<?php echo $Job_designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_designation">
                           <h6 class="text-center" style="color:#ff0000"></h6>
                           </div>
                         
                       </div>
                     </div>
-                    &nbsp
-                    &nbsp
-                    <div class="col-md-6">
+                    
+                    <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 600;" class="col-sm-3 col-form-label">Company_name: </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Company_name; ?>" class="form-control" name="Company_name">
+                          <input type="text" value="<?php echo $Company_name; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Company_name">
                           <h6 class="text-center" style="color:#ff0000"></h6>
                        
                           </div>
@@ -436,24 +431,24 @@
                     </div>
                   </div>
                    <div class="u-layout-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="input-group">
                          <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Job_title: </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_title; ?>" class="form-control" name="Job_title">
+                          <input type="text" value="<?php echo $Job_title; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_title">
 
                        
                         </div>
                         
                       </div>
                     </div>
-                    &nbsp
-                    &nbsp
-                <div class="col-md-6">
+                   
+                <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Job_specification </span><br>
+                       <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Job_specification </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_specification; ?>" class="form-control" name="Job_specification">
+                          <textarea type="text"rows="6" cols="23"  value="<?php echo $Job_specification; ?>" class="u-input u-input-rectangle u-radius-10ś u-white u-input-1" name="Job_specification">
+                          </textarea>
                        
                         
                         
@@ -461,13 +456,13 @@
                       </div>
                     </div>
                   </div>
-                  &nbsp
+                  
                   <div class="u-layout-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 600;" class="col-sm-3 col-form-label">Service: </span>
                         <div class="col-sm-12">
-                          <select type="text" class="form-control" name="Service"id="Service">
+                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
                           <option value="-1">-- please select --</option>
                           <option value="Contract Staffing">Contract Staffing</option>
                           <option value="Permanent Recruitment">Permanent Recruitment</option>
@@ -478,14 +473,12 @@
                         </div>
                       </div>
                     </div>
-                    &nbsp
-                    &nbsp
-                    &nbsp
-                    <div class="col-md-6">
+                    
+                    <div class="col-md-12">
                       <div class="input-group">
                          <span style="font-weight: 600;" class="col-sm-3 col-form-label" >Branch: </span>
                         <div class="col-sm-12">
-                            <select type="text" class="form-control" name="Branch"id="Branch">
+                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="-1">-- please select --</option>
                               <option value="37">Ahmedabad</option>
                               <option value="38">Baroda</option>
@@ -524,15 +517,14 @@
                         </div>
                       </div>
                     </div>
-                    &nbsp
-                  
+                   
                  
                    <div class="u-layout-row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 600;" class="col-sm-3 col-form-label">Sector: </span><br>
+                         <span style="font-weight: 600;" class="col-sm-3 col-form-label">Sector: </span> 
                         <div class="col-sm-12">
-                          <select type="text" class="form-control" name="Sector"id="Sector">
+                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
                           <option value="-1">-- please select --</option>
                           <option value="1214">Agro &amp; Seeds</option>
                           <option value="1215">Banking &amp; finance</option>
@@ -558,8 +550,7 @@
                       </div>
                     </div>
                   </div>
-                  &nbsp
-                  &nbsp
+                  
                           
                           
                 
@@ -576,7 +567,7 @@
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
-            <div class="u-social-icons u-spacing-10 u-social-icons-1">
+            <!-- <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ecf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0ecf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
           </a>
@@ -591,12 +582,12 @@ z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.
 C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
 c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
           </a>
-        </div>
+        </div> -->
       </div>
     </section>
     
     
-    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <!-- <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -616,13 +607,13 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
             C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
-        </div>
-      </div></footer>
+        </div> -->
+      </div><!-- </footer>
     <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
-    </section>
+    </section> -->
      <!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
   </body>
