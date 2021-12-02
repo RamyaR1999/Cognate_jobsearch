@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 01, 2021 at 07:45 AM
+-- Generation Time: Dec 02, 2021 at 06:11 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -36,9 +36,8 @@ CREATE TABLE `jobs` (
   `Company_name` varchar(60) NOT NULL,
   `Job_title` varchar(60) NOT NULL,
   `Job_time` varchar(40) NOT NULL,
-  `Job_description` varchar(5000) NOT NULL,
+  `job_posted` date NOT NULL,
   `Job_type` varchar(33) NOT NULL,
-  `Location` varchar(60) NOT NULL,
   `Phone` varchar(10) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Service` varchar(100) NOT NULL,
@@ -52,11 +51,11 @@ CREATE TABLE `jobs` (
 -- Dumping data for table `jobs`
 --
 
-INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_description`, `Job_type`, `Location`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
-(1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India(Remote)', '', '', '', '', '', '', ''),
-(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India(Remote)', '', '', '', '', '', '', ''),
-(7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
-(9, 'CrysCloud.jpg', 'Reshma', 'priya', 'cognate global', 'software developer', 'FullTime', 'In this role, you will be an integral part of the Data Protection Group in India, Developing Endpoint application for MacOS.', 'permanent', 'India', '8798546798', 'reshmasamy21@gmail.com', 'Permanent Recruitment', '29', '1221', 'Containment zone', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.\r\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.                          ');
+INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `job_posted`, `Job_type`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
+(1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
+(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
+(7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', '2021-02-23', 'permanent', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
+(9, 'CrysCloud.jpg', 'Reshma', 'priya', 'cognate global', 'software developer', 'FullTime', '2021-02-23', 'permanent', '8798546798', 'reshmasamy21@gmail.com', 'Permanent Recruitment', '29', '1221', 'Containment zone', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.\r\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.                          ');
 
 -- --------------------------------------------------------
 
