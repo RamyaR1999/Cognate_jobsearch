@@ -36,7 +36,7 @@ CREATE TABLE `jobs` (
   `Company_name` varchar(60) NOT NULL,
   `Job_title` varchar(60) NOT NULL,
   `Job_time` varchar(40) NOT NULL,
-  `job_posted` date NOT NULL,
+  `Job_posted` date NOT NULL,
   `Job_type` varchar(33) NOT NULL,
   `Phone` varchar(10) NOT NULL,
   `Email` varchar(255) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `jobs` (
 -- Dumping data for table `jobs`
 --
 
-INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `job_posted`, `Job_type`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
+INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_posted`, `Job_type`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
 (1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
 (2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
 (7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', '2021-02-23', 'permanent', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
