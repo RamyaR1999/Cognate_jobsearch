@@ -384,14 +384,14 @@ $mail->SMTPSecure='tls';
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-1">
                     <p class="u-text u-text-default u-text-1">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1 active" href="Available_jobs.php">find a job</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1" href="Available_jobs.php">find a job</a>
                     </p>
                   </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <p class="u-text u-text-default u-text-2">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2" href="Register-Member.php">submit your CV</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2 active" href="Register-Member.php">submit your CV</a>
                     </p>
                   </div>
                 </div>
@@ -769,6 +769,7 @@ echo $Confirm_password;  ?>
               </a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
+            
             <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
             <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
             <input type="hidden" value="" name="recaptchaResponse">

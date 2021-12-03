@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 02, 2021 at 06:11 AM
+-- Generation Time: Dec 03, 2021 at 07:55 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -60,6 +60,31 @@ INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `request_callback`
+--
+
+CREATE TABLE `request_callback` (
+  `id` int(40) NOT NULL,
+  `Firstname` varchar(33) NOT NULL,
+  `Lastname` varchar(33) NOT NULL,
+  `Email` varchar(42) NOT NULL,
+  `Phone` varchar(15) NOT NULL,
+  `Designation` varchar(200) NOT NULL,
+  `Company` varchar(200) NOT NULL,
+  `Branch` varchar(200) NOT NULL,
+  `Service` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `request_callback`
+--
+
+INSERT INTO `request_callback` (`id`, `Firstname`, `Lastname`, `Email`, `Phone`, `Designation`, `Company`, `Branch`, `Service`) VALUES
+(6, 'Rohan', 'Rajendiran', '07.ramyar@gmail.com', '9834567892', 'HR', 'Cognate', 'Gurgaon', 'Permanent Recruitment');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -73,7 +98,7 @@ CREATE TABLE `users` (
   `Phone` varchar(15) NOT NULL,
   `Image` varchar(60) NOT NULL,
   `City` varchar(30) NOT NULL,
-  `Industry` varchar(30) NOT NULL,
+  `Industry` varchar(300) NOT NULL,
   `Function` varchar(200) NOT NULL,
   `Education` varchar(40) NOT NULL,
   `Experience` varchar(40) NOT NULL,
@@ -87,7 +112,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`, `otp`) VALUES
-(35, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'e1e7ea465afc730052fdbe132f519277', 'e1e7ea465afc730052fdbe132f519277', '8798546798', 'profile.png', 'Ahmedabad', 'Auto / Auto Ancillary', 'Architects / Interior Design / Naval Arch.', 'BVSC', '6', '9', 'uploads/', 465630);
+(35, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'e1e7ea465afc730052fdbe132f519277', 'e1e7ea465afc730052fdbe132f519277', '8798546798', 'profile.png', 'Ahmedabad', 'Auto / Auto Ancillary', 'Architects / Interior Design / Naval Arch.', 'BVSC', '6', '9', 'uploads/', 465630),
+(36, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Chennai', 'IT-Software / Software Services', 'IT Software - Application Programming / Maintenance', 'BCA', '1', '1', 'uploads/', 846456);
 
 --
 -- Indexes for dumped tables
@@ -97,6 +123,12 @@ INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Confir
 -- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_callback`
+--
+ALTER TABLE `request_callback`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -116,10 +148,16 @@ ALTER TABLE `jobs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `request_callback`
+--
+ALTER TABLE `request_callback`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
