@@ -5241,7 +5241,9 @@ a {
 }
 .u-form-horizontal .u-form-submit {
   display: flex;
-  flex-grow: 0;
+  flex-grow: 4;
+  justify-content: space-evenly;
+}
 }
 .u-form-horizontal .u-form-group label {
   display: flex;
@@ -34892,8 +34894,8 @@ a.u-link.u-text-hover-grey-90:hover {
         }
         h1:not(.u-title)
         {
-        font-weight: 400;
-        font-size: 3rem;
+        font-weight: 600;
+        font-size: 5rem;
         line-height: 1.1;
         margin-top: 20px;
         margin-bottom: 20px;
