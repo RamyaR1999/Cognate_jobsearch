@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 03, 2021 at 07:55 AM
+-- Generation Time: Dec 03, 2021 at 03:16 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -36,13 +36,12 @@ CREATE TABLE `jobs` (
   `Company_name` varchar(60) NOT NULL,
   `Job_title` varchar(60) NOT NULL,
   `Job_time` varchar(40) NOT NULL,
-  `Job_posted` date NOT NULL,
-  `Job_type` varchar(33) NOT NULL,
+  `Job_posted` date NOT NULL DEFAULT '2021-12-03',
   `Phone` varchar(10) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Service` varchar(100) NOT NULL,
   `Branch` varchar(200) NOT NULL,
-  `Sector` varchar(200) NOT NULL,
+  `Sector` varchar(6000) NOT NULL,
   `Job_designation` varchar(5000) NOT NULL,
   `Job_specification` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -51,11 +50,15 @@ CREATE TABLE `jobs` (
 -- Dumping data for table `jobs`
 --
 
-INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_posted`, `Job_type`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
-(1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
-(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', 'permanent', '', '', '', '', '', '', ''),
-(7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', '2021-02-23', 'permanent', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
-(9, 'CrysCloud.jpg', 'Reshma', 'priya', 'cognate global', 'software developer', 'FullTime', '2021-02-23', 'permanent', '8798546798', 'reshmasamy21@gmail.com', 'Permanent Recruitment', '29', '1221', 'Containment zone', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.\r\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.                          ');
+INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_posted`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
+(1, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', '', '', '', '', '', '', ''),
+(2, 'CrysCloud.jpg', '', '', 'CrysCloud Pvt. Ltd', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', '', '', '', '', '', '', ''),
+(7, 'CrysCloud.jpg', 'Shery', 'daniyal', 'cognate global', 'software developer', 'FullTime', '2021-02-23', '9876896534', 'Shery@gmail.com', 'IT Contract Staffing', '5', '1217', 'Containment zone', 'job title and designation'),
+(9, 'CrysCloud.jpg', 'Reshma', 'priya', 'cognate global', 'software developer', 'FullTime', '2021-02-23', '8798546798', 'reshmasamy21@gmail.com', 'Permanent Recruitment', '29', '1221', 'Containment zone', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.\r\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\r\nPress the reload button to resubmit the data needed to load the page.                          '),
+(10, 'India', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith36@gmail.com', 'Permanent Recruitment', '41', 'Understand the customer requirements.\r\n Write embedded software code on ARM/Cortex platforms\r\n Improve the performance of existing products / projects\r\n Cross functional communication with engineering organization\r\n Ability to work independently\r\nQualifications for Embedded software engineer\r\n 7+ years of related experience\r\n Proven ability to solve problems creatively\r\n Excellent analytical skills\r\n Strong interpersonal skills and extremely resourceful\r\n Solid programming knowledge in C\r\n Experience working with wired or wireless communication protocols.\r\n Good understanding on Bluetooth LE (and classic) technology\r\n Experience in working with firmware development on an ARM/ Cortex processor, including RTOS,\r\nInterrupt driven designs\r\n Knowledge on OS/Kernel modules.\r\n Knowledge on Memory modules (NV/EEPROM/Flash)', 'HR', 'CrysCloud.jpg'),
+(11, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith48@gmail.com', '-1', '-1', '-1', 'HR', '                          '),
+(12, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith68@gmail.com', 'Permanent Recruitment', '41', '1220', 'HR', 'Understand the customer requirements.\r\n Write embedded software code on ARM/Cortex platforms\r\n Improve the performance of existing products / projects\r\n Cross functional communication with engineering organization\r\n Ability to work independently\r\nQualifications for Embedded software engineer\r\n 7+ years of related experience\r\n Proven ability to solve problems creatively\r\n Excellent analytical skills\r\n Strong interpersonal skills and extremely resourceful\r\n Solid programming knowledge in C\r\n Experience working with wired or wireless communication protocols.\r\n Good understanding on Bluetooth LE (and classic) technology\r\n Experience in working with firmware development on an ARM/ Cortex processor, including RTOS,\r\nInterrupt driven designs\r\n Knowledge on OS/Kernel modules.\r\n Knowledge on Memory modules (NV/EEPROM/Flash)'),
+(13, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith37@gmail.com', 'Permanent Recruitment', '6', '1220', 'HR', 'Understand the customer requirements.\r\n Write embedded software code on ARM/Cortex platforms\r\n Improve the performance of existing products / projects\r\n Cross functional communication with engineering organization\r\n Ability to work independently\r\nQualifications for Embedded software engineer\r\n 7+ years of related experience\r\n Proven ability to solve problems creatively\r\n Excellent analytical skills\r\n Strong interpersonal skills and extremely resourceful\r\n Solid programming knowledge in C\r\n Experience working with wired or wireless communication protocols.\r\n Good understanding on Bluetooth LE (and classic) technology\r\n Experience in working with firmware development on an ARM/ Cortex processor, including RTOS,\r\nInterrupt driven designs\r\n Knowledge on OS/Kernel modules.\r\n Knowledge on Memory modules (NV/EEPROM/Flash)');
 
 -- --------------------------------------------------------
 
@@ -145,7 +148,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `request_callback`

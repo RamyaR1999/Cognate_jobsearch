@@ -171,53 +171,6 @@ $mail->SMTPSecure='tls';
 
   ?>
 
-
-<?php
-// session_start();
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $to=$_POST['email'];
-// $subject = "OTP";
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: 07.ramyar@gmail.com" . "\r\n" .
-// "CC: thennarasan1988@gmail.com";
-// mail($to,$subject,$txt,$headers);
-// if(isset($_POST['btn-save']))
-// {
-// $_SESSION['firstname']=$_POST['firstname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
-// header( "Location: otp.php" );
-
-// }
-
-// $to=$email;
-// $subject = "OTP";
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: thennarasan1988@gmail.com" . "\r\n";
-// "CC: reshma21@gmail.com";
-// if(mail($to,$subject,$txt,$headers)){
-
-// $_SESSION['firstname']=$_POST['firstname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
-
-
-// header( "Location: otp.php" );
-// }else{
-
-// echo "mail send failed";
-
-// }
-
-
- ?>
-
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -226,7 +179,7 @@ $mail->SMTPSecure='tls';
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Register Member</title>
+    <title>Upload Resume</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Register-Member.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -270,9 +223,9 @@ $mail->SMTPSecure='tls';
               </div>
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="submit-job.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About-us.html" style="padding: 6px 0px;">About us</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="employer.php" style="padding: 6px 0px;">Employers</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
 
@@ -340,9 +293,9 @@ $mail->SMTPSecure='tls';
                   <div class="u-inner-container-layout u-sidenav-overflow">
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="submit-job.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About-us.html" style="padding: 6px 0px;">About us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact-us.html" style="padding: 6px 0px;">Contact us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
 
@@ -358,12 +311,6 @@ $mail->SMTPSecure='tls';
               
   ?> 
 
-<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
-
-
 </ul>
                   </div>
                 </div>
@@ -371,11 +318,7 @@ $mail->SMTPSecure='tls';
               </div>
             </nav>
           </div>
-          
-          
-          
-          
-          
+   
         </div>
         <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
@@ -398,85 +341,136 @@ $mail->SMTPSecure='tls';
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-3">
                     <p class="u-text u-text-default u-text-3">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-3" href="https://nicepage.com">career hub</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-3" href="">career hub</a>
                     </p>
                   </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-4">
                     <p class="u-text u-text-default u-text-4">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-4" href="https://nicepage.com">areas of expertise</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-4" href="areas_of_expertise.php">areas of expertise</a>
                     </p>
                   </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-5">
                     <p class="u-text u-text-default u-text-5">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="https://nicepage.com">security advice</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="">security advice</a>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          
-          
-          
-          
+          </div>  
         </div>
-      </div></header>
-  
+      </div>
+    </header>
+
+<style>
+.u-input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #c9ced1;
+  border-radius: 3px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background-color: #ffffff;
+  color: inherit;
+  height: 48px;
+}
+  .u-input ~ .focus-border{
+    position: absolute;
+    height: 48px;
+    bottom: 0;
+    left: 0;
+    /*width: 0;*/
+    transition: 0.4s;
+    border-radius: 2px;
+    }
+   .u-input:focus ~ .focus-border{
+     width: 100%;
+     transition: 0.4s;
+     border: 1px solid #3399FF;
+     cursor: text;
+    } 
+   .col-sm-12{
+    padding-right: 0px;
+    padding-left: 0px
+    }
+</style>
+  <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-left u-text u-text-default u-text-1">Upload your resume here</h1>
+        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2"></h1>
+        <p class="u-align-left u-text u-text-default u-text-3"></p>
+      </div>
+    </section>
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
 
                   <div class="u-form-group u-form-name u-form-group-1">
-                     <span style="font-weight: 600;">Firstname: </span><br>&nbsp
+                     <span style="font-weight: 400;">Firstname * </span>
+                     <div class="col-sm-12">
                           <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Firstname">
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
                       </div>
-                      
-
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Lastname: </span><br>&nbsp
+                        <span style="font-weight: 400;">Lastname * </span>
+                        <div class="col-sm-12">
                           <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Lastname">
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
                         </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Email: </span><br>&nbsp
+                        <span style="font-weight: 400;">Email *</span>
+                        <div class="col-sm-12">
                           <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" name="Email">
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $message_Email; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Password: </span><br>&nbsp
+                        <span style="font-weight: 400;">Password * </span>
+                        <div class="col-sm-12">
                           <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-3">
-                          <!-- <span class="far fa-eye" id="togglePassword" style="margin-left: 170px; cursor: pointer;"></span> -->
+                           <span class="focus-border"></span>
+                         </div>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                            <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
                         </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;"> Confirm_password: </span><br>&nbsp
+                        <span style="font-weight: 400;"> Confirm_password * </span>
+                        <div class="col-sm-12">
                           <input type="Password"  value="<?php echo $Confirm_password; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" name="Confirm_password">
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
-                      <?php    echo $Password ."<br>";
-echo $Confirm_password;  ?>
                       </div>
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Phone: </span><br>&nbsp
+                        <span style="font-weight: 400;">Phone * </span>
+                        <div class="col-sm-12">
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5" name="Phone">
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $message_Phone; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">City: </span><br>&nbsp
+                        <span style="font-weight: 400;">City * </span>
+                        <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
                             <option value="-1">-- please select --</option>
                             <option value="Agartala">Agartala</option>
@@ -500,13 +494,15 @@ echo $Confirm_password;  ?>
                             <option value="Delhi / NCR">Delhi / NCR</option>
                             <option value="Dindigul">Dindigul</option>
                             <option value="Ernakulam">Ernakulam</option>
-
                           </select>
+                          <span class="focus-border"></span>
+                        </div>
                           <h6 style="color:#ff0000"><?php echo $empty_city; ?></h6>
                     </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Industry: </span><br>&nbsp
+                        <span style="font-weight: 400;">Industry * </span>
+                        <div class="col-sm-12">
                              <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
                               <option value="-1">-- please select --</option>
                               <option value="Accounting / Finance">Accounting / Finance</option>
@@ -579,13 +575,15 @@ echo $Confirm_password;  ?>
                               <option value="Travel &amp; Tourism">Travel &amp; Tourism</option>
                               <option value="Tyres">Tyres</option>
                               <option value="Water Treatment /  Waste Management">Water Treatment /  Waste Management</option>
-                              <option value="Wellness / Fitness / Sports">Wellness / Fitness / Sports</option>                            
-                            </select>
+                              <option value="Wellness / Fitness / Sports">Wellness / Fitness / Sports</option> </select>
+                              <span class="focus-border"></span>
+                            </div>
                             <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
                       </div>
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 600;">Function: </span><br>&nbsp
+                        <span style="font-weight: 400;">Function * </span>
+                        <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
                             <option value="-1">-- please select --</option>
                             <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
@@ -639,11 +637,14 @@ echo $Confirm_password;  ?>
                             <option value="TV / Films / Production">TV / Films / Production</option>
                             <option value="Web / Graphic Design / Visualiser">Web / Graphic Design / Visualiser</option>
                         </select>
+                        <span class="focus-border"></span>
+                      </div>
                         <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Education: </span><br>&nbsp
+                    <span style="font-weight: 400;">Education * </span>
+                    <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
                           <option value="-1">-- please select --</option>
                           <option value="B.A">B.A</option>
@@ -670,12 +671,14 @@ echo $Confirm_password;  ?>
                           <option value="LLB">LLB</option>
                           <option value="LLM">LLM</option>
                         </select>
+                        <span class="focus-border"></span>
+                      </div>
                         <h6 style="color:#ff0000"><?php echo $empty_education; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Experience: </span><br>&nbsp
-                     
+                    <span style="font-weight: 400;">Experience * </span><br>&nbsp
+                     <div class="col-sm-12">
                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience"id="Experience">
                           <option value="-1">years</option>
                           <option value="0">0</option>
@@ -700,11 +703,14 @@ echo $Confirm_password;  ?>
                           <option value="19">19</option>
                           <option value="20">20</option>
                         </select>
+                        <span class="focus-border"></span>
+                      </div>
                         <h6 style="color:#ff0000"><?php echo $empty_experience; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 600;">Salary: </span><br>&nbsp
+                    <span style="font-weight: 400;">Salary * </span>
+                  <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Salary"id="Salary">
                           <option value="-1">lakhs</option>
                           <option value="0">0</option>
@@ -737,22 +743,23 @@ echo $Confirm_password;  ?>
                           <option value="27">27</option>
                           <option value="28">28</option>
                           <option value="29">29</option>
-                          <option value="30">30</option>
-                          
+                          <option value="30">30</option>  
                         </select>
+                        <span class="focus-border"></span>
+                      </div>
                         <h6 style="color:#ff0000"><?php echo $empty_salary; ?></h6>
                   </div>
 
               <div class="u-form-group u-form-name u-form-group-2">
-                 <span style="font-weight: 600;">CV: </span>
+                 <span style="font-weight: 400;">CV * </span>
                    <div class="form-element">
                      <div class="custom-file-upload">
-                        <div class="custom-file-upload-toggle">
-                          <div class="custom-file-upload-toggle-btn btn btn-prim">
-                                
+                        <!-- <div class="custom-file-upload-toggle">
+                          <div class="custom-file-upload-toggle-btn btn btn-prim">     
                           </div>
-                        </div>
+                        </div> -->
                         <input type="file" name="ctl09$ctl04$CVFileUpload" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
+                        <span class="focus-border"></span>
                      </div>
                     <span data-bit-output-upload-files="cvFileUpload"></span>
                       <div> 
