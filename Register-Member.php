@@ -36,18 +36,19 @@ $mail->SMTPSecure='tls';
          $Education =$_POST['Education'];
          $Experience =$_POST['Experience'];
          $Salary =$_POST['Salary'];
-         $CV = $_FILES['CV']['Name'];
-         $upload = "uploads/".$CV;
+         // $CV = $_FILES['CV']['Name'];
+         // $upload = "uploads/".$CV;
+
+         $CV = $_FILES['CV']['name'];
+         $upload = $_FILES['CV']['tmp_name'];
          
          $otp=$_POST['otp'];
          $otp=$rndno;
          $error = 0;
-    
 
-          
-       
+          move_uploaded_file($upload,"images/$CV");
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary) && !empty($upload)){
+      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary)){
           
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
@@ -88,11 +89,11 @@ $mail->SMTPSecure='tls';
 
         
         $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$upload','$rndno')";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
-            move_uploaded_file($_FILES['CV']['tmp_name'], $upload);
+            // move_uploaded_file($_FILES['CV']['tmp_name'], $upload);
       
         if(!$register_query) {
             
@@ -767,7 +768,7 @@ $mail->SMTPSecure='tls';
                           <div class="custom-file-upload-toggle-btn btn btn-prim">     
                           </div>
                         </div> -->
-                        <input type="file" name="ctl09$ctl04$CVFileUpload" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
+                        <input type="file" name="CV" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
                         <span class="focus-border"></span>
                      </div>
                     <span data-bit-output-upload-files="cvFileUpload"></span>
@@ -1484,6 +1485,7 @@ element.style {
 }
 .footer-main {
     background: #0f1941;
+    /*background: #111111;*/
     color: #f7f5f0;
     font-size: 16px;
     padding: 20px 0;

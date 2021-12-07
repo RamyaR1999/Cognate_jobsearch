@@ -47,7 +47,11 @@ if(isset($_SESSION['id'])){
            $Education =$_POST['Education'];
            $Experience =$_POST['Experience'];
            $Salary =$_POST['Salary'];
-           $CV = $_POST['CV'];
+           // $CV = $_POST['CV'];
+           // $upload = $_FILES['Image']['tmp_name'];
+
+           $CV = $_FILES['CV']['name'];
+           $upload = $_FILES['CV']['tmp_name'];
 
 
             $Password = mysqli_real_escape_string($connection,$_POST['Password']);
@@ -55,7 +59,7 @@ if(isset($_SESSION['id'])){
             $Password = md5($Password);      
             // $confirm_password = md5($confirm_password); 
           
-        move_uploaded_file($image_tempname,"images/$image");
+        move_uploaded_file($upload,"images/$CV");
         
         if(empty($user_image)){
             
