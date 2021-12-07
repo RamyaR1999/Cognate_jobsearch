@@ -24876,7 +24876,7 @@ a.u-link.u-hover-grey-25:hover {
 .u-container-layout.u-grey-5:before,
 .u-table-alt-grey-5 tr:nth-child(even) {
   color: #111111;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 .u-button-style.u-grey-5,
 .u-button-style.u-grey-5[class*="u-border-"] {
@@ -34418,7 +34418,8 @@ a.u-link.u-text-hover-grey-90:hover {
         .u-table-alt-custom-color-1 tr:nth-child(even)
         {
             color: #ffffff;
-            background-color:  #003399;
+            /*background-color:  #003399;*/
+            background-color: #e2921f;
         }
 
         .u-button-style.u-custom-color-2,

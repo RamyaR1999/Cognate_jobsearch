@@ -88,7 +88,7 @@
        }
           
           }else{
-        $message = "Fields cannot be Empty";
+        $message = "All fiels are required *";
        }  
          
           }else {         
@@ -179,7 +179,7 @@
     left: 0;
     /*width: 0;*/
     transition: 0.4s;
-    border-radius: 2px;
+    border-radius: 3px;
     }
    .u-input:focus ~ .focus-border{
      width: 100%;
@@ -215,7 +215,7 @@
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
   <?php
@@ -277,7 +277,7 @@
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -354,9 +354,19 @@
       </div>
     </section>
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
+
+<div class="u-align-left card-header bg-transparent border-0">
+          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class="far fa-clone pr-1"></i>submit a job</h3>
+          </div>
+
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u-#f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
+            <div class="col-md-12">
+               <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
+               <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+               <h6 class="text-center" style="color:#ff0000"></h6>
+          </div>
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
@@ -474,35 +484,35 @@
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="-1">-- please select --</option>
-                              <option value="37">Ahmedabad</option>
-                              <option value="38">Baroda</option>
-                              <option value="41">Bengaluru</option>
-                              <option value="30">Bengaluru</option>
-                              <option value="27">Bhubaneswar</option>
-                              <option value="6">Chandigarh</option>
-                              <option value="29">Chennai</option>
-                              <option value="28">Cochin</option>
-                              <option value="24">Coimbatore</option>
-                              <option value="35">Gurgaon</option>
-                              <option value="21">Guwahati</option>
-                              <option value="9">Hubli</option>
-                              <option value="31">Hyderabad</option>
-                              <option value="26">Indore</option>
-                              <option value="20">Jaipur</option>
-                              <option value="5">Jamshedpur</option>
-                              <option value="36">Kolkata</option>
-                              <option value="15">Lucknow</option>
-                              <option value="7">Madurai</option>
-                              <option value="11">Mangalore</option>
-                              <option value="32">Mumbai</option>
-                              <option value="8">Nagpur</option>
-                              <option value="34">New Delhi</option>
-                              <option value="12">Patna</option>
-                              <option value="33">Pune</option>
-                              <option value="23">Rajkot</option>
-                              <option value="22">Surat</option>
-                              <option value="10">Trivandrum</option>
-                              <option value="16">Visakapatnam</option>
+                              <option value="Ahmedabad">Ahmedabad</option>
+                              <option value="Baroda">Baroda</option>
+                              <option value="Bengaluru">Bengaluru</option>
+                              <option value="Bengaluru">Bhubaneswar</option>
+                              <option value="Bhubaneswar">Chandigarh</option>
+                              <option value="Chandigarh">Chennai</option>
+                              <option value="Chennai">Cochin</option>
+                              <option value="Cochin">Coimbatore</option>
+                              <option value="Coimbatore">Gurgaon</option>
+                              <option value="Gurgaon">Guwahati</option>
+                              <option value="Guwahati">Hubli</option>
+                              <option value="Hubli">Hyderabad</option>
+                              <option value="Indore">Indore</option>
+                              <option value="Jaipur">Jaipur</option>
+                              <option value="Jamshedpur">Jamshedpur</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kolkata">Kolkata</option>
+                              <option value="Lucknow">Lucknow</option>
+                              <option value="Madurai">Madurai</option>
+                              <option value="Mangalore">Mangalore</option>
+                              <option value="Mumbai">Mumbai</option>
+                              <option value="Nagpur">Nagpur</option>
+                              <option value="New Delhi">New Delhi</option>
+                              <option value="Patna">Patna</option>
+                              <option value="Pune">Pune</option>
+                              <option value="Rajkot">Rajkot</option>
+                              <option value="Surat">Surat</option>
+                              <option value="Trivandrum">Trivandrum</option>
+                              <option value="Visakapatnam">Visakapatnam</option>
                             </select>
                         <span class="focus-border"></span>    
                         </div>
@@ -518,23 +528,23 @@
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
                           <option value="-1">-- please select --</option>
-                          <option value="1214">Agro &amp; Seeds</option>
-                          <option value="1215">Banking &amp; finance</option>
-                          <option value="1217">General Administration</option>
-                          <option value="1218">Human Resources</option>
-                          <option value="1220">Information Technology</option>
-                          <option value="1221">Insurance</option>
-                          <option value="1222">ITeS &amp; BPO</option>
-                          <option value="1226">Other</option>
-                          <option value="1228">Manufacturing</option>
-                          <option value="1233">Sales</option>
-                          <option value="1764">FMCG</option>
-                          <option value="1766">Retail</option>
-                          <option value="1768">Telecom</option>
-                          <option value="1769">Media &amp; entertainment</option>
-                          <option value="1770">Education</option>
-                          <option value="1771">Hospitality &amp; Tourism </option>
-                          <option value="1773">Consulting &amp; VC</option>
+                          <option value="Agro & Seeds">Agro &amp; Seeds</option>
+                          <option value="Banking & finance">Banking &amp; finance</option>
+                          <option value="General Administration">General Administration</option>
+                          <option value="Human Resources">Human Resources</option>
+                          <option value="Information Technology">Information Technology</option>
+                          <option value="Insurance">Insurance</option>
+                          <option value="ITeS BPO">ITeS &amp; BPO</option>
+                          <option value="Other">Other</option>
+                          <option value="Manufacturing">Manufacturing</option>
+                          <option value="Sales">Sales</option>
+                          <option value="FMCG">FMCG</option>
+                          <option value="Retail">Retail</option>
+                          <option value="Telecom">Telecom</option>
+                          <option value="Media entertainment">Media &amp; entertainment</option>
+                          <option value="Education">Education</option>
+                          <option value="Hospitality Tourism">Hospitality &amp; Tourism</option>
+                          <option value="Consulting VC">Consulting &amp; VC</option>
                         </select>
                         <span class="focus-border"></span>
                         </div>
@@ -1257,16 +1267,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 user agent stylesheet
 footer {
     display: block;
@@ -1287,21 +1287,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.cf:after {
+
+/*.cf:after {
     clear: both;
 }
 .cf:before, .cf:after {
@@ -1317,7 +1304,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
+}*/
 
 </style>
 

@@ -175,7 +175,7 @@
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
   <?php
@@ -237,7 +237,7 @@
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -316,18 +316,20 @@ Submit Your CV</p>
     </section>
 
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-    <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class="far fa-clone pr-1"></i>request a call back</h3>
-          </div>
+        <div class="u-align-left card-header bg-transparent border-0">
+            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class=""></i>request a call back</h3>
+        </div>
 
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u-#f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" redirect="true">
-            <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
-            <div class="col-md-12">
-            <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
-            <h6 class="text-center" style="color:#ff0000"></h6>
-          </div>
+
+          <div class="col-md-12">
+               <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
+               <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+               <h6 class="text-center" style="color:#ff0000"></h6>
+           </div>
+
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
@@ -1155,16 +1157,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 user agent stylesheet
 footer {
     display: block;
@@ -1185,21 +1177,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.cf:after {
+
+/*.cf:after {
     clear: both;
 }
 .cf:before, .cf:after {
@@ -1215,10 +1194,9 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
+}*/
 
 </style>
-
 
 <script>
 

@@ -57,7 +57,7 @@
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
   <?php
@@ -119,7 +119,7 @@
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -219,9 +219,9 @@
             </p>
         </div>
  -->
-    <div class="col-md-4">
+    <div class="col-md-6">
        <h1 class="u-align-left u-text u-text-default u-text-2">Select a Category</h1>
-         <select type="text" style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" class="form-control" name="Offerings" id="Offerings">
+         <select type="text" style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" class="col-md-8 form-control" name="Offerings" id="Offerings">
 
              <option value='area of expertise' style="color: #058fe6; border-radius: 10px;">Areas of expertise</option>
              <option value='hr trends' style="color: #058fe6; border-radius: 10px;">HR Trends</option>
@@ -1466,16 +1466,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 user agent stylesheet
 footer {
     display: block;
@@ -1496,21 +1486,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.cf:after {
+
+/*.cf:after {
     clear: both;
 }
 .cf:before, .cf:after {
@@ -1526,169 +1503,6 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
-
-</style>
-
-<style>
-
-element.style {
-}
-@media only screen and (min-width: 801px)
-.snp-header-topic-txt {
-    padding-right: 25px;
-    padding-bottom: 120px;
-    padding-top: 240px;
-}
-@media only screen and (min-width: 641px)
-.snp-header-topic-txt {
-    padding-right: 15px;
-    position: relative;
-    width: 65%;
-    z-index: 1;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-.box-content-left .box-inner, .box-content-right .box-inner, .box-inner .box-inner, .grid-col-2-3 .box-inner, .grid-col-1-3 .box-inner {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    word-wrap: break-word;
-}
-.snp-header-topic {
-    color: #fff;
-    margin-top: -60px;
-}
-.main {
-    background: #0f1941;
-    line-height: 1.5;
-    min-height: 100vh;
-    overflow: hidden;
-}
-body {
-    color: #0f1941;
-    font: 400 18px/1.2 'Graphik Web',Tahoma,sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-
-</style>
-
-<style>
-
-  .snippet:not(.snp-body-copy):not(.snp-dynamic-navigation):not(.snp-page-header):not(.snp-header-illus):not(.snp-header-illus):not(.snp-link-list):not(.snp-prim-job-search) {
-    min-height: 0;
-}
-.snp-wf360-article-list {
-    padding: 60px 0;
-}
-.snp-bg-none {
-    background: none;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-.main {
-    background: #0f1941;
-    line-height: 1.5;
-    min-height: 100vh;
-    overflow: hidden;
-}
-body {
-    color: #0f1941;
-    font: 400 18px/1.2 'Graphik Web',Tahoma,sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-.snippet.snippet:not(.snp-body-copy):not(.snp-dynamic-navigation):not(.snp-page-header):not(.snp-header-illus):not(.snp-header-illus):not(.snp-link-list):not(.snp-prim-job-search)::before {
-    background: none;
-    display: table;
-    height: auto;
-    position: static;
-    width: auto;
-}
-.snippet::before, .snippet::after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.snippet::after {
-    clear: both;
-}
-.snippet::before, .snippet::after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
+}*/
 
 </style>  

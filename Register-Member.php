@@ -163,6 +163,7 @@ $mail->SMTPSecure='tls';
              $empty_experience = "experience is required";
              $empty_salary = "salary is required";
              $empty_cv = "CV is required";
+             $message = "All fields are required *";
        }  
          
           }else {         
@@ -224,7 +225,7 @@ $mail->SMTPSecure='tls';
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -294,7 +295,7 @@ $mail->SMTPSecure='tls';
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -408,10 +409,18 @@ $mail->SMTPSecure='tls';
       </div>
     </section>
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
+      <div class="u-align-left card-header bg-transparent border-0">
+            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class=""></i>Account information</h3>
+        </div>
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
 
+               <div class="col-md-13">
+                   <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
+                   <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+                   <h6 class="text-center" style="color:#ff0000"></h6>
+               </div>
                   <div class="u-form-group u-form-name u-form-group-1">
                      <span style="font-weight: 400;">Firstname * </span>
                      <div class="col-sm-12">
@@ -646,7 +655,7 @@ $mail->SMTPSecure='tls';
                     <span style="font-weight: 400;">Education * </span>
                     <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
-                          <option value="-1">-- please select --</option>
+                          <option value="">-- please select --</option>
                           <option value="B.A">B.A</option>
                           <option value="B.Arch">B.Arch</option>
                           <option value="B.Com">B.Com</option>
@@ -1485,16 +1494,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 user agent stylesheet
 footer {
     display: block;
@@ -1515,21 +1514,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.cf:after {
+
+/*.cf:after {
     clear: both;
 }
 .cf:before, .cf:after {
@@ -1545,7 +1531,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
+}*/
 
 </style>
 

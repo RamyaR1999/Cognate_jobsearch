@@ -18,9 +18,10 @@
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
- <!-- Profile Icon -->
 
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+ <!-- Profile Icon -->
  <link rel="stylesheet" href="assets/css/shared/style.css"> 
     
 <!-- Autocomplete -->
@@ -38,6 +39,7 @@
     <meta property="og:title" content="Page 2">
     <meta property="og:type" content="website">
   </head>
+
   <body class="u-body">
     <header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
         <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
@@ -57,7 +59,7 @@
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="" style="padding: 6px 0px;">About us</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -112,13 +114,6 @@
 
 ?> 
 
-<!-- <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
-
-
-
 </ul>
               </div>
               <div class="u-custom-menu u-nav-container-collapse">
@@ -127,7 +122,7 @@
                     <div class="u-menu-close"></div>
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 6px 0px;">About us</a></li>
+<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
 <?php
@@ -143,13 +138,6 @@
     }
               
   ?> 
-
-<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
-
-
 </ul>
                   </div>
                 </div>
@@ -157,12 +145,8 @@
               </div>
             </nav>
           </div>
-          
-          
-          
-          
-          
         </div>
+
         <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
             <div class="u-list u-list-1">
@@ -245,7 +229,35 @@
 
 <?php
 
-  $query="SELECT * FROM Jobs ";
+   $per_page=4;  
+                
+    if(isset($_GET['page'])){
+        
+        $page = $_GET['page'];
+        
+    } else {
+        
+        $page ="";
+        
+    }
+  
+    if($page =="" || $page ==1){
+        
+        $page_1=0;
+        
+    } else {
+        
+        $page_1=($page*$per_page)-$per_page;
+        
+    }
+
+  $post_query_count="SELECT * FROM Jobs";
+  $find_count=mysqli_query($connection,$post_query_count);
+  $count=mysqli_num_rows($find_count);
+  $count=ceil($count/$per_page);
+
+
+  $query="SELECT * FROM Jobs LIMIT $page_1, $per_page";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
@@ -254,10 +266,10 @@
      $Logo = $row['Logo'];
      $Job_title = $row['Job_title'];
      $Company_name = $row['Company_name'];
-     $Location = $row['Location'];
+     $Branch = $row['Branch'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_description = substr($row['Job_description'],0,200);
+     $Job_specification = substr($row['Job_specification'],0,200);
 
 
 ?>
@@ -265,58 +277,20 @@
     
           <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-                <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>">
+               <!--  <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>"> -->
+               <br><br>
                 <p class="u-text u-text-default u-text-1">
                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $id ?>" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
-                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p>
+                <p class="u-text u-text-default u-text-3"><?php echo $Branch ?></p>
+                <p class="u-text u-text-4"> <?php echo $Job_specification; ?> ....</p>
                 <a href="Job_details.php?Job_details=<?php echo $id ?>" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
               </div>
             </div>
 
 
-<?php  } ?>
-
-
-            <!-- <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
-                <p class="u-text u-text-default u-text-1">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com" target="_blank">Senior software engineer MacOs</a>
-                </p>
-                <p class="u-text u-text-default u-text-2">20 October 2021</p>
-                <p class="u-text u-text-default u-text-3">chennai, Tamil Nadu</p>
-                <p class="u-text u-text-4"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ....</p>
-                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <img alt="" class="u-image u-image-default u-image-2" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
-                <p class="u-text u-text-default u-text-5">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nicepage.com" target="_blank">Senior software engineer MacOs</a>
-                </p>
-                <p class="u-text u-text-default u-text-6"> 20 October 2021</p>
-                <p class="u-text u-text-default u-text-7">Mumbai, Maharashtra&nbsp;</p>
-                <p class="u-text u-text-8"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ....</p>
-                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-4" target="_blank">read more</a>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <img alt="" class="u-image u-image-default u-image-3" data-image-width="198" data-image-height="113" src="images/CrysCloud2.jpg">
-                <p class="u-text u-text-default u-text-9">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" href="https://nicepage.com" target="_blank">Lead engineer simulation tool development</a>
-                </p>
-                <p class="u-text u-text-default u-text-10"> 20 October 2021</p>
-                <p class="u-text u-text-default u-text-11">chennai, Tamil Nadu</p>
-                <p class="u-text u-text-12"> One our Client leading MNC is looking for Lead Engineer - Simulation Tool Development for Chennai Location. ...</p>
-                <a href="https://nicepage.com/website-templates" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-6" target="_blank">read more</a>
-              </div>
-            </div> -->
-
+    <?php  } ?>
 
           </div>
         </div>
@@ -324,34 +298,57 @@
           <div class="u-container-layout u-container-layout-4">
             <p class="u-text u-text-default u-text-13">jobs by region</p>
             <p class="u-text u-text-default u-text-14">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" href="https://nicepage.com">Andhra Pradesh</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" href="">Andhra Pradesh</a>
             </p>
             <p class="u-text u-text-default u-text-15">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" href="https://nicepage.com">Karnataka</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" href="">Karnataka</a>
             </p>
             <p class="u-text u-text-default u-text-16">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9" href="https://nicepage.com">Tamil Nadu</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9" href="">Tamil Nadu</a>
             </p>
             <p class="u-text u-text-default u-text-17">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10" href="https://nicepage.com">Kerala</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10" href="">Kerala</a>
             </p>
             <p class="u-text u-text-default u-text-18">job category</p>
             <p class="u-text u-text-default u-text-19">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="https://nicepage.com">Software Engineer</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="">Software Engineer</a>
             </p>
             <p class="u-text u-text-default u-text-20">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="https://nicepage.com">Sales Executive</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="">Sales Executive</a>
             </p>
             <p class="u-text u-text-default u-text-21">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="https://nicepage.com">Accountant</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="">Accountant</a>
             </p>
             <p class="u-text u-text-default u-text-22">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="https://nicepage.com">Project Manager</a>
+              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="">Project Manager</a>
             </p>
           </div>
         </div>
       </div>
     </section>
+
+        <ul class="pager">
+
+<?php
+                 
+              
+              for($i=1; $i<=$count; $i++){
+                  
+                  if($i == $page){
+                  
+                    echo "<li><a class='active_link' href='Available_jobs.php?page={$i}'>{$i}</a></li>";
+                     
+                } else {
+                      
+                    echo "<li><a href='Available_jobs.php?page={$i}'>{$i}</a></li>";    
+                      
+                  }
+                  
+              }
+
+
+          ?>
+</ul>
     
     <!-- 
     <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -1012,7 +1009,7 @@
     </footer>
     <!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-
+<script src="jquery.js"></script>
   </body>
 </html>
 
@@ -1038,16 +1035,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 user agent stylesheet
 footer {
     display: block;
@@ -1068,21 +1055,8 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.cf:after {
+
+/*.cf:after {
     clear: both;
 }
 .cf:before, .cf:after {
@@ -1098,7 +1072,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
+}*/
 
 </style>
 
