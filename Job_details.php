@@ -220,10 +220,11 @@
      $Logo = $row['Logo'];
      $Job_title = $row['Job_title'];
      $Company_name = $row['Company_name'];
-     $Location = $row['Location'];
+     $Branch = $row['Branch'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_description = $row['Job_description'];
+     $Job_specification = $row['Job_specification'];
+     $Service = $row['Service'];
 
 
    }
@@ -231,10 +232,10 @@
 ?>
 
         <h1 class="u-text u-text-1"><?php echo $Job_title; ?></h1>
-        <p class="u-text u-text-default u-text-palette-1-dark-1 u-text-2"><?php echo $Location; ?></p>
+        <p class="u-text u-text-default u-text-palette-1-dark-1 u-text-2"><?php echo $Branch; ?></p>
         <a href="https://nicepage.com/css-templates" class="u-border-2 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-3 u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-1">apply now</a>
         <p class="u-text u-text-3"><?php echo $Job_posted; ?></p>
-        <p class="u-text u-text-4">permanent</p>
+        <p class="u-text u-text-4"><?php echo $Service; ?></p>
 
 
 
@@ -250,14 +251,14 @@
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-1">posted :&nbsp; <?php echo $Job_posted; ?></p>
-                <p class="u-text u-text-2">location : <?php echo $Location; ?></p>
+                <p class="u-text u-text-2">location : <?php echo $Branch; ?></p>
                 <p class="u-text u-text-3">function :</p>
                 <p class="u-text u-text-default-xs u-text-4">
                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="">Information Technology</a>
                 </p>
                 <p class="u-text u-text-5">position type :</p>
                 <p class="u-text u-text-default-xs u-text-6">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="">permanent</a>
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href=""><?php echo $Service; ?></a>
                 </p>
                 <p class="u-text u-text-7">experience : 5-8</p>
                 <a href="" class="u-active-palette-1-base u-border-2 u-border-active-palette-1-base u-border-hover-white u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-3">apply now</a>
@@ -271,7 +272,7 @@
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-8">Job description</h2>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9"><?php echo $Job_title; ?></h2>
-                <p class="u-align-left u-text u-text-10"> <?php echo $Job_description; ?></p>
+                <p class="u-align-left u-text u-text-10"> <?php echo $Job_specification; ?></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-12">Angular, Dot net, WCF, MVC</p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-13">qualification</h2>

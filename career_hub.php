@@ -252,12 +252,14 @@
     <div class="wf360-article-list-overview slick-initialized slick-slider" data-bit-h-scroll-list-init-element="">
             
         <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4332px; transform: translate3d(0px, 0px, 0px);" role="listbox">
+
+  <div class="u-layout-row">        
   <article class="wf360-article h-scroll-list-item slick-slide slick-current slick-active" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="false">
     <div id="ctl07_ctl04_ctl03_ctl01_ArticleHyperLinkWrapper" class="wf360-article-media">
         <div class="wf360-article-media-inner">
             <a id="ctl07_ctl04_ctl03_ctl01_ImageHyperLink" data-bit-h-scroll-list-button-height-element="" href="hr-trends/staffing-trends/" tabindex="0"><div id="ctl07_ctl04_ctl03_ctl01_PageImageWrapper" class="wf360-item-img-box">
                     <div class="wf360-dimensions-img wf360-constraint-img">
-                        <img id="ctl07_ctl04_ctl03_ctl01_PageImage" data-src="/ugc/img/casestudies/sbb-cs.jpg" src="images/sbb-cs.jpg" alt="staffing trends" data-lazy-load="false">
+                        <img id="ctl07_ctl04_ctl03_ctl01_PageImage" style="width: 600px; height: 365px;" data-src="/ugc/img/casestudies/sbb-cs.jpg" src="images/sbb-cs.jpg" alt="staffing trends" data-lazy-load="false">
                     </div>
                 </div></a>
         </div>
@@ -299,12 +301,14 @@
         </div>
     </div>
 </article>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <article class="wf360-article h-scroll-list-item slick-slide slick-active" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="false">
     <div id="ctl07_ctl04_ctl03_ctl02_ArticleHyperLinkWrapper" class="wf360-article-media">
         <div class="wf360-article-media-inner">
             <a id="ctl07_ctl04_ctl03_ctl02_ImageHyperLink" data-bit-h-scroll-list-button-height-element="" href="areas-of-expertise/performance-appraisal-methods/" tabindex="0"><div id="ctl07_ctl04_ctl03_ctl02_PageImageWrapper" class="wf360-item-img-box">
                     <div class="wf360-dimensions-img wf360-constraint-img">
-                        <img id="ctl07_ctl04_ctl03_ctl02_PageImage" data-src="/ugc/img/blog/dots.png" src="images/dots.png" alt="performance appraisal methods" data-lazy-load="false">
+                        <img id="ctl07_ctl04_ctl03_ctl02_PageImage" style="width: 600px; height: 365px;" data-src="/ugc/img/blog/dots.png" src="images/dots.png" alt="performance appraisal methods" data-lazy-load="false">
                     </div>
                 </div></a>
         </div>
@@ -342,12 +346,15 @@
         </div>
     </div>
 </article>
+</div>
+
+<div class="u-layout-row">
 <article class="wf360-article h-scroll-list-item slick-slide" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="3" aria-hidden="true">
     <div id="ctl07_ctl04_ctl03_ctl04_ArticleHyperLinkWrapper" class="wf360-article-media">
         <div class="wf360-article-media-inner">
             <a id="ctl07_ctl04_ctl03_ctl04_ImageHyperLink" data-bit-h-scroll-list-button-height-element="" href="areas-of-expertise/5-types-of-bosses-and-how-to-work-with-them/" tabindex="-1"><div id="ctl07_ctl04_ctl03_ctl04_PageImageWrapper" class="wf360-item-img-box">
                     <div class="wf360-dimensions-img wf360-constraint-img">
-                        <img id="ctl07_ctl04_ctl03_ctl04_PageImage" data-src="/ugc/img/blog/hero.jpg" src="images/hero.jpg" alt="5 Types Of Bosses And How To Work With Them" data-lazy-load="false">
+                        <img id="ctl07_ctl04_ctl03_ctl04_PageImage" style="width: 600px; height: 365px;" data-src="/ugc/img/blog/hero.jpg" src="images/hero.jpg" alt="5 Types Of Bosses And How To Work With Them" data-lazy-load="false">
                     </div>
                 </div></a>
         </div>
@@ -385,13 +392,14 @@
         </div>
     </div>
 </article>
-
-<!-- <article class="wf360-article h-scroll-list-item slick-slide" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="2" aria-hidden="true">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<article class="wf360-article h-scroll-list-item slick-slide" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="2" aria-hidden="true">
     <div id="ctl07_ctl04_ctl03_ctl03_ArticleHyperLinkWrapper" class="wf360-article-media">
         <div class="wf360-article-media-inner">
             <a id="ctl07_ctl04_ctl03_ctl03_ImageHyperLink" data-bit-h-scroll-list-button-height-element="" href="areas-of-expertise/5-non-work-things-that-impact-your-job-satisfaction/" tabindex="-1"><div id="ctl07_ctl04_ctl03_ctl03_PageImageWrapper" class="wf360-item-img-box">
                     <div class="wf360-dimensions-img wf360-constraint-img">
-                        <img id="ctl07_ctl04_ctl03_ctl03_PageImage" data-src="/ugc/img/Corona 6_illustration_UseBackgroundWhite_RGB.png" src="images/Corona 6_illustration_UseBackgroundWhite_RGB.png" alt="5 non-work things that impact your job satisfaction" data-lazy-load="false">
+                        <img id="ctl07_ctl04_ctl03_ctl03_PageImage" style="width: 600px; height: 365px;" data-src="/ugc/img/Corona 6_illustration_UseBackgroundWhite_RGB.png" src="images/Corona 6_illustration_UseBackgroundWhite_RGB.png" alt="5 non-work things that impact your job satisfaction" data-lazy-load="false">
                     </div>
                 </div></a>
         </div>
@@ -428,8 +436,8 @@
                 
         </div>
     </div>
-</article> -->
-
+</article>
+</div>
 <!-- <article class="wf360-article h-scroll-list-item slick-slide" data-bit-h-scroll-list-item="" style="width: 361px;" tabindex="-1" role="option" aria-describedby="slick-slide04" data-slick-index="4" aria-hidden="true">
     <div id="ctl07_ctl04_ctl03_ctl05_ArticleHyperLinkWrapper" class="wf360-article-media">
         <div class="wf360-article-media-inner">
