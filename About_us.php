@@ -311,15 +311,15 @@ if (isset($_POST['submit'])){
 
     <section class="u-clearfix text-capitalize u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text  u-text-right u-text-white u-text-1">our history..</h3>
-        <p class="u-align-right u-text  u-text-right u-text-white u-text-6">When Frits Goldschmeding and Ger Dalebout<br>
-         set out to start Randstad, <br>
-         all they had was an old bicycle,<br>
-          two student rooms and 500 Dutch guilders.<br>
-           The randstad story is the tale of two men<br>
-            who set out chasing an improbable<br>
-             dream of transforming  the job market<br>
-              with remarkable success.</p>
+        <h3 class="u-align-right u-text  u-text-right u-text-white u-text-1">welcome to cognate global..</h3>
+        <p class="u-align-right u-text  u-text-right u-text-white u-text-6">Cognate Global is a IT Staffing <br>
+          and Managed resourcing provider<br>
+           with offices in Bangalore and USA and<br>
+            have strong capabilities to support<br>
+             European locations. We also do Onsite<br>
+              Staffing and Remote Staffing<br>
+               solutions, Contract Staffing,<br>
+           Placement Solutions across multiple geographies.</p>
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-pink e u-btn-1">learn more
               </a>
@@ -330,24 +330,15 @@ if (isset($_POST['submit'])){
 
     <section class="u-clearfix u-grey-5 u-lightbox text-capitalize u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1" >who we are.</h3>
-        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Randstad India,<br>
-             an ISO 9001:2015 certified company,<br>
-              is a wholly owned subsidiary of Randstad Holding nv,<br>
-               a € 23.3 billion global provider of HR services. <br>
-               <br> 
-</br>
-With a legacy of over 25 years in the Indian market,<br>
- Randstad is today one of the leading players in the Indian recruitment ecosystem.<br>
-  We believe in combining our passion for people with smart <br>
-  investments in intelligent technology to help organizations<br>
-   and talent realise their true potential. Employing over 800<br>
-    specialist recruiters across our 20 office locations,<br>
-     Randstad India provides a full range of solutions including temporary<br>
-      and permanent staffing, outsourcing and other workforce solutions<br>
-       in the areas of engineering, finance and<br>
-        accounting, human resources, IT, manufacturing and logistics,<br>
-         and sales and marketing.</p>
+        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1" >COGNATE BENEFITS</h3>
+        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Cognate offers range of Technology<br>
+           Staffing and Consulting Services.<br>
+
+Consultative approach backed with<br>
+ expertise across multiple technologies.<br>
+
+Flat Management Structure, prompt decision making<br>
+ with flexible approach to help changing dynamics of the projects.</p>
        <!-- <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-pink  u-btn-1">learn more</a>-->
         <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
         <!-- <img src="images/civil architectural.jpg" class="" alt="" width="404" height="336"> -->
