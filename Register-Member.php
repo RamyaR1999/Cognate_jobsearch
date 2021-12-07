@@ -102,8 +102,8 @@ $mail->SMTPSecure='tls';
          $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
 
 
-         $mail->Username = 'reshmasamy21@gmail.com';
-          $mail->Password = '9789261719';
+          $mail->Username = 'CGBSTech2021@gmail.com';
+          $mail->Password = 'cgbs@2021';
 
           $mail->setFrom ('barthalomena@gmail.com');
           $mail->addAddress($_POST['Email'],$_POST['Firstname']);
