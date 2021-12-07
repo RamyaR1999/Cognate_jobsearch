@@ -65,7 +65,8 @@
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
           
-         $_SESSION['status'] = "Registration Was Successful Please Sign In";   
+         $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
+          header( "Location: Available_jobs.php" );  
           
  }
 
