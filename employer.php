@@ -242,9 +242,9 @@ if (isset($_POST['submit'])){
       </div></header>
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
      
-  <div style="clear: both">
-    <h1 class="text-avatar text-capitalize text-left " style="inset-inline-start: initial">employment services</h1>
-    <h1 class="text-right text-dark  " style="revert: right">find the right talent....</h1>
+  <div style="clear: both u-text-1">
+    <h1 class="text-avatar text-capitalize text-monospace  text-left  " style="inset-inline-start: initial color:red;font-size:100px;">employment services</h1>
+    <h1 class="text-right text-monospace text-dark text-capitalize " style="revert color:red;font-size:80px;">find the right talent....</h1>
 </div>
 
         <div class="u-expanded-width-xs u-form u-form-1">
