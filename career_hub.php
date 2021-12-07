@@ -801,12 +801,12 @@
 </div>
         
     </div>
-    <div class="wf360-article-list-more">
+    <!-- <div class="wf360-article-list-more">
         <p class="wf360-article-list-more-text">
             read more about this topic?
         </p>
         <a id="ctl07_ctl04_ctl03_ViewAllHyperLink" class="btn btn-prim" href="/job-seeker/career-hub/all-articles/">view all</a>
-    </div>
+    </div> -->
 </div>
 
 </div>
