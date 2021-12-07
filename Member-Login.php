@@ -42,7 +42,7 @@
         if($Email === $db_Email){
         if($Password === $db_Password){
      
-            
+             $_SESSION['id'] = $db_id;
              $_SESSION['Email'] = $db_Email;
              $_SESSION['Firstname'] = $db_Firstname;
              $_SESSION['Lastname'] = $db_Lastname;
@@ -201,7 +201,7 @@
 
 <?php
 
-    if(isset($_SESSION['email']) == $db_email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 
