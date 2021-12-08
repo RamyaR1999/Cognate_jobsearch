@@ -161,7 +161,7 @@ $mail->SMTPSecure='tls';
   <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
         <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
           <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-            <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+            <a href="Job_seeker.php" class="u-image u-logo u-image-1">
               <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
             </a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -197,7 +197,7 @@ $mail->SMTPSecure='tls';
 
 
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <a class="u-nav-link fa fa-sort-down" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">

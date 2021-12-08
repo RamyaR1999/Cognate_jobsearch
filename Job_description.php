@@ -36,7 +36,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body"><header class="u-clearfix u-header u-white u-header" id="sec-6baa"><div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+        <a href="Job_seeker.php" class="u-image u-logo u-image-1">
           <img src="images/cognate.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">

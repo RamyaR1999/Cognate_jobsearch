@@ -158,7 +158,7 @@ if(isset($_SESSION['id'])){
   <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
         <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
           <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-            <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+            <a href="Job_seeker.php" class="u-image u-logo u-image-1">
               <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
             </a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -194,7 +194,7 @@ if(isset($_SESSION['id'])){
 
 
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <a class="u-nav-link fa fa-sort-down" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
@@ -334,50 +334,17 @@ if(isset($_SESSION['id'])){
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-1"><?php echo $_SESSION['Firstname'] ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
+
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></center><br>
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
-
               <div class="u-layout-row">
               <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-video u-video-1">
-                <!-- <div class="u-background-video u-expanded" style=""> -->
-                  <div class="embed-responsive embed-responsive-1">
-
-                   
-                   <?php 
-
-                       // $youtube2 = preg_replace("/https:\/\/\www.youtube.com\/watch\?v=/" , "", $youtube);
-                    
-                    ?>
-
-<!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/<?php echo $youtube2; ?>?autoplay=1&mute=0"></iframe> -->
-
-
-<!-- <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src='https://www.youtube.com/embed/B9YKnNtFqds?playlist=B9YKnNtFqds&amp;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1;frameborder="0" allowfullscreen="" '></iframe> -->
-
-                    <!--  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="<?php echo $youtube ?>;loop=1&amp;mute=1&amp;showinfo=0&amp;controls=0&amp;start=0&amp;autoplay=1" frameborder="0" allowfullscreen=""></iframe>  -->
-                  </div>
+                  <!-- <div class="embed-responsive embed-responsive-1">
+                  </div> -->
                 </div>
-                <!-- <div class="u-container-layout u-container-layout-1">
-                  <div class="u-align-top u-expanded u-video">
-                    <div class="embed-responsive embed-responsive-2">
-                      <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="" frameborder="0" allowfullscreen=""></iframe>
-                    </div>
-                  </div>
-                </div> -->
-              <!-- </div> -->
-
-              <br>
-
-
-            <!-- <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-size-20 u-layout-cell-2">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <h3 class="u-text u-text-default u-text-3">About me</h3>
-                  <p class="u-text u-text-4">I am creative graphic designer. I am&nbsp;an expert in the Adobe Creative Suit and have worked with a varied myriad of clients.&nbsp;Connecting your ideas to customer perception &amp; all the digital dots in between...</p>
-                  <p class="u-text u-text-5">Image from <a href="https://www.freepik.com/photos/business" class="u-active-none u-border-1 u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" target="_blank">Freepik</a>
-                  </p>
-                </div>
-              </div> -->
+              <!-- <br> -->
             </div>
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-container-layout-3">

@@ -69,7 +69,7 @@
   <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
         <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
           <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-            <a href="https://nicepage.com" class="u-image u-logo u-image-1">
+            <a href="Job_seeker.php" class="u-image u-logo u-image-1">
               <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
             </a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -105,7 +105,7 @@
 
 
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <a class="u-nav-link fa fa-sort-down" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
@@ -234,16 +234,9 @@
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
-
-              <!-- <div class="u-layout-row"> -->
-              <!-- <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-video u-video-1"> -->
- 
-
-              <!-- </div> -->
-            <!-- </div> -->
           </div>
           
-<center><img class="" style="width:400px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></center><br>
+<center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></center><br>
             <center><button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button></center>
 
               </div>

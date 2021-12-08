@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 07, 2021 at 07:27 AM
+-- Generation Time: Dec 08, 2021 at 04:52 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -116,7 +116,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`, `otp`) VALUES
 (35, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'e1e7ea465afc730052fdbe132f519277', 'e1e7ea465afc730052fdbe132f519277', '8798546798', 'profile.png', 'Ahmedabad', 'Auto / Auto Ancillary', 'Architects / Interior Design / Naval Arch.', 'BVSC', '6', '9', 'uploads/', 465630),
-(36, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Chennai', 'IT-Software / Software Services', 'IT Software - Application Programming / Maintenance', 'BCA', '1', '1', 'uploads/', 500082);
+(38, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'profile.png', 'Chennai', 'IT-Software / Software Services', 'IT Software - System Programming', 'BCA', '1', '1', 'uploads/', 954990),
+(43, 'Ramya', 'Rajendiran', 'RamyaR1999@gmail.com', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Dehradun', 'Accounting / Finance', 'Agent', 'B.Arch', '1', '12', '', 252023);
 
 --
 -- Indexes for dumped tables
@@ -160,7 +161,7 @@ ALTER TABLE `request_callback`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
