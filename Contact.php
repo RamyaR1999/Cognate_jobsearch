@@ -317,7 +317,7 @@ Submit Your CV</p>
 
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
     <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class="far fa-clone pr-1"></i>Share your details below</h3>
+          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class="far fa-clone pr-1"></i>Share Your Details Below:</h3>
           </div>
 
       <div class="u-clearfix u-sheet u-sheet-1">

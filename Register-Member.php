@@ -411,11 +411,11 @@ $mail->SMTPSecure='tls';
     </section>
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
       <div class="u-align-left card-header bg-transparent border-0">
-            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class=""></i>Account information</h3>
+            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>Enter your Details:</h3>
         </div>
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
-          <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
+          <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" redirect="true">
 
                <div class="col-md-13">
                    <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
