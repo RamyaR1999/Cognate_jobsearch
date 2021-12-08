@@ -481,7 +481,7 @@ $mail->SMTPSecure='tls';
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5"placeholder="Enter the Phone no " name="Phone">
                           <span class="focus-border"></span>
                         </div>
-                          <h6 style="color:#ff0000"><?php echo $message_Phone; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $message_phone; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
                       </div>
 
