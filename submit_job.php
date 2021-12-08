@@ -357,7 +357,7 @@
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
 
 <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 90px;"><i class="far fa-clone pr-1"></i>submit a job</h3>
+          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class="far fa-clone pr-1"></i>submit a job</h3>
           </div>
 
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -373,7 +373,7 @@
                   <div class="input-group">
                      <span style="font-weight: 400;" class="">Firstname * </span><br>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Firstname">
+                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                         </div>
@@ -384,7 +384,7 @@
                       <div class="input-group">
                         <span style="font-weight: 400;" class="" >Lastname * </span> 
                         <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Lastname">
+                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                         </div>
@@ -396,7 +396,7 @@
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Email * </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Email">
+                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
                         </div>
@@ -407,7 +407,7 @@
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Phone * </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Phone">
+                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Phone; ?></h6>
                         </div>
@@ -420,7 +420,7 @@
                       <div class="input-group">
                         <span style="font-weight: 400;" class="" >Job designation * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_designation">
+                          <input type="text" value="<?php echo $Job_designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the job role" name="Job_designation">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"></h6>
                           </div>
@@ -432,7 +432,7 @@
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Company name * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Company_name; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Company_name">
+                          <input type="text" value="<?php echo $Company_name; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
                           <span class="focus-border"></span>
                           <h6 class="text-center" style="color:#ff0000"></h6>
                           </div>
@@ -445,7 +445,7 @@
                       <div class="input-group">
                          <span style="font-weight: 400;" class="" >Job title * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_title; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_title">
+                          <input type="text" value="<?php echo $Job_title; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
                        <span class="focus-border"></span>
                         </div>               
                       </div>
@@ -454,7 +454,7 @@
                       <div class="input-group">
                        <span style="font-weight: 400;" class="" >Job specification * </span>
                         <div class="col-sm-12">
-                          <textarea type="text"rows="6"  value="<?php echo $Job_specification; ?>" class="u-input u-input-rectangle u-radius-10ś u-white u-input-1" name="Job_specification">
+                          <textarea type="text"rows="6"  value="<?php echo $Job_specification; ?>" class="u-input u-input-rectangle u-radius-10ś u-white u-input-1"  name="Job_specification">
                           </textarea>
                           <span class="focus-border"></span>
                         </div>
@@ -468,7 +468,7 @@
                         <span style="font-weight: 400;" class="">Service * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
-                          <option value="-1">-- please select --</option>
+                          <option value="-1">-- please select service --</option>
                           <option value="Contract Staffing">Contract Staffing</option>
                           <option value="Permanent Recruitment">Permanent Recruitment</option>
                           <option value="RPO">RPO</option>
@@ -484,7 +484,7 @@
                          <span style="font-weight: 400;" class="" >Branch * </span>
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
-                              <option value="-1">-- please select --</option>
+                              <option value="-1">-- please select branch --</option>
                               <option value="Ahmedabad">Ahmedabad</option>
                               <option value="Baroda">Baroda</option>
                               <option value="Bengaluru">Bengaluru</option>
@@ -528,7 +528,7 @@
                          <span style="font-weight: 400;" class="">Sector * </span> 
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
-                          <option value="-1">-- please select --</option>
+                          <option value="-1">-- please select sector --</option>
                           <option value="Agro & Seeds">Agro &amp; Seeds</option>
                           <option value="Banking & finance">Banking &amp; finance</option>
                           <option value="General Administration">General Administration</option>
