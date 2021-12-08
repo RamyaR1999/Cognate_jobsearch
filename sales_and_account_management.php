@@ -218,7 +218,7 @@
         </div>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </section>
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-5 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">Connecting you to the right talent.</h3><br>
         <p class="u-align-right u-text u-text-center u-text-black u-text-6">With a clientele that includes companies from diverse industries,<br> we have the right candidates for you across direct sales, client servicing,<br> channel sales and key account management.</p>
@@ -229,16 +229,16 @@
       </div>
     </section>
    
-    <section class="u-clearfix u-custom-color-6 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
        
-        <p class="u-text u-text-left u-text-1">Why .<span style="font-weight: 700;"></span>
+        <p class="u-text u-text-left u-text-white u-text-1">Why .<span style="font-weight: 700;"></span>
         </p>
         
-                <p class="u-align-center u-text-right u-text-palette-1-base u-text-2">
+                <p class="u-align-center u-text-right u-text-white u-text-2">
                   With barriers of entry in most industries going down by the day,<br> faster time to market does not guarantee long term profitability.<br> Organisations require talent that understands the value proposition of<br> a product and map it to the needs of a consumer.</p><br>
 
-                  <p class="u-align-center u-text-right u-text-palette-1-base u-text-2">
+                  <p class="u-align-center u-text-right u-text-white u-text-2">
                 Sounds easy? Perhaps. It is, however, critical to understand<br> what motivates this talent to stay or move jobs. Our expertise in <br>decoding the dna of this talent can help you hire gems that not <br>only impact the bottomline, but also create long term value for the organization.
 </p><br>
               
@@ -246,7 +246,7 @@
       </div>
 
     </section>
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-5 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-black u-text-1" >looking for future ready talent?</h3>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-pink  u-btn-1">speak to us
@@ -255,11 +255,11 @@
         
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-5 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
 
         
-        <div><br><p class=" u-align-left u-text u-text-left u-text-black u-text">What  did is to establish a regular hiring process,<br> support us with our applicant&nbsp;tracking system and improved the quality of hiring.<br>  What we&nbsp;benefitted at the end of one year is largely on cost,<br>  on hiring efficacies and quality&nbsp;of candidates who come from the pipeline...</p></div>
+        <div><br><p class=" u-align-left u-text u-text-left u-text-white u-text">What  did is to establish a regular hiring process,<br> support us with our applicant&nbsp;tracking system and improved the quality of hiring.<br>  What we&nbsp;benefitted at the end of one year is largely on cost,<br>  on hiring efficacies and quality&nbsp;of candidates who come from the pipeline...</p></div>
 
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white  u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 4px; color: white;">Contact us
@@ -268,7 +268,7 @@
             </div>
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-5 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">Stay<br>
           competitive<br>with salary<br>data</h3><br>
@@ -279,7 +279,7 @@
         <!-- <img src="images/operaion and logistics scm.png" class="" alt="" width="404" height="336"> -->
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
         <p class="u-align-left u-text u-text-left u-text-white u-text-2">Drop in and say "hi" at one of our branch locations.</p><br>

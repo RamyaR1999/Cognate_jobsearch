@@ -326,12 +326,13 @@
       </div>
     </section>
 
-     <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/Operation Logistics SCM.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
        
        
-        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">Operations, logistics & SCM.</h3>
-        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Strong operations are the foundation for profit and scale.<br> 
+        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">Operations, logistics & SCM.</h3>
+        <p class="u-align-left u-text u-text-left u-text-white u-text-6">Strong operations are the foundation for profit and scale.<br> 
         Our specialist services will help you source qualified and <br>
         experienced talent across procurement, demand planning,<br> 
         supply chain, and manufacturing operations.</p> 
@@ -341,12 +342,13 @@
         
 
       </div>
+    </div>
     </section>
    
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+   <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text u-text-right u-text-white u-text-1">Product management & IT.</h3>
-        <p class="u-align-right u-text u-text-right u-text-white u-text-6">Whether you're a startup or an <br> 
+        <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">Product management & IT.</h3>
+        <p class="u-align-right u-text u-text-right u-text-black u-text-6">Whether you're a startup or an <br> 
         large corporate,we'll help you find the right IT <br>
         andproduct management professionals<br> 
         tohelp take your business digital. </p>
@@ -376,7 +378,8 @@
               <!-- <img src="images/banking & financial.jpg" class="" alt="" width="404" height="336"> -->
      <!--  </div>
     </section> -->
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/WEB Support.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">Support functions.</h3>
         <p class="u-align-left u-text u-text-left u-text-black u-text-6">With function specific practices for HR,<br> 
@@ -387,6 +390,7 @@
         
        <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
       </div>
+    </div>
     </section>
     <!-- <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -399,23 +403,25 @@
 
      <!--  </div>
     </section> -->
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">Analytics & data sciences.</h3>
-        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Whether you're a traditional<br> business looking to leverage analytics or a startup on <br> the cutting edge of data sciences, we have the right candidates for your needs.</p>
-
-         <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
+        <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">Analytics & data sciences.</h3>
+        <p class="u-align-right u-text u-text-right u-text-black u-text-6">Whether you're a traditional<br> business looking to leverage analytics or a startup on <br> the cutting edge of data sciences, we have the right candidates for your needs.</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 10px; color: white;" href="">learn more</a>
        
         <!-- <img src="images/data-analytics.jpg" class="" alt="" width="404" height="336">  -->
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/account-management-development.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-right u-text u-text-right u-text-white u-text-1">Sales & account management.</h3>
         <p class="u-align-right u-text u-text-right u-text-white u-text-6">With a clientele that includes companies from diverse industries,<br> we have the right candidates for you across direct sales,<br> client servicing, channel sales and key account management.</p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
            <!-- <img src="images/sales account management.jpg" class="" alt="" width="404" height="336"> -->
       </div>
+</div>
     </section>
     
     

@@ -235,13 +235,13 @@
     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div class="u-clearfix u-sheet u-sheet-1">
        
-        <p class="u-text u-text-left u-text-1">Specialists in.<span style="font-weight: 700;"></span>
+        <p class="u-text u-text-left u-text-white u-text-1">Specialists in.<span style="font-weight: 700;"></span>
         </p>
         
-                <p class="u-align-center u-text-right u-text-black-1-base u-text-2">
+                <p class="u-align-center u-text-right u-text-white u-text-2">
                   In a fast changing world, data & analytics have the power to transform your business.<br> The criticality to business can only be justified by talent that understands its importance. <br>We know how this function has evolved and that’s why we find you experts <br>who can drive your business forward, every single day.</p><br>
 
-                  <p class="u-align-center u-text-right u-text-black-1-base u-text-2">
+                  <p class="u-align-center u-text-right u-text-white u-text-2">
                   Finding these people is at the core of our selection process.<br> Our specialists identify great talent aligned to your business goals<br> before ensuring a cultural fit that’s designed to drive profits <br>for you and satisfaction for your team.
 
 </p><br>
