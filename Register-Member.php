@@ -46,9 +46,10 @@ $mail->SMTPSecure='tls';
          $otp=$rndno;
          $error = 0;
 
-          move_uploaded_file($upload,"images/$CV");
+          
 
       if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary)){
+        // if(!empty($CV){
           
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
@@ -94,6 +95,7 @@ $mail->SMTPSecure='tls';
         $register_query = mysqli_query($connection,$query);
             
             // move_uploaded_file($_FILES['CV']['tmp_name'], $upload);
+        move_uploaded_file($upload,"images/$CV");
       
         if(!$register_query) {
             
@@ -149,21 +151,26 @@ $mail->SMTPSecure='tls';
               $message_Firstname ="Only Alphabets are allowed in firstname";
           
        }
+
+     // }else{
+     //          $message_cv ="Only Alphabets are allowed in firstname";
+          
+     //   }
           
           }else{
-             $empty_firstname = "firstname is required";
-             $empty_lastname = "lastname is required";
-             $empty_email = "email is required";
-             $empty_password = "password is required";
-             $empty_cpassword = "confirm password is required";
-             $empty_phone = "phone number is required";
-             $empty_city = "city is required";
-             $empty_industry = "industry is required";
-             $empty_function = "function is required";
-             $empty_education = "education is required";
-             $empty_experience = "experience is required";
-             $empty_salary = "salary is required";
-             $empty_cv = "CV is required";
+             // $empty_firstname = "firstname is required";
+             // $empty_lastname = "lastname is required";
+             // $empty_email = "email is required";
+             // $empty_password = "password is required";
+             // $empty_cpassword = "confirm password is required";
+             // $empty_phone = "phone number is required";
+             // $empty_city = "city is required";
+             // $empty_industry = "industry is required";
+             // $empty_function = "function is required";
+             // $empty_education = "education is required";
+             // $empty_experience = "experience is required";
+             // $empty_salary = "salary is required";
+             // $empty_cv = "CV is required";
              $message = "All fields are required *";
        }  
          
@@ -462,7 +469,7 @@ $mail->SMTPSecure='tls';
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;"> Confirm_password * </span>
                         <div class="col-sm-12">
-                          <input type="Password"  value="<?php echo $Confirm_password; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" placeholder="Enter the Confirm_password" name="Confirm_password">
+                          <input type="Password"  value="<?php echo isset($_POST["Confirm_password"]) ? $_POST["Confirm_password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" placeholder="Enter the Confirm_password" name="Confirm_password">
                           <span class="focus-border"></span>
                         </div>
                           <h6 style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
@@ -687,7 +694,7 @@ $mail->SMTPSecure='tls';
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 400;">Experience * </span><br>&nbsp
+                    <span style="font-weight: 400;">Experience * </span><br>
                      <div class="col-sm-12">
                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience"placeholder="Enter your Experience"id="Experience">
                           <option value="-1">years</option>
