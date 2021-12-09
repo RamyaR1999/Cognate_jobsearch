@@ -15,7 +15,7 @@ if(isset($_SESSION['id'])){
       
      while($row=mysqli_fetch_array($select_register_profile)){
 
-            $id = $row['id'];
+           $id = $row['id'];
            $Firstname=  $row['Firstname'];
            $Lastname=  $row['Lastname'];
            $Email    = $row['Email'];
@@ -38,18 +38,15 @@ if(isset($_SESSION['id'])){
            $Firstname=  $_POST['Firstname'];
            $Lastname=  $_POST['Lastname'];
            $Email    = $_POST['Email'];
-           $Password = $_POST['Password'];
            $Phone=  $_POST['Phone'];
-           $Image=  $_POST['Image'];
            $City=  $_POST['City'];
            $Industry=  $_POST['Industry'];
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
            $Experience =$_POST['Experience'];
            $Salary =$_POST['Salary'];
-           // $CV = $_POST['CV'];
-           // $upload = $_FILES['Image']['tmp_name'];
-
+           $Image = $_FILES['image']['name'];
+           $user_image_tempname = $_FILES['image']['tmp_name'];
            $CV = $_FILES['CV']['name'];
            $upload = $_FILES['CV']['tmp_name'];
 
@@ -58,20 +55,35 @@ if(isset($_SESSION['id'])){
             // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
             $Password = md5($Password);      
             // $confirm_password = md5($confirm_password); 
-          
-        move_uploaded_file($upload,"images/$CV");
+
+             move_uploaded_file($user_image_tempname,"images/$Image");
         
-        if(empty($user_image)){
+           if(empty($Image)){
             
             $query = "SELECT * FROM users WHERE id = $id ";
             $select_image = mysqli_query($connection,$query);
                 
-            while($row = mysqli_fetch_array($select_image)){ 
-            $image = $row['image'];
+            while($row = mysqli_fetch_array($select_image)){
+                
+            $Image = $row['Image'];
               
                }
             
-          } 
+          }
+          
+        // move_uploaded_file($upload,"images/$CV");
+        
+        // if(empty($user_image)){
+            
+        //     $query = "SELECT * FROM users WHERE id = $id ";
+        //     $select_image = mysqli_query($connection,$query);
+                
+        //     while($row = mysqli_fetch_array($select_image)){ 
+        //     $image = $row['image'];
+              
+        //        }
+            
+        //   } 
        
         if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
@@ -84,8 +96,6 @@ if(isset($_SESSION['id'])){
             
 
         if(strlen($Password) >= 8) { 
-          
-        // if($Password==$confirm_password){
               
     $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience='{$Experience}'  WHERE id= '{$db_id}' ";  
                       
@@ -94,16 +104,10 @@ if(isset($_SESSION['id'])){
          if(!$update_profile_query) {
             
             die("Query Failed" . mysqli_error($connection));
-        }
-            
+        }           
           
            header("Location:profile.php"); 
-              
-         // }else{
-             
-         //   $message_confirm="password did not match";
-             
-         // }
+
          }else{
               $message_strnpassworad = "password contain atleast 8 characters";
               
@@ -350,6 +354,7 @@ if(isset($_SESSION['id'])){
                 <div class="u-container-layout u-container-layout-3">
                   <h3 class="u-text u-text-default u-text-6">Details</h3>
                   <p class="u-text u-text-7">
+                    <input type="file" name="image">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">

@@ -2,7 +2,7 @@
 <?php include "db.php"; ?>
 <?php
 
-    if(isset($_REQUEST['submit'])){ 
+    if(isset($_POST['submit'])){ 
      
     require 'PHPMailer/PHPMailerAutoload.php';
    require('phpmailer/class.phpmailer.php');
@@ -39,14 +39,26 @@ $mail->SMTPSecure='tls';
          // $CV = $_FILES['CV']['Name'];
          // $upload = "uploads/".$CV;
 
-         $CV = $_FILES['CV']['name'];
-         $upload = $_FILES['CV']['tmp_name'];
+         $CV = $_FILES['image']['name'];
+         $upload_tempname = $_FILES['image']['tmp_name'];
          
          $otp=$_POST['otp'];
          $otp=$rndno;
          $error = 0;
 
-          
+        move_uploaded_file($upload_tempname,"images/$CV");
+          // if(empty($Image)){
+            
+          //   $query = "SELECT * FROM users WHERE id = $id ";
+          //   $select_image = mysqli_query($connection,$query);
+                
+          //   while($row = mysqli_fetch_array($select_image)){
+                
+          //   $CV = $row['CV'];
+              
+          //      }
+            
+          // }
 
       if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary)){
         // if(!empty($CV){
@@ -94,8 +106,7 @@ $mail->SMTPSecure='tls';
              
         $register_query = mysqli_query($connection,$query);
             
-            // move_uploaded_file($_FILES['CV']['tmp_name'], $upload);
-        move_uploaded_file($upload,"images/$CV");
+        // move_uploaded_file($upload,"images/$CV");
       
         if(!$register_query) {
             
@@ -481,6 +492,7 @@ $mail->SMTPSecure='tls';
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5"placeholder="Enter the Phone no " name="Phone">
                           <span class="focus-border"></span>
                         </div>
+                        <h6 style="color:#a7adb8"><?php echo '10-digit mobile number without prefixes' ?></h6>
                           <h6 style="color:#ff0000"><?php echo $message_phone; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
                       </div>
@@ -489,7 +501,7 @@ $mail->SMTPSecure='tls';
                         <span style="font-weight: 400;">City * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
-                            <option value="-1">-- please select city --</option>
+                            <option value="">-- please select city --</option>
                             <option value="Agartala">Agartala</option>
                             <option value="Agra">Agra</option>
                             <option value="Ahmadnagar">Ahmadnagar</option>
@@ -521,7 +533,7 @@ $mail->SMTPSecure='tls';
                         <span style="font-weight: 400;">Industry * </span>
                         <div class="col-sm-12">
                              <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
-                              <option value="-1">-- please select industry --</option>
+                              <option value="">-- please select industry --</option>
                               <option value="Accounting / Finance">Accounting / Finance</option>
                               <option value="Advertising / PR / MR / Events">Advertising / PR / MR / Events</option>
                               <option value="Agriculture / Diary">Agriculture / Diary</option>
@@ -602,7 +614,7 @@ $mail->SMTPSecure='tls';
                         <span style="font-weight: 400;">Function * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
-                            <option value="-1">-- please select function --</option>
+                            <option value="">-- please select function --</option>
                             <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
                             <option value="Agent">Agent</option>
                             <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
@@ -697,7 +709,7 @@ $mail->SMTPSecure='tls';
                     <span style="font-weight: 400;">Experience * </span><br>
                      <div class="col-sm-12">
                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience"placeholder="Enter your Experience"id="Experience">
-                          <option value="-1">years</option>
+                          <option value="">years</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -729,7 +741,7 @@ $mail->SMTPSecure='tls';
                     <span style="font-weight: 400;">Salary * </span>
                   <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Salary"placeholder="Enter your Salary"id="Salary">
-                          <option value="-1">lakhs</option>
+                          <option value="">lakhs</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -775,7 +787,7 @@ $mail->SMTPSecure='tls';
                           <div class="custom-file-upload-toggle-btn btn btn-prim">     
                           </div>
                         </div> -->
-                        <input type="file" name="CV" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
+                        <input type="file" name="image" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
                         <span class="focus-border"></span>
                      </div>
                     <span data-bit-output-upload-files="cvFileUpload"></span>
