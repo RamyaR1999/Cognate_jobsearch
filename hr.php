@@ -205,8 +205,8 @@
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
       <div class="u-clearfix u-sheet u-sheet-1">&nbsp;&nbsp;&nbsp;&nbsp;
-         <h1 class="u-align-left u-text u-text-default text-capitalize text-monospace u-text-2">Building organisations</h1>
-          <h1 class="u-align-center text-dark text-capitalize text-monospace u-text u-text-right u-text-2">One great hire at a time.</h1>
+         <h1 class="u-align-left u-text u-text-default text-capitalize text-monospace u-text-2">Creating a better world,</h1>
+          <h1 class="u-align-center text-dark text-capitalize text-monospace u-text u-text-right u-text-2"> one leader at a time.</h1>
 
         <!-- <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">building organisations one great hire at a time.</h3> -->
 <p></p>
@@ -219,7 +219,7 @@
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
-    <img src="images/hr3.jpg" alt="" width="1500" height="500" >
+    <img src="images/Cognate1.gif" alt="" width="700" height="500" >
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
        <p class="u-text u-text-left u-text-1" style="color:dark;font-size:60px;">Introduction..<span style="font-weight: 700;"></span></p>
         <div class="u-text u-text-left u-text-1">
@@ -251,9 +251,8 @@ Improving your recruitment process isn’t just a good idea — it drives real b
       </div>
     </div>
     </section>
-    <img src="images/hr01.jpg" alt="" width="1500" height="450" >
-   
-   <section class=" u-clearfix u-grey-5 u-section-2" id="sec-fa03">
+    <img src="images/hr3.jpg" alt="" width="1500" height="450" >
+    <section class=" u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text  text-capitalize u-text-black u-text-1" style="color:dark;font-size:60px;"> what is the recruitment process</h3>
         <div class="u-text u-text-left u-text-1"> A recruitment process is an important part of human resource 
