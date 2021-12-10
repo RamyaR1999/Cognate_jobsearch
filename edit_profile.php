@@ -340,7 +340,7 @@ if(isset($_SESSION['id'])){
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
 
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-          <center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></center><br>
+          <center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
               <div class="u-layout-row">
@@ -529,10 +529,21 @@ body {
 
 input {
   border: 1px solid transparent;
-  background-color: #f1f1f1;
+  /*background-color: #f1f1f1;*/
   padding: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
+
+input[type=file] {
+  border: 1px solid transparent;
+  /*border-color: blue;*/
+  /*background-color: #f1f1f1;*/
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 
 input[type=text] {
   background-color: #f1f1f1;

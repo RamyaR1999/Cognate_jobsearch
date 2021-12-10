@@ -4,12 +4,12 @@
 
 
 <?php
-                    
-    if(isset($_SESSION['id'])){
 
-     $db_id =  $_SESSION['id'];       
+  if(isset($_GET['profile'])){
+
+  $id = $_GET['profile'];     
         
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $query="SELECT * FROM users WHERE id = '{$id}' ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -237,7 +237,7 @@
           </div>
           
 <center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
-            <center><button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button></center>
+            <!-- <center><button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button></center> -->
 
               </div>
               </div>
@@ -257,9 +257,20 @@
 
                     <span style="font-weight: 700;">Education: </span>
                     <br><label class="" for="title"><?php echo $Education ?></label><br>
+
+                    <span style="font-weight: 700;">Experience:</span>
+                    <br><label class="" for="title"><?php echo $Experience .' '. 'years';?></label><br>
+
+                    <span style="font-weight: 700;">Industry:</span>
+                    <br><label class="" for="title"><?php echo $Industry ?></label><br>
+
+                    <span style="font-weight: 700;">Function:</span>
+                    <br><label class="" for="title"><?php echo $Function ?></label><br>
+
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
-                    <!-- <br>'s-Hertogenbosch, The Netherlands, Earth -->
+
+                    
                   </p>
                 </div>
               </div>
