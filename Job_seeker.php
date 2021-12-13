@@ -230,11 +230,8 @@ if (isset($_POST['submit'])){
               </div>
             </nav>
           </div>
-          
-          
-          
-          
-          
+
+
         </div>
         <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">

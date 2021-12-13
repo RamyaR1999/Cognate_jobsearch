@@ -77,6 +77,8 @@
     
  <!-- Profile Icon -->
  <link rel="stylesheet" href="assets/css/shared/style.css">
+<!-- Font Awesome Icon -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <!-- Dropdown text header -->
       <style>
@@ -314,8 +316,9 @@
             $Function=$row['Function'];
 
   ?>  
-&nbsp; &nbsp; &nbsp; &nbsp;
-<div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
+<!-- &nbsp; &nbsp; &nbsp; &nbsp;
+ --><div class="" style="padding-left: 28px;">
+<div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8"> 
     <div class="u-container-layout u-container-layout-8">
        <div class="u-layout-row">
   
@@ -348,18 +351,36 @@
 
              </p>
             </h6>
-<h6 class="u-align-right" style="padding-left: 30px;">
-   <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt="">
- </h6>
-            
-
-          
+        <h6 class="u-align-right" style="padding-left: 30px;">
+           <div class="u-align-right">
+                <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                      <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                  </div>
+                </li>
            </div>
-          </div>
-        </div>
-
+        <br>
+           <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt="">
+         </h6>
+          
+     </div>
+    </div>
+  </div>
+</div>
 
     <?php } ?> 
+
+<?php
+
+                 if(isset($_GET['delete'])){
+                     $id=$_GET['delete'];
+                     $query="DELETE FROM users WHERE id={$id}";
+                     $delete_query=mysqli_query($connection,$query);
+                     header("Location:Jobseeker_profile.php");
+                 }
+             ?>
 
       </div>
         <!-- </div> -->
