@@ -202,8 +202,9 @@
         </div>
       </div></header>
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+       <div style="background-image: url('images/jobArea.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">&nbsp;&nbsp;&nbsp;&nbsp;
-        <h1 class="u-align-left u-text u-text-default u-text-2">Building organisations</h1>
+        <h1 class="u-align-left u-text u-text-default u-text-white u-text-2">Building organisations</h1>
         <h1 class="u-align-center u-text u-text-right u-text-2">One great hire at a time.</h1>
 
         <!-- <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">building organisations one great hire at a time.</h3> -->
@@ -215,6 +216,7 @@
          
         </div>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </div>
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
@@ -416,8 +418,8 @@
     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div style="background-image: url('images/account-management-development.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text u-text-right u-text-white u-text-1">Sales & account management.</h3>
-        <p class="u-align-right u-text u-text-right u-text-white u-text-6">With a clientele that includes companies from diverse industries,<br> we have the right candidates for you across direct sales,<br> client servicing, channel sales and key account management.</p>
+        <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">Sales & account management.</h3>
+        <p class="u-align-right u-text u-text-right u-text-black u-text-6">With a clientele that includes companies from diverse industries,<br> we have the right candidates for you across direct sales,<br> client servicing, channel sales and key account management.</p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
            <!-- <img src="images/sales account management.jpg" class="" alt="" width="404" height="336"> -->
       </div>

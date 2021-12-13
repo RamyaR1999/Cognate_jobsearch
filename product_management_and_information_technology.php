@@ -205,6 +205,7 @@
         </div>
       </div></header>
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/203_heres-how-product-lifecycle-management-can-benefit-your-business_2322.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">&nbsp;&nbsp;&nbsp;&nbsp;
         <h1 class="u-align-left u-text u-text-default u-text-2">IT staffing</h1>
         <h1 class="u-align-center u-text u-text-right u-text-2">building for the future.<br> together.</h1>

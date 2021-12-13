@@ -258,6 +258,7 @@ if (isset($_POST['submit'])){
 </style>
 
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+       <div style="background-image: url('images/blog.teamworkdotcom.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -284,6 +285,8 @@ if (isset($_POST['submit'])){
           </form>
         </div>
       </div>
+    </div>
+
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
@@ -323,7 +326,142 @@ if (isset($_POST['submit'])){
         </div>
       </div>
     </section>
+    <section class="u-clearfix u-custom-color-grey u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/IMG_3075.jpg');">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">find right talent.</h3>
+        <p class="u-align-left u-text u-text-left u-text-white u-text-6">Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
+
+When an employer fails to recognize the right talent, they are implicating a major loss to themselves. Missing out on the perfect candidate with the right desired talent is an irreversible loss. To help the recruiters in identifying the right talent, here are a few theories by experts.</p>
+        
+        
+       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
+     
+   <!-- <ul class="pager">
+
+<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
+<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
+ </div>
+    </div>
+    </section>
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/th (8).jpg');">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">who we are..</h3>
+        <p class="u-align-center u-text u-text-center u-text-black u-text-6">We are one of the largest global HR services firms.<br> We combine our passion for people with intelligent technology to<br> help organizations and talent convert potential into performance.<br> Moving them forward. human forward.</p>
+        <!-- <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a> -->
+        
+       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
+     
+   <!-- <ul class="pager">
+
+<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
+<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
+ </div>
+    </div>
+    </section>
+     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
+      <!--  <div style="background-image: url('images/th (7).jpg');"> -->
+      <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
+       <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-1"><?php echo $_SESSION['firstname'] ?></h1>
+        <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+
+              <div class="u-layout-row">
+              
+                
+              
+&nbsp;&nbsp;&nbsp;
+
+           <!--  <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-size-20 u-layout-cell-2"> -->
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <h3 class=" u-align-right u-text u-text-default u-text-3">celebrating 3 years!</h3>
+                  <p class="u-align-center u-text u-text-center u-text-3">Cognate Global Business Solutions Private<br> Limited is a Private incorporated<br>started on 2017.</p>
+                  <p class="u-align-center u-text u-text-right u-text-3">Thank you all for your trust in us.</p>
+                  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color:black; border-radius: 2px; color: black;" href="">learn more</a>
+                </div>
+             <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-video u-video-1">
+
+                  <div class="embed-responsive embed-responsive-1">
+
+                   
+                   <?php 
+
+                       $youtube2 = preg_replace("/https:\/\/\www.youtube.com\/watch\?v=/" , "", $youtube);
+                    
+                    ?>
+
+<iframe width="120" height="745" src="https://www.youtube.com/embed/<?php echo $youtube2; ?>?autoplay=1&mute=0"></iframe>
+
+
+
+                  </div>
+                </div>
+            </div>
+              
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+       <!-- </div >
+      </div> -->
+    </form>
+ <!--  </div> -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </section>
+    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/workforce-v2.png');">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">Join Cognate..</h3>
+        <p class="u-align-left u-text u-text-left u-text-white u-text-6">Here's a secret – we love working here!<br> Now that you know, find out for yourself.</p>
+       <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
+        
+       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
+     
+   <!-- <ul class="pager">
+
+<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
+<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
+ </div>
     
+    </section>
+
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background-image: url('images/imges.jpg');">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
+        <p class="u-align-left u-text u-text-left u-text-white u-text-2">Drop in and say "hi" at one of our branch locations.</p><br>
+        <div class="u-expanded-width-xs u-form u-form-1">
+          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
+           <div class="u-form-group u-form-name">
+              <label for="name-ef64" class="u-form-control-hidden u-label"></label>
+             
+                         
+              <input type="text" placeholder="postcode /city" style="width: 2em; height: 5em;"id=""  minlength="100" maxlength="250" name="Job_title" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
+             <!--  <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control"> -->
+            </div>
+            <br>
+            <div class="u-form-group u-form-submit">
+              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 2em; height: 3.5em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
+<!-- </g> -->
+</g></svg><img></span>&nbsp;<br>
+              </a>
+              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
+            <div class="u-form-send-error u-form-send-message">#FormSendError</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
     
    <!--   <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
