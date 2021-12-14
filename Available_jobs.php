@@ -336,7 +336,7 @@
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-3"><?php echo $Branch ?></p>
                 <p class="u-text u-text-4"> <?php echo $Job_specification; ?> ....</p>
-                <a href="Job_details.php?Job_details=<?php echo $id ?>" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">read more</a>
+                <a href="Apply_Job.php" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">Apply Now</a>
               </div>
             </div>
 
