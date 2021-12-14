@@ -291,7 +291,7 @@ if (isset($_POST['submit'])){
 
 .u-custom-color-2, .u-body.u-custom-color-2, .u-container-style.u-custom-color-2:before, .u-container-layout.u-custom-color-2:before, .u-table-alt-custom-color-2 tr:nth-child(even) {
     color: #ff6258;
-
+}
 </style>
 
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
