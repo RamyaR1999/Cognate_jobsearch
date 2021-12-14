@@ -400,14 +400,63 @@
             
             </h6>
           </div>
+          <div class="col-sm-6 col-md-6">
 
-            <h6 class="u-align-right" style="padding-left: 30px;">
-              <div class="backTo" style="margin-left:275px;">
+            <h6 class="u-align-right" style="padding-left: 40px;">
+
+             <div class="backTo" style="margin-left:285px;">
+              
+         
                 <a href="Available_jobs.php" class="back_to_search_btn"><img src="" alt=""> Back to search</a>
               </div>
-              
+               <?php
+
+   $per_page=1;  
+                
+    if(isset($_GET['page'])){
+        
+        $page = $_GET['page'];
+        
+    } else {
+        
+        $page ="";
+        
+    }
+  
+    if($page =="" || $page ==1){
+        
+        $page_1=0;
+        
+    } else {
+        
+        $page_1=($page*$per_page)-$per_page;
+        
+    }
+
+  $post_query_count="SELECT * FROM Jobs";
+  $find_count=mysqli_query($connection,$post_query_count);
+  $count=mysqli_num_rows($find_count);
+  $count=ceil($count/$per_page);
+
+
+  $query="SELECT * FROM Jobs LIMIT $page_1, $per_page";
+  $Jobs_list=mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($Jobs_list)){
+
+     
+     $Job_specification = $row['Job_specification'];
+
+
+?> 
+ 
+ <p class="u-align-right u-text u-text-right u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
+    <?php  } ?>
+          
+               
                   
  </h6>
+</div>
 </div>
 </div>
 </div>
@@ -418,6 +467,14 @@
      
 </div>
 </section>
+ 
 
+
+              
+
+
+   
+          
+    
     
  <?php include "footer.php"; ?>
