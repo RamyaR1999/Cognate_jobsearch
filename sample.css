@@ -1,0 +1,14 @@
+
+/****************************
+USE BACKGROUND IMAGES IN CAROUSEL SLIDER
+*****************************/
+.carousel-bg {
+    .carousel-inner {
+        .item {
+            background-color: darkslategrey;
+            background-size: cover;
+            background-position: center;
+            min-height: 360px;
+        }
+    }
+}
