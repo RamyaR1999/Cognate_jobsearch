@@ -2,17 +2,16 @@
 <?php include "db.php"; ?>
 <?php
 
-    if(isset($_POST['submit'])){ 
+if(isset($_POST['submit'])){ 
      
-    require 'PHPMailer/PHPMailerAutoload.php';
+   require 'PHPMailer/PHPMailerAutoload.php';
    require('phpmailer/class.phpmailer.php');
 
 $mail = new PHPMailer;
 
-
-$rndno=rand(100000, 999999);
-// echo $rndno;
 //OTP generate
+$rndno=rand(100000, 999999);
+
 #$mail->SMTPDebug = 3;
 
 $mail->isSMTP();
@@ -840,7 +839,7 @@ $mail->SMTPSecure='tls';
               <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Register<br>
               </a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-            </div>
+              </div>
             
             <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
             <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>

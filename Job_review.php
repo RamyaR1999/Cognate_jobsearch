@@ -7,13 +7,13 @@
 
 if(isset($_SESSION['id'])){
 
-     $db_id =  $_SESSION['id'];  
-           
+     $db_id =  $_SESSION['id'];       
+        
      $query="SELECT * FROM users WHERE id = '{$db_id}' ";
-     $select_register_profile = mysqli_query($connection,$query);
+     $select_user_profile = mysqli_query($connection,$query);
 
       
-     while($row=mysqli_fetch_array($select_register_profile)){
+     while($row=mysqli_fetch_array($select_user_profile)){
 
            $id = $row['id'];
            $Firstname=  $row['Firstname'];
@@ -33,88 +33,7 @@ if(isset($_SESSION['id'])){
            }
          }
 
-      if(isset($_POST['edit_profile'])){
-
-           $Firstname=  $_POST['Firstname'];
-           $Lastname=  $_POST['Lastname'];
-           $Email    = $_POST['Email'];
-           $Phone=  $_POST['Phone'];
-           $City=  $_POST['City'];
-           $Industry=  $_POST['Industry'];
-           $Function=  $_POST['Function'];
-           $Education =$_POST['Education'];
-           $Experience =$_POST['Experience'];
-           $Salary =$_POST['Salary'];
-           $Image = $_FILES['image']['name'];
-           $user_image_tempname = $_FILES['image']['tmp_name'];
-           $CV = $_FILES['CV']['name'];
-           $upload = $_FILES['CV']['tmp_name'];
-
-
-            $Password = mysqli_real_escape_string($connection,$_POST['Password']);
-            // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
-            $Password = md5($Password);      
-            // $confirm_password = md5($confirm_password); 
-
-             move_uploaded_file($user_image_tempname,"images/$Image");
-        
-           if(empty($Image)){
-            
-            $query = "SELECT * FROM users WHERE id = $id ";
-            $select_image = mysqli_query($connection,$query);
-                
-            while($row = mysqli_fetch_array($select_image)){
-                
-            $Image = $row['Image'];
-              
-               }
-            
-          }
-       
-        if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
-          
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {  
-         
-        $uppercase = preg_match('@[A-Z]@', $Password);
-        $lowercase = preg_match('@[a-z]@', $Password);
-        $number    = preg_match('@[0-9]@', $Password);
-        $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
-            
-
-        if(strlen($Password) >= 8) { 
-              
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience='{$Experience}'  WHERE id= '{$db_id}' ";  
-                      
-        $update_profile_query=mysqli_query($connection,$query);
-
-         if(!$update_profile_query) {
-            
-            die("Query Failed" . mysqli_error($connection));
-        }           
-          
-           header("Location:profile.php"); 
-
-         }else{
-              $message_strnpassworad = "password contain atleast 8 characters";
-              
-       }
-  
-          
-        }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
-
-          }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
-          
-       }   
-          
-            
-       }
-
-  ?>
-
+      ?>
 <?php
 
 if(isset($_GET['Job_details'])){
@@ -127,14 +46,125 @@ if(isset($_GET['Job_details'])){
   while($row=mysqli_fetch_array($Jobs_list)){
 
      $the_id = $row['id'];
+     $the_Firstname = $row['Firstname'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
      $Job_specification = $row['Job_specification'];
 
-}
+ }
+
 }
 
-?> 
+?>
+
+<?php
+
+if(isset($_POST['submit'])){
+
+
+   // $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+   // $select_user_profile = mysqli_query($connection,$query);
+
+    
+   // while($row=mysqli_fetch_array($select_user_profile)){
+
+   //       $id = $row['id'];
+   //       $Firstname=  $row['Firstname'];
+   //       $Lastname=  $row['Lastname'];
+   //       $Email    = $row['Email'];
+   //       $Password = $row['Password'];
+   //       $Phone=  $row['Phone'];
+   //       $Image=  $row['Image'];
+   //       $City=  $row['City'];
+   //       $Industry=  $row['Industry'];
+   //       $Function=  $row['Function'];
+   //       $Education =$row['Education'];
+   //       $Experience =$row['Experience'];
+   //       $Salary =$row['Salary'];
+   //       $CV = $row['CV'];
+   //   } 
+
+     // $id = $_POST['id'];
+     // $Firstname=  $_POST['Firstname'];
+     // $Lastname=  $_POST['Lastname'];
+     // $the_Email    = $_POST['Email'];
+     // $Password = $_POST['Password'];
+     // $Phone=  $_POST['Phone'];
+     // $Image=  $_POST['Image'];
+     // $City=  $_POST['City'];
+     // $Industry=  $_POST['Industry'];
+     // $Function=  $_POST['Function'];
+     // $Education =$_POST['Education'];
+     // $Experience =$_POST['Experience'];
+     // $Salary = $_POST['Salary'];
+     // $CV = $_POST['CV'];
+                
+// require 'PHPMailer/PHPMailerAutoload.php';
+// require('phpmailer/class.phpmailer.php');
+
+// $mail = new PHPMailer;
+
+// $mail->isSMTP();
+
+// $mail->Host = 'smtp.gmail.com';
+// $mail->Port=587;
+// $mail->SMTPAuth = true;
+// $mail->SMTPSecure='tls';
+
+
+// $mail->Username = 'CGBSTech2021@gmail.com';
+// $mail->Password = 'cgbs@2021';
+
+// $mail->setFrom ('barthalomena@gmail.com');
+// $mail->addAddress($Job_Email,$the_Firstname);
+// #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+
+// $mail->isHTML(true);
+// $mail->Subject = "Job Applied Successfully";
+// $mail->Body    = 'Hi'.' '.$the_Firstname.'<br><br>You have successfully applied for a job';
+
+// if(!$mail->send()) {
+//    echo "Message could not be sent.". $mail->ErrorInfo;
+// }else{
+//   echo " otp sent successfully to ur mail: " ;
+// }
+
+
+
+require 'PHPMailer/PHPMailerAutoload.php';
+require('phpmailer/class.phpmailer.php');
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();
+
+$mail->Host = 'smtp.gmail.com';
+$mail->Port=587;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure='tls';
+
+
+$mail->Username = 'CGBSTech2021@gmail.com';
+$mail->Password = 'cgbs@2021';
+
+$mail->setFrom ('CGBSTech2021@gmail.com');
+$mail->addAddress('07.ramyar@gmail.com','Ramya');
+#$mail->addReplyTo( $_POST['email'],$_POST['name']);
+
+$mail->isHTML(true);
+$mail->Subject = "Job Applied Successfully";
+$mail->Body    = 'Hi'.' '.'Ramya'.'<br><br>You have successfully applied for a job';
+
+if(!$mail->send()) {
+   echo "Message could not be sent.". $mail->ErrorInfo;
+}else{
+  echo " otp sent successfully to ur mail: " ;
+}
+
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html style="font-size: 16px;">
@@ -144,7 +174,7 @@ if(isset($_GET['Job_details'])){
     <meta name="keywords" content="Profile">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Apply Job</title>
+    <title>Review Details</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -335,231 +365,103 @@ if(isset($_GET['Job_details'])){
       <div class="u-clearfix u-sheet u-sheet-1"><br>
         <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
         <div class="u-container-layout u-container-layout-8">
-    <form action="" method="POST">
+    <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" redirect="true">
        <div class="u-layout-row">
+        
         <div class="col-sm-6 col-md-6">
         <h6 class="u-text u-text-20 u-align-left" style="padding-left: 3px;">
 
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
            <!--  <a class="nav-link active" id="easyA-tab" data-toggle="tab" href="Job_seeker.php" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a> -->
-            <a class="nav-link active" id="easyA-tab" href="Apply_Job.php" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
-            </li>
-
-            <li class="nav-item">
-           <div class="u-align-center u-form-group u-form-submit">
-            <!-- <a class="nav-link" id="rsLogin-tab" data-toggle="tab" href="#rsLogin" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a> -->
-            <a class="nav-link" id="rsLogin-tab" href="Signin_Job.php" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a>
-            <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-           </div>
-            <!--  <div class="u-align-center u-form-group u-form-submit">
-              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Register<br>
-              </a>
-              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-            </div> -->
+            <a class="nav-link active" id="easyA-tab" href="" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
             </li>
           </ul>
-       
-          <!-- <div class="text">Sign In to apply for this job</div><br>
-          <p>To apply for this job log in to your existing account.</p><br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-          <br>
-          <br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Password: </span>
-          <input type="text" value="<?php echo $Password; ?>" class="form-control" name="Password">
-          <br>
-          <br>
-          <div class="u-form-checkbox u-form-group">
-                  <input type="checkbox" id="checkbox-708d" name="remember" value="On">
-                  <label for="checkbox-708d" class="u-label">Remember me</label>
-                </div>
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="submit" name="submit" value="Sign in" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-12 u-btn-1"> 
-                  <a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a> -->
-
 
           <div class="text">Apply for this job</div><br>
-          <p>Fill in the form below to apply for this job.</p><br>
+          <p>Review your details before submit</p><br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Email; ?></span>
+          <!-- <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email"> -->
           <br>
           <br>
           
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Firstname: </span>
-          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Firstname: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Firstname; ?></span>
+          <!-- <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname"> -->
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Lastname: </span>
-          <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Lastname: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Lastname; ?></span>
+          <!-- <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname"> -->
           <br>
           <br>
 
-           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Contact Number: </span>
-          <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone">
+           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Contact Number: </span><br><br>
+           <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Phone; ?></span>
+          <!-- <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone"> -->
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Address: </span>
-          <!-- <textarea name="Address" value="<?php echo $Address; ?>" class="form_control" rows="3"></textarea> -->
-          <input type="text" value="<?php echo $Address; ?>" class="form-control" name="Address">
-          <br>
-          <br>
-<?php 
-
-$_SESSION['Address'] = $Address;
-
-?>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">City: </span>
-          <input type="text" value="<?php echo $City; ?>" class="form-control" name="City">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Address: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $_SESSION['Address']; ?></span>
+          <!-- <input type="text" value="<?php echo $Address; ?>" class="form-control" name="Address"> -->
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">State: </span>
-          <select type="text" value="<?php echo $City; ?>" class="form-control" name="City"> 
-          <option value="">Select</option>
-          <option value="1302">Andaman and Nicobar Islands</option>
-          <option value="1303">Andhra Pradesh</option>
-          <option value="1304">Assam</option>
-          <option value="1305">Bihar</option>
-          <option value="1306">Chandigarh</option>
-          <option value="1307">Dadra and Nagar Haveli</option>
-          <option value="1308">New Delhi</option>
-          <option value="1309">Gujarat</option>
-          <option value="1310">Haryana</option>
-          <option value="1311">Himachal Pradesh</option>
-          <option value="1312">Jammu and Kashmir</option>
-          <option value="1313">Kerala</option>
-          <option value="1314">Lakshadweep</option>
-          <option value="1316">Maharashtra</option>
-          <option value="1317">Manipur</option>
-          <option value="1318">Meghalaya</option>
-          <option value="1319">Karnataka</option>
-          <option value="1320">Nagaland</option>
-          <option value="1321">Odisha</option>
-          <option value="1322">Pondicherry</option>
-          <option value="1323">Punjab</option>
-          <option value="1324">Rajasthan</option>
-          <option value="1325">Tamilnadu</option>
-          <option value="1326">Tripura</option>
-          <option value="1327">Uttar Pradesh</option>
-          <option value="1328">West Bengal</option>
-          <option value="1329">Sikkim</option>
-          <option value="1330">Arunachal Pradesh</option>
-          <option value="1331">Mizoram</option>
-          <option value="1332">Daman and Diu</option>
-          <option value="1333">Goa</option>
-          <option value="1334">Bihar</option>
-          <option value="1335">Madhya Pradesh</option>
-          <option value="1336">Uttar Pradesh</option>
-          <option value="1337">Chhattisgarh</option>
-          <option value="1338">Jharkhand</option>
-          <option value="1339">Uttarakhand</option>
-          <option value="3935">Telangana</option>
-        </select> 
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">City: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $City; ?></span>
+          <!-- <input type="text" value="<?php echo $City; ?>" class="form-control" name="City"> -->
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Job Title: </span>
-          <input type="text" value="<?php echo $Job_title; ?>" class="form-control" name="Job Title">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">State: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $City; ?></span>
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Expected Pay Rate: </span>
-          <input type="text" value="<?php echo $Salary; ?> lakh" class="form-control" name="Expected Pay Rate">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Job Title: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Job_title; ?></span>
+          <!-- <input type="text" value="<?php echo $Job_Title; ?>" class="form-control" name="Job Title"> -->
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Country: </span>
-          <select type="text" value="<?php echo $Country; ?>" class="form-control" name="Country">
-            <option value="">Select</option>
-            <option value="1302">Andaman and Nicobar Islands</option>
-            <option value="1303">Andhra Pradesh</option>
-            <option value="1304">Assam</option>
-            <option value="1305">Bihar</option>
-            <option value="1306">Chandigarh</option>
-            <option value="1307">Dadra and Nagar Haveli</option>
-            <option value="1308">New Delhi</option>
-            <option value="1309">Gujarat</option>
-            <option value="1310">Haryana</option>
-            <option value="1311">Himachal Pradesh</option>
-            <option value="1312">Jammu and Kashmir</option>
-            <option value="1313">Kerala</option>
-            <option value="1314">Lakshadweep</option>
-            <option value="1316">Maharashtra</option>
-            <option value="1317">Manipur</option>
-            <option value="1318">Meghalaya</option>
-            <option value="1319">Karnataka</option>
-            <option value="1320">Nagaland</option>
-            <option value="1321">Odisha</option>
-            <option value="1322">Pondicherry</option>
-            <option value="1323">Punjab</option>
-            <option value="1324">Rajasthan</option>
-            <option value="1325">Tamilnadu</option>
-            <option value="1326">Tripura</option>
-            <option value="1327">Uttar Pradesh</option>
-            <option value="1328">West Bengal</option>
-            <option value="1329">Sikkim</option>
-            <option value="1330">Arunachal Pradesh</option>
-            <option value="1331">Mizoram</option>
-            <option value="1332">Daman and Diu</option>
-            <option value="1333">Goa</option>
-            <option value="1334">Bihar</option>
-            <option value="1335">Madhya Pradesh</option>
-            <option value="1336">Uttar Pradesh</option>
-            <option value="1337">Chhattisgarh</option>
-            <option value="1338">Jharkhand</option>
-            <option value="1339">Uttarakhand</option>
-            <option value="3935">Telangana</option>
-          </select>
-            <br>
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Expected Pay Rate: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Salary; ?>lakh</span>
+          <!-- <input type="text" value="<?php echo $Expected_Pay_Rate; ?>" class="form-control" name="Expected Pay Rate"> -->
+          <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Resume:</span>
-          <div class="form-element">
-            <div class="custom-file-upload">
-              <!-- <div class="custom-file-upload-toggle">
-              <div class="custom-file-upload-toggle-btn btn btn-prim">
-              </div>
-              </div> -->
-              <input type="file" name="image" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
-              <span class="focus-border"></span>
-            </div>
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Country: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Country; ?></span>
+          <br>
+          <br>
 
-            <span data-bit-output-upload-files="cvFileUpload"></span>
-            <div> 
-                <div  class="cms-file-upload-validator field-error" style="display:none;">
-                  <span class="cms-file-upload-validator-error-message">CV is required</span>
-                </div>
-            </div>
-          </div>
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Resume:</span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $CV; ?></span>
 
-              <a href="Job_review.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">Next </a>
-
-            </h6>
+          <br>
+          <br>
+       <div class="u-align-center u-form-group u-form-submit">
+             <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Submit</a>
+            <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+       </div>
+          </h6>
           </div>
           <div class="col-sm-6 col-md-6">
 
             <h6 class="u-align-right" style="padding-left: 40px;">
 
              <div class="backTo" style="margin-left:285px;">
-              
-         
-                <a href="Available_jobs.php" class="back_to_search_btn"><img src="" alt="">Back to search</a>
+                <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="back_to_search_btn"><img src="" alt=""> Back to search</a>
               </div>
 
- 
  <p class="u-align-right u-text u-text-right u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
-
-                
+             
+                  
  </h6>
 </div>
 </form>

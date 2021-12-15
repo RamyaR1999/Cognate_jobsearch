@@ -313,7 +313,7 @@
 
   while($row=mysqli_fetch_array($Jobs_list)){
 
-     $id = $row['id'];
+     $the_id = $row['id'];
      $Logo = $row['Logo'];
      $Job_title = $row['Job_title'];
      $Company_name = $row['Company_name'];
@@ -331,12 +331,12 @@
                <!--  <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>"> -->
                <br><br>
                 <p class="u-text u-text-default u-text-1">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $id ?>" target="_blank"><?php echo $Job_title; ?></a>
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-3"><?php echo $Branch ?></p>
                 <p class="u-text u-text-4"> <?php echo $Job_specification; ?> ....</p>
-                <a href="Apply_Job.php" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">Apply Now</a>
+                <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-hover-white u-text-palette-1-base u-btn-2" target="_blank">Apply Now</a>
               </div>
             </div>
 

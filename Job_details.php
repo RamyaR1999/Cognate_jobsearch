@@ -269,19 +269,15 @@
 
         <h1 class="u-text u-text-1"><?php echo $Job_title; ?></h1>
         <p class="u-text u-text-default u-text-palette-1-dark-1 u-text-2"><?php echo $Branch; ?></p>
-        <a href="https://nicepage.com/css-templates" class="u-border-2 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-3 u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-1">apply now</a>
+        <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-2 u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-3 u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-1">apply now</a>
         <p class="u-text u-text-3"><?php echo $Job_posted; ?></p>
         <p class="u-text u-text-4"><?php echo $Service; ?></p>
 
-
-
       </div>
     </section>
+    
     <section class="u-clearfix u-section-2" id="sec-8459">
       <div class="u-clearfix u-sheet u-sheet-1">
-
-
-
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-list-item u-repeater-item">
@@ -297,7 +293,7 @@
                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href=""><?php echo $Service; ?></a>
                 </p>
                 <p class="u-text u-text-7">experience : 5-8</p>
-                <a href="" class="u-active-palette-1-base u-border-2 u-border-active-palette-1-base u-border-hover-white u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-3">apply now</a>
+                <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>" class="u-active-palette-1-base u-border-2 u-border-active-palette-1-base u-border-hover-white u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-none u-radius-3 u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-3">apply now</a>
               </div>
             </div>
           </div>

@@ -571,7 +571,7 @@ Tested, screened and pre-qualified
        
       </tr>
     </table>
-    <marquee><a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: dark; border-color: red; border-radius: 5px; color: white;" href="Contact_us.php" target="__blank">Contact more for more informatiom           .
+    <marquee><a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: dark; border-color: red; border-radius: 5px; color: white;" href="Contact_us.php" target="__blank">Contact us for more informatiom           .
               </a></marquee>
         
     </section>
