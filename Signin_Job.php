@@ -362,7 +362,7 @@ if(isset($_GET['Job_details'])){
           <br>
           <br>
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Password: </span>
-          <input type="text" value="<?php echo $Password; ?>" class="form-control" name="Password">
+          <input type="password" value="<?php echo $Password; ?>" class="form-control" name="Password">
           <br>
           <br>
           <div class="u-form-checkbox u-form-group">
