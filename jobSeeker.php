@@ -5,7 +5,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cognate Global Business Solution </title>
+    <title>CGBS-JobSeeKer </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -23,6 +23,9 @@
       <link rel="stylesheet" href="assets/css/nice-select.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/responsive.css">
+      <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+      <link rel="stylesheet" href="nicepage.css" media="screen">
+      <link rel="stylesheet" href="Page-1.css" media="screen">
 
    </head>
 
@@ -47,7 +50,7 @@
 <div class="col-lg-3 col-md-2">
     <!--logoo-->
 <div class="logo">
-<a href="job_seeker.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+<a href="home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
 </div>  
 </div>  
 <div class="col-lg-9 col-md-9">
@@ -56,24 +59,24 @@
      <div class="main-menu">
          <nav class="d-none d-lg-block">
      <ul id="navigation">
-     <li><a href="job_seeker.php">Home</a></li>
-     <li><a href="home.php">Job Seeker </a>
+     <li><a href="home.php">Home</a></li>
+     <li><a href="jobSeeker.php">Job Seeker </a>
      <ul class="submenu">
-     <li><a href="">Find A Jobs</a></li>
-    <li><a href="">Job Seeker Profile</a></li>
-     <li><a href="">Submit Your Resume</a></li>
+
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+     <li><a href="Register-Member.php">Submit Your Resume</a></li>
 </ul>      
 </li>
-<li><a href="#">employers</a></li>
-     <li><a href="">About</a></li>
-     <li><a href="">Contact</a></li>
+<li><a href="employer.php">employers</a></li>
+     <li><a href="About_Us.php">About</a></li>
+     <li><a href="Contact_Us.php">Contact</a></li>
      </ul>
        </nav>
       </div>         
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
-                                  <a href="#" class="btn head-btn1">Register</a>
-                                  <a href="#" class="btn head-btn2">Login</a>
+                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
+                                  <a href="Member-Login.php" class="btn head-btn2">Login</a>
                               </div>
                           </div>
                       </div>
@@ -87,438 +90,294 @@
      </div>
       <!-- Header End -->
   </header>
+  <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+  <!-- Slide One - Set the background image for this slide in the line below -->
+  <div class="carousel-item active" style="background-image: url('images/js7.jpg')">
+    <div class="carousel-caption text-monospace d-none d-md-block">
+      <h2 class="display-4">WELCOME!</h2>
+      <p class="lead">Find The Best Solutions<br>For Your Business</p>
+    </div>
+  </div>
+  <!-- Slide Two - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/js3.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4">Make Your Dream</h2>
+      <p class="lead">We Make IT Happen<br>A Better Life, A Better World </p>
+    </div>
+  </div>
+  <!-- Slide Three - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/blog.teamworkdotcom.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4">Start Your Career</h2>
+      <p class="lead">Success Doesn't Come And Find You<br>
+      You Can Go Out and Get In .</p>
+    </div>
+  </div>
+</div>
+<a class="carousel-control-prev" href="" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+<a class="carousel-control-next" href="" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
 
-
-
-  <!-- Hero Area Start-->
-  <div class="slider-area ">
-      <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="image/jobseeker2.jpg">
-          <div class="container">
-              <div class="row">
-                  <div class="col-xl-12">
-                      <div class="hero-cap text-capitalize text-center">
-                          <h2> cognate global business sollution</h2>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-   </div>
-   <!-- Hero Area End -->
-
-<!--================Blog Area =================-->
-<section class="blog_area single-post-area section-padding">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 posts-list">
-               <div class="single-post">
-                  <div class="feature-img">
-                     <img class="img-fluid" src="image/neverbe.gif" alt="">
-                  </div>
-                  <div class="blog_details">
-                  <h2>We bring you powerful advantages to navigate your digital transformation
-                     </h2>
-                     <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                     </ul>
-                     <p class="excert">
-                     Hiring candidates for a company is a great responsibility. 
-                     The future of the company depends entirely on its employees.
-                      This is why the greatest challenge a recruiter faces is how to identify the right talent.
-                      It is vital to select the perfect candidate for the required position for various reasons. 
-                     </p>
-                     <p>
-                     When an employer fails to recognize the right talent, they are implicating a major loss to themselves.
-                      Missing out on the perfect candidate with the right desired talent is an irreversible loss.
-                      To help the recruiters in identifying the right talent, here are a few theories by experts.
-                     </p>
-                     <div class="quote-wrapper">
-                        <div class="quotes">
-                        “The responsibility of a company is to serve the customer. 
-                        The responsibility of leadership is to serve their people
-                         so that their people may better serve the customer.
-                         If leaders fail to serve their people first, both customer and company will suffer.”
-                        </div>
-                     </div>
-                     <p>
-                     People with the right skills, a better understanding of their work
-                      and hardcore determination towards company goals are the ones that can elevate the business
-                      graph by making the ideas of their authority into reality with their knowledge and hard work.
-                     </p>
-                     <p>
-                     Many of the company owners take the process for granted and
-                      choose people based on their availability and the salary demand,
-                       thinking that they would train them later. But what actually happens
-                        is that the company invests its time, money and efforts to train them 
-                        and gets a resignation from their side once 
-                     these newbie employees are satisfied enough to learn from the experienced people of the industry.
-                     </p>
-                  </div>
-               </div>
-
-               <div class="navigation-top">
-                  <div class="d-sm-flex justify-content-between text-center">
-                     <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Mena and 4
-                        people like this</p>
-                     <div class="col-sm-4 text-center my-2 my-sm-0">
-                        <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
-                     </div>
-                     <ul class="social-icons">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                     </ul>
-                  </div>
-
-                  <div class="navigation-area">
-                     <div class="row">
-                        <div
-                           class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                           <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="image/jobseeker3.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="arrow">
-                              <a href="#">
-                                 <span class="lnr text-white ti-arrow-left"></span>
-                              </a>
-                           </div>
-                           <div class="detials">
-                              <p>Prev Post</p>
-                              <a href="#">
-                                 <h4>join with our company</h4>
-                              </a>
-                           </div>
-                        </div>
-                        <div
-                           class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                           <div class="detials">
-                              <p>Next Post</p>
-                              <a href="#">
-                                 <h4>group discussion</h4>
-                              </a>
-                           </div>
-                           <div class="arrow">
-                              <a href="#">
-                                 <span class="lnr text-white ti-arrow-right"></span>
-                              </a>
-                           </div>
-                           <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="image/jobseeker4.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="blog-author">
-                  <div class="media align-items-center">
-                     <img src="image/ramya.jpg" alt="">
-                     <div class="media-body">
-                        <a href="#">
-                           <h4>Ramya</h4>
-                        </a>
-                        <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                           our dominion twon Second divided from</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="comments-area">
-                  <h4>05 Comments</h4>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="image/reshma.jpg" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">reshma</a>
-                                    </h5>
-                                    <p class="date">December 4, 2019 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="image/shuba.jpg" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Shuba Vadhana</a>
-                                    </h5>
-                                    <p class="date">December 4, 2019 at 4:22 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="image/mena.jpg" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Barthalomena</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="comment-form">
-                  <h4>Leave a Reply</h4>
-                  <form class="form-contact comment_form" action="#" id="commentForm">
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="form-group">
-                              <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                 placeholder="Write Comment"></textarea>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="email" id="email" type="email" placeholder="Email">
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <div class="form-group">
-                              <input class="form-control" name="website" id="website" type="text" placeholder="Website">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="form-group">
-                        <button type="submit" class="button button-contactForm btn_1 boxed-btn" <a href="mailto:barthalomena@gmail.com? subject=Learn about MailTo tags in HTML">Send Message</a></button>
-                     </div>
-                  </form>
-               </div>
+<div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">If you Want <br> To Achieve Greatness<br> Stop Thinking<br>Find Ur Job</h3>
+        <div class="u-expanded-width-xs u-form u-form-1">
+          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
+           <div class="u-form-group u-form-name">
+              <label for="name-ef64" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Enter job title" id="jobtitle" name="Job_title" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
+              <!-- <input type="text" name="Name" id="demoB" placeholder="Enter job title" class="u-form-control"> -->
             </div>
-            <div class="col-lg-4">
-               <div class="blog_right_sidebar">
-                  <aside class="single_sidebar_widget search_widget">
-                     <form action="#">
-                        <div class="form-group">
-                           <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder='Search Keyword'
-                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                              <div class="input-group-append">
-                                 <button class="btns" type="button"><i class="ti-search"></i></button>
-                              </div>
-                           </div>
-                        </div>
-                        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                           type="submit">Search</button>
-                     </form>
-                  </aside>
-                  <aside class="single_sidebar_widget post_category_widget">
-                     <h4 class="widget_title">Category</h4>
-                     <ul class="list cat-list">
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Information Technology</p>
-                              <p>(37)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Backend developer</p>
-                              <p>(10)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Modern technology</p>
-                              <p>(03)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Sales requirements</p>
-                              <p>(11)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Web development</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Full-stack developer</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget popular_post_widget">
-                     <h3 class="widget_title">Recent Post</h3>
-                     <div class="media post_item">
-                        <img src="image/post211.png" alt="post">
-                        <div class="media-body">
-                           <a href="single-blog.html">
-                              <h3>From life was you fish...</h3>
-                           </a>
-                           <p>January 12, 2019</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="image/post212.png" alt="post">
-                        <div class="media-body">
-                           <a href="single-blog.html">
-                              <h3>The Amazing Hubble</h3>
-                           </a>
-                           <p>02 Hours ago</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="image/post23.png" alt="post">
-                        <div class="media-body">
-                           <a href="single-blog.html">
-                              <h3>Astronomy Or Astrology</h3>
-                           </a>
-                           <p>03 Hours ago</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="image/post24.png" alt="post">
-                        <div class="media-body">
-                           <a href="single-blog.html">
-                              <h3>Asteroids telescope</h3>
-                           </a>
-                           <p>01 Hours ago</p>
-                        </div>
-                     </div>
-                  </aside>
-                  <aside class="single_sidebar_widget tag_cloud_widget">
-                     <h4 class="widget_title">Tag Clouds on instagram</h4>
-                     <ul class="list">
-                        <li>
-                           <a href="#">project</a>
-                        </li>
-                        <li>
-                           <a href="#">love</a>
-                        </li>
-                        <li>
-                           <a href="#">technology</a>
-                        </li>
-                        <li>
-                           <a href="#">travel</a>
-                        </li>
-                        <li>
-                           <a href="#">restaurant</a>
-                        </li>
-                        <li>
-                           <a href="#">life style</a>
-                        </li>
-                        <li>
-                           <a href="#">design</a>
-                        </li>
-                        <li>
-                           <a href="#">illustration</a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget instagram_feeds">
-                     <h4 class="widget_title">Instagram Feeds <br> join with us</h4>
-                     <ul class="instagram_row flex-wrap">
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget newsletter_widget">
-                     <h4 class="widget_title">Be With In Connection</h4>
-                     <form action="#">
-                        <div class="form-group">
-                           <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                              onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                        </div>
-                        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                           type="submit">Connection</button>
-                     </form>
-                  </aside>
-               </div>
+            <div class="u-form-email u-form-group">
+              <label for="email-ef64" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Pincode" id="email-ef64" name="pincode" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
             </div>
-         </div>
+            <div class="u-form-group u-form-submit">
+              <a href="Available_jobs.php" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
+<!-- </g> -->
+</g></svg><img></span>&nbsp;<br>
+              </a>
+              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
+            <div class="u-form-send-error u-form-send-message">#FormSendError</div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+        </div>
       </div>
-   </section>
-   <!--================ Blog Area end =================-->
+    </div>
+
+
+
+</section>
+
+<div class="online-cv cv-bg section-overly pt-90 pb-120"  data-background="images/cv.gif">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="cv-caption text-center">
+                            <p class="pera1">Make Your Dreams </p>
+                            <p class="pera2"> Create a Difference with Your Online Resume!</p>
+                            <a href="submit_job.php" class="border-btn2 border-btn4">Upload your cv</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="featured-job-area feature-padding">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle text-center">
+                            <span>Recent Job</span>
+                            <h2>Featured Jobs</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="Available_jobs.php"><img src="assets/img/icon/job-list1.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="Available_jobs.php"><h4>Software Engineering</h4></a>
+                                    <ul>
+                                        <li>Frontend Developer</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
+                                        <li>$3500 - $4000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="Available_jobs.php">Search</a>
+                                <span>7 hours ago</span>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="Available_jobs.php"><img src="assets/img/icon/job-list2.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="Available_jobs.php"><h4>Manufacturing</h4></a>
+                                    <ul>
+                                        <li>Creative Agency</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>noida,india</li>
+                                        <li>$3500 - $4000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="Available_jobs.php">search</a>
+                                <span>7 hours ago</span>
+                            </div>
+                        </div>
+                         <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="Available_jobs.php"><img src="assets/img/icon/job-list3.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="Available_jobs.php"><h4>Accountant</h4></a>
+                                    <ul>
+                                        <li>AI</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>Emilia ,USA</li>
+                                        <li>$3500 - $4000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="Available_jobs.php">search</a>
+                                <span>7 hours ago</span>
+                            </div>
+                        </div>
+                         <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="Available_jobs.php"><img src="assets/img/icon/job-list4.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="Available_jobs.php"><h4>Product Manager</h4></a>
+                                    <ul>
+                                        <li>Accountant</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>larva, india</li>
+                                        <li>$3500 - $4000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="Available_jobs.php">search</a>
+                                <span>7 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured_job_end -->
+
+
+
+
+
+
+
+        <div class="apply-process-area apply-bg pt-150 pb-150" data-background="images/cv2.gif">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle white-text text-center">
+                            <span>Apply process</span>
+                            <h2> How it works</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Apply Process Caption -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-process text-center mb-30">
+                            <div class="process-ion">
+                                <span class="flaticon-search"></span>
+                            </div>
+                            <div class="process-cap">
+                            <a href="jobSeeker.php"><h5>1. Search a job</h5>
+                               <p>Forgive yourself for your faults and your mistakes and move on</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-process text-center mb-30">
+                            <div class="process-ion">
+                                <span class="flaticon-curriculum-vitae"></span>
+                            </div>
+                            <div class="process-cap">
+                            <a href="Available_jobs.php"> <h5>2. Apply for job</h5>
+                               <p>An obstacle may be either a stepping stone or a stumbling block.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-process text-center mb-30">
+                            <div class="process-ion">
+                                <span class="flaticon-tour"></span>
+                            </div>
+                            <div class="process-cap">
+                            <a href="Register-Member.php"> <h5>3. Get your job</h5>
+                               <p>We are still masters of our fate. We are still captains of our souls</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <!-- How  Apply Process End-->
+        <div class="support-company-area support-padding fix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2">
+                                <span>who we are..</span>
+                                <h2>Cognate Global Business Solution</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">We are one of the largest global HR services firms.<br> We combine our passion for people with intelligent technology to<br> help organizations and talent convert potential into performance.<br> Moving them forward. human forward.</p>
+                                <p>>Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
+
+When an employer fails to recognize the right talent, they are implicating a major loss to themselves. Missing out on the perfect candidate with the right desired talent is an irreversible loss. To help the recruiters in identifying the right talent, here are a few theories by experts.</p>
+                                <a href="Register_Member.php" class="btn post-btn">Post a job</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="support-location-img">
+                            <img src="assets/img/service/support-img.jpg" alt="">
+                            <div class="support-img-cap text-center">
+                                <p>Since</p>
+                                <span>2017</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Support Company End-->
+  
    <footer>
       <!-- Footer Start-->
       <div class="footer-area footer-bg footer-padding">
@@ -549,10 +408,10 @@ Palace Cross Road,
 Bangalore - 560020
 </p>
                                   </li>
-                                  <li><a href="#"> Cognate India: +91-080-4300 4654
+                                  <li><a href="Contact.php"> Cognate India: +91-080-4300 4654
 
 </a></li>
-                                  <li><a href="#">Email : team@cognateglobal.com</a></li>
+                                  <li><a href="Contact.php">Email : team@cognateglobal.com</a></li>
                               </ul>
                           </div>
 
@@ -563,11 +422,11 @@ Bangalore - 560020
                           <div class="footer-tittle">
                               <h4>Important Link</h4>
                               <ul>
-                                  <li><a href="#"> Job Seekers</a></li>
-                                  <li><a href="#">Contact Us</a></li>
-                                  <li><a href="#">About Us</a></li>
-                                  <li><a href="#">find a job</a></li>
-                                  <li><a href="#">sequrity advice</a></li>
+                                  <li><a href="jobSeeker.php"> Job Seekers</a></li>
+                                  <li><a href="Contact.php">Contact Us</a></li>
+                                  <li><a href="About_Us">About Us</a></li>
+                                  <li><a href="available_jobs.php">find a job</a></li>
+                                  <li><a href="sequrity_advice">sequrity advice</a></li>
                               </ul>
                           </div>
                       </div>
@@ -604,7 +463,7 @@ Bangalore - 560020
                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <!-- logo -->
                         <div class="footer-logo mb-20">
-                          <a href=""><img src="image/cognate.png" alt="" width="150px"></a>
+                          <a href="home.php"><img src="image/cognate.png" alt="" width="150px"></a>
                         </div>
                      </div>
                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
@@ -645,7 +504,7 @@ Bangalore - 560020
                                <a href="#"><i class="fab fa-facebook-f"></i></a>
                                <a href="#"><i class="fab fa-twitter"></i></a>
                                <a href="#"><i class="fas fa-globe"></i></a>
-                               <a href="#"><i class="fab fa-behance"></i></a>
+                               <a href="#"><i class="fab fa-linkedin"></i></a>
                            </div>
                        </div>
                    </div>
