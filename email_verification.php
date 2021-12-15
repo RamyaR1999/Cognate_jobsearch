@@ -1,130 +1,69 @@
 <?php session_start(); ?>
-<?php ob_start (); ?>
 <?php include "db.php"; ?>
 
 
 <?php
-    
-    if(isset($_REQUEST['submit'])){
-         
-        $Email    = $_REQUEST['Email'];
-        $Password = $_REQUEST['Password'];
-                        
-        $Password = mysqli_real_escape_string($connection,$_POST['Password']);
-        $Password = md5($Password);  
-    
-        $query = "SELECT * FROM users WHERE Email = '{$Email}' ";
-        $select_users_query = mysqli_query($connection, $query);
-        
-        if(!$select_users_query){
-            
-            die("Query Failed" . mysqli_error($connection));
-            
-        }
+            $message =  '<label class="text">Your Email Address Successfully Verified <br/> You can login 
+            here - <a href="Member-Login.php">login</a></label>';
           
-          while($row = mysqli_fetch_array($select_users_query)){
-               $db_id = $row['id'];
-               $db_Email    = $row['Email'];
-               $db_Password = $row['Password'];
-               $db_Phone=  $row['Phone'];
-               $db_Image=  $row['Image'];
-               $db_Firstname=  $row['Firstname'];
-               $db_Lastname=  $row['Lastname'];
-               $db_City=  $row['City'];
-               $db_Industry=  $row['Industry'];
-               $db_Function=  $row['Function'];
-               $db_Education =$row['Education'];
-               $db_Experience =$row['Experience'];
-               $db_Salary =$row['Salary'];
-               $db_CV = $row['CV'];
-              
-          }
-        
-        
-        if($Email === $db_Email){
-        if($Password === $db_Password){
-     
-             $_SESSION['id'] = $db_id;
-             $_SESSION['Email'] = $db_Email;
-             $_SESSION['Firstname'] = $db_Firstname;
-             $_SESSION['Lastname'] = $db_Lastname;
-             $_SESSION['Image']=  $db_Image;
-             $_SESSION['City'] = $db_City;
-             $_SESSION['Industry'] = $db_Industry;
-             $_SESSION['Function'] =  $db_Function;
-             $_SESSION['Education'] = $db_Education;
-             $_SESSION['Experience'] = $db_Experience;
-             $_SESSION['Salary'] = $db_Salary;
-             $_SESSION['CV'] = $db_CV;
-             $_SESSION['Phone'] = $db_Phone;
-             
 
- header("Location:Apply_Job.php");
-           
-        }else{
-            
-            $message_Password = "Incorrect password";
-        }
-         
-        }else{
-            $message_Email = "Invalid Email";   
-              
-        }
-        
-        }
-?>  
+       
 
-<?php
+// session_start();
+// $rndno=rand(100000, 999999);//OTP generate
+// $message = urlencode("otp number.".$rndno);
+// $to=$_POST['email'];
+// $subject = "OTP";
+// $txt = "OTP: ".$rndno."";
+// $headers = "From: 07.ramyar@gmail.com" . "\r\n" .
+// "CC: thennarasan1988@gmail.com";
+// mail($to,$subject,$txt,$headers);
+// if(isset($_POST['btn-save']))
+// {
+// $_SESSION['firstname']=$_POST['firstname'];
+// $_SESSION['email']=$_POST['email'];
+// $_SESSION['phone']=$_POST['phone'];
+// $_SESSION['otp']=$rndno;
+// header( "Location: Member-Login.php" );
 
-if(isset($_GET['Job_details'])){
+// echo "otp sent your email";
 
-  $the_id = $_GET['Job_details'];
-
-  $query="SELECT * FROM Jobs WHERE id='$the_id'";
-  $Jobs_list=mysqli_query($connection,$query);
-
-  while($row=mysqli_fetch_array($Jobs_list)){
-
-     $the_id = $row['id'];
-     $Job_title = $row['Job_title'];
-     $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
-
-}
-}
-
-?>
-
+// }
+ ?>
 
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Profile">
+    <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Apply Job</title>
+    <title>Upload Resume</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Contact-us.css" media="screen">
+<link rel="stylesheet" href="Register-Member.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+    <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
- <!-- Profile Icon -->
+
+<!-- Profile Icon -->
 
  <link rel="stylesheet" href="assets/css/shared/style.css"> 
+
+    <!-- Password Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     
     <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/default-logo.png",
-		"sameAs": []
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Site2",
+    "logo": "images/default-logo.png",
+    "sameAs": []
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Contact us">
+    <meta property="og:title" content="Register Member">
+    <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
@@ -140,7 +79,7 @@ if(isset($_GET['Job_details'])){
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </symbol>
 </defs></svg>
-                </a>
+                 </a>
               </div>
               <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
@@ -148,7 +87,7 @@ if(isset($_GET['Job_details'])){
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
 
- <?php
+<?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
@@ -220,7 +159,7 @@ if(isset($_GET['Job_details'])){
 
 <?php
 
-    if(isset($_SESSION['Email']) === $db_Email){
+    if(isset($_SESSION['email']) == $db_email){
 
   ?> 
 
@@ -232,21 +171,15 @@ if(isset($_GET['Job_details'])){
               
   ?> 
 
-<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
-
-
 </ul>
                   </div>
                 </div>
                 <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
               </div>
             </nav>
-          </div>  
+          </div>
+   
         </div>
-
         <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
             <div class="u-list u-list-1">
@@ -254,14 +187,14 @@ if(isset($_GET['Job_details'])){
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-1">
                     <p class="u-text u-text-default u-text-1">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1 active" href="Available_jobs.php">find a job</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1" href="Available_jobs.php">find a job</a>
                     </p>
                   </div>
                 </div>
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2">
                     <p class="u-text u-text-default u-text-2">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2" href="Register-Member.php">submit your CV</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2 active" href="Register-Member.php">submit your CV</a>
                     </p>
                   </div>
                 </div>
@@ -282,91 +215,88 @@ if(isset($_GET['Job_details'])){
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-5">
                     <p class="u-text u-text-default u-text-5">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="">security advice</a>
+                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="security_advice.php">security advice</a>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div> 
+          </div>  
         </div>
-      </div></header>
-   <section class="u-clearfix u-section-1" id="sec-8459">
-      <div class="u-clearfix u-sheet u-sheet-1"><br>
-        <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
-        <div class="u-container-layout u-container-layout-8">
-    <form action="" method="POST">
-       <div class="u-layout-row">
-        <div class="col-sm-6 col-md-6">
-        <h6 class="u-text u-text-20 u-align-left" style="padding-left: 3px;">
+      </div>
+    </header>
 
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-           <!--  <a class="nav-link active" id="easyA-tab" data-toggle="tab" href="Job_seeker.php" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a> -->
-            <a class="nav-link active" id="easyA-tab" href="Apply_Job.php" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
-            </li>
-
-            <li class="nav-item">
-           <div class="u-align-center u-form-group u-form-submit">
-            <!-- <a class="nav-link" id="rsLogin-tab" data-toggle="tab" href="#rsLogin" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a> -->
-            <a class="nav-link" id="rsLogin-tab" href="Signin_Job.php" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a>
-            <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-           </div>
-            </li>
-          </ul>
-
-       
-          <div class="text">Sign In to apply for this job</div><br>
-          <p>To apply for this job log in to your existing account.</p><br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-          <br>
-          <br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Password: </span>
-          <input type="password" value="<?php echo $Password; ?>" class="form-control" name="Password">
-          <br>
-          <br>
-          <div class="u-form-checkbox u-form-group">
-                  <input type="checkbox" id="checkbox-708d" name="remember" value="On">
-                  <label for="checkbox-708d" class="u-label">Remember me</label>
-                </div>
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="submit" name="submit" value="Sign in" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-12 u-btn-1"> 
-                  <a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a>
-
-
-            </h6>
-          </div>
-          <div class="col-sm-6 col-md-6">
-
-            <h6 class="u-align-right" style="padding-left: 40px;">
-
-             <div class="backTo" style="margin-left:285px;">
-              
-         
-                <a href="Apply_Job.php" class="back_to_search_btn"><img src="" alt="">Back to search</a>
-              </div>
-
- 
- <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
-
-                
- </h6>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-
-</div>    
-</div>
-</section>
-<br>
+<style>
+.u-input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #c9ced1;
+  border-radius: 3px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background-color: #ffffff;
+  color: inherit;
+  height: 48px;
+}
+  .u-input ~ .focus-border{
+    position: absolute;
+    height: 48px;
+    bottom: 0;
+    left: 0;
+    /*width: 0;*/
+    transition: 0.4s;
+    border-radius: 2px;
+    }
+   .u-input:focus ~ .focus-border{
+     width: 100%;
+     transition: 0.4s;
+     border: 1px solid #3399FF;
+     cursor: text;
+    } 
+   .col-sm-12{
+    padding-right: 0px;
+    padding-left: 0px
+    }
+</style>
+  <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-left u-text u-text-default u-text-1">Upload your resume here</h1>
+        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2"></h1>
+        <p class="u-align-left u-text u-text-default u-text-3"></p>
+      </div>
+    </section>
+    <section class="u-clearfix u-custom-color-5 u-section-2" id="sec-2d18">
+    <h3 align="center">Register Login with Email Verification</h3>
+             <?php echo $message ; ?>
+           
+           <p class="font-weight-light text-muted mb-0">
+            </p>
+            
+            <div class="u-expanded-width u-form u-login-control u-form-1">
+              <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
     
- <?php include "footer.php"; ?>
+    
+  <input type="hidden" value="" name="recaptchaResponse">
+              </form>
+            </div>
+      </section>
+
+<?php include "footer.php"; ?>
+
+<script>
+
+const togglePassword = document.querySelector('#togglePassword');
+  const Password = document.querySelector('#id_Password');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = Password.getAttribute('type') === 'Password' ? 'text' : 'Password';
+    Password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+</script>
+             

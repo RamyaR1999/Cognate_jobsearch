@@ -8,6 +8,7 @@ if(isset($_POST['submit'])){
    require('phpmailer/class.phpmailer.php');
 
 $mail = new PHPMailer;
+$link = "http://localhost:8889/demo/Cognate_jobsearch/email_verification.php";
 
 //OTP generate
 $rndno=rand(100000, 999999);
@@ -35,6 +36,7 @@ $mail->SMTPSecure='tls';
          $Education =$_POST['Education'];
          $Experience =$_POST['Experience'];
          $Salary =$_POST['Salary'];
+         $email_verification_link = $_POST['email_verification_link'];
          // $CV = $_FILES['CV']['Name'];
          // $upload = "uploads/".$CV;
 
@@ -100,8 +102,8 @@ $mail->SMTPSecure='tls';
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$CV','$rndno')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -112,7 +114,11 @@ $mail->SMTPSecure='tls';
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
           
-         $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
+         $_SESSION['status'] = "Registration Was Successful Please Sign In";
+
+          $_SESSION['otp'] = $otp;
+          $_SESSION['email'] = $email;
+          $_SESSION['email_verification_link'] = $email_verification_link; 
 
 
           $mail->Username = 'CGBSTech2021@gmail.com';
@@ -124,15 +130,15 @@ $mail->SMTPSecure='tls';
           
           $mail->isHTML(true);
           $mail->Subject = "Email Verification";
-          $mail->Body    = 'Hi'.' '.$_POST["Firstname"].'<br><br>To verify your email'.' '.$_POST['Email'].' '.'we sent you an otp, enter the otp in the field'.' '.$rndno;
+          $mail->Body    = 'Here is the verification link'.' '.$link;
           
           if(!$mail->send()) {
              echo "Message could not be sent.". $mail->ErrorInfo;
           }else{
-            echo " otp sent successfully to ur mail: " ;
-          }  
+             $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
+          }        
            
-              header( "Location: otp.php" ); 
+              // header( "Location: otp.php" ); 
         
  }
 
@@ -471,7 +477,7 @@ $mail->SMTPSecure='tls';
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" redirect="true">
 
                <div class="col-md-13">
-                   <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
+                   <h6 class="" style="color:##ff0017"><?php echo $message; ?></h6>
                    <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
                    <h6 class="text-center" style="color:#ff0000"></h6>
                </div>
