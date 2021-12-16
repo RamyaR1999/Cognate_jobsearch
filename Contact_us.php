@@ -466,7 +466,7 @@ Submit Your CV</p> -->
                           <option value="RPO">RPO</option>
                           <option value="IT Contract Staffing">IT Contract Staffing</option>
                         </select>
-                        <span class="focus-border"></span>
+                        <!-- <span class="focus-border"></span> -->
                         </div>
                       </div>
                     </div>
@@ -506,7 +506,7 @@ Submit Your CV</p> -->
                               <option value="Trivandrum">Trivandrum</option>
                               <option value="Visakapatnam">Visakapatnam</option>
                             </select>
-                            <span class="focus-border"></span>
+                            <!-- <span class="focus-border"></span> -->
                         </div> 
                         </div>
                       </div>

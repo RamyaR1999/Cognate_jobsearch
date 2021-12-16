@@ -528,7 +528,7 @@
                           <option value="RPO">RPO</option>
                           <option value="IT Contract Staffing">IT Contract Staffing</option>
                         </select>
-                        <span class="focus-border"></span>
+                        <!-- <span class="focus-border"></span> -->
                         </div>
                       </div>
                     </div>
@@ -569,7 +569,7 @@
                               <option value="Trivandrum">Trivandrum</option>
                               <option value="Visakapatnam">Visakapatnam</option>
                             </select>
-                        <span class="focus-border"></span>    
+                        <!-- <span class="focus-border"></span> -->
                         </div>
                         </div>
                       </div>
@@ -601,7 +601,7 @@
                           <option value="Hospitality Tourism">Hospitality &amp; Tourism</option>
                           <option value="Consulting VC">Consulting &amp; VC</option>
                         </select>
-                        <span class="focus-border"></span>
+                        <!-- <span class="focus-border"></span> -->
                         </div>
                         
                       </div>

@@ -280,6 +280,7 @@
 }
 
 </style>
+
     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-1"><?php echo $_SESSION['Firstname'] ?></h1>
