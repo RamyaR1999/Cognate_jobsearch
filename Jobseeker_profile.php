@@ -341,10 +341,12 @@
               <p class="u-text u-text-5">
 
               <span style="font-weight: 700;">Function </span><br>
-               <?php echo $Function; ?><br><br>
+               <?php echo $Function; ?><br>
+               <!-- <br> -->
 
               <span style="font-weight: 700;">Industry </span><br>
-               <?php echo $Industry; ?><br><br>
+               <?php echo $Industry; ?><br>
+               <!-- <br> -->
 
               <span style="font-weight: 700;">Education </span><br>
                <?php echo $Education; ?><br><br>
