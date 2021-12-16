@@ -10,8 +10,8 @@
                   
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      job seeker
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Job seeker
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -45,8 +45,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      jobs by industry / function
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Jobs by industry / function
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -147,8 +147,8 @@
                   
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      jobs by location
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Jobs by location
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -285,8 +285,8 @@
                   
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      employers
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Employers
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -320,8 +320,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      our solutions
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue"> 
+                      Our solutions
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -375,8 +375,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      areas of expertise
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Areas of expertise
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -451,8 +451,8 @@
                   
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      about us
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      About us
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -486,8 +486,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      career hub
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Career hub
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -513,8 +513,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      join our team
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Join our team
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -532,8 +532,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      workforce360
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Workforce360
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -567,8 +567,8 @@
       
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after">
-                      women at work
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                      Women at work
                   </span>
                   
                           <!-- <ul class="list-clean footer-link-list-sub" style="display: none;"> -->
@@ -615,7 +615,7 @@
     </div>
        <section class="u-backlink u-clearfix">
       <main>
-        <p style="color: #ffffff;">Copyright &copy; Cognate Global alphabet 2021</p>
+        <p style="color: #111111;">Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
     </section>
 
@@ -638,7 +638,7 @@ element.style {
 }
 .footer-main {
     /*background: #0f1941;*/
-    background: #111111;
+    background: #ffffff;
     color: #f7f5f0;
     font-size: 16px;
     padding: 20px 0;
