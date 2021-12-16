@@ -132,20 +132,92 @@ if(isset($_GET['Job_details'])){
      $Job_specification = $row['Job_specification'];
 
 }
+
 }
 
 ?> 
 
-<!DOCTYPE html>
-<html style="font-size: 16px;">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Profile">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Apply Job</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
+<?php
+
+// if(isset($_POST['submit'])){
+
+//      $id = $_POST['id'];
+//      $Firstname =  $_POST['Firstname'];
+//      $Lastname =  $_POST['Lastname'];
+//      $the_Email  = $_POST['Email'];
+//      $Password = $_POST['Password'];
+//      $Phone =  $_POST['Phone'];
+//      $Image =  $_POST['Image'];
+//      $City =  $_POST['City'];
+//      $Industry =  $_POST['Industry'];
+//      $Function =  $_POST['Function'];
+//      $Education = $_POST['Education'];
+//      $Experience = $_POST['Experience'];
+//      $Salary = $_POST['Salary'];
+//      $CV = $_POST['CV'];
+
+// require 'PHPMailer/PHPMailerAutoload.php';
+// require('phpmailer/class.phpmailer.php');
+
+// $mail = new PHPMailer;
+
+// $mail->isSMTP();
+
+// $mail->Host = 'smtp.gmail.com';
+// $mail->Port=587;
+// $mail->SMTPAuth = true;
+// $mail->SMTPSecure='tls';
+
+// $mail->Username = 'CGBSTech2021@gmail.com';
+// $mail->Password = 'cgbs@2021';
+
+// $mail->setFrom ('CGBSTech2021@gmail.com');
+// $mail->addAddress('07.ramyar@gmail.com','Ramya');
+// #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+
+// $mail->isHTML(true);
+// $mail->Subject = "Job Applied Successfully";
+// $mail->Body    = 'Hi'.' '.'Ramya'.'<br><br>You have successfully applied for a job';
+
+// if(!$mail->send()) {
+//    echo "Message could not be sent.". $mail->ErrorInfo;
+// }else{
+//   echo " otp sent successfully to ur mail: " ;
+// }
+
+// }
+
+?>
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!--tittle-->
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CGBS-Home </title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- image in title-->
+   <link rel="shortcut icon" type="image/x-icon" href="image/cognate.png">
+
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/css/slicknav.css">
+      <link rel="stylesheet" href="assets/css/price_rangs.css">
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+      <link rel="stylesheet" href="assets/css/themify-icons.css">
+      <link rel="stylesheet" href="assets/css/slick.css">
+      <link rel="stylesheet" href="assets/css/nice-select.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+ <link rel="stylesheet" href="nicepage.css" media="screen">
+
 <link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -154,59 +226,127 @@ if(isset($_GET['Job_details'])){
     
  <!-- Profile Icon -->
 
- <link rel="stylesheet" href="assets/css/shared/style.css"> 
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/default-logo.png",
-		"sameAs": []
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Contact us">
-    <meta property="og:type" content="website">
-  </head>
-  <body class="u-body"><header class=" u-clearfix u-header u-section-row-container" id="sec-6baa"><div class="u-section-rows">
-        <div class="u-clearfix u-custom-color-2 u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-a8af">
-          <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-            <a href="Job_seeker.php" class="u-image u-logo u-image-1">
-              <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
-            </a>
-            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-              <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-                <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-2-base" href="#">
-                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</symbol>
-</defs></svg>
-                </a>
-              </div>
-              <div class="u-custom-menu u-nav-container">
-                <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90 active" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="employer.php" style="padding: 6px 0px;">Employers</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="About_us.php" style="padding: 6px 0px;">About us</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
+ <link rel="stylesheet" href="assets/css/shared/style.css">
+ <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
- <?php
+ <!-- Font Awesome Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- Autocomplete -->
+<script type='text/javascript' src='js/autocomplete.js'></script>
+<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+
+   </head>
+
+   <body>
+       <!--loading time image-->
+       <div id="preloader-active">
+       <div class="preloader d-flex align-items-center justify-content-center">
+       <div class="preloader-inner position-relative">
+       <div class="preloader-circle"></div>
+       <div class="preloader-img pere-text">
+       <img src="image/cognate.png" alt="">
+</div>
+</div>
+</div>
+</div>
+
+<header>
+<div class="header-area header-transparrent">
+<div class="headder-top header-sticky">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-3 col-md-2">
+    <!--logoo-->
+<div class="logo">
+<a href="job_seeker.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+</div>  
+</div>  
+<div class="col-lg-9 col-md-9">
+<div class="menu-wrapper">
+     <!-- Main-menu -->
+     <div class="main-menu">
+         <nav class="d-none d-lg-block">
+     <ul id="navigation">
+     <!-- <li><a href="home.php">Home</a></li> -->
+     <li><a href="Job_seeker.php">Job Seeker </a>
+     <ul class="submenu">
+         
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Available_jobs.php">Find A Jobs</a></li>
+    <li><a href="Register-member.php">Submit Your Resume</a></li>
+    <li><a href="career_hub.php">Career Hub</a></li>
+    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+    <li><a href="security_advice.php">Security Advice</a></li>
+     
+</ul>      
+</li>
+<li><a href="employer.php">employers</a>
+
+<ul class="submenu">
+         
+    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="request_callback.php">Request A Call Back</a></li>
+    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+    <li><a href="ourSolution.php">Our Solutions</a></li>
+    <li><a href="Contact.php">Contact</a></li>
+     
+</ul>
+
+</li>
+     <li><a href="About_Us.php">About</a>
+
+<ul class="submenu">
+         
+    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="request_callback.php">Request A Call Back</a></li>
+    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+    <li><a href="ourSolution.php">Our Solutions</a></li>
+    <li><a href="Contact.php">Contact</a></li>
+     
+</ul>
+
+</li>
+     <li><a href="Contact_Us.php">Contact</a>
+
+<ul class="submenu">
+         
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Available_jobs.php">Find A Jobs</a></li>
+    <li><a href="Register-member.php">Submit Your Resume</a></li>
+    <li><a href="career_hub.php">Career Hub</a></li>
+    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+    <li><a href="security_advice.php">Security Advice</a></li>
+     
+</ul>
+
+</li>
+     </ul>
+       </nav>
+      </div>         
+<!--header button-->
+<div class="header-btn d-none f-right d-lg-block">
+                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
+
+
+  <?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
 
+        <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
-<li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
 
-  <?php 
+ <?php 
               
       }else{
               
     ?> 
 
-
-
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link fa fa-sort-down" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+          <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
@@ -227,9 +367,9 @@ if(isset($_GET['Job_details'])){
                     </p>
                   
                 </div>
-                <a class="dropdown-item" href="profile.php">My Profile <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
+                <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
                  
-                <a class="dropdown-item"href="Logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+                <a class="dropdown-item"href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
               
               </div>
           </li>
@@ -240,102 +380,65 @@ if(isset($_GET['Job_details'])){
 
 ?> 
 
-<!-- <li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
 
 
-
-</ul>
+                              </div>
+                          </div>
+                      </div>
+                     <!--mobile button--> 
+                     <div class="col-12">
+                          <div class="mobile_menu d-block d-lg-none"></div>
+                      </div>
+                  </div>
               </div>
-              <div class="u-custom-menu u-nav-container-collapse">
-                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                  <div class="u-inner-container-layout u-sidenav-overflow">
-                    <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Job_seeker.php" style="padding: 6px 0px;">Job Seeker</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="employer.php" style="padding: 6px 0px;">Employers</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="About_us.php" style="padding: 6px 0px;">About us</a></li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact_us.php" style="padding: 6px 0px;">Contact us</a></li>
+         </div>
+     </div>
+      <!-- Header End -->
+  </header>
 
-<?php
+<style>
 
-    if(isset($_SESSION['Email']) === $db_Email){
+  .head-btn1 {
+    margin-right: 5px;
+}
+.btn {
+    background: #fb246a;
+    -moz-user-select: none;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 0;
+    margin-bottom: 0;
+    padding: 27px 44px;
+    border-radius: 0px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+}
 
-  ?> 
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.head-btn2 {
+    background: none;
+    border: 1px solid #fb246a;
+    color: #fb246a;
+}
 
-<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member-Login.php" style="padding: 6px 0px;">Login</a></li>
-
-<?php 
-              
-    }
-              
-  ?> 
-
-<!-- <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html" style="padding: 6px 0px;">Profile</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 6px 0px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html" style="padding: 6px 0px;">Page 2</a>
-</li> -->
-
-
-</ul>
-                  </div>
-                </div>
-                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-              </div>
-            </nav>
-          </div>  
-        </div>
-
-        <div class="u-custom-color-2 u-section-row u-section-row-2" id="sec-56e4">
-          <div class="u-clearfix u-sheet u-valign-middle u-sheet-2">
-            <div class="u-list u-list-1">
-              <div class="u-repeater u-repeater-1">
-                <div class="u-container-style u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-1">
-                    <p class="u-text u-text-default u-text-1">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-1 active" href="Available_jobs.php">find a job</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-2">
-                    <p class="u-text u-text-default u-text-2">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-2" href="Register-Member.php">submit your CV</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-3">
-                    <p class="u-text u-text-default u-text-3">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-3" href="career_hub.php">career hub</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <p class="u-text u-text-default u-text-4">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-4" href="areas_of_expertise.php">areas of expertise</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="u-container-style u-list-item u-repeater-item">
-                  <div class="u-container-layout u-similar-container u-container-layout-5">
-                    <p class="u-text u-text-default u-text-5">
-                      <a class="u-active-none u-border-2 u-border-active-black u-border-hover-black u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-black u-text-hover-black u-btn-5" href="">security advice</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div>
-      </div></header>
+</style>
    <section class="u-clearfix u-section-1" id="sec-8459">
       <div class="u-clearfix u-sheet u-sheet-1"><br>
         <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
         <div class="u-container-layout u-container-layout-8">
-    <form action="" method="POST">
        <div class="u-layout-row">
         <div class="col-sm-6 col-md-6">
         <h6 class="u-text u-text-20 u-align-left" style="padding-left: 3px;">
@@ -383,11 +486,10 @@ if(isset($_GET['Job_details'])){
                   <input type="submit" name="submit" value="Sign in" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-12 u-btn-1"> 
                   <a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a> -->
 
-
           <div class="text">Apply for this job</div><br>
           <p>Fill in the form below to apply for this job.</p><br>
           <br>
-
+<form action="" method="POST"source="custom" name="form" style="padding: 0px;" redirect="true">
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
           <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
           <br>
@@ -541,9 +643,12 @@ $_SESSION['Address'] = $Address;
                 </div>
             </div>
           </div>
-
-              <a href="Job_review.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">Next </a>
-
+        <div class="u-align-center u-form-group u-form-submit">
+        <a href="Job_review.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">Next</a>
+        <!-- <input type="submit" name="submit" value="submit" class="u-form-control"> -->
+       </div>
+     </form>
+<!-- Job_review.php?Job_details=<?php //echo $the_id ?>&<?php //echo $Job_title ?> -->
             </h6>
           </div>
           <div class="col-sm-6 col-md-6">
@@ -562,7 +667,6 @@ $_SESSION['Address'] = $Address;
                 
  </h6>
 </div>
-</form>
 </div>
 </div>
 </div>
