@@ -356,14 +356,14 @@
                <a href="Forgot_password.php" class="u-border-1 u-border-active-palette-2-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a>
 </div>
                 <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Login</a>
+                                <a href="" class="btn head-btn2 " style="align-center">Login</a>
                   <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
 <!--                  <button class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1" name="submit" type="submit" id ="submit">login</button>-->
                 </div>
                 <input type="hidden" value="" name="recaptchaResponse">
               </form>
 
-<a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">register for a free account</a>
+<a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Register for a free account</a>
 <br>
 
             </div>

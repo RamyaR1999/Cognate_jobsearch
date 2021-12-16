@@ -283,7 +283,7 @@
               <input type="text" placeholder="Search Job title" id="demoB" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-active-grey-5 u-border-2 u-border-active-grey-5 u-border-grey-5 u-border-hover-palette-1-base u-btn u-btn-submit u-button-style u-grey-5 u-hover-palette-1-base u-text-active-palette-1-base u-text-hover-white u-text-palette-1-base u-btn-1">Search</a>
+              <a href="" class="btn head-btn2 " style="align-center;padding: 20px;">Search</a>
               <input type="submit" name=submit value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>

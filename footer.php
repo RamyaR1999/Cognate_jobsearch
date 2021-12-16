@@ -10,7 +10,7 @@
                   
           <div class="footer-link-list">
               <div>
-                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue">
+                  <span class="footer-list-header footer-list-header-toggle has-bg-img-after" style="color:darkblue; text-align: center">
                       Job seeker
                   </span>
                   
