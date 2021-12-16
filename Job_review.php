@@ -513,7 +513,7 @@ if(!$receiver_mail->send()) {
                 <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="back_to_search_btn"><img src="" alt=""> Back to search</a>
               </div>
 
- <p class="u-align-right u-text u-text-right u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
+ <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
              
                   
  </h6>

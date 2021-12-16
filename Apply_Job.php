@@ -662,7 +662,7 @@ $_SESSION['Address'] = $Address;
               </div>
 
  
- <p class="u-align-right u-text u-text-right u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
+ <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
 
                 
  </h6>
