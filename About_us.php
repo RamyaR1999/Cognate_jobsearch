@@ -176,16 +176,15 @@ if (isset($_POST['submit'])){
       </div>         
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
-                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
-
 
   <?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-
-                                  <a href="Member-Login.php" class="btn head-btn2">Login</a>
+        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+  
+        <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
  <?php 
@@ -193,7 +192,6 @@ if (isset($_POST['submit'])){
       }else{
               
     ?> 
-
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
           <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>

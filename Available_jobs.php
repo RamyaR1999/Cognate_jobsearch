@@ -141,16 +141,16 @@
        </nav>
       </div>         
 <!--header button-->
-<div class="header-btn d-none f-right d-lg-block">
-                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
 
+<div class="header-btn d-none f-right d-lg-block">
 
   <?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-
+        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+  
         <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 

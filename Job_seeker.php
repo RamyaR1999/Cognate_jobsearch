@@ -174,15 +174,14 @@ if (isset($_POST['submit'])){
       </div>         
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
-                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
-
 
   <?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-
+        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+  
         <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
@@ -367,11 +366,11 @@ if (isset($_POST['submit'])){
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-grey u-lightbox u-section-1" id="sec-de5a">
-      <div style="background-image: url('images/IMG_3075.jpg');">
+    <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+      <!-- <div style="background-image: url('images/IMG_3075.jpg');"> -->
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">find right talent.</h3>
-        <p class="u-align-left u-text u-text-left u-text-white u-text-6">Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
+        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">find right talent.</h3>
+        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
 
 When an employer fails to recognize the right talent, they are implicating a major loss to themselves. Missing out on the perfect candidate with the right desired talent is an irreversible loss. To help the recruiters in identifying the right talent, here are a few theories by experts.</p>
         
@@ -383,7 +382,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
 <li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
 <li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
  </div>
-    </div>
+    <!-- </div> -->
     </section>
     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <div style="background-image: url('images/th (8).jpg');">
@@ -474,7 +473,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
     </section>
 
     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
-      <div style="background-image: url('images/imges.jpg');">
+      <!-- <div style="background-image: url('images/imges.jpg');"> -->
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
         <p class="u-align-left u-text u-text-left u-text-white u-text-2">Drop in and say "hi" at one of our branch locations.</p><br>
@@ -501,7 +500,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
           </form>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
     </section>
     
    <!--   <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
