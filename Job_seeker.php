@@ -279,70 +279,6 @@ if (isset($_POST['submit'])){
 
 
 <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-
-<style>
-.carousel-item {
-height: 100vh;
-min-height: 350px;
-background: no-repeat center center scroll;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-  </style>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-<ol class="carousel-indicators">
-  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-</ol>
-<div class="carousel-inner" role="listbox">
-  <!-- Slide One - Set the background image for this slide in the line below -->
-  <div class="carousel-item active" style="background-image: url('images/jobseeker01.jpg')">
-    <div class="carousel-caption text-monospace d-none d-md-block">
-      <h2 class="display-4 ">WELCOME!</h2>
-      <p class="lead">Find The Best Solutions<br>For Your Business</p>
-    </div>
-  </div>
-  <!-- Slide Two - Set the background image for this slide in the line below -->
-  <div class="carousel-item" style="background-image: url('images/jobseeker123.jpg')">
-    <div class="carousel-caption d-none d-md-block">
-      <h2 class="display-4 ">Make Your Dream</h2>
-      <p class="lead">We Make IT Happen<br>A Better Life, A Better World </p>
-    </div>
-  </div>
-  <!-- Slide Three - Set the background image for this slide in the line below -->
-  <div class="carousel-item" style="background-image: url('images/jobseeker123.jpg')">
-    <div class="carousel-caption d-none d-md-block">
-      <h2 class="display-4 text-dark">Start Your Career</h2>
-      <p class="lead">Success Doesn't Come And Find You<br>
-      You Can Go Out and Get In .</p>
-    </div>
-  </div>
-</div>
-<a class="carousel-control-prev" href="" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-<a class="carousel-control-next" href="" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
-
-
-
-</section>
-
-
-
-
-
-
-
-    <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
        <div style="background-image: url('images/jobseeker2.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
@@ -383,6 +319,75 @@ background-size: cover;
 
 
     </section>
+
+
+
+
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+  <!-- Slide One - Set the background image for this slide in the line below -->
+  <div class="carousel-item active" style="background-image: url('images/jobseekernew1.jpg')">
+    <div class="carousel-caption text-monospace d-none d-md-block">
+      <h2 class="display-4 text-black ">WELCOME!</h2>
+      <p class="lead">Find The Best Solutions<br>For Your Business</p>
+    </div>
+  </div>
+  <!-- Slide Two - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/jobseekernew2.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 text-black">Make Your Dream</h2>
+      <p class="lead">We Make IT Happen<br>A Better Life, A Better World </p>
+    </div>
+  </div>
+  <!-- Slide Three - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/jobseekernew3.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 text-black">Start Your Career</h2>
+      <p class="lead">Success Doesn't Come And Find You<br>
+      You Can Go Out and Get In .</p>
+    </div>
+  </div>
+</div>
+<a class="carousel-control-prev" href="" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+<a class="carousel-control-next" href="" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+    
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <p class="u-text u-text-default u-text-1">Job Categories<span style="font-weight: 700;"></span>
@@ -431,7 +436,7 @@ background-size: cover;
 
 <style>
 .carousel-item {
-height: 100vh;
+height: 80vh;
 min-height: 350px;
 background: no-repeat center center scroll;
 -webkit-background-size: cover;
@@ -439,6 +444,7 @@ background: no-repeat center center scroll;
 -o-background-size: cover;
 background-size: cover;
 }
+
   </style>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
@@ -448,7 +454,7 @@ background-size: cover;
 </ol>
 <div class="carousel-inner" role="listbox">
   <!-- Slide One - Set the background image for this slide in the line below -->
-  <div class="carousel-item active" style="background-image: url('images/findtalent.jpg')">
+  <div class="carousel-item active" style="background-image: url('images/jobseekernew11.jpg') ; ">
     <div class="carousel-caption text-monospace d-none d-md-block">
       <h2 class="display-4 text-capitalize  ">find right talent.</h2>
       <p class="lead text-white">Hiring candidates for a company is a great responsibility.
@@ -461,9 +467,9 @@ background-size: cover;
     </div>
   </div>
   <!-- Slide Two - Set the background image for this slide in the line below -->
-  <div class="carousel-item " style="background-image: url('images/jobseeker7.jpg')">
+  <div class="carousel-item " style="background-image: url('images/jobseekernew12.jpg')">
     <div class="carousel-caption d-none d-md-block">
-      <h2 class="display-4 text-dark">who we are..</h2>
+      <h2 class="display-4 text-black">who we are..</h2>
       <p class="lead">We are one of the largest global HR services firms.
 We combine our passion for people with intelligent technology to
 help organizations and talent convert potential into performance.
@@ -471,10 +477,10 @@ Moving them forward. human forward. </p>
     </div>
   </div>
   <!-- Slide Three - Set the background image for this slide in the line below -->
-  <div class="carousel-item" style="background-image: url('images/jobSeeker02.jpg')">
+  <div class="carousel-item" style="background-image: url('images/jobSeeker7.jpg')">
     <div class="carousel-caption d-none d-md-block">
-      <h2 class="display-4 text-dark" >3. Get your job</h2>
-      <p class="lead text-dark">We are still masters of our fate. We are still captains of our souls.</p>
+      <h2 class="display-4 text-black" > Get your job</h2>
+      <p class="lead text-black">We are still masters of our fate. We are still captains of our souls.</p>
     </div>
   </div>
 </div>
@@ -502,7 +508,7 @@ Moving them forward. human forward. </p>
   
   
     
-
+<br></br>
 
    
     <div class="support-company-area support-padding fix">
@@ -523,6 +529,8 @@ When an employer fails to recognize the right talent, they are implicating a maj
 
 
                                 <a href="Register_Member.php" class="btn post-btn">Post a job</a>
+
+
                             </div>
 
                         </div>
@@ -542,7 +550,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
 
 
 
-
+<br></br>
 
 
 
