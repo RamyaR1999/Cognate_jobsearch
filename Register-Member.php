@@ -34,8 +34,13 @@ $mail->SMTPSecure='tls';
          $Industry=  $_POST['Industry'];
          $Function=  $_POST['Function'];
          $Education =$_POST['Education'];
-         $Experience =$_POST['Experience'];
-         $Salary =$_POST['Salary'];
+         $Experience_years =$_POST['Experience_years'];
+         $Experience_months =$_POST['Experience_months'];
+         $Current_Salary_lakhs =$_POST['Current_Salary_lakhs'];
+         $Current_Salary_thousand =$_POST['Current_Salary_thousand'];
+         $Expected_Salary_lakhs =$_POST['Expected_Salary_lakhs'];
+         $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
+         
          $email_verification_link = $_POST['email_verification_link'];
          // $CV = $_FILES['CV']['Name'];
          // $upload = "uploads/".$CV;
@@ -61,7 +66,7 @@ $mail->SMTPSecure='tls';
             
           // }
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience) && !empty($Salary)){
+      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience_years) && !empty($Experience_months) && !empty($Current_Salary_lakhs) && !empty($Current_Salary_thousand) && !empty($Expected_Salary_lakhs) && !empty($Expected_Salary_thousand)){
         // if(!empty($CV){
           
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
@@ -102,8 +107,8 @@ $mail->SMTPSecure='tls';
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience,Salary,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience','$Salary','$CV','$rndno')";
+        $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -471,9 +476,8 @@ $mail->SMTPSecure='tls';
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" redirect="true">
-
-               <div class="col-md-13">
-                   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
+                <div class="col-md-13">
+                   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6><br>
                    <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
                    <h6 class="text-center" style="color:#ff0000"></h6>
                </div>
@@ -485,7 +489,7 @@ $mail->SMTPSecure='tls';
                         </div>
                           <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
-                      </div>
+                      </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;">Lastname * </span>
                         <div class="col-sm-12">
@@ -494,7 +498,7 @@ $mail->SMTPSecure='tls';
                         </div>
                           <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
-                        </div>
+                        </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;">Email *</span>
                         <div class="col-sm-12">
@@ -503,7 +507,7 @@ $mail->SMTPSecure='tls';
                         </div>
                           <h6 style="color:#ff0000"><?php echo $message_Email; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
-                      </div>
+                      </div>&nbsp;
 
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;">Password * </span>
@@ -513,7 +517,7 @@ $mail->SMTPSecure='tls';
                          </div>
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
                            <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
-                        </div>
+                        </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;"> Confirm_password * </span>
                         <div class="col-sm-12">
@@ -522,7 +526,7 @@ $mail->SMTPSecure='tls';
                         </div>
                           <h6 style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
-                      </div>
+                      </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;">Phone * </span>
                         <div class="col-sm-12">
@@ -532,7 +536,7 @@ $mail->SMTPSecure='tls';
                         <h6 style="color:#a7adb8"><?php echo '10-digit mobile number without prefixes' ?></h6>
                           <h6 style="color:#ff0000"><?php echo $message_phone; ?></h6>
                           <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
-                      </div>
+                      </div>&nbsp;
 
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span style="font-weight: 400;">City * </span>
@@ -560,7 +564,7 @@ $mail->SMTPSecure='tls';
                             <option value="Delhi / NCR">Delhi / NCR</option>
                             <option value="Dindigul">Dindigul</option>
                             <option value="Ernakulam">Ernakulam</option>
-                          </select>
+                          </select>&nbsp;
                           <!-- <span class="focus-border"></span> -->
                         </div>
                           <h6 style="color:#ff0000"><?php echo $empty_city; ?></h6>
@@ -642,7 +646,7 @@ $mail->SMTPSecure='tls';
               <option value="Tyres">Tyres</option>
               <option value="Water Treatment /  Waste Management">Water Treatment /  Waste Management</option>
               <option value="Wellness / Fitness / Sports">Wellness / Fitness / Sports</option> -->
-          </select>
+          </select>&nbsp;
               <!-- <span class="focus-border"></span> -->
             </div>
             <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
@@ -703,7 +707,7 @@ $mail->SMTPSecure='tls';
             <option value="Top Management">Top Management</option>
             <option value="TV / Films / Production">TV / Films / Production</option>
             <option value="Web / Graphic Design / Visualiser">Web / Graphic Design / Visualiser</option> -->
-        </select>
+        </select>&nbsp;
         <!-- <span class="focus-border"></span> -->
       </div>
         <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
@@ -737,85 +741,270 @@ $mail->SMTPSecure='tls';
                           <option value="ITI">ITI</option>
                           <option value="LLB">LLB</option>
                           <option value="LLM">LLM</option>
-                        </select>
+                        </select>&nbsp;
                         <!-- <span class="focus-border"></span> -->
                       </div>
                         <h6 style="color:#ff0000"><?php echo $empty_education; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 400;">Experience * </span><br>
-                     <div class="col-sm-12">
-                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience"placeholder="Enter your Experience"id="Experience">
+                    <div class="u-layout-row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <span style="font-weight: 400;">Experience *</span><br>
+                                <div class="col-sm-12">
+                                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience_years"placeholder="Enter your Experience_years"id="Experience_years">
                           <option value="">years</option>
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-                          <option value="13">13</option>
-                          <option value="14">14</option>
-                          <option value="15">15</option>
-                          <option value="16">16</option>
-                          <option value="17">17</option>
-                          <option value="18">18</option>
-                          <option value="19">19</option>
-                          <option value="20">20</option>
+                          <option value="0 years">0</option>
+                          <option value="1 years">1</option>
+                          <option value="2 years">2</option>
+                          <option value="3 years">3</option>
+                          <option value="4 years">4</option>
+                          <option value="5 years">5</option>
+                          <option value="6 years">6</option>
+                          <option value="7 years">7</option>
+                          <option value="8 years">8</option>
+                          <option value="9 years">9</option>
+                          <option value="10 years">10</option>
+                          <option value="11 years">11</option>
+                          <option value="12 years">12</option>
+                          <option value="13 years">13</option>
+                          <option value="14 years">14</option>
+                          <option value="15 years">15</option>
+                          <option value="16 years">16</option>
+                          <option value="17 years">17</option>
+                          <option value="18 years">18</option>
+                          <option value="19 years">19</option>
+                          <option value="20 years">20</option>
                         </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                    <div class="form-group row">
+                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                          <div class="col-sm-12">
+                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
+                             <option value="">months</option>
+                          <option value="0 months">0</option>
+                          <option value="1 months">1</option>
+                          <option value="2 months">2</option>
+                          <option value="3 months">3</option>
+                          <option value="4 months">4</option>
+                          <option value="5 months">5</option>
+                          <option value="6 months">6</option>
+                          <option value="7 months">7</option>
+                          <option value="8 months">8</option>
+                          <option value="9 months">9</option>
+                          <option value="10 months">10</option>
+                          <option value="11 months">11</option>
+                          <option value="12 months">12</option>
+                          <option value="13 months">13</option>
+                          <option value="14 months">14</option>
+                          <option value="15 months">15</option>
+                          <option value="16 months">16</option>
+                          <option value="17 months">17</option>
+                          <option value="18 months">18</option>
+                          <option value="19 months">19</option>
+                          <option value="20 months">20</option>
+                          <option value="21 months">21</option>
+                          <option value="22 months">22</option>
+                          <option value="23 months">23</option>
+                          <option value="24 months">24</option>
+                          <option value="25 months">25</option>
+                          <option value="26 months">26</option>
+                          <option value="27 months">27</option>
+                          <option value="28 months">28</option>
+                          <option value="29 months">29</option>
+                          <option value="30 months">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+              </div>
                         <!-- <span class="focus-border"></span> -->
-                      </div>
+                     
                         <h6 style="color:#ff0000"><?php echo $empty_experience; ?></h6>
                   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 400;">Salary * </span>
-                  <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Salary"placeholder="Enter your Salary"id="Salary">
+                    <div class="u-layout-row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <span style="font-weight: 400;"> Current Salary *</span>
+                                <div class="col-sm-12">
+                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_lakhs" placeholder="Enter your Current Salary"id="Current_Salary">
                           <option value="">lakhs</option>
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-                          <option value="13">13</option>
-                          <option value="14">14</option>
-                          <option value="15">15</option>
-                          <option value="16">16</option>
-                          <option value="17">17</option>
-                          <option value="18">18</option>
-                          <option value="19">19</option>
-                          <option value="20">20</option>
-                          <option value="21">21</option>
-                          <option value="22">22</option>
-                          <option value="23">23</option>
-                          <option value="24">24</option>
-                          <option value="25">25</option>
-                          <option value="26">26</option>
-                          <option value="27">27</option>
-                          <option value="28">28</option>
-                          <option value="29">29</option>
-                          <option value="30">30</option>  
+                          <option value="0 lakhs">0</option>
+                          <option value="1 lakhs">1</option>
+                          <option value="2 lakhs">2</option>
+                          <option value="3 lakhs">3</option>
+                          <option value="4 lakhs">4</option>
+                          <option value="5 lakhs">5</option>
+                          <option value="6 lakhs">6</option>
+                          <option value="7 lakhs">7</option>
+                          <option value="8 lakhs">8</option>
+                          <option value="9 lakhs">9</option>
+                          <option value="10 lakhs">10</option>
+                          <option value="11 lakhs">11</option>
+                          <option value="12 lakhs">12</option>
+                          <option value="13 lakhs">13</option>
+                          <option value="14 lakhs">14</option>
+                          <option value="15 lakhs">15</option>
+                          <option value="16 lakhs">16</option>
+                          <option value="17 lakhs">17</option>
+                          <option value="18 lakhs">18</option>
+                          <option value="19 lakhs">19</option>
+                          <option value="20 lakhs">20</option>
+                          <option value="21 lakhs">21</option>
+                          <option value="22 lakhs">22</option>
+                          <option value="23 lakhs">23</option>
+                          <option value="24 lakhs">24</option>
+                          <option value="25 lakhs">25</option>
+                          <option value="26 lakhs">26</option>
+                          <option value="27 lakhs">27</option>
+                          <option value="28 lakhs">28</option>
+                          <option value="29 lakhs">29</option>
+                          <option value="30 lakhs">30</option>  
                         </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                    <div class="form-group row">
+                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                          <div class="col-sm-12">
+                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                             <option value="">thousand</option>
+                          <option value="0">0</option>
+                          <option value="1 thousand">1</option>
+                          <option value="2 thousand">2</option>
+                          <option value="3 thousand">3</option>
+                          <option value="4 thousand">4</option>
+                          <option value="5 thousand">5</option>
+                          <option value="6 thousand">6</option>
+                          <option value="7 thousand">7</option>
+                          <option value="8 thousand">8</option>
+                          <option value="9 thousand">9</option>
+                          <option value="10 thousand">10</option>
+                          <option value="11 thousand">11</option>
+                          <option value="12 thousand">12</option>
+                          <option value="13 thousand">13</option>
+                          <option value="14 thousand">14</option>
+                          <option value="15 thousand">15</option>
+                          <option value="16 thousand">16</option>
+                          <option value="17 thousand">17</option>
+                          <option value="18 thousand">18</option>
+                          <option value="19 thousand">19</option>
+                          <option value="20 thousand">20</option>
+                          <option value="21 thousand">21</option>
+                          <option value="22 thousand">22</option>
+                          <option value="23 thousand">23</option>
+                          <option value="24 thousand">24</option>
+                          <option value="25 thousand">25</option>
+                          <option value="26 thousand">26</option>
+                          <option value="27 thousand">27</option>
+                          <option value="28 thousand">28</option>
+                          <option value="29 thousand">29</option>
+                          <option value="30 thousand">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+              </div>
                         <!-- <span class="focus-border"></span> -->
-                      </div>
-                        <h6 style="color:#ff0000"><?php echo $empty_salary; ?></h6>
+                    <h6 style="color:#ff0000"><?php echo $empty_Current_Salary; ?></h6>
                   </div>
+                  <div class="u-form-group u-form-name u-form-group-2">
+                   
+                  <div class="u-layout-row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                             <span style="font-weight: 400;"> Expected Salary *</span>
+                             <div class="col-sm-12">
+                                <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                                    <option value="">lakhs</option>
+                                    <option value="0 lakhs">0</option>
+                                    <option value="1 lakhs">1</option>
+                                    <option value="2 lakhs">2</option>
+                                    <option value="3 lakhs">3</option>
+                                    <option value="4 lakhs">4</option>
+                                    <option value="5 lakhs">5</option>
+                                    <option value="6 lakhs">6</option>
+                                    <option value="7 lakhs">7</option>
+                                    <option value="8 lakhs">8</option>
+                                    <option value="9 lakhs">9</option>
+                                    <option value="10 lakhs">10</option>
+                                    <option value="11 lakhs">11</option>
+                                    <option value="12 lakhs">12</option>
+                                    <option value="13 lakhs">13</option>
+                                    <option value="14 lakhs">14</option>
+                                    <option value="15 lakhs">15</option>
+                                    <option value="16 lakhs">16</option>
+                                    <option value="17 lakhs">17</option>
+                                    <option value="18 lakhs">18</option>
+                                    <option value="19 lakhs">19</option>
+                                    <option value="20 lakhs">20</option>
+                                    <option value="21 lakhs">21</option>
+                                    <option value="22 lakhs">22</option>
+                                    <option value="23 lakhs">23</option>
+                                    <option value="24 lakhs">24</option>
+                                    <option value="25 lakhs">25</option>
+                                    <option value="26 lakhs">26</option>
+                                    <option value="27 lakhs">27</option>
+                                    <option value="28 lakhs">28</option>
+                                    <option value="29 lakhs">29</option>
+                                    <option value="30 lakhs">30</option>  
+                        </select>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group row">
+                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                          <div class="col-sm-12">
+                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                             <option value="">thousand</option>
+                          <option value="0 thousand">0</option>
+                          <option value="1 thousand">1</option>
+                          <option value="2 thousand">2</option>
+                          <option value="3 thousand">3</option>
+                          <option value="4 thousand">4</option>
+                          <option value="5 thousand">5</option>
+                          <option value="6 thousand">6</option>
+                          <option value="7 thousand">7</option>
+                          <option value="8 thousand">8</option>
+                          <option value="9 thousand">9</option>
+                          <option value="10 thousand">10</option>
+                          <option value="11 thousand">11</option>
+                          <option value="12 thousand">12</option>
+                          <option value="13 thousand">13</option>
+                          <option value="14 thousand">14</option>
+                          <option value="15 thousand">15</option>
+                          <option value="16 thousand">16</option>
+                          <option value="17 thousand">17</option>
+                          <option value="18 thousand">18</option>
+                          <option value="19 thousand">19</option>
+                          <option value="20 thousand">20</option>
+                          <option value="21 thousand">21</option>
+                          <option value="22 thousand">22</option>
+                          <option value="23 thousand">23</option>
+                          <option value="24 thousand">24</option>
+                          <option value="25 thousand">25</option>
+                          <option value="26 thousand">26</option>
+                          <option value="27 thousand">27</option>
+                          <option value="28 thousand">28</option>
+                          <option value="29 thousand">29</option>
+                          <option value="30 thousand">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+              </div>
+               <h6 style="color:#ff0000"><?php echo $empty_Expected_Salary; ?></h6>
+          </div>
+                       
+                  
 
               <div class="u-form-group u-form-name u-form-group-2">
                  <span style="font-weight: 400;">CV * </span>
@@ -825,7 +1014,7 @@ $mail->SMTPSecure='tls';
                           <div class="custom-file-upload-toggle-btn btn btn-prim">     
                           </div>
                         </div> -->
-                        <input type="file" name="image" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
+                        <input type="file" name="CV" id="" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
                         <span class="focus-border"></span>
                      </div>
                     <span data-bit-output-upload-files="cvFileUpload"></span>
@@ -850,6 +1039,7 @@ $mail->SMTPSecure='tls';
             <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div><br>
+
            <!--  <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ecf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0ecf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>

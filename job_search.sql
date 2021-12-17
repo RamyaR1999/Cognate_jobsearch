@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Dec 14, 2021 at 09:18 AM
+-- Generation Time: Dec 17, 2021 at 09:44 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -105,8 +105,12 @@ CREATE TABLE `users` (
   `Industry` varchar(300) NOT NULL,
   `Function` varchar(200) NOT NULL,
   `Education` varchar(40) NOT NULL,
-  `Experience` varchar(40) NOT NULL,
-  `Salary` varchar(40) NOT NULL,
+  `Experience_years` varchar(40) NOT NULL,
+  `Experience_months` varchar(40) NOT NULL,
+  `Current_Salary_lakhs` varchar(40) NOT NULL,
+  `Current_Salary_thousand` varchar(40) NOT NULL,
+  `Expected_Salary_lakhs` varchar(40) NOT NULL,
+  `Expected_Salary_thousand` varchar(40) NOT NULL,
   `CV` text NOT NULL,
   `otp` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -115,9 +119,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience`, `Salary`, `CV`, `otp`) VALUES
-(36, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Chennai', 'IT-Software / Software Services', 'IT Software - Application Programming / Maintenance', 'BCA', '1', '1', 'uploads/', 500082),
-(43, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '8798546798', 'profile.png', 'Bhubaneswar', 'Airlines', 'Agent', 'B.Tech/B.E.', '3', '1', '', 147804);
+INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
+(36, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', '', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Chennai', 'IT-Software / Software Services', 'IT Software - Application Programming / Maintenance', 'BCA', '1', '', '1', '', '', '', 'uploads/', 500082),
+(49, 'Reshma', 'priya', 'reshmasamy2231@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Agriculture / Diary', 'Analytics & Business Intelligence', 'B.Com', '2', '', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
+(50, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Agriculture / Diary', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', '', 638697);
 
 --
 -- Indexes for dumped tables
@@ -161,7 +166,7 @@ ALTER TABLE `request_callback`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
