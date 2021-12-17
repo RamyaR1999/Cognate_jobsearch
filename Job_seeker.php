@@ -279,7 +279,7 @@ if (isset($_POST['submit'])){
 
 
 <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-       <div style="background-image: url('images/jobseeker2.jpg');">
+       <div style="background-image: url('images/jobs1.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -294,7 +294,7 @@ if (isset($_POST['submit'])){
               <input type="text" placeholder="Pincode" id="email-ef64" name="pincode" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
             </div>
             <div class="u-form-group u-form-submit">
-              <a href="Available_jobs.php" class="btn head-btn2 " style="padding: 12px"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
+              <a href="Available_jobs.php" class="btn head-btn1 " style="padding: 12px"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
 <!-- </g> -->
 </g></svg><img></span>&nbsp;<br>
               </a>
