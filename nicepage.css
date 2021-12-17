@@ -19485,7 +19485,7 @@ a.u-button-style.u-border-1 {
 .u-separator-2:after,
 .u-text.u-border-2,
 a.u-button-style.u-border-2 {
-  border-width: 2px;
+  /*border-width: 2px;*/
 }
 .u-shape-svg.u-border-2 {
   stroke-width: 2px;
