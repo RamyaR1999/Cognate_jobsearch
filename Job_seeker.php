@@ -277,8 +277,73 @@ if (isset($_POST['submit'])){
 }
 </style>
 
+
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+  <!-- Slide One - Set the background image for this slide in the line below -->
+  <div class="carousel-item active" style="background-image: url('images/jobseeker01.jpg')">
+    <div class="carousel-caption text-monospace d-none d-md-block">
+      <h2 class="display-4 ">WELCOME!</h2>
+      <p class="lead">Find The Best Solutions<br>For Your Business</p>
+    </div>
+  </div>
+  <!-- Slide Two - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/jobseeker123.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 ">Make Your Dream</h2>
+      <p class="lead">We Make IT Happen<br>A Better Life, A Better World </p>
+    </div>
+  </div>
+  <!-- Slide Three - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/jobseeker123.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 text-dark">Start Your Career</h2>
+      <p class="lead">Success Doesn't Come And Find You<br>
+      You Can Go Out and Get In .</p>
+    </div>
+  </div>
+</div>
+<a class="carousel-control-prev" href="" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+<a class="carousel-control-next" href="" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-       <div style="background-image: url('images/blog.teamworkdotcom.jpg');">
+       <div style="background-image: url('images/jobseeker2.jpg');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -306,6 +371,16 @@ if (isset($_POST['submit'])){
         </div>
       </div>
     </div>
+<div>
+
+
+
+</div>
+
+    
+
+
+
 
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
@@ -345,112 +420,149 @@ if (isset($_POST['submit'])){
           </div>
         </div>
       </div>
+
+
+
+
     </section>
+  
+  
     <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-      <!-- <div style="background-image: url('images/IMG_3075.jpg');"> -->
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1">find right talent.</h3>
-        <p class="u-align-left u-text u-text-left u-text-black u-text-6">Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
+
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+  <!-- Slide One - Set the background image for this slide in the line below -->
+  <div class="carousel-item active" style="background-image: url('images/findtalent.jpg')">
+    <div class="carousel-caption text-monospace d-none d-md-block">
+      <h2 class="display-4 text-capitalize  ">find right talent.</h2>
+      <p class="lead text-white">Hiring candidates for a company is a great responsibility.
+         The future of the company depends entirely on its employees. 
+         This is why the greatest challenge a recruiter faces is how to identify the right talent. 
+         It is vital to select the perfect candidate for the required position for various reasons.
+          When an employer fails to recognize the right talent, they are implicating a major loss to themselves. 
+          Missing out on the perfect candidate with the right desired talent is an irreversible loss.
+         To help the recruiters in identifying the right talent, here are a few theories by experts.</p>
+    </div>
+  </div>
+  <!-- Slide Two - Set the background image for this slide in the line below -->
+  <div class="carousel-item " style="background-image: url('images/jobseeker7.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 text-dark">who we are..</h2>
+      <p class="lead">We are one of the largest global HR services firms.
+We combine our passion for people with intelligent technology to
+help organizations and talent convert potential into performance.
+Moving them forward. human forward. </p>
+    </div>
+  </div>
+  <!-- Slide Three - Set the background image for this slide in the line below -->
+  <div class="carousel-item" style="background-image: url('images/jobSeeker02.jpg')">
+    <div class="carousel-caption d-none d-md-block">
+      <h2 class="display-4 text-dark" >3. Get your job</h2>
+      <p class="lead text-dark">We are still masters of our fate. We are still captains of our souls.</p>
+    </div>
+  </div>
+</div>
+<a class="carousel-control-prev" href="" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+<a class="carousel-control-next" href="" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+  
+  
+  
+    
+
+
+   
+    <div class="support-company-area support-padding fix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2">
+                                <span>what we doing..</span>
+                                <h2 style="color:Crimson;font-size:40px;">Cognate Global Business Solution</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">We are one of the largest global HR services firms.<br> We combine our passion for people with intelligent technology to<br> help organizations and talent convert potential into performance.<br> Moving them forward. human forward.</p>
+                                <p>Hiring candidates for a company is a great responsibility. The future of the company depends entirely on its employees. This is why the greatest challenge a recruiter faces is how to identify the right talent. It is vital to select the perfect candidate for the required position for various reasons.
 
 When an employer fails to recognize the right talent, they are implicating a major loss to themselves. Missing out on the perfect candidate with the right desired talent is an irreversible loss. To help the recruiters in identifying the right talent, here are a few theories by experts.</p>
-        
-        
-       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
-     
-   <!-- <ul class="pager">
-
-<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
-<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
- </div>
-    <!-- </div> -->
-    </section>
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
-      <div style="background-image: url('images/th (8).jpg');">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text u-text-right u-text-black u-text-1">who we are..</h3>
-        <p class="u-align-center u-text u-text-center u-text-black u-text-6">We are one of the largest global HR services firms.<br> We combine our passion for people with intelligent technology to<br> help organizations and talent convert potential into performance.<br> Moving them forward. human forward.</p>
-        <!-- <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a> -->
-        
-       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
-     
-   <!-- <ul class="pager">
-
-<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
-<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
- </div>
-    </div>
-    </section>
-     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
-      <!--  <div style="background-image: url('images/th (7).jpg');"> -->
-      <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
-       <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['firstname'] ?></h1>
-        <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
-        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-col">
-
-              <div class="u-layout-row">
-              
-                
-              
-&nbsp;&nbsp;&nbsp;
-
-           <!--  <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-size-20 u-layout-cell-2"> -->
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <h3 class=" u-align-right u-text u-text-default u-text-3">celebrating 3 years!</h3>
-                  <p class="u-align-center u-text u-text-center u-text-3">Cognate Global Business Solutions Private<br> Limited is a Private incorporated<br>started on 2017.</p>
-                  <p class="u-align-center u-text u-text-right u-text-3">Thank you all for your trust in us.</p>
-                  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color:black; border-radius: 2px; color: black;" href="">learn more</a>
-                </div>
-             <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-video u-video-1">
-
-                  <div class="embed-responsive embed-responsive-1">
-
-                   
-                   <?php 
-
-                       $youtube2 = preg_replace("/https:\/\/\www.youtube.com\/watch\?v=/" , "", $youtube);
-                    
-                    ?>
-
-<iframe width="120" height="745" src="https://www.youtube.com/embed/<?php echo $youtube2; ?>?autoplay=1&mute=0"></iframe>
 
 
+                                <a href="Register_Member.php" class="btn post-btn">Post a job</a>
+                            </div>
 
-                  </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="support-location-img">
+                            <img src="assets/img/service/support-img.jpg" alt="">
+                            <div class="support-img-cap text-center">
+                                <p>Since</p>
+                                <span>2017</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-              
+        </div>
 
-                </div>
-              </div>
-            </div>
-          </div>
 
-       <!-- </div >
-      </div> -->
-    </form>
- <!--  </div> -->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </section>
-    <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
+
+
+
+
+
+
+   <!-- <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
       <div style="background-image: url('images/workforce-v2.png');">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">Join Cognate..</h3>
         <p class="u-align-left u-text u-text-left u-text-white u-text-6">Here's a secret – we love working here!<br> Now that you know, find out for yourself.</p>
        <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
-        
+-->
        <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
      
-   <!-- <ul class="pager">
+   <!-- <ul class="pager">-->
 
-<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
+<!--<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
 <li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
- </div>
+ <!--</div>
     
-    </section>
+    </section>-->
 
     <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
       <!-- <div style="background-image: url('images/imges.jpg');"> -->
@@ -482,7 +594,8 @@ When an employer fails to recognize the right talent, they are implicating a maj
       </div>
     <!-- </div> -->
     </section>
-    
+
+
    <!--   <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
