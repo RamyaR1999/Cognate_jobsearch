@@ -381,7 +381,7 @@ Submit Your CV</p>
                         </div>
                       </div>
                     </div>
-                   
+                  &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="" >Lastname * </span> 
@@ -393,6 +393,7 @@ Submit Your CV</p>
                       </div>
                     </div>
                   </div>
+                  &nbsp;
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -404,7 +405,7 @@ Submit Your CV</p>
                         </div>
                       </div>
                     </div>
-                   
+                   &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Phone no * </span> 
@@ -417,6 +418,7 @@ Submit Your CV</p>
                       </div>
                     
                   </div>
+                  &nbsp;
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -428,7 +430,7 @@ Submit Your CV</p>
                           </div>
                       </div>
                     </div>
-                    
+                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Company * </span>
@@ -440,6 +442,7 @@ Submit Your CV</p>
                       </div>
                     </div>
                   </div>
+                  &nbsp;
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -456,6 +459,7 @@ Submit Your CV</p>
                         </div>
                       </div>
                     </div>
+                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                          <span style="font-weight: 400;" class="" >Branch * </span>
@@ -497,7 +501,7 @@ Submit Your CV</p>
                         </div>
                       </div>
                     </div>
-                <br>              
+                &nbsp;              
     
               <div class="u-align-center u-form-group u-form-submit"style="padding: 10px;">
               <a href="" class="btn head-btn2 " style="align-center">Submit</a>

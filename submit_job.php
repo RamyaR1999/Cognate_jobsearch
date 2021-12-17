@@ -392,7 +392,7 @@
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
 
 <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class="far fa-clone pr-1"></i>submit a job</h3>
+          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>submit a job</h3>
           </div>
 
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -414,7 +414,7 @@
                         </div>
                       </div>
                     </div>
-                   
+                   &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="" >Lastname * </span> 
@@ -426,6 +426,7 @@
                       </div>
                     </div>
                   </div>
+                  &nbsp;
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -437,7 +438,7 @@
                         </div>
                       </div>
                     </div>
-                   
+                   &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Phone * </span> 
@@ -448,7 +449,7 @@
                         </div>
                         </div>
                       </div>
-                    
+                    &nbsp;
                   </div>
                   <div class="u-layout-row">
                     <div class="col-md-12">
@@ -462,7 +463,7 @@
                         
                       </div>
                     </div>
-                    
+                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                         <span style="font-weight: 400;" class="">Company name * </span>
@@ -475,6 +476,7 @@
                       </div>
                     </div>
                   </div>
+                  &nbsp;
                    <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -485,6 +487,7 @@
                         </div>               
                       </div>
                     </div>
+                    &nbsp;
                 <div class="col-md-12">
                       <div class="input-group">
                        <span style="font-weight: 400;" class="" >Job specification * </span>
@@ -496,7 +499,7 @@
                       </div>
                     </div>
                   </div>
-                  
+                  &nbsp;
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -513,7 +516,7 @@
                         </div>
                       </div>
                     </div>
-                    
+                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
                          <span style="font-weight: 400;" class="" >Branch * </span>
@@ -556,7 +559,7 @@
                       </div>
                     </div>
                    
-                 
+                 &nbsp;
                    <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
@@ -589,7 +592,7 @@
                     </div>
                   </div>
            
-                <br>              
+                &nbsp;              
     
               <div class="u-align-center u-form-group u-form-submit" style="padding: 10px">
               <a href="" class="btn head-btn2 " style="align-center">Submit</a>
