@@ -65,7 +65,7 @@ if (isset($_POST['submit'])){
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Page-1.css" media="screen">
+ <link rel="stylesheet" href="Page-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -171,12 +171,14 @@ if (isset($_POST['submit'])){
               
     ?> 
 
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+<div class="main-menu">
+  <nav class="d-none d-lg-block">   
+    <ul id="navigation">
+        <li>
           <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
               <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+          <ul class="submenu">
                 <div class="dropdown-header text-center">
-
   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
@@ -190,15 +192,15 @@ if (isset($_POST['submit'])){
                       
                       ?>
                       
-                    </p>
-                  
+                    </p>     
                 </div>
-                <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
-                 
-                <a class="dropdown-item"href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-              
-              </div>
+            <li><a href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a></li>
+            <li><a href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a></li>
+          </ul>
           </li>
+    </ul>  
+  </nav>
+</div>
 
 <?php 
               
