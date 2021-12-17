@@ -227,29 +227,8 @@
 </li>
      <li><a href="About_Us.php">About</a>
 
-<ul class="submenu">
-         
-    <li><a href="submit_job.php">Submit A job</a></li>
-    <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li>
-    <li><a href="Contact.php">Contact</a></li>
-     
-</ul>
-
 </li>
      <li><a href="Contact_Us.php">Contact</a>
-
-<ul class="submenu">
-         
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
-    <li><a href="Available_jobs.php">Find A Jobs</a></li>
-    <li><a href="Register-member.php">Submit Your Resume</a></li>
-    <li><a href="career_hub.php">Career Hub</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="security_advice.php">Security Advice</a></li>
-     
-</ul>
 
 </li>
      </ul>
