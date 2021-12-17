@@ -281,7 +281,7 @@
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="hr.php" target="_blank">Hr recruitment</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="human_resource.php" target="_blank">Hr recruitment</a>
                 </p>
               </div>
             </div>
@@ -296,7 +296,6 @@
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
                   <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="product_management_and_information_technology.php" target="_blank">Product management & IT</a>
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="hr.php" target="_blank">Hr recruitment</a>
                 </p>
               </div>
             </div>
@@ -317,7 +316,7 @@
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="ts.php" target="_blank">Temporary staffing</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="temporary_staffing.php" target="_blank">Temporary staffing</a>
                 </p>
               </div>
             </div>

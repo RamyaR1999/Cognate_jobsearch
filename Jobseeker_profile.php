@@ -227,19 +227,19 @@
 
 
 
-                              </div>
-                          </div>
-                      </div>
-                     <!--mobile button--> 
-                     <div class="col-12">
-                          <div class="mobile_menu d-block d-lg-none"></div>
-                      </div>
-                  </div>
-              </div>
-         </div>
-     </div>
-      <!-- Header End -->
-  </header>
+          </div>
+      </div>
+  </div>
+ <!--mobile button--> 
+ <div class="col-12">
+      <div class="mobile_menu d-block d-lg-none"></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header End -->
+</header>
 
 <style>
 
@@ -281,9 +281,32 @@
 
 </style>
 
+<style>
+
+/*.u-sheet:not(.u-image):not(.u-video) {
+    pointer-events: none;
+}
+
+@media (max-width: 1199px)
+.u-section-1 .u-sheet-1 {
+    min-height: 483px;
+}*/
+/*.u-section-1 .u-sheet-1 {
+    min-height: 449px;
+    max-width: 920px;
+}*/
+/*@media (min-width: 968px) and (max-width: 1091px)
+.u-sheet {
+    width: 920px;
+}*/
+
+</style>
+
     <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-section-1" id="carousel_261b">
-      <!-- <div class="u-clearfix u-sheet u-sheet-1"> -->
-        <h3 class="u-text u-text-1">Job Seekers&nbsp;</h3><br>
+      <!-- <div class="u-clearfix u-sheet u-sheet-1" style="max-width: auto;"> -->
+        <div class="" style="padding-left: 28px;">
+        <div class="card">
+        <h3 class="u-align-center u-text u-text-1">Job Seekers&nbsp;</h3><br>
 
 <div class="u-layout-row">
       
@@ -302,13 +325,14 @@
             $Phone=$row['Phone'];
             $City=$row['City'];
             $Education=$row['Education'];
+            // $Industry=substr($row['Industry'],0,37);
+            // $Function=substr($row['Function'],0,37);
             $Industry=$row['Industry'];
-            $Experience=$row['Experience'];
             $Function=$row['Function'];
+            $Experience=$row['Experience'];
 
   ?>  
-<!-- &nbsp; &nbsp; &nbsp; &nbsp;
- --><div class="" style="padding-left: 28px;">
+
 <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8"> 
     <div class="u-container-layout u-container-layout-8">
        <div class="u-layout-row">
@@ -319,29 +343,28 @@
 
               <p class="u-text u-text-5">
 
-              <span style="font-weight: 700;">Function </span><br>
+              <span style="font-weight: 700;">Education </span><br>
+               <?php echo $Education; ?><br>
+
+              <span style="font-weight: 700;">Email </span><br>
+               <?php echo $Email; ?><br>
+
+              <span style="font-weight: 700;">Phone no </span><br>
+               <?php echo $Phone; ?><br>  
+
+              <!-- <span style="font-weight: 700;">Function </span><br>
                <?php echo $Function; ?><br>
-               <!-- <br> -->
 
               <span style="font-weight: 700;">Industry </span><br>
                <?php echo $Industry; ?><br>
-               <!-- <br> -->
 
-              <span style="font-weight: 700;">Education </span><br>
-               <?php echo $Education; ?><br><br>
-
-              <!-- <span style="font-weight: 700;">Experience </span><br>
-               <?php echo $Experience; ?><br><br>
-
-              <span style="font-weight: 700;">Email </span><br>
-               <?php echo $Email; ?><br><br>
-
-              <span style="font-weight: 700;">Phone no </span><br>
-               <?php echo $Phone; ?><br><br>
+              <span style="font-weight: 700;">Experience </span><br>
+               <?php echo $Experience; ?><br>
 
               <span style="font-weight: 700;">City </span><br>
-               <?php echo $City; ?><br><br> -->
-
+               <?php echo $City; ?><br> -->
+              
+               <br>
              </p>
             </h6>
         <h6 class="u-align-right" style="padding-left: 30px;">
@@ -361,7 +384,7 @@
      </div>
     </div>
   </div>
-</div>
+&nbsp; &nbsp;
 
     <?php } ?> 
 
@@ -376,7 +399,8 @@
              ?>
 
       </div>
-        <!-- </div> -->
+        </div>
+    </div>
     </section>
     <br><br>
 

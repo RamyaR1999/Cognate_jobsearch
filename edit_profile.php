@@ -137,7 +137,7 @@ if(isset($_SESSION['id'])){
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Home </title>
+    <title>CGBS-Edit Profile</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -618,7 +618,6 @@ input {
   /*background-color: #f1f1f1;*/
   padding: 10px;
   font-size: 16px;
-  cursor: pointer;
 }
 
 input[type=file] {
