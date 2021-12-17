@@ -19485,7 +19485,7 @@ a.u-button-style.u-border-1 {
 .u-separator-2:after,
 .u-text.u-border-2,
 a.u-button-style.u-border-2 {
-  border-width: 2px;
+  /*border-width: 2px;*/
 }
 .u-shape-svg.u-border-2 {
   stroke-width: 2px;
@@ -31519,7 +31519,7 @@ a.u-button-style.u-button-style.active > .u-text-active-palette-1-base[class*="u
 :not(.level-2) > .u-nav > .u-nav-item > a.u-nav-link.u-nav-link.u-text-active-palette-1-base.active,
 .u-popupmenu-items.u-text-hover-palette-1-base .u-nav-link:hover,
 .u-popupmenu-items.u-popupmenu-items.u-text-active-palette-1-base .u-nav-link.active {
-  color: #478ac9 !important;
+  color: #fb246a !important;
 }
 .u-text-palette-1-base svg,
 .u-text-hover-palette-1-base:hover svg,

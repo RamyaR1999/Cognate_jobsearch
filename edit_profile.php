@@ -198,6 +198,7 @@ if(isset($_SESSION['id'])){
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-3 col-md-2">
+
     <!--logoo-->
 <div class="logo">
 <a href="job_seeker.php"><img src="image/cognate.png" alt="" width="150px"> </a>
@@ -205,13 +206,14 @@ if(isset($_SESSION['id'])){
 </div>  
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
+    
      <!-- Main-menu -->
-     <div class="main-menu">
-         <nav class="d-none d-lg-block">
-     <ul id="navigation">
-     <!-- <li><a href="home.php">Home</a></li> -->
-     <li><a href="Job_seeker.php">Job Seeker </a>
-     <ul class="submenu">
+     <div class="main-menu u-custom-menu u-nav-container">
+  <nav class="d-none d-lg-block">
+  <ul class="u-nav u-unstyled u-nav-1" id="navigation">
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
+
+  <ul class="submenu">
          
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
@@ -220,9 +222,9 @@ if(isset($_SESSION['id'])){
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li>
      
-</ul>      
+  </ul>      
 </li>
-<li><a href="employer.php">employers</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="employer.php">employers</a>
 
 <ul class="submenu">
          
@@ -235,31 +237,11 @@ if(isset($_SESSION['id'])){
 </ul>
 
 </li>
-     <li><a href="About_Us.php">About</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_Us.php">About</a>
 
-<ul class="submenu">
-         
-    <li><a href="submit_job.php">Submit A job</a></li>
-    <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li>
-    <li><a href="Contact.php">Contact</a></li>
-     
-</ul>
 
 </li>
-     <li><a href="Contact_Us.php">Contact</a>
-
-<ul class="submenu">
-         
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
-    <li><a href="Available_jobs.php">Find A Jobs</a></li>
-    <li><a href="Register-member.php">Submit Your Resume</a></li>
-    <li><a href="career_hub.php">Career Hub</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="security_advice.php">Security Advice</a></li>
-     
-</ul>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_Us.php">Contact</a>
 
 </li>
      </ul>
