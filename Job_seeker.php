@@ -307,11 +307,6 @@ if (isset($_POST['submit'])){
         </div>
       </div>
     </div>
-<div>
-
-
-
-</div>
 
     
 
@@ -328,7 +323,7 @@ if (isset($_POST['submit'])){
 <style>
 .carousel-item {
 height: 100vh;
-min-height: 350px;
+min-height: 450px;
 background: no-repeat center center scroll;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -336,6 +331,8 @@ background: no-repeat center center scroll;
 background-size: cover;
 }
   </style>
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -344,10 +341,10 @@ background-size: cover;
 </ol>
 <div class="carousel-inner" role="listbox">
   <!-- Slide One - Set the background image for this slide in the line below -->
-  <div class="carousel-item active" style="background-image: url('images/jobseekernew1.jpg')">
+  <div class="carousel-item active" style="background-image: url('images/jobseekernew1.jpg') " >
     <div class="carousel-caption text-monospace d-none d-md-block">
-      <h2 class="display-4 text-black ">WELCOME!</h2>
-      <p class="lead">Find The Best Solutions<br>For Your Business</p>
+      <h2 class="display-4  ">WELCOME!</h2>
+      <p class="lead text-white">Find The Best Solutions<br>For Your Business</p>
     </div>
   </div>
   <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -436,7 +433,7 @@ background-size: cover;
 
 <style>
 .carousel-item {
-height: 80vh;
+height: 100vh;
 min-height: 350px;
 background: no-repeat center center scroll;
 -webkit-background-size: cover;
@@ -467,20 +464,20 @@ background-size: cover;
     </div>
   </div>
   <!-- Slide Two - Set the background image for this slide in the line below -->
-  <div class="carousel-item " style="background-image: url('images/jobseekernew12.jpg')">
+  <div class="carousel-item " style="background-image: url('images/jobseekerA.jpg')">
     <div class="carousel-caption d-none d-md-block">
-      <h2 class="display-4 text-black">who we are..</h2>
-      <p class="lead">We are one of the largest global HR services firms.
+      <h2 class="display-4 ">who we are..</h2>
+      <p class="lead text-white">We are one of the largest global HR services firms.
 We combine our passion for people with intelligent technology to
 help organizations and talent convert potential into performance.
 Moving them forward. human forward. </p>
     </div>
   </div>
   <!-- Slide Three - Set the background image for this slide in the line below -->
-  <div class="carousel-item" style="background-image: url('images/jobSeeker7.jpg')">
+  <div class="carousel-item" style="background-image: url('images/jobSeeker01.jpg')">
     <div class="carousel-caption d-none d-md-block">
       <h2 class="display-4 text-black" > Get your job</h2>
-      <p class="lead text-black">We are still masters of our fate. We are still captains of our souls.</p>
+      <p class="lead">We are still masters of our fate. We are still captains of our souls.</p>
     </div>
   </div>
 </div>
