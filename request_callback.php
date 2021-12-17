@@ -497,7 +497,7 @@ Submit Your CV</p>
                     </div>
                 <br>              
     
-              <div class="u-align-center u-form-group u-form-submit">
+              <div class="u-align-center u-form-group u-form-submit"style="padding: 10px;">
               <a href="" class="btn head-btn2 " style="align-center">Submit</a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
