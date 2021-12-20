@@ -5,6 +5,28 @@
 
 <?php
 
+if(isset($_GET['Job_details'])){
+
+  $the_id = $_GET['Job_details'];
+
+  $query="SELECT * FROM Jobs WHERE id='$the_id'";
+  $Jobs_list=mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($Jobs_list)){
+
+     $the_id = $row['id'];
+     $Job_title = $row['Job_title'];
+     $Job_Email = $row['Email'];
+     $Job_specification = $row['Job_specification'];
+
+}
+
+}
+
+?> 
+
+<?php
+
 if(isset($_SESSION['id'])){
 
      $db_id =  $_SESSION['id'];  
@@ -43,11 +65,11 @@ if(isset($_SESSION['id'])){
            $Industry=  $_POST['Industry'];
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
-           $Salary =$_POST['Salary'];
+           $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
            $Image = $_FILES['image']['name'];
            $user_image_tempname = $_FILES['image']['tmp_name'];
-           $CV = $_FILES['CV']['name'];
-           $upload = $_FILES['CV']['tmp_name'];
+           $CV = $_FILES['image']['name'];
+           $upload = $_FILES['image']['tmp_name'];
 
 
             $Password = mysqli_real_escape_string($connection,$_POST['Password']);
@@ -55,7 +77,7 @@ if(isset($_SESSION['id'])){
             $Password = md5($Password);      
             // $confirm_password = md5($confirm_password); 
 
-             move_uploaded_file($user_image_tempname,"images/$Image");
+             move_uploaded_file($upload,"images/$CV");
         
            if(empty($Image)){
             
@@ -65,6 +87,7 @@ if(isset($_SESSION['id'])){
             while($row = mysqli_fetch_array($select_image)){
                 
             $Image = $row['Image'];
+            $CV = $row['CV'];
               
                }
             
@@ -82,21 +105,35 @@ if(isset($_SESSION['id'])){
 
         if(strlen($Password) >= 8) { 
               
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}'  WHERE id= '{$db_id}' ";  
+    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Expected_Salary_thousand='{$Expected_Salary_thousand}', CV='{$CV}',Function='{$Function}',Education='{$Education}'  WHERE id= '{$db_id}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
          if(!$update_profile_query) {
             
             die("Query Failed" . mysqli_error($connection));
-        }  
+        }
 
-           if(isset($_SESSION['Email']) == $db_Email){       
+
+        $_SESSION['Firstname'] = $Firstname;
+        $_SESSION['Lastname'] = $Lastname;
+        $_SESSION['Image'] = $Image;
+        $_SESSION['Email'] = $Email;
+        $_SESSION['Phone'] = $Phone;
+        $_SESSION['City'] = $City;
+        $_SESSION['Industry'] = $Industry;
+        $_SESSION['Function'] = $Function;
+        $_SESSION['Education'] = $Education;
+        $_SESSION['Expected_Salary_thousand'] = $Expected_Salary_thousand;
+        $_SESSION['CV'] = $CV;
+        
+
+           if(isset($_SESSION['Email']) == $Email){       
                    
            $login = "please Signin";
 }else{
 
-    header("Location:Job_review.php"); 
+    header("Location:Job_review.php?Job_details=$the_id & $Job_title"); 
 }
          }else{
               $message_strnpassworad = "password contain atleast 8 characters";
@@ -118,29 +155,6 @@ if(isset($_SESSION['id'])){
        }
 
   ?>
-
-<?php
-
-if(isset($_GET['Job_details'])){
-
-  $the_id = $_GET['Job_details'];
-
-  $query="SELECT * FROM Jobs WHERE id='$the_id'";
-  $Jobs_list=mysqli_query($connection,$query);
-
-  while($row=mysqli_fetch_array($Jobs_list)){
-
-     $the_id = $row['id'];
-     $Job_title = $row['Job_title'];
-     $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
-
-}
-
-}
-
-?> 
-
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -460,12 +474,10 @@ if(isset($_GET['Job_details'])){
           <br>
 
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Resume:</span>
-          <div class="form-element">
+
+          <input type="file" name="image">
+          <!-- <div class="form-element">
             <div class="custom-file-upload">
-              <!-- <div class="custom-file-upload-toggle">
-              <div class="custom-file-upload-toggle-btn btn btn-prim">
-              </div>
-              </div> -->
               <input type="file" name="image" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" /><?php echo $CV; ?>
               <span class="focus-border"></span>
             </div>
@@ -476,10 +488,10 @@ if(isset($_GET['Job_details'])){
                   <span class="cms-file-upload-validator-error-message">CV is required</span>
                 </div>
             </div>
-          </div>
+          </div> -->
         <div class="u-align-center u-form-group u-form-submit">
         <!-- <a href="Job_review.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">Next</a> -->
-        <input type="submit" name="Next" value="submit" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">
+        <input type="submit" name="Next" value="Next" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">
        </div>
      </form>
 <!-- Job_review.php?Job_details=<?php //echo $the_id ?>&<?php //echo $Job_title ?> -->

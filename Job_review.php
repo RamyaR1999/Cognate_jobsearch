@@ -5,11 +5,33 @@
 
 <?php
 
-if(isset($_SESSION['id'])){
+if(isset($_GET['Job_details'])){
 
-     $db_id =  $_SESSION['id'];       
+  $the_id = $_GET['Job_details'];
+
+  $query="SELECT * FROM Jobs WHERE id='$the_id'";
+  $Jobs_list=mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($Jobs_list)){
+
+     $the_id = $row['id'];
+     $Job_title = $row['Job_title'];
+     $Job_Email = $row['Email'];
+     $Job_specification = $row['Job_specification'];
+
+}
+
+}
+
+?> 
+
+<?php
+
+if(isset($_SESSION['Email'])){
+
+     $Email =  $_SESSION['Email'];       
         
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -27,7 +49,7 @@ if(isset($_SESSION['id'])){
            $Function=  $row['Function'];
            $Education =$row['Education'];
            $Experience =$row['Experience'];
-           $Salary =$row['Salary'];
+           $Expected_Salary_thousand =$row['Expected_Salary_thousand'];
            $CV = $row['CV'];
             
            }
@@ -35,36 +57,14 @@ if(isset($_SESSION['id'])){
          }
 
       ?>
-<?php
-
-if(isset($_GET['Job_details'])){
-
-  $the_id = $_GET['Job_details'];
-
-  $query="SELECT * FROM Jobs WHERE id='$the_id'";
-  $Jobs_list=mysqli_query($connection,$query);
-
-  while($row=mysqli_fetch_array($Jobs_list)){
-
-     $the_id = $row['id'];
-     $the_Firstname = $row['Firstname'];
-     $Job_title = $row['Job_title'];
-     $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
-
- }
-
-}
-
-?>
 
 <?php
 
 if(isset($_POST['submit'])){
 
-  $db_id =  $_SESSION['id'];       
+  $Email =  $_SESSION['Email'];       
         
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
      $select_user_profile = mysqli_query($connection,$query);
       
      while($row=mysqli_fetch_array($select_user_profile)){
@@ -283,14 +283,13 @@ if(!$receiver_mail->send()) {
 </div>         
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
-                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
-
 
   <?php
 
-    if(isset($_SESSION['Email']) == $db_Email){
+    if(isset($_SESSION['Email']) == $Email){
 
   ?> 
+       <a href="Register-Member.php" class="btn head-btn1">Register</a>
 
         <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
@@ -440,20 +439,9 @@ if(!$receiver_mail->send()) {
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Address: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $_SESSION['Address']; ?></span>
-          <!-- <input type="text" value="<?php echo $Address; ?>" class="form-control" name="Address"> -->
-          <br>
-          <br>
-
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">City: </span><br><br>
           <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $City; ?></span>
           <!-- <input type="text" value="<?php echo $City; ?>" class="form-control" name="City"> -->
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">State: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $City; ?></span>
           <br>
           <br>
 
@@ -464,13 +452,8 @@ if(!$receiver_mail->send()) {
           <br>
 
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Expected Pay Rate: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Salary; ?>lakh</span>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Expected_Salary_thousand; ?></span>
           <!-- <input type="text" value="<?php echo $Expected_Pay_Rate; ?>" class="form-control" name="Expected Pay Rate"> -->
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Country: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Country; ?></span>
           <br>
           <br>
 

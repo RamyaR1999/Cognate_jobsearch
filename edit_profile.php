@@ -57,6 +57,7 @@ if(isset($_SESSION['id'])){
             // $confirm_password = md5($confirm_password); 
 
              move_uploaded_file($user_image_tempname,"images/$Image");
+             move_uploaded_file($upload,"images/$CV");
         
            if(empty($Image)){
             
