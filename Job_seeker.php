@@ -119,27 +119,27 @@ if (isset($_POST['submit'])){
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
-         
+
+    <li><a href="Register-member.php">Submit Your Resume</a></li>    
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
-    <li><a href="Register-member.php">Submit Your Resume</a></li>
-    <li><a href="career_hub.php">Career Hub</a></li>
+   <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="security_advice.php">Security Advice</a></li>
+    <li><a href="security_advice.php">Security Advice</a></li> -->
      
   </ul>      
 </li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="employer.php">employers</a>
 
-<ul class="submenu">
+  <ul class="submenu">
          
     <li><a href="submit_job.php">Submit A job</a></li>
-    <li><a href="request_callback.php">Request A Call Back</a></li>
+   <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li>
+    <li><a href="ourSolution.php">Our Solutions</a></li> -->
     <li><a href="Contact.php">Contact</a></li>
      
-</ul>
+  </ul>
 
 </li>
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_Us.php">About</a>
