@@ -268,80 +268,57 @@ if (isset($_POST['submit'])){
 }
 
 </style>
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
-    <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-     
-  <div style="clear: both">
-    <h1 class="text-avatar text-capitalize text-left text-monospace u-lightbox " style="inset-inline-start: initial color:red;font-size:60px;">transforming the world of work
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 450px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  </ol>
+<div class="carousel-inner" role="listbox">
+  
+  <div class="carousel-item active" style="background-image: url('images/AB 1.jpg') " >
+    <div class="carousel-caption text-monospace d-none d-md-block">
+     <!--  <h1 class="text-avatar text-capitalize text-left text-monospace u-lightbox " style="inset-inline-start: initial color:red;font-size:60px;">transforming the world of work
 </h1>
-    <h1 class="text-right text-dark u-lightbox text-monospace " style="revert: right color:red;font-size:60px;">since 1960......</h1>
-</div>
+    <h1 class="text-right text-dark u-lightbox text-monospace " style="revert: right color:red;font-size:60px;">since 1960......</h1> -->
+      
+    </div>
+  </div>
+  </div>
 
-        <div class="u-expanded-width-xs u-form u-form-1">
-          
-    </section>
-    
-</div>
-    
-     
-    <section class="u-align-center text-capitalize u-clearfix u-grey-5 u-section-2" id="sec-fa03">
-      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <p class="u-text u-text-default u-text-1"><h3>about us..</h3><span style="font-weight: 700;"></span>
-        </p>
-         <div class="u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="Available_jobs.php" target="_blank">our history</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-3">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-2" href="Available_jobs.php" target="_blank">our sponsorships</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-4">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="Available_jobs.php" target="_blank">in news</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-5">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="Available_jobs.php" target="_blank">our brand story</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-5">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="Available_jobs.php" target="_blank">social responsibility</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <p class="u-text u-text-default u-text-palette-1-base u-text-5">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="Available_jobs.php" target="_blank">talk to us</a>
-                </p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="u-clearfix text-capitalize u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text  u-text-right u-text-white u-text-1">welcome to cognate global..</h3>
-        <p class="u-align-right u-text  u-text-right u-text-white u-text-6">Cognate Global is a IT Staffing <br>
+
+
+</section>
+
+      <section class="u-clearfix u-section-1" id="sec-8459">
+      <div class="u-clearfix u-sheet u-sheet-1"><br>
+        <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
+        <div class="u-container-layout u-container-layout-8">
+       <div class="u-layout-row">
+        <div class="col-sm-6 col-md-6">
+        <h6 class="u-text u-text-20 u-align-left" style="padding-left: 3px;">
+          <table>
+      <tr>
+       <!--  <td>
+        <img src="images/SAM 1.jpg" alt="" style="height:100px; margin:20px; margin-left:20px;" >
+  </td> -->
+<td>
+          <h2 class="u-align-left u-text  u-text-center u-text-black u-text-2">welcome to cognate global..</h2>
+        <p class="u-align-left u-text  u-text-center u-text-black u-text-6">Cognate Global is a IT Staffing <br>
                   And Managed resourcing provider <br>
                   With offices in Bangalore & USA <br>
                   Have strong capabilities to support<br>
@@ -349,52 +326,213 @@ if (isset($_POST['submit'])){
                   Staffing and Remote Staffing<br>
                   Solutions, Contract Staffing,<br>
                   Placement Solutions across multiple geographies.</p>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-pink e u-btn-1">learn more
+                  <a href="" class="btn head-btn2 " style="align-center text-color-white">learn more
               </a>
-              <!-- <img src="images/product management.jpg" class="" alt="" width="404" height="336"> -->
-       
-      </div>
-    </section>
-
-    <section class="u-clearfix u-grey-5 u-lightbox text-capitalize u-section-1" id="sec-de5a">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-black u-text-1" >COGNATE BENEFITS</h3>
+            </td>
+  </tr>
+  </table>
+  <table>
+    <tr>
+ 
+      <td>
+        <h2 class="u-align-left u-text u-text-left u-text-black u-text-2" >COGNATE BENEFITS</h2>
         <p class="u-align-left u-text u-text-left u-text-black u-text-6">Cognate offers range of Technology<br>
           Staffing and Consulting Services.<br>
           Consultative approach backed with<br>
           expertise across multiple technologies.<br>
           Flat Management Structure, prompt decision making<br>
           with flexible approach to help changing dynamics of the projects.</p>
-      </div>
-    </section>
+        </td>
+        <!-- <td>
+        <img src="images/SAM 1.jpg" alt="" style="height:200px; margin:30px; margin-left:30px;" >
+  </td> -->
+    </tr>
+  </table>
+  </h6>
+          </div>
+          <div class="col-sm-6 col-md-6">
 
-    <section class="u-clearfix text-capitalize u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-right u-text u-text-right u-text-white u-text-1">come join our team</h3>
-        <p class="u-align-right u-text u-text-right u-text-white u-text-6">are you someone who trives on a<br>
+            <h6 class="u-align-right" style="padding-left: 40px;">
+
+             
+
+  <h2 class="u-align-left u-text u-text-left u-text-black u-text-2" ></h2>
+ <p class="u-align-left u-text u-text-left u-text-black u-text-2"> About us....</p>
+  <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+    <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="#Our History" target="_blank">our history</a>
+</p>
+    <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+      <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-2" href="About_us.php" target="_blank">our sponsorships</a>
+    </p>
+    <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+      <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="About_us.php" target="_blank">in news</a>
+    </p>
+    <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+      <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="About_us.php" target="_blank">our brand story</a>
+    </p>
+    <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="About_us.php" target="_blank">social responsibility</a>
+                </p>
+  <p class="u-text u-text-default u-text-palette-1-base u-text-5">
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="About_us.php" target="_blank">talk to us</a>
+                </p>
+                <table>
+    <tr>
+ 
+      <td>
+        <h2 class="u-align-right u-text u-text-right u-text-black u-text-2">come join our team</h2>
+        <p class="u-align-left u-text u-text-center u-text-black u-text-6">are you someone who trives on a<br>
     challenge and loves to learn and envolve<br>
 at work? we are always looking for <br>
 aspiring talent who are passionate about <br>
 our mission of tranforming lives one<br>
 person at a home</p>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-pink e u-btn-1">join us
+<a href="" class="btn head-btn2 " style="align-center text-color-white">join us
               </a>
-              <!-- <img src="images/product management.jpg" class="" alt="" width="404" height="336"> -->
-       
-      </div>
-    </section>
+        </td>
+        <!-- <td>
+        <img src="images/SAM 1.jpg" alt="" style="height:200px; margin:30px; margin-left:30px;" >
+  </td> -->
+    </tr>
+  </table>
+  <br>
 
-    
-    
-    
+                
+ </h6>
+</div>
+</div>
+</div>
+</div>
+</div></section>
 
-    
+&nbsp;
+<div class="support-company-area support-padding fix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="support-location-img">
+                            <img src="assets/img/service/support-img.jpg" alt="">
+                            <div class="support-img-cap text-center">
+                                <p>Since</p>
+                                <span>2017</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                       <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2" ><br>
+                               
+                                <h2 id="Our History" style="color:Crimson;font-size:40px;">Cognate Global Business Solution</h2>
+                                 <span>Our History</span>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">Business history and international business are cognate subjects. There are few, ifany, studies of international business that do not require a proper study of context.
+                                <p>International business decision making must be made relevant by a consideredevaluation of the circumstances surrounding that decision. This often meansputting it into its historical context. The contributions that the study ofinternational business can make to business history are the input of appropriatetheory and appropriate research methods. The best international business theorycan illuminate the seemingly disparate strategies of ﬁrms in given historicalcircumstances and can provide an integrated, overarching conceptual structure ofthe study of business history.</p>
 
+
+                              <!--  <a href="About_us.php" class="btn head-btn2 " style="align-center text-color-white">Our History
+              </a>
+ -->
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--  &nsbp; -->
+        <div class="support-company-area support-padding fix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2"><br>
+                                <!-- <span>Our History</span> -->
+                                <h2 style="color:Crimson;font-size:40px;">Growth</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">Their growth can be expanded into the different markets and go beyond borders, and acquisition of other small companies. It could also be an affiliation with other brands for more exposure; the purpose is never-ending growth.
+                                
+
+
+                               <!--  <a href="Register_Member.php" class="btn post-btn">Post a job</a> -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2"><br>
+                                <!-- <span>Our History</span> -->
+                                <h2 style="color:Crimson;font-size:40px;">Innovation</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">The very foundation of a startup company is innovation and creativity. It doesn’t mean the process stops after the establishment of the company. Instead, it’s the beginning of the innovative approaches. If you compare the old interface of Facebook with a new current app, then you’d see the huge difference. But it didn’t happen overnight. They have been experimenting and adding one option after another. If they haven’t adopted the innovative approaches, then some other company would have their place.<!--  <a href="Register_Member.php" class="btn post-btn">Post a job</a> -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="support-company-area support-padding fix">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2"><br>
+                                
+                                <h2 style="color:Crimson;font-size:40px;">Team</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">One of the main differences between entrepreneurship and startup is a team. Entrepreneurship is all about the work of one person. Startup, on the other hand, requires highly skilled, talented and speedy individuals who have an understanding with one another. They’re willing to work together collectively as a team by sharing responsibilities.
+                                
+                                Working as a team also means that everyone would consider the startup company as one’s own, rather than being an employee of the company and only care about the pay.
+
+</p>
+
+
+                               <!--  <a href="Register_Member.php" class="btn post-btn">Post a job</a> -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="right-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle2"><br>
+                                <!-- <span>Our History</span> -->
+                                <h2 style="color:Crimson;font-size:40px;">Tech-Oriented</h2>
+                            </div>
+                            <div class="support-caption">
+                                <p class="pera-top">Startup companies are usually tech-oriented, and their founders are also highly technically skilled people. The question is why tech. It’s because tech is the only industry that doesn’t care about manner, behavior, dressing codes, or wealthy background. It only requires extraordinary skill and unique ideas. If you have both qualities, test and launch it. If it’s good, then you’ll acquire the market share very quickly whether it’s paid or ads. Bigger market share would attract new investors, and the expansion process continues.</p>
+                                
+
+
+                               <!--  <a href="Register_Member.php" class="btn post-btn">Post a job</a> -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    
- <?php include "footer.php"; ?>
+<?php include "footer.php"; ?>
 
 <!-- Autocomplete Script -->
 <script>

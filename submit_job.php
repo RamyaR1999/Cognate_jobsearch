@@ -382,14 +382,51 @@
     padding-left: 0px
     }
 </style>
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
-<section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">We help you hire a right talent</h1>
-        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">at the right time</h1>
-        <p class="u-align-left u-text u-text-default u-text-3">Our pan India presence ensures that you have access to right<br> talent for all your recruitment needs.</p>
-      </div>
-    </section>
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 450px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  </ol>
+<div class="carousel-inner" role="listbox">
+  
+  <div class="carousel-item active" style="background-image: url('images/submitjob.png') " >
+    <div class="carousel-caption text-monospace d-none d-md-block">
+     <!-- <h1 class="u-align-left u-text u-text-default u-text-1">We help you hire a right talent</h1>
+        <h1 class="u-align-right u-text u-text-custom-color-1 u-text-default u-text-2">at the right time</h1>
+        <p class="u-align-center u-text u-text-default u-text-3">Our pan India presence ensures that you have access to right<br> talent for all your recruitment needs.</p> -->
+      
+    </div>
+  </div>
+  </div>
+
+
+
+
+</section>
+
+
+       
+    
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
 
 <div class="u-align-left card-header bg-transparent border-0">
@@ -401,13 +438,13 @@
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
             <div class="col-md-12">
                <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
-               <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+               <span  class="">Fields marked with * are required fields</span>
                <h6 class="text-center" style="color:#ff0000"></h6>
           </div>
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
-                     <span style="font-weight: 400;" class="">Firstname * </span><br>
+                     <span class="">Firstname * </span><br>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
                           <span class="focus-border"></span>
@@ -418,7 +455,7 @@
                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="" >Lastname * </span> 
+                        <span  class="" >Lastname * </span> 
                         <div class="col-sm-12">
                           <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
                           <span class="focus-border"></span>
@@ -431,7 +468,7 @@
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Email * </span> 
+                        <span  class="">Email * </span> 
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
                           <span class="focus-border"></span>
@@ -442,7 +479,7 @@
                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Phone * </span> 
+                        <span  class="">Phone * </span> 
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
                           <span class="focus-border"></span>
@@ -455,7 +492,7 @@
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="" >Job designation * </span>
+                        <span  class="" >Job designation * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Job_designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the job role" name="Job_designation">
                           <span class="focus-border"></span>
@@ -467,7 +504,7 @@
                     &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Company name * </span>
+                        <span  class="">Company name * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Company_name; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
                           <span class="focus-border"></span>
@@ -481,7 +518,7 @@
                    <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 400;" class="" >Job title * </span>
+                         <span  class="" >Job title * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Job_title; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
                        <span class="focus-border"></span>
@@ -491,7 +528,7 @@
                     &nbsp;
                 <div class="col-md-12">
                       <div class="input-group">
-                       <span style="font-weight: 400;" class="" >Job specification * </span>
+                       <span  class="" >Job specification * </span>
                         <div class="col-sm-12">
                           <textarea type="text"rows="6"  value="<?php echo $Job_specification; ?>" class="u-input u-input-rectangle u-radius-10ś u-white u-input-1"  name="Job_specification">
                           </textarea>
@@ -504,7 +541,7 @@
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Service * </span>
+                        <span  class="">Service * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
                           <option value="-1">-- please select service --</option>
@@ -520,7 +557,7 @@
                     &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 400;" class="" >Branch * </span>
+                         <span  class="" >Branch * </span>
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="-1">-- please select branch --</option>
@@ -564,7 +601,7 @@
                    <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 400;" class="">Sector * </span> 
+                         <span  class="">Sector * </span> 
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
                           <option value="-1">-- please select sector --</option>

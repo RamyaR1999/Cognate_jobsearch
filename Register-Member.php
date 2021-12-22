@@ -457,6 +457,12 @@ $mail->SMTPSecure='tls';
     padding-left: 0px
     }
 </style>
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
 
   <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -474,11 +480,11 @@ $mail->SMTPSecure='tls';
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
                 <div class="col-md-13">
                    <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6><br>
-                   <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+                   <span  class="">Fields marked with * are required fields</span>
                    <h6 class="text-center" style="color:#ff0000"></h6>
                </div>
                   <div class="u-form-group u-form-name u-form-group-1">
-                     <span style="font-weight: 400;">Firstname * </span>
+                     <span >Firstname * </span>
                      <div class="col-sm-12">
                           <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
                           <span class="focus-border"></span>
@@ -487,7 +493,7 @@ $mail->SMTPSecure='tls';
                           <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
                       </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;">Lastname * </span>
+                        <span >Lastname * </span>
                         <div class="col-sm-12">
                           <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname " name="Lastname">
                           <span class="focus-border"></span>
@@ -496,7 +502,7 @@ $mail->SMTPSecure='tls';
                           <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
                         </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;">Email *</span>
+                        <span >Email *</span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" placeholder="Enter the Email"name="Email">
                           <span class="focus-border"></span>
@@ -506,7 +512,7 @@ $mail->SMTPSecure='tls';
                       </div>&nbsp;
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;">Password * </span>
+                        <span >Password * </span>
                         <div class="col-sm-12">
                           <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" placeholder="Enter the Password "class="u-input u-input-rectangle u-radius-3 u-white u-input-3">
                            <span class="focus-border"></span>
@@ -515,7 +521,7 @@ $mail->SMTPSecure='tls';
                            <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
                         </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;"> Confirm_password * </span>
+                        <span > Confirm_password * </span>
                         <div class="col-sm-12">
                           <input type="Password"  value="<?php echo isset($_POST["Confirm_password"]) ? $_POST["Confirm_password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" placeholder="Enter the Confirm_password" name="Confirm_password">
                           <span class="focus-border"></span>
@@ -524,7 +530,7 @@ $mail->SMTPSecure='tls';
                           <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
                       </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;">Phone * </span>
+                        <span >Phone * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5"placeholder="Enter the Phone no " name="Phone">
                           <span class="focus-border"></span>
@@ -535,7 +541,7 @@ $mail->SMTPSecure='tls';
                       </div>&nbsp;
 
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span style="font-weight: 400;">City * </span>
+                        <span >City * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
                             <option value="">-- please select city --</option>
@@ -567,7 +573,7 @@ $mail->SMTPSecure='tls';
                     </div>
 
       <div class="u-form-group u-form-name u-form-group-2">
-        <span style="font-weight: 400;">Industry * </span>
+        <span >Industry * </span>
         <div class="col-sm-12">
            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
               <option value="">-- please select industry --</option>
@@ -649,7 +655,7 @@ $mail->SMTPSecure='tls';
       </div>
 
       <div class="u-form-group u-form-name u-form-group-2">
-        <span style="font-weight: 400;">Function * </span>
+        <span >Function * </span>
         <div class="col-sm-12">
           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
             <option value="">-- please select function --</option>
@@ -710,7 +716,7 @@ $mail->SMTPSecure='tls';
   </div>
 
                   <div class="u-form-group u-form-name u-form-group-2">
-                    <span style="font-weight: 400;">Education * </span>
+                    <span >Education * </span>
                     <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
                           <option value="">-- please select education --</option>
@@ -747,7 +753,7 @@ $mail->SMTPSecure='tls';
                     <div class="u-layout-row">
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <span style="font-weight: 400;">Experience *</span><br>
+                                <span >Experience *</span><br>
                                 <div class="col-sm-12">
                                     <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience_years"placeholder="Enter your Experience_years"id="Experience_years">
                           <option value="">years</option>
@@ -778,7 +784,7 @@ $mail->SMTPSecure='tls';
             </div>
             <div class="col-md-6">
                     <div class="form-group row">
-                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                       <span class="col-sm-3 col-form-label"></span>
                           <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
                              <option value="">months</option>
@@ -827,7 +833,7 @@ $mail->SMTPSecure='tls';
                     <div class="u-layout-row">
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <span style="font-weight: 400;"> Current Salary *</span>
+                                <span > Current Salary *</span>
                                 <div class="col-sm-12">
                         <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_lakhs" placeholder="Enter your Current Salary"id="Current_Salary">
                           <option value="">lakhs</option>
@@ -868,7 +874,7 @@ $mail->SMTPSecure='tls';
             </div>
             <div class="col-md-6">
                     <div class="form-group row">
-                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                       <span  class="col-sm-3 col-form-label"></span>
                           <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
                              <option value="">thousand</option>
@@ -916,7 +922,7 @@ $mail->SMTPSecure='tls';
                   <div class="u-layout-row">
                     <div class="col-md-6">
                         <div class="form-group row">
-                             <span style="font-weight: 400;"> Expected Salary *</span>
+                             <span> Expected Salary *</span>
                              <div class="col-sm-12">
                                 <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
                                     <option value="">lakhs</option>
@@ -957,7 +963,7 @@ $mail->SMTPSecure='tls';
                  </div>
                  <div class="col-md-6">
                     <div class="form-group row">
-                       <span style="font-weight: 400;" class="col-sm-3 col-form-label"></span>
+                       <span  class="col-sm-3 col-form-label"></span>
                           <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
                              <option value="">thousand</option>
@@ -1003,7 +1009,7 @@ $mail->SMTPSecure='tls';
                   
 
               <div class="u-form-group u-form-name u-form-group-2">
-                 <span style="font-weight: 400;">CV * </span>
+                 <span >CV * </span>
                    <div class="form-element">
                      <div class="custom-file-upload">
                         <!-- <div class="custom-file-upload-toggle">

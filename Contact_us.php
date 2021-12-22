@@ -332,7 +332,7 @@
     left: 0;
     /*width: 0;*/
     transition: 0.4s;
-    border-radius: 2px;
+    border-radius: 3px;
     }
    .u-input:focus ~ .focus-border{
      width: 100%;
@@ -345,15 +345,42 @@
     padding-left: 0px
     }
 </style>
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
-<section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">Hello !</h1>
-        <h1 class="u-align-right u-text u-text-custom-color-1 u-text-default u-text-2">We're here to help.</h1>
-        <!-- <p class="u-align-left u-text u-text-default u-text-3"> This form is only for companies looking to hire roles.<br>If you are a job seeker, please share your profile at<br>
-Submit Your CV</p> -->
-      </div>
-    </section>
+<style>
+.carousel-item {
+height: 100vh;
+min-height: 450px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+  </style>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  </ol>
+<div class="carousel-inner" role="listbox">
+  
+  <div class="carousel-item active" style="background-image: url('images/contactus.png') " >
+    <div class="carousel-caption text-monospace d-none d-md-block">
+     <!--  <h1 class="text-avatar text-capitalize text-left text-monospace u-lightbox " style="inset-inline-start: initial color:red;font-size:60px;">transforming the world of work
+</h1>
+    <h1 class="text-right text-dark u-lightbox text-monospace " style="revert: right color:red;font-size:60px;">since 1960......</h1> -->
+      
+    </div>
+  </div>
+  </div>
 
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
     <div class="u-align-left card-header bg-transparent border-0">
@@ -365,13 +392,13 @@ Submit Your CV</p> -->
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" redirect="true">
             <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
             <div class="col-md-12">
-            <span style="font-weight: 400;" class="">Fields marked with * are required fields</span>
+            <span  class="">Fields marked with * are required fields</span>
             <h6 class="text-center" style="color:#ff0000"></h6>
           </div>
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
-                     <span style="font-weight: 400;" class="">Firstname * </span><br>
+                     <span  class="">Firstname * </span><br>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
                           <span class="focus-border"></span>
@@ -382,7 +409,7 @@ Submit Your CV</p> -->
                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="" >Lastname * </span> 
+                        <span  class="" >Lastname * </span> 
                         <div class="col-sm-12">
                           <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
                           <span class="focus-border"></span>
@@ -395,7 +422,7 @@ Submit Your CV</p> -->
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Email * </span> 
+                        <span  class="">Email * </span> 
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
                           <span class="focus-border"></span>
@@ -406,7 +433,7 @@ Submit Your CV</p> -->
                    &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Phone no * </span> 
+                        <span class="">Phone no * </span> 
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
                           <span class="focus-border"></span>
@@ -419,7 +446,7 @@ Submit Your CV</p> -->
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="" >Designation * </span>
+                        <span class="" >Designation * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Role" name="Designation">
                           <span class="focus-border"></span>
@@ -430,7 +457,7 @@ Submit Your CV</p> -->
                     &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Company * </span>
+                        <span  class="">Company * </span>
                         <div class="col-sm-12">
                           <input type="text" value="<?php echo $Company; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company">
                           <span class="focus-border"></span>
@@ -443,7 +470,7 @@ Submit Your CV</p> -->
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span style="font-weight: 400;" class="">Service * </span>
+                        <span  class="">Service * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
                           <option value="-1">-- please select service --</option>
@@ -459,7 +486,7 @@ Submit Your CV</p> -->
                     &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                         <span style="font-weight: 400;" class="" >Branch * </span>
+                         <span  class="" >Branch * </span>
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="">-- please select branch --</option>
@@ -501,8 +528,8 @@ Submit Your CV</p> -->
                     &nbsp;
                     <div class=""></div>            
     
-              <div class="u-align-center u-form-group u-form-submit" style="padding: 10px">
-              <a href="" class="btn head-btn2 " style="align-center; padding: 25px">Submit</a>
+              <div class="u-align-center u-form-group u-form-submit">
+              <a href="" class="btn head-btn2 " style="align-center;">Submit</a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
 
