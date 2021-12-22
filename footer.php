@@ -620,11 +620,6 @@
     </section>
 
     </footer>
-    <!-- Profile Icon -->
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-
-  </body>
-</html>
 
 <style>
 
@@ -637,7 +632,6 @@ element.style {
     margin-left: -20px;
 }
 .footer-main {
-    /*background: #0f1941;*/
     background: #ffffff;
     color: #f7f5f0;
     font-size: 16px;
@@ -670,25 +664,11 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-/*.cf:after {
-    clear: both;
-}
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}*/
-
 </style>
+
+    
+    <!-- Profile Icon -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
 
 <!-- JS here -->
@@ -731,3 +711,10 @@ html {
     <!-- Jquery Plugins, main Jquery -->  
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
+
+<!-- JS End -->
+
+  </body>
+</html>
+
+
