@@ -55,7 +55,19 @@ if(isset($_SESSION['id'])){
            }
          }
 
-      if(isset($_POST['Next'])){
+if(isset($_POST['submit'])){
+
+require 'PHPMailer/PHPMailerAutoload.php';
+require('phpmailer/class.phpmailer.php');
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();
+
+$mail->Host = 'smtp.gmail.com';
+$mail->Port=587;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure='tls';
 
            $Firstname=  $_POST['Firstname'];
            $Lastname=  $_POST['Lastname'];
@@ -66,46 +78,29 @@ if(isset($_SESSION['id'])){
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
            $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
-           $Image = $_FILES['image']['name'];
-           $user_image_tempname = $_FILES['image']['tmp_name'];
-           $CV = $_FILES['image']['name'];
-           $upload = $_FILES['image']['tmp_name'];
+           $CV = $_FILES['file']['name'];
+           $upload = $_FILES['file']['tmp_name'];
 
-
-            $Password = mysqli_real_escape_string($connection,$_POST['Password']);
-            // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
-            $Password = md5($Password);      
-            // $confirm_password = md5($confirm_password); 
-
-             move_uploaded_file($upload,"images/$CV");
+        move_uploaded_file($upload,"images/$CV");
         
-           if(empty($Image)){
+       if(empty($CV)){
+
+        $query = "SELECT * FROM users WHERE id = $id ";
+        $select_cv = mysqli_query($connection,$query);
             
-            $query = "SELECT * FROM users WHERE id = $id ";
-            $select_image = mysqli_query($connection,$query);
-                
-            while($row = mysqli_fetch_array($select_image)){
-                
-            $Image = $row['Image'];
-            $CV = $row['CV'];
-              
-               }
-            
-          }
+        while($row = mysqli_fetch_array($select_cv)){
+
+        $CV = $row['CV'];
+          
+           }
+
+        }
        
         if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
         if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {  
-         
-        $uppercase = preg_match('@[A-Z]@', $Password);
-        $lowercase = preg_match('@[a-z]@', $Password);
-        $number    = preg_match('@[0-9]@', $Password);
-        $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
-            
-
-        if(strlen($Password) >= 8) { 
               
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Expected_Salary_thousand='{$Expected_Salary_thousand}', CV='{$CV}',Function='{$Function}',Education='{$Education}'  WHERE id= '{$db_id}' ";  
+    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Email= '{$Email}',CV='{$CV}' WHERE id= '{$db_id}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -126,20 +121,68 @@ if(isset($_SESSION['id'])){
         $_SESSION['Education'] = $Education;
         $_SESSION['Expected_Salary_thousand'] = $Expected_Salary_thousand;
         $_SESSION['CV'] = $CV;
-        
 
-           if(isset($_SESSION['Email']) == $Email){       
-                   
-           $login = "please Signin";
+
+$mail->Username = 'CGBSTech2021@gmail.com';
+$mail->Password = 'cgbs@2021';
+
+$mail->setFrom ('CGBSTech2021@gmail.com');
+$mail->addAddress($Email,$Firstname);
+
+$mail->isHTML(true);
+$mail->Subject = "Job Applied Successfully";
+$mail->Body    = 'Hi'.' '.$Firstname.'<br><br>You have successfully applied for a job';
+
+if(!$mail->send()) {
+   echo "Message could not be sent.". $mail->ErrorInfo;
 }else{
-
-    header("Location:Job_review.php?Job_details=$the_id & $Job_title"); 
+     $_SESSION['status']="You have successfully applied for a job";
+  // echo " otp sent successfully to ur mail: " ;
 }
-         }else{
-              $message_strnpassworad = "password contain atleast 8 characters";
-              
-       }
-  
+
+ $the_id = $_GET['Job_details'];
+
+  $query="SELECT * FROM Jobs WHERE id='$the_id'";
+  $Jobs_list=mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($Jobs_list)){
+
+     $the_id = $row['id'];
+     $the_Firstname = $row['Firstname'];
+     $Job_title = $row['Job_title'];
+     $Job_Email = $row['Email'];
+     $Job_specification = $row['Job_specification'];
+
+ }
+
+$receiver_mail = new PHPMailer;
+
+$receiver_mail->isSMTP();
+
+$receiver_mail->Host = 'smtp.gmail.com';
+$receiver_mail->Port=587;
+$receiver_mail->SMTPAuth = true;
+$receiver_mail->SMTPSecure='tls';
+
+
+$receiver_mail->Username = 'CGBSTech2021@gmail.com';
+$receiver_mail->Password = 'cgbs@2021';
+
+$receiver_mail->setFrom ('CGBSTech2021@gmail.com');
+$receiver_mail->addAddress($Job_Email,$the_Firstname);
+
+$receiver_mail->isHTML(true);
+$receiver_mail->Subject = "Resume for a job";
+$receiver_mail->Body    = 'Hi'.' '.$the_Firstname.'<br><br>'.' '.$Firstname.' '.'Applied for a job';
+
+if(!$receiver_mail->send()) {
+   echo "Message could not be sent.". $receiver_mail->ErrorInfo;
+}else{
+  // header("Location:Job_review.php?Job_details=$the_id & $Job_title");
+    header("Location:Jobseeker_full_profile.php?profile=$id");
+}
+
+        
           
         }else{
               $message_Lastname ="Only Alphabets are allowed in lastname";
@@ -149,10 +192,19 @@ if(isset($_SESSION['id'])){
           }else{
               $message_Firstname ="Only Alphabets are allowed in firstname";
           
-       }   
-          
-            
        }
+
+        
+//   if(isset($_SESSION['Email']) == $Email){   
+
+//            header("Location:Job_review.php?Job_details=$the_id & $Job_title");    
+                   
+// }else{
+
+//           $login = "please Signin";
+// }         
+            
+}
 
   ?>
 
@@ -435,13 +487,11 @@ if(isset($_SESSION['id'])){
 
           <div class="text">Apply for this job</div><br>
           <p>Fill in the form below to apply for this job.</p>
+          <!-- <h6 class="" style="color:#13b013"><?php echo $success; ?></h6>
+          <h6 class="" style="color:#13b013"><?php echo $receiver_success; ?></h6> -->
           <h6 class="" style="color:#13b013"><?php echo $login; ?></h6>
           <br>
 <form action="" method="POST"source="custom" name="form" style="padding: 0px;" redirect="true">
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-          <br>
-          <br>
           
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Firstname: </span>
           <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
@@ -453,45 +503,27 @@ if(isset($_SESSION['id'])){
           <br>
           <br>
 
-           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Contact Number: </span>
-          <input type="text" value="<?php echo $Phone; ?>" class="form-control" name="Phone">
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">City: </span>
-          <input type="text" value="<?php echo $City; ?>" class="form-control" name="City">
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Job Title: </span>
-          <input type="text" value="<?php echo $Job_title; ?>" class="form-control" name="Job_title">
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Expected Pay Rate: </span>
-          <input type="text" value="<?php echo $Expected_Salary_thousand; ?>" class="form-control" name="Expected_Salary_thousand">
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
+          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
           <br>
           <br>
 
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Resume:</span>
 
-          <input type="file" name="image">
-          <!-- <div class="form-element">
-            <div class="custom-file-upload">
-              <input type="file" name="image" id="ctl09_ctl04_CVFileUpload" class="custom-file-upload-input" data-bit-id="cvFileUpload" /><?php echo $CV; ?>
-              <span class="focus-border"></span>
-            </div>
+         <!--  <div class="">
+                   <div class="">
+                    <input type="file" name="image"><?php echo $CV; ?>
+                    </div>
+                    <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
+                </div> -->
 
-            <span data-bit-output-upload-files="cvFileUpload"></span>
-            <div> 
-                <div  class="cms-file-upload-validator field-error" style="display:none;">
-                  <span class="cms-file-upload-validator-error-message">CV is required</span>
-                </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+               <input type="file" name="image"><?php echo $CV; ?>
             </div>
-          </div> -->
+        </div>
         <div class="u-align-center u-form-group u-form-submit">
-        <!-- <a href="Job_review.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">Next</a> -->
-        <input type="submit" name="Next" value="Next" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">
+        <input type="submit" name="submit" value="submit" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">
        </div>
      </form>
 <!-- Job_review.php?Job_details=<?php //echo $the_id ?>&<?php //echo $Job_title ?> -->

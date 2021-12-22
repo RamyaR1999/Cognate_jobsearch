@@ -26,8 +26,8 @@ if(isset($_SESSION['id'])){
            $Industry=  $row['Industry'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
-           $Experience =$row['Experience'];
-           $Salary =$row['Salary'];
+           $Experience =$row['Experience_years'];
+           $Salary =$row['Current_Salary_lakhs'];
            $CV = $row['CV'];
             
            }
@@ -43,48 +43,41 @@ if(isset($_SESSION['id'])){
            $Industry=  $_POST['Industry'];
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
-           $Experience =$_POST['Experience'];
-           $Salary =$_POST['Salary'];
-           $Image = $_FILES['image']['name'];
-           $user_image_tempname = $_FILES['image']['tmp_name'];
-           $CV = $_FILES['CV']['name'];
-           $upload = $_FILES['CV']['tmp_name'];
+           $Experience =$_POST['Experience_years'];
+           $Salary =$_POST['Current_Salary_lakhs'];
+           // $Image = $_FILES['image']['name'];
+           // $user_image_tempname = $_FILES['image']['tmp_name'];
+           $CV = $_FILES['file']['name'];
+           $upload = $_FILES['file']['tmp_name'];
 
-
-            $Password = mysqli_real_escape_string($connection,$_POST['Password']);
-            // $confirm_password = mysqli_real_escape_string($connection,$_POST['confirm_password']);
-            $Password = md5($Password);      
-            // $confirm_password = md5($confirm_password); 
-
-             move_uploaded_file($user_image_tempname,"images/$Image");
+             // move_uploaded_file($user_image_tempname,"images/$Image");
              move_uploaded_file($upload,"images/$CV");
         
-           if(empty($Image)){
+          //  if(empty($Image)){
             
+          //   $query = "SELECT * FROM users WHERE id = $id ";
+          //   $select_image = mysqli_query($connection,$query);
+                
+          //   while($row = mysqli_fetch_array($select_image)){
+                
+          //   $Image = $row['Image'];
+          //   $CV = $row['CV'];
+              
+          //      }
+            
+          // }
+          if(empty($CV)){
+
             $query = "SELECT * FROM users WHERE id = $id ";
-            $select_image = mysqli_query($connection,$query);
+            $select_cv = mysqli_query($connection,$query);
                 
-            while($row = mysqli_fetch_array($select_image)){
-                
-            $Image = $row['Image'];
+            while($row = mysqli_fetch_array($select_cv)){
+
+            $CV = $row['CV'];
               
                }
-            
-          }
-          
-        // move_uploaded_file($upload,"images/$CV");
-        
-        // if(empty($user_image)){
-            
-        //     $query = "SELECT * FROM users WHERE id = $id ";
-        //     $select_image = mysqli_query($connection,$query);
-                
-        //     while($row = mysqli_fetch_array($select_image)){ 
-        //     $image = $row['image'];
-              
-        //        }
-            
-        //   } 
+
+            }
        
         if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
@@ -98,7 +91,7 @@ if(isset($_SESSION['id'])){
 
         if(strlen($Password) >= 8) { 
               
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience='{$Experience}'  WHERE id= '{$db_id}' ";  
+    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience}',Current_Salary_lakhs='{$Salary}',CV='{$CV}'  WHERE id= '{$db_id}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -382,7 +375,20 @@ if(isset($_SESSION['id'])){
                 <div class="u-container-layout u-container-layout-3">
                   <h3 class="u-text u-text-default u-text-6">Details</h3>
                   <p class="u-text u-text-7">
-                    <input type="file" name="image">
+                <div class="row">
+                    <!-- <div class="col-md-6">
+                        <div class="form-group row">
+                         <span style="font-weight: 600;"class="col-sm-3 col-form-label">Profile: </span>
+                           <input type="file" name="image">
+                        </div>
+                    </div> -->
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                         <span style="font-weight: 600;"class="col-sm-3 col-form-label">CV: </span>
+                           <input type="file" name="file">
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
@@ -466,7 +472,7 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience: </span>
                          <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience">
+                             <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years">
                         <!-- <br>22 years<br> -->
                          
                         </div>
@@ -477,7 +483,7 @@ if(isset($_SESSION['id'])){
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-3 col-form-label">Salary: </span>
                      <div class="col-sm-12">
-                      <input id="myInput" type="text" value="<?php echo $Salary; ?>" class="form-control" onFocus="geolocate()" name="Salary">
+                      <input id="myInput" type="text" value="<?php echo $Salary; ?>" class="form-control" onFocus="geolocate()" name="Current_Salary_lakhs">
                           </div>
                     </div>
                  </div>

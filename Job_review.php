@@ -98,15 +98,11 @@ $mail->Port=587;
 $mail->SMTPAuth = true;
 $mail->SMTPSecure='tls';
 
-
 $mail->Username = 'CGBSTech2021@gmail.com';
 $mail->Password = 'cgbs@2021';
 
 $mail->setFrom ('CGBSTech2021@gmail.com');
 $mail->addAddress($Email,$Firstname);
-// . "\r\n" .
-// "CC: thennarasan1988@gmail.com"
-#$mail->addReplyTo( $_POST['email'],$_POST['name']);
 
 $mail->isHTML(true);
 $mail->Subject = "Job Applied Successfully";
@@ -116,7 +112,6 @@ if(!$mail->send()) {
    echo "Message could not be sent.". $mail->ErrorInfo;
 }else{
      $success="You have successfully applied for a job";
-  // echo " otp sent successfully to ur mail: " ;
 }
 
 
@@ -159,7 +154,6 @@ if(!$receiver_mail->send()) {
    echo "Message could not be sent.". $receiver_mail->ErrorInfo;
 }else{
      $receiver_success="Mail sent successfully";
-  // echo " otp sent successfully to ur mail: " ;
 }
 
 }
@@ -173,7 +167,7 @@ if(!$receiver_mail->send()) {
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Home </title>
+    <title>CGBS-Review your details </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -286,7 +280,7 @@ if(!$receiver_mail->send()) {
 
   <?php
 
-    if(isset($_SESSION['Email']) == $Email){
+    if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
        <a href="Register-Member.php" class="btn head-btn1">Register</a>
@@ -409,7 +403,18 @@ if(!$receiver_mail->send()) {
             </li>
           </ul>
           <div class="text">Apply for this job</div><br>
-          <p>Review your details before submit</p>
+          <p>Review your details here</p>
+          <?php
+            
+            if(isset($_SESSION['status'])){
+            ?> 
+       <h6 class="" style="color:#13b013"> 
+        <?php   echo $_SESSION['status'];  ?>    
+        </h6>
+        <?php
+            }
+
+           ?>
          <h6 class="" style="color:#13b013"><?php echo $success; ?></h6>
          <h6 class="" style="color:#13b013"><?php echo $receiver_success; ?></h6>
          <br>
