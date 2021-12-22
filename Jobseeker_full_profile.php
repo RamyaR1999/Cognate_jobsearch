@@ -265,14 +265,25 @@
 
     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Firstname'] ?></h1>
+    <?php 
+
+    if(isset($_SESSION['status'])){
+            ?> 
+       <h6 class="" style="color:#13b013"> 
+        <?php   echo $_SESSION['status'];  ?>    
+        </h6>
+        <?php
+            }
+
+    ?>
+        <h1 class="u-text u-text-1"><?php echo $Firstname ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
           </div>
           <br>
-<center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+<center><img class="" style="width:300px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
             <!-- <center><button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button></center> -->
 
               </div>

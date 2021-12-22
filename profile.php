@@ -272,7 +272,7 @@
             <div class="u-layout-col">
           </div>
           
-<center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+<center><img class="" style="width:280px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
             <center>
 
               <!-- <button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button> -->

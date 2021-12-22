@@ -361,16 +361,9 @@ if(isset($_SESSION['id'])){
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
 
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-          <center><img class="" style="width:350px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+          <center><img class="" style="width:280px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
-              <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-video u-video-1">
-                  <!-- <div class="embed-responsive embed-responsive-1">
-                  </div> -->
-                </div>
-              <!-- <br> -->
-            </div>
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-container-layout-3">
                   <h3 class="u-text u-text-default u-text-6">Details</h3>
