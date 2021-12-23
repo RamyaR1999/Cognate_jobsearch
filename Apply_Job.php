@@ -99,6 +99,8 @@ $mail->SMTPSecure='tls';
         if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
         if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {  
+
+        if(!empty($CV)){
               
     $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Email= '{$Email}',CV='{$CV}' WHERE id= '{$db_id}' ";  
                       
@@ -122,6 +124,7 @@ $mail->SMTPSecure='tls';
         $_SESSION['Expected_Salary_thousand'] = $Expected_Salary_thousand;
         $_SESSION['CV'] = $CV;
 
+if(isset($_SESSION['Email']) == $Email){  
 
 $mail->Username = 'CGBSTech2021@gmail.com';
 $mail->Password = 'cgbs@2021';
@@ -182,8 +185,13 @@ if(!$receiver_mail->send()) {
     header("Location:Jobseeker_full_profile.php?profile=$id");
 }
 
-        
-          
+ }else{
+
+          $login = "please Signin";
+}         
+ }else{
+    $empty_cv ="upload your cv here";
+ }         
         }else{
               $message_Lastname ="Only Alphabets are allowed in lastname";
             
@@ -193,17 +201,7 @@ if(!$receiver_mail->send()) {
               $message_Firstname ="Only Alphabets are allowed in firstname";
           
        }
-
-        
-//   if(isset($_SESSION['Email']) == $Email){   
-
-//            header("Location:Job_review.php?Job_details=$the_id & $Job_title");    
                    
-// }else{
-
-//           $login = "please Signin";
-// }         
-            
 }
 
   ?>
@@ -434,6 +432,14 @@ if(!$receiver_mail->send()) {
 }
 
 </style>
+
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
+
    <section class="u-clearfix u-section-1" id="sec-8459">
       <div class="u-clearfix u-sheet u-sheet-1"><br>
         <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
@@ -493,22 +499,22 @@ if(!$receiver_mail->send()) {
           <br>
 <form action="" method="POST"source="custom" name="form" style="padding: 0px;" redirect="true">
           
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Firstname: </span>
-          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
+          <span class="col-sm-3 col-form-label">Firstname: </span>
+          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname" required="">
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Lastname: </span>
-          <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
+          <span class="col-sm-3 col-form-label">Lastname: </span>
+          <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname" required="">
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
+          <span class="col-sm-3 col-form-label">Email: </span>
+          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email" required="">
           <br>
           <br>
 
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Resume:</span>
+          <span class="col-sm-3 col-form-label">Resume:</span>
 
          <!--  <div class="">
                    <div class="">
@@ -520,6 +526,7 @@ if(!$receiver_mail->send()) {
         <div class="col-md-6">
             <div class="form-group row">
                <input type="file" name="image"><?php echo $CV; ?>
+               <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
             </div>
         </div>
         <div class="u-align-center u-form-group u-form-submit">
