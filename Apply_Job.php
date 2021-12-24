@@ -124,7 +124,7 @@ $mail->SMTPSecure='tls';
         $_SESSION['Expected_Salary_thousand'] = $Expected_Salary_thousand;
         $_SESSION['CV'] = $CV;
 
-if(isset($_SESSION['Email']) == $Email){  
+// if(isset($_SESSION['Email']) == $Email){
 
 $mail->Username = 'CGBSTech2021@gmail.com';
 $mail->Password = 'cgbs@2021';
@@ -185,12 +185,13 @@ if(!$receiver_mail->send()) {
     header("Location:Jobseeker_full_profile.php?profile=$id");
 }
 
- }else{
+//  }else{
 
-          $login = "please Signin";
-}         
+//           $login = "please Signin";
+// }  
+
  }else{
-    $empty_cv ="upload your cv here";
+    $empty_cv ="please Signin";
  }         
         }else{
               $message_Lastname ="Only Alphabets are allowed in lastname";
@@ -450,55 +451,26 @@ if(!$receiver_mail->send()) {
 
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-           <!--  <a class="nav-link active" id="easyA-tab" data-toggle="tab" href="Job_seeker.php" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a> -->
             <a class="nav-link active" id="easyA-tab" href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
             </li>
 
             <li class="nav-item">
            <div class="u-align-center u-form-group u-form-submit">
-            <!-- <a class="nav-link" id="rsLogin-tab" data-toggle="tab" href="#rsLogin" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a> -->
             <a class="nav-link" id="rsLogin-tab" href="Signin_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a>
             <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
            </div>
-            <!--  <div class="u-align-center u-form-group u-form-submit">
-              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Register<br>
-              </a>
-              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-            </div> -->
             </li>
           </ul>
-       
-          <!-- <div class="text">Sign In to apply for this job</div><br>
-          <p>To apply for this job log in to your existing account.</p><br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
-          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
-          <br>
-          <br>
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Password: </span>
-          <input type="text" value="<?php echo $Password; ?>" class="form-control" name="Password">
-          <br>
-          <br>
-          <div class="u-form-checkbox u-form-group">
-                  <input type="checkbox" id="checkbox-708d" name="remember" value="On">
-                  <label for="checkbox-708d" class="u-label">Remember me</label>
-                </div>
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="submit" name="submit" value="Sign in" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-12 u-btn-1"> 
-                  <a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a> -->
 
           <div class="text">Apply for this job</div><br>
           <p>Fill in the form below to apply for this job.</p>
           <!-- <h6 class="" style="color:#13b013"><?php echo $success; ?></h6>
           <h6 class="" style="color:#13b013"><?php echo $receiver_success; ?></h6> -->
-          <h6 class="" style="color:#13b013"><?php echo $login; ?></h6>
+
+          <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
           <br>
-<form action="" method="POST"source="custom" name="form" style="padding: 0px;" redirect="true">
-          
+         <form action="" method="POST" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
+
           <span class="col-sm-3 col-form-label">Firstname: </span>
           <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname" required="">
           <br>
@@ -515,25 +487,18 @@ if(!$receiver_mail->send()) {
           <br>
 
           <span class="col-sm-3 col-form-label">Resume:</span>
-
-         <!--  <div class="">
-                   <div class="">
-                    <input type="file" name="image"><?php echo $CV; ?>
-                    </div>
-                    <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
-                </div> -->
-
-        <div class="col-md-6">
-            <div class="form-group row">
-               <input type="file" name="image"><?php echo $CV; ?>
-               <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
-            </div>
-        </div>
-        <div class="u-align-center u-form-group u-form-submit">
-        <input type="submit" name="submit" value="submit" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-3 u-btn-1">
-       </div>
+          <div class="col-md-6">
+             <div class="form-group row">
+                <input type="file" name="image"><?php echo $CV; ?>
+                <!-- <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6> -->
+             </div>
+          </div>
+          <br>
+          <div class="u-form-group u-form-submit">
+            <input type="submit" name="submit" value="submit" class="btn head-btn1">
+          </div>
+          <br>
      </form>
-<!-- Job_review.php?Job_details=<?php //echo $the_id ?>&<?php //echo $Job_title ?> -->
             </h6>
           </div>
           <div class="col-sm-6 col-md-6">
