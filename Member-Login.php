@@ -206,15 +206,13 @@
               
     ?> 
 
-<div class="main-menu">
-  <nav class="d-none d-lg-block">   
-    <ul id="navigation">
-        <li>
-          <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
-          <ul class="submenu">
-                <div class="dropdown-header text-center">
-  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+    <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+    </a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+            <div class="dropdown-header text-center">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -228,14 +226,11 @@
                       ?>
                       
                     </p>     
-                </div>
-            <li><a href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a></li>
-            <li><a href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a></li>
-          </ul>
-          </li>
-    </ul>  
-  </nav>
-</div>
+            </div>
+            <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
+            <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
+        </div>
+</li>
 
 <?php 
               
@@ -243,9 +238,11 @@
 
 ?> 
 
-              </div>
-          </div>
-      </div>
+
+
+        </div>
+    </div>
+</div>
      <!--mobile button--> 
      <div class="col-12">
           <div class="mobile_menu d-block d-lg-none"></div>

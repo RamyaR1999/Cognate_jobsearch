@@ -1,64 +1,61 @@
 <?php session_start(); ?>
+<?php ob_start (); ?>
 <?php include "db.php"; ?>
 
-<?php
+<?php 
 
-    if(isset($_REQUEST['verify'])){
-
-     
-
-        $Email    = $_SESSION['Email'];
-        $otp = $_REQUEST['otp']; 
-    
-        $query = "SELECT * FROM users WHERE Email = '{$Email}' ";
-        $select_users_query = mysqli_query($connection, $query);
+   if(isset($_POST['CheckBoxArray'])){
+       
+       foreach($_POST['CheckBoxArray'] as $uservalueId){
         
-        if(!$select_users_query){
-            
-            die("Query Failed" . mysqli_error($connection));
-            
-        }
-          
-          while($row = mysqli_fetch_array($select_users_query)){
-              
-               $db_Firstname=  $row['Firstname'];
-               $db_Lastname=  $row['Lastname'];
-               $db_Email    = $row['Email'];
-               $db_Password = $row['Password'];
-               $db_Phone=  $row['Phone'];
-               $db_Image=  $row['Image'];
-               $db_City=  $row['City'];
-               $db_Industry=  $row['Industry'];
-               $db_Function=  $row['Function'];
-               $db_Education =$row['Education'];
-               $db_Experience =$row['Experience'];
-               $db_Salary =$_POST['Salary'];
-               $db_CV = $row['CV']['Name'];
-               $upload = "uploads/".$CV;
-               
-               $db_otp=$row['otp'];         
-              
-          }
-
-          if($otp === $db_otp){
-            
-             $_SESSION['Email'] = $db_Email;
-             $_SESSION['otp'] = $db_otp;
-      
-
-
-          header("Location:New_Password.php");
+          $bulk_options = $_POST['bulk_options'];
            
-         
-        }else{
-            $message_otp = "Incorrect OTP";   
-              
-        }
-        
-        
-        }
-?>  
+          
+  switch($bulk_options){
 
+           case 'Admin':
+
+             $query = "UPDATE users SET role='{$bulk_options}' WHERE id={$uservalueId} " ;                  
+             $update_to_admin_status = mysqli_query($connection,$query);
+
+               if(!$update_to_admin_status){
+              die("Query Failed" . mysqli_error($connection));
+}
+             break; 
+
+
+            case 'User':
+
+              $query = "UPDATE users SET role='{$bulk_options}' WHERE id={$uservalueId} " ;                  
+              $update_to_supplier_status = mysqli_query($connection,$query);
+
+                   // confirmQuery($update_to_supplier_status);
+
+              if(!$update_to_supplier_status){
+              die("Query Failed" . mysqli_error($connection));
+}
+             break; 
+
+            case 'delete':
+
+              $query = "DELETE FROM users WHERE id={$uservalueId} " ;   
+
+              $update_to_delete_status = mysqli_query($connection,$query);
+
+                   // confirmQuery($update_to_delete_status);
+
+              if(!$update_to_delete_status){
+              die("Query Failed" . mysqli_error($connection));
+}
+             break;  
+                 
+          }
+           
+       }
+       
+   }
+
+?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -67,7 +64,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Home </title>
+    <title>CGBS-Apply job </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -88,7 +85,8 @@
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Member-Login.css" media="screen">
+
+<link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -136,7 +134,7 @@
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
      <!-- Main-menu -->
-     <div class="main-menu u-custom-menu u-nav-container">
+<div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
@@ -183,16 +181,16 @@
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-        <a href="Register-Member.php" class="btn head-btn1">Register</a>
-        <a href="Member-Login.php" class="btn head-btn2">Login</a>
+      <a href="Register-Member.php" class="btn head-btn1">Register</a>
+      <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
  <?php 
               
       }else{
               
-    ?> 
-
+    ?>
+    
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
         <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
@@ -281,77 +279,158 @@
 
 </style>
 
-    <section class="u-align-center u-clearfix u-grey-10 u-section-1" id="sec-357b">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-group u-radius-10 u-shape-round u-grey u-group-1">
-          <div class="u-container-layout u-valign-middle u-container-layout-1">
-            <h3 class="text-center">Enter the OTP</h3>
-            
-           <p class="font-weight-light text-muted mb-0">
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
 
-            Enter the OTP that we sent to your email.
-
-           </p>
-            
-            <div class="u-expanded-width u-form u-login-control u-form-1">
-              <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
-                <div class="u-form-group u-form-name">
-                  <label for="email-cd60" class="u-form-control-hidden u-label"></label>
-                  <input type="text" placeholder="Enter your OTP" id="" name="otp" value="<?php echo isset($_REQUEST["otp"]) ? $_REQUEST["otp"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
-                  <h6 style="color:#ff0000"><?php echo $message_otp ?></h6>
-                </div>
-                <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Next</a>
-                  <input type="submit" name="verify" value="submit" class="u-form-control-hidden">
-                </div>
-                <input type="hidden" value="" name="recaptchaResponse">
-              </form>
-              <div><?php if(isset($message)) { echo $message; } ?></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-<!-- JS here -->
-  
-    <!-- All JS Custom Plugins Link Here here -->
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
-
-      <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
-
-
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
-      <script src="./assets/js/price_rangs.js"></script>
-      <!-- Date Picker -->
-      <script src="./assets/js/gijgo.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
-
-    <!-- Scrollup, nice-select, sticky -->
-      <script src="./assets/js/jquery.scrollUp.min.js"></script>
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
+   <section class="u-clearfix u-section-1" id="sec-8459">
+      <div class="u-clearfix u-sheet u-sheet-1">
+          <div class="" style="padding-left: 68px;">
+        <h3 class="u-align-center u-text u-text-1"style="padding-left: 28px;">Job Seekers&nbsp;</h3><br>
+    </div>
+        <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8" style="width: auto;border-style: solid;border-color: #f2f2f2;box-shadow: none;background-color: #f2f2f2;">
+&nbsp; &nbsp;
+<div class="u-layout-row">
       
-      <!-- contact js -->
-      <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-    <!-- Jquery Plugins, main Jquery -->  
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
-  </body>
-</html> 
+<?php 
+
+       $query = "SELECT * FROM users";
+       $artist_id = mysqli_query($connection,$query);
+
+        while($row=mysqli_fetch_array($artist_id)){
+
+            $id=$row['id'];
+            $Firstname=$row['Firstname'];
+            $Lastname=$row['Lastname'];
+            $Image=$row['Image'];
+            $Email=$row['Email'];
+            $Phone=$row['Phone'];
+            $City=$row['City'];
+            $Education=$row['Education'];
+            // $Industry=substr($row['Industry'],0,37);
+            // $Function=substr($row['Function'],0,37);
+            $Industry=$row['Industry'];
+            $Function=$row['Function'];
+            $Experience=$row['Experience'];
+
+  ?>  
+
+<div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8"> 
+    <div class="u-container-layout u-container-layout-8">
+       <div class="u-layout-row">
+  
+
+        <h6 class="u-text u-text-20 u-align-left" style="padding-left: 6px;"><a style="color: #4287f5;" href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a>
+              <br>
+
+              <p class="u-text u-text-5">
+
+              <span style="font-weight: 700;">Education </span><br>
+               <?php echo $Education; ?><br>
+
+              <span style="font-weight: 700;">Email </span><br>
+               <?php echo $Email; ?><br>
+
+              <span style="font-weight: 700;">Phone no </span><br>
+               <?php echo $Phone; ?><br>  
+
+              <!-- <span style="font-weight: 700;">Function </span><br>
+               <?php echo $Function; ?><br>
+
+              <span style="font-weight: 700;">Industry </span><br>
+               <?php echo $Industry; ?><br>
+
+              <span style="font-weight: 700;">Experience </span><br>
+               <?php echo $Experience; ?><br>
+
+              <span style="font-weight: 700;">City </span><br>
+               <?php echo $City; ?><br> -->
+              
+               <br>
+             </p>
+            </h6>
+        <h6 class="u-align-right" style="padding-left: 140px;">
+           <div class="u-align-right">
+                <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                      <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                  </div>
+                </li>
+           </div>
+        <br>
+          <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"> <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt=""></a>
+         </h6>
+          
+     </div>
+    </div>
+  </div>
+
+    <?php } ?> 
+
+<?php
+
+                 if(isset($_GET['delete'])){
+                     $id=$_GET['delete'];
+                     $query="DELETE FROM users WHERE id={$id}";
+                     $delete_query=mysqli_query($connection,$query);
+                     header("Location:Jobseeker_profile.php");
+                 }
+             ?>
+
+</div>
+
+<br>
+<br>
+
+</div>    
+</div>
+</section>
+<br>
+    
+<style>
+
+.u-section-1 .u-text-5 {
+  margin: 14px 0 0;
+  word-wrap: break-word;
+  position: relative;
+  width: 270px;
+}
+
+.u-section-1 .u-group-8 {
+  /*width: 53px;*/
+  /*min-height: 485px;*/
+  background-image: none;
+  /*box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);*/
+  box-shadow: none;
+  height: auto;
+  margin: 32px 273px 0 auto;
+}
+
+.u-section-1 .u-container-layout-8 {
+  padding: 30px 9px 0;
+}
+
+.u-section-1 .u-group-8 {
+  margin-top: 15px;
+  margin-right: 69px;
+  height: auto;
+}
+
+.u-section-1 .u-group-8 {
+    margin-top: 42px;
+    margin-right: 12px;
+    margin-left: initial;
+    background-color: #ffffff;
+    /*width: 413px;*/
+    width: 540px;
+    padding-bottom: 42px;
+}
+
+</style>
+
+ <?php include "footer.php"; ?>

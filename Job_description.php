@@ -102,34 +102,34 @@
     ?> 
 
 
-           <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <div class="dropdown-header text-center">
+<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+  <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+  <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
+<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+    <div class="dropdown-header text-center">
 
-  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+<img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
-                  <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                      <?php
-                      
-                      if(isset($_SESSION['Firstname'])){
-                          
-                        echo $_SESSION['Firstname']; 
-                         
-                      }
-                      
-                      ?>
-                      
-                    </p>
-                  
-                </div>
-                <a class="dropdown-item" href="profile.php">My Profile <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
-                 
-                <a class="dropdown-item"href="Logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+      <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
+          <?php
+          
+          if(isset($_SESSION['Firstname'])){
               
-              </div>
-          </li>
+            echo $_SESSION['Firstname']; 
+             
+          }
+          
+          ?>
+          
+        </p>
+      
+    </div>
+    <a class="dropdown-item" href="profile.php">My Profile <span class="badge badge-pill badge-danger"></span><i class="dropdown-item-icon ti-dashboard"></i></a>
+     
+    <a class="dropdown-item"href="Logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+  
+  </div>
+</li>
 
 <?php 
               
