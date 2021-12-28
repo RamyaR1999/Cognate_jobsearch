@@ -306,14 +306,14 @@ background-size: cover;
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="#Our History" target="_blank">our history</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" href="#Our History" target="">our history</a>
                 </p>
               </div>
             </div>
              <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="#our story" target="_blank">our brand story</a>
+                  <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-4" href="#our story" target="">our brand story</a>
                 </p>
               </div>
             </div>
@@ -321,7 +321,7 @@ background-size: cover;
           <div class="u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-1">
               <p class="u-text u-text-default u-text-palette-1-base u-text-2">
-                <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="#in news" target="_blank">in news</a></p>
+                <a class="u-active-none u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" href="#in news" target="">in news</a></p>
               </div>
             </div>
            
@@ -391,9 +391,9 @@ background-size: cover;
   
                 <table>
     <tr>
-       <td>
+       <!-- <td>
         <img src="images/SAM 1.jpg" alt="" style="height:200px; margin:30px; margin-left:30px;" >
-  </td>
+  </td> -->
 
  
       <td>
@@ -465,7 +465,7 @@ person at a home</p>
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-6">
                         <div class="right-caption">
-                            <div class="section-tittle section-tittle2"><br>
+                            <div class="section-tittle section-tittle2">
                               <h2 style="color:Crimson;font-size:40px;">Growth</h2>
                             </div>
                             <div class="support-caption">
@@ -491,6 +491,7 @@ person at a home</p>
                 </div>
             </div>
         </div>
+        
        <div class="support-company-area support-padding fix">
             <div class="container">
                 <div class="row align-items-center">
@@ -504,15 +505,8 @@ person at a home</p>
                             <div class="support-caption">
                                 <p>One of the main differences between entrepreneurship and startup is a team. Entrepreneurship is all about the work of one person. Startup, on the other hand, requires highly skilled, talented and speedy individuals who have an understanding with one another. They’re willing to work together collectively as a team by sharing responsibilities.
                                 
-                                Working as a team also means that everyone would consider the startup company as one’s own, rather than being an employee of the company and only care about the pay.
-
-</p>
-
-
-                               <!--  <a href="Register_Member.php" class="btn post-btn">Post a job</a> -->
-
-
-                            </div>
+                                Working as a team also means that everyone would consider the startup company as one’s own, rather than being an employee of the company and only care about the pay.</p>
+                              </div>
 
                         </div>
                     </div>
@@ -520,7 +514,6 @@ person at a home</p>
                         <div class="right-caption">
                             <!-- Section Tittle -->
                             <div class="section-tittle section-tittle2"><br>
-                                <!-- <span>Our History</span> -->
                                 <h2 style="color:Crimson;font-size:40px;">Tech-Oriented</h2>
                             </div>
                             <div class="support-caption">
@@ -696,18 +689,10 @@ background-size: cover;
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="right-caption">
-                           
-                                <span>Business</span>
-                               
+                            <span>Team</span>
                             <div class="support-caption">
-                                <p >Business is a very broad term that can cover any sort of activity that helps an organisation, big or small, to stay profitable and generate money. Most jobs involve some aspects of business whether you work as a lawyer, an engineer, a scientist or an accountant.</p>
-                                
-
-
-                               
-
-
-                            </div>
+                                <p>One of the main differences between entrepreneurship and startup is a team. Entrepreneurship is all about the work of one person. Startup, on the other hand, requires highly skilled, talented and speedy individuals who have an understanding with one another. They’re willing to work together collectively as a team by sharing responsibilities.
+                                </div>
 
                         </div>
                     </div>
@@ -723,9 +708,11 @@ background-size: cover;
                             <div class="section-tittle section-tittle2"><br>
                                
                             </div>
-                            <span>Team</span>
+                            <span>Business</span>
+                               
                             <div class="support-caption">
-                                <p>One of the main differences between entrepreneurship and startup is a team. Entrepreneurship is all about the work of one person. Startup, on the other hand, requires highly skilled, talented and speedy individuals who have an understanding with one another. They’re willing to work together collectively as a team by sharing responsibilities.
+                                <p >Business is a very broad term that can cover any sort of activity that helps an organisation, big or small, to stay profitable and generate money. Most jobs involve some aspects of business whether you work as a lawyer, an engineer, a scientist or an accountant.
+                           
 
 </p>
 
@@ -736,20 +723,6 @@ background-size: cover;
 
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="right-caption">
-                            
-                            <div class="support-caption">
-                                <p >Working as a team also means that everyone would consider the startup company as one’s own, rather than being an employee of the company and only care about the pay.</p>
-                                
-
-
-                               
-
-
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
