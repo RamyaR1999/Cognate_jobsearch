@@ -67,7 +67,8 @@ $mail->SMTPSecure='tls';
             
           // }
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience_years) && !empty($Experience_months) && !empty($Current_Salary_lakhs) && !empty($Current_Salary_thousand) && !empty($Expected_Salary_lakhs) && !empty($Expected_Salary_thousand) && !empty($upload_tempname)){
+      if(!empty($Firstname) && !empty($Lastname)  && !empty($Email) && !empty($Password)
+      && !empty($Confirm_password)  && !empty($upload_tempname)){
        
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
@@ -88,7 +89,7 @@ $mail->SMTPSecure='tls';
             
         if($Password == $Confirm_password){
         
-        if(preg_match("/^[0-9]{10}$/", $Phone)) {   
+        // if(preg_match("/^[0-9]{10}$/", $Phone)) {   
 
 
 
@@ -148,10 +149,10 @@ $mail->SMTPSecure='tls';
  }
 
 }
-          }else{
-              $message_phone = "Invalid Phone No";
+        //   }else{
+        //       $message_phone = "Invalid Phone No";
             
-        }
+        // }
             
           }else{
             
@@ -330,13 +331,15 @@ $mail->SMTPSecure='tls';
               
     ?>  
 
-<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-    <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
-    </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-            <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+<div class="main-menu">
+  <nav class="d-none d-lg-block">   
+    <ul id="navigation">
+        <li>
+          <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+              <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt=""></a>
+          <ul class="submenu">
+                <div class="dropdown-header text-center">
+  <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -350,11 +353,14 @@ $mail->SMTPSecure='tls';
                       ?>
                       
                     </p>     
-            </div>
-            <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
-            <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-        </div>
-</li>
+                </div>
+            <li><a href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a></li>
+            <li><a href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a></li>
+          </ul>
+          </li>
+    </ul>  
+  </nav>
+</div>
 
 <?php 
               
@@ -364,9 +370,9 @@ $mail->SMTPSecure='tls';
 
 
 
-        </div>
-    </div>
-</div>
+                              </div>
+                          </div>
+                      </div>
                      <!--mobile button--> 
                      <div class="col-12">
                           <div class="mobile_menu d-block d-lg-none"></div>
@@ -466,19 +472,23 @@ $mail->SMTPSecure='tls';
         <p class="u-align-left u-text u-text-default u-text-3"></p>
       </div>
     </section>
-    <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-      <div class="u-align-left card-header bg-transparent border-0">
-            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>Enter your Details:</h3>
-        </div>
+<section class="u-clearfix u-gradient u-section-1" id="sec-6065">  
+<div class="u-layout-row">    
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
-          <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
+            <div class="u-align-left">
+            <h3 class=""><i class=""></i>Enter your Details:</h3>
+          </div>
+            <div class="u-align-right">
+              <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
+<form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
+
+                    <div class="form-group row">
                 <div class="col-md-13">
                    <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6><br>
                    <span  class="">Fields marked with * are required fields</span>
                    <h6 class="text-center" style="color:#ff0000"></h6>
                </div>
-                  <div class="u-form-group u-form-name u-form-group-1">
+             <div class="u-form-group u-form-name u-form-group-1">
                      <span >Firstname * </span>
                      <div class="col-sm-12">
                           <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
@@ -525,485 +535,6 @@ $mail->SMTPSecure='tls';
                           <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
                       </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
-                        <span >Phone * </span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5"placeholder="Enter the Phone no " name="Phone">
-                          <span class="focus-border"></span>
-                        </div>
-                        <h6 style="color:#a7adb8"><?php echo '10-digit mobile number without prefixes' ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $message_phone; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
-                      </div>&nbsp;
-
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >City * </span>
-                        <div class="col-sm-12">
-                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
-                            <option value="">-- please select city --</option>
-                            <option value="Agartala">Agartala</option>
-                            <option value="Agra">Agra</option>
-                            <option value="Ahmadnagar">Ahmadnagar</option>
-                            <option value="Ahmedabad">Ahmedabad</option>
-                            <option value="Allahabad">Allahabad</option>
-                            <option value="Amritsar">Amritsar</option>
-                            <option value="Bengaluru / Bangalore">Bengaluru / Bangalore</option>
-                            <option value="Bhubaneswar">Bhubaneswar</option>
-                            <option value="Chandigarh">Chandigarh</option>
-                            <option value="Chandrapur">Chandrapur</option>
-                            <option value="Chennai">Chennai</option>
-                            <option value="Chittoor">Chittoor</option>
-                            <option value="Coimbatore">Coimbatore</option>
-                            <option value="Cuttack">Cuttack</option>
-                            <option value="Dahod">Dahod</option>
-                            <option value="Daman">Daman</option>
-                            <option value="Dehradun">Dehradun</option>
-                            <option value="Delhi">Delhi</option>
-                            <option value="Delhi / NCR">Delhi / NCR</option>
-                            <option value="Dindigul">Dindigul</option>
-                            <option value="Ernakulam">Ernakulam</option>
-                          </select>&nbsp;
-                          <!-- <span class="focus-border"></span> -->
-                        </div>
-                          <h6 style="color:#ff0000"><?php echo $empty_city; ?></h6>
-                    </div>
-
-      <div class="u-form-group u-form-name u-form-group-2">
-        <span >Industry * </span>
-        <div class="col-sm-12">
-           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
-              <option value="">-- please select industry --</option>
-              <option value="Accounting / Finance">Accounting / Finance</option>
-              <option value="Advertising / PR / MR / Events">Advertising / PR / MR / Events</option>
-              <option value="Agriculture / Diary">Agriculture / Diary</option>
-              <option value="Airlines">Airlines</option>
-              <option value="Animation">Animation</option>
-              <option value="Architecture / Interior Design">Architecture / Interior Design</option>
-              <option value="Auto / Auto Ancillary">Auto / Auto Ancillary</option>
-              <option value="Aviation / Aerospace Firm">Aviation / Aerospace Firm</option>
-              <option value="Banking / Financial Services / Broking / Asset Management">Banking / Financial Services / Broking / Asset Management</option>
-              <option value="BPO / ITES">BPO / ITES</option>
-              <option value="Brewery / Distillery">Brewery / Distillery</option>
-              <option value="Broadcasting">Broadcasting</option>
-              <option value="Cement">Cement</option>
-              <option value="Ceramics / Sanitary Ware">Ceramics / Sanitary Ware</option>
-              <option value="Chemicals / PetroChemical">Chemicals / PetroChemical</option>
-              <option value="Construction">Construction</option>
-              <option value="Consumer Durables">Consumer Durables</option>
-              <option value="Courier / Transportation / Freight">Courier / Transportation / Freight</option>
-              <option value="Defence / Government">Defence / Government</option>
-              <option value="Education / Teaching / Training">Education / Teaching / Training</option>
-              <option value="Electricals / Switchgears">Electricals / Switchgears</option>
-              <option value="Engineering / Heavy Engg. / EPC">Engineering / Heavy Engg. / EPC</option>
-              <option value="Export / Import">Export / Import</option>
-              <option value="Facility Management">Facility Management</option>
-              <option value="Fertilizers / Pesticides">Fertilizers / Pesticides</option>
-              <option value="FMCG / Foods / Beverage">FMCG / Foods / Beverage</option>
-              <option value="Food Processing">Food Processing</option>
-              <option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
-              <option value="Glass">Glass</option>
-              <option value="Heat Ventilation Air Conditioning">Heat Ventilation Air Conditioning</option>
-              <option value="Hotels / Restaurants / Hospitality">Hotels / Restaurants / Hospitality</option>
-              <option value="Industrial Products / Heavy Machinery">Industrial Products / Heavy Machinery</option>
-              <option value="Infrastructure">Infrastructure</option>
-              <option value="Insurance">Insurance</option>
-              <option value="Internet / Ecommerce">Internet / Ecommerce</option>
-              <option value="IT-Hardware &amp; Networking">IT-Hardware &amp; Networking</option>
-              <option value="IT-Software / Software Services">IT-Software / Software Services</option>
-              <option value="KPO / Research / Analytics">KPO / Research / Analytics</option>
-              <!-- <option value="Leather">Leather</option>
-              <option value="Legal">Legal</option>
-              <option value="Media / Dotcom / Entertainment">Media / Dotcom / Entertainment</option>
-              <option value="Medical / Healthcare / Hospital">Medical / Healthcare / Hospital</option>
-              <option value="Medical Devices / Equipments">Medical Devices / Equipments</option>
-              <option value="Metals">Metals</option>
-              <option value="Mining">Mining</option>
-              <option value="NGO / Social Services">NGO / Social Services</option>
-              <option value="Office Equipment / Automation">Office Equipment / Automation</option>
-              <option value="Oil and Gas">Oil and Gas</option>
-              <option value="Paper">Paper</option>
-              <option value="Pharma / Biotech / Clinical Research">Pharma / Biotech / Clinical Research</option>
-              <option value="Plastics">Plastics</option>
-              <option value="Power / Energy / Non conventional Energy">Power / Energy / Non conventional Energy</option>
-              <option value="Printing / Packaging">Printing / Packaging</option>
-              <option value="Private Equity / Venture Capitalists / Incubators">Private Equity / Venture Capitalists / Incubators</option>
-              <option value="Publishing">Publishing</option>
-              <option value="Real Estate / Property">Real Estate / Property</option>
-              <option value="Recruitment / HR services">Recruitment / HR services</option>
-              <option value="Retail">Retail</option>
-              <option value="Rubber">Rubber</option>
-              <option value="Security / Law Enforcement">Security / Law Enforcement</option>
-              <option value="Semiconductors / Electronics">Semiconductors / Electronics</option>
-              <option value="Shipping / Marine">Shipping / Marine</option>
-              <option value="Steel">Steel</option>
-              <option value="Strategy / Management Consulting Firms">Strategy / Management Consulting Firms</option>
-              <option value="Sugar">Sugar</option>
-              <option value="Telecom / ISP">Telecom / ISP</option>
-              <option value="Textiles / Garments / Accessories">Textiles / Garments / Accessories</option>
-              <option value="Travel &amp; Tourism">Travel &amp; Tourism</option>
-              <option value="Tyres">Tyres</option>
-              <option value="Water Treatment /  Waste Management">Water Treatment /  Waste Management</option>
-              <option value="Wellness / Fitness / Sports">Wellness / Fitness / Sports</option> -->
-          </select>&nbsp;
-              <!-- <span class="focus-border"></span> -->
-            </div>
-            <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
-      </div>
-
-      <div class="u-form-group u-form-name u-form-group-2">
-        <span >Function * </span>
-        <div class="col-sm-12">
-          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
-            <option value="">-- please select function --</option>
-            <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
-            <option value="Agent">Agent</option>
-            <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
-            <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
-            <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
-            <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch.</option>
-            <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
-            <option value="Banking / Insurance">Banking / Insurance</option>
-            <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
-            <option value="Content / Journalism">Content / Journalism</option>
-            <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
-            <option value="CSR &amp; Sustainability">CSR &amp; Sustainability</option>
-            <option value="Engineering Design / R&amp;D">Engineering Design / R&amp;D</option>
-            <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
-            <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
-            <option value="Guards / Security Services">Guards / Security Services</option>
-            <option value="Hotels / Restaurants">Hotels / Restaurants</option>
-            <option value="HR / Administration / IR">HR / Administration / IR</option>
-            <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
-            <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
-            <option value="IT Software - Client Server">IT Software - Client Server</option>
-            <option value="IT Software - DBA / Datawarehousing">IT Software - DBA / Datawarehousing</option>
-            <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
-            <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
-            <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
-            <option value="IT Software - Mainframe">IT Software - Mainframe</option>
-            <option value="IT Software - Middleware">IT Software - Middleware</option>
-            <option value="IT Software - Mobile">IT Software - Mobile</option>
-            <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
-            <option value="IT Software - QA &amp; Testing">IT Software - QA &amp; Testing</option>
-            <option value="IT Software - System Programming">IT Software - System Programming</option>
-            <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
-            <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
-            <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
-            <!-- <option value="Legal">Legal</option>
-            <option value="Marketing / Advertising / MR / PR">Marketing / Advertising / MR / PR</option>
-            <option value="Packaging">Packaging</option>
-            <option value="Pharma / Biotech / Healthcare / Medical / R&amp;D">Pharma / Biotech / Healthcare / Medical / R&amp;D</option>
-            <option value="Production / Maintenance / Quality">Production / Maintenance / Quality</option>
-            <option value="Purchase / Logistics / Supply Chain">Purchase / Logistics / Supply Chain</option>
-            <option value="Sales / BD">Sales / BD</option>
-            <option value="Secretary / Front Office / Data Entry">Secretary / Front Office / Data Entry</option>
-            <option value="Self Employed / Consultants">Self Employed / Consultants</option>
-            <option value="Shipping">Shipping</option>
-            <option value="Site Engineering / Project Management">Site Engineering / Project Management</option>
-            <option value="Teaching / Education">Teaching / Education</option>
-            <option value="Ticketing / Travel / Airlines">Ticketing / Travel / Airlines</option>
-            <option value="Top Management">Top Management</option>
-            <option value="TV / Films / Production">TV / Films / Production</option>
-            <option value="Web / Graphic Design / Visualiser">Web / Graphic Design / Visualiser</option> -->
-        </select>&nbsp;
-        <!-- <span class="focus-border"></span> -->
-      </div>
-        <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
-  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <span >Education * </span>
-                    <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
-                          <option value="">-- please select education --</option>
-                          <option value="B.A">B.A</option>
-                          <option value="B.Arch">B.Arch</option>
-                          <option value="B.Com">B.Com</option>
-                          <option value="B.Ed">B.Ed</option>
-                          <option value="B.Pharma">B.Pharma</option>
-                          <option value="B.Sc">B.Sc</option>
-                          <option value="B.Tech/B.E.">B.Tech/B.E.</option>
-                          <option value="BCA">BCA</option>
-                          <option value="BDS">BDS</option>
-                          <option value="BVSC">BVSC</option>
-                          <option value="CA">CA</option>
-                          <option value="CS">CS</option>
-                          <option value="Diploma">Diploma</option>
-                          <option value="H.Sc/+2/Intermediate">H.Sc/+2/Intermediate</option>
-                          <option value="ICWA (CMA)">ICWA (CMA)</option>
-                          <option value="ITI">ITI</option>
-                          <option value="LLB">LLB</option>
-                          <option value="LLM">LLM</option>
-                          <option value="M.A">M.A</option>
-                          <option value="ICWA (CMA)">ICWA (CMA)</option>
-                          <option value="ITI">ITI</option>
-                          <option value="LLB">LLB</option>
-                          <option value="LLM">LLM</option>
-                        </select>&nbsp;
-                        <!-- <span class="focus-border"></span> -->
-                      </div>
-                        <h6 style="color:#ff0000"><?php echo $empty_education; ?></h6>
-                  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <div class="u-layout-row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <span >Experience *</span><br>
-                                <div class="col-sm-12">
-                                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience_years"placeholder="Enter your Experience_years"id="Experience_years">
-                          <option value="">years</option>
-                          <option value="0 years">0</option>
-                          <option value="1 years">1</option>
-                          <option value="2 years">2</option>
-                          <option value="3 years">3</option>
-                          <option value="4 years">4</option>
-                          <option value="5 years">5</option>
-                          <option value="6 years">6</option>
-                          <option value="7 years">7</option>
-                          <option value="8 years">8</option>
-                          <option value="9 years">9</option>
-                          <option value="10 years">10</option>
-                          <option value="11 years">11</option>
-                          <option value="12 years">12</option>
-                          <option value="13 years">13</option>
-                          <option value="14 years">14</option>
-                          <option value="15 years">15</option>
-                          <option value="16 years">16</option>
-                          <option value="17 years">17</option>
-                          <option value="18 years">18</option>
-                          <option value="19 years">19</option>
-                          <option value="20 years">20</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                    <div class="form-group row">
-                       <span class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
-                             <option value="">months</option>
-                          <option value="0 months">0</option>
-                          <option value="1 months">1</option>
-                          <option value="2 months">2</option>
-                          <option value="3 months">3</option>
-                          <option value="4 months">4</option>
-                          <option value="5 months">5</option>
-                          <option value="6 months">6</option>
-                          <option value="7 months">7</option>
-                          <option value="8 months">8</option>
-                          <option value="9 months">9</option>
-                          <option value="10 months">10</option>
-                          <option value="11 months">11</option>
-                          <option value="12 months">12</option>
-                          <option value="13 months">13</option>
-                          <option value="14 months">14</option>
-                          <option value="15 months">15</option>
-                          <option value="16 months">16</option>
-                          <option value="17 months">17</option>
-                          <option value="18 months">18</option>
-                          <option value="19 months">19</option>
-                          <option value="20 months">20</option>
-                          <option value="21 months">21</option>
-                          <option value="22 months">22</option>
-                          <option value="23 months">23</option>
-                          <option value="24 months">24</option>
-                          <option value="25 months">25</option>
-                          <option value="26 months">26</option>
-                          <option value="27 months">27</option>
-                          <option value="28 months">28</option>
-                          <option value="29 months">29</option>
-                          <option value="30 months">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-                        <!-- <span class="focus-border"></span> -->
-                     
-                        <h6 style="color:#ff0000"><?php echo $empty_experience; ?></h6>
-                  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <div class="u-layout-row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <span > Current Salary *</span>
-                                <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_lakhs" placeholder="Enter your Current Salary"id="Current_Salary">
-                          <option value="">lakhs</option>
-                          <option value="0 lakhs">0</option>
-                          <option value="1 lakhs">1</option>
-                          <option value="2 lakhs">2</option>
-                          <option value="3 lakhs">3</option>
-                          <option value="4 lakhs">4</option>
-                          <option value="5 lakhs">5</option>
-                          <option value="6 lakhs">6</option>
-                          <option value="7 lakhs">7</option>
-                          <option value="8 lakhs">8</option>
-                          <option value="9 lakhs">9</option>
-                          <option value="10 lakhs">10</option>
-                          <option value="11 lakhs">11</option>
-                          <option value="12 lakhs">12</option>
-                          <option value="13 lakhs">13</option>
-                          <option value="14 lakhs">14</option>
-                          <option value="15 lakhs">15</option>
-                          <option value="16 lakhs">16</option>
-                          <option value="17 lakhs">17</option>
-                          <option value="18 lakhs">18</option>
-                          <option value="19 lakhs">19</option>
-                          <option value="20 lakhs">20</option>
-                          <option value="21 lakhs">21</option>
-                          <option value="22 lakhs">22</option>
-                          <option value="23 lakhs">23</option>
-                          <option value="24 lakhs">24</option>
-                          <option value="25 lakhs">25</option>
-                          <option value="26 lakhs">26</option>
-                          <option value="27 lakhs">27</option>
-                          <option value="28 lakhs">28</option>
-                          <option value="29 lakhs">29</option>
-                          <option value="30 lakhs">30</option>  
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                    <div class="form-group row">
-                       <span  class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="">thousand</option>
-                          <option value="0">0</option>
-                          <option value="1 thousand">1</option>
-                          <option value="2 thousand">2</option>
-                          <option value="3 thousand">3</option>
-                          <option value="4 thousand">4</option>
-                          <option value="5 thousand">5</option>
-                          <option value="6 thousand">6</option>
-                          <option value="7 thousand">7</option>
-                          <option value="8 thousand">8</option>
-                          <option value="9 thousand">9</option>
-                          <option value="10 thousand">10</option>
-                          <option value="11 thousand">11</option>
-                          <option value="12 thousand">12</option>
-                          <option value="13 thousand">13</option>
-                          <option value="14 thousand">14</option>
-                          <option value="15 thousand">15</option>
-                          <option value="16 thousand">16</option>
-                          <option value="17 thousand">17</option>
-                          <option value="18 thousand">18</option>
-                          <option value="19 thousand">19</option>
-                          <option value="20 thousand">20</option>
-                          <option value="21 thousand">21</option>
-                          <option value="22 thousand">22</option>
-                          <option value="23 thousand">23</option>
-                          <option value="24 thousand">24</option>
-                          <option value="25 thousand">25</option>
-                          <option value="26 thousand">26</option>
-                          <option value="27 thousand">27</option>
-                          <option value="28 thousand">28</option>
-                          <option value="29 thousand">29</option>
-                          <option value="30 thousand">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-                        <!-- <span class="focus-border"></span> -->
-                    <h6 style="color:#ff0000"><?php echo $empty_Current_Salary; ?></h6>
-                  </div>
-                  <div class="u-form-group u-form-name u-form-group-2">
-                   
-                  <div class="u-layout-row">
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                             <span> Expected Salary *</span>
-                             <div class="col-sm-12">
-                                <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                                    <option value="">lakhs</option>
-                                    <option value="0 lakhs">0</option>
-                                    <option value="1 lakhs">1</option>
-                                    <option value="2 lakhs">2</option>
-                                    <option value="3 lakhs">3</option>
-                                    <option value="4 lakhs">4</option>
-                                    <option value="5 lakhs">5</option>
-                                    <option value="6 lakhs">6</option>
-                                    <option value="7 lakhs">7</option>
-                                    <option value="8 lakhs">8</option>
-                                    <option value="9 lakhs">9</option>
-                                    <option value="10 lakhs">10</option>
-                                    <option value="11 lakhs">11</option>
-                                    <option value="12 lakhs">12</option>
-                                    <option value="13 lakhs">13</option>
-                                    <option value="14 lakhs">14</option>
-                                    <option value="15 lakhs">15</option>
-                                    <option value="16 lakhs">16</option>
-                                    <option value="17 lakhs">17</option>
-                                    <option value="18 lakhs">18</option>
-                                    <option value="19 lakhs">19</option>
-                                    <option value="20 lakhs">20</option>
-                                    <option value="21 lakhs">21</option>
-                                    <option value="22 lakhs">22</option>
-                                    <option value="23 lakhs">23</option>
-                                    <option value="24 lakhs">24</option>
-                                    <option value="25 lakhs">25</option>
-                                    <option value="26 lakhs">26</option>
-                                    <option value="27 lakhs">27</option>
-                                    <option value="28 lakhs">28</option>
-                                    <option value="29 lakhs">29</option>
-                                    <option value="30 lakhs">30</option>  
-                        </select>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6">
-                    <div class="form-group row">
-                       <span  class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="">thousand</option>
-                          <option value="0 thousand">0</option>
-                          <option value="1 thousand">1</option>
-                          <option value="2 thousand">2</option>
-                          <option value="3 thousand">3</option>
-                          <option value="4 thousand">4</option>
-                          <option value="5 thousand">5</option>
-                          <option value="6 thousand">6</option>
-                          <option value="7 thousand">7</option>
-                          <option value="8 thousand">8</option>
-                          <option value="9 thousand">9</option>
-                          <option value="10 thousand">10</option>
-                          <option value="11 thousand">11</option>
-                          <option value="12 thousand">12</option>
-                          <option value="13 thousand">13</option>
-                          <option value="14 thousand">14</option>
-                          <option value="15 thousand">15</option>
-                          <option value="16 thousand">16</option>
-                          <option value="17 thousand">17</option>
-                          <option value="18 thousand">18</option>
-                          <option value="19 thousand">19</option>
-                          <option value="20 thousand">20</option>
-                          <option value="21 thousand">21</option>
-                          <option value="22 thousand">22</option>
-                          <option value="23 thousand">23</option>
-                          <option value="24 thousand">24</option>
-                          <option value="25 thousand">25</option>
-                          <option value="26 thousand">26</option>
-                          <option value="27 thousand">27</option>
-                          <option value="28 thousand">28</option>
-                          <option value="29 thousand">29</option>
-                          <option value="30 thousand">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-               <h6 style="color:#ff0000"><?php echo $empty_Expected_Salary; ?></h6>
-          </div>
-                       
-                  
-
-              <div class="u-form-group u-form-name u-form-group-2">
                  <span >CV * </span>
                    <div class="form-element">
                      <div class="custom-file-upload">
@@ -1034,9 +565,12 @@ $mail->SMTPSecure='tls';
             <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
             <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
             <input type="hidden" value="" name="recaptchaResponse">
+        </div>
           </form>
-        </div><br>
-      </div>
+          </div>
+          </div>
+           </div>
+        </div> 
     </section>
       </div>
 

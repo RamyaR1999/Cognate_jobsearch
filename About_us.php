@@ -607,7 +607,7 @@ person at a home</p>
         <div class=""></div>
         <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <p id="our story"class="u-text u-text-left u-text-1"> our story.....<span style="font-weight: 700;"></span></p>
+        <p id="our story"class="u-text u-text-left u-text-1"><span style="font-weight: 700;">our story.....</span></p>
 
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
