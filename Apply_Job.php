@@ -78,23 +78,23 @@ $mail->SMTPSecure='tls';
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
            $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
-           $CV = $_FILES['file']['name'];
-           $upload = $_FILES['file']['tmp_name'];
+       //     $CV = $_FILES['file']['name'];
+       //     $upload = $_FILES['file']['tmp_name'];
 
-        move_uploaded_file($upload,"images/$CV");
+       //  move_uploaded_file($upload,"images/$CV");
         
-       if(empty($CV)){
+       // if(empty($CV)){
 
-        $query = "SELECT * FROM users WHERE id = $id ";
-        $select_cv = mysqli_query($connection,$query);
+       //  $query = "SELECT * FROM users WHERE id = $id ";
+       //  $select_cv = mysqli_query($connection,$query);
             
-        while($row = mysqli_fetch_array($select_cv)){
+       //  while($row = mysqli_fetch_array($select_cv)){
 
-        $CV = $row['CV'];
+       //  $CV = $row['CV'];
           
-           }
+       //     }
 
-        }
+       //  }
        
         if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
@@ -124,7 +124,6 @@ $mail->SMTPSecure='tls';
         $_SESSION['Expected_Salary_thousand'] = $Expected_Salary_thousand;
         $_SESSION['CV'] = $CV;
 
-// if(isset($_SESSION['Email']) == $Email){
 
 $mail->Username = 'CGBSTech2021@gmail.com';
 $mail->Password = 'cgbs@2021';
@@ -167,41 +166,65 @@ $receiver_mail->Port=587;
 $receiver_mail->SMTPAuth = true;
 $receiver_mail->SMTPSecure='tls';
 
-
 $receiver_mail->Username = 'CGBSTech2021@gmail.com';
 $receiver_mail->Password = 'cgbs@2021';
 
 $receiver_mail->setFrom ('CGBSTech2021@gmail.com');
 $receiver_mail->addAddress($Job_Email,$the_Firstname);
-
+// $receiver_mail->addAttachment($CV);
+$receiver_mail->addAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
 $receiver_mail->isHTML(true);
 $receiver_mail->Subject = "Resume for a job";
 $receiver_mail->Body    = 'Hi'.' '.$the_Firstname.'<br><br>'.' '.$Firstname.' '.'Applied for a job';
-
 if(!$receiver_mail->send()) {
    echo "Message could not be sent.". $receiver_mail->ErrorInfo;
+
 }else{
-  // header("Location:Job_review.php?Job_details=$the_id & $Job_title");
+
+   $CV = $_FILES['file']['name'];
+           $upload = $_FILES['file']['tmp_name'];
+
+        move_uploaded_file($upload,"images/$CV");
+   if(empty($CV)){
+
+        $query = "SELECT * FROM users WHERE id = $id ";
+        $select_cv = mysqli_query($connection,$query);
+            
+        while($row = mysqli_fetch_array($select_cv)){
+
+        $CV = $row['CV'];
+          
+           }
+
+        }
+              
+       $query="UPDATE users SET CV='{$CV}' WHERE id= '{$db_id}' ";  
+                      
+        $update_profile_query=mysqli_query($connection,$query);
+
+         if(!$update_profile_query) {
+            
+            die("Query Failed" . mysqli_error($connection));
+        }
+
     header("Location:Jobseeker_full_profile.php?profile=$id");
 }
+ 
 
-//  }else{
-
-//           $login = "please Signin";
-// }  
-
- }else{
-    $empty_cv ="please Signin";
- }         
         }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
+             $empty_cv ="please Signin";
+             
+        } 
 
-          }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+        }else{
+             $message_Lastname ="Only Alphabets are allowed in lastname";
+            
+        }
+
+        }else{
+             $message_Firstname ="Only Alphabets are allowed in firstname";
           
-       }
+        }
                    
 }
 
@@ -484,8 +507,8 @@ if(!$receiver_mail->send()) {
           <span class="col-sm-3 col-form-label">Resume:</span>
           <div class="col-md-6">
              <div class="form-group row">
-                <input type="file" name="image"><?php echo $CV; ?>
-                <!-- <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6> -->
+                <input type="file" name="file"><?php //echo $CV; ?>
+                <h6 style="color:#a7b0a9">choose your CV here</h6>
              </div>
           </div>
           <br>

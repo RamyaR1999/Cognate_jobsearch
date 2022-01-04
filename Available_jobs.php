@@ -2,6 +2,40 @@
 <?php ob_start (); ?>
 <?php include "db.php"; ?>
 
+<?php
+
+if (isset($_POST['submit'])){
+
+            $search=$_POST['Job_title'];
+            // $role=$_POST['Roles'];
+            // $offer=$_POST['Offerings'];
+            // $locate=$_POST['Location'];
+
+
+              $artist="SELECT * FROM jobs WHERE Job_title = '$search' "; 
+
+              $search_artist=mysqli_query($connection, $artist); 
+
+                 if(!$search_artist){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($search_artist);
+                if($count == 0){
+
+               header ("Location: Available_jobs.php");
+                       
+            }else{
+              while($row=mysqli_fetch_assoc($search_artist)){
+
+                    $id=$row['id'];
+                    $Job_title=$row['Job_title'];
+            }
+
+        }
+        header ("Location: Available_jobs.php");
+        } 
+
+?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -253,20 +287,20 @@
     <section class="u-clearfix u-section-2" id="sec-a8b6">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1">
-          <form action="#" autocomplete="off" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" style="padding: 10px;">
+          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="custom" name="form" style="padding: 10px;">
             <input type="hidden" id="siteId" name="siteId" value="170795794">
             <input type="hidden" id="pageId" name="pageId" value="206021425">
             <div class="u-form-group u-form-name">
               <label for="name-9c33" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Search Job title" id="demoB" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="" class="btn head-btn2 " style="align-center;padding: 20px;">Search</a>
+              <a href="" class="btn head-btn2" style="align-center;padding: 20px;">Search</a>
               <input type="submit" name=submit value="submit" class="u-form-control-hidden">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <!-- <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
+            <input type="hidden" value="" name="recaptchaResponse"> -->
           </form>
         </div>
       </div>
@@ -443,7 +477,7 @@
     // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
     window.addEventListener("DOMContentLoaded", function(){
       ac.attach({
-        target: "demoB",
+        target: "Jobtitle",
         data: "search.php",
         post: { type: "Name" },
         // OPTIONAL
