@@ -7,17 +7,17 @@ $data = array();
 switch ($_POST['type']) {
     default: break;
         
-    //  case "firstname":   
+     case "Firstname":   
         
-    // $query = "SELECT firstname FROM customers  WHERE firstname LIKE '%" . $_POST['search'] . "%' ";
+    $query = "SELECT Firstname FROM users  WHERE Firstname LIKE '%" . $_POST['search'] . "%' ";
     
-    // $statement=mysqli_query($pdo,$query);
+    $statement=mysqli_query($pdo,$query);
     
-    // while($row=mysqli_fetch_assoc($statement)){
+    while($row=mysqli_fetch_assoc($statement)){
         
-    //     $data[] = $row["firstname"];       
-    // }
-    //      break;
+        $data[] = $row["Firstname"];       
+    }
+         break;
     case "Name":
         
      $query = "SELECT Job_title FROM jobs  WHERE Job_title LIKE '%" . $_POST['search'] . "%' ";

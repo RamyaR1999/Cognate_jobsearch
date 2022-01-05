@@ -64,7 +64,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Job seekers profile</title>
+    <title>CGBS-Job seeker profile</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -85,8 +85,7 @@
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-
-<link rel="stylesheet" href="Contact-us.css" media="screen">
+<link rel="stylesheet" href="Page-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -134,7 +133,7 @@
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
      <!-- Main-menu -->
-<div class="main-menu u-custom-menu u-nav-container">
+     <div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
@@ -170,7 +169,8 @@
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_Us.php">Contact</a>
 
 </li>
-     </ul>
+</ul>
+
        </nav>
       </div>         
 <!--header button-->
@@ -181,16 +181,16 @@
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-      <a href="Register-Member.php" class="btn head-btn1">Register</a>
-      <a href="Member-Login.php" class="btn head-btn2">Login</a>
+        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+  
+        <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
  <?php 
               
       }else{
               
-    ?>
-    
+    ?> 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
         <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
@@ -228,16 +228,16 @@
         </div>
     </div>
 </div>
-                     <!--mobile button--> 
-                     <div class="col-12">
-                          <div class="mobile_menu d-block d-lg-none"></div>
-                      </div>
-                  </div>
-              </div>
-         </div>
-     </div>
-      <!-- Header End -->
-  </header>
+ <!--mobile button--> 
+ <div class="col-12">
+      <div class="mobile_menu d-block d-lg-none"></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header End -->
+</header>
 
 <style>
 
@@ -280,19 +280,32 @@
 </style>
 
 <style>
-  span{
-    font-family: "Barlow",sans-serif;
-   font-weight: 400;
-  }
+
+/*.u-sheet:not(.u-image):not(.u-video) {
+    pointer-events: none;
+}
+
+@media (max-width: 1199px)
+.u-section-1 .u-sheet-1 {
+    min-height: 483px;
+}*/
+/*.u-section-1 .u-sheet-1 {
+    min-height: 449px;
+    max-width: 920px;
+}*/
+/*@media (min-width: 968px) and (max-width: 1091px)
+.u-sheet {
+    width: 920px;
+}*/
+
 </style>
 
-   <section class="u-clearfix u-section-1" id="sec-8459">
-      <div class="u-clearfix u-sheet u-sheet-1">
-          <div class="" style="padding-left: 68px;">
-        <h3 class="u-align-center u-text u-text-1"style="padding-left: 28px;">Job Seekers&nbsp;</h3><br>
-    </div>
-        <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8" style="width: auto;border-style: solid;border-color: #f2f2f2;box-shadow: none;background-color: #f2f2f2;">
-&nbsp; &nbsp;
+    <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-section-1" id="carousel_261b">
+      <!-- <div class="u-clearfix u-sheet u-sheet-1" style="max-width: auto;"> -->
+        <div class="" style="padding-left: 28px;">
+        <div class="card">
+        <h3 class="u-align-center u-text u-text-1">Job Seekers&nbsp;</h3><br>
+
 <div class="u-layout-row">
       
 <?php 
@@ -323,7 +336,7 @@
        <div class="u-layout-row">
   
 
-        <h6 class="u-text u-text-20 u-align-left" style="padding-left: 6px;"><a style="color: #4287f5;" href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a>
+         <h6 class="u-text u-text-20 u-align-left" style="padding-left: 6px;"><a style="color: #4287f5;" href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a>
               <br>
 
               <p class="u-text u-text-5">
@@ -352,7 +365,7 @@
                <br>
              </p>
             </h6>
-        <h6 class="u-align-right" style="padding-left: 140px;">
+        <h6 class="u-align-right" style="padding-left: 30px;">
            <div class="u-align-right">
                 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
                       <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
@@ -363,12 +376,13 @@
                 </li>
            </div>
         <br>
-          <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"> <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt=""></a>
+           <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt="">
          </h6>
           
      </div>
     </div>
   </div>
+&nbsp; &nbsp;
 
     <?php } ?> 
 
@@ -382,16 +396,14 @@
                  }
              ?>
 
-</div>
+      </div>
+        </div>
+    </div>
+    </section>
+    <br><br>
 
-<br>
-<br>
+<?php include "footer.php"; ?>
 
-</div>    
-</div>
-</section>
-<br>
-    
 <style>
 
 .u-section-1 .u-text-5 {
@@ -405,8 +417,7 @@
   /*width: 53px;*/
   /*min-height: 485px;*/
   background-image: none;
-  /*box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);*/
-  box-shadow: none;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   height: auto;
   margin: 32px 273px 0 auto;
 }
@@ -422,15 +433,20 @@
 }
 
 .u-section-1 .u-group-8 {
+    margin-top: 174px;
+    margin-right: 30px;
+}
+
+.u-section-1 .u-group-8 {
+    margin-top: 26px;
+    margin-right: 7px;
+}
+
+.u-section-1 .u-group-8 {
     margin-top: 42px;
-    margin-right: 12px;
+    margin-right: initial;
     margin-left: initial;
-    background-color: #ffffff;
-    /*width: 413px;*/
-    width: 540px;
-    padding-bottom: 42px;
+    width: 413px;
 }
 
 </style>
-
- <?php include "footer.php"; ?>
