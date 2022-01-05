@@ -292,22 +292,26 @@
         <h3 class="u-align-center u-text u-text-1"style="padding-left: 28px;">Job Seekers&nbsp;</h3><br>
     </div>
 
-<form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
-<div class="u-layout-row">
-     <div class="col-md-3">
-         <h6>Search Job seekers</h6>
-             <form action="" method="post" autocomplete="off">
-                 <div class="input-group">
-                     <input name="Firstname" id="Firstname" type="text" placeholder="Job seekers name" class="form-control">
-                            <button name="submit" style="padding: 0.5rem 1rem;" class="btn head-btn2" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                   </div>
-              </form>
-         </div>
 
-      <div class="col-md-3">
-         <h6>Industry</h6>
+    <br>
+
+<div class="u-layout-row"style="min-width: 100%;">
+    <!-- <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
+<form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
+<div class="u-align-left" style="min-width: 200px;">
+    <div class="col-md-18">
+ <h6>Search Job seekers</h6>
+     <form action="" method="post" autocomplete="off">
+         <div class="input-group">
+             <input name="Firstname" id="Firstname" type="text" placeholder="Search for Name" class="form-control" style="width: 200px">
+                    <!-- <button name="submit" style="padding: 0.5rem 1rem;" class="btn head-btn2" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button> -->
+           </div>
+      </form>
+  </div>
+<br>
+<h6>Industry</h6>
          <select type="text" class="form-control" name="Industry"id="Industry">
                       
                         <?php      
@@ -324,9 +328,6 @@
 
                             $industry=$row['Industry'];               
 
-                            // echo "<option value='$location'>$location</option>";
-                            // } 
-
                            if($industry == $Industry) {
                             
                          echo "<option value='$Industries'>$industry</option>";
@@ -342,12 +343,11 @@
                         echo "<option selected value='$Industries'>Select Industry</option>";
 
 
-                          ?>   
+                          ?>
          </select>
-      </div>
+  <br>
 
-      <div class="col-md-3">
-         <h6>Education</h6>
+      <h6>Education</h6>
           <select type="text" class="form-control" name="Education"id="Education">
               <?php      
 
@@ -362,9 +362,6 @@
                             while($row=mysqli_fetch_assoc($select_Location)){
 
                             $education=$row['Education'];               
-
-                            // echo "<option value='$location'>$location</option>";
-                            // } 
 
                            if($education == $Education) {
                             
@@ -383,10 +380,8 @@
 
                           ?>           
          </select>
-      </div>
-
-      <div class="col-md-3">
-         <h6>Function</h6>
+<br>
+       <h6>Function</h6>
           <select type="text" class="form-control" name="Function"id="Function">
                 <?php      
 
@@ -401,9 +396,6 @@
                             while($row=mysqli_fetch_assoc($select_Location)){
 
                             $function=$row['Function'];               
-
-                            // echo "<option value='$location'>$location</option>";
-                            // } 
 
                            if($function == $Function) {
                             
@@ -422,14 +414,15 @@
 
                           ?>         
           </select> 
-      </div>
-  </div>
+ <br>         
+<center><button name="submit" style="padding: 0.8rem 2rem;" class="btn head-btn2" type="submit">
+    <i class="fa fa-search">Search</i>
+  </button></center>
+
+</div>
+
 </form>
-
-    <br>
-
-<div class="u-layout-row"style="min-width: 100%;">
-
+<div class="u-align-right" style="padding-left: 30px;">
 <?php
 
  if (isset($_POST['submit'])){
@@ -547,43 +540,35 @@
 ?>
 
 <div class="card">
-    <div class="container">
-        <div class="u-layout-row">
-            <div class="u-align-left" style="width: 270px;">
-
-            <h4>
-              <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b>
-              </a>
-            </h4> 
-
+<div class="container">
+    <div class="u-layout-row">
+        <div class="u-align-left" style="width: 270px;">
+            <h4><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a></h4> 
             <p><?php echo $Education; ?></p>
             <p><?php echo $Email; ?></p>
             <p><?php echo $Phone; ?></p>
-     
-
-            </div>
-
+ 
+  </div>
   <div class="u-align-right" style="padding-left: 40px;">
-    <div class="u-align-right">
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-            <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-                <i style="font-size:22px" class="fa fa-ellipsis-v"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-             <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
-            </div>
-        </li>
-    </div>   
-    <h4 style="padding-bottom: 4px;"><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
-       <img src="images/<?php echo $Image ?>" alt="Avatar" style="width:80px; height:80px; border-radius:10%;">
-   </a></h4>
+  <div class="u-align-right">
+                <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                      <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                  </div>
+                </li>
+           </div>   
+    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
+     <img src="images/<?php echo $Image ?>" alt="Avatar" style="width:80px; height:80px; border-radius:10%;"></a>
   </div>
 </div>
+  </div>
 </div>
-</div>
-&nbsp;&nbsp;
 
-<?php  } }  ?>
+<?php } } ?>
+
+
 
 <?php
 
@@ -594,7 +579,7 @@
          header("Location:Jobseeker_profile.php");
      }
 ?>
-
+</div>
      </div>          
    </div>
 </section>
