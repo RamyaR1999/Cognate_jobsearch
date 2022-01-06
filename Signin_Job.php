@@ -378,24 +378,26 @@ if(isset($_SESSION['id'])){
           <p>To apply for this job log in to your existing account.</p><br>
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
           <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email">
+          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
           <br>
-          <br>
+          <!-- <br> -->
           <span style="font-weight: 600;"class="col-sm-3 col-form-label">Password: </span>
           <input type="password" value="<?php echo $Password; ?>" class="form-control" name="Password">
+          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Password; ?></h6>
           <br>
-          <br>
+          <!-- <br> -->
           <div class="u-form-checkbox u-form-group">
                   <input type="checkbox" id="checkbox-708d" name="remember" value="On">
                   <label for="checkbox-708d" class="u-label">Remember me</label>
                 </div>
-                &nbsp;&nbsp;
+                <!-- &nbsp;&nbsp;
                 &nbsp;&nbsp;
                 &nbsp;&nbsp;
                 &nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                   <input type="submit" name="submit" value="Sign in" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-12 u-btn-1"> 
-                  <a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a>
+                  <a href="Register-Member.php" class="u-border-1 u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Sign up?</a>
 
 
             </h6>

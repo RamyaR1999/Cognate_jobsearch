@@ -265,7 +265,12 @@
     if(isset($_SESSION['status'])){
             ?> 
        <h6 class="" style="color:#13b013"> 
-        <?php   echo $_SESSION['status'];  ?>    
+        <?php   
+
+             echo $_SESSION['status'];
+             unset($_SESSION['status']);
+
+          ?>    
         </h6>
         <?php
             }

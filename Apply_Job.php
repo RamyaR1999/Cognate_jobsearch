@@ -138,7 +138,7 @@ $mail->Body    = 'Hi'.' '.$Firstname.'<br><br>You have successfully applied for 
 if(!$mail->send()) {
    echo "Message could not be sent.". $mail->ErrorInfo;
 }else{
-     $_SESSION['status']="You have successfully applied for a job";
+     $_SESSION['status']="You have successfully applied for a job you can update your details here";
   // echo " otp sent successfully to ur mail: " ;
 }
 

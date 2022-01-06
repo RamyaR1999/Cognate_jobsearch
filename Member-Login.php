@@ -309,6 +309,8 @@
 
             <?php    
                     echo $_SESSION['Register_status'];
+                    unset($_SESSION['Register_status']);
+
              ?>
               </h6>
             <?php
