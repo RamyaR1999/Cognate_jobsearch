@@ -299,15 +299,22 @@
         <div class="u-align-center u-container-style u-group u-radius-10 u-shape-round u-#f2f2f2 u-group-1">
           <div class="u-container-layout u-valign-middle u-container-layout-1">
             <h3 class="u-text u-text-default u-text-1">Sign In</h3>
-            
+            <br>
+
             <?php
                 
-                if(isset($_SESSION['status'])){
-                    
-                    echo $_SESSION['status'];
+                if(isset($_SESSION['Register_status'])){
+                ?>
+              <h6 class="text-center" style="color:#57de2f">
+
+            <?php    
+                    echo $_SESSION['Register_status'];
+             ?>
+              </h6>
+            <?php
                 }
                 
-                ?>
+            ?>
             
             <div class="u-expanded-width u-form u-login-control u-form-1">
               <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 05, 2022 at 09:56 AM
+-- Generation Time: Jan 06, 2022 at 07:49 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -120,9 +120,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
-(49, 'Rohan', 'Raj', 'Rohan2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Agriculture / Diary', 'Analytics & Business Intelligence', 'B.Com', '2', '', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
-(50, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Agriculture / Diary', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'A1_SOLUTIONS.docx', 638697),
-(55, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9834567892', 'profile.png', 'Ahmadnagar', 'Advertising / PR / MR / Events', 'Agent', 'B.Arch', '1 years', '1 months', '1 lakhs', '2 thousand', '2 lakhs', '1 thousand', 'A1_SOLUTIONS.docx', 773800);
+(1, 'Rithvika', 'Mohan', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Agriculture / Diary', 'Analytics & Business Intelligence', 'B.Com', '2', '', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
+(2, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Agriculture / Diary', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'A1_SOLUTIONS.docx', 638697),
+(3, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'profile.png', 'Srimushnam', '', '', 'BCA', '', '', '', '', '', '', 'Ramya R.docx', 351499);
 
 --
 -- Indexes for dumped tables
@@ -166,7 +166,7 @@ ALTER TABLE `request_callback`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

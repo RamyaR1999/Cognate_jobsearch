@@ -141,10 +141,10 @@ $mail->SMTPSecure='tls';
           if(!$mail->send()) {
              echo "Message could not be sent.". $mail->ErrorInfo;
           }else{
-             $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
+             // $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
+            $_SESSION['Register_status'] ="Register done please login";
+             header( "Location: Member-Login.php" ); 
           }        
-           
-              // header( "Location: otp.php" ); 
         
  }
 

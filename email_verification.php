@@ -7,28 +7,6 @@
             here - <a href="Member-Login.php">login</a></label>';
           
 
-       
-
-// session_start();
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $to=$_POST['email'];
-// $subject = "OTP";
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: 07.ramyar@gmail.com" . "\r\n" .
-// "CC: thennarasan1988@gmail.com";
-// mail($to,$subject,$txt,$headers);
-// if(isset($_POST['btn-save']))
-// {
-// $_SESSION['firstname']=$_POST['firstname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
-// header( "Location: Member-Login.php" );
-
-// echo "otp sent your email";
-
-// }
  ?>
 
 <!DOCTYPE html>

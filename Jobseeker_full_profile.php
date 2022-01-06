@@ -279,11 +279,15 @@
           </div>
           <br>
 <center><img class="" style="width:300px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
-            <!-- <center><button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button></center> -->
+            <center>
+
+            <a href="Jobseeker_edit_profile.php?profile=<?php echo $id; ?>" class="btn head-btn1">Edit Profile</a>
+
+            </center>
 
               </div>
               </div>
-
+<br>
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-container-layout-3">
                   <center><h3 class="u-text u-text-default u-text-6">Details</h3></center>
