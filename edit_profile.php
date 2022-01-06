@@ -45,27 +45,26 @@ if(isset($_SESSION['id'])){
            $Education =$_POST['Education'];
            $Experience =$_POST['Experience_years'];
            $Salary =$_POST['Current_Salary_lakhs'];
-           // $Image = $_FILES['image']['name'];
-           // $user_image_tempname = $_FILES['image']['tmp_name'];
+           $Image = $_FILES['image']['name'];
+           $user_image_tempname = $_FILES['image']['tmp_name'];
            $CV = $_FILES['file']['name'];
            $upload = $_FILES['file']['tmp_name'];
 
-             // move_uploaded_file($user_image_tempname,"images/$Image");
-             move_uploaded_file($upload,"images/$CV");
+             move_uploaded_file($user_image_tempname,"images/$Image");
+             move_uploaded_file($upload,"cv/$CV");
         
-          //  if(empty($Image)){
+           if(empty($Image)){
             
-          //   $query = "SELECT * FROM users WHERE id = $id ";
-          //   $select_image = mysqli_query($connection,$query);
+            $query = "SELECT * FROM users WHERE id = $id ";
+            $select_image = mysqli_query($connection,$query);
                 
-          //   while($row = mysqli_fetch_array($select_image)){
+            while($row = mysqli_fetch_array($select_image)){
                 
-          //   $Image = $row['Image'];
-          //   $CV = $row['CV'];
+            $Image = $row['Image'];
               
-          //      }
+               }
             
-          // }
+          }
           if(empty($CV)){
 
             $query = "SELECT * FROM users WHERE id = $id ";
@@ -364,16 +363,20 @@ if(isset($_SESSION['id'])){
                   <h3 class="u-text u-text-default u-text-6">Details</h3>
                   <p class="u-text u-text-7">
                 <div class="row">
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Profile: </span>
+                         <div class="col-sm-12">
                            <input type="file" name="image">
+                       </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">CV: </span>
+                         <div class="col-sm-12">
                            <input type="file" name="file">
+                       </div>
                         </div>
                     </div>
                 </div>
@@ -430,8 +433,7 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">City: </span>
                           <div class="col-sm-12">
-                             <input type="text" value="<?php echo $City; ?>" class="form-control" name="City">
-                             
+                             <input type="text" value="<?php echo $City; ?>" class="form-control" name="City">  
                           </div>
                     </div>
                  </div>
@@ -449,8 +451,7 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Function: </span>
                           <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function">
-                             
+                             <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function">  
                           </div>
                     </div>
                  </div>
@@ -460,9 +461,7 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience: </span>
                          <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years">
-                        <!-- <br>22 years<br> -->
-                         
+                             <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years">                   
                         </div>
                     </div>
                  </div>
@@ -476,16 +475,7 @@ if(isset($_SESSION['id'])){
                     </div>
                  </div>
                </div>
-               <!-- <span style="font-weight: 700;">Location: </span>
-                    <div id="locationField"><input id="myInput" type="text" value="<?php echo $Location; ?>" class="form-control" onFocus="geolocate()" name="Location"></div> -->
-                    <!-- <br>'s-Hertogenbosch, The Netherlands, Earth -->
                   </p>
-                  
-           <!-- <div class="u-align-center u-form-group u-form-submit">
-              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Update profile<br>
-              </a>
-              <input type="submit" name="edit_profile" value="submit" class="u-form-control-hidden">
-            </div> -->
          <div class="input-group-btn">
           <input class="btn btn-primary" type="submit" name="edit_profile" value="Update profile">
         </div>

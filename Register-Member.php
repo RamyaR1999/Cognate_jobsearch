@@ -42,30 +42,16 @@ $mail->SMTPSecure='tls';
          $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
          
          $email_verification_link = $_POST['email_verification_link'];
-         // $CV = $_FILES['CV']['Name'];
-         // $upload = "uploads/".$CV;
 
          $CV = $_FILES['file']['name'];
          $upload_tempname = $_FILES['file']['tmp_name'];
-         $upload_dir = 'images';
+         $upload_dir = 'cv';
 
          $otp=$_POST['otp'];
          $otp=$rndno;
          $error = 0;
 
         move_uploaded_file($upload_tempname,$upload_dir.'/'.$CV);
-          // if(empty($Image)){
-            
-          //   $query = "SELECT * FROM users WHERE id = $id ";
-          //   $select_image = mysqli_query($connection,$query);
-                
-          //   while($row = mysqli_fetch_array($select_image)){
-                
-          //   $CV = $row['CV'];
-              
-          //      }
-            
-          // }
 
       if(!empty($Firstname) && !empty($Lastname)  && !empty($Email) && !empty($Password)
       && !empty($Confirm_password)  && !empty($upload_tempname)){
