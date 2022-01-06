@@ -341,7 +341,7 @@ if (isset($_POST['submit'])){
   $count=ceil($count/$per_page);
 
 
-  $query="SELECT * FROM Jobs LIMIT $page_1, $per_page";
+  $query="SELECT * FROM Jobs ORDER BY Branch DESC LIMIT $page_1, $per_page";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
@@ -353,7 +353,7 @@ if (isset($_POST['submit'])){
      $Branch = $row['Branch'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_specification = substr($row['Job_specification'],0,200);
+     $Job_specification = substr($row['Job_specification'],0,150);
 
 
 ?>

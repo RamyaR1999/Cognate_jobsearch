@@ -556,6 +556,7 @@ background-size: cover;
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="-1">-- please select branch --</option>
+                              <option value="Work from Home">Work from Home</option>
                               <option value="Ahmedabad">Ahmedabad</option>
                               <option value="Baroda">Baroda</option>
                               <option value="Bengaluru">Bengaluru</option>

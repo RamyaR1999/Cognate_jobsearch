@@ -599,6 +599,7 @@
   transition: 0.3s;
   width: flex;
   margin-bottom: 22px;
+  padding-bottom: 20px;
 }
 
 .card:hover {
