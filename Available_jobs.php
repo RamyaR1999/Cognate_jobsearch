@@ -263,11 +263,19 @@ if (isset($_POST['submit'])){
 
 </style>
 
-    <section class="u-clearfix u-custom-color-2 u-section-1" id="sec-2d18">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">premium jobs</h1>
-        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">jobs in india.</h1>
-        <p class="u-align-left u-text u-text-default u-text-3">640 jobs in India.</p>
+
+
+
+
+
+    <section class="u-clearfix u-section-1" id="sec-2d18">
+    <div style="background-image: url('ajob1.jfif'); background-repeat:no-repeat;  background-attachment: fixed;
+  background-size: cover;">
+    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="crimson" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,80C640,85,800,139,960,160C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+-->  <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-left u-text u-text-default  u-text-1" style="color:white;">“The people who are crazy enough to think they can change the world are the ones who do.”</h1>
+       
+</div>
       </div>
     </section>
 
@@ -302,6 +310,10 @@ if (isset($_POST['submit'])){
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
             <input type="hidden" value="" name="recaptchaResponse"> -->
           </form>
+         
+
+
+	
         </div>
       </div>
     </section>
