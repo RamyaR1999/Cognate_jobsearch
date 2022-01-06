@@ -64,7 +64,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Job seeker profile</title>
+    <title>CGBS-Job seekers profile</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -85,7 +85,8 @@
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Page-1.css" media="screen">
+
+<link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -133,7 +134,7 @@
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
      <!-- Main-menu -->
-     <div class="main-menu u-custom-menu u-nav-container">
+<div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
@@ -169,8 +170,7 @@
      <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_Us.php">Contact</a>
 
 </li>
-</ul>
-
+     </ul>
        </nav>
       </div>         
 <!--header button-->
@@ -181,16 +181,16 @@
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-        <a href="Register-Member.php" class="btn head-btn1">Register</a>
-  
-        <a href="Member-Login.php" class="btn head-btn2">Login</a>
+      <a href="Register-Member.php" class="btn head-btn1">Register</a>
+      <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
  <?php 
               
       }else{
               
-    ?> 
+    ?>
+    
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
         <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
@@ -228,16 +228,16 @@
         </div>
     </div>
 </div>
- <!--mobile button--> 
- <div class="col-12">
-      <div class="mobile_menu d-block d-lg-none"></div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-<!-- Header End -->
-</header>
+                     <!--mobile button--> 
+                     <div class="col-12">
+                          <div class="mobile_menu d-block d-lg-none"></div>
+                      </div>
+                  </div>
+              </div>
+         </div>
+     </div>
+      <!-- Header End -->
+  </header>
 
 <style>
 
@@ -280,35 +280,249 @@
 </style>
 
 <style>
-
-/*.u-sheet:not(.u-image):not(.u-video) {
-    pointer-events: none;
-}
-
-@media (max-width: 1199px)
-.u-section-1 .u-sheet-1 {
-    min-height: 483px;
-}*/
-/*.u-section-1 .u-sheet-1 {
-    min-height: 449px;
-    max-width: 920px;
-}*/
-/*@media (min-width: 968px) and (max-width: 1091px)
-.u-sheet {
-    width: 920px;
-}*/
-
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
 </style>
 
-    <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-section-1" id="carousel_261b">
-      <!-- <div class="u-clearfix u-sheet u-sheet-1" style="max-width: auto;"> -->
-        <div class="" style="padding-left: 28px;">
-        <div class="card">
-        <h3 class="u-align-center u-text u-text-1">Job Seekers&nbsp;</h3><br>
+   <section class="u-clearfix u-section-1" id="sec-8459">
+      <div class="u-clearfix u-sheet u-sheet-1">
+          <div class="" style="padding-left: 68px;">
+        <h3 class="u-align-center u-text u-text-1"style="padding-left: 28px;">Job Seekers&nbsp;</h3><br>
+    </div>
 
+<form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
 <div class="u-layout-row">
-      
+     <div class="col-md-3">
+         <h6>Search Job seekers</h6>
+             <form action="" method="post" autocomplete="off">
+                 <div class="input-group">
+                     <input name="Firstname" id="Firstname" type="text" placeholder="Job seekers name" class="form-control">
+                            <button name="submit" style="padding: 0.5rem 1rem;" class="btn head-btn2" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                   </div>
+              </form>
+         </div>
+
+      <div class="col-md-3">
+         <h6>Industry</h6>
+         <select type="text" class="form-control" name="Industry"id="Industry">
+                      
+                        <?php      
+
+                            $query="SELECT Industry FROM users";
+                            $select_Location=mysqli_query($connection,$query);
+
+                             if(!$select_Location) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_Location)){
+
+                            $industry=$row['Industry'];               
+
+                            // echo "<option value='$location'>$location</option>";
+                            // } 
+
+                           if($industry == $Industry) {
+                            
+                         echo "<option value='$Industries'>$industry</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$industry'>$industry</option>";
+             
+                         }     
+                        } 
+                       
+                        $Industries=$_POST['Industry'];
+                        echo "<option selected value='$Industries'>Select Industry</option>";
+
+
+                          ?>   
+         </select>
+      </div>
+
+      <div class="col-md-3">
+         <h6>Education</h6>
+          <select type="text" class="form-control" name="Education"id="Education">
+              <?php      
+
+                            $query="SELECT Education FROM users";
+                            $select_Location=mysqli_query($connection,$query);
+
+                             if(!$select_Location) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_Location)){
+
+                            $education=$row['Education'];               
+
+                            // echo "<option value='$location'>$location</option>";
+                            // } 
+
+                           if($education == $Education) {
+                            
+                         echo "<option value='$Educate'>$education</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$education'>$education</option>";
+             
+                         }     
+                        } 
+                       
+                        $Educate=$_POST['Education'];
+                        echo "<option selected value='$Educate'>Select Education</option>";
+
+
+                          ?>           
+         </select>
+      </div>
+
+      <div class="col-md-3">
+         <h6>Function</h6>
+          <select type="text" class="form-control" name="Function"id="Function">
+                <?php      
+
+                            $query="SELECT Function FROM users";
+                            $select_Location=mysqli_query($connection,$query);
+
+                             if(!$select_Location) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_Location)){
+
+                            $function=$row['Function'];               
+
+                            // echo "<option value='$location'>$location</option>";
+                            // } 
+
+                           if($function == $Function) {
+                            
+                         echo "<option value='$Functions'>$function</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$function'>$function</option>";
+             
+                         }     
+                        } 
+                       
+                        $Functions=$_POST['Function'];
+                        echo "<option selected value='$Functions'>Select Function</option>";
+
+
+                          ?>         
+          </select> 
+      </div>
+  </div>
+</form>
+
+    <br>
+
+<div class="u-layout-row"style="min-width: 100%;">
+
+<?php
+
+ if (isset($_POST['submit'])){
+
+            $search=$_POST['Firstname'];
+            $Industries=$_POST['Industry'];
+            $Educate=$_POST['Education'];
+            $Functions=$_POST['Function'];
+
+             if($search !="" || $Industries !="" || $Educate !="" || $Functions != ""){
+
+              $users="SELECT * FROM users WHERE Firstname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' "; 
+
+              $search_users=mysqli_query($connection, $users); 
+
+                 if(!$search_users){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($search_users);
+                if($count == 0){
+
+             ?>
+
+          <div class="col-md-1">
+           <?php   echo "<td><a class='btn head-btn2' href='Jobseeker_profile.php'>Back</a></td>";   ?>
+          </div>
+
+             <?php
+
+                echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
+                    
+            }
+           else{
+   
+             while($row=mysqli_fetch_assoc($search_users)){
+
+                    $id=$row['id'];
+                    $Firstname=$row['Firstname'];
+                    $Lastname=$row['Lastname'];
+                    $Image=$row['Image'];
+                    $Email=$row['Email'];
+                    $Phone=$row['Phone'];
+                    $City=$row['City'];
+                    $Education=$row['Education'];
+                    // $Industry=substr($row['Industry'],0,37);
+                    // $Function=substr($row['Function'],0,37);
+                    $Industry=$row['Industry'];
+                    $Function=$row['Function'];
+                    $Experience=$row['Experience'];
+
+?>
+
+
+<div class="card">
+<div class="container">
+    <div class="u-layout-row">
+           <div class="u-align-left" style="width: 270px;">
+            <h4><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a></h4> 
+            <p><?php echo $Education; ?></p>
+            <p><?php echo $Email; ?></p>
+            <p><?php echo $Phone; ?></p>
+ 
+  </div>
+  <div class="u-align-right" style="padding-left: 40px;">
+  <div class="u-align-right">
+                <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                      <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                  </div>
+                </li>
+           </div>   
+    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
+     <img src="images/<?php echo $Image ?>" alt="Avatar" style="width:80px; height:80px; border-radius:10%;"></a>
+  </div>
+
+</div>
+  </div>
+</div>
+&nbsp; &nbsp;
 <?php 
+
+      } 
+    }
+  }else{
+
+    header("Location:Jobseeker_profile.php");
+
+  }
+
+}else{
+
 
        $query = "SELECT * FROM users";
        $artist_id = mysqli_query($connection,$query);
@@ -329,124 +543,96 @@
             $Function=$row['Function'];
             $Experience=$row['Experience'];
 
-  ?>  
 
-<div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8"> 
-    <div class="u-container-layout u-container-layout-8">
-       <div class="u-layout-row">
-  
+?>
 
-         <h6 class="u-text u-text-20 u-align-left" style="padding-left: 6px;"><a style="color: #4287f5;" href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a>
-              <br>
+<div class="card">
+    <div class="container">
+        <div class="u-layout-row">
+            <div class="u-align-left" style="width: 270px;">
 
-              <p class="u-text u-text-5">
+            <h4>
+              <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b>
+              </a>
+            </h4> 
 
-              <span style="font-weight: 700;">Education </span><br>
-               <?php echo $Education; ?><br>
+            <p><?php echo $Education; ?></p>
+            <p><?php echo $Email; ?></p>
+            <p><?php echo $Phone; ?></p>
+     
 
-              <span style="font-weight: 700;">Email </span><br>
-               <?php echo $Email; ?><br>
+            </div>
 
-              <span style="font-weight: 700;">Phone no </span><br>
-               <?php echo $Phone; ?><br>  
-
-              <!-- <span style="font-weight: 700;">Function </span><br>
-               <?php echo $Function; ?><br>
-
-              <span style="font-weight: 700;">Industry </span><br>
-               <?php echo $Industry; ?><br>
-
-              <span style="font-weight: 700;">Experience </span><br>
-               <?php echo $Experience; ?><br>
-
-              <span style="font-weight: 700;">City </span><br>
-               <?php echo $City; ?><br> -->
-              
-               <br>
-             </p>
-            </h6>
-        <h6 class="u-align-right" style="padding-left: 30px;">
-           <div class="u-align-right">
-                <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-                      <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-                     <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
-                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
-                  </div>
-                </li>
-           </div>
-        <br>
-           <img class="" style="width:80px; height:80px; border-radius:10%;" src ='images/<?php echo $Image ?>' alt="">
-         </h6>
-          
-     </div>
-    </div>
+  <div class="u-align-right" style="padding-left: 40px;">
+    <div class="u-align-right">
+        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+            <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                <i style="font-size:22px" class="fa fa-ellipsis-v"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+             <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+            </div>
+        </li>
+    </div>   
+    <h4 style="padding-bottom: 4px;"><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
+       <img src="images/<?php echo $Image ?>" alt="Avatar" style="width:80px; height:80px; border-radius:10%;">
+   </a></h4>
   </div>
-&nbsp; &nbsp;
+</div>
+</div>
+</div>
+&nbsp;&nbsp;
 
-    <?php } ?> 
+<?php  } }  ?>
 
 <?php
 
-                 if(isset($_GET['delete'])){
-                     $id=$_GET['delete'];
-                     $query="DELETE FROM users WHERE id={$id}";
-                     $delete_query=mysqli_query($connection,$query);
-                     header("Location:Jobseeker_profile.php");
-                 }
-             ?>
+     if(isset($_GET['delete'])){
+         $id=$_GET['delete'];
+         $query="DELETE FROM users WHERE id={$id}";
+         $delete_query=mysqli_query($connection,$query);
+         header("Location:Jobseeker_profile.php");
+     }
+?>
 
-      </div>
-        </div>
-    </div>
-    </section>
-    <br><br>
-
-<?php include "footer.php"; ?>
+     </div>          
+   </div>
+</section>
+<br>
 
 <style>
-
-.u-section-1 .u-text-5 {
-  margin: 14px 0 0;
-  word-wrap: break-word;
-  position: relative;
-  width: 270px;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: flex;
+  margin-bottom: 22px;
 }
 
-.u-section-1 .u-group-8 {
-  /*width: 53px;*/
-  /*min-height: 485px;*/
-  background-image: none;
-  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  height: auto;
-  margin: 32px 273px 0 auto;
+.card:hover {
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
+  box-shadow: 0 8px 16px 0 rgba(107, 115, 109);
 }
 
-.u-section-1 .u-container-layout-8 {
-  padding: 30px 9px 0;
-}
+.container {
+  padding: 2px 16px;
+  margin-top: 22px;
 
-.u-section-1 .u-group-8 {
-  margin-top: 15px;
-  margin-right: 69px;
-  height: auto;
 }
-
-.u-section-1 .u-group-8 {
-    margin-top: 174px;
-    margin-right: 30px;
-}
-
-.u-section-1 .u-group-8 {
-    margin-top: 26px;
-    margin-right: 7px;
-}
-
-.u-section-1 .u-group-8 {
-    margin-top: 42px;
-    margin-right: initial;
-    margin-left: initial;
-    width: 413px;
-}
-
 </style>
+
+<!-- Autocomplete Script -->
+<script>
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "Firstname",
+        data: "search.php",
+        post: { type: "Firstname" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+</script>
+
+ <?php include "footer.php"; ?>
