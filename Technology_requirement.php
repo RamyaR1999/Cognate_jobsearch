@@ -343,7 +343,7 @@
             </div>
           <h3>-->
           <h4>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Staffing and Consulting Services.Consultative approach backed with expertise across multiple technologies.Flat Management Structure,prompt decision &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with flexible approach to help changing dynamics of the projects.</h4><!--</h3>-->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Staffing and Consulting Services.Consultative approach backed with expertise across multiple technologies.Flat Management Structure,prompt decision  with flexible approach to help changing dynamics of the projects.</h4><!--</h3>-->
         <!-- </p> -->
       <!--</div>
     </div>-->
@@ -390,7 +390,7 @@ confidentiality.<br>-->
         <p class="u-text u-text-center u-text-1"><h2><strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are here to help ur organisation's growth :</strong></h2><span style="font-weight: 700;"></span>
           
       <br>
-          <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whatever your hiring needs,We provide recruitment solutions for a wide range of technology skill.sets and requirements from custom development &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;work to engineering solutions migrations,up,grades and more.Read about our complete range of tech solutions here.<br>
+          <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whatever your hiring needs,We provide recruitment solutions for a wide range of technology skill.sets and requirements from custom development work to engineering solutions migrations,up,grades and more.Read about our complete range of tech solutions here.<br>
        </h4>
      </p>
       <!-- </div> -->
@@ -455,29 +455,17 @@ confidentiality.<br>-->
       <span class="box-text icon">--><!--<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6) PMO services</h3><br>--><!--</span>-->
     </h1>
   </section>
-     <!-- <svg>
-      
-      <svg id="arrow-right" viewbox="0 0 50 50" width="50%" height="50%">-->
-           <!-- <path d="M2,10.9374 L15.604,10.9374 L11.289,15.2964 C10.9,15.6884 10.904,16.3224 11.297,16.7104 C11.688,17.0994 12.323,17.0954 12.711,16.7034 L18.711,10.6414 C18.897,10.4524 19.001,10.1974 19,9.9324 C18.999,9.6664 18.892,9.4134 18.703,9.2264 L12.703,3.2894 C12.509,3.0964 12.254,3.0004 12,3.0004 C11.742,3.0004 11.484,3.0994 11.289,3.2964 C10.9,3.6884 10.904,4.3224 11.297,4.7104 L15.568,8.9374 L2,8.9374 C1.447,8.9374 1,9.3854 1,9.9374 C1,10.4894 1.447,10.9374 2,10.9374"></path>
-           </svg>
-             </svg>
-             </h1>-->
-
+    
        <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
         <h1 class="u-align-left u-text u-text-left u-text-black u-text-1"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect with our cognate global
           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and get practiced..</h2></h1>
-        
-       <a  class="u-align-left u-text u-text-default u-text-1 u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 30px; color: white;" href="Contact_us.php">Contact us
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="" class="btn head-btn2 " style="align-right">Contact us</a>
               </a>
           <br><br>
 
     </section>
-     <!--<section class="u-clearfix u-grey-2 u-lightbox text-capitalize u-section-1" id="sec-de5a">
-      <div class="u-clearfix u-sheet u-sheet-1">-->
-         <!--<section class="u-clearfix u-grey-5 u-lightbox text-capitalize u-section-1" id="sec-de5a">-->
-         <!-- <div class="u-align-right u-clearfix u-sheet u-sheet-1">
-       <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="Contact_us.php">Contact us
-              </a>-->
+     
             
     <section class="u-clearfix u-grey-5 u-lightbox  u-section-1" id="sec-de5a">
           
@@ -489,7 +477,7 @@ confidentiality.<br>-->
         </p>
         <p>
         
-          <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We service a wide range of customers from startups to the best-of-breed tech giants and Fortune 100 companies.Our specialist consultants and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; recruiters support client requirements for talent solutions across industries from aircraft and aerospace, to pharma,retail,software development,insurance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and telecommunications.</h4><br>
+          <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We service a wide range of customers from startups to the best-of-breed tech giants and Fortune 100 companies.Our specialist consultants and  recruiters support client requirements for talent solutions across industries from aircraft and aerospace, to pharma,retail,software development,insurance and telecommunications.</h4><br>
           
         </p>
         <img src="images/account-management development.jpg" alt="" >
@@ -498,21 +486,13 @@ confidentiality.<br>-->
 
       <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
         
-      <h1 class="u-align-left u-text u-text-left u-text-black u-text-1"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insights and impact stories</h2></h1>
-        
-       <a  class="u-align-left u-text u-text-default u-text-1 u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 20px; color: white;" href="Contact_us.php">know more
-              </a>
+      <h1 class="u-align-left u-text u-text-left u-text-white u-text-1">Insights and Impact stories</h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" class="btn head-btn2 " style="align-right">know more</a>
+              
             <br><br>
             </section>
-      <!--<section class="u-clearfix u-grey-5 u-lightbox text-capitalize u-section-1" id="sec-de5a">
-          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <p class="u-text u-text-left u-text-1"><h2><strong><h1>Insight and impact stories</h1></strong></h2><span style="font-weight: 700;"></span>
-        </p>
-        <a  class="u-align-right u-text u-text-right u-text-1 u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 30px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="Contact_us.php">know more
-              </a>-->
-        
-        <!--</div><div class="snippet snp-cta snp-bg-none">
-<div class="box-inner">-->
+     
     
     <?php include "footer.php"; ?>
 
