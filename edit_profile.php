@@ -451,7 +451,16 @@ if(isset($_SESSION['id'])){
                           <!-- <input type="text" value="<?php echo $Education; ?>" class="form-control" name="Education"> -->
                           
                           <select type="text" class="form-control" name="Education" id="Education">
-                          <option value="<?php echo $Education; ?>">-- please select education --</option>
+                          <option value="<?php echo $Education; ?>">
+                           <?php 
+
+                                  if(!empty($Education)){
+
+                                   echo $Education; 
+                                   
+                                   }else{
+
+                            ?> -- please select education -- <?php } ?>
                           <option value="B.A">B.A</option>
                           <option value="B.Arch">B.Arch</option>
                           <option value="B.Com">B.Com</option>
@@ -486,7 +495,16 @@ if(isset($_SESSION['id'])){
                           <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $City; ?>" class="form-control" name="City"> -->
                              <select type="text" class="form-control" name="City" id="City">
-                            <option value="<?php echo $City; ?>">-- please select city --</option>
+                            <option value="<?php echo $City; ?>">
+                            <?php 
+
+                                  if(!empty($City)){
+
+                                   echo $City; 
+                                   
+                                   }else{
+
+                            ?> -- please select city -- <?php } ?>
                             <option value="Agartala">Agartala</option>
                             <option value="Agra">Agra</option>
                             <option value="Ahmadnagar">Ahmadnagar</option>
@@ -522,7 +540,16 @@ if(isset($_SESSION['id'])){
                           <!-- <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry"> -->
                           <select type="text" class="form-control" name="Industry"id="Industry">
               
-                          <option value="<?php echo $Industry; ?>">-- please select sector --</option>
+                          <option value="<?php echo $Industry; ?>">
+                          <?php 
+
+                                  if(!empty($Industry)){
+
+                                   echo $Industry; 
+                                   
+                                   }else{
+
+                            ?> -- please select industry -- <?php } ?>
                           <option value="Accounting / Finance">Accounting / Finance</option>
                           <option value="Banking & finance">Banking &amp; finance</option>
                           <option value="General Administration">General Administration</option>
@@ -551,7 +578,16 @@ if(isset($_SESSION['id'])){
                           <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function"> -->
             <select type="text" class="form-control" name="Function" id="Function">
-            <option value="<?php echo $Function; ?>">-- please select function --</option>
+            <option value="<?php echo $Function; ?>">
+            <?php 
+
+                  if(!empty($Function)){
+
+                   echo $Function; 
+                   
+                   }else{
+
+            ?> -- please select function -- <?php } ?>
             <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
             <option value="Agent">Agent</option>
             <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
@@ -600,7 +636,16 @@ if(isset($_SESSION['id'])){
                          <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
                             <select type="text" class="form-control" name="Experience_years" id="Experience_years">
-                          <option value="<?php echo $Experience_years; ?>">years</option>
+                          <option value="<?php echo $Experience_years; ?>">
+                          <?php 
+
+                              if(!empty($Experience_years)){
+
+                               echo $Experience_years; 
+                               
+                               }else{
+
+                          ?> years of experience <?php } ?>
                           <option value="0 years">0</option>
                           <option value="1 year">1</option>
                           <option value="2 years">2</option>
@@ -632,8 +677,17 @@ if(isset($_SESSION['id'])){
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
                          <div class="col-sm-12">
 
-                            <select type="text" class="form-control" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
-                             <option value="<?php echo $Experience_months; ?>">months</option>
+                            <select type="text" class="form-control" name="Experience_months" id="Experience_months">
+                             <option value="<?php echo $Experience_months; ?>">
+                            <?php 
+
+                              if(!empty($Experience_months)){
+
+                               echo $Experience_months; 
+                               
+                               }else{
+
+                           ?> months of experience <?php } ?>
                           <option value="0 months">0</option>
                           <option value="1 month">1</option>
                           <option value="2 months">2</option>
@@ -677,7 +731,16 @@ if(isset($_SESSION['id'])){
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
                       <select type="text" id="myInput" class="form-control" name="Current_Salary_lakhs" id="Current_Salary_lakhs">
-                                    <option value="<?php echo $Current_Salary_lakhs; ?>">lakhs</option>
+                                    <option value="<?php echo $Current_Salary_lakhs; ?>">
+                                    <?php 
+
+                                      if(!empty($Current_Salary_lakhs)){
+
+                                       echo $Current_Salary_lakhs; 
+                                       
+                                       }else{
+
+                                   ?> lakhs <?php } ?>
                                     <option value="0 lakhs">0</option>
                                     <option value="1 lakhs">1</option>
                                     <option value="2 lakhs">2</option>
@@ -718,8 +781,17 @@ if(isset($_SESSION['id'])){
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
-                      <select type="text" class="form-control" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="<?php echo $Current_Salary_thousand; ?>">thousand</option>
+                      <select type="text" class="form-control" name="Current_Salary_thousand" id="Current_Salary_thousand">
+                             <option value="<?php echo $Current_Salary_thousand; ?>">
+                             <?php 
+
+                              if(!empty($Current_Salary_thousand)){
+
+                               echo $Current_Salary_thousand; 
+                               
+                               }else{
+
+                           ?> thousand <?php } ?>
                           <option value="0">0</option>
                           <option value="1 thousand">1</option>
                           <option value="2 thousand">2</option>
@@ -762,8 +834,17 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
                      <div class="col-sm-12">
-                      <select type="text" class="form-control" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">lakhs</option>
+                      <select type="text" class="form-control" name="Expected_Salary_lakhs" id="Expected_Salary_lakhs">
+                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">
+                                    <?php 
+
+                                        if(!empty($Expected_Salary_lakhs)){
+
+                                          echo $Expected_Salary_lakhs; 
+                                           
+                                        }else{
+
+                                    ?> lakhs <?php } ?>
                                     <option value="0 lakhs">0</option>
                                     <option value="1 lakhs">1</option>
                                     <option value="2 lakhs">2</option>
@@ -804,8 +885,17 @@ if(isset($_SESSION['id'])){
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
                      <div class="col-sm-12">
-                      <select type="text" class="form-control" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                          <option value="<?php echo $Expected_Salary_lakhs; ?>">thousand</option>
+                      <select type="text" class="form-control" name="Expected_Salary_thousand" id="Expected_Salary_thousand">
+                          <option value="<?php echo $Expected_Salary_thousand; ?>">
+                          <?php 
+
+                                if(!empty($Expected_Salary_thousand)){
+
+                                  echo $Expected_Salary_thousand; 
+                                   
+                                }else{
+
+                          ?> thousand <?php } ?>
                           <option value="0 thousand">0</option>
                           <option value="1 thousand">1</option>
                           <option value="2 thousand">2</option>
