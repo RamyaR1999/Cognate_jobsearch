@@ -646,7 +646,7 @@ if(isset($_GET['profile'])){
                                    
                                    }else{
 
-                            ?> years  <?php } ?> 
+                            ?> years of experience <?php } ?> 
                           </option>
                           <option value="0 years">0</option>
                           <option value="1 year">1</option>
@@ -689,7 +689,7 @@ if(isset($_GET['profile'])){
                                    
                                    }else{
 
-                            ?> months  <?php } ?> 
+                            ?> months of experience <?php } ?> 
                           </option>
                           <option value="0 months">0</option>
                           <option value="1 month">1</option>
