@@ -172,30 +172,11 @@ if (isset($_POST['submit'])){
     ?> 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-
-<?php 
-
-    if(isset($_SESSION['id'])){
-
-     $db_id =  $_SESSION['id'];       
-        
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
-     $select_user_profile = mysqli_query($connection,$query);
-
-      
-     while($row=mysqli_fetch_array($select_user_profile)){
-
-           $Image=  $row['Image'];
-      }
-  }
-?>
-
-
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -294,7 +275,7 @@ if (isset($_POST['submit'])){
 
 
 <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-       <div style="background-image: url('images/jobs1.jpg');">
+       <div style="background-color:  #71797E;">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -585,7 +566,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
     
     </section>-->
 
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a" style="background-color: #71797E">
       <!-- <div style="background-image: url('images/imges.jpg');"> -->
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
