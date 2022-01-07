@@ -26,7 +26,8 @@
            $Industry=  $row['Industry'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
-           $Experience =$row['Experience'];
+           $Experience_years =$row['Experience_years'];
+           $Experience_months =$row['Experience_months'];
            $Salary =$row['Salary'];
            $CV = $row['CV'];
             
@@ -313,6 +314,16 @@
 
                     <span style="font-weight: 700;">Education: </span>
                     <br><label class="" for="title"><?php echo $Education ?></label><br>
+
+                    <span style="font-weight: 700;">Experience:</span>
+                    <br><label class="" for="title"><?php echo $Experience_years;?> <?php echo $Experience_months;?></label><br>
+
+                    <span style="font-weight: 700;">Industry:</span>
+                    <br><label class="" for="title"><?php echo $Industry ?></label><br>
+
+                    <span style="font-weight: 700;">Function:</span>
+                    <br><label class="" for="title"><?php echo $Function ?></label><br>
+
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
                     <!-- <br>'s-Hertogenbosch, The Netherlands, Earth -->

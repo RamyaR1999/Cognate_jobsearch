@@ -10,12 +10,12 @@ if(isset($_SESSION['id'])){
      $db_id =  $_SESSION['id'];  
            
      $query="SELECT * FROM users WHERE id = '{$db_id}' ";
-     $select_register_profile = mysqli_query($connection,$query);
+     $select_user_profile = mysqli_query($connection,$query);
 
       
-     while($row=mysqli_fetch_array($select_register_profile)){
+     while($row=mysqli_fetch_array($select_user_profile)){
 
-           $id = $row['id'];
+            $id = $row['id'];
            $Firstname=  $row['Firstname'];
            $Lastname=  $row['Lastname'];
            $Email    = $row['Email'];
@@ -26,8 +26,12 @@ if(isset($_SESSION['id'])){
            $Industry=  $row['Industry'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
-           $Experience =$row['Experience_years'];
-           $Salary =$row['Current_Salary_lakhs'];
+           $Experience_years =$row['Experience_years'];
+           $Experience_months =$row['Experience_months'];
+           $Current_Salary_lakhs =$row['Current_Salary_lakhs'];
+           $Current_Salary_thousand =$row['Current_Salary_thousand'];
+           $Expected_Salary_lakhs =$row['Expected_Salary_lakhs'];
+           $Expected_Salary_thousand =$row['Expected_Salary_thousand'];
            $CV = $row['CV'];
             
            }
@@ -35,7 +39,7 @@ if(isset($_SESSION['id'])){
 
       if(isset($_POST['edit_profile'])){
 
-           $Firstname=  $_POST['Firstname'];
+          $Firstname=  $_POST['Firstname'];
            $Lastname=  $_POST['Lastname'];
            $Email    = $_POST['Email'];
            $Phone=  $_POST['Phone'];
@@ -43,8 +47,12 @@ if(isset($_SESSION['id'])){
            $Industry=  $_POST['Industry'];
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
-           $Experience =$_POST['Experience_years'];
-           $Salary =$_POST['Current_Salary_lakhs'];
+           $Experience_years =$_POST['Experience_years'];
+           $Experience_months =$_POST['Experience_months'];
+           $Current_Salary_lakhs =$_POST['Current_Salary_lakhs'];
+           $Current_Salary_thousand =$_POST['Current_Salary_thousand'];
+           $Expected_Salary_lakhs =$_POST['Expected_Salary_lakhs'];
+           $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
            $Image = $_FILES['image']['name'];
            $user_image_tempname = $_FILES['image']['tmp_name'];
            $CV = $_FILES['file']['name'];
@@ -90,7 +98,7 @@ if(isset($_SESSION['id'])){
 
         if(strlen($Password) >= 8) { 
               
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience}',Current_Salary_lakhs='{$Salary}',CV='{$CV}'  WHERE id= '{$db_id}' ";  
+    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";   
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -366,7 +374,7 @@ if(isset($_SESSION['id'])){
 
 </style>
 
-    <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
+     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
        <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -385,17 +393,13 @@ if(isset($_SESSION['id'])){
                     <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Profile: </span>
-                         <div class="col-sm-12">
                            <input type="file" name="image">
-                       </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">CV: </span>
-                         <div class="col-sm-12">
                            <input type="file" name="file">
-                       </div>
                         </div>
                     </div>
                 </div>
@@ -444,7 +448,35 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Education: </span>
                          <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Education; ?>" class="form-control" name="Education">
+                          <!-- <input type="text" value="<?php echo $Education; ?>" class="form-control" name="Education"> -->
+                          
+                          <select type="text" class="form-control" name="Education" id="Education">
+                          <option value="<?php echo $Education; ?>">-- please select education --</option>
+                          <option value="B.A">B.A</option>
+                          <option value="B.Arch">B.Arch</option>
+                          <option value="B.Com">B.Com</option>
+                          <option value="B.Ed">B.Ed</option>
+                          <option value="B.Pharma">B.Pharma</option>
+                          <option value="B.Sc">B.Sc</option>
+                          <option value="B.Tech/B.E.">B.Tech/B.E.</option>
+                          <option value="BCA">BCA</option>
+                          <option value="BDS">BDS</option>
+                          <option value="BVSC">BVSC</option>
+                          <option value="CA">CA</option>
+                          <option value="CS">CS</option>
+                          <option value="Diploma">Diploma</option>
+                          <option value="H.Sc/+2/Intermediate">H.Sc/+2/Intermediate</option>
+                          <option value="ICWA (CMA)">ICWA (CMA)</option>
+                          <option value="ITI">ITI</option>
+                          <option value="LLB">LLB</option>
+                          <option value="LLM">LLM</option>
+                          <option value="M.A">M.A</option>
+                          <option value="ICWA (CMA)">ICWA (CMA)</option>
+                          <option value="ITI">ITI</option>
+                          <option value="LLB">LLB</option>
+                          <option value="LLM">LLM</option>
+                        </select>
+
                         </div>
                     </div>
                  </div>
@@ -452,7 +484,32 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">City: </span>
                           <div class="col-sm-12">
-                             <input type="text" value="<?php echo $City; ?>" class="form-control" name="City">  
+                             <!-- <input type="text" value="<?php echo $City; ?>" class="form-control" name="City"> -->
+                             <select type="text" class="form-control" name="City" id="City">
+                            <option value="<?php echo $City; ?>">-- please select city --</option>
+                            <option value="Agartala">Agartala</option>
+                            <option value="Agra">Agra</option>
+                            <option value="Ahmadnagar">Ahmadnagar</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Allahabad">Allahabad</option>
+                            <option value="Amritsar">Amritsar</option>
+                            <option value="Bengaluru / Bangalore">Bengaluru / Bangalore</option>
+                            <option value="Bhubaneswar">Bhubaneswar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chandrapur">Chandrapur</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Chittoor">Chittoor</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Cuttack">Cuttack</option>
+                            <option value="Dahod">Dahod</option>
+                            <option value="Daman">Daman</option>
+                            <option value="Dehradun">Dehradun</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Delhi / NCR">Delhi / NCR</option>
+                            <option value="Dindigul">Dindigul</option>
+                            <option value="Ernakulam">Ernakulam</option>
+                          </select>
+
                           </div>
                     </div>
                  </div>
@@ -462,7 +519,29 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Industry: </span>
                          <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry">
+                          <!-- <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry"> -->
+                          <select type="text" class="form-control" name="Industry"id="Industry">
+              
+                          <option value="<?php echo $Industry; ?>">-- please select sector --</option>
+                          <option value="Accounting / Finance">Accounting / Finance</option>
+                          <option value="Banking & finance">Banking &amp; finance</option>
+                          <option value="General Administration">General Administration</option>
+                          <option value="Human Resources">Human Resources</option>
+                          <option value="Information Technology">Information Technology</option>
+                          <option value="Insurance">Insurance</option>
+                          <option value="ITeS & BPO">ITeS &amp; BPO</option>
+                          <option value="Manufacturing">Manufacturing</option>
+                          <option value="Sales">Sales</option>
+                          <option value="FMCG">FMCG</option>
+                          <option value="Retail">Retail</option>
+                          <option value="Telecom">Telecom</option>
+                          <option value="Media & entertainment">Media &amp; entertainment</option>
+                          <option value="Education">Education</option>
+                          <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
+                          <option value="Consulting & VC">Consulting &amp; VC</option>
+                          <option value="Other">Other</option>
+                          </select>
+
                         </div>
                     </div>
                  </div>
@@ -470,7 +549,46 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Function: </span>
                           <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function">  
+                             <!-- <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function"> -->
+            <select type="text" class="form-control" name="Function" id="Function">
+            <option value="<?php echo $Function; ?>">-- please select function --</option>
+            <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
+            <option value="Agent">Agent</option>
+            <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
+            <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
+            <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
+            <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch</option>
+            <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
+            <option value="Banking / Insurance">Banking / Insurance</option>
+            <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
+            <option value="Content / Journalism">Content / Journalism</option>
+            <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
+            <option value="CSR & Sustainability">CSR &amp; Sustainability</option>
+            <option value="Engineering Design / R&D">Engineering Design / R&D</option>
+            <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
+            <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
+            <option value="Guards / Security Services">Guards / Security Services</option>
+            <option value="Hotels / Restaurants">Hotels / Restaurants</option>
+            <option value="HR / Administration / IR">HR / Administration / IR</option>
+            <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
+            <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
+            <option value="IT Software - Client Server">IT Software - Client Server</option>
+            <option value="IT Software - DBA / Data warehousing">IT Software - DBA / Datawarehousing</option>
+            <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
+            <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
+            <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
+            <option value="IT Software - Mainframe">IT Software - Mainframe</option>
+            <option value="IT Software - Middleware">IT Software - Middleware</option>
+            <option value="IT Software - Mobile">IT Software - Mobile</option>
+            <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
+            <option value="IT Software - QA & Testing">IT Software - QA & Testing</option>
+            <option value="IT Software - System Programming">IT Software - System Programming</option>
+            <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
+            <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
+            <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
+            <option value="Other">Other</option>
+            </select>
+                             
                           </div>
                     </div>
                  </div>
@@ -478,23 +596,254 @@ if(isset($_SESSION['id'])){
               <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
-                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience: </span>
+                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
                          <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years">                   
+                             <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
+                            <select type="text" class="form-control" name="Experience_years" id="Experience_years">
+                          <option value="<?php echo $Experience_years; ?>">years</option>
+                          <option value="0 years">0</option>
+                          <option value="1 year">1</option>
+                          <option value="2 years">2</option>
+                          <option value="3 years">3</option>
+                          <option value="4 years">4</option>
+                          <option value="5 years">5</option>
+                          <option value="6 years">6</option>
+                          <option value="7 years">7</option>
+                          <option value="8 years">8</option>
+                          <option value="9 years">9</option>
+                          <option value="10 years">10</option>
+                          <option value="11 years">11</option>
+                          <option value="12 years">12</option>
+                          <option value="13 years">13</option>
+                          <option value="14 years">14</option>
+                          <option value="15 years">15</option>
+                          <option value="16 years">16</option>
+                          <option value="17 years">17</option>
+                          <option value="18 years">18</option>
+                          <option value="19 years">19</option>
+                          <option value="20 years">20</option>
+                        </select>
                         </div>
                     </div>
                  </div>
                
                <div class="col-md-6">
                 <div class="form-group row">
-                  <span style="font-weight: 600;" class="col-sm-3 col-form-label">Salary: </span>
+                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
+                         <div class="col-sm-12">
+
+                            <select type="text" class="form-control" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
+                             <option value="<?php echo $Experience_months; ?>">months</option>
+                          <option value="0 months">0</option>
+                          <option value="1 month">1</option>
+                          <option value="2 months">2</option>
+                          <option value="3 months">3</option>
+                          <option value="4 months">4</option>
+                          <option value="5 months">5</option>
+                          <option value="6 months">6</option>
+                          <option value="7 months">7</option>
+                          <option value="8 months">8</option>
+                          <option value="9 months">9</option>
+                          <option value="10 months">10</option>
+                          <option value="11 months">11</option>
+                          <option value="12 months">12</option>
+                          <option value="13 months">13</option>
+                          <option value="14 months">14</option>
+                          <option value="15 months">15</option>
+                          <option value="16 months">16</option>
+                          <option value="17 months">17</option>
+                          <option value="18 months">18</option>
+                          <option value="19 months">19</option>
+                          <option value="20 months">20</option>
+                          <option value="21 months">21</option>
+                          <option value="22 months">22</option>
+                          <option value="23 months">23</option>
+                          <option value="24 months">24</option>
+                          <option value="25 months">25</option>
+                          <option value="26 months">26</option>
+                          <option value="27 months">27</option>
+                          <option value="28 months">28</option>
+                          <option value="29 months">29</option>
+                          <option value="30 months">30</option>  
+                        </select>
+                        </div>
+                    </div>
+                 </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
-                      <input id="myInput" type="text" value="<?php echo $Salary; ?>" class="form-control" onFocus="geolocate()" name="Current_Salary_lakhs">
+                      <select type="text" id="myInput" class="form-control" name="Current_Salary_lakhs" id="Current_Salary_lakhs">
+                                    <option value="<?php echo $Current_Salary_lakhs; ?>">lakhs</option>
+                                    <option value="0 lakhs">0</option>
+                                    <option value="1 lakhs">1</option>
+                                    <option value="2 lakhs">2</option>
+                                    <option value="3 lakhs">3</option>
+                                    <option value="4 lakhs">4</option>
+                                    <option value="5 lakhs">5</option>
+                                    <option value="6 lakhs">6</option>
+                                    <option value="7 lakhs">7</option>
+                                    <option value="8 lakhs">8</option>
+                                    <option value="9 lakhs">9</option>
+                                    <option value="10 lakhs">10</option>
+                                    <option value="11 lakhs">11</option>
+                                    <option value="12 lakhs">12</option>
+                                    <option value="13 lakhs">13</option>
+                                    <option value="14 lakhs">14</option>
+                                    <option value="15 lakhs">15</option>
+                                    <option value="16 lakhs">16</option>
+                                    <option value="17 lakhs">17</option>
+                                    <option value="18 lakhs">18</option>
+                                    <option value="19 lakhs">19</option>
+                                    <option value="20 lakhs">20</option>
+                                    <option value="21 lakhs">21</option>
+                                    <option value="22 lakhs">22</option>
+                                    <option value="23 lakhs">23</option>
+                                    <option value="24 lakhs">24</option>
+                                    <option value="25 lakhs">25</option>
+                                    <option value="26 lakhs">26</option>
+                                    <option value="27 lakhs">27</option>
+                                    <option value="28 lakhs">28</option>
+                                    <option value="29 lakhs">29</option>
+                                    <option value="30 lakhs">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+               
+               <div class="col-md-6">
+                <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                     <div class="col-sm-12">
+                      <select type="text" class="form-control" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                             <option value="<?php echo $Current_Salary_thousand; ?>">thousand</option>
+                          <option value="0">0</option>
+                          <option value="1 thousand">1</option>
+                          <option value="2 thousand">2</option>
+                          <option value="3 thousand">3</option>
+                          <option value="4 thousand">4</option>
+                          <option value="5 thousand">5</option>
+                          <option value="6 thousand">6</option>
+                          <option value="7 thousand">7</option>
+                          <option value="8 thousand">8</option>
+                          <option value="9 thousand">9</option>
+                          <option value="10 thousand">10</option>
+                          <option value="11 thousand">11</option>
+                          <option value="12 thousand">12</option>
+                          <option value="13 thousand">13</option>
+                          <option value="14 thousand">14</option>
+                          <option value="15 thousand">15</option>
+                          <option value="16 thousand">16</option>
+                          <option value="17 thousand">17</option>
+                          <option value="18 thousand">18</option>
+                          <option value="19 thousand">19</option>
+                          <option value="20 thousand">20</option>
+                          <option value="21 thousand">21</option>
+                          <option value="22 thousand">22</option>
+                          <option value="23 thousand">23</option>
+                          <option value="24 thousand">24</option>
+                          <option value="25 thousand">25</option>
+                          <option value="26 thousand">26</option>
+                          <option value="27 thousand">27</option>
+                          <option value="28 thousand">28</option>
+                          <option value="29 thousand">29</option>
+                          <option value="30 thousand">30</option>  
+                        </select>
                           </div>
                     </div>
                  </div>
                </div>
-                  </p>
+
+               <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
+                     <div class="col-sm-12">
+                      <select type="text" class="form-control" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">lakhs</option>
+                                    <option value="0 lakhs">0</option>
+                                    <option value="1 lakhs">1</option>
+                                    <option value="2 lakhs">2</option>
+                                    <option value="3 lakhs">3</option>
+                                    <option value="4 lakhs">4</option>
+                                    <option value="5 lakhs">5</option>
+                                    <option value="6 lakhs">6</option>
+                                    <option value="7 lakhs">7</option>
+                                    <option value="8 lakhs">8</option>
+                                    <option value="9 lakhs">9</option>
+                                    <option value="10 lakhs">10</option>
+                                    <option value="11 lakhs">11</option>
+                                    <option value="12 lakhs">12</option>
+                                    <option value="13 lakhs">13</option>
+                                    <option value="14 lakhs">14</option>
+                                    <option value="15 lakhs">15</option>
+                                    <option value="16 lakhs">16</option>
+                                    <option value="17 lakhs">17</option>
+                                    <option value="18 lakhs">18</option>
+                                    <option value="19 lakhs">19</option>
+                                    <option value="20 lakhs">20</option>
+                                    <option value="21 lakhs">21</option>
+                                    <option value="22 lakhs">22</option>
+                                    <option value="23 lakhs">23</option>
+                                    <option value="24 lakhs">24</option>
+                                    <option value="25 lakhs">25</option>
+                                    <option value="26 lakhs">26</option>
+                                    <option value="27 lakhs">27</option>
+                                    <option value="28 lakhs">28</option>
+                                    <option value="29 lakhs">29</option>
+                                    <option value="30 lakhs">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+               
+               <div class="col-md-6">
+                <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
+                     <div class="col-sm-12">
+                      <select type="text" class="form-control" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                          <option value="<?php echo $Expected_Salary_lakhs; ?>">thousand</option>
+                          <option value="0 thousand">0</option>
+                          <option value="1 thousand">1</option>
+                          <option value="2 thousand">2</option>
+                          <option value="3 thousand">3</option>
+                          <option value="4 thousand">4</option>
+                          <option value="5 thousand">5</option>
+                          <option value="6 thousand">6</option>
+                          <option value="7 thousand">7</option>
+                          <option value="8 thousand">8</option>
+                          <option value="9 thousand">9</option>
+                          <option value="10 thousand">10</option>
+                          <option value="11 thousand">11</option>
+                          <option value="12 thousand">12</option>
+                          <option value="13 thousand">13</option>
+                          <option value="14 thousand">14</option>
+                          <option value="15 thousand">15</option>
+                          <option value="16 thousand">16</option>
+                          <option value="17 thousand">17</option>
+                          <option value="18 thousand">18</option>
+                          <option value="19 thousand">19</option>
+                          <option value="20 thousand">20</option>
+                          <option value="21 thousand">21</option>
+                          <option value="22 thousand">22</option>
+                          <option value="23 thousand">23</option>
+                          <option value="24 thousand">24</option>
+                          <option value="25 thousand">25</option>
+                          <option value="26 thousand">26</option>
+                          <option value="27 thousand">27</option>
+                          <option value="28 thousand">28</option>
+                          <option value="29 thousand">29</option>
+                          <option value="30 thousand">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+               </div>
+
+
          <div class="input-group-btn">
           <input class="btn btn-primary" type="submit" name="edit_profile" value="Update profile">
         </div>
@@ -619,7 +968,7 @@ input[type=file] {
 
 
 input[type=text] {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   width: 100%;
 }
 
