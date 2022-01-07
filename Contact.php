@@ -519,7 +519,7 @@ Submit Your CV</p>
                     </div>
                &nbsp;
               <div class="u-align-center u-form-group u-form-submit">
-              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-1-light-2 u-radius-17 u-btn-1">Submit<br>
+              <a href="" class="btn head-btn2">Submit<br>
               </a>
               <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
             </div>
