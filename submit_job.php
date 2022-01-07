@@ -424,7 +424,7 @@ background-size: cover;
   </ol>
 <div class="carousel-inner" role="listbox">
   
-  <div class="carousel-item active" style="background-image: url('images/submitjob.png') " >
+  <div class="carousel-item active" style="background-image: url('images/find-a-job.jpg') " >
     <div class="carousel-caption text-monospace d-none d-md-block">
      <!-- <h1 class="u-align-left u-text u-text-default u-text-1">We help you hire a right talent</h1>
         <h1 class="u-align-right u-text u-text-custom-color-1 u-text-default u-text-2">at the right time</h1>

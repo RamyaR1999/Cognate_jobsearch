@@ -465,7 +465,7 @@ $mail->SMTPSecure='tls';
 
   <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">Upload your resume here</h1>
+        <h1 class="u-align-left u-text u-text-default u-text-1">Upload Your Resume Here</h1>
         <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2"></h1>
         <p class="u-align-left u-text u-text-default u-text-3"></p>
       </div>
