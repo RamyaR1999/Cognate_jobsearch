@@ -28,7 +28,10 @@
            $Education =$row['Education'];
            $Experience_years =$row['Experience_years'];
            $Experience_months =$row['Experience_months'];
-           $Salary =$row['Salary'];
+           $Current_Salary_lakhs =$row['Current_Salary_lakhs'];
+           $Current_Salary_thousand =$row['Current_Salary_thousand'];
+           $Expected_Salary_lakhs =$row['Expected_Salary_lakhs'];
+           $Expected_Salary_thousand =$row['Expected_Salary_thousand'];
            $CV = $row['CV'];
             
            }
@@ -325,6 +328,12 @@
 
                     <span style="font-weight: 700;">Function:</span>
                     <br><label class="" for="title"><?php echo $Function ?></label><br>
+
+                    <span style="font-weight: 700;">Current CTC:</span>
+                    <br><label class="" for="title"><?php echo $Current_Salary_lakhs ?> <?php echo $Current_Salary_thousand ?></label><br>
+
+                    <span style="font-weight: 700;">Expected CTC:</span>
+                    <br><label class="" for="title"><?php echo $Expected_Salary_lakhs ?> <?php echo $Expected_Salary_thousand ?></label><br>
 
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
