@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 07, 2022 at 06:39 AM
+-- Generation Time: Jan 07, 2022 at 10:26 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -21,6 +21,42 @@ SET time_zone = "+00:00";
 --
 -- Database: `job_search`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education`
+--
+
+CREATE TABLE `education` (
+  `id` int(40) NOT NULL,
+  `Education` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education`
+--
+
+INSERT INTO `education` (`id`, `Education`) VALUES
+(1, 'B.A'),
+(2, 'B.Arch'),
+(3, 'B.Com'),
+(4, 'B.Ed'),
+(5, 'B.Pharma'),
+(6, 'B.Sc'),
+(7, 'B.Tech/B.E'),
+(8, 'BCA'),
+(9, 'BDS'),
+(10, 'BVSC'),
+(11, 'CA'),
+(12, 'CS'),
+(13, 'Diploma'),
+(14, 'H.Sc/+2/Intermediate'),
+(15, 'ICWA (CMA)'),
+(16, 'ITI'),
+(17, 'LLB'),
+(18, 'LLM'),
+(19, 'M.A');
 
 -- --------------------------------------------------------
 
@@ -207,12 +243,18 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
 (1, 'Rithvika', 'Mohan', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Accounting / Finance', 'Analytics & Business Intelligence', 'B.Com', '2 years', '1 month', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
 (2, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Information Technology', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'A1_SOLUTIONS.docx', 638697),
-(3, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'profile.png', 'Agra', 'Consulting & VC', 'Guards / Security Services', 'B.Pharma', '17 years', '', '17 lakhs', '', '', '', 'A1_SOLUTIONS.docx', 351499),
-(9, 'Ramya', 'Rajendiran', 'Ramyamilky@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '', 'profile.png', '', 'Manufacturing', '', 'BCA', '2 years', '', '', '', '', '', 'Ramya R.docx', 502320);
+(3, 'Ramya', 'Rajendiran', 'Ramyamilky@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'cat.jpg', 'Chennai', 'Information Technology', 'IT Software - Mainframe', 'BCA', '1 year', '1 month', '0 lakhs', '5 thousand', '0 lakhs', '15 thousand', 'ASSIGNMENT.docx', 351499),
+(12, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '8768897986', 'profile.png', 'Ahmadnagar', 'General Administration', 'Analytics & Business Intelligence', 'B.Ed', '3 years', '4 months', '11 lakhs', '13 thousand', '14 lakhs', '15 thousand', 'ASSIGNMENT.docx', 406000);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `education`
+--
+ALTER TABLE `education`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `function`
@@ -249,6 +291,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `education`
+--
+ALTER TABLE `education`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `function`
 --
 ALTER TABLE `function`
@@ -276,7 +324,7 @@ ALTER TABLE `request_callback`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

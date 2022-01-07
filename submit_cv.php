@@ -689,7 +689,7 @@ $mail->SMTPSecure='tls';
                           <option value="B.Ed">B.Ed</option>
                           <option value="B.Pharma">B.Pharma</option>
                           <option value="B.Sc">B.Sc</option>
-                          <option value="B.Tech/B.E.">B.Tech/B.E.</option>
+                          <option value="B.Tech/B.E">B.Tech/B.E.</option>
                           <option value="BCA">BCA</option>
                           <option value="BDS">BDS</option>
                           <option value="BVSC">BVSC</option>
@@ -702,10 +702,6 @@ $mail->SMTPSecure='tls';
                           <option value="LLB">LLB</option>
                           <option value="LLM">LLM</option>
                           <option value="M.A">M.A</option>
-                          <option value="ICWA (CMA)">ICWA (CMA)</option>
-                          <option value="ITI">ITI</option>
-                          <option value="LLB">LLB</option>
-                          <option value="LLM">LLM</option>
                         </select>&nbsp;
                         <!-- <span class="focus-border"></span> -->
                       </div>

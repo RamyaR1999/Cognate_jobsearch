@@ -372,7 +372,7 @@
           <select type="text" class="form-control" name="Education"id="Education">
               <?php      
 
-                            $query="SELECT Education FROM users";
+                            $query="SELECT Education FROM Education";
                             $select_Location=mysqli_query($connection,$query);
 
                              if(!$select_Location) {
