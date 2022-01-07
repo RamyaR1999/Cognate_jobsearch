@@ -115,7 +115,6 @@
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 <!-- Autocomplete -->
 <script type='text/javascript' src='js/autocomplete.js'></script>
 <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
@@ -169,7 +168,7 @@
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit A job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -187,7 +186,7 @@
 </li>
      </ul>
        </nav>
-      </div>         
+      </div>          
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
 
@@ -386,7 +385,8 @@
       </main>
     </section> -->
 
-
+<!-- Profile Icon -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 <!-- JS here -->
   
     <!-- All JS Custom Plugins Link Here here -->

@@ -601,23 +601,23 @@ background-size: cover;
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
                           <option value="-1">-- please select sector --</option>
-                          <option value="Agro & Seeds">Agro &amp; Seeds</option>
+                          <option value="Accounting / Finance">Accounting / Finance</option>
                           <option value="Banking & finance">Banking &amp; finance</option>
                           <option value="General Administration">General Administration</option>
                           <option value="Human Resources">Human Resources</option>
                           <option value="Information Technology">Information Technology</option>
                           <option value="Insurance">Insurance</option>
-                          <option value="ITeS BPO">ITeS &amp; BPO</option>
-                          <option value="Other">Other</option>
+                          <option value="ITeS & BPO">ITeS &amp; BPO</option>
                           <option value="Manufacturing">Manufacturing</option>
                           <option value="Sales">Sales</option>
                           <option value="FMCG">FMCG</option>
                           <option value="Retail">Retail</option>
                           <option value="Telecom">Telecom</option>
-                          <option value="Media entertainment">Media &amp; entertainment</option>
+                          <option value="Media & entertainment">Media &amp; entertainment</option>
                           <option value="Education">Education</option>
-                          <option value="Hospitality Tourism">Hospitality &amp; Tourism</option>
-                          <option value="Consulting VC">Consulting &amp; VC</option>
+                          <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
+                          <option value="Consulting & VC">Consulting &amp; VC</option>
+                          <option value="Other">Other</option>
                         </select>
                         <!-- <span class="focus-border"></span> -->
                         </div>

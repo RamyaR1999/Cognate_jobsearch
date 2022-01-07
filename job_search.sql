@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 06, 2022 at 07:49 AM
+-- Generation Time: Jan 07, 2022 at 06:39 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -21,6 +21,91 @@ SET time_zone = "+00:00";
 --
 -- Database: `job_search`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `function`
+--
+
+CREATE TABLE `function` (
+  `id` int(40) NOT NULL,
+  `Function` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `function`
+--
+
+INSERT INTO `function` (`id`, `Function`) VALUES
+(1, 'Accounting / Tax / Company Secretary / Audit'),
+(2, 'Airline / Reservations / Ticketing / Travel'),
+(3, 'Analytics & Business Intelligence'),
+(4, 'Anchoring / TV / Films / Production'),
+(5, 'Architects / Interior Design / Naval Arch'),
+(6, 'Art Director / Graphic / Web Designer'),
+(7, 'Banking / Insurance'),
+(8, 'Beauty / Fitness / Spa Services'),
+(9, 'Content / Journalism'),
+(10, 'Corporate Planning / Consulting'),
+(11, 'CSR & Sustainability'),
+(12, 'Engineering Design / R&D'),
+(13, 'Export / Import / Merchandising'),
+(14, 'Fashion / Garments / Merchandising'),
+(15, 'Guards / Security Services'),
+(16, 'Hotels / Restaurants'),
+(17, 'HR / Administration / IR'),
+(18, 'IT - Hardware / Telecom / Technical Staff / Support'),
+(19, 'IT Software - Application Programming / Maintenance'),
+(20, 'IT Software - Client Server'),
+(21, 'IT Software - DBA / Data warehousing'),
+(22, 'IT Software - Ecommerce / Internet Technologies'),
+(23, 'IT Software - Embedded /EDA /VLSI /ASIC / Chip Des'),
+(24, 'IT Software - ERP / CRM'),
+(25, 'IT Software - Mainframe'),
+(26, 'IT Software - Middleware'),
+(27, 'IT Software - Mobile'),
+(28, 'IT Software - Network Administration / Security'),
+(29, 'IT Software - QA & Testing'),
+(30, 'IT Software - System Programming'),
+(31, 'IT Software - Systems / EDP / MIS'),
+(32, 'IT Software - Telecom Software'),
+(33, 'ITES / BPO / KPO / Customer Service / Operations'),
+(34, 'Other');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `industry`
+--
+
+CREATE TABLE `industry` (
+  `id` int(40) NOT NULL,
+  `Industry` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `industry`
+--
+
+INSERT INTO `industry` (`id`, `Industry`) VALUES
+(1, 'Accounting / Finance'),
+(2, 'Banking & finance'),
+(3, 'General Administration'),
+(4, 'Human Resources'),
+(5, 'Information Technology'),
+(6, 'Insurance'),
+(7, 'ITeS & BPO'),
+(8, 'Manufacturing'),
+(9, 'Sales'),
+(10, 'FMCG'),
+(11, 'Retail'),
+(12, 'Telecom'),
+(13, 'Media & entertainment'),
+(14, 'Education'),
+(15, 'Hospitality & Tourism'),
+(16, 'Consulting & VC'),
+(17, 'Other');
 
 -- --------------------------------------------------------
 
@@ -52,7 +137,7 @@ CREATE TABLE `jobs` (
 
 INSERT INTO `jobs` (`id`, `Logo`, `Firstname`, `Lastname`, `Company_name`, `Job_title`, `Job_time`, `Job_posted`, `Phone`, `Email`, `Service`, `Branch`, `Sector`, `Job_designation`, `Job_specification`) VALUES
 (1, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate global', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', '9876896534', 'reshmasamy21@gmail.com', 'IT Contract Staffing', 'Chennai', 'Information Technology', 'HR', 'Understand the customer requirements. Write embedded software code on ARM/Cortex platforms Improve the performance of existing products / projects Cross functional communication with engineering organization Ability to work independently Qualifications for Embedded software engineer 7+ years of related experience Proven ability to solve problems creatively Excellent analytical skills  Strong interpersonal skills and extremely resourceful Solid programming knowledge in C Experience working with wired or wireless communication protocols. Good understanding on Bluetooth LE (and classic) technology Experience in working with firmware development on an ARM/ Cortex processor, including RTOS, Interrupt driven designs Knowledge on OS/Kernel modules. Knowledge on Memory modules (NV/EEPROM/Flash)'),
-(2, 'CrysCloud.jpg', 'Ramya', 'Rajendiran', 'cognate global', 'Senior Software Engineer MacOS', 'Full Time', '2021-02-23', '9876896534', '07.ramyar@gmail.com', 'Permanent Recruitment', 'Hyderabad', 'Information Technology', 'HR', 'Understand the customer requirements. Write embedded software code on ARM/Cortex platforms Improve the performance of existing products / projects Cross functional communication with engineering organization Ability to work independently Qualifications for Embedded software engineer 7+ years of related experience Proven ability to solve problems creatively Excellent analytical skills  Strong interpersonal skills and extremely resourceful Solid programming knowledge in C Experience working with wired or wireless communication protocols. Good understanding on Bluetooth LE (and classic) technology Experience in working with firmware development on an ARM/ Cortex processor, including RTOS, Interrupt driven designs Knowledge on OS/Kernel modules. Knowledge on Memory modules (NV/EEPROM/Flash)'),
+(2, 'CrysCloud.jpg', 'Ramya', 'Rajendiran', 'cognate global', 'Senior Software Engineer', 'Full Time', '2021-02-23', '9876896534', '07.ramyar@gmail.com', 'Permanent Recruitment', 'Hyderabad', 'Information Technology', 'HR', 'Understand the customer requirements. Write embedded software code on ARM/Cortex platforms Improve the performance of existing products / projects Cross functional communication with engineering organization Ability to work independently Qualifications for Embedded software engineer 7+ years of related experience Proven ability to solve problems creatively Excellent analytical skills  Strong interpersonal skills and extremely resourceful Solid programming knowledge in C Experience working with wired or wireless communication protocols. Good understanding on Bluetooth LE (and classic) technology Experience in working with firmware development on an ARM/ Cortex processor, including RTOS, Interrupt driven designs Knowledge on OS/Kernel modules. Knowledge on Memory modules (NV/EEPROM/Flash)'),
 (10, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith36@gmail.com', 'Permanent Recruitment', 'Chennai', 'Information Technology', 'HR', 'This webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\\r\\nPress the reload button to resubmit the data needed to load the page.\\r\\nThis webpage requires data that you entered earlier in order to be properly displayed. You can send this data again, but by doing so you will repeat any action this page previously performed.\\r\\nPress the reload button to resubmit the data needed to load the page.'),
 (11, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith48@gmail.com', 'Permanent Recruitment', 'Bengaluru', 'Information Technology', 'HR', 'Understand the customer requirements. Write embedded software code on ARM/Cortex platforms Improve the performance of existing products / projects Cross functional communication with engineering organization Ability to work independently Qualifications for Embedded software engineer 7+ years of related experience Proven ability to solve problems creatively Excellent analytical skills  Strong interpersonal skills and extremely resourceful Solid programming knowledge in C Experience working with wired or wireless communication protocols. Good understanding on Bluetooth LE (and classic) technology Experience in working with firmware development on an ARM/ Cortex processor, including RTOS, Interrupt driven designs Knowledge on OS/Kernel modules. Knowledge on Memory modules (NV/EEPROM/Flash)'),
 (12, 'CrysCloud.jpg', 'Ranjith', 'Kumar', 'cognate', 'Software Developer', 'FullTime', '2021-12-03', '9834567892', 'Ranjith68@gmail.com', 'Permanent Recruitment', 'Mumbai', 'Information Technology', 'HR', 'Understand the customer requirements. Write embedded software code on ARM/Cortex platforms Improve the performance of existing products / projects Cross functional communication with engineering organization Ability to work independently Qualifications for Embedded software engineer 7+ years of related experience Proven ability to solve problems creatively Excellent analytical skills  Strong interpersonal skills and extremely resourceful Solid programming knowledge in C Experience working with wired or wireless communication protocols. Good understanding on Bluetooth LE (and classic) technology Experience in working with firmware development on an ARM/ Cortex processor, including RTOS, Interrupt driven designs Knowledge on OS/Kernel modules. Knowledge on Memory modules (NV/EEPROM/Flash)'),
@@ -120,13 +205,26 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `Phone`, `Image`, `City`, `Industry`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
-(1, 'Rithvika', 'Mohan', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Agriculture / Diary', 'Analytics & Business Intelligence', 'B.Com', '2', '', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
-(2, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Agriculture / Diary', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'A1_SOLUTIONS.docx', 638697),
-(3, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'profile.png', 'Srimushnam', '', '', 'BCA', '', '', '', '', '', '', 'Ramya R.docx', 351499);
+(1, 'Rithvika', 'Mohan', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmedabad', 'Accounting / Finance', 'Analytics & Business Intelligence', 'B.Com', '2 years', '1 month', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', '', 979275),
+(2, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', '9876896534', 'profile.png', 'Ahmadnagar', 'Information Technology', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'A1_SOLUTIONS.docx', 638697),
+(3, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '9677893371', 'profile.png', 'Agra', 'Consulting & VC', 'Guards / Security Services', 'B.Pharma', '17 years', '', '17 lakhs', '', '', '', 'A1_SOLUTIONS.docx', 351499),
+(9, 'Ramya', 'Rajendiran', 'Ramyamilky@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', '', 'profile.png', '', 'Manufacturing', '', 'BCA', '2 years', '', '', '', '', '', 'Ramya R.docx', 502320);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `function`
+--
+ALTER TABLE `function`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `industry`
+--
+ALTER TABLE `industry`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `jobs`
@@ -151,6 +249,18 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `function`
+--
+ALTER TABLE `function`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `industry`
+--
+ALTER TABLE `industry`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
@@ -166,7 +276,7 @@ ALTER TABLE `request_callback`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
