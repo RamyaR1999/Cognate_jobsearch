@@ -545,8 +545,7 @@ background-size: cover;
                       <div class="input-group">
                        <span  class="" >Job specification * </span>
                         <div class="col-sm-12">
-                          <textarea type="text"rows="6"  value="<?php echo $Job_specification; ?>" class="u-input u-input-rectangle u-radius-10ś u-white u-input-1"  name="Job_specification">
-                          </textarea>
+                          <textarea class="form-control" name="Job_specification"></textarea>
                           <span class="focus-border"></span>
                         </div>
                       </div>

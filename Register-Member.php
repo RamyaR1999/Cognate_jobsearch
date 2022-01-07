@@ -93,38 +93,37 @@ $mail->SMTPSecure='tls';
             }
         }else {
 
+              $_SESSION['otp'] = $otp;
+              $_SESSION['email'] = $email;
+              $_SESSION['email_verification_link'] = $email_verification_link; 
+
+
+              $mail->Username = 'CGBSTech2021@gmail.com';
+              $mail->Password = 'cgbs@2021';
+
+              $mail->setFrom ('barthalomena@gmail.com');
+              $mail->addAddress($_POST['Email'],$_POST['Firstname']);
+              #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+              
+              $mail->isHTML(true);
+              $mail->Subject = "Email Verification";
+              $mail->Body    = 'Here is the verification link'.' '.$link;
+          
+          if(!$mail->send()) {
+             echo "Message could not be sent.". $mail->ErrorInfo;
+          }else{
+
         
         $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
         $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
-            
-        // move_uploaded_file($upload,"images/$CV");
       
         if(!$register_query) {
             
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
           
-          $_SESSION['otp'] = $otp;
-          $_SESSION['email'] = $email;
-          $_SESSION['email_verification_link'] = $email_verification_link; 
-
-
-          $mail->Username = 'CGBSTech2021@gmail.com';
-          $mail->Password = 'cgbs@2021';
-
-          $mail->setFrom ('barthalomena@gmail.com');
-          $mail->addAddress($_POST['Email'],$_POST['Firstname']);
-          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
-          
-          $mail->isHTML(true);
-          $mail->Subject = "Email Verification";
-          $mail->Body    = 'Here is the verification link'.' '.$link;
-          
-          if(!$mail->send()) {
-             echo "Message could not be sent.". $mail->ErrorInfo;
-          }else{
              // $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
             $_SESSION['Register_status'] ="Register done please login";
              header( "Location: Member-Login.php" ); 
