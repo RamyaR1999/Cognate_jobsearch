@@ -140,11 +140,30 @@
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+
+<?php 
+
+    if(isset($_SESSION['id'])){
+
+     $db_id =  $_SESSION['id'];       
+        
+     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $select_user_profile = mysqli_query($connection,$query);
+
+      
+     while($row=mysqli_fetch_array($select_user_profile)){
+
+           $Image=  $row['Image'];
+      }
+  }
+?>
+
+
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php

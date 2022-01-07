@@ -133,7 +133,7 @@
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit A job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -173,11 +173,11 @@
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php

@@ -332,11 +332,31 @@ $mail->SMTPSecure='tls';
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+
+<?php 
+
+    if(isset($_SESSION['id'])){
+
+     $db_id =  $_SESSION['id'];       
+        
+     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $select_user_profile = mysqli_query($connection,$query);
+
+      
+     while($row=mysqli_fetch_array($select_user_profile)){
+
+           $Image=  $row['Image'];
+           $Firstname=  $row['Firstname'];
+      }
+  }
+?>
+
+
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -572,7 +592,7 @@ $mail->SMTPSecure='tls';
         <div class="col-sm-12">
            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
               
-              <option value="-1">-- please select sector --</option>
+              <option value="">-- please select sector --</option>
               <option value="Accounting / Finance">Accounting / Finance</option>
               <option value="Banking & finance">Banking &amp; finance</option>
               <option value="General Administration">General Administration</option>

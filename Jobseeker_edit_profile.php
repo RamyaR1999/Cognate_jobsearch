@@ -230,7 +230,7 @@ if(isset($_GET['profile'])){
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit A job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -270,11 +270,30 @@ if(isset($_GET['profile'])){
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+
+<?php 
+
+    if(isset($_SESSION['id'])){
+
+     $db_id =  $_SESSION['id'];       
+        
+     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $select_user_profile = mysqli_query($connection,$query);
+
+      
+     while($row=mysqli_fetch_array($select_user_profile)){
+
+           $Image=  $row['Image'];
+      }
+  }
+?>
+
+
+        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $_SESSION['Image'] ?>' alt="">
+                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
@@ -433,7 +452,7 @@ if(isset($_GET['profile'])){
                           <!-- <input type="text" value="<?php echo $Education; ?>" class="form-control" name="Education"> -->
                           
                           <select type="text" class="form-control" name="Education" id="Education">
-                          <option value="">-- please select education --</option>
+                          <option value="<?php echo $Education; ?>">-- please select education --</option>
                           <option value="B.A">B.A</option>
                           <option value="B.Arch">B.Arch</option>
                           <option value="B.Com">B.Com</option>
@@ -468,7 +487,7 @@ if(isset($_GET['profile'])){
                           <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $City; ?>" class="form-control" name="City"> -->
                              <select type="text" class="form-control" name="City" id="City">
-                            <option value="">-- please select city --</option>
+                            <option value="<?php echo $City; ?>">-- please select city --</option>
                             <option value="Agartala">Agartala</option>
                             <option value="Agra">Agra</option>
                             <option value="Ahmadnagar">Ahmadnagar</option>
@@ -504,7 +523,7 @@ if(isset($_GET['profile'])){
                           <!-- <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry"> -->
                           <select type="text" class="form-control" name="Industry"id="Industry">
               
-                          <option value="-1">-- please select sector --</option>
+                          <option value="<?php echo $Industry; ?>">-- please select sector --</option>
                           <option value="Accounting / Finance">Accounting / Finance</option>
                           <option value="Banking & finance">Banking &amp; finance</option>
                           <option value="General Administration">General Administration</option>
@@ -533,7 +552,7 @@ if(isset($_GET['profile'])){
                           <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function"> -->
             <select type="text" class="form-control" name="Function" id="Function">
-            <option value="">-- please select function --</option>
+            <option value="<?php echo $Function; ?>">-- please select function --</option>
             <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
             <option value="Agent">Agent</option>
             <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
@@ -582,7 +601,7 @@ if(isset($_GET['profile'])){
                          <div class="col-sm-12">
                              <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
                             <select type="text" class="form-control" name="Experience_years" id="Experience_years">
-                          <option value="">years</option>
+                          <option value="<?php echo $Experience_years; ?>">years</option>
                           <option value="0 years">0</option>
                           <option value="1 year">1</option>
                           <option value="2 years">2</option>
@@ -615,7 +634,7 @@ if(isset($_GET['profile'])){
                          <div class="col-sm-12">
 
                             <select type="text" class="form-control" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
-                             <option value="">months</option>
+                             <option value="<?php echo $Experience_months; ?>">months</option>
                           <option value="0 months">0</option>
                           <option value="1 month">1</option>
                           <option value="2 months">2</option>
@@ -659,7 +678,7 @@ if(isset($_GET['profile'])){
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
                       <select type="text" id="myInput" class="form-control" name="Current_Salary_lakhs" id="Current_Salary_lakhs">
-                                    <option value="">lakhs</option>
+                                    <option value="<?php echo $Current_Salary_lakhs; ?>">lakhs</option>
                                     <option value="0 lakhs">0</option>
                                     <option value="1 lakhs">1</option>
                                     <option value="2 lakhs">2</option>
@@ -701,8 +720,8 @@ if(isset($_GET['profile'])){
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
                       <select type="text" class="form-control" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="">thousand</option>
-                          <option value="0">0</option>
+                             <option value="<?php echo $Current_Salary_thousand; ?>">thousand</option>
+                          <option value="0 thousand">0</option>
                           <option value="1 thousand">1</option>
                           <option value="2 thousand">2</option>
                           <option value="3 thousand">3</option>
@@ -745,7 +764,7 @@ if(isset($_GET['profile'])){
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
                      <div class="col-sm-12">
                       <select type="text" class="form-control" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                                    <option value="">lakhs</option>
+                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">lakhs</option>
                                     <option value="0 lakhs">0</option>
                                     <option value="1 lakhs">1</option>
                                     <option value="2 lakhs">2</option>
@@ -787,7 +806,7 @@ if(isset($_GET['profile'])){
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
                      <div class="col-sm-12">
                       <select type="text" class="form-control" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                          <option value="">thousand</option>
+                          <option value="<?php echo $Expected_Salary_thousand; ?>">thousand</option>
                           <option value="0 thousand">0</option>
                           <option value="1 thousand">1</option>
                           <option value="2 thousand">2</option>
