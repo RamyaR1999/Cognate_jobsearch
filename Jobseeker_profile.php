@@ -475,7 +475,8 @@
                     // $Function=substr($row['Function'],0,37);
                     $Industry=$row['Industry'];
                     $Function=$row['Function'];
-                    $Experience=$row['Experience'];
+                    $Experience_years=$row['Experience_years'];
+                    $Experience_months =$row['Experience_months'];
 
 ?>
 
@@ -539,7 +540,8 @@
             // $Function=substr($row['Function'],0,37);
             $Industry=$row['Industry'];
             $Function=$row['Function'];
-            $Experience=$row['Experience'];
+            $Experience_years=$row['Experience_years'];
+            $Experience_months =$row['Experience_months'];
 
 
 ?>

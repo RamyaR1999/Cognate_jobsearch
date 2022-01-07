@@ -26,7 +26,8 @@
            $Industry=  $row['Industry'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
-           $Experience =$row['Experience'];
+           $Experience_years =$row['Experience_years'];
+           $Experience_months =$row['Experience_months'];
            $Salary =$row['Salary'];
            $CV = $row['CV'];
             
@@ -284,12 +285,19 @@
           </div>
           <br>
 <center><img class="" style="width:300px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+
+      <?php if($_SESSION['Email'] == $Email){
+        
+        ?>
+
             <center>
-
             <a href="Jobseeker_edit_profile.php?profile=<?php echo $id; ?>" class="btn head-btn1">Edit Profile</a>
-
             </center>
+        <?php
 
+           }
+
+         ?>
               </div>
               </div>
 <br>
@@ -310,7 +318,7 @@
                     <br><label class="" for="title"><?php echo $Education ?></label><br>
 
                     <span style="font-weight: 700;">Experience:</span>
-                    <br><label class="" for="title"><?php echo $Experience .' '. 'years';?></label><br>
+                    <br><label class="" for="title"><?php echo $Experience_years;?> <?php echo $Experience_months;?></label><br>
 
                     <span style="font-weight: 700;">Industry:</span>
                     <br><label class="" for="title"><?php echo $Industry ?></label><br>

@@ -753,7 +753,7 @@ $mail->SMTPSecure='tls';
                                     <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience_years"placeholder="Enter your Experience_years"id="Experience_years">
                           <option value="">years</option>
                           <option value="0 years">0</option>
-                          <option value="1 years">1</option>
+                          <option value="1 year">1</option>
                           <option value="2 years">2</option>
                           <option value="3 years">3</option>
                           <option value="4 years">4</option>
@@ -784,7 +784,7 @@ $mail->SMTPSecure='tls';
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
                              <option value="">months</option>
                           <option value="0 months">0</option>
-                          <option value="1 months">1</option>
+                          <option value="1 month">1</option>
                           <option value="2 months">2</option>
                           <option value="3 months">3</option>
                           <option value="4 months">4</option>
