@@ -282,9 +282,9 @@ if (isset($_POST['submit'])){
 }
 
 </style>
-
+<section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
         <img src="images/about-us.jpg" alt="" width=1500>
-      
+</section> 
 <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
   <h2  style="color:Crimson;font-size:40px;">About us..</h2>
   <div class="u-list u-list-1">
