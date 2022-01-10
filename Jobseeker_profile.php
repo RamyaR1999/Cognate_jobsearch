@@ -141,8 +141,22 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <li><a href="Register-member.php">Submit Your Resume</a></li>
+    
+    <?php
+
+       if($_SESSION['User_type'] == 'Admin'){     
+
+    ?>
+
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    
+    <?php
+        
+       }
+
+    ?>
+
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
@@ -359,10 +373,18 @@
                         } 
                        
                         $Industries=$_POST['Industry'];
-                        echo "<option selected value='$Industries'>Select Industry</option>";
 
+                        if(!empty($Industries)){
 
-                          ?>
+                          echo "<option selected value='$Industries'> $Industries </option>";
+                           
+                        }else{
+
+                          echo "<option selected value='Select Industry'>Select Industry</option>";
+                          
+                        }
+                        
+                     ?>
          </select>
      </div>
   <br>
@@ -396,10 +418,18 @@
                         } 
                        
                         $Educate=$_POST['Education'];
-                        echo "<option selected value='$Educate'>Select Education</option>";
 
+                        if(!empty($Educate)){
 
-                          ?>           
+                          echo "<option selected value='$Educate'> $Educate </option>";
+                           
+                        }else{
+
+                          echo "<option selected value='Select Education'>Select Education</option>";
+                          
+                        }
+
+                    ?>           
          </select>
      </div>
 <br>
@@ -432,8 +462,16 @@
                         } 
                        
                         $Functions=$_POST['Function'];
-                        echo "<option selected value='$Functions'>Select Function</option>";
 
+                        if(!empty($Functions)){
+
+                          echo "<option selected value='$Functions'> $Functions </option>";
+                           
+                        }else{
+
+                          echo "<option selected value='Select Function'> Select Function </option>";
+
+                        }
 
                           ?>         
           </select>
@@ -473,6 +511,8 @@
            <?php   echo "<td><a class='btn head-btn2' href='Jobseeker_profile.php'>Back</a></td>";   ?>
           </div>
 
+          <br>
+
              <?php
 
                 echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
@@ -487,6 +527,7 @@
                     $Lastname=$row['Lastname'];
                     $Image=$row['Image'];
                     $Email=$row['Email'];
+                    $User_type=$row['User_type'];
                     $Phone=$row['Phone'];
                     $City=$row['City'];
                     $Education=$row['Education'];
@@ -542,7 +583,7 @@
 }else{
 
 
-       $query = "SELECT * FROM users";
+       $query = "SELECT * FROM users ";
        $artist_id = mysqli_query($connection,$query);
 
         while($row=mysqli_fetch_array($artist_id)){
@@ -618,6 +659,7 @@
 <br>
 <style>
 .card {
+  display: grid;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: flex;

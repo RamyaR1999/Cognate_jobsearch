@@ -142,7 +142,19 @@
   <ul class="submenu">
 
     <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <?php
+
+       if($_SESSION['User_type'] == 'Admin'){     
+
+    ?>
+
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    
+    <?php
+        
+       }
+
+    ?>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>

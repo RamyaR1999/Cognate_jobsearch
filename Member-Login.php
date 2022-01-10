@@ -24,6 +24,7 @@
                $db_id = $row['id'];
                $db_Email    = $row['Email'];
                $db_Password = $row['Password'];
+               $db_User_type =$row['User_type'];
                $db_Phone=  $row['Phone'];
                $db_Image=  $row['Image'];
                $db_Firstname=  $row['Firstname'];
@@ -43,9 +44,10 @@
         if($Password === $db_Password){
      
              $_SESSION['id'] = $db_id;
-             $_SESSION['Email'] = $db_Email;
              $_SESSION['Firstname'] = $db_Firstname;
              $_SESSION['Lastname'] = $db_Lastname;
+             $_SESSION['Email'] = $db_Email;
+             $_SESSION['User_type'] = $db_User_type;
              $_SESSION['Image']=  $db_Image;
              $_SESSION['City'] = $db_City;
              $_SESSION['Industry'] = $db_Industry;
@@ -156,7 +158,19 @@
   <ul class="submenu">
 
     <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <?php
+
+       if($_SESSION['User_type'] == 'Admin'){     
+
+    ?>
+
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    
+    <?php
+        
+       }
+
+    ?>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>

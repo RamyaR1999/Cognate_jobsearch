@@ -101,7 +101,7 @@ $mail->SMTPSecure='tls';
               $mail->Username = 'CGBSTech2021@gmail.com';
               $mail->Password = 'cgbs@2021';
 
-              $mail->setFrom ('barthalomena@gmail.com');
+              $mail->setFrom ('CGBSTech2021@gmail.com');
               $mail->addAddress($_POST['Email'],$_POST['Firstname']);
               #$mail->addReplyTo( $_POST['email'],$_POST['name']);
               
@@ -110,7 +110,7 @@ $mail->SMTPSecure='tls';
               $mail->Body    = 'Here is the verification link'.' '.$link;
           
           if(!$mail->send()) {
-             echo "Message could not be sent.". $mail->ErrorInfo;
+             echo "Mail could not be sent.". $mail->ErrorInfo;
           }else{
 
         
@@ -264,7 +264,19 @@ $mail->SMTPSecure='tls';
   <ul class="submenu">
 
     <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <?php
+
+       if($_SESSION['User_type'] == 'Admin'){     
+
+    ?>
+
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    
+    <?php
+        
+       }
+
+    ?>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
