@@ -282,27 +282,9 @@ if (isset($_POST['submit'])){
 }
 
 </style>
-<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
 
-<style>
-.carousel-item {
-height: 100vh;
-min-height: 450px;
-background: no-repeat center center scroll;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-  </style>
-
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-<div class="carousel-inner" role="listbox">
-  <div class="carousel-item active" style="background-image: url('images/about-us.jpg') " >
-  </div>
-  </div>
-</section>
+        <img src="images/about-us.jpg" alt="" width=1500>
+      
 <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
   <h2  style="color:Crimson;font-size:40px;">About us..</h2>
   <div class="u-list u-list-1">

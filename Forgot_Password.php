@@ -401,7 +401,7 @@ $mail->SMTPSecure='tls';
                   <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
                 </div>
                 <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Send OTP</a>
+                  <a href="" class="btn head-btn2">Send OTP</a>
                   <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
                 </div>
 

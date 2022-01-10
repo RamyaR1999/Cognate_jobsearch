@@ -365,36 +365,7 @@
    font-weight: 400;
   }
 </style>
-<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-
-<style>
-.carousel-item {
-height: 100vh;
-min-height: 450px;
-background: no-repeat center center scroll;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-  </style>
-
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-<ol class="carousel-indicators">
-  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-  </ol>
-<div class="carousel-inner" role="listbox">
-  
-  <div class="carousel-item active" style="background-image: url('images/contactus.png') " >
-    <div class="carousel-caption text-monospace d-none d-md-block">
-     <!--  <h1 class="text-avatar text-capitalize text-left text-monospace u-lightbox " style="inset-inline-start: initial color:red;font-size:60px;">transforming the world of work
-</h1>
-    <h1 class="text-right text-dark u-lightbox text-monospace " style="revert: right color:red;font-size:60px;">since 1960......</h1> -->
-      
-    </div>
-  </div>
-  </div>
+ <img src="images/contactus.png" alt="" width=1500>
 
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
     <div class="u-align-left card-header bg-transparent border-0">

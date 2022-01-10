@@ -350,7 +350,7 @@
                 </div>
 
                 <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Submit</a>
+                  <a href="" class="btn head-btn2">Submit</a>
                   <input type="submit" name="confirm" value="submit" class="u-form-control-hidden">
                 </div>
                 <input type="hidden" value="" name="recaptchaResponse">

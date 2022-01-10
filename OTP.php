@@ -368,7 +368,8 @@
                   <h6 style="color:#ff0000"><?php echo $message_otp ?></h6>
                 </div>
                 <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1">Next</a>
+                     
+                  <a href="" class="btn head-btn2">Next</a>
                   <input type="submit" name="verify" value="submit" class="u-form-control-hidden">
                 </div>
 
