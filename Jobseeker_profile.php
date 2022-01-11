@@ -4,56 +4,11 @@
 
 <?php 
 
-   if(isset($_POST['CheckBoxArray'])){
-       
-       foreach($_POST['CheckBoxArray'] as $uservalueId){
-        
-          $bulk_options = $_POST['bulk_options'];
-           
-          
-  switch($bulk_options){
-
-           case 'Admin':
-
-             $query = "UPDATE users SET role='{$bulk_options}' WHERE id={$uservalueId} " ;                  
-             $update_to_admin_status = mysqli_query($connection,$query);
-
-               if(!$update_to_admin_status){
-              die("Query Failed" . mysqli_error($connection));
-}
-             break; 
-
-
-            case 'User':
-
-              $query = "UPDATE users SET role='{$bulk_options}' WHERE id={$uservalueId} " ;                  
-              $update_to_supplier_status = mysqli_query($connection,$query);
-
-                   // confirmQuery($update_to_supplier_status);
-
-              if(!$update_to_supplier_status){
-              die("Query Failed" . mysqli_error($connection));
-}
-             break; 
-
-            case 'delete':
-
-              $query = "DELETE FROM users WHERE id={$uservalueId} " ;   
-
-              $update_to_delete_status = mysqli_query($connection,$query);
-
-                   // confirmQuery($update_to_delete_status);
-
-              if(!$update_to_delete_status){
-              die("Query Failed" . mysqli_error($connection));
-}
-             break;  
-                 
-          }
-           
-       }
-       
-   }
+    if($_SESSION['User_type'] !== 'Admin'){
+   
+      header("Location:Job_seeker.php");
+  
+  }
 
 ?>
 
@@ -734,7 +689,7 @@
       <script src="./assets/js/bootstrap.min.js"></script>
 
       <!-- Jquery Mobile Menu -->
-      <!-- <script src="./assets/js/jquery.slicknav.min.js"></script> -->
+      <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->

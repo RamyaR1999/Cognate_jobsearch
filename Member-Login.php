@@ -67,7 +67,7 @@
         }
          
         }else{
-            $message_Email = "Invalid Email";   
+            $message_Email = "Email is invalid";   
               
         }
         
@@ -101,14 +101,19 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/responsive.css">
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Member-Login.css" media="screen">
+<link rel="stylesheet" href="SignIn.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
+ 
+<!-- Password Icon -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
  <!-- Profile Icon -->
 
  <link rel="stylesheet" href="assets/css/shared/style.css">
@@ -324,73 +329,91 @@
     color: #fb246a;
 }
 
-</style>   
+</style>
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center align-items-center h-100">
+                <div class="card-wrapper">
 
-    <section class="u-align-center u-clearfix u-grey-10 u-section-1" id="sec-357b">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-group u-radius-10 u-shape-round u-#f2f2f2 u-group-1">
-          <div class="u-container-layout u-valign-middle u-container-layout-1">
-            <h3 class="u-text u-text-default u-text-1">Sign In</h3>
-            <br>
+        <div class="card fat">
+            <div class="card-body">
+                <h4 class="card-title">Login</h4>
 
-            <?php
+                <?php
                 
                 if(isset($_SESSION['Register_status'])){
                 ?>
-              <h6 class="text-center" style="color:#57de2f">
+                 <h6 class="text-center" style="color:#57de2f">
 
-            <?php    
-                    echo $_SESSION['Register_status'];
-                    unset($_SESSION['Register_status']);
+                <?php    
+                        echo $_SESSION['Register_status'];
+                        unset($_SESSION['Register_status']);
 
-             ?>
-              </h6>
-            <?php
-                }
-                
-            ?>
-            
-            <div class="u-expanded-width u-form u-login-control u-form-1">
-              <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
-                <div class="u-form-group u-form-name">
-                  <label for="email-cd60" class="u-form-control-hidden u-label"></label>
-                  <input type="text" placeholder="Email" id="email-cd60" name="Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" required="">
-                  
-                  <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
-                </div>
-                <div class="u-form-group u-form-password">
-                  <label for="password-708d" class="u-form-control-hidden u-label"></label>
-                  <input type="Password" placeholder="Password" id="id_Password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" required="">
-                  <span class="far fa-eye" id="togglePassword" style="margin-left: 370px; cursor: pointer;"></span>
-                </div>
-                <h6 class="text-center" style="color:#ff0000"><?php echo $message_Password; ?></h6>
-                <div class="u-form-checkbox u-form-group">
-                  <input type="checkbox" id="checkbox-708d" name="remember" value="On">
-                  <label for="checkbox-708d" class="u-label">Remember me</label>
-                </div>
-<div class="u-form-group">
-               <a href="Forgot_password.php" class="u-border-1 u-border-active-palette-2-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a>
-</div>
-                <div class="u-align-center u-form-group u-form-submit">
-                                <a href="" class="btn head-btn2 " style="align-center">Login</a>
-                  <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-<!--                  <button class="u-btn u-btn-round u-btn-submit u-button-style u-radius-17 u-btn-1" name="submit" type="submit" id ="submit">login</button>-->
-                </div>
-                <input type="hidden" value="" name="recaptchaResponse">
-              </form>
+                 ?>
+                  </h6>
+                <?php
+                    }
+                    
+                ?>
 
-<a href="Register-Member.php" class="u-border-1  u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-3">Register for a free account</a>
-<br>
+                <form method="POST" class="my-login-validation" novalidate="">
+                    <div class="form-group">
+                        <label for="email">E-Mail Address</label>
+                        <input id="email" type="email" class="form-control" name="Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" required autofocus required="">
+                        <div class="invalid-feedback">
+                            Email is invalid
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Email; ?></span>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="password">Password
+                            <a href="Forgot_password.php" class="float-right">
+                                Forgot Password?
+                            </a>
+                        </label>
+                        <div style="position:relative" id="">
+                            <input type="Password" id="id_password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="form-control" required="">
+                            <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="togglePassword"></span></div>
+                        </div>
+                        <div class="invalid-feedback">
+                            Password is required
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Password; ?></span>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <div class="custom-checkbox custom-control">
+                            <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                            <label for="remember" class="custom-control-label">Remember Me</label>
+                        </div>
+                    </div> -->
+                     <div class="u-form-checkbox u-form-group">
+                        <input type="checkbox" id="checkbox-708d" name="remember" value="On">
+                        <label for="checkbox-708d" class="u-label">Remember Me</label>
+                     </div>
+
+                    <div class="form-group m-0">
+                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">
+                            Login
+                        </button>
+                    </div>
+                    <div class="mt-4 text-center">
+                        Don't have an account? <a href="Register-Member.php">Create One</a>
+                    </div>
+                </form>
             </div>
-
-           <!--  <a href="Forgot password.php" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-btn-2">Forgot password?</a> -->
-          </div>
         </div>
-      </div>
-   </section>
+       </div>
+     </div>
+   </div>
+</section>  
+</body>
 
-   <!--  <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+<br>  
+
+    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -410,13 +433,28 @@
             C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
-        </div> -->
+        </div>
       </div><!-- </footer> -->
-    <!-- <section class="u-backlink u-clearfix u-footer">
+    <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
-    </section> -->
+    </section>
+
+    <script>
+
+const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+</script>
 
 <!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
@@ -461,10 +499,13 @@
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
 
-    
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/my-login.js"></script>
+
   </body>
 </html>
-
 <script>
 
 const togglePassword = document.querySelector('#togglePassword');
