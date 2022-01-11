@@ -415,48 +415,12 @@
    font-weight: 400;
   }
 </style>
-<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
+<section class="u-clearfix u-gradient u-section-1" id="sec-6065">
 
-<style>
-.carousel-item {
-height: 100vh;
-min-height: 450px;
-background: no-repeat center center scroll;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-  </style>
-
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-<ol class="carousel-indicators">
-  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-  </ol>
-<div class="carousel-inner" role="listbox">
-  
-  <div class="carousel-item active" style="background-image: url('images/find-a-job.jpg') " >
-    <div class="carousel-caption text-monospace d-none d-md-block">
-     <!-- <h1 class="u-align-left u-text u-text-default u-text-1">We help you hire a right talent</h1>
-        <h1 class="u-align-right u-text u-text-custom-color-1 u-text-default u-text-2">at the right time</h1>
-        <p class="u-align-center u-text u-text-default u-text-3">Our pan India presence ensures that you have access to right<br> talent for all your recruitment needs.</p> -->
-      
-    </div>
-  </div>
-  </div>
-
-
-
-
+<img src="images/find-a-job.jpg" alt="">
 </section>
-
-
-       
-    
-    <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-
-<div class="u-align-left card-header bg-transparent border-0">
+<section class="u-clearfix u-gradient u-section-1" id="sec-6065">
+        <div class="u-align-left card-header bg-transparent border-0">
           <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>submit a job</h3>
           </div>
 
