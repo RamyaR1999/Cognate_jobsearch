@@ -397,7 +397,7 @@ $mail->SMTPSecure='tls';
                 <form action="" method="POST" class="my-login-validation">
                     <div class="form-group">
                         <label for="email"></label>
-                        <input id="email" type="email" class="form-control" name="Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" required autofocus required="">
+                        <input id="email" type="email" class="form-control" name="Email"placeholder="Enter your Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" required autofocus required="">
                         <div class="invalid-feedback">
                             Email is invalid
                         </div>
@@ -405,7 +405,7 @@ $mail->SMTPSecure='tls';
                     </div>
                     <div class="form-group m-0">
                         <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">
-                            Sent OTP
+                            Send OTP
                         </button>
                     </div>
                     <!-- <div class="mt-4 text-center">

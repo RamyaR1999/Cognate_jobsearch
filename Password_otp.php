@@ -67,7 +67,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Home </title>
+    <title>CGBS-Sign in </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -326,17 +326,14 @@
                 <form action="" method="POST" class="my-login-validation">
                     <div class="form-group">
                         <label for="email"></label>
-                        <input type="text" placeholder="Enter your OTP" id="" name="otp" value="<?php echo isset($_REQUEST["otp"]) ? $_REQUEST["otp"] : ''; ?>" class="form-control" required="">
+                        <input type="text" placeholder="Enter your OTP" id="" name="otp" value="<?php echo isset($_REQUEST["otp"]) ? $_REQUEST["otp"] : ''; ?>" class="form-control" required autofocus required="">
                   <h6 style="color:#ff0000"><?php echo $message_otp ?></h6>
                     </div>
                     <div class="form-group m-0">
                         <button type="submit" name="verify" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">
-                            Sent OTP
+                            Next
                         </button>
                     </div>
-                    <!-- <div class="mt-4 text-center">
-                        Don't have an account? <a href="Register-Member.php">Create One</a>
-                    </div> -->
                 </form>
             </div>
         </div>

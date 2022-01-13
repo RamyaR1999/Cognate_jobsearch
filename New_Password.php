@@ -354,7 +354,7 @@
                     <div class="form-group">
                         <label for="password"></label>
                         <div style="position:relative" id="">
-                            <input type="password" id="id_password" placeholder="Enter your New Password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="form-control" required="">
+                            <input type="password" id="id_password" placeholder="Enter your New Password" name="Password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="form-control"required autofocus required="">
                             <!-- <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="togglePassword"></span></div> -->
                         </div>
                         <div class="invalid-feedback">
@@ -365,39 +365,20 @@
 
                     <div class="form-group">
                         <label for="password">
-                            <!-- <a href="Forgot_password.php" class="float-right">
-                                Forgot Password?
-                            </a> -->
                         </label>
                         <div style="position:relative" id="">
                             <input type="password" id="id_password" placeholder="Confirm_password" name="Confirm_password" value="<?php echo isset($_REQUEST["Password"]) ? $_REQUEST["Password"] : ''; ?>" class="form-control" required="">
-                            <!-- <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="togglePassword"></span></div> -->
                         </div>
                         <div class="invalid-feedback">
                             Password is required
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Password; ?></span>
                     </div>
-
-                    <!-- <div class="form-group">
-                        <div class="custom-checkbox custom-control">
-                            <input type="checkbox" name="remember" id="remember" class="custom-control-input">
-                            <label for="remember" class="custom-control-label">Remember Me</label>
-                        </div>
-                    </div> -->
-                     <!-- <div class="u-form-checkbox u-form-group">
-                        <input type="checkbox" id="checkbox-708d" name="remember" value="On">
-                        <label for="checkbox-708d" class="u-label">Remember Me</label>
-                     </div> -->
-
                     <div class="form-group m-0">
                         <button type="submit" name="confirm" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">
                             Submit
                         </button>
                     </div>
-                    <!-- <div class="mt-4 text-center">
-                        Don't have an account? <a href="Register-Member.php">Create One</a>
-                    </div> -->
                 </form>
             </div>
         </div>
