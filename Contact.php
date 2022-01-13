@@ -377,12 +377,14 @@
 
 
 <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
+  <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-left u-text u-text-default u-text-1">Share your details below</h1>
         <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">we'd love to connect.</h1>
         <p class="u-align-left u-text u-text-default u-text-3"> This form is only for companies looking to hire roles.<br>If you are a job seeker, please share your profile at<br>
 Submit Your CV</p>
       </div>
+    </div>
     </section>
 
     <section class="u-clearfix u-gradient u-section-1" id="sec-6065">

@@ -295,12 +295,11 @@ if (isset($_POST['submit'])){
 </style>
 
 
-    <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a">
-     
-  <div style="clear: both u-text-1">
+    <section class="u-clearfix u-custom-color-6 u-lightbox u-section-1" id="sec-de5a">
+    <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
     <h1 class="text-avatar text-capitalize text-monospace text-left" style="inset-inline-start: initial color:red;font-size:60px; padding-right: 400px;">employment services</h1>
     <h1 class="text-right text-monospace text-dark text-capitalize " style="revert color:red;font-size:60px;">find the right talent....</h1>
-</div>
+
 
         <div class="u-expanded-width-xs u-form u-form-1">
           <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
@@ -318,15 +317,15 @@ Our unique sourcing methodology ensures
   Call us at 1800-267-4050 to know more.
   <br>
   </p>
-  <a class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
+  <a class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true"></a>
            
-  <a class="btn btn-dark" href="techno employee.php">speak to an expert</a>      
-        </div>
-        </form>
-      </div>
-    </section>
-    
+  <a class="btn btn-dark" href="techno employee.php">speak to an expert</a>
 </div>
+</form>
+</div>
+</div>
+</section>
+
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="snp-txt-img-cta-txt">
 <h2>our secret</h2>
