@@ -88,7 +88,7 @@
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Member-Login.css" media="screen">
+<link rel="stylesheet" href="SignIn.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -313,38 +313,40 @@
 
 </style>
 
-    <section class="u-align-center u-clearfix u-grey-10 u-section-1" id="sec-357b">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-center u-container-style u-group u-radius-10 u-shape-round u-grey u-group-1">
-          <div class="u-container-layout u-valign-middle u-container-layout-1">
-            <h3 class="text-center">Enter the OTP</h3>
-            
-           <p class="font-weight-light text-muted mb-0">
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center align-items-center h-100">
+                <div class="card-wrapper">
 
-            Enter the OTP that we sent to your email.
-
-           </p>
-            
-            <div class="u-expanded-width u-form u-login-control u-form-1">
-              <form action="" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-35 u-form-vertical u-inner-form" source="custom" name="form-2" style="padding: 10px;">
-                <div class="u-form-group u-form-name">
-                  <label for="email-cd60" class="u-form-control-hidden u-label"></label>
-                  <input type="text" placeholder="Enter your OTP" id="" name="otp" value="<?php echo isset($_REQUEST["otp"]) ? $_REQUEST["otp"] : ''; ?>" class="u-grey-5 u-input u-input-rectangle" required="">
+        <div class="card fat">
+            <div class="card-body">
+                <h4 class="card-title">Enter the OTP</h4>
+                <p>Enter the OTP that we sent to your email.</p>
+                <form action="" method="POST" class="my-login-validation">
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="text" placeholder="Enter your OTP" id="" name="otp" value="<?php echo isset($_REQUEST["otp"]) ? $_REQUEST["otp"] : ''; ?>" class="form-control" required="">
                   <h6 style="color:#ff0000"><?php echo $message_otp ?></h6>
-                </div>
-                <div class="u-align-center u-form-group u-form-submit">
-                  <a href="" class="btn head-btn2">Next</a>
-                  <input type="submit" name="verify" value="submit" class="u-form-control-hidden">
-                </div>
-                <input type="hidden" value="" name="recaptchaResponse">
-              </form>
-              <div><?php if(isset($message)) { echo $message; } ?></div>
+                    </div>
+                    <div class="form-group m-0">
+                        <button type="submit" name="verify" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">
+                            Sent OTP
+                        </button>
+                    </div>
+                    <!-- <div class="mt-4 text-center">
+                        Don't have an account? <a href="Register-Member.php">Create One</a>
+                    </div> -->
+                </form>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    
+       </div>
+     </div>
+   </div>
+</section>  
+</body>
+ <br>
+
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
