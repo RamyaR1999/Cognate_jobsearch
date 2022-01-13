@@ -357,7 +357,7 @@
                     
                 ?>
 
-                <form method="POST" class="my-login-validation" novalidate="">
+                <form method="POST" class="my-login-validation">
                     <div class="form-group">
                         <label for="email">E-Mail Address</label>
                         <input id="email" type="email" class="form-control" name="Email" value="<?php echo isset($_REQUEST["Email"]) ? $_REQUEST["Email"] : ''; ?>" required autofocus required="">
@@ -441,7 +441,7 @@
       </main>
     </section>
 
-    <script>
+<script>
 
 const togglePassword = document.querySelector('#togglePassword');
   const password = document.querySelector('#id_password');
@@ -506,17 +506,3 @@ const togglePassword = document.querySelector('#togglePassword');
 
   </body>
 </html>
-<script>
-
-const togglePassword = document.querySelector('#togglePassword');
-  const Password = document.querySelector('#id_Password');
- 
-  togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = Password.getAttribute('type') === 'Password' ? 'text' : 'Password';
-    Password.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
-
-</script>
