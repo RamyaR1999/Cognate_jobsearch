@@ -578,7 +578,8 @@ When an employer fails to recognize the right talent, they are implicating a maj
     
     </section>-->
 
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a" style="background-color: #71797E">
+    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
+      <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
       <!-- <div style="background-image: url('images/imges.jpg');"> -->
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
