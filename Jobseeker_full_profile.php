@@ -350,7 +350,7 @@
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
 
-                    
+                    <a href="cv\Thennarasan_CV_updated.docx" download class="btn head-btn2">Download CV</a>
                   </p>
                 </div>
               </div>
