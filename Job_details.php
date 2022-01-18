@@ -279,6 +279,8 @@
      $Job_time = $row['Job_time'];
      $Job_specification = $row['Job_specification'];
      $Service = $row['Service'];
+     $Sector = $row['Sector'];
+     $Skills = $row['Skills'];
 
 
    }
@@ -324,7 +326,7 @@
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9"><?php echo $Job_title; ?></h2>
                 <p class="u-align-left u-text u-text-10"> <?php echo $Job_specification; ?></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
-                <p class="u-align-left u-text u-text-12">Angular, Dot net, WCF, MVC</p>
+                <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-13">qualification</h2>
                 <p class="u-align-left u-text u-text-14">B.E/B.Tech</p>
               </div>

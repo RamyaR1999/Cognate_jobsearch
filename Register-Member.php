@@ -294,7 +294,7 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit A job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -457,19 +457,19 @@ $mail->SMTPSecure='tls';
     <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="text">Firstname *</label>
-                        <input type="text" value="<?php echo $Firstname; ?>" class="form-control" placeholder="Enter your Firstname" name="Firstname" required autofocus>
+                        <input type="text" value="<?php echo isset($_POST["Firstname"]) ? $_POST["Firstname"] : ''; ?>" class="form-control" name="Firstname" required autofocus>
                         
                         <span style="color:#ff0000"><?php echo $message_Firstname; ?></span>
                     </div>
                     <div class="form-group">
                         <label for="text">Lastname *</label>
-                        <input type="text" value="<?php echo $Lastname; ?>" class="form-control" placeholder="Enter your Firstname" name="Lastname" required="">
+                        <input type="text" value="<?php echo isset($_POST["Lastname"]) ? $_POST["Lastname"] : ''; ?>" class="form-control" name="Lastname" required="">
                         
                         <span style="color:#ff0000"><?php echo $message_Lastname; ?></span>
                     </div>
                     <div class="form-group">
                         <label for="email">E-Mail Address</label>
-                        <input id="email" type="email" value="<?php echo $Email; ?>" class="form-control" name="Email" required="">
+                        <input id="email" type="email" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="form-control" name="Email" required="">
                         <div class="invalid-feedback">
                             Email is invalid
                         </div>
@@ -500,19 +500,10 @@ $mail->SMTPSecure='tls';
 
                     <div class="form-group">
                  <label for="text">CV *</label>
-                   <div class="form-element">
-                     <div class="custom-file-upload">
-                        <input type="file" name="file" id="" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
-                        <span class="focus-border"></span>
+                     <div style="position:relative" id="">
+                        <input type="file" name="file" id="" class="custom-file-upload-input" style="" data-bit-id="cvFileUpload" />
                      </div>
-                    <span data-bit-output-upload-files="cvFileUpload"></span>
-                      <div> 
-                        <div  class="cms-file-upload-validator field-error" style="display:none;">
-                          <span class="cms-file-upload-validator-error-message">CV is required</span>
-                        </div>
-                      </div>
                     <span style="color:#ff0000"><?php echo $empty_cv; ?></span>
-                </div>
                   </div>
 
                     <div class="form-group m-0">
@@ -531,9 +522,7 @@ $mail->SMTPSecure='tls';
 </section>  
 </body>
 
-
-
-    <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+<footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -595,43 +584,43 @@ const hidePassword = document.querySelector('#hidePassword');
 <!-- JS here -->
   
     <!-- All JS Custom Plugins Link Here here -->
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+      <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
 
       <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
+      <script src="assets/js/jquery.slicknav.min.js"></script>
 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
-      <script src="./assets/js/price_rangs.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/price_rangs.js"></script>
       <!-- Date Picker -->
-      <script src="./assets/js/gijgo.min.js"></script>
+      <script src="assets/js/gijgo.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
+      <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+      <script src="assets/js/jquery.magnific-popup.js"></script>
 
     <!-- Scrollup, nice-select, sticky -->
-      <script src="./assets/js/jquery.scrollUp.min.js"></script>
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
+      <script src="assets/js/jquery.scrollUp.min.js"></script>
+      <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
       
       <!-- contact js -->
-      <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+      <script src="assets/js/contact.js"></script>
+      <script src="assets/js/jquery.form.js"></script>
+      <script src="assets/js/jquery.validate.min.js"></script>
+      <script src="assets/js/mail-script.js"></script>
+      <script src="assets/js/jquery.ajaxchimp.min.js"></script>
         
     <!-- Jquery Plugins, main Jquery -->  
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
+      <script src="assets/js/plugins.js"></script>
+      <script src="assets/js/main.js"></script>
 
   </body>
 </html>

@@ -2,40 +2,46 @@
 <?php ob_start (); ?>
 <?php include "db.php"; ?>
 
+
 <?php
 
 if (isset($_POST['submit'])){
 
             $search=$_POST['Job_title'];
-            // $role=$_POST['Roles'];
-            // $offer=$_POST['Offerings'];
-            // $locate=$_POST['Location'];
+            $Search=$_POST['Skills'];
+           if($search !="" || $Search !=""){
 
+     $jobs="SELECT * FROM jobs WHERE Job_title = '$search' || Skills='$Search' ";
 
-              $artist="SELECT * FROM jobs WHERE Job_title = '$search' "; 
+              $search_jobs=mysqli_query($connection, $jobs); 
 
-              $search_artist=mysqli_query($connection, $artist); 
-
-                 if(!$search_artist){
+                 if(!$search_jobs){
                     die("QUERY FAILED" . mysqli_error($connection));
                 }
-                $count=mysqli_num_rows($search_artist);
+                $count=mysqli_num_rows($search_jobs);
                 if($count == 0){
 
-               header ("Location: Available_jobs.php");
+               // header ("Location: Available_jobs.php");
                        
             }else{
-              while($row=mysqli_fetch_assoc($search_artist)){
+              while($row=mysqli_fetch_assoc($search_jobs)){
 
                     $id=$row['id'];
                     $Job_title=$row['Job_title'];
+                    $Skills=$row['Skills'];
+            
+            header ("Location: Available_jobs.php?jobs=$id ");
+
             }
 
         }
+      }else{
         header ("Location: Available_jobs.php");
-        } 
+        }
+      }
 
 ?>
+
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -318,7 +324,7 @@ if (isset($_POST['submit'])){
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-ef64" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Pincode" id="email-ef64" name="pincode" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
+              <input type="text" placeholder="Skills" id="Skills" name="Skills" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
             </div>
             <div class="u-form-group u-form-submit">
               <a href="Available_jobs.php" class="btn head-btn1 " style="padding: 12px"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
@@ -519,23 +525,10 @@ Moving them forward. human forward. </p>
     </a>
 </div>
 
-
-
-
 </section>
-
-
-
-
-
-
   
-  
-  
-    
 <br></br>
 
-   
     <div class="support-company-area support-padding fix">
             <div class="container">
                 <div class="row align-items-center">
@@ -543,8 +536,7 @@ Moving them forward. human forward. </p>
                         <div class="right-caption">
                             <!-- Section Tittle -->
                             <div class="section-tittle section-tittle2">
-                                <span>what we doing..</span>
-                                <h2 style="color:Crimson;font-size:40px;">Cognate Global Business Solution</h2>
+                                <span>what we doing..</span>                                <h2 style="color:Crimson;font-size:40px;">Cognate Global Business Solution</h2>
                             </div>
                             <div class="support-caption">
                                 <p class="pera-top">We are one of the largest global HR services firms.<br> We combine our passion for people with intelligent technology to<br> help organizations and talent convert potential into performance.<br> Moving them forward. human forward.</p>
@@ -618,7 +610,7 @@ When an employer fails to recognize the right talent, they are implicating a maj
 <!-- </g> -->
 </g></svg><img></span>&nbsp;<br>
               </a>
-              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" name="submits" value="submit" class="u-form-control-hidden">
             </div>
             <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
             <div class="u-form-send-error u-form-send-message">#FormSendError</div>
@@ -637,6 +629,17 @@ When an employer fails to recognize the right talent, they are implicating a maj
         target: "jobtitle",
         data: "search.php",
         post: { type: "Name" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "Skills",
+        data: "search.php",
+        post: { type: "Skills" },
         // OPTIONAL
         delay : 50,
         min : 1

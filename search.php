@@ -35,6 +35,19 @@ switch ($_POST['type']) {
 //      ];     
     }
          break;
+
+    case "Skills":
+        
+     $query = "SELECT Skills FROM jobs  WHERE Skills LIKE '%" . $_POST['search'] . "%' ";
+    
+    $statement=mysqli_query($pdo,$query);
+    
+    while($row=mysqli_fetch_assoc($statement)){
+        
+        $data[] = $row["Skills"];
+    
+    }
+         break;
 }
 
 if (count($data)==0) { $data = null; }

@@ -349,9 +349,21 @@
 
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
-
-                    <a href="cv\Thennarasan_CV_updated.docx" download class="btn head-btn2">Download CV</a>
+  
                   </p>
+                  <?php 
+
+                     if(empty($CV)){
+
+                     }else{
+
+                  ?>
+                  <a href="cv\<?php echo $CV ?>" download class="btn head-btn1"><i class="fas fa-download" style="font-size:20px;color:lightblue;text-shadow:1px 1px 2px #000000;"></i> Download CV</a>
+                  <?php
+                    
+                    }
+
+                  ?>
                 </div>
               </div>
             </div>
@@ -402,7 +414,7 @@
       <script src="./assets/js/bootstrap.min.js"></script>
 
       <!-- Jquery Mobile Menu -->
-      <!-- <script src="./assets/js/jquery.slicknav.min.js"></script> -->
+      <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
