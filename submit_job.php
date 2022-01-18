@@ -14,16 +14,19 @@
          $Service = $_POST['Service'];
          $Job_title = $_POST['Job_title'];
          $Sector = $_POST['Sector'];
+         $Skills = $_POST['Skills'];
          $Job_specification = $_POST['Job_specification'];
          $Logo = $_POST['Logo'];
          $Job_time = $_POST['Job_time'];
          $Job_posted = $_POST['Job_posted'];
+
          // $Job_posted = date('d-m-Y');
          // $Job_posted = "2021-12-03";
 
          $error = 0;
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email)){             
+      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_designation) && !empty($Company_name)){
+      if(!empty($Skills)){             
      
       if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
           
@@ -52,8 +55,8 @@
         }else {
 
         
-        $query = "INSERT INTO jobs (Firstname,Lastname,Email,Phone,Job_designation,Company_name,Branch,Service,Job_title,Sector,Job_specification,Logo,Job_time) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Phone}','{$Job_designation}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Job_specification}','CrysCloud.jpg','FullTime')";
+        $query = "INSERT INTO jobs (Firstname,Lastname,Email,Phone,Job_designation,Company_name,Branch,Service,Job_title,Sector,Skills,Job_specification,Logo,Job_time) ";
+        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Phone}','{$Job_designation}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_specification}','CrysCloud.jpg','FullTime')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -87,7 +90,11 @@
               $message_Firstname ="Only Alphabets are allowed in firstname";
           
        }
-          
+         
+       }else{
+        $Skills = "Skill is required";
+       } 
+
           }else{
         $message = "All fiels are required *";
        }  
@@ -437,8 +444,8 @@
                   <div class="input-group">
                      <span class="">Firstname * </span><br>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
-                          <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Firstname"]) ? $_POST["Firstname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                         </div>
                       </div>
@@ -448,8 +455,8 @@
                       <div class="input-group">
                         <span  class="" >Lastname * </span> 
                         <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
-                          <span class="focus-border"></span>
+                          <input type="text"  value="<?php echo isset($_POST["Lastname"]) ? $_POST["Lastname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
                         </div>
                       </div>
@@ -461,8 +468,8 @@
                       <div class="input-group">
                         <span  class="">Email * </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
-                          <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
                         </div>
                       </div>
@@ -472,8 +479,8 @@
                       <div class="input-group">
                         <span  class="">Phone * </span> 
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
-                          <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Phone"]) ? $_POST["Phone"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"><?php echo $message_Phone; ?></h6>
                         </div>
                         </div>
@@ -485,8 +492,8 @@
                       <div class="input-group">
                         <span  class="" >Job designation * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_designation; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter your job role" name="Job_designation">
-                          <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Job_designation"]) ? $_POST["Job_designation"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter your job role" name="Job_designation">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"></h6>
                           </div>
                         
@@ -497,11 +504,10 @@
                       <div class="input-group">
                         <span  class="">Company name * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Company_name; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
-                          <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Company_name"]) ? $_POST["Company_name"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
+                          <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"></h6>
-                          </div>
-                        
+                          </div> 
                       </div>
                     </div>
                   </div>
@@ -511,8 +517,8 @@
                       <div class="input-group">
                          <span  class="" >Job title * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Job_title; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
-                       <span class="focus-border"></span>
+                          <input type="text" value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
+                       <!-- <span class="focus-border"></span> -->
                         </div>               
                       </div>
                     </div>
@@ -521,8 +527,8 @@
                       <div class="input-group">
                        <span  class="" >Job specification * </span>
                         <div class="col-sm-12">
-                          <textarea class="form-control" name="Job_specification"></textarea>
-                          <span class="focus-border"></span>
+                          <textarea class="form-control" name="Job_specification"><?php echo isset($_POST["Job_specification"]) ? $_POST["Job_specification"] : ''; ?></textarea>
+                          <!-- <span class="focus-border"></span> -->
                         </div>
                       </div>
                     </div>
@@ -534,7 +540,7 @@
                         <span  class="">Service * </span>
                         <div class="col-sm-12">
                           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
-                          <option value="-1">-- please select service --</option>
+                          <option value="">-- please select service --</option>
                           <option value="Contract Staffing">Contract Staffing</option>
                           <option value="Permanent Recruitment">Permanent Recruitment</option>
                           <option value="RPO">RPO</option>
@@ -550,7 +556,7 @@
                          <span  class="" >Branch * </span>
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
-                              <option value="-1">-- please select branch --</option>
+                              <option value="">-- please select branch --</option>
                               <option value="Work from Home">Work from Home</option>
                               <option value="Ahmedabad">Ahmedabad</option>
                               <option value="Baroda">Baroda</option>
@@ -615,6 +621,26 @@
                           <option value="Other">Other</option>
                         </select>
                         <!-- <span class="focus-border"></span> -->
+                        </div>
+                        
+                      </div>
+                    </div>
+                    &nbsp;
+                    <div class="col-md-12">
+                      <div class="input-group">
+                         <span  class="">Skills * </span> 
+                        <div class="col-sm-12">
+                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Skills"id="Skills">
+                          <option value="">-- please select Skills --</option>
+                          <option value="PHP">PHP</option>
+                          <option value="Python">Python</option>
+                          <option value="C">C</option>
+                          <option value="C++">C++</option>
+                          <option value="Java">Java</option>
+                          <option value="Angular JS">Angular JS</option>
+                        </select>
+                        <!-- <span class="focus-border"></span> -->
+                        <h6 style="color:#ff0000"><?php echo $Skills; ?></h6>
                         </div>
                         
                       </div>
