@@ -23,32 +23,27 @@
 
          $error = 0;
 
-      if(!empty($Fullname) && !empty($Email) && !empty($Phone) && !empty($Job_type) && !empty($Company_name) && !empty($Location)){
+      if(!empty($Job_type) && !empty($Company_name) && !empty($Location)){
       if(!empty($Skills)){             
      
-      if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
-            
-      
-            
-        // if($password == $confirm_password){
+      // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
         
-        if(preg_match("/^[0-9]{10}$/", $Phone)) {   
+      //   if(preg_match("/^[0-9]{10}$/", $Phone)) {   
 
 
+        // if(!$error){
+        // $check_query= "SELECT * FROM jobs WHERE Email = '{$Email}' ";
+        // $check_jobs_query = mysqli_query($connection,$check_query);
 
-        if(!$error){
-        $check_query= "SELECT * FROM jobs WHERE Email = '{$Email}' ";
-        $check_jobs_query = mysqli_query($connection,$check_query);
+        // if(mysqli_num_rows($check_jobs_query) > 0){
 
-        if(mysqli_num_rows($check_jobs_query) > 0){
+        //   $row = mysqli_fetch_assoc($check_jobs_query);
 
-          $row = mysqli_fetch_assoc($check_jobs_query);
-
-            if($Email==$row['Email'])
-            {
-                $message_Email= "Email already exists";
-            }
-        }else {
+        //     if($Email==$row['Email'])
+        //     {
+        //         $message_Email= "Email already exists";
+        //     }
+        // }else {
 
         
         $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Location,Service,Job_title,Sector,Skills,Job_description,Job_time) ";
@@ -67,18 +62,18 @@
          $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
           header( "Location: Available_jobs.php" );  
           
- }
+//  }
 
-}
-          }else{
-              $message_phone = "Invalid Phone No";
+// }
+       //    }else{
+       //        $message_phone = "Invalid Phone No";
             
-        }
+       //  }
 
-          }else{
-              $message_Fullname ="Only Alphabets are allowed in Fullname";
+       //    }else{
+       //        $message_Fullname ="Only Alphabets are allowed in Fullname";
           
-       }
+       // }
          
        }else{
         $message_skills = "Skill is required";
@@ -426,216 +421,180 @@
             <div class="col-md-12">
                <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
                <span  class="">Fields marked with * are required fields</span>
-               <h6 class="text-center" style="color:#ff0000"></h6>
+               <h6 class="" style="color:#ff0000"></h6>
           </div>
             <div class="u-layout-row">
-               <div class="col-md-12">
-                  <div class="input-group">
-                     <span class="">Fullname * </span><br>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Fullname" name="Fullname">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                  <div class="u-layout-row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="">Email * </span> 
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Email" name="Email">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Email; ?></h6>
-                        </div>
-                      </div>
-                    </div>
-                   &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="">Phone * </span> 
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Phone"]) ? $_POST["Phone"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Phone no" name="Phone">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Phone; ?></h6>
-                        </div>
-                        </div>
-                      </div>
-                    &nbsp;
-                  </div>
-                  <div class="u-layout-row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="" >Job type * </span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Job_type"]) ? $_POST["Job_type"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter your job role" name="Job_type">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"></h6>
-                          </div>
-                        
-                      </div>
-                    </div>
-                    &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="">Company name * </span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Company_name"]) ? $_POST["Company_name"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"></h6>
-                          </div> 
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                   <div class="u-layout-row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                         <span  class="" >Job title * </span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
-                       <!-- <span class="focus-border"></span> -->
-                        </div>               
-                      </div>
-                    </div>
-                    &nbsp;
-                <div class="col-md-12">
-                      <div class="input-group">
-                       <span  class="" >Job description * </span>
-                        <div class="col-sm-12">
-                          <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
-                          <!-- <span class="focus-border"></span> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                  <div class="u-layout-row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="">Service * </span>
-                        <div class="col-sm-12">
-                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
-                          <option value="">-- please select service --</option>
-                          <option value="Contract Staffing">Contract Staffing</option>
-                          <option value="Permanent Recruitment">Permanent Recruitment</option>
-                          <option value="RPO">RPO</option>
-                          <option value="IT Contract Staffing">IT Contract Staffing</option>
-                        </select>
-                        <!-- <span class="focus-border"></span> -->
-                        </div>
-                      </div>
-                    </div>
-                    &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                         <span  class="" >Location * </span>
-                        <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location"id="Location">
-                              <option value="">-- please select Location --</option>
-                              <option value="Work from Home">Work from Home</option>
-                              <option value="Ahmedabad">Ahmedabad</option>
-                              <option value="Baroda">Baroda</option>
-                              <option value="Bengaluru">Bengaluru</option>
-                              <option value="Bengaluru">Bhubaneswar</option>
-                              <option value="Bhubaneswar">Chandigarh</option>
-                              <option value="Chandigarh">Chennai</option>
-                              <option value="Chennai">Cochin</option>
-                              <option value="Cochin">Coimbatore</option>
-                              <option value="Coimbatore">Gurgaon</option>
-                              <option value="Gurgaon">Guwahati</option>
-                              <option value="Guwahati">Hubli</option>
-                              <option value="Hubli">Hyderabad</option>
-                              <option value="Indore">Indore</option>
-                              <option value="Jaipur">Jaipur</option>
-                              <option value="Jamshedpur">Jamshedpur</option>
-                              <option value="Karnataka">Karnataka</option>
-                              <option value="Kolkata">Kolkata</option>
-                              <option value="Lucknow">Lucknow</option>
-                              <option value="Madurai">Madurai</option>
-                              <option value="Mangalore">Mangalore</option>
-                              <option value="Mumbai">Mumbai</option>
-                              <option value="Nagpur">Nagpur</option>
-                              <option value="New Delhi">New Delhi</option>
-                              <option value="Patna">Patna</option>
-                              <option value="Pune">Pune</option>
-                              <option value="Rajkot">Rajkot</option>
-                              <option value="Surat">Surat</option>
-                              <option value="Trivandrum">Trivandrum</option>
-                              <option value="Visakapatnam">Visakapatnam</option>
-                            </select>
-                        <!-- <span class="focus-border"></span> -->
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                 &nbsp;
-                   <div class="u-layout-row">
-                    <div class="col-md-12">
-                      <div class="input-group">
-                         <span  class="">Sector * </span> 
-                        <div class="col-sm-12">
-                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
-                          <option value="">-- please select sector --</option>
-                          <option value="Accounting / Finance">Accounting / Finance</option>
-                          <option value="Banking & finance">Banking &amp; finance</option>
-                          <option value="General Administration">General Administration</option>
-                          <option value="Human Resources">Human Resources</option>
-                          <option value="Information Technology">Information Technology</option>
-                          <option value="Insurance">Insurance</option>
-                          <option value="ITeS & BPO">ITeS &amp; BPO</option>
-                          <option value="Manufacturing">Manufacturing</option>
-                          <option value="Sales">Sales</option>
-                          <option value="FMCG">FMCG</option>
-                          <option value="Retail">Retail</option>
-                          <option value="Telecom">Telecom</option>
-                          <option value="Media & entertainment">Media &amp; entertainment</option>
-                          <option value="Education">Education</option>
-                          <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
-                          <option value="Consulting & VC">Consulting &amp; VC</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <!-- <span class="focus-border"></span> -->
-                        </div>
-                        
-                      </div>
-                    </div>
-                    &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                         <span  class="">Skills * </span> 
-                        <div class="col-sm-12">
-                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Skills"id="Skills">
-                          <option value="">-- please select Skills --</option>
-                          <option value="PHP">PHP</option>
-                          <option value="Python">Python</option>
-                          <option value="C">C</option>
-                          <option value="C++">C++</option>
-                          <option value="Java">Java</option>
-                          <option value="Angular JS">Angular JS</option>
-                        </select>
-                        <!-- <span class="focus-border"></span> -->
-                        <h6 style="color:#ff0000"><?php echo $message_skills; ?></h6>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-           
-                &nbsp;              
-    
-              <div class="u-align-center u-form-group u-form-submit" style="padding: 10px">
-              <a href="" class="btn head-btn2 " style="align-center">Submit</a>
-              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+              <div class="col-md-12">
+                <div class="input-group">
+                  <span  class="">Company name * </span>
+                  <div class="col-sm-12">
+                    <input type="text" value="<?php echo isset($_POST["Company_name"]) ? $_POST["Company_name"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
+                    <!-- <span class="focus-border"></span> -->
+                    <h6 class="" style="color:#ff0000"></h6>
+                    </div> 
+                </div>
+              </div>
+              &nbsp;
+             <div class="col-md-12">
+              <div class="input-group">
+                 <span  class="" >Job title * </span>
+                <div class="col-sm-12">
+                  <input type="text" value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
+               <!-- <span class="focus-border"></span> -->
+               <h6 class="" style="color:#ff0000"></h6>
+                </div>               
+              </div>
             </div>
-            <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
-            <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
+            &nbsp;
+           <div class="u-layout-row"> 
+            <div class="col-md-12">
+              <div class="input-group">
+               <span  class="" >Job description * </span>
+                <div class="col-sm-12">
+                  <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
+                  <!-- <span class="focus-border"></span> -->
+                  <!-- <h6 class="" style="color:#ff0000"></h6> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          &nbsp;  
+          <div class="col-md-12">
+              <div class="input-group">
+                <span  class="">Service * </span>
+                <div class="col-sm-12">
+                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
+                  <option value="">-- please select service --</option>
+                  <option value="Contract Staffing">Contract Staffing</option>
+                  <option value="Permanent Recruitment">Permanent Recruitment</option>
+                  <option value="RPO">RPO</option>
+                  <option value="IT Contract Staffing">IT Contract Staffing</option>
+                </select>
+                <!-- <span class="focus-border"></span> -->
+                <!-- <h6 class="" style="color:#ff0000"></h6> -->
+                </div>
+              </div>
+            </div>
+        </div> 
+          &nbsp;
+          <div class="u-layout-row">
+            <div class="col-md-12">
+              <div class="input-group">
+                 <span  class="" >Location * </span>
+                <div class="col-sm-12">
+                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location"id="Location">
+                      <option value="">-- please select Location --</option>
+                      <option value="Work from Home">Work from Home</option>
+                      <option value="Ahmedabad">Ahmedabad</option>
+                      <option value="Baroda">Baroda</option>
+                      <option value="Bengaluru">Bengaluru</option>
+                      <option value="Bengaluru">Bhubaneswar</option>
+                      <option value="Bhubaneswar">Chandigarh</option>
+                      <option value="Chandigarh">Chennai</option>
+                      <option value="Chennai">Cochin</option>
+                      <option value="Cochin">Coimbatore</option>
+                      <option value="Coimbatore">Gurgaon</option>
+                      <option value="Gurgaon">Guwahati</option>
+                      <option value="Guwahati">Hubli</option>
+                      <option value="Hubli">Hyderabad</option>
+                      <option value="Indore">Indore</option>
+                      <option value="Jaipur">Jaipur</option>
+                      <option value="Jamshedpur">Jamshedpur</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Kolkata">Kolkata</option>
+                      <option value="Lucknow">Lucknow</option>
+                      <option value="Madurai">Madurai</option>
+                      <option value="Mangalore">Mangalore</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Nagpur">Nagpur</option>
+                      <option value="New Delhi">New Delhi</option>
+                      <option value="Patna">Patna</option>
+                      <option value="Pune">Pune</option>
+                      <option value="Rajkot">Rajkot</option>
+                      <option value="Surat">Surat</option>
+                      <option value="Trivandrum">Trivandrum</option>
+                      <option value="Visakapatnam">Visakapatnam</option>
+                    </select>
+                <!-- <span class="focus-border"></span> -->
+                </div>
+                </div>
+              </div>
+               &nbsp;
+               <div class="col-md-12">
+              <div class="input-group">
+                 <span  class="">Skills * </span> 
+                <div class="col-sm-12">
+                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Skills"id="Skills">
+                  <option value="">-- please select Skills --</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Python">Python</option>
+                  <option value="C">C</option>
+                  <option value="C++">C++</option>
+                  <option value="Java">Java</option>
+                  <option value="Angular JS">Angular JS</option>
+                </select>
+                <!-- <span class="focus-border"></span> -->
+                <h6 style="color:#ff0000"><?php echo $message_skills; ?></h6>
+                </div>  
+              </div>
+            </div>         
+            </div>
+            &nbsp;
+           <div class="u-layout-row">
+            <div class="col-md-12">
+              <div class="input-group">
+                 <span  class="">Sector * </span> 
+                <div class="col-sm-12">
+                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
+                  <option value="">-- please select sector --</option>
+                  <option value="Accounting / Finance">Accounting / Finance</option>
+                  <option value="Banking & finance">Banking &amp; finance</option>
+                  <option value="General Administration">General Administration</option>
+                  <option value="Human Resources">Human Resources</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="ITeS & BPO">ITeS &amp; BPO</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Sales">Sales</option>
+                  <option value="FMCG">FMCG</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Telecom">Telecom</option>
+                  <option value="Media & entertainment">Media &amp; entertainment</option>
+                  <option value="Education">Education</option>
+                  <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
+                  <option value="Consulting & VC">Consulting &amp; VC</option>
+                  <option value="Other">Other</option>
+                </select>
+                <!-- <span class="focus-border"></span> -->
+                </div>  
+              </div>
+            </div>
+            &nbsp;
+            <div class="col-md-12">
+            <div class="input-group">
+              <span  class="" >Job type * </span>
+              <div class="col-sm-12">
+                <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_type"id="Job_type">
+                  <option value="">-- please select job type --</option>
+                  <option value="Full time">Full time</option>
+                  <option value="Part time">Part time</option>
+                </select>
+                <!-- <span class="focus-border"></span> -->
+                <h6 class="" style="color:#ff0000"></h6>
+                </div>
+            </div>
+          </div>
+          </div>
+          &nbsp;              
+          <div class="u-align-center u-form-group u-form-submit" style="padding: 10px">
+          <a href="" class="btn head-btn2 " style="align-center">Submit</a>
+          <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
         </div>
+        <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
+        <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
+        <input type="hidden" value="" name="recaptchaResponse">
+      </form>
+</div>
             <!-- <div class="u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ecf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0ecf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
