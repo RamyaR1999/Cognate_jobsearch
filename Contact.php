@@ -4,8 +4,7 @@
 
      if(isset($_POST['submit'])){
          
-         $Firstname=  $_POST['Firstname'];
-         $Lastname=  $_POST['Lastname'];
+         $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Phone=  $_POST['Phone'];
          $Designation =  $_POST['Designation'];
@@ -14,11 +13,9 @@
          $Service = $_POST['Service'];
          $error = 0;
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email)){
+      if(!empty($Fullname) && !empty($Phone) && !empty($Email)){
                           
-      if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
-          
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {      
+      if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {     
         
         if(preg_match("/^[0-9]{10}$/", $Phone)) {   
 
@@ -39,8 +36,8 @@
         }else {
 
         
-        $query = "INSERT INTO request_callback (Firstname,Lastname,Email,Phone,Designation,Company,Branch,Service) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Phone}','{$Designation}','{$Company}','{$Branch}','{$Service}')";
+        $query = "INSERT INTO request_callback (Fullname,Email,Phone,Designation,Company,Branch,Service) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Designation}','{$Company}','{$Branch}','{$Service}')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -59,16 +56,10 @@
               $message_phone = "Invalid Phone No";
             
         }
-            
-        
-            
-          }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
+
 
           }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+              $message_Fullname ="Only Alphabets are allowed in Fullname";
           
        }
           
@@ -249,6 +240,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -263,9 +255,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -403,22 +395,11 @@ Submit Your CV</p>
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
-                     <span style="font-weight: 400;" class="">Firstname * </span><br>
+                     <span style="font-weight: 400;" class="">Fullname * </span><br>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
+                          <input type="text" value="<?php echo $Fullname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Fullname" name="Fullname">
                           <span class="focus-border"></span>
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
-                        </div>
-                      </div>
-                    </div>
-                   &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span style="font-weight: 400;" class="" >Lastname * </span> 
-                        <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
-                          <span class="focus-border"></span>
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
+                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
                         </div>
                       </div>
                     </div>

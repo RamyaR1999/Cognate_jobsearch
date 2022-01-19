@@ -16,8 +16,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
@@ -188,6 +187,25 @@
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+
+<?php 
+
+    if(isset($_SESSION['id'])){
+
+     $db_id =  $_SESSION['id'];       
+        
+     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $select_user_profile = mysqli_query($connection,$query);
+
+      
+     while($row=mysqli_fetch_array($select_user_profile)){
+
+           $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
+      }
+  }
+?>
+
         <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -197,9 +215,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -292,7 +310,7 @@
             }
 
     ?>
-        <h1 class="u-text u-text-1"><?php echo $Firstname ?></h1>
+        <h1 class="u-text u-text-1"><?php echo $Fullname ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
@@ -321,7 +339,7 @@
                   <center><h3 class="u-text u-text-default u-text-6">Details</h3></center>
                   <p class="u-text u-text-7">
                     <span style="font-weight: 700;">Name: </span>
-                    <br><label class="" for="title"><?php echo $Firstname ?> <?php echo $Lastname ?></label><br>
+                    <br><label class="" for="title"><?php echo $Fullname ?></label><br>
                     
                     <span style="font-weight: 700;">Email: </span>
                     <br><label class="" for="title"><?php echo $Email ?></label><br>

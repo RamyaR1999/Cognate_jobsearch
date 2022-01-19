@@ -207,6 +207,7 @@ if (isset($_POST['search'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -221,9 +222,9 @@ if (isset($_POST['search'])){
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -371,8 +372,7 @@ if (isset($_POST['search'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
              $the_id = $row['id'];
-             $Firstname=  $row['Firstname'];
-             $Lastname=  $row['Lastname'];
+             $Fullname=  $row['Fullname'];
              $Email    = $row['Email'];
              $Phone=  $row['Phone'];
              $Job_designation=  $row['Job_designation'];

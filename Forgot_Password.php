@@ -14,7 +14,7 @@
 // mail($to,$subject,$txt,$headers);
 // if(isset($_POST['btn-save']))
 // {
-// $_SESSION['firstname']=$_POST['firstname'];
+// $_SESSION['Fullname']=$_POST['Fullname'];
 // $_SESSION['email']=$_POST['email'];
 // $_SESSION['phone']=$_POST['phone'];
 // $_SESSION['otp']=$rndno;
@@ -59,8 +59,7 @@ $mail->SMTPSecure='tls';
           
           while($row = mysqli_fetch_array($select_users_query)){
               
-               $db_Firstname=  $row['Firstname'];
-               $db_Lastname=  $row['Lastname'];
+               $db_Fullname=  $row['Fullname'];
                $db_Email    = $row['Email'];
                $db_Password = $row['Password'];
                $db_User_type =$row['User_type'];
@@ -97,12 +96,12 @@ $mail->SMTPSecure='tls';
           $mail->Password = 'cgbs@2021';
 
           $mail->setFrom ('barthalomena@gmail.com');
-          $mail->addAddress($_POST['Email'],$_POST['Firstname']);
+          $mail->addAddress($_POST['Email'],$_POST['Fullname']);
           #$mail->addReplyTo( $_POST['email'],$_POST['name']);
           
           $mail->isHTML(true);
           $mail->Subject = "Email Verification";
-          $mail->Body    = 'Hi'.' '.$_POST["Firstname"].'<br><br>To verify your email'.' '.$_POST['Email'].' '.'we sent you an otp, enter the otp in the field'.' '.$rndno;
+          $mail->Body    = 'Hi'.' '.$_POST["Fullname"].'<br><br>To verify your email'.' '.$_POST['Email'].' '.'we sent you an otp, enter the otp in the field'.' '.$rndno;
           
           if(!$mail->send()) {
              echo "Message could not be sent.". $mail->ErrorInfo;
@@ -293,6 +292,7 @@ $mail->SMTPSecure='tls';
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -307,9 +307,9 @@ $mail->SMTPSecure='tls';
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       

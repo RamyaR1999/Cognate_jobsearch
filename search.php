@@ -7,15 +7,15 @@ $data = array();
 switch ($_POST['type']) {
     default: break;
         
-     case "Firstname":   
+     case "Fullname":   
         
-    $query = "SELECT Firstname FROM users  WHERE Firstname LIKE '%" . $_POST['search'] . "%' ";
+    $query = "SELECT Fullname FROM users  WHERE Fullname LIKE '%" . $_POST['search'] . "%' ";
     
     $statement=mysqli_query($pdo,$query);
     
     while($row=mysqli_fetch_assoc($statement)){
         
-        $data[] = $row["Firstname"];       
+        $data[] = $row["Fullname"];       
     }
          break;
     case "Name":

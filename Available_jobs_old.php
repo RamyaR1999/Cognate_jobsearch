@@ -89,6 +89,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -103,9 +104,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       

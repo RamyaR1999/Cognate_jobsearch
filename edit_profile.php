@@ -16,8 +16,7 @@ if(isset($_SESSION['id'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
             $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
@@ -39,8 +38,7 @@ if(isset($_SESSION['id'])){
 
       if(isset($_POST['edit_profile'])){
 
-          $Firstname=  $_POST['Firstname'];
-           $Lastname=  $_POST['Lastname'];
+          $Fullname=  $_POST['Fullname'];
            $Email    = $_POST['Email'];
            $Phone=  $_POST['Phone'];
            $City=  $_POST['City'];
@@ -86,9 +84,7 @@ if(isset($_SESSION['id'])){
 
             }
        
-        if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
-          
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {  
+        if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
          
         $uppercase = preg_match('@[A-Z]@', $Password);
         $lowercase = preg_match('@[a-z]@', $Password);
@@ -98,7 +94,7 @@ if(isset($_SESSION['id'])){
 
         if(strlen($Password) >= 8) { 
               
-    $query="UPDATE users SET Firstname= '{$Firstname}', Lastname= '{$Lastname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";   
+    $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";   
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -113,15 +109,9 @@ if(isset($_SESSION['id'])){
               $message_strnpassworad = "password contain atleast 8 characters";
               
        }
-  
-          
-        }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
 
           }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+              $message_Fullname ="Only Alphabets are allowed in Fullname";
           
        }   
           
@@ -295,6 +285,7 @@ if(isset($_SESSION['id'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -309,9 +300,9 @@ if(isset($_SESSION['id'])){
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -390,7 +381,7 @@ if(isset($_SESSION['id'])){
       <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
        <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Firstname'] ?></h1>
+        <h1 class="u-text u-text-1"><?php echo $_SESSION['Fullname'] ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
 
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -418,20 +409,11 @@ if(isset($_SESSION['id'])){
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
-                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">FirstName: </span>
+                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Fullname: </span>
                          <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname">
-                          <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
+                          <input type="text" value="<?php echo $Fullname; ?>" class="form-control" name="Fullname">
+                          <h6 style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
                            </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6">
-                    <div class="form-group row">
-                       <span style="font-weight: 600;" class="col-sm-3 col-form-label">LastName: </span>
-                          <div class="col-sm-12">
-                             <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname">
-                             <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
-                          </div>
                     </div>
                  </div>
               </div>

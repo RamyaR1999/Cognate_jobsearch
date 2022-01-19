@@ -219,6 +219,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -233,9 +234,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -329,7 +330,7 @@
          <h6>Search Job seekers</h6>
              <form action="" method="post" autocomplete="off">
                  <div class="input-group">
-                     <input name="Firstname" id="Firstname" type="text" placeholder="Job seekers name" class="form-control">
+                     <input name="Fullname" id="Fullname" type="text" placeholder="Job seekers name" class="form-control">
                             <button name="submit" style="padding: 0.5rem 1rem;" class="btn head-btn2" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -465,14 +466,14 @@
 
  if (isset($_POST['submit'])){
 
-            $search=$_POST['Firstname'];
+            $search=$_POST['Fullname'];
             $Industries=$_POST['Industry'];
             $Educate=$_POST['Education'];
             $Functions=$_POST['Function'];
 
              if($search !="" || $Industries !="" || $Educate !="" || $Functions != ""){
 
-              $users="SELECT * FROM users WHERE Firstname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' "; 
+              $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' "; 
 
               $search_users=mysqli_query($connection, $users); 
 
@@ -498,8 +499,7 @@
              while($row=mysqli_fetch_assoc($search_users)){
 
                     $id=$row['id'];
-                    $Firstname=$row['Firstname'];
-                    $Lastname=$row['Lastname'];
+                    $Fullname=$row['Fullname'];
                     $Image=$row['Image'];
                     $Email=$row['Email'];
                     $Phone=$row['Phone'];
@@ -518,7 +518,7 @@
 <div class="container">
     <div class="u-layout-row">
            <div class="u-align-left" style="width: 270px;">
-            <h4><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b></a></h4> 
+            <h4><a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Fullname; ?></b></a></h4> 
             <p><?php echo $Education; ?></p>
             <p><?php echo $Email; ?></p>
             <p><?php echo $Phone; ?></p>
@@ -530,7 +530,7 @@
                       <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
                      <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
                   <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                   <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
                   </div>
                 </li>
            </div>   
@@ -561,8 +561,7 @@
         while($row=mysqli_fetch_array($artist_id)){
 
             $id=$row['id'];
-            $Firstname=$row['Firstname'];
-            $Lastname=$row['Lastname'];
+            $Fullname=$row['Fullname'];
             $Image=$row['Image'];
             $Email=$row['Email'];
             $Phone=$row['Phone'];
@@ -583,7 +582,7 @@
             <div class="u-align-left" style="width: 270px;">
 
             <h4>
-              <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Firstname; ?> <?php echo $Lastname; ?></b>
+              <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>"><b><?php echo $Fullname; ?></b>
               </a>
             </h4> 
 
@@ -601,7 +600,7 @@
                 <i style="font-size:22px" class="fa fa-ellipsis-v"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-             <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Firstname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+             <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
             </div>
         </li>
     </div>   
@@ -656,9 +655,9 @@
     // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
     window.addEventListener("DOMContentLoaded", function(){
       ac.attach({
-        target: "Firstname",
+        target: "Fullname",
         data: "search.php",
-        post: { type: "Firstname" },
+        post: { type: "Fullname" },
         // OPTIONAL
         delay : 50,
         min : 1

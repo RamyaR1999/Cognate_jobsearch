@@ -38,8 +38,7 @@ if(isset($_SESSION['Email'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
@@ -70,8 +69,7 @@ if(isset($_POST['submit'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
@@ -102,11 +100,11 @@ $mail->Username = 'CGBSTech2021@gmail.com';
 $mail->Password = 'cgbs@2021';
 
 $mail->setFrom ('CGBSTech2021@gmail.com');
-$mail->addAddress($Email,$Firstname);
+$mail->addAddress($Email,$Fullname);
 
 $mail->isHTML(true);
 $mail->Subject = "Job Applied Successfully";
-$mail->Body    = 'Hi'.' '.$Firstname.'<br><br>You have successfully applied for a job';
+$mail->Body    = 'Hi'.' '.$Fullname.'<br><br>You have successfully applied for a job';
 
 if(!$mail->send()) {
    echo "Message could not be sent.". $mail->ErrorInfo;
@@ -123,7 +121,7 @@ if(!$mail->send()) {
   while($row=mysqli_fetch_array($Jobs_list)){
 
      $the_id = $row['id'];
-     $the_Firstname = $row['Firstname'];
+     $the_Fullname = $row['Fullname'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
      $Job_specification = $row['Job_specification'];
@@ -144,11 +142,11 @@ $receiver_mail->Username = 'CGBSTech2021@gmail.com';
 $receiver_mail->Password = 'cgbs@2021';
 
 $receiver_mail->setFrom ('CGBSTech2021@gmail.com');
-$receiver_mail->addAddress($Job_Email,$the_Firstname);
+$receiver_mail->addAddress($Job_Email,$the_Fullname);
 
 $receiver_mail->isHTML(true);
 $receiver_mail->Subject = "Resume for a job";
-$receiver_mail->Body    = 'Hi'.' '.$the_Firstname.'<br><br>'.' '.$Firstname.' '.'Applied for a job';
+$receiver_mail->Body    = 'Hi'.' '.$the_Fullname.'<br><br>'.' '.$Fullname.' '.'Applied for a job';
 
 if(!$receiver_mail->send()) {
    echo "Message could not be sent.". $receiver_mail->ErrorInfo;
@@ -322,6 +320,7 @@ if(!$receiver_mail->send()) {
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -336,9 +335,9 @@ if(!$receiver_mail->send()) {
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -452,15 +451,9 @@ if(!$receiver_mail->send()) {
           <br>
           <br>
           
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Firstname: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Firstname; ?></span>
-          <!-- <input type="text" value="<?php echo $Firstname; ?>" class="form-control" name="Firstname"> -->
-          <br>
-          <br>
-
-          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Lastname: </span><br><br>
-          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Lastname; ?></span>
-          <!-- <input type="text" value="<?php echo $Lastname; ?>" class="form-control" name="Lastname"> -->
+          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Fullname: </span><br><br>
+          <span style="font-weight: 400;"class="col-sm-3 col-form-label"><?php echo $Fullname; ?></span>
+          <!-- <input type="text" value="<?php echo $Fullname; ?>" class="form-control" name="Fullname"> -->
           <br>
           <br>
 
