@@ -17,7 +17,7 @@ if(isset($_GET['Job_details'])){
      $the_id = $row['id'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
+     $Job_description = $row['Job_description'];
 
 }
 
@@ -133,7 +133,7 @@ $mail->Body    = 'Hi'.' '.$Fullname.'<br><br>You have successfully applied for a
 if(!$mail->send()) {
    echo "Message could not be sent.". $mail->ErrorInfo;
 }else{
-     $_SESSION['status']="You have successfully applied for a job you can update your details here";
+     $_SESSION['apply_status']="You have successfully applied for a job you can update your details here";
   // echo " otp sent successfully to ur mail: " ;
 }
 
@@ -148,7 +148,7 @@ if(!$mail->send()) {
      $the_Fullname = $row['Fullname'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
+     $Job_description = $row['Job_description'];
 
  }
 
@@ -547,7 +547,7 @@ if(!$receiver_mail->send()) {
               </div>
 
  
- <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
+ <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_description; ?></p>
 
                 
  </h6>

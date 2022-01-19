@@ -296,13 +296,13 @@
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <?php 
 
-    if(isset($_SESSION['status'])){
+    if(isset($_SESSION['apply_status'])){
             ?> 
        <h6 class="" style="color:#13b013"> 
         <?php   
 
-             echo $_SESSION['status'];
-             unset($_SESSION['status']);
+             echo $_SESSION['apply_status'];
+             unset($_SESSION['apply_status']);
 
           ?>    
         </h6>

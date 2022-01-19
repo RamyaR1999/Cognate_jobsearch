@@ -17,7 +17,7 @@ if(isset($_GET['Job_details'])){
      $the_id = $row['id'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
+     $Job_description = $row['Job_description'];
 
 }
 
@@ -124,7 +124,7 @@ if(!$mail->send()) {
      $the_Fullname = $row['Fullname'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
-     $Job_specification = $row['Job_specification'];
+     $Job_description = $row['Job_description'];
 
  }
 
@@ -501,7 +501,7 @@ if(!$receiver_mail->send()) {
                 <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="back_to_search_btn"><img src="" alt=""> Back to search</a>
               </div>
 
- <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_specification; ?></p>
+ <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_description; ?></p>
              
                   
  </h6>
