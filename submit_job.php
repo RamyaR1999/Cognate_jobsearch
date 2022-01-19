@@ -4,8 +4,7 @@
 
      if(isset($_POST['submit'])){
          
-         $Firstname=  $_POST['Firstname'];
-         $Lastname=  $_POST['Lastname'];
+         $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Phone=  $_POST['Phone'];
          $Job_designation=  $_POST['Job_designation'];
@@ -25,12 +24,10 @@
 
          $error = 0;
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_designation) && !empty($Company_name)){
+      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_designation) && !empty($Company_name)){
       if(!empty($Skills)){             
      
-      if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
-          
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {
+      if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
             
       
             
@@ -55,8 +52,8 @@
         }else {
 
         
-        $query = "INSERT INTO jobs (Firstname,Lastname,Email,Phone,Job_designation,Company_name,Branch,Service,Job_title,Sector,Skills,Job_specification,Logo,Job_time) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$Phone}','{$Job_designation}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_specification}','CrysCloud.jpg','FullTime')";
+        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_designation,Company_name,Branch,Service,Job_title,Sector,Skills,Job_specification,Logo,Job_time) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_designation}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_specification}','CrysCloud.jpg','FullTime')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -78,16 +75,9 @@
               $message_phone = "Invalid Phone No";
             
         }
-            
-        
-            
-          }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
 
           }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+              $message_Fullname ="Only Alphabets are allowed in Fullname";
           
        }
          
@@ -118,7 +108,7 @@
 // mail($to,$subject,$txt,$headers);
 // if(isset($_POST['btn-save']))
 // {
-// $_SESSION['firstname']=$_POST['firstname'];
+// $_SESSION['Fullname']=$_POST['Fullname'];
 // $_SESSION['email']=$_POST['email'];
 // $_SESSION['phone']=$_POST['phone'];
 // $_SESSION['otp']=$rndno;
@@ -289,7 +279,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Firstname=  $row['Firstname'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -304,9 +294,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -442,22 +432,11 @@
             <div class="u-layout-row">
                <div class="col-md-12">
                   <div class="input-group">
-                     <span class="">Firstname * </span><br>
+                     <span class="">Fullname * </span><br>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Firstname"]) ? $_POST["Firstname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
+                          <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Fullname" name="Fullname">
                           <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
-                        </div>
-                      </div>
-                    </div>
-                   &nbsp;
-                    <div class="col-md-12">
-                      <div class="input-group">
-                        <span  class="" >Lastname * </span> 
-                        <div class="col-sm-12">
-                          <input type="text"  value="<?php echo isset($_POST["Lastname"]) ? $_POST["Lastname"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname" name="Lastname">
-                          <!-- <span class="focus-border"></span> -->
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
+                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
                         </div>
                       </div>
                     </div>

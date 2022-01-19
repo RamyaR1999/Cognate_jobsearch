@@ -16,14 +16,14 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
            $Image=  $row['Image'];
            $City=  $row['City'];
            $Industry=  $row['Industry'];
+           $Skills = $row['Skills'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
            $Experience_years =$row['Experience_years'];
@@ -199,7 +199,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Firstname=  $row['Firstname'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -214,9 +214,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -293,7 +293,7 @@
 
     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Firstname'] ?></h1>
+        <h1 class="u-text u-text-1"><?php echo $_SESSION['Fullname'] ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
@@ -316,7 +316,7 @@
                   <h3 class="u-text u-text-default u-text-6">Details</h3>
                   <p class="u-text u-text-7">
                     <span style="font-weight: 700;">Name: </span>
-                    <br><label class="" for="title"><?php echo $Firstname ?> <?php echo $Lastname ?></label><br>
+                    <br><label class="" for="title"><?php echo $Fullname ?></label><br>
                     
                     <span style="font-weight: 700;">Email: </span>
                     <br><label class="" for="title"><?php echo $Email ?></label><br>

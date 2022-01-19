@@ -38,14 +38,14 @@ if(isset($_SESSION['id'])){
      while($row=mysqli_fetch_array($select_register_profile)){
 
            $id = $row['id'];
-           $Firstname=  $row['Firstname'];
-           $Lastname=  $row['Lastname'];
+           $Fullname=  $row['Fullname'];
            $Email    = $row['Email'];
            $Password = $row['Password'];
            $Phone=  $row['Phone'];
            $Image=  $row['Image'];
            $City=  $row['City'];
            $Industry=  $row['Industry'];
+           $Skills = $row['Skills'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
            $Experience =$row['Experience'];
@@ -78,10 +78,10 @@ if(isset($_SESSION['id'])){
                $db_Password = $row['Password'];
                $db_Phone=  $row['Phone'];
                $db_Image=  $row['Image'];
-               $db_Firstname=  $row['Firstname'];
-               $db_Lastname=  $row['Lastname'];
+               $db_Fullname=  $row['Fullname'];
                $db_City=  $row['City'];
                $db_Industry=  $row['Industry'];
+               $db_Skills = $row['Skills'];
                $db_Function=  $row['Function'];
                $db_Education =$row['Education'];
                $db_Experience =$row['Experience'];
@@ -96,11 +96,11 @@ if(isset($_SESSION['id'])){
      
              $_SESSION['id'] = $db_id;
              $_SESSION['Email'] = $db_Email;
-             $_SESSION['Firstname'] = $db_Firstname;
-             $_SESSION['Lastname'] = $db_Lastname;
+             $_SESSION['Fullname'] = $db_Fullname;
              $_SESSION['Image']=  $db_Image;
              $_SESSION['City'] = $db_City;
              $_SESSION['Industry'] = $db_Industry;
+             $_SESSION['Skills'] = $db_Skills;
              $_SESSION['Function'] =  $db_Function;
              $_SESSION['Education'] = $db_Education;
              $_SESSION['Experience'] = $db_Experience;
@@ -289,7 +289,7 @@ if(isset($_SESSION['id'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Firstname=  $row['Firstname'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -304,9 +304,9 @@ if(isset($_SESSION['id'])){
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       

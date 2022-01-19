@@ -23,8 +23,7 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure='tls'; 
 
          
-         $Firstname=  $_POST['Firstname'];
-         $Lastname=  $_POST['Lastname'];
+         $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Password = $_POST['Password'];
          $Confirm_password = $_POST['Confirm_password'];
@@ -32,6 +31,7 @@ $mail->SMTPSecure='tls';
          $Image=  $_POST['Image'];
          $City=  $_POST['City'];
          $Industry=  $_POST['Industry'];
+         $Skills = $_POST['Skills'];
          $Function=  $_POST['Function'];
          $Education =$_POST['Education'];
          $Experience_years =$_POST['Experience_years'];
@@ -67,16 +67,14 @@ $mail->SMTPSecure='tls';
             
           // }
 
-      if(!empty($Firstname) && !empty($Lastname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Function) && !empty($Education) && !empty($Experience_years) && !empty($Experience_months) && !empty($Current_Salary_lakhs) && !empty($Current_Salary_thousand) && !empty($Expected_Salary_lakhs) && !empty($Expected_Salary_thousand) && !empty($upload_tempname)){
+      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Skills) && !empty($Function) && !empty($Education) && !empty($Experience_years) && !empty($Experience_months) && !empty($Current_Salary_lakhs) && !empty($Current_Salary_thousand) && !empty($Expected_Salary_lakhs) && !empty($Expected_Salary_thousand) && !empty($upload_tempname)){
        
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
       $Password = md5($Password);              
       $Confirm_password = md5($Confirm_password);              
      
-      if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
-          
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {
+      if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
             
             
         $uppercase  = preg_match('@[A-Z]@', $Password);
@@ -107,8 +105,8 @@ $mail->SMTPSecure='tls';
         }else {
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
+        $query = "INSERT INTO users (Fullname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Skills,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Skills','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
             
@@ -130,7 +128,7 @@ $mail->SMTPSecure='tls';
           $mail->Password = 'cgbs@2021';
 
           $mail->setFrom ('barthalomena@gmail.com');
-          $mail->addAddress($_POST['Email'],$_POST['Firstname']);
+          $mail->addAddress($_POST['Email'],$_POST['Fullname']);
           #$mail->addReplyTo( $_POST['email'],$_POST['name']);
           
           $mail->isHTML(true);
@@ -162,20 +160,14 @@ $mail->SMTPSecure='tls';
               $message_strnpassword = "password contain atleast 8 characters";
               
        }
-            
-          }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
 
           }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+              $message_Fullname ="Only Alphabets are allowed in Fullname";
           
        }
           
           }else{
-             // $empty_firstname = "firstname is required";
-             // $empty_lastname = "lastname is required";
+             // $empty_Fullname = "Fullname is required";
              // $empty_email = "email is required";
              // $empty_password = "password is required";
              // $empty_cpassword = "confirm password is required";
@@ -358,7 +350,7 @@ $mail->SMTPSecure='tls';
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Firstname=  $row['Firstname'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -373,9 +365,9 @@ $mail->SMTPSecure='tls';
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
@@ -511,23 +503,14 @@ $mail->SMTPSecure='tls';
                    <h6 class="text-center" style="color:#ff0000"></h6>
                </div>
                   <div class="u-form-group u-form-name u-form-group-1">
-                     <span >Firstname * </span>
+                     <span >Fullname * </span>
                      <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Firstname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Firstname" name="Firstname">
+                          <input type="text" value="<?php echo $Fullname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Fullname" name="Fullname">
                           <span class="focus-border"></span>
                         </div>
-                          <h6 style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_firstname; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
+                          <h6 style="color:#ff0000"><?php echo $empty_Fullname; ?></h6>
                       </div>&nbsp;
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >Lastname * </span>
-                        <div class="col-sm-12">
-                          <input type="text"  value="<?php echo $Lastname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Lastname " name="Lastname">
-                          <span class="focus-border"></span>
-                        </div>
-                          <h6 style="color:#ff0000"><?php echo $message_Lastname; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_lastname; ?></h6>
-                        </div>&nbsp;
                       <div class="u-form-group u-form-name u-form-group-2">
                         <span >Email *</span>
                         <div class="col-sm-12">

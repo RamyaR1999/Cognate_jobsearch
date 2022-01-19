@@ -21,14 +21,14 @@
           
           while($row = mysqli_fetch_array($select_users_query)){
               
-               $db_Firstname=  $row['Firstname'];
-               $db_Lastname=  $row['Lastname'];
+               $db_Fullname=  $row['Fullname'];
                $db_Email    = $row['Email'];
                $db_Password = $row['Password'];
                $db_Phone=  $row['Phone'];
                $db_Image=  $row['Image'];
                $db_City=  $row['City'];
                $db_Industry=  $row['Industry'];
+               $db_Skills = $row['Skills'];
                $db_Function=  $row['Function'];
                $db_Education =$row['Education'];
                $db_Experience =$row['Experience'];
@@ -221,7 +221,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Firstname=  $row['Firstname'];
+           $Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -236,9 +236,9 @@
                   <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
                       <?php
                       
-                      if(isset($_SESSION['Firstname'])){
+                      if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Firstname']; 
+                        echo $_SESSION['Fullname']; 
                          
                       }
                       
