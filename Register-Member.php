@@ -23,8 +23,7 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure='tls'; 
 
          
-         $Firstname=  $_POST['Firstname'];
-         $Lastname=  $_POST['Lastname'];
+         $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Password = $_POST['Password'];
          $Confirm_password = $_POST['Confirm_password'];
@@ -54,7 +53,7 @@ $mail->SMTPSecure='tls';
 
         move_uploaded_file($upload_tempname,$upload_dir.'/'.$CV);
 
-      if(!empty($Firstname) && !empty($Lastname)  && !empty($Email) && !empty($Password)
+      if(!empty($Fullname) && !empty($Email) && !empty($Password)
       && !empty($Confirm_password)){
        if(!empty($upload_tempname)){
        
@@ -63,11 +62,9 @@ $mail->SMTPSecure='tls';
       $Password = md5($Password);              
       $Confirm_password = md5($Confirm_password);              
      
-      if(preg_match('/^[\p{L} ]+$/u', $Firstname)) {
+      if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
           
-        if(preg_match('/^[\p{L} ]+$/u', $Lastname)) {
-            
-            
+       
         $uppercase  = preg_match('@[A-Z]@', $Password);
         $lowercase  = preg_match('@[a-z]@', $Password);
         $number     = preg_match('@[0-9]@', $Password);
@@ -116,8 +113,8 @@ $mail->SMTPSecure='tls';
           }else{
 
         
-        $query = "INSERT INTO users (Firstname,Lastname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Skills,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
-        $query .= "VALUES ('{$Firstname}','{$Lastname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Skills','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
+        $query = "INSERT INTO users (Fullname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Skills,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Skills','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
       
@@ -148,14 +145,8 @@ $mail->SMTPSecure='tls';
               $message_strnpassword = "password contain atleast 8 characters";
               
        }
-            
-          }else{
-              $message_Lastname ="Only Alphabets are allowed in lastname";
-            
-       }
-
-          }else{
-              $message_Firstname ="Only Alphabets are allowed in firstname";
+            }else{
+              $message_Fullname ="Only Alphabets are allowed in fullname";
           
        }
 
@@ -164,8 +155,7 @@ $mail->SMTPSecure='tls';
           $empty_cv = "CV is required";
        }
           }else{
-             // $empty_firstname = "firstname is required";
-             // $empty_lastname = "lastname is required";
+             
              // $empty_email = "email is required";
              // $empty_password = "password is required";
              // $empty_cpassword = "confirm password is required";
@@ -457,16 +447,10 @@ $mail->SMTPSecure='tls';
 <br><br>
     <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="text">Firstname *</label>
-                        <input type="text" value="<?php echo isset($_POST["Firstname"]) ? $_POST["Firstname"] : ''; ?>" class="form-control" name="Firstname" required autofocus>
+                        <label for="text">Fullname *</label>
+                        <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="form-control" name="Fullname" required autofocus>
                         
-                        <span style="color:#ff0000"><?php echo $message_Firstname; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Lastname *</label>
-                        <input type="text" value="<?php echo isset($_POST["Lastname"]) ? $_POST["Lastname"] : ''; ?>" class="form-control" name="Lastname" required="">
-                        
-                        <span style="color:#ff0000"><?php echo $message_Lastname; ?></span>
+                        <span style="color:#ff0000"><?php echo $message_Fullname; ?></span>
                     </div>
                     <div class="form-group">
                         <label for="email">E-Mail Address</label>

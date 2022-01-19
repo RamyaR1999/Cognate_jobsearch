@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 19, 2022 at 06:44 AM
+-- Generation Time: Jan 19, 2022 at 07:11 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -238,8 +238,7 @@ INSERT INTO `skills` (`id`, `Skills`) VALUES
 
 CREATE TABLE `users` (
   `id` int(33) NOT NULL,
-  `Firstname` varchar(15) NOT NULL,
-  `Lastname` varchar(15) NOT NULL,
+  `Fullname` varchar(32) NOT NULL,
   `Email` varchar(32) NOT NULL,
   `email_verification_link` varchar(200) NOT NULL,
   `Password` varchar(50) NOT NULL,
@@ -266,12 +265,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `User_type`, `Phone`, `Image`, `City`, `Industry`, `Skills`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
-(1, 'Admin', 'Admin', 'Admin@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '0e7517141fb53f21ee439b355b5a1d0a', '4f0340a33197986b0d269019f8588ce8', 'Admin', '9876896534', 'profile.png', 'Ahmedabad', 'General Administration', 'PHP', '', '', '', '', '', '', '', '', '', 979275),
-(2, 'Rithvika', 'Mohan', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', 'Job Seeker', '9876896534', 'profile.png', 'Ahmedabad', 'Accounting / Finance', 'Python', 'Analytics & Business Intelligence', 'B.Com', '2 years', '1 month', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', 'Ramya R.docx', 979275),
-(3, 'Reshma', 'priya', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', 'Job Seeker', '9876896534', 'profile.png', 'Ahmadnagar', 'Information Technology', 'Java', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'Ramya R.docx', 638697),
-(4, 'Ramya', 'Rajendiran', 'Ramyamilky@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', 'Job Seeker', '8768897986', 'profile.png', 'Ahmadnagar', 'General Administration', 'Kotlin', 'Analytics & Business Intelligence', 'B.Ed', '3 years', '4 months', '11 lakhs', '13 thousand', '14 lakhs', '15 thousand', 'Ramya R.docx', 406000),
-(14, 'Ramya', 'Rajendiran', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', 'Job Seeker', '', 'profile.png', '', 'Information Technology', 'Angular JS', '', '', '', '', '', '', '', '', 'Ramya R.docx', 897976);
+INSERT INTO `users` (`id`, `Fullname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `User_type`, `Phone`, `Image`, `City`, `Industry`, `Skills`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `otp`) VALUES
+(1, '', 'Admin@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '0e7517141fb53f21ee439b355b5a1d0a', '4f0340a33197986b0d269019f8588ce8', 'Admin', '9876896534', 'profile.png', 'Ahmedabad', 'General Administration', 'PHP', '', '', '', '', '', '', '', '', '', 979275),
+(2, '', 'Rithvika2021@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '4f0340a33197986b0d269019f8588ce8', '4f0340a33197986b0d269019f8588ce8', 'Job Seeker', '9876896534', 'profile.png', 'Ahmedabad', 'Accounting / Finance', 'Python', 'Analytics & Business Intelligence', 'B.Com', '2 years', '1 month', '2 lakhs', '2 thousand', '2 lakhs', '2 thousand', 'Ramya R.docx', 979275),
+(3, '', 'reshmasamy231@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '4f0340a33197986b0d269019f8588ce8', 'Job Seeker', '9876896534', 'profile.png', 'Ahmadnagar', 'Information Technology', 'Java', 'Airline / Reservations / Ticketing / Travel', 'B.Arch', '2 years', '2 months', '2 lakhs', '3 thousand', '3 lakhs', '3 thousand', 'Ramya R.docx', 638697),
+(4, '', 'Ramyamilky@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', 'Job Seeker', '8768897986', 'profile.png', 'Ahmadnagar', 'General Administration', 'Kotlin', 'Analytics & Business Intelligence', 'B.Ed', '3 years', '4 months', '11 lakhs', '13 thousand', '14 lakhs', '15 thousand', 'Ramya R.docx', 406000),
+(14, '', '07.ramyar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '88e00fd00ba330b8fa467a8877a014a4', '88e00fd00ba330b8fa467a8877a014a4', 'Job Seeker', '', 'profile.png', '', 'Information Technology', 'Angular JS', '', '', '', '', '', '', '', '', 'Ramya R.docx', 897976),
+(15, 'Reshma priya ', 'reshmasamy21@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'e1e7ea465afc730052fdbe132f519277', 'e1e7ea465afc730052fdbe132f519277', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Book1.xlsx', 685148);
 
 --
 -- Indexes for dumped tables
@@ -363,7 +363,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
