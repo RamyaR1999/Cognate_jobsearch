@@ -305,14 +305,14 @@
                         <?php      
 
                             $query="SELECT Industry FROM Industry";
-                            $select_Location=mysqli_query($connection,$query);
+                            $select_industry=mysqli_query($connection,$query);
 
-                             if(!$select_Location) {
+                             if(!$select_industry) {
             
                               die("Query Failed" . mysqli_error($connection));
                           } 
 
-                            while($row=mysqli_fetch_assoc($select_Location)){
+                            while($row=mysqli_fetch_assoc($select_industry)){
 
                             $industry=$row['Industry'];               
 
@@ -343,6 +343,51 @@
          </select>
      </div>
   <br>
+<h6>Skills</h6>
+<div class="input-group">
+         <select type="text" class="form-control" name="Skills"id="Skills">
+                      
+                        <?php      
+
+                            $query="SELECT Skills FROM Skills";
+                            $select_skills=mysqli_query($connection,$query);
+
+                             if(!$select_skills) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_skills)){
+
+                            $skill=$row['Skills'];               
+
+                           if($skill == $Skills) {
+                            
+                         echo "<option value='$Skill'>$skill</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$skill'>$skill</option>";
+             
+                         }     
+                        } 
+                       
+                        $Skill=$_POST['Skills'];
+
+                        if(!empty($Skill)){
+
+                          echo "<option selected value='$Skill'> $Skill </option>";
+                           
+                        }else{
+
+                          echo "<option selected value='Select Skill'>Select Skill</option>";
+                          
+                        }
+                        
+                     ?>
+         </select>
+     </div>
+  <br>
 
       <h6>Education</h6>
       <div class="input-group">
@@ -350,14 +395,14 @@
               <?php      
 
                             $query="SELECT Education FROM Education";
-                            $select_Location=mysqli_query($connection,$query);
+                            $select_education=mysqli_query($connection,$query);
 
-                             if(!$select_Location) {
+                             if(!$select_education) {
             
                               die("Query Failed" . mysqli_error($connection));
                           } 
 
-                            while($row=mysqli_fetch_assoc($select_Location)){
+                            while($row=mysqli_fetch_assoc($select_education)){
 
                             $education=$row['Education'];               
 
@@ -394,14 +439,14 @@
                 <?php      
 
                             $query="SELECT Function FROM Function";
-                            $select_Location=mysqli_query($connection,$query);
+                            $select_function=mysqli_query($connection,$query);
 
-                             if(!$select_Location) {
+                             if(!$select_function) {
             
                               die("Query Failed" . mysqli_error($connection));
                           } 
 
-                            while($row=mysqli_fetch_assoc($select_Location)){
+                            while($row=mysqli_fetch_assoc($select_function)){
 
                             $function=$row['Function'];               
 
@@ -447,10 +492,11 @@
             $Industries=$_POST['Industry'];
             $Educate=$_POST['Education'];
             $Functions=$_POST['Function'];
+            $Skill=$_POST['Skills'];
 
-             if($search !="" || $Industries !="" || $Educate !="" || $Functions != ""){
+             if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
 
-              $users="SELECT * FROM users WHERE Firstname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' "; 
+              $users="SELECT * FROM users WHERE Firstname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
 
               $search_users=mysqli_query($connection, $users); 
 
@@ -489,6 +535,7 @@
                     // $Industry=substr($row['Industry'],0,37);
                     // $Function=substr($row['Function'],0,37);
                     $Industry=$row['Industry'];
+                    $Skills=$row['Skills'];
                     $Function=$row['Function'];
                     $Experience_years=$row['Experience_years'];
                     $Experience_months =$row['Experience_months'];
