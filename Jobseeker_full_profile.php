@@ -367,7 +367,9 @@
 
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
-  
+
+                    <iframe src="https://docs.google.com/gview?url=http://localhost:81/Cognate_jobsearch/cv/Thennarasan_CV_updated.docx&embedded=true" width="90%" height="700px"></iframe>
+                    
                   </p>
                   <?php 
 
@@ -376,9 +378,10 @@
                      }else{
 
                   ?>
+
                   <a href="cv\<?php echo $CV ?>" download class="btn head-btn1"><i class="fas fa-download" style="font-size:20px;color:lightblue;text-shadow:1px 1px 2px #000000;"></i> Download CV</a>
                   <?php
-                    
+                     
                     }
 
                   ?>
