@@ -9,7 +9,7 @@
          $Phone=  $_POST['Phone'];
          $Job_type=  $_POST['Job_type'];
          $Company_name=  $_POST['Company_name'];
-         $Branch =  $_POST['Branch'];
+         $Location =  $_POST['Location'];
          $Service = $_POST['Service'];
          $Job_title = $_POST['Job_title'];
          $Sector = $_POST['Sector'];
@@ -52,8 +52,8 @@
         }else {
 
         
-        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Branch,Service,Job_title,Sector,Skills,Job_description,Logo,Job_time) ";
-        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','CrysCloud.jpg','FullTime')";
+        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Location,Service,Job_title,Sector,Skills,Job_description,Logo,Job_time) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Location}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','CrysCloud.jpg','FullTime')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -534,8 +534,8 @@
                       <div class="input-group">
                          <span  class="" >Location * </span>
                         <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
-                              <option value="">-- please select branch --</option>
+                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location"id="Location">
+                              <option value="">-- please select Location --</option>
                               <option value="Work from Home">Work from Home</option>
                               <option value="Ahmedabad">Ahmedabad</option>
                               <option value="Baroda">Baroda</option>
