@@ -375,29 +375,27 @@ if (isset($_POST['search'])){
              $Fullname=  $row['Fullname'];
              $Email    = $row['Email'];
              $Phone=  $row['Phone'];
-             $Job_designation=  $row['Job_designation'];
+             $Job_type=  $row['Job_type'];
              $Company_name=  $row['Company_name'];
-             $Branch =  $row['Branch'];
+             $Location =  $row['Location'];
              $Service = $row['Service'];
              $Job_title = $row['Job_title'];
              $Sector = $row['Sector'];
              $Skills = $row['Skills'];
-             $Job_specification = $row['Job_specification'];
-             $Logo = $row['Logo'];
+             $Job_description = $row['Job_description'];
              $Job_time = $row['Job_time'];
              $Job_posted = $row['Job_posted'];
 ?>
 
     <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-               <!--  <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>"> -->
                <br><br>
                 <p class="u-text u-text-default u-text-1">
                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-3"><?php echo $Branch ?></p>
-                <p class="u-text u-text-4"> <?php echo $Job_specification; ?> ....</p><br>
+                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
+                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p><br>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-11"><?php echo $Skills; ?></p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" target="_blank">Apply Now</a>
@@ -430,25 +428,24 @@ if (isset($_POST['search'])){
         
     }
 
-  $post_query_count="SELECT * FROM Jobs";
+  $post_query_count="SELECT * FROM jobs";
   $find_count=mysqli_query($connection,$post_query_count);
   $count=mysqli_num_rows($find_count);
   $count=ceil($count/$per_page);
 
 
-  $query="SELECT * FROM Jobs ORDER BY Branch DESC LIMIT $page_1, $per_page";
+  $query="SELECT * FROM jobs ORDER BY Location DESC LIMIT $page_1, $per_page";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
 
      $the_id = $row['id'];
-     $Logo = $row['Logo'];
      $Job_title = $row['Job_title'];
      $Company_name = $row['Company_name'];
-     $Branch = $row['Branch'];
+     $Location = $row['Location'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_specification = substr($row['Job_specification'],0,150);
+     $Job_description = substr($row['Job_description'],0,150);
 
 
 ?>
@@ -456,14 +453,13 @@ if (isset($_POST['search'])){
     
           <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-               <!--  <img alt="" class="u-image u-image-default u-image-1" data-image-width="198" data-image-height="113" src="images/<?php echo $Logo; ?>"> -->
                <br><br>
                 <p class="u-text u-text-default u-text-1">
                   <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-3"><?php echo $Branch ?></p>
-                <p class="u-text u-text-4"> <?php echo $Job_specification; ?> ....</p>
+                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
+                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" target="_blank">Apply Now</a>
               </div>
             </div>

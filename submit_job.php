@@ -15,7 +15,6 @@
          $Sector = $_POST['Sector'];
          $Skills = $_POST['Skills'];
          $Job_description = $_POST['Job_description'];
-         $Logo = $_POST['Logo'];
          $Job_time = $_POST['Job_time'];
          $Job_posted = $_POST['Job_posted'];
 
@@ -24,7 +23,7 @@
 
          $error = 0;
 
-      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_type) && !empty($Company_name)){
+      if(!empty($Fullname) && !empty($Email) && !empty($Phone) && !empty($Job_type) && !empty($Company_name) && !empty($Location)){
       if(!empty($Skills)){             
      
       if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
@@ -52,8 +51,8 @@
         }else {
 
         
-        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Location,Service,Job_title,Sector,Skills,Job_description,Logo,Job_time) ";
-        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Location}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','CrysCloud.jpg','FullTime')";
+        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Location,Service,Job_title,Sector,Skills,Job_description,Job_time) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Location}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','FullTime')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -82,7 +81,7 @@
        }
          
        }else{
-        $Skills = "Skill is required";
+        $message_skills = "Skill is required";
        } 
 
           }else{
@@ -619,7 +618,7 @@
                           <option value="Angular JS">Angular JS</option>
                         </select>
                         <!-- <span class="focus-border"></span> -->
-                        <h6 style="color:#ff0000"><?php echo $Skills; ?></h6>
+                        <h6 style="color:#ff0000"><?php echo $message_skills; ?></h6>
                         </div>
                         
                       </div>
