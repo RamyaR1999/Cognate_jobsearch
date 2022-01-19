@@ -453,7 +453,7 @@ $mail->SMTPSecure='tls';
                         <span style="color:#ff0000"><?php echo $message_Fullname; ?></span>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-Mail Address</label>
+                        <label for="email">E-Mail Address *</label>
                         <input id="email" type="email" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="form-control" name="Email" required="">
                         <div class="invalid-feedback">
                             Email is invalid
@@ -462,7 +462,7 @@ $mail->SMTPSecure='tls';
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password *</label>
                         <div style="position:relative" id="">
                             <input type="Password" id="id_password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="form-control" required="">
                             <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="togglePassword"></span></div>

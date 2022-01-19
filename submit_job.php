@@ -7,14 +7,14 @@
          $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Phone=  $_POST['Phone'];
-         $Job_designation=  $_POST['Job_designation'];
+         $Job_type=  $_POST['Job_type'];
          $Company_name=  $_POST['Company_name'];
          $Branch =  $_POST['Branch'];
          $Service = $_POST['Service'];
          $Job_title = $_POST['Job_title'];
          $Sector = $_POST['Sector'];
          $Skills = $_POST['Skills'];
-         $Job_specification = $_POST['Job_specification'];
+         $Job_description = $_POST['Job_description'];
          $Logo = $_POST['Logo'];
          $Job_time = $_POST['Job_time'];
          $Job_posted = $_POST['Job_posted'];
@@ -24,7 +24,7 @@
 
          $error = 0;
 
-      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_designation) && !empty($Company_name)){
+      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Phone) && !empty($Job_type) && !empty($Company_name)){
       if(!empty($Skills)){             
      
       if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
@@ -52,8 +52,8 @@
         }else {
 
         
-        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_designation,Company_name,Branch,Service,Job_title,Sector,Skills,Job_specification,Logo,Job_time) ";
-        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_designation}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_specification}','CrysCloud.jpg','FullTime')";
+        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Branch,Service,Job_title,Sector,Skills,Job_description,Logo,Job_time) ";
+        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Branch}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','CrysCloud.jpg','FullTime')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -469,9 +469,9 @@
                   <div class="u-layout-row">
                     <div class="col-md-12">
                       <div class="input-group">
-                        <span  class="" >Job designation * </span>
+                        <span  class="" >Job type * </span>
                         <div class="col-sm-12">
-                          <input type="text" value="<?php echo isset($_POST["Job_designation"]) ? $_POST["Job_designation"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter your job role" name="Job_designation">
+                          <input type="text" value="<?php echo isset($_POST["Job_type"]) ? $_POST["Job_type"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter your job role" name="Job_type">
                           <!-- <span class="focus-border"></span> -->
                           <h6 class="text-center" style="color:#ff0000"></h6>
                           </div>
@@ -504,9 +504,9 @@
                     &nbsp;
                 <div class="col-md-12">
                       <div class="input-group">
-                       <span  class="" >Job specification * </span>
+                       <span  class="" >Job description * </span>
                         <div class="col-sm-12">
-                          <textarea class="form-control" name="Job_specification"><?php echo isset($_POST["Job_specification"]) ? $_POST["Job_specification"] : ''; ?></textarea>
+                          <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
                           <!-- <span class="focus-border"></span> -->
                         </div>
                       </div>
@@ -532,7 +532,7 @@
                     &nbsp;
                     <div class="col-md-12">
                       <div class="input-group">
-                         <span  class="" >Branch * </span>
+                         <span  class="" >Location * </span>
                         <div class="col-sm-12">
                             <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Branch"id="Branch">
                               <option value="">-- please select branch --</option>
