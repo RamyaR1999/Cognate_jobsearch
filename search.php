@@ -48,6 +48,19 @@ switch ($_POST['type']) {
     
     }
          break;
+
+     case "Location":
+        
+     $query = "SELECT Location FROM jobs  WHERE Location LIKE '%" . $_POST['search'] . "%' ";
+    
+    $statement=mysqli_query($pdo,$query);
+    
+    while($row=mysqli_fetch_assoc($statement)){
+        
+        $data[] = $row["Location"];
+    
+    }
+         break;
 }
 
 if (count($data)==0) { $data = null; }
