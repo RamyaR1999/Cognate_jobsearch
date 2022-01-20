@@ -327,8 +327,8 @@
                 <p class="u-align-left u-text u-text-10"> <?php echo $Job_description; ?></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
-                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-13">qualification</h2>
-                <p class="u-align-left u-text u-text-14">B.E/B.Tech</p>
+                <!-- <h2 class="u-align-left u-text u-text-custom-color-1 u-text-13">qualification</h2>
+                <p class="u-align-left u-text u-text-14">B.E/B.Tech</p> -->
               </div>
             </div>
           </div>

@@ -4,23 +4,23 @@
 
 if(isset($_POST['submit'])){ 
      
-   require 'PHPMailer/PHPMailerAutoload.php';
-   require('phpmailer/class.phpmailer.php');
+//    require 'PHPMailer/PHPMailerAutoload.php';
+//    require('phpmailer/class.phpmailer.php');
 
-$mail = new PHPMailer;
+// $mail = new PHPMailer;
 $link = "http://localhost:8889/demo/Cognate_jobsearch/email_verification.php";
 
 //OTP generate
 $rndno=rand(100000, 999999);
 
-#$mail->SMTPDebug = 3;
+// #$mail->SMTPDebug = 3;
 
-$mail->isSMTP();
+// $mail->isSMTP();
 
-$mail->Host = 'smtp.gmail.com';
-$mail->Port=587;
-$mail->SMTPAuth = true;
-$mail->SMTPSecure='tls'; 
+// $mail->Host = 'smtp.gmail.com';
+// $mail->Port=587;
+// $mail->SMTPAuth = true;
+// $mail->SMTPSecure='tls'; 
 
          
          $Fullname=  $_POST['Fullname'];
@@ -92,25 +92,25 @@ $mail->SMTPSecure='tls';
             }
         }else {
 
-              $_SESSION['otp'] = $otp;
-              $_SESSION['email'] = $email;
-              $_SESSION['email_verification_link'] = $email_verification_link; 
+          //     $_SESSION['otp'] = $otp;
+          //     $_SESSION['email'] = $email;
+          //     $_SESSION['email_verification_link'] = $email_verification_link; 
 
 
-              $mail->Username = 'CGBSTech2021@gmail.com';
-              $mail->Password = 'cgbs@2021';
+          //     $mail->Username = 'CGBSTech2021@gmail.com';
+          //     $mail->Password = 'cgbs@2021';
 
-              $mail->setFrom ('CGBSTech2021@gmail.com');
-              $mail->addAddress($_POST['Email'],$_POST['Fullname']);
-              #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+          //     $mail->setFrom ('CGBSTech2021@gmail.com');
+          //     $mail->addAddress($_POST['Email'],$_POST['Fullname']);
+          //     #$mail->addReplyTo( $_POST['email'],$_POST['name']);
               
-              $mail->isHTML(true);
-              $mail->Subject = "Email Verification";
-              $mail->Body    = 'Here is the verification link'.' '.$link;
+          //     $mail->isHTML(true);
+          //     $mail->Subject = "Email Verification";
+          //     $mail->Body    = 'Here is the verification link'.' '.$link;
           
-          if(!$mail->send()) {
-             echo "Mail could not be sent.". $mail->ErrorInfo;
-          }else{
+          // if(!$mail->send()) {
+          //    echo "Mail could not be sent.". $mail->ErrorInfo;
+          // }else{
 
         
         $query = "INSERT INTO users (Fullname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Skills,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
@@ -126,7 +126,7 @@ $mail->SMTPSecure='tls';
              // $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
             $_SESSION['Register_status'] ="Register done please login";
              header( "Location: Member-Login.php" ); 
-          }        
+          // }        
         
  }
 

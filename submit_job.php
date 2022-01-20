@@ -3,27 +3,27 @@
 <?php 
 
      if(isset($_POST['submit'])){
-         
+
+         $Job_title = $_POST['Job_title'];
+         $Job_description = $_POST['Job_description'];
+         $Service = $_POST['Service'];
+         $Location_country =  $_POST['Location_country'];
+         $Location =  $_POST['Location'];
+         $Skills = $_POST['Skills'];
+         $Sector = $_POST['Sector'];
+         $Job_type=  $_POST['Job_type']; 
+         $Job_posted = $_POST['Job_posted'];
          $Fullname=  $_POST['Fullname'];
          $Email    = $_POST['Email'];
          $Phone=  $_POST['Phone'];
-         $Job_type=  $_POST['Job_type'];
          $Company_name=  $_POST['Company_name'];
-         $Location =  $_POST['Location'];
-         $Service = $_POST['Service'];
-         $Job_title = $_POST['Job_title'];
-         $Sector = $_POST['Sector'];
-         $Skills = $_POST['Skills'];
-         $Job_description = $_POST['Job_description'];
-         $Job_time = $_POST['Job_time'];
-         $Job_posted = $_POST['Job_posted'];
 
          // $Job_posted = date('d-m-Y');
          // $Job_posted = "2021-12-03";
 
          $error = 0;
 
-      if(!empty($Job_type) && !empty($Company_name) && !empty($Location)){
+      if(!empty($Job_title) && !empty($Job_description) && !empty($Service) && !empty($Location_country) && !empty($Location) && !empty($Sector) && !empty($Job_type)){
       if(!empty($Skills)){             
      
       // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
@@ -46,8 +46,8 @@
         // }else {
 
         
-        $query = "INSERT INTO jobs (Fullname,Email,Phone,Job_type,Company_name,Location,Service,Job_title,Sector,Skills,Job_description,Job_time) ";
-        $query .= "VALUES ('{$Fullname}','{$Email}','{$Phone}','{$Job_type}','{$Company_name}','{$Location}','{$Service}','{$Job_title}','{$Sector}','{$Skills}','{$Job_description}','FullTime')";
+        $query = "INSERT INTO jobs (Job_title,Location,Location_country,Service,Sector,Skills,Job_description,Job_type,Fullname,Email,Company_name,Phone) ";
+        $query .= "VALUES ('{$Job_title}','{$Location}','{$Location_country}','{$Service}','{$Sector}','{$Skills}','{$Job_description}','{$Job_type}','{$Fullname}','{$Email}','Cognate Global Business Solutions PRIVATE LIMITED','{$Phone}')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -423,18 +423,7 @@
                <span  class="">Fields marked with * are required fields</span>
                <h6 class="" style="color:#ff0000"></h6>
           </div>
-            <div class="u-layout-row">
-              <div class="col-md-12">
-                <div class="input-group">
-                  <span  class="">Company name * </span>
-                  <div class="col-sm-12">
-                    <input type="text" value="<?php echo isset($_POST["Company_name"]) ? $_POST["Company_name"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Company Name" name="Company_name">
-                    <!-- <span class="focus-border"></span> -->
-                    <h6 class="" style="color:#ff0000"></h6>
-                    </div> 
-                </div>
-              </div>
-              &nbsp;
+          <div class="u-layout-row">
              <div class="col-md-12">
               <div class="input-group">
                  <span  class="" >Job title * </span>
@@ -446,7 +435,6 @@
               </div>
             </div>
             &nbsp;
-           <div class="u-layout-row"> 
             <div class="col-md-12">
               <div class="input-group">
                <span  class="" >Job description * </span>
@@ -458,7 +446,8 @@
               </div>
             </div>
           </div>
-          &nbsp;  
+            &nbsp;
+           <div class="u-layout-row">     
           <div class="col-md-12">
               <div class="input-group">
                 <span  class="">Service * </span>
@@ -475,8 +464,26 @@
                 </div>
               </div>
             </div>
-        </div> 
-          &nbsp;
+            &nbsp;
+            <div class="col-md-12">
+              <div class="input-group">
+                 <span  class="" >Country * </span>
+                <div class="col-sm-12">
+                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location_country"id="Location_country">
+                      <option value="">-- please select Country --</option>
+                      <option value="Work from Home">Work from Home</option>
+                      <option value="Onsite/Remote">Onsite/Remote</option>
+                      <option value="India">India</option>
+                      <option value="US">US</option>
+                      <option value="Uk">UK</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                    </select>
+                <!-- <span class="focus-border"></span> -->
+                </div>
+                </div>
+              </div>
+            </div> 
+            &nbsp;
           <div class="u-layout-row">
             <div class="col-md-12">
               <div class="input-group">
@@ -485,18 +492,19 @@
                     <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location"id="Location">
                       <option value="">-- please select Location --</option>
                       <option value="Work from Home">Work from Home</option>
+                      <option value="Onsite/Remote">Onsite/Remote</option>
                       <option value="Ahmedabad">Ahmedabad</option>
                       <option value="Baroda">Baroda</option>
-                      <option value="Bengaluru">Bengaluru</option>
-                      <option value="Bengaluru">Bhubaneswar</option>
-                      <option value="Bhubaneswar">Chandigarh</option>
-                      <option value="Chandigarh">Chennai</option>
-                      <option value="Chennai">Cochin</option>
-                      <option value="Cochin">Coimbatore</option>
-                      <option value="Coimbatore">Gurgaon</option>
-                      <option value="Gurgaon">Guwahati</option>
-                      <option value="Guwahati">Hubli</option>
-                      <option value="Hubli">Hyderabad</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Bhubaneswar">Bhubaneswar</option>
+                      <option value="Chandigarh">Chandigarh</option>
+                      <option value="Chennai">Chennai</option>
+                      <option value="Cochin">Cochin</option>
+                      <option value="Coimbatore">Coimbatore</option>
+                      <option value="Gurgaon">Gurgaon</option>
+                      <option value="Guwahati">Guwahati</option>
+                      <option value="Hubli">Hubli</option>
+                      <option value="Hyderabad">Hyderabad</option>
                       <option value="Indore">Indore</option>
                       <option value="Jaipur">Jaipur</option>
                       <option value="Jamshedpur">Jamshedpur</option>
@@ -532,6 +540,10 @@
                   <option value="C++">C++</option>
                   <option value="Java">Java</option>
                   <option value="Angular JS">Angular JS</option>
+                  <option value="Angular JS/ASP .NET Developer">Angular JS/ASP .NET Developer</option>
+                  <option value="Angular JS">React JS</option>
+                  <option value="Devops/AWS">Devops/AWS</option>
+                  <option value="WMS">WMS</option>
                 </select>
                 <!-- <span class="focus-border"></span> -->
                 <h6 style="color:#ff0000"><?php echo $message_skills; ?></h6>
@@ -663,4 +675,3 @@ const togglePassword = document.querySelector('#togglePassword');
 });
 
 </script> 
-             
