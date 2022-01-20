@@ -469,7 +469,7 @@ if (isset($_POST['search'])){
 
           </div>
         </div>
-        <div class="u-container-style u-group u-group-1">
+        <!-- <div class="u-container-style u-group u-group-1">
           <div class="u-container-layout u-container-layout-4">
             <p class="u-text u-text-default u-text-13">jobs by region</p>
             <p class="u-text u-text-default u-text-14">
@@ -498,7 +498,7 @@ if (isset($_POST['search'])){
               <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="">Project Manager</a>
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
