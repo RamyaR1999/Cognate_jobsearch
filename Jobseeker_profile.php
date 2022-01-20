@@ -585,7 +585,7 @@
 }else{
 
 
-       $query = "SELECT * FROM users ";
+       $query = "SELECT * FROM users WHERE User_type='Job Seeker' ";
        $artist_id = mysqli_query($connection,$query);
 
         while($row=mysqli_fetch_array($artist_id)){

@@ -36,6 +36,7 @@
                $db_Experience =$row['Experience'];
                $db_Salary =$row['Salary'];
                $db_CV = $row['CV'];
+               $db_user_type = $row['User_type'];
               
           }
         
@@ -57,6 +58,7 @@
              $_SESSION['Salary'] = $db_Salary;
              $_SESSION['CV'] = $db_CV;
              $_SESSION['Phone'] = $db_Phone;
+             $_SESSION['User_type'] = $db_user_type;
              
 
  header("Location:Job_seeker.php");

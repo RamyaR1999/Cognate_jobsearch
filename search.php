@@ -9,7 +9,7 @@ switch ($_POST['type']) {
         
      case "Fullname":   
         
-    $query = "SELECT Fullname FROM users  WHERE Fullname LIKE '%" . $_POST['search'] . "%' ";
+    $query = "SELECT Fullname FROM users  WHERE User_type='Job Seeker' AND Fullname LIKE '%" . $_POST['search'] . "%' ";
     
     $statement=mysqli_query($pdo,$query);
     

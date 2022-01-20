@@ -319,7 +319,7 @@
           <br>
 <center><img class="" style="width:300px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
 
-      <?php if($_SESSION['Email'] == $Email){
+      <?php if($_SESSION['Email'] == $Email || $_SESSION['User_type'] == 'Admin'){
         
         ?>
 
