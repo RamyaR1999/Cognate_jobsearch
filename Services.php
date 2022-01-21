@@ -256,76 +256,204 @@ if (isset($_POST['submit'])){
   </header>
 
 <style>
-
-  .head-btn1 {
-    margin-right: 5px;
-}
-.btn {
-    background: #fb246a;
-    -moz-user-select: none;
-    text-transform: capitalize;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 0;
-    margin-bottom: 0;
-    padding: 27px 44px;
-    border-radius: 0px;
-    margin: 10px;
-    cursor: pointer;
-    transition: color 0.4s linear;
-    position: relative;
-    z-index: 1;
-    border: 0;
-    overflow: hidden;
-    margin: 0;
+.u-section-1 {
+  background-image: linear-gradient(#73176b, #db545a);
 }
 
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-.head-btn2 {
-    background: none;
-    border: 1px solid #fb246a;
-    color: #fb246a;
+.u-section-1 .u-sheet-1 {
+  min-height: 1601px;
 }
 
+.u-section-1 .u-text-1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 700;
+  margin: 219px -17px 0 500px;
+}
+
+.u-section-1 .u-icon-1 {
+  width: 60px;
+  height: 60px;
+  margin: -260px auto 0 500px;
+}
+
+.u-section-1 .u-shape-1 {
+  height: 759px;
+  width: 1002px;
+  margin: -197px auto 0 -701px;
+}
+
+.u-section-1 .u-icon-2 {
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  margin: 222px auto 0 -18px;
+}
+
+.u-section-1 .u-shape-2 {
+  height: 759px;
+  width: 1002px;
+  margin: -244px -660px 0 auto;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 700;
+  margin: -530px 501px 0 -18px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: linear-gradient(to right, #478ac9, #e68387);
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  margin: 42px auto 60px 181px;
+  padding: 28px 23px 28px 22px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-1 {
+    margin-top: 220px;
+    margin-left: 400px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-top: -193px;
+    margin-left: 400px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: -246px;
+  }
+
+  .u-section-1 .u-icon-2 {
+    margin-top: 190px;
+  }
+
+  .u-section-1 .u-shape-2 {
+    margin-top: -249px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: -510px;
+    margin-right: 401px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 290px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-left: 290px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: -280px;
+  }
+
+  .u-section-1 .u-icon-2 {
+    margin-top: 223px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 291px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 200px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-left: 200px;
+  }
+
+  .u-section-1 .u-icon-2 {
+    margin-top: 257px;
+  }
+
+  .u-section-1 .u-shape-2 {
+    margin-top: -283px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 201px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-icon-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: -313px;
+  }
+
+  .u-section-1 .u-icon-2 {
+    margin-top: 290px;
+  }
+
+  .u-section-1 .u-shape-2 {
+    width: 340px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 </style>
 
+    <section class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_f87e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h6 class="u-align-left u-custom-font u-font-montserrat u-text u-text-white u-text-1"> Employment Services<br>
+          <br>Finding The Right Talent <br>
 
-    <section class="u-clearfix u-custom-color-6 u-lightbox u-section-1" id="sec-de5a">
-    <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
-    <h1 class="text-avatar text-capitalize text-monospace text-left" style="inset-inline-start: initial color:red;font-size:60px; padding-right: 400px;">employment services</h1>
-    <h1 class="text-right text-monospace text-dark text-capitalize " style="revert color:red;font-size:60px;">find the right talent....</h1>
+          <br>Learn how our unique sourcing methodology helps organizations<br>
+        </h6><span class="u-icon u-icon-circle u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2920"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-2920"><path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path><path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path></svg></span>
+        <div class="u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-1">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 150" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0197"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-0197"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+  c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
+  c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
+  C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
+        </div><span class="u-icon u-icon-circle u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3870"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-3870"><path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path><path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path></svg></span>
+        <div class="u-flip-horizontal u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-2">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 150" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8d05"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-8d05"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+  c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
+  c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
+  C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
+        </div>
+        <h6 class="u-align-left u-custom-font u-font-montserrat u-text u-text-white u-text-2">
+          <br> Our unique sourcing methodology ensures<br>
+          <br>that we find the right talent for you every single time.<br>
+          <br>Call us at 1800-267-4050 to know more.
+        </h6>
+        <a class="btn btn-dark" href="techno employee.php">speak to an expert</a>
+      </div>
+    </section>
 
-
-        <div class="u-expanded-width-xs u-form u-form-1">
-          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
-           
-            <div class="u-form-group u-form-submit">
-
-  <p>
-  <br>
-Our unique sourcing methodology ensures
-  <br>
-  <br>
- that we find the right talent for you every single time.
-  <br>
- <br>
-  Call us at 1800-267-4050 to know more.
-  <br>
-  </p>
-  <a class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true"></a>
-           
-  <a class="btn btn-dark" href="techno employee.php">speak to an expert</a>
-</div>
-</form>
-</div>
-</div>
-</section>
+    <!-- 
 
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="snp-txt-img-cta-txt">
@@ -337,6 +465,7 @@ Our unique sourcing methodology ensures
         
       </div>
     </section>
+
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <p class="u-text u-text-default u-text-1"><h3>Our solutions..</h3><span style="font-weight: 700;"></span>
@@ -601,42 +730,7 @@ Our unique sourcing methodology ensures
           </div>
         </div>
       </div>
-    </section>
-
-    
-    
-     <!-- <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
-          <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
-            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="twitter" target="_blank" href=""><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a27c"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-a27c"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
-            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
-            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
-            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
-            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="instagram" target="_blank" href=""><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7849"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-7849"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="linkedin" target="_blank" href=""><span class="u-icon u-social-icon u-social-linkedin u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-fb82"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-fb82"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M41.3,83.7H27.9V43.4h13.4V83.7z M34.6,37.9L34.6,37.9c-4.6,0-7.5-3.1-7.5-7c0-4,3-7,7.6-7s7.4,3,7.5,7
-            C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
-            H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
-          </a>
-        </div>
-      </div></footer>
-    <section class="u-backlink u-clearfix">
-      <main>
-        <p>Copyright &copy; Cognate Global alphabet 2021</p>
-      </main>
-    </section>
-    
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-
-  </body>
-</html> -->
+    </section> -->
 
  <?php include "footer.php"; ?>
 
