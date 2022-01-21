@@ -206,7 +206,7 @@ if (isset($_POST['submit'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -223,7 +223,7 @@ if (isset($_POST['submit'])){
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $Fullname; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -376,8 +376,8 @@ background-size: cover;
   <!-- Slide One - Set the background image for this slide in the line below -->
   <div class="carousel-item active" style="background-image: url('images/jobseekernew1.jpg') " >
     <div class="carousel-caption text-monospace d-none d-md-block">
-      <h2 class="display-4  ">WELCOME!</h2>
-      <p class="lead text-white">Find The Best Solutions<br>For Your Business</p>
+      <h2 class="display-4 text-black">WELCOME!</h2>
+      <p class="lead text-black">Find The Best Solutions<br>For Your Business</p>
     </div>
   </div>
   <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -565,61 +565,8 @@ When an employer fails to recognize the right talent, they are implicating a maj
             </div>
         </div>
 
-
-
 <br></br>
 
-
-
-
-   <!-- <section class="u-clearfix u-custom-color-1 u-lightbox u-section-1" id="sec-de5a">
-      <div style="background-image: url('images/workforce-v2.png');">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1">Join Cognate..</h3>
-        <p class="u-align-left u-text u-text-left u-text-white u-text-6">Here's a secret – we love working here!<br> Now that you know, find out for yourself.</p>
-       <a  class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"style="cursor: pointer; font-size: 20px; background-color: transparent; border-color: white; border-radius: 5px; color: white;" href="">learn more</a>
--->
-       <!--  <img src="images/support funcion.jpg" class="" alt="" width="404" height="336">  -->
-     
-   <!-- <ul class="pager">-->
-
-<!--<li><a class="active_link" href="Job_seeker.php?page=1">1</a></li><li><a href="Job_seeker.php?page=2">2</a></li>
-<li><a href="Job_seeker.php?page=2">3</a></li></ul> -->
- <!--</div>
-    
-    </section>-->
-
-    <section class="u-clearfix u-custom-color-3 u-lightbox u-section-1" id="sec-de5a">
-      <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
-      <!-- <div style="background-image: url('images/imges.jpg');"> -->
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-align-left u-text u-text-left u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find a location.</h3>
-        <p class="u-align-left u-text u-text-left u-text-white u-text-2">Drop in and say "hi" at one of our branch locations.</p><br>
-        <div class="u-expanded-width-xs u-form u-form-1">
-          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 15px;" source="custom" redirect="true">
-           <div class="u-form-group u-form-name">
-              <label for="name-ef64" class="u-form-control-hidden u-label"></label>
-             
-                         
-              <input type="text" placeholder="postcode /city" style="width: 2em; height: 5em;"id=""  minlength="100" maxlength="250" name="Job_title" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
-             <!--  <input name="Name" id="demoB" type="text" placeholder="Enter job title" class="form-control"> -->
-            </div>
-            <br>
-            <div class="u-form-group u-form-submit">
-              <a href="" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-light-2 u-radius-3 u-white u-btn-1"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 2em; height: 3.5em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
-<!-- </g> -->
-</g></svg><img></span>&nbsp;<br>
-              </a>
-              <input type="submit" name="submits" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
-            <div class="u-form-send-error u-form-send-message">#FormSendError</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
-        </div>
-      </div>
-    <!-- </div> -->
-    </section>
 
 <!-- Autocomplete Script -->
 <script>

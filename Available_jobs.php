@@ -84,6 +84,7 @@ if (isset($_POST['search'])){
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!-- pager -->
  <link href="css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -208,7 +209,7 @@ if (isset($_POST['search'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -225,7 +226,7 @@ if (isset($_POST['search'])){
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -503,7 +504,7 @@ if (isset($_POST['search'])){
       </div>
     </section>
 
-        <ul class="pager">
+<ul class="pager">
 
 <?php
                  

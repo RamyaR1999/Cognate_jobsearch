@@ -56,6 +56,7 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
 <!-- Autocomplete -->
 <script type='text/javascript' src='js/autocomplete.js'></script>
 <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
@@ -176,7 +177,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -193,7 +194,7 @@
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -584,25 +585,51 @@
 
 }else{
 
+   $per_page=3;  
+                
+    if(isset($_GET['page'])){
+        
+        $page = $_GET['page'];
+        
+    } else {
+        
+        $page ="";
+        
+    }
+  
+    if($page =="" || $page ==1){
+        
+        $page_1=0;
+        
+    } else {
+        
+        $page_1=($page*$per_page)-$per_page;
+        
+    }
 
-       $query = "SELECT * FROM users WHERE User_type='Job Seeker' ";
-       $artist_id = mysqli_query($connection,$query);
+  $post_query_count="SELECT * FROM users ORDER BY $page_1, $per_page";
+  $find_count=mysqli_query($connection,$post_query_count);
+  $count=mysqli_num_rows($find_count);
+  $count=ceil($count/$per_page);
 
-        while($row=mysqli_fetch_array($artist_id)){
+  $query = "SELECT * FROM users WHERE User_type='Job Seeker' ";
+  $artist_id = mysqli_query($connection,$query);
 
-            $id=$row['id'];
-            $Fullname=$row['Fullname'];
-            $Image=$row['Image'];
-            $Email=$row['Email'];
-            $Phone=$row['Phone'];
-            $City=$row['City'];
-            $Education=$row['Education'];
-            // $Industry=substr($row['Industry'],0,37);
-            // $Function=substr($row['Function'],0,37);
-            $Industry=$row['Industry'];
-            $Function=$row['Function'];
-            $Experience_years=$row['Experience_years'];
-            $Experience_months =$row['Experience_months'];
+  while($row=mysqli_fetch_array($artist_id)){
+
+        $id=$row['id'];
+        $Fullname=$row['Fullname'];
+        $Image=$row['Image'];
+        $Email=$row['Email'];
+        $Phone=$row['Phone'];
+        $City=$row['City'];
+        $Education=$row['Education'];
+        // $Industry=substr($row['Industry'],0,37);
+        // $Function=substr($row['Function'],0,37);
+        $Industry=$row['Industry'];
+        $Function=$row['Function'];
+        $Experience_years=$row['Experience_years'];
+        $Experience_months =$row['Experience_months'];
 
 
 ?>
@@ -620,7 +647,7 @@
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
-     <img src="images/<?php echo $Image ?>" style="width:120px; height:120px; border-radius:10%;"></a>
+     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;"></a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -639,8 +666,6 @@
 
 <?php } } ?>
 
-
-
 <?php
 
      if(isset($_GET['delete'])){
@@ -654,6 +679,39 @@
      </div>          
    </div>
 </section>
+
+<ul class="pager">
+
+<?php
+                 
+              
+      for($i=1; $i<=$count; $i++){
+          
+          if($i == $page){
+          
+            echo "<li><a class='active_link' href='Available_jobs.php?page={$i}'>{$i}</a></li>";
+             
+        } else {
+              
+            echo "<li><a href='Available_jobs.php?page={$i}'>{$i}</a></li>";    
+              
+          }
+          
+      }
+
+
+?>
+</ul>
+
+<style>
+    .pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+}
+</style>
+
 <br>
 <br>
 <br>
@@ -694,6 +752,7 @@
       });
     });
 </script>
+
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
