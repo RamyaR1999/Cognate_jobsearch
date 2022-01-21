@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 21, 2022 at 07:16 AM
+-- Generation Time: Jan 21, 2022 at 08:54 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -396,7 +396,26 @@ INSERT INTO `users` (`id`, `Fullname`, `Email`, `email_verification_link`, `Pass
 (142, 'KRISHNAKUMAR P', 'krish0337@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Krishnakumar[3_0].pdf', 769193),
 (143, 'Purneet Kumar Satapathy', 'purneet.k.satapathy@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Purneet_Soft-Dev-Ops-ASE.doc', 626189),
 (144, 'Shiva Kumar T', 'tshivakumar@engineer.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'shiva_DevOps TL _30days _28L.pdf', 692533),
-(145, 'Vallikannu L', 'vallikanu.sekar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Vallikannu[10_0]_30%_immmediate_DevOps Lead.docx', 789908);
+(145, 'Vallikannu L', 'vallikanu.sekar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Vallikannu[10_0]_30%_immmediate_DevOps Lead.docx', 789908),
+(146, 'VIPUL AGARWAL', 'vipagarwal79@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', '14+_yrs_exp_Technical_Test_Lead_Vipul_Agarwal.docx', 370780),
+(147, 'ADITI', 'ady1321@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'ady_CV_v1.2.doc', 195909),
+(148, 'Ashvin Gajera', 'ashvin2266@yahoo.co.in', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Ashvin_CV.docx', 361936),
+(149, ' Baljeev M R ', 'baljeev@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Baljeev.doc', 421354),
+(150, 'Kristina Vaitiekute', 'k.vaitiekute4@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'CV_test.EN.pdf', 810011),
+(151, 'Edinaldo Lima', 'edinaldo.lima@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Edinaldo_CVd.docx', 601054),
+(152, 'Italo Moraes', 'italoe@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Italo_Moraes_-_Full_Stack_Software_Engineer.pdf', 828097),
+(153, 'Jagdeep Bhoria', 'jagdeep.bhoria@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Jagdeep_Bhoria_Test_Analyst.docx', 325434),
+(154, 'Sherry Raheem', 'sherryraheem15@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'LatestCV2019new1.docx', 956447),
+(155, 'NIKE  OLABINTAN ', 'toyasolabint@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Nike_Olabintan_-_Tester.doc', 335503),
+(156, ' O n d e r   T a p a r ', 'ondertapar@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'OnderTapar.doc', 275537),
+(157, 'Pradip Pack', 'pradip.pack@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'PradipPackCV-06-19.docx', 190415),
+(158, 'Pallavi Yewale', 'pallaviyewale15@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Resume-TestAnalyst-Automation-Manual.docx', 672294),
+(159, 'Uyoyo oghene Okoro   ', 'okoro.uyoyo@aol.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'ResumeUYOYO+OKOROAnalyst.docx', 604994),
+(160, '  REVANTH', 'rcrazy61@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'REV_CV.docx', 337928),
+(161, 'SATIP RANJAN PADHY', 'satippadhyds@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Satip_7yrs_DB_ETL_CV.pdf', 632867),
+(162, 'Seema Kodihalli Balachandra', 'seema.sorab@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Seema_Testlead_CV_July2019.docx', 748887),
+(163, 'Taiwo Afolabi Fajemirokun', 'tkfajek@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'TAIWO_FAJEMIROKUN_CV_Test_Analyst_updated..docx', 866300),
+(164, 'VICTOR ONIBOKUN', 'victor.onibokun@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Victor_A_Onibokun_CV_2019_MBox..docx', 256926);
 
 --
 -- Indexes for dumped tables
@@ -488,7 +507,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `id` int(33) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
