@@ -4756,6 +4756,8 @@ a {
   flex-flow: row;
   align-items: center;
   flex-grow: 1;
+  background-color: white;
+  border-radius: 34px;
 }
 .u-input {
   display: block;
@@ -5428,7 +5430,8 @@ a {
 }
 /* ********  end of spacing ******** */
 .u-form-horizontal .u-form-group.u-form-submit {
-  margin-right: 0;
+  /*margin-right: 0;*/
+  margin-right: 15px;
 }
 .u-form div.u-form-send-error,
 .u-form div.u-form-send-success {

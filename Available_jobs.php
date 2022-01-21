@@ -28,6 +28,7 @@ if (isset($_POST['search'])){
                     $id=$row['id'];
                     $Job_title=$row['Job_title'];
                     $Skills=$row['Skills'];
+                    $Location=$row['Location'];
             
             header ("Location: Available_jobs.php?jobs=$id ");
 
