@@ -4757,8 +4757,6 @@ a {
   flex-flow: row;
   align-items: center;
   flex-grow: 1;
-  background-color: white;
-  border-radius: 34px;
 }
 .u-input {
   display: block;

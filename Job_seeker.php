@@ -319,7 +319,7 @@ if (isset($_POST['submit'])){
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
-          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 11px;" source="custom" redirect="true">
+          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 11px; background-color: white; border-radius: 34px;" source="custom" redirect="true">
             <div class="u-form-group u-form-name">
               <label for="name-ef64" class="u-form-control-hidden u-label"></label>
               <input type="text" placeholder="Enter Location" id="Location" name="Location" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
