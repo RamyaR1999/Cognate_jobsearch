@@ -52,6 +52,9 @@
  <link rel="stylesheet" href="assets/css/shared/style.css">
  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
+<!-- pager -->
+ <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -288,63 +291,15 @@
 <div class="u-layout-row"style="min-width: 100%;">
 <form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
 <div class="u-align-left" style="min-width: 300px;">
-    <!-- <div class="col-md-18"> -->
- <h6>Search Job seekers</h6>
-     <form action="" method="post" autocomplete="off">
+
+ <h6 class="" style="font-weight: 500;">Search CVs</h6>
+     <!-- <form action="" method="post" autocomplete="off">
          <div class="input-group">
              <input name="Fullname" id="Fullname" type="text" placeholder="Search for Name" class="form-control" style="width: 300px">
-                    <!-- <button name="submit" style="padding: 0.5rem 1rem;" class="btn head-btn2" type="submit">
-                        <i class="fa fa-search"></i>
-                    </button> -->
            </div>
-      </form>
-  <!-- </div> -->
+      </form> -->
+
 <br>
-<h6>Industry</h6>
-<div class="input-group">
-         <select type="text" class="form-control" name="Industry"id="Industry">
-                      
-                        <?php      
-
-                            $query="SELECT Industry FROM Industry";
-                            $select_industry=mysqli_query($connection,$query);
-
-                             if(!$select_industry) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
-
-                            while($row=mysqli_fetch_assoc($select_industry)){
-
-                            $industry=$row['Industry'];               
-
-                           if($industry == $Industry) {
-                            
-                         echo "<option value='$Industries'>$industry</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$industry'>$industry</option>";
-             
-                         }     
-                        } 
-                       
-                        $Industries=$_POST['Industry'];
-
-                        if(!empty($Industries)){
-
-                          echo "<option selected value='$Industries'> $Industries </option>";
-                           
-                        }else{
-
-                          echo "<option selected value='Select Industry'>Select Industry</option>";
-                          
-                        }
-                        
-                     ?>
-         </select>
-     </div>
-  <br>
 <h6>Skills</h6>
 <div class="input-group">
          <select type="text" class="form-control" name="Skills"id="Skills">
@@ -391,50 +346,143 @@
      </div>
   <br>
 
-      <h6>Education</h6>
-      <div class="input-group">
-          <select type="text" class="form-control" name="Education"id="Education">
-              <?php      
+  <h6>Experience</h6>
+<div class="input-group">
+         <select type="text" class="form-control" name="Experience_years"id="Experience_years">
+                      
+             
+                        <?php      
 
-                            $query="SELECT Education FROM Education";
-                            $select_education=mysqli_query($connection,$query);
+                            $query="SELECT Experience FROM Experience";
+                            $select_experience=mysqli_query($connection,$query);
 
-                             if(!$select_education) {
+                             if(!$select_experience) {
             
                               die("Query Failed" . mysqli_error($connection));
                           } 
 
-                            while($row=mysqli_fetch_assoc($select_education)){
+                            while($row=mysqli_fetch_assoc($select_experience)){
 
-                            $education=$row['Education'];               
+                            $experience=$row['Experience'];               
 
-                           if($education == $Education) {
+                           if($experience == $Experience_years) {
                             
-                         echo "<option value='$Educate'>$education</option>";
+                         echo "<option value='$Experienced'>$experience</option>";
                        
                         }else{
                             
-                        echo "<option value='$education'>$education</option>";
+                        echo "<option value='$experience'>$experience</option>";
              
                          }     
                         } 
                        
-                        $Educate=$_POST['Education'];
+                        $Experienced=$_POST['Experience_years'];
 
-                        if(!empty($Educate)){
+                        if(!empty($Experienced)){
 
-                          echo "<option selected value='$Educate'> $Educate </option>";
+                          echo "<option selected value='$Experienced'> $Experienced </option>";
                            
                         }else{
 
-                          echo "<option selected value='Select Education'>Select Education</option>";
+                          echo "<option selected value='Select Skill'>Select Skill</option>";
                           
                         }
-
-                    ?>           
+                        
+                     ?>
          </select>
      </div>
-<br>
+  <br>
+
+<!-- <h6>Industry</h6>
+<div class="input-group">
+         <select type="text" class="form-control" name="Industry"id="Industry"> -->
+                      
+                        <?php      
+
+                        //     $query="SELECT Industry FROM Industry";
+                        //     $select_industry=mysqli_query($connection,$query);
+
+                        //      if(!$select_industry) {
+            
+                        //       die("Query Failed" . mysqli_error($connection));
+                        //   } 
+
+                        //     while($row=mysqli_fetch_assoc($select_industry)){
+
+                        //     $industry=$row['Industry'];               
+
+                        //    if($industry == $Industry) {
+                            
+                        //  echo "<option value='$Industries'>$industry</option>";
+                       
+                        // }else{
+                            
+                        // echo "<option value='$industry'>$industry</option>";
+             
+                        //  }     
+                        // } 
+                       
+                        // $Industries=$_POST['Industry'];
+
+                        // if(!empty($Industries)){
+
+                        //   echo "<option selected value='$Industries'> $Industries </option>";
+                           
+                        // }else{
+
+                        //   echo "<option selected value='Select Industry'>Select Industry</option>";
+                          
+                        // }
+                        
+                     ?>
+        <!--  </select>
+     </div>
+  <br> -->
+
+      <!-- <h6>Education</h6>
+      <div class="input-group">
+          <select type="text" class="form-control" name="Education"id="Education"> -->
+              <?php      
+
+                    // $query="SELECT Education FROM Education";
+                    // $select_education=mysqli_query($connection,$query);
+
+                    //  if(!$select_education) {
+    
+                    //   die("Query Failed" . mysqli_error($connection));
+                    //  } 
+
+                    //  while($row=mysqli_fetch_assoc($select_education)){
+
+                    //  $education=$row['Education'];               
+
+                    //    if($education == $Education) {
+                            
+                    //      echo "<option value='$Educate'>$education</option>";
+                       
+                    //     }else{
+                            
+                    //     echo "<option value='$education'>$education</option>";
+             
+                    //      }     
+                    //     } 
+                       
+                    //     $Educate=$_POST['Education'];
+
+                    //     if(!empty($Educate)){
+
+                    //       echo "<option selected value='$Educate'> $Educate </option>";
+                           
+                    //     }else{
+
+                    //       echo "<option selected value='Select Education'>Select Education</option>";
+                          
+                    //     }
+
+                    ?>           
+        <!--  </select>
+     </div>
+<br> -->
        <h6>Function</h6>
        <div class="input-group">
           <select type="text" class="form-control" name="Function"id="Function">
@@ -490,15 +538,20 @@
 
  if (isset($_POST['submit'])){
 
-            $search=$_POST['Fullname'];
-            $Industries=$_POST['Industry'];
-            $Educate=$_POST['Education'];
-            $Functions=$_POST['Function'];
             $Skill=$_POST['Skills'];
+            $Experienced=$_POST['Experience_years'];
+            // $Educate=$_POST['Education'];
+            $Functions=$_POST['Function'];
+            // $search=$_POST['Fullname'];
+            // $Industries=$_POST['Industry'];
+            
 
-             if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
+             // if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
+            // $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
 
-              $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
+            if($Skill != "" || $Experienced != "" || $Functions != ""){
+
+              $users="SELECT * FROM users WHERE Skills = '$Skill' || Experience_years='$Experienced' || Function='$Functions' "; 
 
               $search_users=mysqli_query($connection, $users); 
 
@@ -510,9 +563,9 @@
 
              ?>
 
-          <div class="col-md-1">
-           <?php   echo "<td><a class='btn head-btn2' href='Jobseeker_profile.php'>Back</a></td>";   ?>
-          </div>
+          <center><div class="col-md-1">
+           <?php   echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
+          </div></center>
 
           <br>
 
@@ -550,14 +603,14 @@
         <div class="u-align-left" style="width: 520px;">
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
         <h4><b><?php echo $Fullname; ?></b></h4> 
-            <p><?php echo $Education; ?></p>
+            <p><?php echo $Skills; ?></p>
             <p><?php echo $Email; ?></p>
             <p><?php echo $Phone; ?></p>
  </a>
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
-     <img src="images/<?php echo $Image ?>" style="width:120px; height:120px; border-radius:10%;"></a>
+     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;"></a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -585,34 +638,48 @@
 
 }else{
 
-   $per_page=3;  
+// $page_name="Jobseeker_profile.php"; //  If you use this code with a different page ( or file ) name then change this 
+
+// $start=$_GET['start'];                              // To take care global variable if OFF
+// if(!($start > 0)) {                         // This variable is set to zero for the first page
+// $start = 0;
+// }
+
+// $eu = ($start -0);                
+// $limit = 5;                                 // No of records to be shown per page.
+// $this1 = $eu + $limit; 
+// $back = $eu - $limit; 
+// $next = $eu + $limit; 
+
+
+  //  $per_page=2;  
                 
-    if(isset($_GET['page'])){
+  //   if(isset($_GET['page'])){
         
-        $page = $_GET['page'];
+  //       $page = $_GET['page'];
         
-    } else {
+  //   } else {
         
-        $page ="";
+  //       $page ="";
         
-    }
+  //   }
   
-    if($page =="" || $page ==1){
+  //   if($page =="" || $page ==1){
         
-        $page_1=0;
+  //       $page_1=0;
         
-    } else {
+  //   } else {
         
-        $page_1=($page*$per_page)-$per_page;
+  //       $page_1=($page*$per_page)-$per_page;
         
-    }
+  //   }
 
-  $post_query_count="SELECT * FROM users ORDER BY $page_1, $per_page";
-  $find_count=mysqli_query($connection,$post_query_count);
-  $count=mysqli_num_rows($find_count);
-  $count=ceil($count/$per_page);
+  // $post_query_count="SELECT * FROM users";
+  // $find_count=mysqli_query($connection,$post_query_count);
+  // $count=mysqli_num_rows($find_count);
+  // $count=ceil($count/$per_page);
 
-  $query = "SELECT * FROM users WHERE User_type='Job Seeker' ";
+  $query = "SELECT * FROM users WHERE User_type='Job Seeker'";
   $artist_id = mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($artist_id)){
@@ -621,12 +688,14 @@
         $Fullname=$row['Fullname'];
         $Image=$row['Image'];
         $Email=$row['Email'];
+        $User_type=$row['User_type'];
         $Phone=$row['Phone'];
         $City=$row['City'];
         $Education=$row['Education'];
         // $Industry=substr($row['Industry'],0,37);
         // $Function=substr($row['Function'],0,37);
         $Industry=$row['Industry'];
+        $Skills=$row['Skills'];
         $Function=$row['Function'];
         $Experience_years=$row['Experience_years'];
         $Experience_months =$row['Experience_months'];
@@ -640,7 +709,7 @@
         <div class="u-align-left" style="width: 520px;">
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
         <h4><b><?php echo $Fullname; ?></b></h4> 
-            <p><?php echo $Education; ?></p>
+            <p><?php echo $Skills; ?></p>
             <p><?php echo $Email; ?></p>
             <p><?php echo $Phone; ?></p>
  </a>
@@ -680,37 +749,42 @@
    </div>
 </section>
 
-<ul class="pager">
+<?php
+
+// $p_limit=8; // This should be more than $limit and set to a value for whick links to be breaked
+
+// $p_f=$_GET['p_f'];                              // To take care global variable if OFF
+// if(!($p_f > 0)) {                         // This variable is set to zero for the first page
+// $p_f = 0;
+// }
+
+// $p_fwd=$p_f+$p_limit;
+// $p_back=$p_f-$p_limit;
+
+?>
+
+<!-- <ul class="pager"> -->
 
 <?php
                  
               
-      for($i=1; $i<=$count; $i++){
+      // for($i=1; $i<=$count; $i++){
           
-          if($i == $page){
+      //     if($i == $page){
           
-            echo "<li><a class='active_link' href='Available_jobs.php?page={$i}'>{$i}</a></li>";
+      //       echo "<li><a class='active_link' href='Jobseeker_profile.php?page={$i}'>{$i}</a></li>";
              
-        } else {
+      //   } else {
               
-            echo "<li><a href='Available_jobs.php?page={$i}'>{$i}</a></li>";    
+      //       echo "<li><a href='Jobseeker_profile.php?page={$i}'>{$i}</a></li>";    
               
-          }
+      //     }
           
-      }
+      // }
 
 
 ?>
-</ul>
-
-<style>
-    .pager {
-    padding-left: 0;
-    margin: 20px 0;
-    text-align: center;
-    list-style: none;
-}
-</style>
+<!-- </ul> -->
 
 <br>
 <br>

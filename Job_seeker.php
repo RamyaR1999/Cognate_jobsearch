@@ -301,7 +301,7 @@ if (isset($_POST['submit'])){
 <style>    
 .u-form-horizontal .u-input {
     /*display: flex;*/
-    width: auto;
+    /*width: auto;*/
      flex-grow: 1;
     flex-shrink: 1;
     /*vertical-align: middle;
@@ -314,7 +314,7 @@ if (isset($_POST['submit'])){
 </style>
 
 
-<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a" style="height: 400px; padding: 0px;">
+<section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a" style="height: 600px; padding: 0px;">
        <div style="background: linear-gradient(to right, #00a8f3 0%, #b83dba 80%);">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
@@ -322,18 +322,17 @@ if (isset($_POST['submit'])){
           <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" style="padding: 11px; background-color: white; border-radius: 34px;" source="custom" redirect="true">
             <div class="u-form-group u-form-name">
               <label for="name-ef64" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Enter Location" id="Location" name="Location" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
+              <input type="text"style="min-width: 321px; display: flex;" placeholder="Enter job title" id="jobtitle" name="Job_title" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
               <!-- <input type="text" name="Name" id="demoB" placeholder="Enter job title" class="u-form-control"> -->
             </div>
-           <div class="u-form-group u-form-name">
+            <div class="u-form-group u-form-name">
               <label for="name-ef64" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Enter job title" id="jobtitle" name="Job_title" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
-              <!-- <input type="text" name="Name" id="demoB" placeholder="Enter job title" class="u-form-control"> -->
+              <input type="text" style="min-width: 321px; display: flex;" placeholder="Enter Location" id="Location" name="Location" class="u-input u-input-rectangle u-radius-3 u-white u-input-1">
             </div>
-            <div class="u-form-email u-form-group">
+            <!-- <div class="u-form-email u-form-group">
               <label for="email-ef64" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Skills" id="Skills" name="Skills" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
-            </div>
+              <input type="text" style="min-width: 321px; display: flex;" placeholder="Skills" id="Skills" name="Skills" class="u-input u-input-rectangle u-radius-3 u-white u-input-2">
+            </div> -->
             <div class="u-form-group u-form-submit">
                <a href="Available_jobs.php" class="btn head-btn1 " style="padding: 18px; border-radius: 16px;"><!-- <span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><g><path d="M496.128,220.361l-160-144.032c-19.712-17.728-50.08-16.192-67.808,3.584c-17.728,19.68-16.128,50.048,3.584,67.776    l66.976,60.32H48c-26.528,0-48,21.472-48,48s21.472,48,48,48h290.944l-67.072,60.32c-19.712,17.76-21.312,48.096-3.584,67.776    c9.504,10.528,22.592,15.904,35.712,15.904c11.456,0,22.944-4.064,32.096-12.32l160-143.968    c10.112-9.088,15.904-22.08,15.904-35.68C512,242.441,506.208,229.449,496.128,220.361z"></path>
 
