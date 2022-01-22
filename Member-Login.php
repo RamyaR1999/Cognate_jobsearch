@@ -36,6 +36,7 @@
                $db_Experience =$row['Experience'];
                $db_Salary =$row['Salary'];
                $db_CV = $row['CV'];
+               $db_email_status = $row['Email_status'];
                $db_user_type = $row['User_type'];
               
           }
@@ -43,6 +44,7 @@
         
         if($Email === $db_Email){
         if($Password === $db_Password){
+        // if($db_email_status === 'Verified'){
      
              $_SESSION['id'] = $db_id;
              $_SESSION['Fullname'] = $db_Fullname;
@@ -61,7 +63,12 @@
              $_SESSION['User_type'] = $db_user_type;
              
 
- header("Location:Job_seeker.php");
+             header("Location:Job_seeker.php");
+
+        // }else{
+            
+        //     $message_emailstatus = "Your email is not verified, first verify your email";
+        // }
            
         }else{
             
@@ -359,7 +366,7 @@
                     }
                     
                 ?>
-
+            <h7 class="text-center" style="color:#ff0000"><?php echo $message_emailstatus; ?></h7>
                 <form method="POST" class="my-login-validation">
                     <div class="form-group">
                         <label for="email">E-Mail Address</label>

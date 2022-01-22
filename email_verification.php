@@ -3,11 +3,40 @@
 
 
 <?php
-            $message =  '<label class="text">Your Email Address Successfully Verified <br/> You can login 
-            here - <a href="Member-Login.php">login</a></label>';
-          
+
+      if(isset($_SESSION['Email'])){
+
+     $Email =  $_SESSION['Email'];  
+           
+     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
+     $select_register_profile = mysqli_query($connection,$query);
+
+      
+     while($row=mysqli_fetch_array($select_register_profile)){
+
+            $id=$row['id'];
+            $Fullname=$row['Fullname'];
+            $Email=$row['Email'];
+            $Email_status=$row['Email_status'];         
+           }
+         }
+
+      if(isset($_POST['submit'])){
+   
+     $query="UPDATE users SET Email_status= 'Verified' WHERE Email= '{$Email}' ";  
+                      
+        $update_profile_query=mysqli_query($connection,$query);
+
+         if(!$update_profile_query) {
+            
+            die("Query Failed" . mysqli_error($connection));
+        }
+        header("Location: Member-Login.php");
+
+ }
 
  ?>
+
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -72,42 +101,6 @@
 </div>
 </div>
 
-
-<!-- 
-<style>
-.u-input {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  background-image: none;
-  background-clip: padding-box;
-  border: 1px solid #c9ced1;
-  border-radius: 3px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  background-color: #ffffff;
-  color: inherit;
-  height: 48px;
-}
-  .u-input ~ .focus-border{
-    position: absolute;
-    height: 48px;
-    bottom: 0;
-    left: 0;
-    /*width: 0;*/
-    transition: 0.4s;
-    border-radius: 2px;
-    }
-   .u-input:focus ~ .focus-border{
-     width: 100%;
-     transition: 0.4s;
-     border: 1px solid #3399FF;
-     cursor: text;
-    } 
-   .col-sm-12{
-    padding-right: 0px;
-    padding-left: 0px
-    }
-</style> -->
  <section class="u-clearfix u-section-1" id="sec-8459">
       <div class="u-clearfix u-sheet u-sheet-1">
       <h3 align="center">Register Login with Email Verification</h3>

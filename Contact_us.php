@@ -236,7 +236,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -253,7 +253,7 @@
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
