@@ -315,7 +315,7 @@ if (isset($_POST['submit'])){
 
 
 <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a" style="height: 600px; padding: 0px;">
-       <div style="background: linear-gradient(to right, #00a8f3 0%, #b83dba 80%);">
+       <div style="background: linear-gradient(to right, #b83dba 20%, #00a8f3 80%);">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -352,7 +352,7 @@ if (isset($_POST['submit'])){
 
 <style>
     .u-section-1 {
-  background-image: linear-gradient(to right, #00a8f3 0%, #b83dba 80%);
+  background-image: linear-gradient(to right, #b83dba 20%, #00a8f3 80%);
 }
 
 .u-section-1 .u-sheet-1 {
