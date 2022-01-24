@@ -454,7 +454,7 @@
                             ?> -- please select Location_india -- <?php } ?>
                             <?php      
 
-                            $query="SELECT Location_india FROM Location_india";
+                            $query="SELECT Location_india FROM location_india";
                             $select_location_india=mysqli_query($connection,$query);
 
                              if(!$select_location_india) {
@@ -519,7 +519,7 @@
                             ?> -- please select Location_US -- <?php } ?>
                             <?php      
 
-                            $query="SELECT Location_US FROM Location_US";
+                            $query="SELECT Location_US FROM location_us";
                             $select_location_us=mysqli_query($connection,$query);
 
                              if(!$select_location_us) {
@@ -583,7 +583,7 @@
                             ?> -- please select Location_UK -- <?php } ?>
                            <?php      
 
-                            $query="SELECT Location_UK FROM Location_UK";
+                            $query="SELECT Location_UK FROM location_uk";
                             $select_location_uk=mysqli_query($connection,$query);
 
                              if(!$select_location_uk) {
