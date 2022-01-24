@@ -83,11 +83,11 @@
   </ul>
 
 </li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_Us.php">About</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
 
 
 </li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_Us.php">Contact</a>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_us.php">Contact</a>
 
 </li>
      </ul>
@@ -573,7 +573,7 @@ Bangalore - 560020
                               <ul>
                                   <li><a href="jobSeeker.php"> Job Seekers</a></li>
                                   <li><a href="Contact.php">Contact Us</a></li>
-                                  <li><a href="About_Us.php">About Us</a></li>
+                                  <li><a href="About_us.php">About Us</a></li>
                                   <li><a href="available_jobs.php">find a job</a></li>
                                   <li><a href="sequrity_advice">sequrity advice</a></li>
                               </ul>
