@@ -306,7 +306,7 @@
                       
                         <?php      
 
-                            $query="SELECT Skills FROM Skills";
+                            $query="SELECT Skills FROM skills";
                             $select_skills=mysqli_query($connection,$query);
 
                              if(!$select_skills) {
@@ -353,7 +353,7 @@
              
                         <?php      
 
-                            $query="SELECT Experience FROM Experience";
+                            $query="SELECT Experience FROM experience";
                             $select_experience=mysqli_query($connection,$query);
 
                              if(!$select_experience) {
@@ -488,7 +488,7 @@
           <select type="text" class="form-control" name="Function"id="Function">
                 <?php      
 
-                            $query="SELECT Function FROM Function";
+                            $query="SELECT Function FROM function";
                             $select_function=mysqli_query($connection,$query);
 
                              if(!$select_function) {
