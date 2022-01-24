@@ -17,14 +17,13 @@
          $Email    = $_POST['Email'];
          $Phone=  $_POST['Phone'];
          $Company_name=  $_POST['Company_name'];
-
          $Job_posted = date('d M Y');
 
          $error = 0;
 
-      if(!empty($Job_title) && !empty($Job_description) && !empty($Service) && !empty($Location_country) && !empty($Location) && !empty($Sector) && !empty($Job_type)){
-      if(!empty($Skills)){             
-     
+      if(!empty($Job_title) && !empty($Job_description) && !empty($Service) && !empty($Location_country) && !empty($Location)  && !empty($Sector) && !empty($Job_type)){
+      if(!empty($Skills)){ 
+
       // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
         
       //   if(preg_match("/^[0-9]{10}$/", $Phone)) {   
@@ -73,6 +72,7 @@
        //        $message_Fullname ="Only Alphabets are allowed in Fullname";
           
        // }
+
          
        }else{
         $message_skills = "Skill is required";
@@ -87,28 +87,6 @@
        }
 
   ?>
-
-
-<?php
-// session_start();
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $to=$_POST['email'];
-// $subject = "OTP";
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: 07.ramyar@gmail.com" . "\r\n" .
-// "CC: thennarasan1988@gmail.com";
-// mail($to,$subject,$txt,$headers);
-// if(isset($_POST['btn-save']))
-// {
-// $_SESSION['Fullname']=$_POST['Fullname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
-// header( "Location: otp.php" );
-
-// }
- ?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -138,24 +116,28 @@
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Register-Member.css" media="screen">
+ <link rel="stylesheet" href="SignIn.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
- <!-- Profile Icon -->
+ 
+ <!-- Password Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+ <!-- Profile Icon -->
  <link rel="stylesheet" href="assets/css/shared/style.css">
  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+ <!-- Autocomplete -->
+ <script type='text/javascript' src='js/autocomplete.js'></script>
+ <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
 
-<!-- Autocomplete -->
-<script type='text/javascript' src='js/autocomplete.js'></script>
-<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+ <!--jQuery libary -->
+ <script src="js/jquery.min.js"></script>
 
    </head>
 
@@ -186,7 +168,7 @@
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
      <!-- Main-menu -->
-     <div class="main-menu u-custom-menu u-nav-container">
+    <div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
@@ -218,7 +200,7 @@
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit A job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -254,7 +236,7 @@
               
       }else{
               
-    ?> 
+    ?>  
 
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
@@ -364,269 +346,375 @@
 
 </style>
 
+<script>
+   function Location_country_Code(){
+  var val = document.getElementById("country").value;
 
-<style>
-.u-input {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  background-image: none;
-  background-clip: padding-box;
-  border: 1px solid #c9ced1;
-  border-radius: 3px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  background-color: #ffffff;
-  color: inherit;
-  height: 48px;
-}
-  .u-input ~ .focus-border{
-    position: absolute;
-    height: 48px;
-    bottom: 0;
-    left: 0;
-    /*width: 0;*/
-    transition: 0.4s;
-    border-radius: 3px;
-    }
-   .u-input:focus ~ .focus-border{
-     width: 100%;
-     transition: 0.4s;
-     border: 1px solid #3399FF;
-     cursor: text;
-    } 
-   .col-sm-12{
-    padding-right: 0px;
-    padding-left: 0px
-    }
-</style>
-<style>
-  span{
-    font-family: "Barlow",sans-serif;
-   font-weight: 400;
+  if (val === "select Country") {
+    document.getElementById("output").value == "";
   }
-</style>
-<section class="u-clearfix u-gradient u-section-1" id="sec-6065">
+  else if (val === "India") {
+    document.getElementById("output").value == "select Location_india";
+  }
+   else if (val === "US") {
+    document.getElementById("output").value == "select Location_US";
+  }
+   else if (val === "UK") {
+    document.getElementById("output").value == "select Location_UK";
+  }
+  //  else if (val === "br") {
+  //   document.getElementById("output").value == "";
+  // }
+}
 
-<img src="images/find-a-job.jpg" alt="">
-</section>
-<section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-        <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>submit a job</h3>
-          </div>
+</script>
 
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-radius-10 u-#f2f2f2 u-form-1">
-          <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true">
-            <div class="col-md-12">
-               <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
-               <span  class="">Fields marked with * are required fields</span>
-               <h6 class="" style="color:#ff0000"></h6>
-          </div>
-          <div class="u-layout-row">
-             <div class="col-md-12">
-              <div class="input-group">
-                 <span  class="" >Job title * </span>
-                <div class="col-sm-12">
-                  <input type="text" value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" placeholder="Enter your job title" name="Job_title">
-               <!-- <span class="focus-border"></span> -->
-               <h6 class="" style="color:#ff0000"></h6>
-                </div>               
-              </div>
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center align-items-center h-100">
+                <div class="card-wrapper">
+
+        <div class="card fat">
+            <div class="card-body">
+                <h4 class="card-title">Submit A job</h4>
+  
+  <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
+                   <span  class="">Fields marked with * are required fields</span>
+<br><br>
+    <form method="POST" class="my-login-validation" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="text">Job title *</label>
+                        <input type="text" value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>" class="form-control" name="Job_title" required autofocus>
+                        
+                        <span style="color:#ff0000"><?php echo $message_Job_title ; ?></span>
+                    </div>
+               <div class="form-group">
+                        <label for="">Job description *</label>
+                        <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Job_description; ?></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Service *</label>
+                        <div style="position:relative" id="">
+                            <select type="text" id="" name="Service" value="<?php echo isset($_POST["Service"]) ? $_POST["Service"] : ''; ?>" class="form-control" required="">
+                                <option value="">-- please select service --</option>
+                            <option value="Contract Staffing">Contract Staffing</option>
+                            <option value="Permanent Recruitment">Permanent Recruitment</option>
+                            <option value="RPO">RPO</option>
+                            <option value="IT Contract Staffing">IT Contract Staffing</option>
+                        </select>
+                            
+                        </div>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Service; ?></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        &nbsp;
+                        <label for="">Country *</label>
+                        <div style="position:relative" id="">
+                            <select type="text" id="Location_country" onclick="Location_country_Code ()" name="Location_country" value="<?php echo isset($_POST["Location_country"]) ? $_POST["Location_country"] : ''; ?>" class="form-control" required="">
+                             <option value="select Country">-- please select Country --</option>
+                            <option value="Work from Home">Work from Home</option>
+                            <option value="Onsite/Remote">Onsite/Remote</option>
+                            <option value="India">India</option>
+                            <option value="US">US</option>
+                            <option value="Uk">UK</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                        </select>
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Location_country; ?></span>
+                    </div>
+                    <?php 
+                          if ($Location_country == "India" || $Location_country == "") {
+
+
+                          ?>
+                     <div class="form-group">
+                        &nbsp;
+                        <label for="">Location *</label>
+                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
+                            <option value="Location_india">
+                            <?php 
+
+                                  if(!empty($Location_india)){
+
+                                   echo $Location_india; 
+                                   
+                                   }else{
+
+                            ?> -- please select Location_india -- <?php } ?>
+                            <?php      
+
+                            $query="SELECT Location_india FROM Location_india";
+                            $select_location_india=mysqli_query($connection,$query);
+
+                             if(!$select_location_india) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_location_india)){
+
+                            $location_india=$row['Location_india'];               
+
+                           if($location_india == $Location_india) {
+                            
+                         echo "<option value='$location_india'>$location_india</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$location_india'>$location_india</option>";
+             
+                         }     
+                        } 
+                       
+                        $location_india=$_POST['Location_india'];
+
+                        if(!empty($Location_india)){
+
+                          echo "<option selected value='$Location india'> $Location india </option>";
+                           
+                        }else{
+
+                          // echo "<option selected value='Select Location india'>Select Location india</option>";
+                          
+                        }
+
+
+                    ?> 
+                        </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
+                    </div>
+                     <?php } ?>
+                    <?php 
+                          if ($Location_country == "US") {
+
+
+                          ?>
+                    <div class="form-group">
+                        &nbsp;
+                        <label id="">Location *</label>
+                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
+                             <option value="Location_US">
+                            <?php 
+
+                                  if(!empty($Location_US)){
+
+                                   echo $Location_US; 
+                                   
+                                   }else{
+
+                            ?> -- please select Location_US -- <?php } ?>
+                            <?php      
+
+                            $query="SELECT Location_US FROM Location_US";
+                            $select_location_us=mysqli_query($connection,$query);
+
+                             if(!$select_location_us) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_location_us)){
+
+                            $location_us=$row['Location_US'];               
+
+                           if($location_us == $Location_US) {
+                            
+                         echo "<option value='$Location_US'>$location_us</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$location_us'>$location_us</option>";
+             
+                         }     
+                        } 
+                       
+                        $Location_US=$_POST['Location_US'];
+
+                        if(!empty($Location_US)){
+
+                          echo "<option selected value='$Location_US'> $Location_US </option>";
+                           
+                        }else{
+
+                          // echo "<option selected value='Select Location US'>Select Location US</option>";
+                          
+                        }
+                        
+                     ?>
+                        </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
+                    </div>
+                    <?php } ?>
+                    <?php 
+                          if ($Location_country == "US") {
+
+
+                          ?>
+                    <div class="form-group">
+                        &nbsp;
+                        <label id="">Location *</label>
+                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
+                             <option value="Location_UK">
+                            <?php 
+
+                                  if(!empty($Location_UK)){
+
+                                   echo $Location_UK; 
+                                   
+                                   }else{
+
+                            ?> -- please select Location_UK -- <?php } ?>
+                           <?php      
+
+                            $query="SELECT Location_UK FROM Location_UK";
+                            $select_location_uk=mysqli_query($connection,$query);
+
+                             if(!$select_location_uk) {
+            
+                              die("Query Failed" . mysqli_error($connection));
+                          } 
+
+                            while($row=mysqli_fetch_assoc($select_location_uk)){
+
+                            $location_uk=$row['Location_UK'];               
+
+                           if($location_uk == $Location_UK) {
+                            
+                         echo "<option value='$Location_UK'>$location_uk</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$location_uk'>$location_uk</option>";
+             
+                         }     
+                        } 
+                       
+                        $Location_UK=$_POST['Location_UK'];
+
+                        if(!empty($Location_UK)){
+
+                          echo "<option selected value='$Location_UK'> $Location_UK </option>";
+                           
+                        }else{
+
+                          // echo "<option selected value='Select Location UK'>Select Location UK</option>";
+                          
+                        }
+                        
+                     ?>
+                        </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
+                    </div>
+                     <?php } ?>
+                     <div class="form-group">
+                        &nbsp;
+                        <label for="">Skills *</label>
+                        <select id="" type="text" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" name="Skills" required="">
+                            <option value="<?php echo $Skills; ?>">
+                            <?php 
+
+                                  if(!empty($Skills)){
+
+                                   echo $Skills; 
+                                   
+                                   }else{
+
+                            ?> -- please select Skills -- <?php } ?>
+                              <option value="PHP">PHP</option>
+                              <option value="Python">Python</option>
+                              <option value="C">C</option>
+                              <option value="C++">C++</option>
+                              <option value="Java">Java</option>
+                              <option value="Angular JS">Angular JS</option>
+                              <option value="Angular JS/ASP .NET Developer">Angular JS/ASP .NET Developer</option>
+                              <option value="Angular JS">React JS</option>
+                              <option value="Devops/AWS">Devops/AWS</option>
+                              <option value="WMS">WMS</option>
+                          </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Skills; ?></span>
+                    </div>
+                     <div class="form-group">
+                        &nbsp;
+                        <label for="">Sector *</label>
+                        <select id="" type="text" value="<?php echo isset($_POST["Sector"]) ? $_POST["Sector"] : ''; ?>" class="form-control" name="Sector" required="">
+                        <option value="">-- please select sector --</option>
+                            <option value="Accounting / Finance">Accounting / Finance</option>
+                            <option value="Banking & finance">Banking &amp; finance</option>
+                            <option value="General Administration">General Administration</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="ITeS & BPO">ITeS &amp; BPO</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Sales">Sales</option>
+                            <option value="FMCG">FMCG</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Telecom">Telecom</option>
+                            <option value="Media & entertainment">Media &amp; entertainment</option>
+                            <option value="Education">Education</option>
+                            <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
+                            <option value="Consulting & VC">Consulting &amp; VC</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Sector; ?></span>
+                    </div>
+                     <div class="form-group">
+                        &nbsp;
+                        <label for="">Job type *</label>
+                         <select type="text" class="form-control" name="Job_type"id="Job_type">
+                            <option value="">-- please select job type --</option>
+                            <option value="Full time">Full time</option>
+                            <option value="Part time">Part time</option>
+                          </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Job_type; ?></span>
+                    </div>
+                    &nbsp;
+                    <div class="form-group m-0">
+                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Submit
+                        </button>
+                    </div>
+                    <!-- <div class="mt-4 text-center">
+                        Already have an account? <a href="Member-Login.php">Sign In</a>
+                    </div> -->
+                </form>
             </div>
-            &nbsp;
-            <div class="col-md-12">
-              <div class="input-group">
-               <span  class="" >Job description * </span>
-                <div class="col-sm-12">
-                  <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
-                  <!-- <span class="focus-border"></span> -->
-                  <!-- <h6 class="" style="color:#ff0000"></h6> -->
-                </div>
-              </div>
-            </div>
-          </div>
-            &nbsp;
-           <div class="u-layout-row">     
-          <div class="col-md-12">
-              <div class="input-group">
-                <span  class="">Service * </span>
-                <div class="col-sm-12">
-                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Service"id="Service">
-                  <option value="">-- please select service --</option>
-                  <option value="Contract Staffing">Contract Staffing</option>
-                  <option value="Permanent Recruitment">Permanent Recruitment</option>
-                  <option value="RPO">RPO</option>
-                  <option value="IT Contract Staffing">IT Contract Staffing</option>
-                </select>
-                <!-- <span class="focus-border"></span> -->
-                <!-- <h6 class="" style="color:#ff0000"></h6> -->
-                </div>
-              </div>
-            </div>
-            &nbsp;
-            <div class="col-md-12">
-              <div class="input-group">
-                 <span  class="" >Country * </span>
-                <div class="col-sm-12">
-                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location_country"id="Location_country">
-                      <option value="">-- please select Country --</option>
-                      <option value="Work from Home">Work from Home</option>
-                      <option value="Onsite/Remote">Onsite/Remote</option>
-                      <option value="India">India</option>
-                      <option value="US">US</option>
-                      <option value="Uk">UK</option>
-                      <option value="Afghanistan">Afghanistan</option>
-                    </select>
-                <!-- <span class="focus-border"></span> -->
-                </div>
-                </div>
-              </div>
-            </div> 
-            &nbsp;
-          <div class="u-layout-row">
-            <div class="col-md-12">
-              <div class="input-group">
-                 <span  class="" >Location * </span>
-                <div class="col-sm-12">
-                    <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Location"id="Location">
-                      <option value="">-- please select Location --</option>
-                      <option value="Work from Home">Work from Home</option>
-                      <option value="Onsite/Remote">Onsite/Remote</option>
-                      <option value="Ahmedabad">Ahmedabad</option>
-                      <option value="Baroda">Baroda</option>
-                      <option value="Bangalore">Bangalore</option>
-                      <option value="Bhubaneswar">Bhubaneswar</option>
-                      <option value="Chandigarh">Chandigarh</option>
-                      <option value="Chennai">Chennai</option>
-                      <option value="Cochin">Cochin</option>
-                      <option value="Coimbatore">Coimbatore</option>
-                      <option value="Gurgaon">Gurgaon</option>
-                      <option value="Guwahati">Guwahati</option>
-                      <option value="Hubli">Hubli</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Indore">Indore</option>
-                      <option value="Jaipur">Jaipur</option>
-                      <option value="Jamshedpur">Jamshedpur</option>
-                      <option value="Karnataka">Karnataka</option>
-                      <option value="Kolkata">Kolkata</option>
-                      <option value="Lucknow">Lucknow</option>
-                      <option value="Madurai">Madurai</option>
-                      <option value="Mangalore">Mangalore</option>
-                      <option value="Mumbai">Mumbai</option>
-                      <option value="Nagpur">Nagpur</option>
-                      <option value="New Delhi">New Delhi</option>
-                      <option value="Patna">Patna</option>
-                      <option value="Pune">Pune</option>
-                      <option value="Rajkot">Rajkot</option>
-                      <option value="Surat">Surat</option>
-                      <option value="Trivandrum">Trivandrum</option>
-                      <option value="Visakapatnam">Visakapatnam</option>
-                    </select>
-                <!-- <span class="focus-border"></span> -->
-                </div>
-                </div>
-              </div>
-               &nbsp;
-               <div class="col-md-12">
-              <div class="input-group">
-                 <span  class="">Skills * </span> 
-                <div class="col-sm-12">
-                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Skills"id="Skills">
-                  <option value="">-- please select Skills --</option>
-                  <option value="PHP">PHP</option>
-                  <option value="Python">Python</option>
-                  <option value="C">C</option>
-                  <option value="C++">C++</option>
-                  <option value="Java">Java</option>
-                  <option value="Angular JS">Angular JS</option>
-                  <option value="Angular JS/ASP .NET Developer">Angular JS/ASP .NET Developer</option>
-                  <option value="Angular JS">React JS</option>
-                  <option value="Devops/AWS">Devops/AWS</option>
-                  <option value="WMS">WMS</option>
-                </select>
-                <!-- <span class="focus-border"></span> -->
-                <h6 style="color:#ff0000"><?php echo $message_skills; ?></h6>
-                </div>  
-              </div>
-            </div>         
-            </div>
-            &nbsp;
-           <div class="u-layout-row">
-            <div class="col-md-12">
-              <div class="input-group">
-                 <span  class="">Sector * </span> 
-                <div class="col-sm-12">
-                  <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Sector"id="Sector">
-                  <option value="">-- please select sector --</option>
-                  <option value="Accounting / Finance">Accounting / Finance</option>
-                  <option value="Banking & finance">Banking &amp; finance</option>
-                  <option value="General Administration">General Administration</option>
-                  <option value="Human Resources">Human Resources</option>
-                  <option value="Information Technology">Information Technology</option>
-                  <option value="Insurance">Insurance</option>
-                  <option value="ITeS & BPO">ITeS &amp; BPO</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="Sales">Sales</option>
-                  <option value="FMCG">FMCG</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Telecom">Telecom</option>
-                  <option value="Media & entertainment">Media &amp; entertainment</option>
-                  <option value="Education">Education</option>
-                  <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
-                  <option value="Consulting & VC">Consulting &amp; VC</option>
-                  <option value="Other">Other</option>
-                </select>
-                <!-- <span class="focus-border"></span> -->
-                </div>  
-              </div>
-            </div>
-            &nbsp;
-            <div class="col-md-12">
-            <div class="input-group">
-              <span  class="" >Job type * </span>
-              <div class="col-sm-12">
-                <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-1" name="Job_type"id="Job_type">
-                  <option value="">-- please select job type --</option>
-                  <option value="Full time">Full time</option>
-                  <option value="Part time">Part time</option>
-                </select>
-                <!-- <span class="focus-border"></span> -->
-                <h6 class="" style="color:#ff0000"></h6>
-                </div>
-            </div>
-          </div>
-          </div>
-          &nbsp;              
-          <div class="u-align-center u-form-group u-form-submit" style="padding: 10px">
-          <a href="" class="btn head-btn2 " style="align-center">Submit</a>
-          <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
         </div>
-        <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
-        <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
-        <input type="hidden" value="" name="recaptchaResponse">
-      </form>
-</div>
-            <!-- <div class="u-social-icons u-spacing-10 u-social-icons-1">
-          <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ecf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0ecf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
-c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d80a"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d80a"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
-c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
-c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
-c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
-c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
-          </a>
-          <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name"><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5d38"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-5d38"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
-          </a>
-        </div> -->
-      </div>
-    </section>
-    
-    
-    <!-- <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+       </div>
+     </div>
+   </div>
+</section>  
+</body>
+
+<footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
             c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
@@ -646,19 +734,13 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
             C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
-        </div> -->
-      </div><!-- </footer>
+        </div>
+      </div><!-- </footer> -->
     <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
-    </section> -->
-     <!-- Profile Icon -->
-   <!--  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-  </body>
-</html> -->
-
-<?php include "footer.php"; ?>
+    </section>
 
 <script>
 
@@ -673,4 +755,66 @@ const togglePassword = document.querySelector('#togglePassword');
     this.classList.toggle('fa-eye-slash');
 });
 
-</script> 
+</script>
+<script>
+
+const hidePassword = document.querySelector('#hidePassword');
+  const cpassword = document.querySelector('#cd_password');
+ 
+  hidePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    cpassword.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+</script>
+
+<!-- Profile Icon -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+<!-- JS here -->
+  
+    <!-- All JS Custom Plugins Link Here here -->
+      <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+
+      <!-- Jquery Mobile Menu -->
+      <script src="assets/js/jquery.slicknav.min.js"></script>
+
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/price_rangs.js"></script>
+      <!-- Date Picker -->
+      <script src="assets/js/gijgo.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+      <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+      <script src="assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+      <script src="assets/js/jquery.scrollUp.min.js"></script>
+      <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+      
+      <!-- contact js -->
+      <script src="assets/js/contact.js"></script>
+      <script src="assets/js/jquery.form.js"></script>
+      <script src="assets/js/jquery.validate.min.js"></script>
+      <script src="assets/js/mail-script.js"></script>
+      <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        
+    <!-- Jquery Plugins, main Jquery -->  
+      <script src="assets/js/plugins.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
+
+             
