@@ -384,7 +384,7 @@
                            
                         }else{
 
-                          echo "<option selected value='Select Skill'>Select Skill</option>";
+                          echo "<option selected value='Select Experience'>Select Experience</option>";
                           
                         }
                         
@@ -603,9 +603,10 @@
         <div class="u-align-left" style="width: 520px;">
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
         <h4><b><?php echo $Fullname; ?></b></h4> 
-            <p><?php echo $Skills; ?></p>
-            <p><?php echo $Email; ?></p>
-            <p><?php echo $Phone; ?></p>
+        <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
+        <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
+        <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
+        <p><?php echo $Email; ?></p>
  </a>
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
@@ -709,9 +710,10 @@
         <div class="u-align-left" style="width: 520px;">
     <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
         <h4><b><?php echo $Fullname; ?></b></h4> 
-            <p><?php echo $Skills; ?></p>
-            <p><?php echo $Email; ?></p>
-            <p><?php echo $Phone; ?></p>
+        <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
+        <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
+        <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
+        <p><?php echo $Email; ?></p>
  </a>
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
