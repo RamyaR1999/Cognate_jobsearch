@@ -44,6 +44,7 @@ if(isset($_SESSION['id'])){
            $Phone=  $row['Phone'];
            $Image=  $row['Image'];
            $City=  $row['City'];
+           $Skills=  $row['Skills'];
            $Industry=  $row['Industry'];
            $Function=  $row['Function'];
            $Education =$row['Education'];
@@ -72,6 +73,7 @@ $mail->SMTPSecure='tls';
            $Email    = $_POST['Email'];
            $Phone=  $_POST['Phone'];
            $City=  $_POST['City'];
+           $Skills=  $_POST['Skills'];
            $Industry=  $_POST['Industry'];
            $Function=  $_POST['Function'];
            $Education =$_POST['Education'];
@@ -98,7 +100,7 @@ $mail->SMTPSecure='tls';
 
         if(!empty($CV)){
               
-    $query="UPDATE users SET Fullname= '{$Fullname}', Email= '{$Email}',CV='{$CV}' WHERE id= '{$db_id}' ";  
+    $query="UPDATE users SET Fullname= '{$Fullname}', Email= '{$Email}', Skills= '{$Skills}', CV='{$CV}' WHERE id= '{$db_id}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -113,6 +115,7 @@ $mail->SMTPSecure='tls';
         $_SESSION['Email'] = $Email;
         $_SESSION['Phone'] = $Phone;
         $_SESSION['City'] = $City;
+        $_SESSION['Skills'] = $Skills;
         $_SESSION['Industry'] = $Industry;
         $_SESSION['Function'] = $Function;
         $_SESSION['Education'] = $Education;
@@ -382,7 +385,7 @@ if(!$receiver_mail->send()) {
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname = $row['Fullname'];
+           $Login_Fullname = $row['Fullname'];
       }
   }
 ?>
@@ -399,7 +402,7 @@ if(!$receiver_mail->send()) {
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -494,12 +497,12 @@ if(!$receiver_mail->send()) {
             <a class="nav-link active" id="easyA-tab" href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
            <div class="u-align-center u-form-group u-form-submit">
             <a class="nav-link" id="rsLogin-tab" href="Signin_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a>
             <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
            </div>
-            </li>
+            </li> -->
           </ul>
 
           <div class="text">Apply for this job</div><br>
@@ -518,6 +521,11 @@ if(!$receiver_mail->send()) {
 
           <span class="col-sm-3 col-form-label">Email: </span>
           <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email" required="">
+          <br>
+          <br>
+
+          <span class="col-sm-3 col-form-label">Skills: </span>
+          <input type="text" value="<?php echo $Skills; ?>" class="form-control" name="Skills" required="">
           <br>
           <br>
 
@@ -603,7 +611,7 @@ if(!$receiver_mail->send()) {
       <script src="./assets/js/bootstrap.min.js"></script>
 
       <!-- Jquery Mobile Menu -->
-      <!-- <script src="./assets/js/jquery.slicknav.min.js"></script> -->
+      <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->

@@ -293,14 +293,20 @@
 
     <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Fullname'] ?></h1>
-        <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <h1 class="u-text u-text-1"><?php echo $Fullname; ?></h1>
+
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
           </div>
           
-<center><img class="" style="width:280px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+<center><img class="" style="width:140px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
             <center>
 
               <!-- <button type="button" class="btn btn-primary" style="width:120px; height: 40px; background-color: #f3f5f6 ;" name="submit"><a href="edit_profile.php">Edit Profile</a></button> -->
@@ -330,11 +336,11 @@
                     <span style="font-weight: 700;">Experience:</span>
                     <br><label class="" for="title"><?php echo $Experience_years;?> <?php echo $Experience_months;?></label><br>
 
-                    <span style="font-weight: 700;">Industry:</span>
+                   <!--  <span style="font-weight: 700;">Industry:</span>
                     <br><label class="" for="title"><?php echo $Industry ?></label><br>
 
                     <span style="font-weight: 700;">Function:</span>
-                    <br><label class="" for="title"><?php echo $Function ?></label><br>
+                    <br><label class="" for="title"><?php echo $Function ?></label><br> -->
 
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>

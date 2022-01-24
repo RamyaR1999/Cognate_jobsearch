@@ -379,20 +379,21 @@ if(isset($_SESSION['id'])){
 
      <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_83e4">
       <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
-       <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
+       <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> --><br>
+        <br>
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Fullname'] ?></h1>
+        <h1 class="u-text u-text-1"><?php echo $Fullname; ?></h1>
         <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
 
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-          <center><img class="" style="width:280px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+          <center><img class="" style="width:140px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-container-layout-3">
-                  <h3 class="u-text u-text-default u-text-6">Details</h3>
+                  <h3 class="u-text u-text-default u-text-6">Update your Profile</h3>
                   <p class="u-text u-text-7">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Profile: </span>
@@ -405,7 +406,7 @@ if(isset($_SESSION['id'])){
                            <input type="file" name="file">
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
@@ -416,9 +417,7 @@ if(isset($_SESSION['id'])){
                            </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
+                 <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
                          <div class="col-sm-12">
@@ -427,6 +426,8 @@ if(isset($_SESSION['id'])){
                            </div>
                     </div>
                  </div>
+              </div>
+              <div class="row">
                  <div class="col-md-6">
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Mobile: </span>
@@ -436,9 +437,8 @@ if(isset($_SESSION['id'])){
                           </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
+              
+              <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Education: </span>
                          <div class="col-sm-12">
@@ -483,6 +483,8 @@ if(isset($_SESSION['id'])){
                         </div>
                     </div>
                  </div>
+                 </div>
+              <div class="row">
                  <div class="col-md-6">
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">City: </span>
@@ -525,13 +527,53 @@ if(isset($_SESSION['id'])){
                           </div>
                     </div>
                  </div>
+                 <div class="col-md-6">
+                    <div class="form-group row">
+                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
+                         <div class="col-sm-12">
+                             <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
+                            <select type="text" class="form-control" name="Experience_years" id="Experience_years">
+                          <option value="<?php echo $Experience_years; ?>">
+                          <?php 
+
+                              if(!empty($Experience_years)){
+
+                               echo $Experience_years; 
+                               
+                               }else{
+
+                          ?> Experience in years <?php } ?>
+                          <option value="0 years">0</option>
+                          <option value="1 year">1</option>
+                          <option value="2 years">2</option>
+                          <option value="3 years">3</option>
+                          <option value="4 years">4</option>
+                          <option value="5 years">5</option>
+                          <option value="6 years">6</option>
+                          <option value="7 years">7</option>
+                          <option value="8 years">8</option>
+                          <option value="9 years">9</option>
+                          <option value="10 years">10</option>
+                          <option value="11 years">11</option>
+                          <option value="12 years">12</option>
+                          <option value="13 years">13</option>
+                          <option value="14 years">14</option>
+                          <option value="15 years">15</option>
+                          <option value="16 years">16</option>
+                          <option value="17 years">17</option>
+                          <option value="18 years">18</option>
+                          <option value="19 years">19</option>
+                          <option value="20 years">20</option>
+                        </select>
+                        </div>
+                    </div>
+                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Industry: </span>
                          <div class="col-sm-12">
-                          <!-- <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry"> -->
                           <select type="text" class="form-control" name="Industry"id="Industry">
               
                           <option value="<?php echo $Industry; ?>">
@@ -570,7 +612,6 @@ if(isset($_SESSION['id'])){
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Function: </span>
                           <div class="col-sm-12">
-                             <!-- <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function"> -->
             <select type="text" class="form-control" name="Function" id="Function">
             <option value="<?php echo $Function; ?>">
             <?php 
@@ -622,51 +663,11 @@ if(isset($_SESSION['id'])){
                           </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group row">
-                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
-                         <div class="col-sm-12">
-                             <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
-                            <select type="text" class="form-control" name="Experience_years" id="Experience_years">
-                          <option value="<?php echo $Experience_years; ?>">
-                          <?php 
-
-                              if(!empty($Experience_years)){
-
-                               echo $Experience_years; 
-                               
-                               }else{
-
-                          ?> years of experience <?php } ?>
-                          <option value="0 years">0</option>
-                          <option value="1 year">1</option>
-                          <option value="2 years">2</option>
-                          <option value="3 years">3</option>
-                          <option value="4 years">4</option>
-                          <option value="5 years">5</option>
-                          <option value="6 years">6</option>
-                          <option value="7 years">7</option>
-                          <option value="8 years">8</option>
-                          <option value="9 years">9</option>
-                          <option value="10 years">10</option>
-                          <option value="11 years">11</option>
-                          <option value="12 years">12</option>
-                          <option value="13 years">13</option>
-                          <option value="14 years">14</option>
-                          <option value="15 years">15</option>
-                          <option value="16 years">16</option>
-                          <option value="17 years">17</option>
-                          <option value="18 years">18</option>
-                          <option value="19 years">19</option>
-                          <option value="20 years">20</option>
-                        </select>
-                        </div>
-                    </div>
-                 </div>
+              </div> -->
+              <!-- <div class="row"> -->
+                  
                
-               <div class="col-md-6">
+               <!-- <div class="col-md-6">
                 <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
                          <div class="col-sm-12">
@@ -716,8 +717,8 @@ if(isset($_SESSION['id'])){
                         </select>
                         </div>
                     </div>
-                 </div>
-               </div>
+                 </div> -->
+               <!-- </div> -->
 
                <div class="row">
                   <div class="col-md-6">
@@ -771,7 +772,7 @@ if(isset($_SESSION['id'])){
                     </div>
                  </div>
                
-               <div class="col-md-6">
+               <!-- <div class="col-md-6">
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
@@ -820,10 +821,10 @@ if(isset($_SESSION['id'])){
                         </select>
                           </div>
                     </div>
-                 </div>
-               </div>
+                 </div> -->
+               <!-- </div>
 
-               <div class="row">
+               <div class="row"> -->
                   <div class="col-md-6">
                     <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
@@ -875,7 +876,7 @@ if(isset($_SESSION['id'])){
                     </div>
                  </div>
                
-               <div class="col-md-6">
+               <!-- <div class="col-md-6">
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
                      <div class="col-sm-12">
@@ -924,7 +925,7 @@ if(isset($_SESSION['id'])){
                         </select>
                           </div>
                     </div>
-                 </div>
+                 </div> -->
                </div>
 
 

@@ -44,7 +44,7 @@
         
         if($Email === $db_Email){
         if($Password === $db_Password){
-        // if($db_email_status === 'Verified'){
+        if($db_email_status === 'Verified'){
      
              $_SESSION['id'] = $db_id;
              $_SESSION['Fullname'] = $db_Fullname;
@@ -59,16 +59,17 @@
              $_SESSION['Experience'] = $db_Experience;
              $_SESSION['Salary'] = $db_Salary;
              $_SESSION['CV'] = $db_CV;
+             $_SESSION['Email_status'] = $db_email_status;
              $_SESSION['Phone'] = $db_Phone;
              $_SESSION['User_type'] = $db_user_type;
              
 
              header("Location:Job_seeker.php");
 
-        // }else{
+        }else{
             
-        //     $message_emailstatus = "Your email is not verified, first verify your email";
-        // }
+            $message_emailstatus = "Your email is not verified, first verify your email";
+        }
            
         }else{
             

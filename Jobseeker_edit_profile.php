@@ -87,13 +87,6 @@ if(isset($_GET['profile'])){
        
         if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
          
-        $uppercase = preg_match('@[A-Z]@', $Password);
-        $lowercase = preg_match('@[a-z]@', $Password);
-        $number    = preg_match('@[0-9]@', $Password);
-        $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
-            
-
-        if(strlen($Password) >= 8) { 
               
     $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";  
                       
@@ -105,11 +98,6 @@ if(isset($_GET['profile'])){
         }           
           
            header("Location:Jobseeker_full_profile.php?profile=$id"); 
-
-         }else{
-              $message_strnpassworad = "password contain atleast 8 characters";
-              
-       }
 
           }else{
               $message_Fullname ="Only Alphabets are allowed in Fullname";
@@ -286,7 +274,7 @@ if(isset($_GET['profile'])){
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -303,7 +291,7 @@ if(isset($_GET['profile'])){
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -382,18 +370,17 @@ if(isset($_GET['profile'])){
       <form action="" autocomplete="off" method="post" enctype="multipart/form-data">
        <!-- <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 50px;" redirect="true"> -->
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-1"><?php echo $_SESSION['Fullname'] ?></h1>
-        <!-- <p class="u-large-text u-text u-text-variant u-text-2">I'm a creative graphic designer</p> -->
+        <h1 class="u-text u-text-1"><?php echo $Fullname ?></h1>
 
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
-          <center><img class="" style="width:280px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+          <center><img class="" style="width:140px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-col">
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-container-layout-3">
-                  <h3 class="u-text u-text-default u-text-6">Details</h3>
+                  <h3 class="u-text u-text-default u-text-6">Update your Profile</h3>
                   <p class="u-text u-text-7">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <div class="form-group row">
                          <span style="font-weight: 600;"class="col-sm-3 col-form-label">Profile: </span>
@@ -406,7 +393,7 @@ if(isset($_GET['profile'])){
                            <input type="file" name="file">
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
@@ -417,8 +404,6 @@ if(isset($_GET['profile'])){
                            </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Email: </span>
@@ -428,6 +413,8 @@ if(isset($_GET['profile'])){
                            </div>
                     </div>
                  </div>
+                </div>
+                 <div class="row">
                  <div class="col-md-6">
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">Mobile: </span>
@@ -437,8 +424,6 @@ if(isset($_GET['profile'])){
                           </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
                   <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Education: </span>
@@ -484,6 +469,8 @@ if(isset($_GET['profile'])){
                         </div>
                     </div>
                  </div>
+            </div>
+              <div class="row">
                  <div class="col-md-6">
                     <div class="form-group row">
                        <span style="font-weight: 600;" class="col-sm-3 col-form-label">City: </span>
@@ -526,110 +513,10 @@ if(isset($_GET['profile'])){
                           </div>
                     </div>
                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group row">
-                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Industry: </span>
-                         <div class="col-sm-12">
-                          <!-- <input type="text" value="<?php echo $Industry; ?>" class="form-control" name="Industry"> -->
-                          <select type="text" class="form-control" name="Industry"id="Industry">
-              
-                          <option value="<?php echo $Industry; ?>">
-                           <?php 
-
-                                  if(!empty($Industry)){
-
-                                   echo $Industry; 
-                                   
-                                   }else{
-
-                            ?> -- please select Industry -- <?php } ?>
-                          <option value="Accounting / Finance">Accounting / Finance</option>
-                          <option value="Banking & finance">Banking &amp; finance</option>
-                          <option value="General Administration">General Administration</option>
-                          <option value="Human Resources">Human Resources</option>
-                          <option value="Information Technology">Information Technology</option>
-                          <option value="Insurance">Insurance</option>
-                          <option value="ITeS & BPO">ITeS &amp; BPO</option>
-                          <option value="Manufacturing">Manufacturing</option>
-                          <option value="Sales">Sales</option>
-                          <option value="FMCG">FMCG</option>
-                          <option value="Retail">Retail</option>
-                          <option value="Telecom">Telecom</option>
-                          <option value="Media & entertainment">Media &amp; entertainment</option>
-                          <option value="Education">Education</option>
-                          <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
-                          <option value="Consulting & VC">Consulting &amp; VC</option>
-                          <option value="Other">Other</option>
-                          </select>
-
-                        </div>
-                    </div>
-                 </div>
                  <div class="col-md-6">
-                    <div class="form-group row">
-                       <span style="font-weight: 600;" class="col-sm-3 col-form-label">Function: </span>
-                          <div class="col-sm-12">
-                             <!-- <input type="text" value="<?php echo $Function; ?>" class="form-control" name="Function"> -->
-            <select type="text" class="form-control" name="Function" id="Function">
-            <option value="<?php echo $Function; ?>">
-              <?php 
-
-                  if(!empty($Function)){
-
-                   echo $Function; 
-                   
-                   }else{
-
-            ?> -- please select function -- <?php } ?>
-            <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
-            <option value="Agent">Agent</option>
-            <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
-            <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
-            <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
-            <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch</option>
-            <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
-            <option value="Banking / Insurance">Banking / Insurance</option>
-            <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
-            <option value="Content / Journalism">Content / Journalism</option>
-            <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
-            <option value="CSR & Sustainability">CSR &amp; Sustainability</option>
-            <option value="Engineering Design / R&D">Engineering Design / R&D</option>
-            <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
-            <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
-            <option value="Guards / Security Services">Guards / Security Services</option>
-            <option value="Hotels / Restaurants">Hotels / Restaurants</option>
-            <option value="HR / Administration / IR">HR / Administration / IR</option>
-            <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
-            <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
-            <option value="IT Software - Client Server">IT Software - Client Server</option>
-            <option value="IT Software - DBA / Data warehousing">IT Software - DBA / Datawarehousing</option>
-            <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
-            <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
-            <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
-            <option value="IT Software - Mainframe">IT Software - Mainframe</option>
-            <option value="IT Software - Middleware">IT Software - Middleware</option>
-            <option value="IT Software - Mobile">IT Software - Mobile</option>
-            <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
-            <option value="IT Software - QA & Testing">IT Software - QA & Testing</option>
-            <option value="IT Software - System Programming">IT Software - System Programming</option>
-            <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
-            <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
-            <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
-            <option value="Other">Other</option>
-            </select>
-                             
-                          </div>
-                    </div>
-                 </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
                     <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
                          <div class="col-sm-12">
-                             <!-- <input type="text" value="<?php echo $Experience; ?>" class="form-control" name="Experience_years"> -->
                             <select type="text" class="form-control" name="Experience_years" id="Experience_years">
                           <option value="<?php echo $Experience_years; ?>">
                            <?php 
@@ -667,7 +554,209 @@ if(isset($_GET['profile'])){
                         </div>
                     </div>
                  </div>
-               
+              </div>
+
+              <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                     <div class="col-sm-12">
+                      <select type="text" id="myInput" class="form-control" name="Current_Salary_lakhs" id="Current_Salary_lakhs">
+                                    <option value="<?php echo $Current_Salary_lakhs; ?>">
+                                     <?php 
+
+                                          if(!empty($Current_Salary_lakhs)){
+
+                                           echo $Current_Salary_lakhs; 
+                                           
+                                           }else{
+
+                                        ?> lakhs  <?php } ?> 
+                                    </option>
+                                    <option value="0 lakhs">0</option>
+                                    <option value="1 lakhs">1</option>
+                                    <option value="2 lakhs">2</option>
+                                    <option value="3 lakhs">3</option>
+                                    <option value="4 lakhs">4</option>
+                                    <option value="5 lakhs">5</option>
+                                    <option value="6 lakhs">6</option>
+                                    <option value="7 lakhs">7</option>
+                                    <option value="8 lakhs">8</option>
+                                    <option value="9 lakhs">9</option>
+                                    <option value="10 lakhs">10</option>
+                                    <option value="11 lakhs">11</option>
+                                    <option value="12 lakhs">12</option>
+                                    <option value="13 lakhs">13</option>
+                                    <option value="14 lakhs">14</option>
+                                    <option value="15 lakhs">15</option>
+                                    <option value="16 lakhs">16</option>
+                                    <option value="17 lakhs">17</option>
+                                    <option value="18 lakhs">18</option>
+                                    <option value="19 lakhs">19</option>
+                                    <option value="20 lakhs">20</option>
+                                    <option value="21 lakhs">21</option>
+                                    <option value="22 lakhs">22</option>
+                                    <option value="23 lakhs">23</option>
+                                    <option value="24 lakhs">24</option>
+                                    <option value="25 lakhs">25</option>
+                                    <option value="26 lakhs">26</option>
+                                    <option value="27 lakhs">27</option>
+                                    <option value="28 lakhs">28</option>
+                                    <option value="29 lakhs">29</option>
+                                    <option value="30 lakhs">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+               <div class="col-md-6">
+                    <div class="form-group row">
+                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
+                     <div class="col-sm-12">
+                      <select type="text" class="form-control" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
+                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">
+                                    <?php 
+
+                                      if(!empty($Expected_Salary_lakhs)){
+
+                                       echo $Expected_Salary_lakhs; 
+                                       
+                                       }else{
+
+                                    ?> lakhs  <?php } ?> 
+                                  </option>
+                                    <option value="0 lakhs">0</option>
+                                    <option value="1 lakhs">1</option>
+                                    <option value="2 lakhs">2</option>
+                                    <option value="3 lakhs">3</option>
+                                    <option value="4 lakhs">4</option>
+                                    <option value="5 lakhs">5</option>
+                                    <option value="6 lakhs">6</option>
+                                    <option value="7 lakhs">7</option>
+                                    <option value="8 lakhs">8</option>
+                                    <option value="9 lakhs">9</option>
+                                    <option value="10 lakhs">10</option>
+                                    <option value="11 lakhs">11</option>
+                                    <option value="12 lakhs">12</option>
+                                    <option value="13 lakhs">13</option>
+                                    <option value="14 lakhs">14</option>
+                                    <option value="15 lakhs">15</option>
+                                    <option value="16 lakhs">16</option>
+                                    <option value="17 lakhs">17</option>
+                                    <option value="18 lakhs">18</option>
+                                    <option value="19 lakhs">19</option>
+                                    <option value="20 lakhs">20</option>
+                                    <option value="21 lakhs">21</option>
+                                    <option value="22 lakhs">22</option>
+                                    <option value="23 lakhs">23</option>
+                                    <option value="24 lakhs">24</option>
+                                    <option value="25 lakhs">25</option>
+                                    <option value="26 lakhs">26</option>
+                                    <option value="27 lakhs">27</option>
+                                    <option value="28 lakhs">28</option>
+                                    <option value="29 lakhs">29</option>
+                                    <option value="30 lakhs">30</option>  
+                        </select>
+                          </div>
+                    </div>
+                 </div>
+               </div>
+
+              <!-- <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <span style="font-weight: 600;"class="col-sm-3 col-form-label">Industry: </span>
+                         <div class="col-sm-12">
+                          <select type="text" class="form-control" name="Industry"id="Industry">
+              
+                          <option value="<?php echo $Industry; ?>">
+                           <?php 
+
+                                  if(!empty($Industry)){
+
+                                   echo $Industry; 
+                                   
+                                   }else{
+
+                            ?> -- please select Industry -- <?php } ?>
+                          <option value="Accounting / Finance">Accounting / Finance</option>
+                          <option value="Banking & finance">Banking &amp; finance</option>
+                          <option value="General Administration">General Administration</option>
+                          <option value="Human Resources">Human Resources</option>
+                          <option value="Information Technology">Information Technology</option>
+                          <option value="Insurance">Insurance</option>
+                          <option value="ITeS & BPO">ITeS &amp; BPO</option>
+                          <option value="Manufacturing">Manufacturing</option>
+                          <option value="Sales">Sales</option>
+                          <option value="FMCG">FMCG</option>
+                          <option value="Retail">Retail</option>
+                          <option value="Telecom">Telecom</option>
+                          <option value="Media & entertainment">Media &amp; entertainment</option>
+                          <option value="Education">Education</option>
+                          <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
+                          <option value="Consulting & VC">Consulting &amp; VC</option>
+                          <option value="Other">Other</option>
+                          </select>
+
+                        </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group row">
+                       <span style="font-weight: 600;" class="col-sm-3 col-form-label">Function: </span>
+                <div class="col-sm-12">
+                        <select type="text" class="form-control" name="Function" id="Function">
+                        <option value="<?php echo $Function; ?>">
+                          <?php 
+
+                              if(!empty($Function)){
+
+                               echo $Function; 
+                               
+                               }else{
+
+                        ?> -- please select function -- <?php } ?>
+                        <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
+                        <option value="Agent">Agent</option>
+                        <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
+                        <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
+                        <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
+                        <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch</option>
+                        <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
+                        <option value="Banking / Insurance">Banking / Insurance</option>
+                        <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
+                        <option value="Content / Journalism">Content / Journalism</option>
+                        <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
+                        <option value="CSR & Sustainability">CSR &amp; Sustainability</option>
+                        <option value="Engineering Design / R&D">Engineering Design / R&D</option>
+                        <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
+                        <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
+                        <option value="Guards / Security Services">Guards / Security Services</option>
+                        <option value="Hotels / Restaurants">Hotels / Restaurants</option>
+                        <option value="HR / Administration / IR">HR / Administration / IR</option>
+                        <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
+                        <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
+                        <option value="IT Software - Client Server">IT Software - Client Server</option>
+                        <option value="IT Software - DBA / Data warehousing">IT Software - DBA / Datawarehousing</option>
+                        <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
+                        <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
+                        <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
+                        <option value="IT Software - Mainframe">IT Software - Mainframe</option>
+                        <option value="IT Software - Middleware">IT Software - Middleware</option>
+                        <option value="IT Software - Mobile">IT Software - Mobile</option>
+                        <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
+                        <option value="IT Software - QA & Testing">IT Software - QA & Testing</option>
+                        <option value="IT Software - System Programming">IT Software - System Programming</option>
+                        <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
+                        <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
+                        <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
+                        <option value="Other">Other</option>
+                        </select>
+                             
+                    </div>
+                </div>
+              </div>
+            </div> -->
+              <!-- div class="row">  
                <div class="col-md-6">
                 <div class="form-group row">
                       <span style="font-weight: 600;"class="col-sm-3 col-form-label">Experience</span>
@@ -720,62 +809,12 @@ if(isset($_GET['profile'])){
                         </div>
                     </div>
                  </div>
-               </div>
+               </div> -->
 
-               <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group row">
-                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                     <div class="col-sm-12">
-                      <select type="text" id="myInput" class="form-control" name="Current_Salary_lakhs" id="Current_Salary_lakhs">
-                                    <option value="<?php echo $Current_Salary_lakhs; ?>">
-                                     <?php 
-
-                                          if(!empty($Current_Salary_lakhs)){
-
-                                           echo $Current_Salary_lakhs; 
-                                           
-                                           }else{
-
-                                        ?> lakhs  <?php } ?> 
-                                    </option>
-                                    <option value="0 lakhs">0</option>
-                                    <option value="1 lakhs">1</option>
-                                    <option value="2 lakhs">2</option>
-                                    <option value="3 lakhs">3</option>
-                                    <option value="4 lakhs">4</option>
-                                    <option value="5 lakhs">5</option>
-                                    <option value="6 lakhs">6</option>
-                                    <option value="7 lakhs">7</option>
-                                    <option value="8 lakhs">8</option>
-                                    <option value="9 lakhs">9</option>
-                                    <option value="10 lakhs">10</option>
-                                    <option value="11 lakhs">11</option>
-                                    <option value="12 lakhs">12</option>
-                                    <option value="13 lakhs">13</option>
-                                    <option value="14 lakhs">14</option>
-                                    <option value="15 lakhs">15</option>
-                                    <option value="16 lakhs">16</option>
-                                    <option value="17 lakhs">17</option>
-                                    <option value="18 lakhs">18</option>
-                                    <option value="19 lakhs">19</option>
-                                    <option value="20 lakhs">20</option>
-                                    <option value="21 lakhs">21</option>
-                                    <option value="22 lakhs">22</option>
-                                    <option value="23 lakhs">23</option>
-                                    <option value="24 lakhs">24</option>
-                                    <option value="25 lakhs">25</option>
-                                    <option value="26 lakhs">26</option>
-                                    <option value="27 lakhs">27</option>
-                                    <option value="28 lakhs">28</option>
-                                    <option value="29 lakhs">29</option>
-                                    <option value="30 lakhs">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
                
-               <div class="col-md-6">
+
+               <!-- <div class="row">
+                 <div class="col-md-6">
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Current CTC:&nbsp;&nbsp;&nbsp;&nbsp; </span>
                      <div class="col-sm-12">
@@ -826,61 +865,6 @@ if(isset($_GET['profile'])){
                           </div>
                     </div>
                  </div>
-               </div>
-
-               <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group row">
-                  <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
-                     <div class="col-sm-12">
-                      <select type="text" class="form-control" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                                    <option value="<?php echo $Expected_Salary_lakhs; ?>">
-                                    <?php 
-
-                                      if(!empty($Expected_Salary_lakhs)){
-
-                                       echo $Expected_Salary_lakhs; 
-                                       
-                                       }else{
-
-                                    ?> lakhs  <?php } ?> 
-                                  </option>
-                                    <option value="0 lakhs">0</option>
-                                    <option value="1 lakhs">1</option>
-                                    <option value="2 lakhs">2</option>
-                                    <option value="3 lakhs">3</option>
-                                    <option value="4 lakhs">4</option>
-                                    <option value="5 lakhs">5</option>
-                                    <option value="6 lakhs">6</option>
-                                    <option value="7 lakhs">7</option>
-                                    <option value="8 lakhs">8</option>
-                                    <option value="9 lakhs">9</option>
-                                    <option value="10 lakhs">10</option>
-                                    <option value="11 lakhs">11</option>
-                                    <option value="12 lakhs">12</option>
-                                    <option value="13 lakhs">13</option>
-                                    <option value="14 lakhs">14</option>
-                                    <option value="15 lakhs">15</option>
-                                    <option value="16 lakhs">16</option>
-                                    <option value="17 lakhs">17</option>
-                                    <option value="18 lakhs">18</option>
-                                    <option value="19 lakhs">19</option>
-                                    <option value="20 lakhs">20</option>
-                                    <option value="21 lakhs">21</option>
-                                    <option value="22 lakhs">22</option>
-                                    <option value="23 lakhs">23</option>
-                                    <option value="24 lakhs">24</option>
-                                    <option value="25 lakhs">25</option>
-                                    <option value="26 lakhs">26</option>
-                                    <option value="27 lakhs">27</option>
-                                    <option value="28 lakhs">28</option>
-                                    <option value="29 lakhs">29</option>
-                                    <option value="30 lakhs">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-               
                <div class="col-md-6">
                 <div class="form-group row">
                   <span style="font-weight: 600;" class="col-sm-6 col-form-label">Expected CTC: </span>
@@ -934,7 +918,7 @@ if(isset($_GET['profile'])){
                           </div>
                     </div>
                  </div>
-               </div>
+               </div> -->
 
 
          <div class="input-group-btn">

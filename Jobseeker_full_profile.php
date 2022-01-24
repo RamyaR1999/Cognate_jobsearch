@@ -317,7 +317,7 @@
             <div class="u-layout-col">
           </div>
           <br>
-<center><img class="" style="width:300px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
+<center><img class="" style="width:140px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt=""></center><br>
 
       <?php if($_SESSION['Email'] == $Email || $_SESSION['User_type'] == 'Admin'){
         
@@ -353,11 +353,11 @@
                     <span style="font-weight: 700;">Experience:</span>
                     <br><label class="" for="title"><?php echo $Experience_years;?> <?php echo $Experience_months;?></label><br>
 
-                    <span style="font-weight: 700;">Industry:</span>
+                   <!--  <span style="font-weight: 700;">Industry:</span>
                     <br><label class="" for="title"><?php echo $Industry ?></label><br>
 
                     <span style="font-weight: 700;">Function:</span>
-                    <br><label class="" for="title"><?php echo $Function ?></label><br>
+                    <br><label class="" for="title"><?php echo $Function ?></label><br> -->
 
                     <span style="font-weight: 700;">Current CTC:</span>
                     <br><label class="" for="title"><?php echo $Current_Salary_lakhs ?> <?php echo $Current_Salary_thousand ?></label><br>
@@ -368,7 +368,7 @@
                     <span style="font-weight: 700;">Location:</span>
                     <br><label class="" for="title"><?php echo $City ?></label><br>
 
-                    <iframe src="https://docs.google.com/gview?url=http://localhost:81/Cognate_jobsearch/cv/Thennarasan_CV_updated.docx&embedded=true" width="90%" height="700px"></iframe>
+            <iframe src="https://docs.google.com/gview?url=http://localhost:8888/Billing/Code/Cognate_jobsearch/cv/<?php echo $CV ?>&embedded=true" width="90%" height="700px"></iframe>
                     
                   </p>
                   <?php 

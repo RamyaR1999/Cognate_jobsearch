@@ -18,8 +18,7 @@
          $Phone=  $_POST['Phone'];
          $Company_name=  $_POST['Company_name'];
 
-         // $Job_posted = date('d-m-Y');
-         // $Job_posted = "2021-12-03";
+         $Job_posted = date('d M Y');
 
          $error = 0;
 
@@ -46,8 +45,8 @@
         // }else {
 
         
-        $query = "INSERT INTO jobs (Job_title,Location,Location_country,Service,Sector,Skills,Job_description,Job_type,Fullname,Email,Company_name,Phone) ";
-        $query .= "VALUES ('{$Job_title}','{$Location}','{$Location_country}','{$Service}','{$Sector}','{$Skills}','{$Job_description}','{$Job_type}','{$Fullname}','{$Email}','Cognate Global Business Solutions PRIVATE LIMITED','{$Phone}')";
+        $query = "INSERT INTO jobs (Job_title,Location,Location_country,Service,Sector,Skills,Job_description,Job_type,Job_posted,Fullname,Email,Company_name,Phone) ";
+        $query .= "VALUES ('{$Job_title}','{$Location}','{$Location_country}','{$Service}','{$Sector}','{$Skills}','{$Job_description}','{$Job_type}','{$Job_posted}','{$Fullname}','{$Email}','Cognate Global Business Solutions PRIVATE LIMITED','{$Phone}')";
              
         $jobs_query = mysqli_query($connection,$query);
 
@@ -273,7 +272,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -290,7 +289,7 @@
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
