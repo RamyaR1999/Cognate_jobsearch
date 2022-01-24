@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 22, 2022 at 08:39 AM
+-- Generation Time: Jan 24, 2022 at 07:02 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -219,6 +219,262 @@ INSERT INTO `jobs` (`id`, `Fullname`, `Company_name`, `Job_title`, `Job_posted`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `location_india`
+--
+
+CREATE TABLE `location_india` (
+  `id` int(40) NOT NULL,
+  `Location_india` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `location_india`
+--
+
+INSERT INTO `location_india` (`id`, `Location_india`) VALUES
+(1, 'Ahmedabad'),
+(2, 'Baroda'),
+(3, 'Bangalore'),
+(4, 'Bhubaneswar'),
+(5, 'Chandigarh'),
+(6, 'Chennai'),
+(7, 'Cochin'),
+(8, 'Coimbatore'),
+(9, 'Gurgaon'),
+(10, 'Guwahat'),
+(11, 'Hubli'),
+(12, 'Hyderabad'),
+(13, 'Indore'),
+(14, 'Jaipur'),
+(15, 'Jamshedpur'),
+(16, 'Karnataka'),
+(17, 'Kolkata'),
+(18, 'Lucknow'),
+(19, 'Madurai'),
+(20, 'Mangalore'),
+(21, 'Mumbai'),
+(22, 'Nagpur'),
+(23, 'New Delhi'),
+(24, 'Patna'),
+(25, 'Pune'),
+(26, 'Rajkot'),
+(27, 'Surat'),
+(28, 'Trivandrum'),
+(29, 'Visakapatnam');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `location_uk`
+--
+
+CREATE TABLE `location_uk` (
+  `id` int(11) NOT NULL,
+  `Location_UK` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `location_uk`
+--
+
+INSERT INTO `location_uk` (`id`, `Location_UK`) VALUES
+(1, 'Aberconwy and Colwyn'),
+(2, 'Aberdeen City'),
+(3, 'Aberdeenshire'),
+(4, 'Anglesey'),
+(5, 'Angus'),
+(6, 'Antrim'),
+(7, 'England'),
+(8, 'Argyll and Bute'),
+(9, 'Armagh'),
+(10, 'Avon'),
+(11, 'Ayrshire'),
+(12, 'Bath and NE Somerset'),
+(13, 'Bedfordshire'),
+(14, 'Belfast'),
+(15, 'Berkshire'),
+(16, 'Berwickshire'),
+(17, 'BFPO'),
+(18, 'Blaenau Gwent'),
+(19, 'Buckinghamshire'),
+(20, 'Caernarfonshire'),
+(21, 'Caerphilly'),
+(22, 'Caithness'),
+(23, 'Cambridgeshire'),
+(24, 'Cardiff'),
+(25, 'Cardiganshire'),
+(26, 'Ceredigion'),
+(27, 'Channel Islands'),
+(28, 'Cheshire'),
+(29, 'City of Bristol'),
+(30, 'Clackmannanshire'),
+(31, 'Clwyd'),
+(32, 'Conwy'),
+(33, 'Cornwall/Scilly'),
+(34, 'Cumbria'),
+(35, 'Denbighshire'),
+(36, '	\r\nDerbyshire'),
+(37, 'Derry/Londonderry'),
+(38, 'Devon'),
+(39, 'Dorset'),
+(40, 'Down'),
+(41, 'Dumfries and Galloway'),
+(42, 'Dunbartonshire'),
+(43, 'Dundee'),
+(44, 'Durham'),
+(45, 'Dyfed'),
+(46, 'East Ayrshire'),
+(47, '	\r\nEast Dunbartonshire'),
+(48, '	\r\nEast Lothian'),
+(49, 'East Renfrewshire'),
+(50, 'East Riding Yorkshire'),
+(51, 'East Sussex'),
+(52, 'Edinburgh'),
+(53, 'England'),
+(54, 'Essex'),
+(55, 'Falkirk'),
+(56, 'Fermanagh'),
+(57, 'Fife'),
+(58, 'Flintshire'),
+(59, 'Glasgow'),
+(60, 'Gloucestershire'),
+(61, 'Greater London'),
+(62, 'Greater Manchester'),
+(63, 'Gwent'),
+(64, 'Gwynedd'),
+(65, 'Hampshire'),
+(66, 'Hartlepool'),
+(67, 'Hereford and Worcester'),
+(68, 'Hertfordshire'),
+(69, 'Highlands'),
+(70, 'Inverclyde'),
+(71, 'Inverness-Shire'),
+(72, 'Isle of Man\r\n'),
+(73, 'Isle of Wight'),
+(74, 'Kent'),
+(75, 'Kincardinshire'),
+(76, 'Kincardinshire'),
+(77, 'Kinross-Shire'),
+(78, 'Kirklees'),
+(79, 'Lanarkshire'),
+(80, 'Lancashire'),
+(81, 'Leicestershire'),
+(82, 'Lincolnshire'),
+(83, 'Londonderry'),
+(84, 'Londonderry'),
+(85, 'Merthyr Tydfil'),
+(86, 'Mid Glamorgan'),
+(87, 'Mid Glamorgan'),
+(88, 'Middlesex'),
+(89, 'Monmouthshire'),
+(90, 'Moray'),
+(91, 'Neath & Port Talbot'),
+(92, 'Newport'),
+(93, 'Norfolk'),
+(94, 'North Ayrshire'),
+(95, 'North East Lincolnshire'),
+(96, 'North Lanarkshire'),
+(97, 'North Lincolnshire'),
+(98, 'North Somerset'),
+(99, 'North Yorkshire'),
+(100, 'Northamptonshire'),
+(101, 'Northern Ireland'),
+(102, 'Northumberland'),
+(103, 'Nottinghamshire'),
+(104, 'Orkney and Shetland Isles'),
+(105, 'Oxfordshire'),
+(106, 'Pembrokeshire'),
+(107, 'Perth and Kinross'),
+(108, 'Powys\r\n\r\n'),
+(109, 'Redcar and Cleveland'),
+(110, 'Renfrewshire'),
+(111, 'Rhonda Cynon Taff'),
+(112, 'Rutland'),
+(113, 'Scottish Borders'),
+(114, 'Shetland'),
+(115, 'Shropshire'),
+(116, 'Somerset'),
+(117, 'South Ayrshire'),
+(118, 'South Glamorgan'),
+(119, 'South Gloucesteshire'),
+(120, 'South Lanarkshire'),
+(121, 'South Yorkshire'),
+(122, 'Staffordshire'),
+(123, 'Stirling'),
+(124, 'Stockton On Tees'),
+(125, 'Suffolk'),
+(126, 'Surrey'),
+(127, 'Swansea'),
+(128, 'Torfaen'),
+(129, 'Tyne and Wear'),
+(130, 'Tyrone'),
+(131, 'Vale Of Glamorgan'),
+(132, 'Wales'),
+(133, 'Warwickshire'),
+(134, 'West Berkshire'),
+(135, 'West Dunbartonshire'),
+(136, 'West Glamorgan'),
+(137, 'West Lothian'),
+(138, 'West Midlands'),
+(139, 'West Sussex'),
+(140, 'West Yorkshire'),
+(141, 'Western Isles'),
+(142, 'Wiltshire'),
+(143, 'Wirral'),
+(144, 'Worcestershire'),
+(145, 'Wrexham'),
+(146, 'York');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `location_us`
+--
+
+CREATE TABLE `location_us` (
+  `id` int(40) NOT NULL,
+  `Location_US` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `location_us`
+--
+
+INSERT INTO `location_us` (`id`, `Location_US`) VALUES
+(1, 'Alabama'),
+(2, 'Alaska'),
+(3, 'Arizona'),
+(4, 'Arkansas'),
+(5, 'California'),
+(6, 'Colorado'),
+(7, 'Connecticut'),
+(8, 'Delaware'),
+(9, 'Florida'),
+(10, 'Georgia '),
+(11, 'Hawaii'),
+(12, 'Idaho'),
+(13, 'Illinois'),
+(14, 'Indiana'),
+(15, 'Iowa'),
+(16, 'Kansas'),
+(17, 'Kentucky'),
+(18, 'Louisiana'),
+(19, 'Maine'),
+(20, 'Maryland'),
+(21, 'Massachusetts'),
+(22, 'Michigan'),
+(23, 'Minnesota'),
+(24, 'Mississippi'),
+(25, 'Nevada'),
+(26, 'Missouri'),
+(27, 'Montana'),
+(28, 'New York (state)'),
+(29, 'Washington'),
+(30, 'West_Virginia');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `request_callback`
 --
 
@@ -297,7 +553,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Fullname`, `Email`, `email_verification_link`, `Password`, `Confirm_password`, `User_type`, `Phone`, `Image`, `City`, `Industry`, `Skills`, `Function`, `Education`, `Experience_years`, `Experience_months`, `Current_Salary_lakhs`, `Current_Salary_thousand`, `Expected_Salary_lakhs`, `Expected_Salary_thousand`, `CV`, `Email_status`, `otp`) VALUES
 (1, 'Admin', 'Admin@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', '0e7517141fb53f21ee439b355b5a1d0a', '4f0340a33197986b0d269019f8588ce8', 'Admin', '9876896534', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 979275),
-(2, 'Abhishek B D', 'abhishekbd5656@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '8105020825', 'profile.png', '', '', 'python', '', 'BCA', '', '', '', '', '', '', 'AbhishekBD[3_11].docx', 'Verified', 723673),
+(2, 'Abhishek B D', 'abhishekbd5656@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '8105020825', 'profile.png', '', '', 'python', '', 'BCA', '2 years', '', '', '', '', '', 'AbhishekBD[3_11].docx', 'Verified', 723673),
 (3, 'Ameer Shaik ', 'shaikameer965@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '9700735779', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'AmeerShaik[4_5].pdf', 'Verified', 343490),
 (4, 'AMIT CHAND', 'amitchand254@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'AmitChand[3_9].pdf', 'Verified', 385018),
 (5, 'AMIT RAY', 'amitroy9615@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'AmitRay[2_4].pdf', 'Verified', 855920),
@@ -482,6 +738,24 @@ ALTER TABLE `jobs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `location_india`
+--
+ALTER TABLE `location_india`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `location_uk`
+--
+ALTER TABLE `location_uk`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `location_us`
+--
+ALTER TABLE `location_us`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `request_callback`
 --
 ALTER TABLE `request_callback`
@@ -537,7 +811,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `request_callback`
 --
 ALTER TABLE `request_callback`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `skills`
@@ -549,7 +823,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
