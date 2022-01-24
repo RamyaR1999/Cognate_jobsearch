@@ -85,7 +85,7 @@
          
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
-    <li><a href="Register-member.php">Submit Your Resume</a></li>
+    <li><a href="Register-Member.php">Submit Your Resume</a></li>
     <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li>

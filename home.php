@@ -61,7 +61,7 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <li><a href="Register-Member.php">Submit Your Resume</a></li>    
     <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
     <li><a href="Available_jobs.php">Find A Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>

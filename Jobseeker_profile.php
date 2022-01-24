@@ -100,7 +100,7 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit Your Resume</a></li>
+    <li><a href="Register-Member.php">Submit Your Resume</a></li>
     
     <?php
 

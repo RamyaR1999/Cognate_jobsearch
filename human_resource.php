@@ -85,7 +85,7 @@
     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <li><a href="Register-Member.php">Submit Your Resume</a></li>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
