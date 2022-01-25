@@ -260,7 +260,7 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit CV</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
