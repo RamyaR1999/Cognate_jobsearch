@@ -315,7 +315,7 @@ if (isset($_POST['submit'])){
 
 
 <section class="u-clearfix u-custom-color-2 u-lightbox u-section-1" id="sec-de5a" style="height: 600px; padding: 0px;">
-       <div style="background: linear-gradient(to right, #b83dba 20%, #00a8f3 80%);">
+       <div style="background: linear-gradient(to right, #b83dba 0%, #00a8f3 100%);">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-text u-text-default u-text-white u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Find Your Job</h3>
         <div class="u-expanded-width-xs u-form u-form-1">
@@ -352,7 +352,7 @@ if (isset($_POST['submit'])){
 
 <style>
     .u-section-1 {
-  background-image: linear-gradient(to right, #b83dba 20%, #00a8f3 80%);
+  background-image: linear-gradient(to right, #b83dba 0%, #00a8f3 100%);
 }
 
 .u-section-1 .u-sheet-1 {
@@ -508,14 +508,14 @@ if (isset($_POST['submit'])){
         </h6><span class="u-icon u-icon-circle u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2920"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-2920"><path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path><path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path></svg></span><span class="u-icon u-icon-circle u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3870"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-3870"><path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path><path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path></svg></span>
         <div class="u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-1">
           <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 150" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0197"></use></svg>
-          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-0197"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-0197" style="fill:#b83dba"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
     c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
     c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
     C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
         </div>
         <div class="u-flip-horizontal u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-2">
           <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 150" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8d05"></use></svg>
-          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-8d05"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+          <svg class="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-8d05" style="fill: #00a8f3"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
     c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
     c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
     C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
