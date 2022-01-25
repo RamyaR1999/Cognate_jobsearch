@@ -293,7 +293,7 @@
                           <ul class="list-clean footer-link-list-sub">
                               
                           <li>
-                              <a href="/employers/submit-a-job/" target="_self">submit a job</a>
+                              <a href="/employers/submit-a-job/" target="_self">Submit Job</a>
                           </li>
                       
                           <li>

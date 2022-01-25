@@ -260,7 +260,7 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
 
-    <li><a href="Register-member.php">Submit Your Resume</a></li>    
+    <li><a href="Register-member.php">Submit CV</a></li>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
@@ -274,7 +274,7 @@ $mail->SMTPSecure='tls';
        }
 
     ?>
-    <li><a href="Available_jobs.php">Find A Jobs</a></li>
+    <li><a href="Available_jobs.php">Find Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li> -->
@@ -285,7 +285,7 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li><br>
+    <li><a href="submit_job.php">Submit Job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -440,11 +440,9 @@ $mail->SMTPSecure='tls';
 
         <div class="card fat">
             <div class="card-body">
-                <h4 class="card-title">SignUp</h4>
+                <h4 class="card-title">Sign Up</h4>
   
   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
-                   <span  class="">Fields marked with * are required fields</span>
-<br><br>
     <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="text">Fullname *</label>

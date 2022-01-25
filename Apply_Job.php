@@ -307,7 +307,7 @@ if(!$receiver_mail->send()) {
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit Your Resume</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
@@ -321,7 +321,7 @@ if(!$receiver_mail->send()) {
        }
 
     ?>
-    <li><a href="Available_jobs.php">Find A Jobs</a></li>
+    <li><a href="Available_jobs.php">Find Jobs</a></li>
    <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li> -->
@@ -332,7 +332,7 @@ if(!$receiver_mail->send()) {
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit A job</a></li>
+    <li><a href="submit_job.php">Submit Job</a></li>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
