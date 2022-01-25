@@ -22,7 +22,7 @@
          $error = 0;
 
       if(!empty($Job_title) && !empty($Job_description) && !empty($Location_country) && !empty($Job_type)){
-      if(!empty($Skills)){ 
+      // if(!empty($Skills)){ 
 
       // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
         
@@ -74,9 +74,9 @@
        // }
 
          
-       }else{
-        $message_skills = "Skill is required";
-       } 
+       // }else{
+       //  $message_skills = "Skill is required";
+       // } 
 
           }else{
         $message = "All fiels are required *";
@@ -377,11 +377,10 @@
 
         <div class="card fat">
             <div class="card-body">
-                <h4 class="card-title">Submit A job</h4>
+                <h4 class="card-title">Submit job</h4>
   
   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
-                   <span  class="">Fields marked with * are required fields</span>
-<br><br>
+
     <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="text">Job title *</label>
@@ -400,7 +399,7 @@
                         <label for="">Location *</label>
                         <div style="position:relative" id="">
                             <select type="text" id="Location_country" onclick="Location_country_Code ()" name="Location_country" value="<?php echo isset($_POST["Location_country"]) ? $_POST["Location_country"] : ''; ?>" class="form-control" required="">
-                             <option value="select Country">-- please select Country --</option>
+                             <option value="">-- please select Country --</option>
                             <option value="Work from Home">Work from Home</option>
                             <option value="Onsite/Remote">Onsite/Remote</option>
                             <option value="India">India</option>
@@ -426,7 +425,7 @@
                     </div>         
                      <div class="form-group">
                         &nbsp;
-                     <label for="">Skills *</label>
+                     <label for="">Skills </label>
                           <textarea class="form-control" rows="4" id="Skills" style="width: 320px;" name="Skills"><?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?></textarea>
 
                            <!-- <input type="text" id="Skills" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" name="Skills" style="width: 320px;" required=""> -->
