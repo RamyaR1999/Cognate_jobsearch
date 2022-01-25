@@ -406,12 +406,25 @@
                             <option value="India">India</option>
                             <option value="US">US</option>
                             <option value="Uk">UK</option>
-                            <option value="Afghanistan">Afghanistan</option>
                         </select>
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Location_country; ?></span>
                     </div>
-            
+                     <div class="form-group">
+                        &nbsp;
+                        <label for="">Job type *</label>
+                         <select type="text" class="form-control" name="Job_type"id="Job_type">
+                            <option value="">-- please select job type --</option>
+                            <option value="Fulltime - Onsite">Fulltime - Onsite</option>
+                            <option value="Parttime">Parttime - Onsite</option>
+                            <option value="Remote Role">Remote Role</option>
+                          </select>
+                        <div class="invalid-feedback">
+                            
+                        </div>
+                        <span style="color:#ff0000"><?php echo $message_Job_type; ?></span>
+                    </div>
+                               
                      <div class="form-group">
                         &nbsp;
                      <label for="">Skills *</label>
@@ -421,46 +434,6 @@
 
                            <span style="color:#ff0000"><?php echo $message_skills; ?></span>  
                      </div>
-                     <div class="form-group">
-                        <label for="">Sector *</label>
-                        <select id="" type="text" value="<?php echo isset($_POST["Sector"]) ? $_POST["Sector"] : ''; ?>" class="form-control" name="Sector" required="">
-                        <option value="">-- please select sector --</option>
-                            <option value="Accounting / Finance">Accounting / Finance</option>
-                            <option value="Banking & finance">Banking &amp; finance</option>
-                            <option value="General Administration">General Administration</option>
-                            <option value="Human Resources">Human Resources</option>
-                            <option value="Information Technology">Information Technology</option>
-                            <option value="Insurance">Insurance</option>
-                            <option value="ITeS & BPO">ITeS &amp; BPO</option>
-                            <option value="Manufacturing">Manufacturing</option>
-                            <option value="Sales">Sales</option>
-                            <option value="FMCG">FMCG</option>
-                            <option value="Retail">Retail</option>
-                            <option value="Telecom">Telecom</option>
-                            <option value="Media & entertainment">Media &amp; entertainment</option>
-                            <option value="Education">Education</option>
-                            <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
-                            <option value="Consulting & VC">Consulting &amp; VC</option>
-                            <option value="Other">Other</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Sector; ?></span>
-                    </div>
-                     <div class="form-group">
-                        &nbsp;
-                        <label for="">Job type *</label>
-                         <select type="text" class="form-control" name="Job_type"id="Job_type">
-                            <option value="">-- please select job type --</option>
-                            <option value="Full time">Full time</option>
-                            <option value="Part time">Part time</option>
-                          </select>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Job_type; ?></span>
-                    </div>
                     &nbsp;
                     <div class="form-group m-0">
                         <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Submit
