@@ -21,7 +21,7 @@
 
          $error = 0;
 
-      if(!empty($Job_title) && !empty($Job_description) && !empty($Service) && !empty($Location_country) && !empty($Location)  && !empty($Sector) && !empty($Job_type)){
+      if(!empty($Job_title) && !empty($Job_description) && !empty($Location_country) && !empty($Sector) && !empty($Job_type)){
       if(!empty($Skills)){ 
 
       // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
@@ -391,35 +391,13 @@
                     </div>
                <div class="form-group">
                         <label for="">Job description *</label>
-                        <textarea class="form-control" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
-                        <div class="invalid-feedback">
-                            
-                        </div>
+                        <textarea class="form-control"  rows="8" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
+
                         <span style="color:#ff0000"><?php echo $message_Job_description; ?></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Service *</label>
-                        <div style="position:relative" id="">
-                            <select type="text" id="" name="Service" value="<?php echo isset($_POST["Service"]) ? $_POST["Service"] : ''; ?>" class="form-control" required="">
-                                <option value="">-- please select service --</option>
-                            <option value="Contract Staffing">Contract Staffing</option>
-                            <option value="Permanent Recruitment">Permanent Recruitment</option>
-                            <option value="RPO">RPO</option>
-                            <option value="IT Contract Staffing">IT Contract Staffing</option>
-                        </select>
-                            
-                        </div>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Service; ?></span>
-
-                    </div>
-
-                    <div class="form-group">
-                        &nbsp;
-                        <label for="">Country *</label>
+                        <label for="">Location *</label>
                         <div style="position:relative" id="">
                             <select type="text" id="Location_country" onclick="Location_country_Code ()" name="Location_country" value="<?php echo isset($_POST["Location_country"]) ? $_POST["Location_country"] : ''; ?>" class="form-control" required="">
                              <option value="select Country">-- please select Country --</option>
@@ -433,231 +411,17 @@
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Location_country; ?></span>
                     </div>
-                    <?php 
-                          if ($Location_country == "India" || $Location_country == "") {
-
-
-                          ?>
+            
                      <div class="form-group">
                         &nbsp;
-                        <label for="">Location *</label>
-                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
-                            <option value="Location_india">
-                            <?php 
+                     <label for="">Skills *</label>
+                          <textarea class="form-control" rows="4" id="Skills" style="width: 320px;" name="Skills"><?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?></textarea>
 
-                                  if(!empty($Location_india)){
+                           <!-- <input type="text" id="Skills" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" name="Skills" style="width: 320px;" required=""> -->
 
-                                   echo $Location_india; 
-                                   
-                                   }else{
-
-                            ?> -- please select Location_india -- <?php } ?>
-                            <?php      
-
-                            $query="SELECT Location_india FROM location_india";
-                            $select_location_india=mysqli_query($connection,$query);
-
-                             if(!$select_location_india) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
-
-                            while($row=mysqli_fetch_assoc($select_location_india)){
-
-                            $location_india=$row['Location_india'];               
-
-                           if($location_india == $Location_india) {
-                            
-                         echo "<option value='$location_india'>$location_india</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$location_india'>$location_india</option>";
-             
-                         }     
-                        } 
-                       
-                        $location_india=$_POST['Location_india'];
-
-                        if(!empty($Location_india)){
-
-                          echo "<option selected value='$Location india'> $Location india </option>";
-                           
-                        }else{
-
-                          // echo "<option selected value='Select Location india'>Select Location india</option>";
-                          
-                        }
-
-
-                    ?> 
-                        </select>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
-                    </div>
-                     <?php } ?>
-                    <?php 
-                          if ($Location_country == "US") {
-
-
-                          ?>
-                    <div class="form-group">
-                        &nbsp;
-                        <label id="">Location *</label>
-                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
-                             <option value="Location_US">
-                            <?php 
-
-                                  if(!empty($Location_US)){
-
-                                   echo $Location_US; 
-                                   
-                                   }else{
-
-                            ?> -- please select Location_US -- <?php } ?>
-                            <?php      
-
-                            $query="SELECT Location_US FROM location_us";
-                            $select_location_us=mysqli_query($connection,$query);
-
-                             if(!$select_location_us) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
-
-                            while($row=mysqli_fetch_assoc($select_location_us)){
-
-                            $location_us=$row['Location_US'];               
-
-                           if($location_us == $Location_US) {
-                            
-                         echo "<option value='$Location_US'>$location_us</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$location_us'>$location_us</option>";
-             
-                         }     
-                        } 
-                       
-                        $Location_US=$_POST['Location_US'];
-
-                        if(!empty($Location_US)){
-
-                          echo "<option selected value='$Location_US'> $Location_US </option>";
-                           
-                        }else{
-
-                          // echo "<option selected value='Select Location US'>Select Location US</option>";
-                          
-                        }
-                        
-                     ?>
-                        </select>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
-                    </div>
-                    <?php } ?>
-                    <?php 
-                          if ($Location_country == "US") {
-
-
-                          ?>
-                    <div class="form-group">
-                        &nbsp;
-                        <label id="">Location *</label>
-                        <select id="output" type="Location" value="<?php echo isset($_POST["Location"]) ? $_POST["Location"] : ''; ?>" class="form-control" name="Location" required="">
-                             <option value="Location_UK">
-                            <?php 
-
-                                  if(!empty($Location_UK)){
-
-                                   echo $Location_UK; 
-                                   
-                                   }else{
-
-                            ?> -- please select Location_UK -- <?php } ?>
-                           <?php      
-
-                            $query="SELECT Location_UK FROM location_uk";
-                            $select_location_uk=mysqli_query($connection,$query);
-
-                             if(!$select_location_uk) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
-
-                            while($row=mysqli_fetch_assoc($select_location_uk)){
-
-                            $location_uk=$row['Location_UK'];               
-
-                           if($location_uk == $Location_UK) {
-                            
-                         echo "<option value='$Location_UK'>$location_uk</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$location_uk'>$location_uk</option>";
-             
-                         }     
-                        } 
-                       
-                        $Location_UK=$_POST['Location_UK'];
-
-                        if(!empty($Location_UK)){
-
-                          echo "<option selected value='$Location_UK'> $Location_UK </option>";
-                           
-                        }else{
-
-                          // echo "<option selected value='Select Location UK'>Select Location UK</option>";
-                          
-                        }
-                        
-                     ?>
-                        </select>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Location; ?></span>
-                    </div>
-                     <?php } ?>
+                           <span style="color:#ff0000"><?php echo $message_skills; ?></span>  
+                     </div>
                      <div class="form-group">
-                        &nbsp;
-                        <label for="">Skills *</label>
-                        <select id="" type="text" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" name="Skills" required="">
-                            <option value="<?php echo $Skills; ?>">
-                            <?php 
-
-                                  if(!empty($Skills)){
-
-                                   echo $Skills; 
-                                   
-                                   }else{
-
-                            ?> -- please select Skills -- <?php } ?>
-                              <option value="PHP">PHP</option>
-                              <option value="Python">Python</option>
-                              <option value="C">C</option>
-                              <option value="C++">C++</option>
-                              <option value="Java">Java</option>
-                              <option value="Angular JS">Angular JS</option>
-                              <option value="Angular JS/ASP .NET Developer">Angular JS/ASP .NET Developer</option>
-                              <option value="Angular JS">React JS</option>
-                              <option value="Devops/AWS">Devops/AWS</option>
-                              <option value="WMS">WMS</option>
-                          </select>
-                        <div class="invalid-feedback">
-                            
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Skills; ?></span>
-                    </div>
-                     <div class="form-group">
-                        &nbsp;
                         <label for="">Sector *</label>
                         <select id="" type="text" value="<?php echo isset($_POST["Sector"]) ? $_POST["Sector"] : ''; ?>" class="form-control" name="Sector" required="">
                         <option value="">-- please select sector --</option>
@@ -744,31 +508,18 @@
 
 <script>
 
-const togglePassword = document.querySelector('#togglePassword');
-  const password = document.querySelector('#id_password');
- 
-  togglePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
-
-</script>
-<script>
-
-const hidePassword = document.querySelector('#hidePassword');
-  const cpassword = document.querySelector('#cd_password');
- 
-  hidePassword.addEventListener('click', function (e) {
-    // toggle the type attribute
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    cpassword.setAttribute('type', type);
-    // toggle the eye slash icon
-    this.classList.toggle('fa-eye-slash');
-});
-
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "Skills",
+        data: "search.php",
+        post: { type: "Skills" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+    
 </script>
 
 <!-- Profile Icon -->
