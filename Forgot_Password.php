@@ -1,27 +1,6 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 
-
-<?php
-// session_start();
-// $rndno=rand(100000, 999999);//OTP generate
-// $message = urlencode("otp number.".$rndno);
-// $to=$_POST['email'];
-// $subject = "OTP";
-// $txt = "OTP: ".$rndno."";
-// $headers = "From: 07.ramyar@gmail.com.com" . "\r\n" .
-// "CC: thennarasan1988@gmail.com";
-// mail($to,$subject,$txt,$headers);
-// if(isset($_POST['btn-save']))
-// {
-// $_SESSION['Fullname']=$_POST['Fullname'];
-// $_SESSION['email']=$_POST['email'];
-// $_SESSION['phone']=$_POST['phone'];
-// $_SESSION['otp']=$rndno;
-// // header( "Location: otp.php" );
-// } 
-
-?>
 <?php
 
     if(isset($_REQUEST['submit'])){ 

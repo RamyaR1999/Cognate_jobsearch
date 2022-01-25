@@ -301,49 +301,55 @@
 
 <br>
 <h6>Skills</h6>
-<div class="input-group">
-         <select type="text" class="form-control" name="Skills"id="Skills">
+
+<form action="" method="post" autocomplete="off">
+    <div class="input-group">
+       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control" style="width: 300px">
+   </div>
+</form>
+<!-- <div class="input-group">
+         <select type="text" class="form-control" name="Skills"id="Skills"> -->
                       
                         <?php      
 
-                            $query="SELECT Skills FROM skills";
-                            $select_skills=mysqli_query($connection,$query);
+                        //     $query="SELECT Skills FROM skills";
+                        //     $select_skills=mysqli_query($connection,$query);
 
-                             if(!$select_skills) {
+                        //      if(!$select_skills) {
             
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
+                        //       die("Query Failed" . mysqli_error($connection));
+                        //   } 
 
-                            while($row=mysqli_fetch_assoc($select_skills)){
+                        //     while($row=mysqli_fetch_assoc($select_skills)){
 
-                            $skill=$row['Skills'];               
+                        //     $skill=$row['Skills'];               
 
-                           if($skill == $Skills) {
+                        //    if($skill == $Skills) {
                             
-                         echo "<option value='$Skill'>$skill</option>";
+                        //  echo "<option value='$Skill'>$skill</option>";
                        
-                        }else{
+                        // }else{
                             
-                        echo "<option value='$skill'>$skill</option>";
+                        // echo "<option value='$skill'>$skill</option>";
              
-                         }     
-                        } 
+                        //  }     
+                        // } 
                        
-                        $Skill=$_POST['Skills'];
+                        // $Skill=$_POST['Skills'];
 
-                        if(!empty($Skill)){
+                        // if(!empty($Skill)){
 
-                          echo "<option selected value='$Skill'> $Skill </option>";
+                        //   echo "<option selected value='$Skill'> $Skill </option>";
                            
-                        }else{
+                        // }else{
 
-                          echo "<option selected value='Select Skill'>Select Skill</option>";
+                        //   echo "<option selected value='Select Skill'>Select Skill</option>";
                           
-                        }
+                        // }
                         
                      ?>
-         </select>
-     </div>
+       <!--   </select>
+     </div> -->
   <br>
 
   <h6>Experience</h6>
@@ -822,6 +828,17 @@
         target: "Fullname",
         data: "search.php",
         post: { type: "Fullname" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "Skills",
+        data: "search.php",
+        post: { type: "Skills" },
         // OPTIONAL
         delay : 50,
         min : 1

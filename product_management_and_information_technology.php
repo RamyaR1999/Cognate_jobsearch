@@ -131,15 +131,13 @@
       </div>         
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
-                                  <a href="Register-Member.php" class="btn head-btn1">Register</a>
-
 
   <?php
 
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-
+        <a href="Register-Member.php" class="btn head-btn1">Register</a>
         <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
@@ -165,7 +163,7 @@
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -182,7 +180,7 @@
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
