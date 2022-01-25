@@ -342,11 +342,17 @@
 
 </style>
 <body class="my-login-page">
+        <div class="u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-1">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 150 100" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0197"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 100 100" x="10px" y="35px" id="svg-0197" style="fill:#fb246a"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+    c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
+    c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
+    C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
+        </div>
     <section class="h-100">
-        <div class="container h-100">
+        <div class="container h-100" style="opacity: 0.9">
             <div class="row justify-content-md-center align-items-center h-100">
                 <div class="card-wrapper">
-
         <div class="card fat">
             <div class="card-body">
                 <h4 class="card-title">Login</h4>
