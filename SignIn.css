@@ -21,12 +21,12 @@
 	z-index: 1;
 }
 
-.my-login-page .u-align-center {
+.my-login-page .row {
     display: flex;
     flex-wrap: wrap;
-    /*margin-top: 0px;*/
-    margin-right: 162.5px;
-    margin-left: 162.5px;
+    margin-top: 0px;
+    margin-right: -12.5px;
+    margin-left: -12.5px;
 }
 
 .my-login-page .brand img {

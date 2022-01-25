@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 24, 2022 at 03:05 PM
+-- Generation Time: Jan 25, 2022 at 05:24 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -701,7 +701,17 @@ INSERT INTO `users` (`id`, `Fullname`, `Email`, `email_verification_link`, `Pass
 (149, 'SATIP RANJAN PADHY', 'satippadhyds@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', 'python', 'Airline / Reservations / Ticketing / Travel', '', '10 years', '', '', '', '', '', 'Satip_7yrs_DB_ETL_CV.pdf', 'Verified', 632867),
 (150, 'Seema Kodihalli Balachandra', 'seema.sorab@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', 'WMS', 'Export / Import / Merchandising', '', '6 years', '', '', '', '', '', 'Seema_Testlead_CV_July2019.docx', 'Verified', 748887),
 (151, 'Taiwo Afolabi Fajemirokun', 'tkfajek@yahoo.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', 'C++', 'CSR & Sustainability', '', '2 years', '', '', '', '', '', 'TAIWO_FAJEMIROKUN_CV_Test_Analyst_updated..docx', 'Verified', 866300),
-(152, 'VICTOR ONIBOKUN', 'victor.onibokun@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', 'React JS', 'Art Director / Graphic / Web Designer', '', '18 years', '', '', '', '', '', 'Victor_A_Onibokun_CV_2019_MBox..docx', 'Verified', 256926);
+(152, 'VICTOR ONIBOKUN', 'victor.onibokun@gmail.com', 'http://localhost:8889/demo/Cognate_jobsearch/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', 'React JS', 'Art Director / Graphic / Web Designer', '', '18 years', '', '', '', '', '', 'Victor_A_Onibokun_CV_2019_MBox..docx', 'Verified', 256926),
+(153, 'Ashok Kumar Challa', 'ashokraj.challa.1993@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'AshokKumar[4_8].docx', 'Verified', 744690),
+(154, 'AVINASH MADIWALAR', 'avinashmadiwalar@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'AvinashMadiwal[3_6].docx', 'Verified', 801253),
+(155, 'GAGAN KUMAR JC', 'Gaganjc2610@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'GaganKumarJC[2_3].docx', 'Verified', 768783),
+(156, 'Gopichand', 'gopichandganta@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'GANTAGOPICHAND[4_0].docx', 'Verified', 201434),
+(157, 'Jamseer VK', 'mzjamsheer123@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'JamseerVK[4_6].doc', 'Verified', 576457),
+(158, 'Kanika Jain', 'Kanikajain1512@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'kanika_cv_sm_qa_2019_india.docx', 'Verified', 153613),
+(159, 'Krishna Reddy', 'lkrishna6060@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'krishnaReddy[4_2].docx', 'Verified', 346115),
+(160, 'Sowmya Bheemavarapu', 'sowmyab72@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Sowmya_6yrs_3 months.pdf', 'Verified', 218846),
+(161, ' Srikala Kuraku', 'Srikala15.kuraku@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Srikala Kuraku_4 yrs_2mths.doc', 'Verified', 706882),
+(162, 'VIVEKANANDA REDDY RAGIPINDI', 'viveknandareddy.ragipindi@gmail.com', 'https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php', 'cde83d11de39e5902fa33ddd99526359', 'cde83d11de39e5902fa33ddd99526359', 'Job Seeker', '', 'profile.png', '', '', '', '', '', '', '', '', '', '', '', 'Vivekananda JAVA_Developer_3yrs_1 month', 'Verified', 526400);
 
 --
 -- Indexes for dumped tables
@@ -787,7 +797,7 @@ ALTER TABLE `education`
 -- AUTO_INCREMENT for table `experience`
 --
 ALTER TABLE `experience`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `function`
@@ -805,7 +815,7 @@ ALTER TABLE `industry`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `request_callback`
@@ -823,7 +833,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
