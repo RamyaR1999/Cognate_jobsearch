@@ -299,14 +299,6 @@
            </div>
       </form> -->
 
-<br>
-<h6>Skills</h6>
-
-<form action="" method="post" autocomplete="off">
-    <div class="input-group">
-       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control" style="width: 300px">
-   </div>
-</form>
 <!-- <div class="input-group">
          <select type="text" class="form-control" name="Skills"id="Skills"> -->
                       
@@ -350,54 +342,6 @@
                      ?>
        <!--   </select>
      </div> -->
-  <br>
-
-  <h6>Experience</h6>
-<div class="input-group">
-         <select type="text" class="form-control" name="Experience_years"id="Experience_years">
-                      
-             
-                        <?php      
-
-                            $query="SELECT Experience FROM experience";
-                            $select_experience=mysqli_query($connection,$query);
-
-                             if(!$select_experience) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
-
-                            while($row=mysqli_fetch_assoc($select_experience)){
-
-                            $experience=$row['Experience'];               
-
-                           if($experience == $Experience_years) {
-                            
-                         echo "<option value='$Experienced'>$experience</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$experience'>$experience</option>";
-             
-                         }     
-                        } 
-                       
-                        $Experienced=$_POST['Experience_years'];
-
-                        if(!empty($Experienced)){
-
-                          echo "<option selected value='$Experienced'> $Experienced </option>";
-                           
-                        }else{
-
-                          echo "<option selected value='Select Experience'>Select Experience</option>";
-                          
-                        }
-                        
-                     ?>
-         </select>
-     </div>
-  <br>
 
 <!-- <h6>Industry</h6>
 <div class="input-group">
@@ -489,50 +433,108 @@
         <!--  </select>
      </div>
 <br> -->
-       <h6>Function</h6>
-       <div class="input-group">
-          <select type="text" class="form-control" name="Function"id="Function">
-                <?php      
 
-                            $query="SELECT Function FROM function";
-                            $select_function=mysqli_query($connection,$query);
+<br>
+<h6>Skills</h6>
 
-                             if(!$select_function) {
+<form action="" method="post" autocomplete="off">
+    <div class="input-group">
+       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control" style="width: 300px">
+   </div>
+</form>
+
+  <br>
+
+  <h6>Experience</h6>
+<div class="input-group">
+         <select type="text" class="form-control" name="Experience_years"id="Experience_years">
+                      
+             
+                        <?php      
+
+                            $query="SELECT Experience FROM experience";
+                            $select_experience=mysqli_query($connection,$query);
+
+                             if(!$select_experience) {
             
                               die("Query Failed" . mysqli_error($connection));
                           } 
 
-                            while($row=mysqli_fetch_assoc($select_function)){
+                            while($row=mysqli_fetch_assoc($select_experience)){
 
-                            $function=$row['Function'];               
+                            $experience=$row['Experience'];               
 
-                           if($function == $Function) {
+                           if($experience == $Experience_years) {
                             
-                         echo "<option value='$Functions'>$function</option>";
+                         echo "<option value='$Experienced'>$experience</option>";
                        
                         }else{
                             
-                        echo "<option value='$function'>$function</option>";
+                        echo "<option value='$experience'>$experience</option>";
              
                          }     
                         } 
                        
-                        $Functions=$_POST['Function'];
+                        $Experienced=$_POST['Experience_years'];
 
-                        if(!empty($Functions)){
+                        if(!empty($Experienced)){
 
-                          echo "<option selected value='$Functions'> $Functions </option>";
+                          echo "<option selected value='$Experienced'> $Experienced </option>";
                            
                         }else{
 
-                          echo "<option selected value='Select Function'> Select Function </option>";
-
+                          echo "<option selected value='Select Experience'>Select Experience</option>";
+                          
                         }
+                        
+                     ?>
+         </select>
+     </div>
+   <br>
+  <!--  <h6>Function</h6>
+       <div class="input-group">
+          <select type="text" class="form-control" name="Function"id="Function"> -->
+                <?php      
+
+                        //     $query="SELECT Function FROM function";
+                        //     $select_function=mysqli_query($connection,$query);
+
+                        //      if(!$select_function) {
+            
+                        //       die("Query Failed" . mysqli_error($connection));
+                        //   } 
+
+                        //     while($row=mysqli_fetch_assoc($select_function)){
+
+                        //     $function=$row['Function'];               
+
+                        //    if($function == $Function) {
+                            
+                        //  echo "<option value='$Functions'>$function</option>";
+                       
+                        // }else{
+                            
+                        // echo "<option value='$function'>$function</option>";
+             
+                        //  }     
+                        // } 
+                       
+                        // $Functions=$_POST['Function'];
+
+                        // if(!empty($Functions)){
+
+                        //   echo "<option selected value='$Functions'> $Functions </option>";
+                           
+                        // }else{
+
+                        //   echo "<option selected value='Select Function'> Select Function </option>";
+
+                        // }
 
                           ?>         
-          </select>
+        <!--   </select>
       </div>
- <br>         
+ <br>       -->   
 <center><button name="submit" style="padding: 0.8rem 2rem;" class="btn head-btn2" type="submit">
     <i class="fa fa-search">Search</i>
   </button></center>
@@ -547,7 +549,7 @@
             $Skill=$_POST['Skills'];
             $Experienced=$_POST['Experience_years'];
             // $Educate=$_POST['Education'];
-            $Functions=$_POST['Function'];
+            // $Functions=$_POST['Function'];
             // $search=$_POST['Fullname'];
             // $Industries=$_POST['Industry'];
             
@@ -555,9 +557,9 @@
              // if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
             // $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
 
-            if($Skill != "" || $Experienced != "" || $Functions != ""){
+            if($Skill != "" || $Experienced != ""){
 
-              $users="SELECT * FROM users WHERE Skills = '$Skill' || Experience_years='$Experienced' || Function='$Functions' "; 
+              $users="SELECT * FROM users WHERE Skills = '$Skill' || Experience_years='$Experienced' "; 
 
               $search_users=mysqli_query($connection, $users); 
 
@@ -581,7 +583,11 @@
                     
             }
            else{
-   
+            echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";
+   ?>
+   <br>
+   <br>
+   <?php
              while($row=mysqli_fetch_assoc($search_users)){
 
                     $id=$row['id'];
@@ -600,6 +606,8 @@
                     $Experience_years=$row['Experience_years'];
                     $Experience_months =$row['Experience_months'];
 
+if($User_type == "Job Seeker"){
+
 ?>
 
 
@@ -607,17 +615,18 @@
 <div class="container">
     <div class="u-layout-row">
         <div class="u-align-left" style="width: 520px;">
-    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
+
         <h4><b><?php echo $Fullname; ?></b></h4> 
         <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
         <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
         <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
         <p><?php echo $Email; ?></p>
- </a>
+
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
-    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;"></a>
+     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+     <br>
+     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 30px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -634,10 +643,12 @@
 </div>
 
 <?php 
+}
 
       } 
     }
-  }else{
+  }
+  else{
 
     header("Location:Jobseeker_profile.php");
 
@@ -645,46 +656,6 @@
 
 }else{
 
-// $page_name="Jobseeker_profile.php"; //  If you use this code with a different page ( or file ) name then change this 
-
-// $start=$_GET['start'];                              // To take care global variable if OFF
-// if(!($start > 0)) {                         // This variable is set to zero for the first page
-// $start = 0;
-// }
-
-// $eu = ($start -0);                
-// $limit = 5;                                 // No of records to be shown per page.
-// $this1 = $eu + $limit; 
-// $back = $eu - $limit; 
-// $next = $eu + $limit; 
-
-
-  //  $per_page=2;  
-                
-  //   if(isset($_GET['page'])){
-        
-  //       $page = $_GET['page'];
-        
-  //   } else {
-        
-  //       $page ="";
-        
-  //   }
-  
-  //   if($page =="" || $page ==1){
-        
-  //       $page_1=0;
-        
-  //   } else {
-        
-  //       $page_1=($page*$per_page)-$per_page;
-        
-  //   }
-
-  // $post_query_count="SELECT * FROM users";
-  // $find_count=mysqli_query($connection,$post_query_count);
-  // $count=mysqli_num_rows($find_count);
-  // $count=ceil($count/$per_page);
 
   $query = "SELECT * FROM users WHERE User_type='Job Seeker'";
   $artist_id = mysqli_query($connection,$query);
@@ -714,17 +685,18 @@
 <div class="container">
     <div class="u-layout-row">
         <div class="u-align-left" style="width: 520px;">
-    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
+
         <h4><b><?php echo $Fullname; ?></b></h4> 
         <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
         <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
         <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
         <p><?php echo $Email; ?></p>
- </a>
+
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
-    <a href="Jobseeker_full_profile.php?profile=<?php echo $id; ?>">
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;"></a>
+     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+     <br>
+     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 30px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -756,43 +728,6 @@
      </div>          
    </div>
 </section>
-
-<?php
-
-// $p_limit=8; // This should be more than $limit and set to a value for whick links to be breaked
-
-// $p_f=$_GET['p_f'];                              // To take care global variable if OFF
-// if(!($p_f > 0)) {                         // This variable is set to zero for the first page
-// $p_f = 0;
-// }
-
-// $p_fwd=$p_f+$p_limit;
-// $p_back=$p_f-$p_limit;
-
-?>
-
-<!-- <ul class="pager"> -->
-
-<?php
-                 
-              
-      // for($i=1; $i<=$count; $i++){
-          
-      //     if($i == $page){
-          
-      //       echo "<li><a class='active_link' href='Jobseeker_profile.php?page={$i}'>{$i}</a></li>";
-             
-      //   } else {
-              
-      //       echo "<li><a href='Jobseeker_profile.php?page={$i}'>{$i}</a></li>";    
-              
-      //     }
-          
-      // }
-
-
-?>
-<!-- </ul> -->
 
 <br>
 <br>
