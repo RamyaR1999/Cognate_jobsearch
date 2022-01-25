@@ -21,7 +21,7 @@
 
          $error = 0;
 
-      if(!empty($Job_title) && !empty($Job_description) && !empty($Location_country) && !empty($Sector) && !empty($Job_type)){
+      if(!empty($Job_title) && !empty($Job_description) && !empty($Location_country) && !empty($Job_type)){
       if(!empty($Skills)){ 
 
       // if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
@@ -423,8 +423,7 @@
                             
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Job_type; ?></span>
-                    </div>
-                               
+                    </div>         
                      <div class="form-group">
                         &nbsp;
                      <label for="">Skills *</label>
