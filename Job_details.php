@@ -289,18 +289,14 @@
     <section class="u-clearfix u-section-2" id="sec-8459">
       <div class="u-clearfix u-sheet u-sheet-1">
 
-                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-8">Job description</h2>
-                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9"><?php echo $Job_title; ?></h2>
+                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9">Job description</h2>
+                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11"><?php echo $Job_title; ?></h2>
                 <p class="u-align-left u-text u-text-10"> <?php echo $Job_description; ?></p>
-                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
+                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">Skills</h2>
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
-                <p class="u-text u-text-1">posted :&nbsp; <?php echo $Job_posted; ?></p>
-                <p class="u-text u-text-2">location : <?php echo $Location_country; ?></p>
-                <!-- <p class="u-text u-text-7">experience : </p> --><br>
+                <p class="u-align-left u-text u-text-10">posted :&nbsp; <?php echo $Job_posted; ?></p>
+                <p class="u-align-left u-text u-text-10">location : <?php echo $Location_country; ?></p> <br>
                 <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>" class="btn head-btn1">apply now</a>
-
-
-
       </div>
     </section>
     
