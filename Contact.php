@@ -147,7 +147,7 @@
 
     <!--logoo-->
 <div class="logo">
-<a href="job_seeker.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+<a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
 </div>  
 </div>  
 <div class="col-lg-9 col-md-9">

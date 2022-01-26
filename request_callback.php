@@ -143,7 +143,7 @@
 <div class="col-lg-3 col-md-2">
     <!--logoo-->
 <div class="logo">
-<a href="job_seeker.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+<a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
 </div>  
 </div>  
 <div class="col-lg-9 col-md-9">
@@ -158,14 +158,14 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li><br>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
     
     <?php
         
@@ -183,7 +183,7 @@
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit Job</a></li>
+    <li><a href="submit_job.php">Submit Job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
