@@ -263,21 +263,22 @@
 
   $the_id = $_GET['Job_details'];
 
-  $query="SELECT * FROM Jobs WHERE id='$the_id' ";
+  $query="SELECT * FROM jobs WHERE id='$the_id' ";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
 
      $id = $row['id'];
      $Job_title = $row['Job_title'];
-     $Company_name = $row['Company_name'];
-     $Location = $row['Location'];
      $Job_posted = $row['Job_posted'];
-     $Job_time = $row['Job_time'];
+     $Skills = $row['Skills'];
+     $Location = $row['Location'];
+     $Location_country = $row['Location_country'];
+     $Job_type = $row['Job_type'];
      $Job_description = $row['Job_description'];
      $Service = $row['Service'];
      $Sector = $row['Sector'];
-     $Skills = $row['Skills'];
+     $Company_name = $row['Company_name'];
 
 
    }
@@ -294,8 +295,8 @@
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
                 <p class="u-text u-text-1">posted :&nbsp; <?php echo $Job_posted; ?></p>
-                <p class="u-text u-text-2">location : <?php echo $Location; ?></p>
-                <p class="u-text u-text-7">experience : </p>
+                <p class="u-text u-text-2">location : <?php echo $Location_country; ?></p>
+                <!-- <p class="u-text u-text-7">experience : </p> --><br>
                 <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>" class="btn head-btn1">apply now</a>
 
 
