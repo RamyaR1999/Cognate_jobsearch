@@ -79,6 +79,8 @@
 <div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
+    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+    </li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
@@ -109,9 +111,7 @@
 
 
 </li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_us.php">Contact</a>
-
-</li>
+ 
      </ul>
        </nav>
       </div>         

@@ -96,6 +96,8 @@
 <div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
+    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+    </li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
@@ -140,9 +142,7 @@
 
 
 </li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_us.php">Contact</a>
-
-</li>
+ 
      </ul>
        </nav>
       </div>         
@@ -623,7 +623,7 @@ if($User_type == "Job Seeker"){
         <p><?php echo $Email; ?></p>
 
   </div>
-  <div class="u-align-center" style="padding-left: 40px;"> 
+  <div class="u-align-center" style="padding-left: 40px; height:200px"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
      <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 30px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>

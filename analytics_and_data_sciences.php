@@ -127,9 +127,7 @@
 
 
 </li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact_us.php">Contact</a>
-
-</li>
+ 
      </ul>
        </nav>
       </div>  
