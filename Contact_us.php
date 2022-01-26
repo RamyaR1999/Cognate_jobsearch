@@ -159,14 +159,14 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li><br> 
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
     
     <?php
         
@@ -184,7 +184,7 @@
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit Job</a></li>
+    <li><a href="submit_job.php">Submit Job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
@@ -380,7 +380,7 @@
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" redirect="true">
             <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
             <div class="col-md-12">
-            <span  class="">Fields marked with * are required fields</span>
+            <!-- <span  class="">Fields marked with * are required fields</span> -->
             <h6 class="text-center" style="color:#ff0000"></h6>
           </div>
             <div class="u-layout-row">

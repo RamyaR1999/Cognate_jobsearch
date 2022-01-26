@@ -262,14 +262,14 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li><br>
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
     
     <?php
         

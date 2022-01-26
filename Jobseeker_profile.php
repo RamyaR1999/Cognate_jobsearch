@@ -102,7 +102,7 @@
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li>
+    <li><a href="Register-Member.php">Submit CV</a></li><br>
     
     <?php
 
@@ -110,7 +110,7 @@
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
     
     <?php
         
@@ -626,7 +626,7 @@ if($User_type == "Job Seeker"){
   <div class="u-align-center" style="padding-left: 40px; height:200px"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 30px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
+     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 100px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -696,7 +696,7 @@ if($User_type == "Job Seeker"){
   <div class="u-align-center" style="padding-left: 40px;"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 30px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
+     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 100px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">

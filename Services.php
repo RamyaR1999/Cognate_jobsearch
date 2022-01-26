@@ -126,14 +126,14 @@ if (isset($_POST['submit'])){
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li>    
+    <li><a href="Register-Member.php">Submit CV</a></li><br>
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
     
     <?php
         
@@ -151,7 +151,7 @@ if (isset($_POST['submit'])){
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit Job</a></li>
+    <li><a href="submit_job.php">Submit Job</a></li><br>
    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="ourSolution.php">Our Solutions</a></li> -->
