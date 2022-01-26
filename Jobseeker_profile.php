@@ -39,9 +39,8 @@
       <link rel="stylesheet" href="assets/css/responsive.css">
 
 
- <link rel="stylesheet" href="nicepage.css" media="screen">
+     <link rel="stylesheet" href="nicepage.css" media="screen">
 
-<link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -98,7 +97,7 @@
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
     </li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
 
@@ -279,174 +278,32 @@
   }
 </style>
 
-   <section class="u-clearfix u-section-1" id="sec-8459">
-      <div class="u-clearfix u-sheet u-sheet-1">
-          <div class="" style="padding-left: 108px;">
-        <h3 class="u-align-center u-text u-text-1">Job Seekers&nbsp;</h3><br>
-    </div>
-
-
-    <br>
-
-<div class="u-layout-row"style="min-width: 100%;">
-<form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
-<div class="u-align-left" style="min-width: 300px;">
-
- <h6 class="" style="font-weight: 500;">Search CVs</h6>
-     <!-- <form action="" method="post" autocomplete="off">
-         <div class="input-group">
-             <input name="Fullname" id="Fullname" type="text" placeholder="Search for Name" class="form-control" style="width: 300px">
-           </div>
-      </form> -->
-
-<!-- <div class="input-group">
-         <select type="text" class="form-control" name="Skills"id="Skills"> -->
-                      
-                        <?php      
-
-                        //     $query="SELECT Skills FROM skills";
-                        //     $select_skills=mysqli_query($connection,$query);
-
-                        //      if(!$select_skills) {
-            
-                        //       die("Query Failed" . mysqli_error($connection));
-                        //   } 
-
-                        //     while($row=mysqli_fetch_assoc($select_skills)){
-
-                        //     $skill=$row['Skills'];               
-
-                        //    if($skill == $Skills) {
-                            
-                        //  echo "<option value='$Skill'>$skill</option>";
-                       
-                        // }else{
-                            
-                        // echo "<option value='$skill'>$skill</option>";
-             
-                        //  }     
-                        // } 
-                       
-                        // $Skill=$_POST['Skills'];
-
-                        // if(!empty($Skill)){
-
-                        //   echo "<option selected value='$Skill'> $Skill </option>";
-                           
-                        // }else{
-
-                        //   echo "<option selected value='Select Skill'>Select Skill</option>";
-                          
-                        // }
-                        
-                     ?>
-       <!--   </select>
-     </div> -->
-
-<!-- <h6>Industry</h6>
-<div class="input-group">
-         <select type="text" class="form-control" name="Industry"id="Industry"> -->
-                      
-                        <?php      
-
-                        //     $query="SELECT Industry FROM Industry";
-                        //     $select_industry=mysqli_query($connection,$query);
-
-                        //      if(!$select_industry) {
-            
-                        //       die("Query Failed" . mysqli_error($connection));
-                        //   } 
-
-                        //     while($row=mysqli_fetch_assoc($select_industry)){
-
-                        //     $industry=$row['Industry'];               
-
-                        //    if($industry == $Industry) {
-                            
-                        //  echo "<option value='$Industries'>$industry</option>";
-                       
-                        // }else{
-                            
-                        // echo "<option value='$industry'>$industry</option>";
-             
-                        //  }     
-                        // } 
-                       
-                        // $Industries=$_POST['Industry'];
-
-                        // if(!empty($Industries)){
-
-                        //   echo "<option selected value='$Industries'> $Industries </option>";
-                           
-                        // }else{
-
-                        //   echo "<option selected value='Select Industry'>Select Industry</option>";
-                          
-                        // }
-                        
-                     ?>
-        <!--  </select>
-     </div>
-  <br> -->
-
-      <!-- <h6>Education</h6>
-      <div class="input-group">
-          <select type="text" class="form-control" name="Education"id="Education"> -->
-              <?php      
-
-                    // $query="SELECT Education FROM Education";
-                    // $select_education=mysqli_query($connection,$query);
-
-                    //  if(!$select_education) {
+<section class="u-clearfix u-section-1" id="sec-8459">
     
-                    //   die("Query Failed" . mysqli_error($connection));
-                    //  } 
+      <div class="u-clearfix u-sheet u-sheet-1">
 
-                    //  while($row=mysqli_fetch_assoc($select_education)){
 
-                    //  $education=$row['Education'];               
-
-                    //    if($education == $Education) {
-                            
-                    //      echo "<option value='$Educate'>$education</option>";
-                       
-                    //     }else{
-                            
-                    //     echo "<option value='$education'>$education</option>";
-             
-                    //      }     
-                    //     } 
-                       
-                    //     $Educate=$_POST['Education'];
-
-                    //     if(!empty($Educate)){
-
-                    //       echo "<option selected value='$Educate'> $Educate </option>";
-                           
-                    //     }else{
-
-                    //       echo "<option selected value='Select Education'>Select Education</option>";
-                          
-                    //     }
-
-                    ?>           
-        <!--  </select>
-     </div>
-<br> -->
-
+<form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
 <br>
-<h6>Skills</h6>
-
+<div class="col-md-4">
+ <h6 class="" style="font-weight: 500; font-size: 0.90rem;">Search CVs</h6>
+</div>
+<div class="u-layout-row">
+<div class="col-md-2">
+<!-- <h6 style="font-size: 0.90rem;">Skills</h6> -->
 <form action="" method="post" autocomplete="off">
     <div class="input-group">
-       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control" style="width: 300px">
+       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
+       <!-- <button name="submit" class="btn head-btn2" style="padding: 0.4rem 2rem;" type="submit">
+          <i class="fa fa-search"></i>
+       </button> -->
    </div>
 </form>
+</div>
 
-  <br>
-
-  <h6>Experience</h6>
-<div class="input-group">
+<!-- <div class="col-md-3"> -->
+<!-- <h6 style="font-size: 0.90rem;">Experience</h6> -->
+<div class="input-group" style="width: 140px;">
          <select type="text" class="form-control" name="Experience_years"id="Experience_years">
                       
              
@@ -489,59 +346,18 @@
                         
                      ?>
          </select>
-     </div>
-   <br>
-  <!--  <h6>Function</h6>
-       <div class="input-group">
-          <select type="text" class="form-control" name="Function"id="Function"> -->
-                <?php      
+         
+ </div>
+ <!-- </div> -->
+  <button name="submit" style="padding: 0.2rem 1rem;" class="btn head-btn2" type="submit">
+    <i class="fa fa-search"></i>
+  </button>
 
-                        //     $query="SELECT Function FROM function";
-                        //     $select_function=mysqli_query($connection,$query);
-
-                        //      if(!$select_function) {
-            
-                        //       die("Query Failed" . mysqli_error($connection));
-                        //   } 
-
-                        //     while($row=mysqli_fetch_assoc($select_function)){
-
-                        //     $function=$row['Function'];               
-
-                        //    if($function == $Function) {
-                            
-                        //  echo "<option value='$Functions'>$function</option>";
-                       
-                        // }else{
-                            
-                        // echo "<option value='$function'>$function</option>";
-             
-                        //  }     
-                        // } 
-                       
-                        // $Functions=$_POST['Function'];
-
-                        // if(!empty($Functions)){
-
-                        //   echo "<option selected value='$Functions'> $Functions </option>";
-                           
-                        // }else{
-
-                        //   echo "<option selected value='Select Function'> Select Function </option>";
-
-                        // }
-
-                          ?>         
-        <!--   </select>
-      </div>
- <br>       -->   
-<center><button name="submit" style="padding: 0.8rem 2rem;" class="btn head-btn2" type="submit">
-    <i class="fa fa-search">Search</i>
-  </button></center>
-  </div>
+</div>
 </form>
-
-<div class="u-align-right" style="padding-left: 40px; float: left;">
+<br>
+<div class="row justify-content-md-center align-items-center h-100">
+<div class="u-layout-row">
 <?php
 
  if (isset($_POST['submit'])){
@@ -616,17 +432,17 @@ if($User_type == "Job Seeker"){
     <div class="u-layout-row">
         <div class="u-align-left" style="width: 520px;">
 
-        <h4><b><?php echo $Fullname; ?></b></h4> 
-        <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
-        <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
-        <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
-        <p><?php echo $Email; ?></p>
+        <h6><b><?php echo $Fullname; ?></b></h6><br>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
 
   </div>
-  <div class="u-align-center" style="padding-left: 40px; height:200px"> 
+  <div class="u-align-center" style="padding-left: 40px;"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 100px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
+     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -684,19 +500,19 @@ if($User_type == "Job Seeker"){
 <div class="card">
 <div class="container">
     <div class="u-layout-row">
-        <div class="u-align-left" style="width: 520px;">
+        <div class="u-align-left" style="width: 480px;">
 
-        <h4><b><?php echo $Fullname; ?></b></h4> 
-        <p>Skills:&nbsp;&nbsp;<?php echo $Skills; ?></p>
-        <p>Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?></p>
-        <p>Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
-        <p><?php echo $Email; ?></p>
+        <h6><b><?php echo $Fullname; ?></b></h6><br>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
 
   </div>
   <div class="u-align-center" style="padding-left: 40px;"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn1' style='padding: 1.2rem 1rem; margin-top: 100px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
+     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
@@ -724,23 +540,44 @@ if($User_type == "Job Seeker"){
          header("Location:Jobseeker_profile.php");
      }
 ?>
-</div>
-     </div>          
+
+  </div>       
    </div>
+</div>
 </section>
 
 <br>
 <br>
 <br>
 <br>
+
+
+<style>
+.u-sheet-1 .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+@media (min-width: 768px)
+.justify-content-md-center {
+    justify-content: center !important;
+}
+</style>
+
 <style>
 .card {
   display: grid;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: flex;
-  margin-bottom: 22px;
-  padding-bottom: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
 }
 
 .card:hover {
@@ -748,12 +585,13 @@ if($User_type == "Job Seeker"){
   box-shadow: 0 8px 16px 0 rgba(107, 115, 109);
 }
 
-.container {
+.card .container {
   padding: 2px 16px;
   margin-top: 22px;
 
 }
 </style>
+
 
 <!-- Autocomplete Script -->
 <script>
