@@ -306,16 +306,16 @@ if (isset($_POST['search'])){
 
 
 
-    <section class="u-clearfix u-section-1" id="sec-2d18">
+<!--     <section class="u-clearfix u-section-1" id="sec-2d18">
     <div style="background-image: url('ajob1.jfif'); background-repeat:no-repeat;  background-attachment: fixed;
   background-size: cover;">
-    <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="crimson" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,80C640,85,800,139,960,160C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
--->  <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default  u-text-1" style="color:white;">“The people who are crazy enough to think they can change the world are the ones who do.”</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="crimson" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,80C640,85,800,139,960,160C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+  <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-align-left u-text u-text-default  u-text-2" style="color:white;">“The people who are crazy enough to think they can change the world are the ones who do.”</h4>
        
 </div>
       </div>
-    </section>
+    </section> -->
 
 <style>    
 .u-form-horizontal .u-input {
@@ -325,12 +325,9 @@ if (isset($_POST['search'])){
 
 }
 
-/*.u-custom-color-2, .u-body.u-custom-color-2, .u-container-style.u-custom-color-2:before, .u-container-layout.u-custom-color-2:before, .u-table-alt-custom-color-2 tr:nth-child(even) {
-    color: #ff6258;*/
-
 </style>
 
-    <section class="u-clearfix u-section-2" id="sec-a8b6">
+    <section class="u-clearfix u-section-2" id="sec-a8b6" style="height: 150px;">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1">
           <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" source="custom" name="form" style="padding: 10px;">
@@ -341,24 +338,16 @@ if (isset($_POST['search'])){
               <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="" class="btn head-btn2" style="align-center;padding: 20px;">Search</a>
+              <a href="" class="btn head-btn2" style="align-left;padding: 20px;">Search</a>
               <input type="submit" name="search" value="submit" class="u-form-control-hidden">
             </div>
-            <!-- <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse"> -->
           </form>
-         
-
-
-	
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-3" id="sec-41fd">
+    <div class="card">
+    <section class="u-clearfix u-section-3" id="sec-41fd" style="align-left">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <div class="u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
 
 
 <?php
@@ -389,7 +378,7 @@ if (isset($_POST['search'])){
              $Job_posted = $row['Job_posted'];
 ?>
 
-    <div class="u-container-style u-list-item u-repeater-item">
+    <div class="u-container-style u-list-item u-repeater-item" style="align-left">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                <br><br>
                 <p class="u-text u-text-default u-text-1">
@@ -400,7 +389,7 @@ if (isset($_POST['search'])){
                 <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p><br>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-11"><?php echo $Skills; ?></p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" target="_blank">Apply Now</a>
+                    <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" style="align-right" target="_blank">Apply Now</a>
               </div>
             </div>
 
@@ -408,7 +397,7 @@ if (isset($_POST['search'])){
            }
 }else{
 
-   $per_page=3;  
+   $per_page=5;  
                 
     if(isset($_GET['page'])){
         
@@ -447,62 +436,34 @@ if (isset($_POST['search'])){
      $Location = $row['Location'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_description = substr($row['Job_description'],0,150);
+     $Job_description = substr($row['Job_description'],0,500);
 
 
 ?>
 
     
-          <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-               <br><br>
-                <p class="u-text u-text-default u-text-1">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
-                </p>
+          <div class="u-container-style u-list-item u-repeater-item" style="align-left">
+              <div class="u-container-layout u-similar-container u-container-layout-1" style="align-left">
+                <div class="card" style="align-left">
+                <br>
+                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
+
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
-                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" target="_blank">Apply Now</a>
+                <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
+                <p class="u-text u-text-2"> <?php echo $Job_description; ?> ....</p>
               </div>
-            </div>
+          </div>
+        </div>
+        <div class="container" style="align-right">
+        <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" target="_blank">Apply Now</a>
+    </div>
 
 
     <?php  }  } ?>
 
           </div>
-        </div>
-        <!-- <div class="u-container-style u-group u-group-1">
-          <div class="u-container-layout u-container-layout-4">
-            <p class="u-text u-text-default u-text-13">jobs by region</p>
-            <p class="u-text u-text-default u-text-14">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" href="">Andhra Pradesh</a>
-            </p>
-            <p class="u-text u-text-default u-text-15">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" href="">Karnataka</a>
-            </p>
-            <p class="u-text u-text-default u-text-16">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9" href="">Tamil Nadu</a>
-            </p>
-            <p class="u-text u-text-default u-text-17">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10" href="">Kerala</a>
-            </p>
-            <p class="u-text u-text-default u-text-18">job category</p>
-            <p class="u-text u-text-default u-text-19">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11" href="">Software Engineer</a>
-            </p>
-            <p class="u-text u-text-default u-text-20">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12" href="">Sales Executive</a>
-            </p>
-            <p class="u-text u-text-default u-text-21">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13" href="">Accountant</a>
-            </p>
-            <p class="u-text u-text-default u-text-22">
-              <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14" href="">Project Manager</a>
-            </p>
-          </div>
-        </div> -->
-      </div>
     </section>
+</div>
 
 <ul class="pager">
 
