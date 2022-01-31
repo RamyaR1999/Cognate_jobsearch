@@ -58,7 +58,7 @@
          
          $id = $connection -> insert_id;
 
-        $_SESSION['Apply_Job'] = "https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/Apply_Job.php?Job_details=$id&$Job_title";
+        $_SESSION['Apply_Job'] = "https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/Job_details.php?Job_details=$id&$Job_title";
 
 
 
