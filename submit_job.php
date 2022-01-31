@@ -62,7 +62,7 @@
 
 
 
-          header( "Location: submit_job.php" );
+          // header( "Location: submit_job.php" );
 
 //  }
 
@@ -460,6 +460,13 @@
      </div>
    </div>
 </section>  
+
+<?php
+                
+    if(isset($_SESSION['Apply_Job'])){
+
+     ?>
+
 <div class="container">  
   <!-- .modal -->
   <div class="modal fade" id="Mymodal">
@@ -474,19 +481,19 @@
             Copy the link to share
           </h4>                                                             
         </div> 
-        <div class="modal-body">
+        <div class="modal-body" id="copyContent">
           <?php echo $_SESSION['Apply_Job']; ?>
         </div>   
         <div class="modal-footer"> 
-          <button type="button" class="btn btn-default">
-            Copy
+          <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
+            Click to Copy
           </button>
-          <!-- <a href="Available_jobs.php" type="button" class="btn btn-default">
+          <a href="Available_jobs.php" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
             Close
-          </a> -->
-          <button type="submit" name="button" class="btn btn-default" data-dismiss="modal">
+          </a>
+          <!-- <button type="submit" name="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1" data-dismiss="modal">
             Close
-          </button>                          
+          </button> -->                          
         </div>
         </form>
       </div>                                                                       
@@ -494,11 +501,54 @@
   </div>
 </div>
 
+<?php
+
+    unset($_SESSION['Apply_Job']);
+  }
+        
+?>
+
 <style>
     .modal-backdrop.show {
     opacity: 0.0;
 }
 </style>
+
+<script>
+
+copyToClipboard(document.getElementById("content"));
+
+document.getElementById("clickCopy").onclick = function() {
+  copyToClipboard(document.getElementById("copyContent"));
+}
+
+
+/**
+* This will copy the innerHTML of an element to the clipboard
+* @param element reference OR string
+*/
+function copyToClipboard(e) {
+    var tempItem = document.createElement('input');
+
+    tempItem.setAttribute('type','text');
+    tempItem.setAttribute('display','none');
+    
+    let content = e;
+    if (e instanceof HTMLElement) {
+        content = e.innerHTML;
+    }
+    
+    tempItem.setAttribute('value',content);
+    document.body.appendChild(tempItem);
+    
+    tempItem.select();
+    document.execCommand('Copy');
+
+    tempItem.parentElement.removeChild(tempItem);
+}
+
+</script>
+
 
 </body>
 
