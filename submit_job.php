@@ -62,7 +62,7 @@
 
 
 
-          header( "Location: popup.php" );
+          header( "Location: submit_job.php" );
 
 //  }
 
@@ -481,12 +481,12 @@
           <button type="button" class="btn btn-default">
             Copy
           </button>
-          <a href="Available_jobs.php" type="button" class="btn btn-default">
+          <!-- <a href="Available_jobs.php" type="button" class="btn btn-default">
             Close
-          </a>
-          <!-- <button type="submit" name="button" class="btn btn-default" data-dismiss="modal">
+          </a> -->
+          <button type="submit" name="button" class="btn btn-default" data-dismiss="modal">
             Close
-          </button>    -->                       
+          </button>                          
         </div>
         </form>
       </div>                                                                       
