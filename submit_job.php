@@ -1,9 +1,11 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
+
 <?php 
 
      if(isset($_POST['submit'])){
 
+         $id = $_POST['id'];
          $Job_title = $_POST['Job_title'];
          $Job_description = $_POST['Job_description'];
          $Service = $_POST['Service'];
@@ -48,18 +50,20 @@
         $query .= "VALUES ('{$Job_title}','{$Location}','{$Location_country}','{$Service}','{$Sector}','{$Skills}','{$Job_description}','{$Job_type}','{$Job_posted}','{$Fullname}','{$Email}','Cognate Global Business Solutions PRIVATE LIMITED','{$Phone}')";
              
         $jobs_query = mysqli_query($connection,$query);
-
-            
-            // move_uploaded_file($_FILES['CV']['tmp_name'], $upload);
       
         if(!$jobs_query) {
             
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
-          
-         $_SESSION['status'] = "Registration Was Successful Please Sign In"; 
-          header( "Location: Available_jobs.php" );  
-          
+         
+         $id = $connection -> insert_id;
+
+        $_SESSION['Apply_Job'] = "https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/Apply_Job.php?Job_details=$id&$Job_title";
+
+
+
+          header( "Location: popup.php" );
+
 //  }
 
 // }
@@ -88,6 +92,7 @@
 
   ?>
 
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -114,6 +119,10 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/responsive.css">
 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
  <link rel="stylesheet" href="SignIn.css" media="screen">
@@ -441,12 +450,9 @@
                      </div>
                     &nbsp;
                     <div class="form-group m-0">
-                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Submit
+                        <button type="submit" name="submit"  data-toggle="modal" data-target="#Mymodal" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Submit
                         </button>
                     </div>
-                    <!-- <div class="mt-4 text-center">
-                        Already have an account? <a href="Member-Login.php">Sign In</a>
-                    </div> -->
                 </form>
             </div>
         </div>
@@ -454,6 +460,46 @@
      </div>
    </div>
 </section>  
+<div class="container">  
+  <!-- .modal -->
+  <div class="modal fade" id="Mymodal">
+    <div class="modal-dialog">
+      <div class="modal-content" style="min-width: 600px;">
+    <form action="" method="POST">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">
+            ×
+          </button>  -->
+          <h4 class="modal-title">
+            Copy the link to share
+          </h4>                                                             
+        </div> 
+        <div class="modal-body">
+          <?php echo $_SESSION['Apply_Job']; ?>
+        </div>   
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-default">
+            Copy
+          </button>
+          <a href="Available_jobs.php" type="button" class="btn btn-default">
+            Close
+          </a>
+          <!-- <button type="submit" name="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>    -->                       
+        </div>
+        </form>
+      </div>                                                                       
+    </div>                                      
+  </div>
+</div>
+
+<style>
+    .modal-backdrop.show {
+    opacity: 0.0;
+}
+</style>
+
 </body>
 
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
