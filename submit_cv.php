@@ -8,12 +8,12 @@ if(isset($_POST['submit'])){
    require('phpmailer/class.phpmailer.php');
 
 $mail = new PHPMailer;
-$link = "http://localhost:8889/demo/Cognate_jobsearch/email_verification.php";
+$link = "https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/email_verification.php";
 
 //OTP generate
 $rndno=rand(100000, 999999);
 
-#$mail->SMTPDebug = 3;
+// #$mail->SMTPDebug = 3;
 
 $mail->isSMTP();
 
@@ -31,7 +31,7 @@ $mail->SMTPSecure='tls';
          $Image=  $_POST['Image'];
          $City=  $_POST['City'];
          $Industry=  $_POST['Industry'];
-         $Skills = $_POST['Skills'];
+         $Skills=  $_POST['Skills'];
          $Function=  $_POST['Function'];
          $Education =$_POST['Education'];
          $Experience_years =$_POST['Experience_years'];
@@ -42,32 +42,20 @@ $mail->SMTPSecure='tls';
          $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
          
          $email_verification_link = $_POST['email_verification_link'];
-         // $CV = $_FILES['CV']['Name'];
-         // $upload = "uploads/".$CV;
 
          $CV = $_FILES['file']['name'];
          $upload_tempname = $_FILES['file']['tmp_name'];
-         $upload_dir = 'images';
+         $upload_dir = 'cv';
 
          $otp=$_POST['otp'];
          $otp=$rndno;
          $error = 0;
 
         move_uploaded_file($upload_tempname,$upload_dir.'/'.$CV);
-          // if(empty($Image)){
-            
-          //   $query = "SELECT * FROM users WHERE id = $id ";
-          //   $select_image = mysqli_query($connection,$query);
-                
-          //   while($row = mysqli_fetch_array($select_image)){
-                
-          //   $CV = $row['CV'];
-              
-          //      }
-            
-          // }
 
-      if(!empty($Fullname) && !empty($Phone) && !empty($Email) && !empty($Password) && !empty($City) && !empty($Industry) && !empty($Skills) && !empty($Function) && !empty($Education) && !empty($Experience_years) && !empty($Experience_months) && !empty($Current_Salary_lakhs) && !empty($Current_Salary_thousand) && !empty($Expected_Salary_lakhs) && !empty($Expected_Salary_thousand) && !empty($upload_tempname)){
+      if(!empty($Fullname) && !empty($Email) && !empty($Password)
+      && !empty($Confirm_password)){
+       if(!empty($upload_tempname)){
        
       $Password = mysqli_real_escape_string($connection,$_POST['Password']);
       $Confirm_password = mysqli_real_escape_string($connection,$_POST['Confirm_password']);
@@ -75,8 +63,8 @@ $mail->SMTPSecure='tls';
       $Confirm_password = md5($Confirm_password);              
      
       if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
-            
-            
+          
+       
         $uppercase  = preg_match('@[A-Z]@', $Password);
         $lowercase  = preg_match('@[a-z]@', $Password);
         $number     = preg_match('@[0-9]@', $Password);
@@ -86,7 +74,7 @@ $mail->SMTPSecure='tls';
             
         if($Password == $Confirm_password){
         
-        if(preg_match("/^[0-9]{10}$/", $Phone)) {   
+        // if(preg_match("/^[0-9]{10}$/", $Phone)) {   
 
 
 
@@ -104,52 +92,49 @@ $mail->SMTPSecure='tls';
             }
         }else {
 
+              $_SESSION['otp'] = $otp;
+              $_SESSION['Email'] = $Email;
+              $_SESSION['email_verification_link'] = $email_verification_link; 
+
+
+              $mail->Username = 'CGBSTech2021@gmail.com';
+              $mail->Password = 'cgbs@2021';
+
+              $mail->setFrom ('CGBSTech2021@gmail.com');
+              $mail->addAddress($_POST['Email'],$_POST['Fullname']);
+              #$mail->addReplyTo( $_POST['email'],$_POST['name']);
+              
+              $mail->isHTML(true);
+              $mail->Subject = "Email Verification";
+              $mail->Body    = 'Here is the verification link'.' '.$link;
+          
+          if(!$mail->send()) {
+             echo "Mail could not be sent.". $mail->ErrorInfo;
+          }else{
+
         
         $query = "INSERT INTO users (Fullname,Email,email_verification_link,Password,Confirm_password,Phone,Image,City,Industry,Skills,Function,Education,Experience_years,Experience_months,Current_Salary_lakhs,Current_Salary_thousand,Expected_Salary_lakhs,Expected_Salary_thousand,CV, otp) ";
         $query .= "VALUES ('{$Fullname}','{$Email}','{$link}','{$Password}','{$Confirm_password}','{$Phone}','profile.png','$City','$Industry','$Skills','$Function','$Education','$Experience_years','$Experience_months','$Current_Salary_lakhs','$Current_Salary_thousand','$Expected_Salary_lakhs','$Expected_Salary_thousand','$CV','$rndno')";
              
         $register_query = mysqli_query($connection,$query);
-            
-        // move_uploaded_file($upload,"images/$CV");
       
         if(!$register_query) {
             
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
           
-         $_SESSION['status'] = "Registration Was Successful Please Sign In";
-
-          $_SESSION['otp'] = $otp;
-          $_SESSION['email'] = $email;
-          $_SESSION['email_verification_link'] = $email_verification_link; 
-
-
-          $mail->Username = 'CGBSTech2021@gmail.com';
-          $mail->Password = 'cgbs@2021';
-
-          $mail->setFrom ('barthalomena@gmail.com');
-          $mail->addAddress($_POST['Email'],$_POST['Fullname']);
-          #$mail->addReplyTo( $_POST['email'],$_POST['name']);
-          
-          $mail->isHTML(true);
-          $mail->Subject = "Email Verification";
-          $mail->Body    = 'Here is the verification link'.' '.$link;
-          
-          if(!$mail->send()) {
-             echo "Message could not be sent.". $mail->ErrorInfo;
-          }else{
              $message =  '<label class="text-success">Register Done, Please check your mail.</label>';
+            // $_SESSION['Register_status'] ="Register done please login";
+            //  header( "Location: Member-Login.php" ); 
           }        
-           
-              // header( "Location: otp.php" ); 
         
  }
 
 }
-          }else{
-              $message_phone = "Invalid Phone No";
+        //   }else{
+        //       $message_phone = "Invalid Phone No";
             
-        }
+        // }
             
           }else{
             
@@ -160,14 +145,17 @@ $mail->SMTPSecure='tls';
               $message_strnpassword = "password contain atleast 8 characters";
               
        }
-
-          }else{
-              $message_Fullname ="Only Alphabets are allowed in Fullname";
+            }else{
+              $message_Fullname ="Only Alphabets are allowed in fullname";
           
        }
-          
+
+         }else{
+
+          $empty_cv = "CV is required";
+       }
           }else{
-             // $empty_Fullname = "Fullname is required";
+             
              // $empty_email = "email is required";
              // $empty_password = "password is required";
              // $empty_cpassword = "confirm password is required";
@@ -216,24 +204,25 @@ $mail->SMTPSecure='tls';
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Register-Member.css" media="screen">
+ <link rel="stylesheet" href="SignIn.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
- <!-- Profile Icon -->
+ 
+ <!-- Password Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+ <!-- Profile Icon -->
  <link rel="stylesheet" href="assets/css/shared/style.css">
  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<!-- Autocomplete -->
-<script type='text/javascript' src='js/autocomplete.js'></script>
-<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+ <!-- Autocomplete -->
+ <script type='text/javascript' src='js/autocomplete.js'></script>
+ <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
 
    </head>
 
@@ -267,13 +256,13 @@ $mail->SMTPSecure='tls';
     <div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
-        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
     </li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li><br>    
+    <li><a href="submit_cv.php">Submit CV</a></li><br>
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
@@ -350,7 +339,7 @@ $mail->SMTPSecure='tls';
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Fullname=  $row['Fullname'];
+           $Login_Fullname=  $row['Fullname'];
       }
   }
 ?>
@@ -367,7 +356,7 @@ $mail->SMTPSecure='tls';
                       
                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $_SESSION['Fullname']; 
+                        echo $Login_Fullname; 
                          
                       }
                       
@@ -442,576 +431,189 @@ $mail->SMTPSecure='tls';
 
 </style>
 
-<style>
-.u-input {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  background-image: none;
-  background-clip: padding-box;
-  border: 1px solid #c9ced1;
-  border-radius: 3px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  background-color: #ffffff;
-  color: inherit;
-  height: 48px;
-}
-  .u-input ~ .focus-border{
-    position: absolute;
-    height: 48px;
-    bottom: 0;
-    left: 0;
-    /*width: 0;*/
-    transition: 0.4s;
-    border-radius: 2px;
-    }
-   .u-input:focus ~ .focus-border{
-     width: 100%;
-     transition: 0.4s;
-     border: 1px solid #3399FF;
-     cursor: text;
-    } 
-   .col-sm-12{
-    padding-right: 0px;
-    padding-left: 0px
-    }
-</style>
-<style>
-  span{
-    font-family: "Barlow",sans-serif;
-   font-weight: 400;
-  }
-</style>
 
-  <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">Upload Your Resume Here</h1>
-        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2"></h1>
-        <p class="u-align-left u-text u-text-default u-text-3"></p>
-      </div>
-    </section>
-    <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-      <div class="u-align-left card-header bg-transparent border-0">
-            <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>Enter your Details:</h3>
+<body class="my-login-page">
+
+        <div class="u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-1">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 150 100" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0197"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 100 100" x="10px" y="35px" id="svg-0197" style="fill:#fb246a"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+    c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
+    c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
+    C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
         </div>
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-radius-10 u- #f2f2f2 u-form-1">
-          <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
-                <div class="col-md-13">
-                   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6><br>
-                   <h6 class="text-center" style="color:#ff0000"></h6>
-               </div>
-                  <div class="u-form-group u-form-name u-form-group-1">
-                     <span >Fullname * </span>
-                     <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Fullname; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-1"placeholder="Enter the Fullname" name="Fullname">
-                          <span class="focus-border"></span>
+    <section class="h-100">
+        <div class="container h-100" style="opacity: 0.9">
+            <div class="row justify-content-md-center align-items-center h-100">
+                <div class="card-wrapper">
+
+        <div class="card fat">
+            <div class="card-body">
+                <h4 class="card-title">Submit CV</h4>
+  
+  <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
+    <form method="POST" class="my-login-validation" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="text">Fullname *</label>
+                        <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="form-control" name="Fullname" required autofocus>
+                        
+                        <span style="color:#ff0000"><?php echo $message_Fullname; ?></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail Address *</label>
+                        <input id="email" type="email" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="form-control" name="Email" required="">
+                        <div class="invalid-feedback">
+                            Email is invalid
                         </div>
-                          <h6 style="color:#ff0000"><?php echo $message_Fullname; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_Fullname; ?></h6>
-                      </div>&nbsp;
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >Email *</span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Email; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-2" placeholder="Enter the Email"name="Email">
-                          <span class="focus-border"></span>
+                        <span style="color:#ff0000"><?php echo $message_Email; ?></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <div style="position:relative" id="">
+                            <input type="Password" id="id_password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" class="form-control" required="">
+                            <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="togglePassword"></span></div>
                         </div>
-                          <h6 style="color:#ff0000"><?php echo $message_Email; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_email; ?></h6>
-                      </div>&nbsp;
-
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >Password * </span>
-                        <div class="col-sm-12">
-                          <input type="Password" id="id_Password" name="Password" value="<?php echo isset($_POST["Password"]) ? $_POST["Password"] : ''; ?>" placeholder="Enter the Password "class="u-input u-input-rectangle u-radius-3 u-white u-input-3">
-                           <span class="focus-border"></span>
-                         </div>
-                          <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassword; ?></h6>
-                           <h6 style="color:#ff0000"><?php echo $empty_password; ?></h6>
-                        </div>&nbsp;
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span > Confirm_password * </span>
-                        <div class="col-sm-12">
-                          <input type="Password"  value="<?php echo isset($_POST["Confirm_password"]) ? $_POST["Confirm_password"] : ''; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-4" placeholder="Enter the Confirm_password" name="Confirm_password">
-                          <span class="focus-border"></span>
+                        <div class="invalid-feedback">
+                            Password is required
                         </div>
-                          <h6 style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_cpassword; ?></h6>
-                      </div>&nbsp;
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >Phone * </span>
-                        <div class="col-sm-12">
-                          <input type="text" value="<?php echo $Phone; ?>" class="u-input u-input-rectangle u-radius-3 u-white u-input-5"placeholder="Enter the Phone no " name="Phone">
-                          <span class="focus-border"></span>
+                        <span style="color:#ff0000"><?php echo $message_strnpassword; ?></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Confirm Password *</label>
+                        <div style="position:relative" id="">
+                            <input type="password" id="cd_password" name="Confirm_password" value="<?php echo isset($_POST["Confirm_password"]) ? $_POST["Confirm_password"] : ''; ?>" class="form-control" required="">
+                            <!-- <div style="position: absolute; right: 10px; top: 7px; padding: 2px 7px; font-size: 12px; cursor: pointer;"><span class="far fa-eye" id="hidePassword"></span></div> -->
                         </div>
-                        <h6 style="color:#a7adb8"><?php echo '10-digit mobile number without prefixes' ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $message_phone; ?></h6>
-                          <h6 style="color:#ff0000"><?php echo $empty_phone; ?></h6>
-                      </div>&nbsp;
-
-                      <div class="u-form-group u-form-name u-form-group-2">
-                        <span >City * </span>
-                        <div class="col-sm-12">
-                          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-6" name="City"id="City">
-                            <option value="">-- please select city --</option>
-                            <option value="Agartala">Agartala</option>
-                            <option value="Agra">Agra</option>
-                            <option value="Ahmadnagar">Ahmadnagar</option>
-                            <option value="Ahmedabad">Ahmedabad</option>
-                            <option value="Allahabad">Allahabad</option>
-                            <option value="Amritsar">Amritsar</option>
-                            <option value="Bengaluru / Bangalore">Bengaluru / Bangalore</option>
-                            <option value="Bhubaneswar">Bhubaneswar</option>
-                            <option value="Chandigarh">Chandigarh</option>
-                            <option value="Chandrapur">Chandrapur</option>
-                            <option value="Chennai">Chennai</option>
-                            <option value="Chittoor">Chittoor</option>
-                            <option value="Coimbatore">Coimbatore</option>
-                            <option value="Cuttack">Cuttack</option>
-                            <option value="Dahod">Dahod</option>
-                            <option value="Daman">Daman</option>
-                            <option value="Dehradun">Dehradun</option>
-                            <option value="Delhi">Delhi</option>
-                            <option value="Delhi / NCR">Delhi / NCR</option>
-                            <option value="Dindigul">Dindigul</option>
-                            <option value="Ernakulam">Ernakulam</option>
-                          </select>&nbsp;
-                          <!-- <span class="focus-border"></span> -->
-                        </div>
-                          <h6 style="color:#ff0000"><?php echo $empty_city; ?></h6>
+                        <span style="color:#ff0000"><?php echo $message_cpassword; ?></span>
                     </div>
 
-      <div class="u-form-group u-form-name u-form-group-2">
-        <span >Industry * </span>
-        <div class="col-sm-12">
-           <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-7" name="Industry"id="Industry">
-              
-              <option value="">-- please select sector --</option>
-              <option value="Accounting / Finance">Accounting / Finance</option>
-              <option value="Banking & finance">Banking &amp; finance</option>
-              <option value="General Administration">General Administration</option>
-              <option value="Human Resources">Human Resources</option>
-              <option value="Information Technology">Information Technology</option>
-              <option value="Insurance">Insurance</option>
-              <option value="ITeS & BPO">ITeS &amp; BPO</option>
-              <option value="Manufacturing">Manufacturing</option>
-              <option value="Sales">Sales</option>
-              <option value="FMCG">FMCG</option>
-              <option value="Retail">Retail</option>
-              <option value="Telecom">Telecom</option>
-              <option value="Media & entertainment">Media &amp; entertainment</option>
-              <option value="Education">Education</option>
-              <option value="Hospitality & Tourism">Hospitality &amp; Tourism</option>
-              <option value="Consulting & VC">Consulting &amp; VC</option>
-              <option value="Other">Other</option>
-          </select>&nbsp;
-              <!-- <span class="focus-border"></span> -->
-            </div>
-            <h6 style="color:#ff0000"><?php echo $empty_industry; ?></h6>
-      </div>
-
-      <div class="u-form-group u-form-name u-form-group-2">
-        <span >Function * </span>
-        <div class="col-sm-12">
-          <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-8" name="Function"id="Function">
-            <option value="">-- please select function --</option>
-            <option value="Accounting / Tax / Company Secretary / Audit">Accounting / Tax / Company Secretary / Audit</option>
-            <option value="Agent">Agent</option>
-            <option value="Airline / Reservations / Ticketing / Travel">Airline / Reservations / Ticketing / Travel</option>
-            <option value="Analytics &amp; Business Intelligence">Analytics &amp; Business Intelligence</option>
-            <option value="Anchoring / TV / Films / Production">Anchoring / TV / Films / Production</option>
-            <option value="Architects / Interior Design / Naval Arch.">Architects / Interior Design / Naval Arch</option>
-            <option value="Art Director / Graphic / Web Designer">Art Director / Graphic / Web Designer</option>
-            <option value="Banking / Insurance">Banking / Insurance</option>
-            <option value="Beauty / Fitness / Spa Services">Beauty / Fitness / Spa Services</option>
-            <option value="Content / Journalism">Content / Journalism</option>
-            <option value="Corporate Planning / Consulting">Corporate Planning / Consulting</option>
-            <option value="CSR & Sustainability">CSR &amp; Sustainability</option>
-            <option value="Engineering Design / R&D">Engineering Design / R&D</option>
-            <option value="Export / Import / Merchandising">Export / Import / Merchandising</option>
-            <option value="Fashion / Garments / Merchandising">Fashion / Garments / Merchandising</option>
-            <option value="Guards / Security Services">Guards / Security Services</option>
-            <option value="Hotels / Restaurants">Hotels / Restaurants</option>
-            <option value="HR / Administration / IR">HR / Administration / IR</option>
-            <option value="IT - Hardware / Telecom / Technical Staff / Support">IT - Hardware / Telecom / Technical Staff / Support</option>
-            <option value="IT Software - Application Programming / Maintenance">IT Software - Application Programming / Maintenance</option>
-            <option value="IT Software - Client Server">IT Software - Client Server</option>
-            <option value="IT Software - DBA / Data warehousing">IT Software - DBA / Datawarehousing</option>
-            <option value="IT Software - Ecommerce / Internet Technologies">IT Software - Ecommerce / Internet Technologies</option>
-            <option value="IT Software - Embedded /EDA /VLSI /ASIC / Chip Des">IT Software - Embedded /EDA /VLSI /ASIC / Chip Des.</option>
-            <option value="IT Software - ERP / CRM">IT Software - ERP / CRM</option>
-            <option value="IT Software - Mainframe">IT Software - Mainframe</option>
-            <option value="IT Software - Middleware">IT Software - Middleware</option>
-            <option value="IT Software - Mobile">IT Software - Mobile</option>
-            <option value="IT Software - Network Administration / Security">IT Software - Network Administration / Security</option>
-            <option value="IT Software - QA & Testing">IT Software - QA & Testing</option>
-            <option value="IT Software - System Programming">IT Software - System Programming</option>
-            <option value="IT Software - Systems / EDP / MIS">IT Software - Systems / EDP / MIS</option>
-            <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
-            <option value="ITES / BPO / KPO / Customer Service / Operations">ITES / BPO / KPO / Customer Service / Operations</option>
-            <option value="Other">Other</option>
-            <!-- <option value="Legal">Legal</option>
-            <option value="Marketing / Advertising / MR / PR">Marketing / Advertising / MR / PR</option>
-            <option value="Packaging">Packaging</option>
-            <option value="Pharma / Biotech / Healthcare / Medical / R&amp;D">Pharma / Biotech / Healthcare / Medical / R&amp;D</option>
-            <option value="Production / Maintenance / Quality">Production / Maintenance / Quality</option>
-            <option value="Purchase / Logistics / Supply Chain">Purchase / Logistics / Supply Chain</option>
-            <option value="Sales / BD">Sales / BD</option>
-            <option value="Secretary / Front Office / Data Entry">Secretary / Front Office / Data Entry</option>
-            <option value="Self Employed / Consultants">Self Employed / Consultants</option>
-            <option value="Shipping">Shipping</option>
-            <option value="Site Engineering / Project Management">Site Engineering / Project Management</option>
-            <option value="Teaching / Education">Teaching / Education</option>
-            <option value="Ticketing / Travel / Airlines">Ticketing / Travel / Airlines</option>
-            <option value="Top Management">Top Management</option>
-            <option value="TV / Films / Production">TV / Films / Production</option>
-            <option value="Web / Graphic Design / Visualiser">Web / Graphic Design / Visualiser</option> -->
-        </select>&nbsp;
-        <!-- <span class="focus-border"></span> -->
-      </div>
-        <h6 style="color:#ff0000"><?php echo $empty_function; ?></h6>
-  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <span >Education * </span>
-                    <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-9" name="Education"id="Education">
-                          <option value="">-- please select education --</option>
-                          <option value="B.A">B.A</option>
-                          <option value="B.Arch">B.Arch</option>
-                          <option value="B.Com">B.Com</option>
-                          <option value="B.Ed">B.Ed</option>
-                          <option value="B.Pharma">B.Pharma</option>
-                          <option value="B.Sc">B.Sc</option>
-                          <option value="B.Tech/B.E">B.Tech/B.E.</option>
-                          <option value="BCA">BCA</option>
-                          <option value="BDS">BDS</option>
-                          <option value="BVSC">BVSC</option>
-                          <option value="CA">CA</option>
-                          <option value="CS">CS</option>
-                          <option value="Diploma">Diploma</option>
-                          <option value="H.Sc/+2/Intermediate">H.Sc/+2/Intermediate</option>
-                          <option value="ICWA (CMA)">ICWA (CMA)</option>
-                          <option value="ITI">ITI</option>
-                          <option value="LLB">LLB</option>
-                          <option value="LLM">LLM</option>
-                          <option value="M.A">M.A</option>
-                        </select>&nbsp;
-                        <!-- <span class="focus-border"></span> -->
-                      </div>
-                        <h6 style="color:#ff0000"><?php echo $empty_education; ?></h6>
-                  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <div class="u-layout-row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <span >Experience *</span><br>
-                                <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-10" name="Experience_years"placeholder="Enter your Experience years"id="Experience_years">
-                          <option value="">years</option>
-                          <option value="0 years">0</option>
-                          <option value="1 year">1</option>
-                          <option value="2 years">2</option>
-                          <option value="3 years">3</option>
-                          <option value="4 years">4</option>
-                          <option value="5 years">5</option>
-                          <option value="6 years">6</option>
-                          <option value="7 years">7</option>
-                          <option value="8 years">8</option>
-                          <option value="9 years">9</option>
-                          <option value="10 years">10</option>
-                          <option value="11 years">11</option>
-                          <option value="12 years">12</option>
-                          <option value="13 years">13</option>
-                          <option value="14 years">14</option>
-                          <option value="15 years">15</option>
-                          <option value="16 years">16</option>
-                          <option value="17 years">17</option>
-                          <option value="18 years">18</option>
-                          <option value="19 years">19</option>
-                          <option value="20 years">20</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                    <div class="form-group row">
-                       <span class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Experience_months" placeholder="Enter your Experience_months"id="Experience_years">
-                             <option value="">months</option>
-                          <option value="0 months">0</option>
-                          <option value="1 month">1</option>
-                          <option value="2 months">2</option>
-                          <option value="3 months">3</option>
-                          <option value="4 months">4</option>
-                          <option value="5 months">5</option>
-                          <option value="6 months">6</option>
-                          <option value="7 months">7</option>
-                          <option value="8 months">8</option>
-                          <option value="9 months">9</option>
-                          <option value="10 months">10</option>
-                          <option value="11 months">11</option>
-                          <option value="12 months">12</option>
-                          <option value="13 months">13</option>
-                          <option value="14 months">14</option>
-                          <option value="15 months">15</option>
-                          <option value="16 months">16</option>
-                          <option value="17 months">17</option>
-                          <option value="18 months">18</option>
-                          <option value="19 months">19</option>
-                          <option value="20 months">20</option>
-                          <option value="21 months">21</option>
-                          <option value="22 months">22</option>
-                          <option value="23 months">23</option>
-                          <option value="24 months">24</option>
-                          <option value="25 months">25</option>
-                          <option value="26 months">26</option>
-                          <option value="27 months">27</option>
-                          <option value="28 months">28</option>
-                          <option value="29 months">29</option>
-                          <option value="30 months">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-                        <!-- <span class="focus-border"></span> -->
-                     
-                        <h6 style="color:#ff0000"><?php echo $empty_experience; ?></h6>
-                  </div>
-
-                  <div class="u-form-group u-form-name u-form-group-2">
-                    <div class="u-layout-row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <span > Current Salary *</span>
-                                <div class="col-sm-12">
-                        <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_lakhs" placeholder="Enter your Current Salary"id="Current_Salary">
-                          <option value="">lakhs</option>
-                          <option value="0 lakhs">0</option>
-                          <option value="1 lakhs">1</option>
-                          <option value="2 lakhs">2</option>
-                          <option value="3 lakhs">3</option>
-                          <option value="4 lakhs">4</option>
-                          <option value="5 lakhs">5</option>
-                          <option value="6 lakhs">6</option>
-                          <option value="7 lakhs">7</option>
-                          <option value="8 lakhs">8</option>
-                          <option value="9 lakhs">9</option>
-                          <option value="10 lakhs">10</option>
-                          <option value="11 lakhs">11</option>
-                          <option value="12 lakhs">12</option>
-                          <option value="13 lakhs">13</option>
-                          <option value="14 lakhs">14</option>
-                          <option value="15 lakhs">15</option>
-                          <option value="16 lakhs">16</option>
-                          <option value="17 lakhs">17</option>
-                          <option value="18 lakhs">18</option>
-                          <option value="19 lakhs">19</option>
-                          <option value="20 lakhs">20</option>
-                          <option value="21 lakhs">21</option>
-                          <option value="22 lakhs">22</option>
-                          <option value="23 lakhs">23</option>
-                          <option value="24 lakhs">24</option>
-                          <option value="25 lakhs">25</option>
-                          <option value="26 lakhs">26</option>
-                          <option value="27 lakhs">27</option>
-                          <option value="28 lakhs">28</option>
-                          <option value="29 lakhs">29</option>
-                          <option value="30 lakhs">30</option>  
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                    <div class="form-group row">
-                       <span  class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Current_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="">thousand</option>
-                          <option value="0">0</option>
-                          <option value="1 thousand">1</option>
-                          <option value="2 thousand">2</option>
-                          <option value="3 thousand">3</option>
-                          <option value="4 thousand">4</option>
-                          <option value="5 thousand">5</option>
-                          <option value="6 thousand">6</option>
-                          <option value="7 thousand">7</option>
-                          <option value="8 thousand">8</option>
-                          <option value="9 thousand">9</option>
-                          <option value="10 thousand">10</option>
-                          <option value="11 thousand">11</option>
-                          <option value="12 thousand">12</option>
-                          <option value="13 thousand">13</option>
-                          <option value="14 thousand">14</option>
-                          <option value="15 thousand">15</option>
-                          <option value="16 thousand">16</option>
-                          <option value="17 thousand">17</option>
-                          <option value="18 thousand">18</option>
-                          <option value="19 thousand">19</option>
-                          <option value="20 thousand">20</option>
-                          <option value="21 thousand">21</option>
-                          <option value="22 thousand">22</option>
-                          <option value="23 thousand">23</option>
-                          <option value="24 thousand">24</option>
-                          <option value="25 thousand">25</option>
-                          <option value="26 thousand">26</option>
-                          <option value="27 thousand">27</option>
-                          <option value="28 thousand">28</option>
-                          <option value="29 thousand">29</option>
-                          <option value="30 thousand">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-                        <!-- <span class="focus-border"></span> -->
-                    <h6 style="color:#ff0000"><?php echo $empty_Current_Salary; ?></h6>
-                  </div>
-                  <div class="u-form-group u-form-name u-form-group-2">
-                   
-                  <div class="u-layout-row">
-                    <div class="col-md-6">
-                        <div class="form-group row">
-                             <span> Expected Salary *</span>
-                             <div class="col-sm-12">
-                                <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_lakhs" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                                    <option value="">lakhs</option>
-                                    <option value="0 lakhs">0</option>
-                                    <option value="1 lakhs">1</option>
-                                    <option value="2 lakhs">2</option>
-                                    <option value="3 lakhs">3</option>
-                                    <option value="4 lakhs">4</option>
-                                    <option value="5 lakhs">5</option>
-                                    <option value="6 lakhs">6</option>
-                                    <option value="7 lakhs">7</option>
-                                    <option value="8 lakhs">8</option>
-                                    <option value="9 lakhs">9</option>
-                                    <option value="10 lakhs">10</option>
-                                    <option value="11 lakhs">11</option>
-                                    <option value="12 lakhs">12</option>
-                                    <option value="13 lakhs">13</option>
-                                    <option value="14 lakhs">14</option>
-                                    <option value="15 lakhs">15</option>
-                                    <option value="16 lakhs">16</option>
-                                    <option value="17 lakhs">17</option>
-                                    <option value="18 lakhs">18</option>
-                                    <option value="19 lakhs">19</option>
-                                    <option value="20 lakhs">20</option>
-                                    <option value="21 lakhs">21</option>
-                                    <option value="22 lakhs">22</option>
-                                    <option value="23 lakhs">23</option>
-                                    <option value="24 lakhs">24</option>
-                                    <option value="25 lakhs">25</option>
-                                    <option value="26 lakhs">26</option>
-                                    <option value="27 lakhs">27</option>
-                                    <option value="28 lakhs">28</option>
-                                    <option value="29 lakhs">29</option>
-                                    <option value="30 lakhs">30</option>  
-                        </select>
-                        </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6">
-                    <div class="form-group row">
-                       <span  class="col-sm-3 col-form-label"></span>
-                          <div class="col-sm-12">
-                            <select type="text" class="u-input u-input-rectangle u-radius-3 u-white u-input-11" name="Expected_Salary_thousand" placeholder="Enter your  Expected Salary"id="Expected_Salary">
-                             <option value="">thousand</option>
-                          <option value="0 thousand">0</option>
-                          <option value="1 thousand">1</option>
-                          <option value="2 thousand">2</option>
-                          <option value="3 thousand">3</option>
-                          <option value="4 thousand">4</option>
-                          <option value="5 thousand">5</option>
-                          <option value="6 thousand">6</option>
-                          <option value="7 thousand">7</option>
-                          <option value="8 thousand">8</option>
-                          <option value="9 thousand">9</option>
-                          <option value="10 thousand">10</option>
-                          <option value="11 thousand">11</option>
-                          <option value="12 thousand">12</option>
-                          <option value="13 thousand">13</option>
-                          <option value="14 thousand">14</option>
-                          <option value="15 thousand">15</option>
-                          <option value="16 thousand">16</option>
-                          <option value="17 thousand">17</option>
-                          <option value="18 thousand">18</option>
-                          <option value="19 thousand">19</option>
-                          <option value="20 thousand">20</option>
-                          <option value="21 thousand">21</option>
-                          <option value="22 thousand">22</option>
-                          <option value="23 thousand">23</option>
-                          <option value="24 thousand">24</option>
-                          <option value="25 thousand">25</option>
-                          <option value="26 thousand">26</option>
-                          <option value="27 thousand">27</option>
-                          <option value="28 thousand">28</option>
-                          <option value="29 thousand">29</option>
-                          <option value="30 thousand">30</option>  
-                        </select>
-                          </div>
-                    </div>
-                 </div>
-              </div>
-               <h6 style="color:#ff0000"><?php echo $empty_Expected_Salary; ?></h6>
-          </div>
-                       
-                  
-
-              <div class="u-form-group u-form-name u-form-group-2">
-                 <span >CV * </span>
-                   <div class="form-element">
-                     <div class="custom-file-upload">
-                        <!-- <div class="custom-file-upload-toggle">
-                          <div class="custom-file-upload-toggle-btn btn btn-prim">     
-                          </div>
-                        </div> -->
-                        <input type="file" name="file" id="" class="custom-file-upload-input" data-bit-id="cvFileUpload" />
-                        <span class="focus-border"></span>
+                    <div class="form-group">
+                 <label for="text">CV *</label>
+                     <div style="position:relative" id="">
+                        <input type="file" name="file" id="" class="custom-file-upload-input" style="" data-bit-id="cvFileUpload" />
                      </div>
-                    <span data-bit-output-upload-files="cvFileUpload"></span>
-                      <div> 
-                        <div  class="cms-file-upload-validator field-error" style="display:none;">
-                          <span class="cms-file-upload-validator-error-message">CV is required</span>
-                        </div>
-                      </div>
+                    <span style="color:#ff0000"><?php echo $empty_cv; ?></span>
+                  </div>
+
+                    <div class="form-group m-0">
+                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Submit
+                        </button>
                     </div>
-                    <h6 style="color:#ff0000"><?php echo $empty_cv; ?></h6>
-                </div>
+                    <div class="mt-4 text-center">
+                        Already have an account? <a href="Member-Login.php">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+       </div>
+     </div>
+   </div>
+</section>  
+</body>
 
-              <div class="u-align-center u-form-group u-form-submit">
-
-              <a href="" class="btn head-btn2 " style="align-center">Register</a>
-
-              <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
-              </div>
-            
-            <div class="u-form-send-message u-form-send-success">Thank you! Your Registraion is Successful</div>
-            <div class="u-form-send-error u-form-send-message">Registraion Unsuccesful.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
-        </div><br>
-      </div>
+<footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+          <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="twitter" target="_blank" href=""><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a27c"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-a27c"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="instagram" target="_blank" href=""><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7849"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-7849"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="linkedin" target="_blank" href=""><span class="u-icon u-social-icon u-social-linkedin u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-fb82"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-fb82"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M41.3,83.7H27.9V43.4h13.4V83.7z M34.6,37.9L34.6,37.9c-4.6,0-7.5-3.1-7.5-7c0-4,3-7,7.6-7s7.4,3,7.5,7
+            C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
+            H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
+          </a>
+        </div>
+      </div><!-- </footer> -->
+    <section class="u-backlink u-clearfix u-footer">
+      <main>
+        <p>Copyright &copy; Cognate Global alphabet 2021</p>
+      </main>
     </section>
-      </div>
-
-<?php include "footer.php"; ?>
 
 <script>
 
 const togglePassword = document.querySelector('#togglePassword');
-  const Password = document.querySelector('#id_Password');
+  const password = document.querySelector('#id_password');
  
   togglePassword.addEventListener('click', function (e) {
     // toggle the type attribute
-    const type = Password.getAttribute('type') === 'Password' ? 'text' : 'Password';
-    Password.setAttribute('type', type);
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
 });
 
 </script>
+<script>
+
+const hidePassword = document.querySelector('#hidePassword');
+  const cpassword = document.querySelector('#cd_password');
+ 
+  hidePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    cpassword.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+</script>
+
+<!-- Profile Icon -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+<!-- JS here -->
+  
+    <!-- All JS Custom Plugins Link Here here -->
+      <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+
+      <!-- Jquery Mobile Menu -->
+      <script src="assets/js/jquery.slicknav.min.js"></script>
+
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/price_rangs.js"></script>
+      <!-- Date Picker -->
+      <script src="assets/js/gijgo.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+      <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+      <script src="assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+      <script src="assets/js/jquery.scrollUp.min.js"></script>
+      <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+      
+      <!-- contact js -->
+      <script src="assets/js/contact.js"></script>
+      <script src="assets/js/jquery.form.js"></script>
+      <script src="assets/js/jquery.validate.min.js"></script>
+      <script src="assets/js/mail-script.js"></script>
+      <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        
+    <!-- Jquery Plugins, main Jquery -->  
+      <script src="assets/js/plugins.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
+
              

@@ -126,7 +126,7 @@ if (isset($_POST['submit'])){
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li><br>
+    <li><a href="submit_cv.php">Submit CV</a></li><br>
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
