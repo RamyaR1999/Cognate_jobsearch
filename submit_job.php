@@ -60,10 +60,7 @@
 
         $_SESSION['Apply_Job'] = "https://cognateglobal.com/cognateglobal.com/Cognate_jobsearch/2/Job_details.php?Job_details=$id&$Job_title";
 
-
-
-          // header( "Location: submit_job.php" );
-
+          // header( "refresh:20;url=submit_job.php" );
 //  }
 
 // }
@@ -444,8 +441,6 @@
                      <label for="">Skills </label>
                           <textarea class="form-control" rows="4" id="Skills" style="width: 320px;" name="Skills"><?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?></textarea>
 
-                           <!-- <input type="text" id="Skills" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" name="Skills" style="width: 320px;" required=""> -->
-
                            <span style="color:#ff0000"><?php echo $message_skills; ?></span>  
                      </div>
                     &nbsp;
@@ -462,14 +457,14 @@
 </section>  
 
 <?php
-                
+      
     if(isset($_SESSION['Apply_Job'])){
 
      ?>
 
-<div class="container">  
+<div class="container">
   <!-- .modal -->
-  <div class="modal fade" id="Mymodal">
+  <div class="modal fade show in" id="Mymodal">
     <div class="modal-dialog">
       <div class="modal-content" style="min-width: 600px;">
     <form action="" method="POST">
@@ -480,15 +475,15 @@
           <h4 class="modal-title">
             Copy the link to share
           </h4>                                                             
-        </div> 
-        <div class="modal-body" id="copyContent">
-          <?php echo $_SESSION['Apply_Job']; ?>
-        </div>   
+        </div>
+
+        <div class="modal-body" id="copyContent"><?php echo $_SESSION['Apply_Job']; ?></div>  
+
         <div class="modal-footer"> 
           <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
             Click to Copy
           </button>
-          <a href="Available_jobs.php" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
+          <a href="" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
             Close
           </a>
           <!-- <button type="submit" name="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1" data-dismiss="modal">
@@ -509,9 +504,9 @@
 ?>
 
 <style>
-    .modal-backdrop.show {
+  .modal-backdrop.show {
     opacity: 0.0;
-}
+  }
 </style>
 
 <script>
@@ -641,5 +636,3 @@ function copyToClipboard(e) {
 
   </body>
 </html>
-
-             
