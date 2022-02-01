@@ -168,7 +168,7 @@ $receiver_mail->Username = 'CGBSTech2021@gmail.com';
 $receiver_mail->Password = 'cgbs@2021';
 
 $receiver_mail->setFrom ('CGBSTech2021@gmail.com');
-$receiver_mail->addAddress('CGBSTech2021@gmail.com',$the_Fullname);
+$receiver_mail->addAddress($Job_Email,$the_Fullname);
 // $receiver_mail->addAttachment($CV);
 $receiver_mail->addAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
 $receiver_mail->isHTML(true);
@@ -230,7 +230,7 @@ if(!$receiver_mail->send()) {
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Apply job</title>
+    <title>CGBS-Apply job </title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -251,25 +251,25 @@ if(!$receiver_mail->send()) {
 
 
  <link rel="stylesheet" href="nicepage.css" media="screen">
- <link rel="stylesheet" href="SignIn.css" media="screen">
+
+<link rel="stylesheet" href="Contact-us.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
- 
- <!-- Password Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
+    
  <!-- Profile Icon -->
+
  <link rel="stylesheet" href="assets/css/shared/style.css">
  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <!-- Autocomplete -->
- <script type='text/javascript' src='js/autocomplete.js'></script>
- <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+
+<!-- Autocomplete -->
+<script type='text/javascript' src='js/autocomplete.js'></script>
+<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
 
    </head>
 
@@ -300,16 +300,16 @@ if(!$receiver_mail->send()) {
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
      <!-- Main-menu -->
-    <div class="main-menu u-custom-menu u-nav-container">
+<div class="main-menu u-custom-menu u-nav-container">
   <nav class="d-none d-lg-block">
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
-    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
-    </li>
+     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+</li>
 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
 
-    <li><a href="Register-Member.php">Submit CV</a></li><br>
+    <li><a href="Register-Member.php">Submit CV</a></li><br>    
     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
@@ -359,17 +359,16 @@ if(!$receiver_mail->send()) {
     if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-        <a href="Register-Member.php" class="btn head-btn1">Register</a>
-  
-        <a href="Member-Login.php" class="btn head-btn2">Login</a>
+      <a href="Register-Member.php" class="btn head-btn1">Register</a>
+      <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
  <?php 
               
       }else{
               
-    ?>  
-
+    ?>
+    
 <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
 
@@ -386,7 +385,7 @@ if(!$receiver_mail->send()) {
      while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
-           $Login_Fullname=  $row['Fullname'];
+           $Login_Fullname = $row['Fullname'];
       }
   }
 ?>
@@ -478,69 +477,99 @@ if(!$receiver_mail->send()) {
 
 </style>
 
+<style>
+  span{
+    font-family: "Barlow",sans-serif;
+   font-weight: 400;
+  }
+</style>
 
-<body class="my-login-page">
+   <section class="u-clearfix u-section-1" id="sec-8459">
+      <div class="u-clearfix u-sheet u-sheet-1"><br>
+        <div class="u-border-2 u-border-grey-5 u-container-style u-expanded-width-xs u-group u-radius-8 u-shape-round u-group-8">
+        <div class="u-container-layout u-container-layout-8">
+       <div class="u-layout-row">
+        <div class="col-sm-6 col-md-6">
+        <h6 class="u-text u-text-20 u-align-left" style="padding-left: 3px;">
 
-        <div class="u-opacity u-opacity-80 u-shape u-shape-svg u-text-palette-1-light-2 u-shape-1">
-          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 150 100" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0197"></use></svg>
-          <svg class="u-svg-content" viewBox="0 0 100 100" x="10px" y="35px" id="svg-0197" style="fill:#fb246a"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
-    c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
-    c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
-    C6.9,115.6,25.2,125.2,43.2,126.9z"></path></svg>
-        </div>
-    <section class="h-100">
-        <div class="container h-100" style="opacity: 0.9">
-            <div class="row justify-content-md-center align-items-center h-100">
-                <div class="card-wrapper">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+            <a class="nav-link active" id="easyA-tab" href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="easyA" aria-selected="false" name="Easy_Apply">Easy Apply</a>
+            </li>
 
-        <div class="card fat">
-            <div class="card-body">
-                <h4 class="card-title">Easy Apply</h4>
-                <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
-                <form method="POST" class="my-login-validation" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="text">Fullname *</label>
-                        <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="form-control" name="Fullname" required autofocus>
-                        
-                        <span style="color:#ff0000"><?php echo $message_Fullname; ?></span>
-                    </div>
-                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <div style="position:relative" id="">
-                            <input type="email" id="email" name="Email" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="form-control" required="">
-                        <span style="color:#ff0000"><?php echo $message_Email; ?></span>
+            <!-- <li class="nav-item">
+           <div class="u-align-center u-form-group u-form-submit">
+            <a class="nav-link" id="rsLogin-tab" href="Signin_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" role="tab" aria-controls="rsLogin" aria-selected="true">Sign In</a>
+            <input type="submit" name="submit" value="submit" class="u-form-control-hidden">
+           </div>
+            </li> -->
+          </ul>
 
-                    </div>
-                </div>
-                    <div class="form-group">
-                        <label for="">Skills *</label>
-                        <div style="position:relative" id="">
-                            <input type="text" id="" name="Skills" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" required="">
-                        </div>
-                        <span style="color:#ff0000"><?php echo $message_Skills; ?></span>
-                    </div>
+          <div class="text">Apply for this job</div><br>
+          <p>Fill in the form below to apply for this job.</p>
+          <!-- <h6 class="" style="color:#13b013"><?php echo $success; ?></h6>
+          <h6 class="" style="color:#13b013"><?php echo $receiver_success; ?></h6> -->
 
-                    <div class="form-group">
-                 <label for="text">Resume *</label>
-                     <div style="position:relative" id="">
-                        <input type="file" name="file"><?php //echo $CV; ?>
+          <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
+          <br>
+         <form action="" method="POST" enctype="multipart/form-data" source="custom" name="form" style="padding: 0px;" redirect="true">
+
+          <span class="col-sm-3 col-form-label">Fullname: </span>
+          <input type="text" value="<?php echo $Fullname; ?>" class="form-control" name="Fullname" required="">
+          <br>
+          <br>
+
+          <span class="col-sm-3 col-form-label">Email: </span>
+          <input type="text" value="<?php echo $Email; ?>" class="form-control" name="Email" required="">
+          <br>
+          <br>
+
+          <span class="col-sm-3 col-form-label">Skills: </span>
+          <input type="text" value="<?php echo $Skills; ?>" class="form-control" name="Skills" required="">
+          <br>
+          <br>
+
+          <span class="col-sm-3 col-form-label">Resume:</span>
+          <div class="col-md-6">
+             <div class="form-group row">
+                <input type="file" name="file"><?php //echo $CV; ?>
                 <h6 style="color:#a7b0a9">choose your CV here</h6>
-                     </div>
-                  </div>
+             </div>
+          </div>
+          <br>
+          <div class="u-form-group u-form-submit">
+            <input type="submit" name="submit" value="submit" class="btn head-btn1">
+          </div>
+          <br>
+     </form>
+            </h6>
+          </div>
+          <div class="col-sm-6 col-md-6">
 
-                    <div class="form-group m-0">
-                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Apply
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-       </div>
-     </div>
-   </div>
-</section>  
-</body>
+            <h6 class="u-align-right" style="padding-left: 40px;">
+
+             <div class="backTo" style="margin-left:285px;">
+              
+         
+                <a href="Available_jobs.php" class="back_to_search_btn"><img src="" alt="">Back to search</a>
+              </div>
+
+ 
+ <p class="u-align-left u-text u-text-left u-text-black u-text-8"width="550" height="350"> <?php echo $Job_description; ?></p>
+
+                
+ </h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>    
+</div>
+</section>
 <br>
+    
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
           <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-12fb"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-12fb"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
@@ -562,57 +591,55 @@ if(!$receiver_mail->send()) {
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
         </div>
-      </div><!-- </footer> -->
+      </div></footer>
     <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
     </section>
 
-<!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-<!-- JS here -->
+
+    <!-- JS here -->
   
     <!-- All JS Custom Plugins Link Here here -->
-      <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="assets/js/popper.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="./assets/js/popper.min.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
 
       <!-- Jquery Mobile Menu -->
-      <script src="assets/js/jquery.slicknav.min.js"></script>
+      <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="assets/js/owl.carousel.min.js"></script>
-      <script src="assets/js/slick.min.js"></script>
-      <script src="assets/js/price_rangs.js"></script>
+      <script src="./assets/js/owl.carousel.min.js"></script>
+      <script src="./assets/js/slick.min.js"></script>
+      <script src="./assets/js/price_rangs.js"></script>
       <!-- Date Picker -->
-      <script src="assets/js/gijgo.min.js"></script>
+      <script src="./assets/js/gijgo.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
-      <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/animated.headline.js"></script>
-      <script src="assets/js/jquery.magnific-popup.js"></script>
+      <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+      <script src="./assets/js/jquery.magnific-popup.js"></script>
 
     <!-- Scrollup, nice-select, sticky -->
-      <script src="assets/js/jquery.scrollUp.min.js"></script>
-      <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.sticky.js"></script>
+      <script src="./assets/js/jquery.scrollUp.min.js"></script>
+      <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
       
       <!-- contact js -->
-      <script src="assets/js/contact.js"></script>
-      <script src="assets/js/jquery.form.js"></script>
-      <script src="assets/js/jquery.validate.min.js"></script>
-      <script src="assets/js/mail-script.js"></script>
-      <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+      <script src="./assets/js/contact.js"></script>
+      <script src="./assets/js/jquery.form.js"></script>
+      <script src="./assets/js/jquery.validate.min.js"></script>
+      <script src="./assets/js/mail-script.js"></script>
+      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
         
     <!-- Jquery Plugins, main Jquery -->  
-      <script src="assets/js/plugins.js"></script>
-      <script src="assets/js/main.js"></script>
+      <script src="./assets/js/plugins.js"></script>
+      <script src="./assets/js/main.js"></script>
 
   </body>
 </html>
-
-             
