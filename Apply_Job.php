@@ -222,7 +222,6 @@ if(!$receiver_mail->send()) {
 }
 
   ?>
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -497,17 +496,19 @@ if(!$receiver_mail->send()) {
             <div class="card-body">
                 <h4 class="card-title">Easy Apply</h4>
                 <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
+                <h6>Apply For <?php echo $Job_title; ?></h6> 
                 <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
+                        &nbsp;
                         <label for="text">Fullname *</label>
-                        <input type="text" value="<?php echo isset($_POST["Fullname"]) ? $_POST["Fullname"] : ''; ?>" class="form-control" name="Fullname" required autofocus>
+                        <input type="text" value="<?php echo $Fullname; ?>" class="form-control" name="Fullname" required autofocus>
                         
                         <span style="color:#ff0000"><?php echo $message_Fullname; ?></span>
                     </div>
                      <div class="form-group">
                         <label for="email">Email *</label>
                         <div style="position:relative" id="">
-                            <input type="email" id="email" name="Email" value="<?php echo isset($_POST["Email"]) ? $_POST["Email"] : ''; ?>" class="form-control" required="">
+                            <input type="email" id="email" name="Email" value="<?php echo $Email; ?>" class="form-control" required="">
                         <span style="color:#ff0000"><?php echo $message_Email; ?></span>
 
                     </div>
@@ -515,7 +516,7 @@ if(!$receiver_mail->send()) {
                     <div class="form-group">
                         <label for="">Skills *</label>
                         <div style="position:relative" id="">
-                            <input type="text" id="" name="Skills" value="<?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?>" class="form-control" required="">
+                            <input type="text" id="" name="Skills" value="<?php echo $Skills; ?>" class="form-control" required="">
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Skills; ?></span>
                     </div>
@@ -528,7 +529,7 @@ if(!$receiver_mail->send()) {
                   </div>
 
                     <div class="form-group m-0">
-                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Apply
+                        <button type="submit" name="submit" style="width: 100%; font-size: 1rem; border-radius: 0.25rem;" class="btn head-btn1">Apply Now
                         </button>
                     </div>
                 </form>
