@@ -524,7 +524,6 @@ if(!$receiver_mail->send()) {
                  <label for="text">Resume *</label>
                      <div style="position:relative" id="">
                         <input type="file" name="file"><?php //echo $CV; ?>
-                <h6 style="color:#a7b0a9">choose your CV here</h6>
                      </div>
                   </div>
 
