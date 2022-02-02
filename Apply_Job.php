@@ -17,6 +17,7 @@ if(isset($_GET['Job_details'])){
      $the_id = $row['id'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
+     $Job_Skills = $row['Skills'];
      $Job_description = $row['Job_description'];
 
 }
@@ -151,6 +152,7 @@ if(!$mail->send()) {
      $the_Fullname = $row['Fullname'];
      $Job_title = $row['Job_title'];
      $Job_Email = $row['Email'];
+     $Job_Skills = $row['Skills'];
      $Job_description = $row['Job_description'];
 
  }
@@ -496,7 +498,10 @@ if(!$receiver_mail->send()) {
             <div class="card-body">
                 <h4 class="card-title">Easy Apply</h4>
                 <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
-                <h6>Apply For <?php echo $Job_title; ?></h6> 
+                <h6>Apply For </h6>
+                <h6 style="color: grey;"><?php echo $Job_title; ?></h6> 
+                <h6 >Skills :</h6>
+                <h6 style="color: grey;"><?php echo $Job_Skills; ?></h6>
                 <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
                         &nbsp;
