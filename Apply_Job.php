@@ -500,8 +500,6 @@ if(!$receiver_mail->send()) {
                 <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
                 <h6>Apply For </h6>
                 <h6 style="color: grey;"><?php echo $Job_title; ?></h6> 
-                <h6 >Skills :</h6>
-                <h6 style="color: grey;"><?php echo $Job_Skills; ?></h6>
                 <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
                         &nbsp;
@@ -521,7 +519,7 @@ if(!$receiver_mail->send()) {
                     <div class="form-group">
                         <label for="">Skills *</label>
                         <div style="position:relative" id="">
-                            <input type="text" id="" name="Skills" value="<?php echo $Skills; ?>" class="form-control" required="">
+                            <input type="text" id="" name="Skills" value="<?php echo $Job_Skills; ?>" class="form-control" required="">
                         </div>
                         <span style="color:#ff0000"><?php echo $message_Skills; ?></span>
                     </div>
