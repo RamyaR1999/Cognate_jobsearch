@@ -498,7 +498,7 @@ if(!$receiver_mail->send()) {
             <div class="card-body">
                 <h4 class="card-title">Easy Apply</h4>
                 <h6 class="" style="color:#13b013"><?php echo $empty_cv; ?></h6>
-                <h6>Apply For </h6>
+                <h6>Applying For </h6>
                 <h6 style="color: grey;"><?php echo $Job_title; ?></h6> 
                 <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                     <div class="form-group">
