@@ -9,7 +9,7 @@ if(isset($_GET['Job_details'])){
 
   $the_id = $_GET['Job_details'];
 
-  $query="SELECT * FROM Jobs WHERE id='$the_id'";
+  $query="SELECT * FROM jobs WHERE id='$the_id'";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
@@ -143,7 +143,7 @@ if(!$mail->send()) {
 
  $the_id = $_GET['Job_details'];
 
-  $query="SELECT * FROM Jobs WHERE id='$the_id'";
+  $query="SELECT * FROM jobs WHERE id='$the_id'";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
