@@ -477,7 +477,7 @@
           </h4>                                                             
         </div>
 
-        <div class="modal-body" id="copyContent"><?php echo $_SESSION['Apply_Job']; ?></div>  
+        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to open</a></div>  
 
         <div class="modal-footer"> 
           <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
