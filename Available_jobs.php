@@ -425,7 +425,7 @@ if (isset($_POST['search'])){
   $count=ceil($count/$per_page);
 
 
-  $query="SELECT * FROM jobs ORDER BY Location DESC LIMIT $page_1, $per_page";
+  $query="SELECT * FROM jobs ORDER BY id DESC LIMIT $page_1, $per_page";
   $Jobs_list=mysqli_query($connection,$query);
 
   while($row=mysqli_fetch_array($Jobs_list)){
