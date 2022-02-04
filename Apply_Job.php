@@ -32,7 +32,7 @@ if(isset($_SESSION['id'])){
 
      $db_id =  $_SESSION['id'];  
            
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+     $query="SELECT * FROM users WHERE id = '{$db_id}' AND User_type ='Job Seeker'";
      $select_register_profile = mysqli_query($connection,$query);
 
       
@@ -113,7 +113,7 @@ $mail->SMTPSecure='tls';
 
         $_SESSION['Fullname'] = $Fullname;
         $_SESSION['Image'] = $Image;
-        $_SESSION['Email'] = $Email;
+        // $_SESSION['Email'] = $Email;
         $_SESSION['Phone'] = $Phone;
         $_SESSION['City'] = $City;
         $_SESSION['Skills'] = $Skills;
