@@ -435,7 +435,7 @@ if (isset($_POST['search'])){
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
                 <!-- <p class="u-text u-text-2"> <?php echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
-                <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $row["Job_description"]; ?></textarea></p>
+                <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p>
               </div>
           </div>
         </div>
@@ -443,10 +443,12 @@ if (isset($_POST['search'])){
         <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" target="_blank">Apply Now</a>
     </div>
 
-    <?php
-}
-       }
-    ?>
+<?php
+
+  }
+  }
+  
+?>
 
           </div>
     </section>

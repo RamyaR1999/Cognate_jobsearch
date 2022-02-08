@@ -291,7 +291,8 @@
 
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9">Job description</h2>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11"><?php echo $Job_title; ?></h2>
-                <p class="u-align-left u-text u-text-10"> <?php echo $Job_description; ?></p>
+                <!-- <p class="u-align-left u-text u-text-10"><?php echo $Job_description; ?></p> -->
+                <p class="u-align-left u-text u-text-10"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">Skills</h2>
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
                 <p class="u-align-left u-text u-text-10">posted :&nbsp; <?php echo $Job_posted; ?></p>
