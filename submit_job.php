@@ -467,29 +467,23 @@
   <!-- .modal -->
   <div class="modal fade show in" id="Mymodal">
     <div class="modal-dialog">
-      <div class="modal-content" style="min-width: 600px;">
+      <div class="modal-content" style="min-width: 500px;">
     <form action="" method="POST">
         <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal">
-            ×
-          </button>  -->
-          <h4 class="modal-title">
-            Copy the link to share
-          </h4>                                                             
+          <h6 class="modal-title" style="color:green">
+           Job is successfully submitted Copy the link to share
+          </h6>                                                             
         </div>
 
-        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to open</a></div>  
-
+        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to open </a></div>
+        <div class="modal-body" ><a href="submit_job.php" >click here to Submit another Job</a></div>
         <div class="modal-footer"> 
           <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
             Click to Copy
           </button>
-          <a href="" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
-            Close
-          </a>
-          <!-- <button type="submit" name="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1" data-dismiss="modal">
-            Close
-          </button> -->                          
+          <a href="Available_jobs.php" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
+            View JobList
+          </a>                         
         </div>
         </form>
       </div>                                                                       
