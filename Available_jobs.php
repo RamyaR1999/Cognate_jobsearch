@@ -6,39 +6,41 @@
 
 if (isset($_POST['search'])){
 
-            $search=$_POST['Job_title'];
+    $search=$_POST['Job_title'];
 
-           if($search !=""){
+    if($search !=""){
 
-     $jobs="SELECT * FROM jobs WHERE Job_title = '$search' ";
+       $jobs="SELECT * FROM jobs WHERE Job_title = '$search' ";
 
-              $search_jobs=mysqli_query($connection, $jobs); 
+       $search_jobs=mysqli_query($connection, $jobs); 
 
-                 if(!$search_jobs){
-                    die("QUERY FAILED" . mysqli_error($connection));
-                }
-                $count=mysqli_num_rows($search_jobs);
-                if($count == 0){
+       if(!$search_jobs){
+          die("QUERY FAILED" . mysqli_error($connection));
+       }
 
-               // header ("Location: Available_jobs.php");
+       $count=mysqli_num_rows($search_jobs);
+       if($count == 0){
+
+       // header ("Location: Available_jobs.php");
                        
-            }else{
-              while($row=mysqli_fetch_assoc($search_jobs)){
+       }else{
 
-                    $id=$row['id'];
-                    $Job_title=$row['Job_title'];
-                    $Skills=$row['Skills'];
-                    $Location=$row['Location'];
+          while($row=mysqli_fetch_assoc($search_jobs)){
+
+            $id=$row['id'];
+            $Job_title=$row['Job_title'];
+            $Skills=$row['Skills'];
+            $Location=$row['Location'];
             
             header ("Location: Available_jobs.php?jobs=$id ");
 
-            }
+          }
 
         }
-      }else{
+    }else{
         header ("Location: Available_jobs.php");
-        }
-      } 
+     }
+} 
 
 ?>
 
@@ -47,197 +49,195 @@ if (isset($_POST['search'])){
 
 <!--tittle-->
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>CGBS-find a job </title>
-   <meta name="description" content="">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- image in title-->
-   <link rel="shortcut icon" type="image/x-icon" href="image/cognate.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/price_rangs.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- image in title-->
+    <link rel="shortcut icon" type="image/x-icon" href="image/cognate.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/price_rangs.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
 
- <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Page-2.css" media="screen">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Page-2.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
- <!-- Profile Icon -->
+    <!-- Profile Icon -->
+    <link rel="stylesheet" href="assets/css/shared/style.css">
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
- <link rel="stylesheet" href="assets/css/shared/style.css">
- <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <!-- Font Awesome Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- pager -->
- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- pager -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
 
-<!-- Autocomplete -->
-<script type='text/javascript' src='js/autocomplete.js'></script>
-<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+    <!-- Autocomplete -->
+    <script type='text/javascript' src='js/autocomplete.js'></script>
+    <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
 
-   </head>
+</head>
 
-   <body>
-       <!--loading time image-->
-       <div id="preloader-active">
+<body>
+    <!--loading time image-->
+    <div id="preloader-active">
        <div class="preloader d-flex align-items-center justify-content-center">
-       <div class="preloader-inner position-relative">
-       <div class="preloader-circle"></div>
-       <div class="preloader-img pere-text">
-       <img src="image/cognate.png" alt="">
-</div>
-</div>
-</div>
-</div>
+          <div class="preloader-inner position-relative">
+             <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                  <img src="image/cognate.png" alt="">
+                </div>
+          </div>
+       </div>
+    </div>
 
 <header>
-<div class="header-area header-transparrent">
-<div class="headder-top header-sticky">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-3 col-md-2">
-    <!--logoo-->
-<div class="logo">
-<a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
-</div>  
-</div>  
+   <div class="header-area header-transparrent">
+      <div class="headder-top header-sticky">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-3 col-md-2">
+                  <!--logoo-->
+                  <div class="logo">
+                    <a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+                  </div>  
+               </div>  
 <div class="col-lg-9 col-md-9">
 <div class="menu-wrapper">
   
      <!-- Main-menu -->
 <div class="main-menu u-custom-menu u-nav-container">
-  <nav class="d-none d-lg-block">
-  <ul class="u-nav u-unstyled u-nav-1" id="navigation">
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
-</li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
+   <nav class="d-none d-lg-block">
+      <ul class="u-nav u-unstyled u-nav-1" id="navigation">
+         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+         </li>
+         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
-  <ul class="submenu">
+           <ul class="submenu">
 
-    <li><a href="submit_cv.php">Submit CV</a></li><br>    
-    <?php
+             <li><a href="submit_cv.php">Submit CV</a></li><br>    
+                <?php
 
-       if($_SESSION['User_type'] == 'Admin'){     
+                   if($_SESSION['User_type'] == 'Admin'){     
 
-    ?>
+                ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
-    
-    <?php
-        
-       }
+             <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
+            
+                <?php
+                    
+                   }
 
-    ?>
-    <li><a href="Available_jobs.php">Find Jobs</a></li>
-   <!--  <li><a href="career_hub.php">Career Hub</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="security_advice.php">Security Advice</a></li> -->
-     
-  </ul>      
-</li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Services.php">Services</a>
+                ?>
+            <li><a href="Available_jobs.php">Find Jobs</a></li>
+            <!-- <li><a href="career_hub.php">Career Hub</a></li>
+            <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+            <li><a href="security_advice.php">Security Advice</a></li> -->
+             
+           </ul>      
+         </li>
+         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Services.php">Services</a>
 
-  <ul class="submenu">
+           <ul class="submenu">
          
-    <li><a href="submit_job.php">Submit Job</a></li><br>
-   <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li> -->
-    <li><a href="Contact.php">Contact</a></li>
+             <li><a href="submit_job.php">Submit Job</a></li><br>
+            <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
+             <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+             <li><a href="ourSolution.php">Our Solutions</a></li> -->
+             <li><a href="Contact.php">Contact</a></li>
      
-  </ul>
+           </ul>
 
-</li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
-
-
-</li>
+         </li>
+         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
+         </li>
  
-     </ul>
-       </nav>
-      </div>        
+      </ul>
+    </nav>
+</div>        
 <!--header button-->
 
 <div class="header-btn d-none f-right d-lg-block">
 
   <?php
 
-    if(isset($_SESSION['Email']) == $db_Email){
+      if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+      <a href="Register-Member.php" class="btn head-btn1">Register</a>
   
-        <a href="Member-Login.php" class="btn head-btn2">Login</a>
+      <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
- <?php 
+  <?php 
               
       }else{
               
-    ?> 
+  ?> 
 
-<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-    <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+    <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+      <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
 
-<?php 
+  <?php 
 
-    if(isset($_SESSION['id'])){
+      if(isset($_SESSION['id'])){
 
-     $db_id =  $_SESSION['id'];       
+        $db_id =  $_SESSION['id'];       
         
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
-     $select_user_profile = mysqli_query($connection,$query);
-
+        $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+        $select_user_profile = mysqli_query($connection,$query);
       
-     while($row=mysqli_fetch_array($select_user_profile)){
+        while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
            $Login_Fullname=  $row['Fullname'];
+        }
+
       }
-  }
-?>
+   ?>
 
 
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
-    </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-            <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+       <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+       </a>
+       <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+          <div class="dropdown-header text-center">
+             <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
-                  <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                      <?php
+                <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
+                   <?php
                       
-                      if(isset($_SESSION['Fullname'])){
+                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $Login_Fullname; 
+                          echo $Login_Fullname; 
                          
-                      }
+                       }
                       
-                      ?>
+                   ?>
                       
-                    </p>     
-            </div>
+                </p>     
+          </div>
             <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
             <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-        </div>
-</li>
+       </div>
+    </li>
 
 <?php 
               
@@ -247,26 +247,26 @@ if (isset($_POST['search'])){
 
 
 
-        </div>
-    </div>
 </div>
-                     <!--mobile button--> 
-                     <div class="col-12">
-                          <div class="mobile_menu d-block d-lg-none"></div>
-                      </div>
-                  </div>
-              </div>
+</div>
+</div>
+               <!--mobile button--> 
+               <div class="col-12">
+                  <div class="mobile_menu d-block d-lg-none"></div>
+               </div>
+            </div>
          </div>
-     </div>
-      <!-- Header End -->
-  </header>
+      </div>
+   </div>
+<!-- Header End -->
+</header>
 
 <style>
 
   .head-btn1 {
     margin-right: 5px;
-}
-.btn {
+  }
+  .btn {
     background: #fb246a;
     -moz-user-select: none;
     text-transform: capitalize;
@@ -288,65 +288,48 @@ if (isset($_POST['search'])){
     border: 0;
     overflow: hidden;
     margin: 0;
-}
+  }
 
-.btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-}
-.head-btn2 {
+  }
+  .head-btn2 {
     background: none;
     border: 1px solid #fb246a;
     color: #fb246a;
-}
+  }
 
 </style>
-
-
-
-
-
-
-<!--     <section class="u-clearfix u-section-1" id="sec-2d18">
-    <div style="background-image: url('ajob1.jfif'); background-repeat:no-repeat;  background-attachment: fixed;
-  background-size: cover;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="crimson" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,80C640,85,800,139,960,160C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-  <div class="u-clearfix u-sheet u-sheet-1">
-        <h4 class="u-align-left u-text u-text-default  u-text-2" style="color:white;">“The people who are crazy enough to think they can change the world are the ones who do.”</h4>
-       
-</div>
-      </div>
-    </section> -->
 
 <style>    
-.u-form-horizontal .u-input {
+  .u-form-horizontal .u-input {
     width: 300px;
-     flex-grow: 1;
+    flex-grow: 1;
     flex-shrink: 1;
 
-}
-
+  }
 </style>
 
-    <section class="u-clearfix u-section-2" id="sec-a8b6" style="height: 150px;">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-form u-form-1">
-          <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" source="custom" name="form" style="padding: 10px;">
-            <input type="hidden" id="siteId" name="siteId" value="170795794">
-            <input type="hidden" id="pageId" name="pageId" value="206021425">
-            <div class="u-form-group u-form-name">
-              <label for="name-9c33" class="u-form-control-hidden u-label"></label>
-              <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-align-left u-form-group u-form-submit">
-              <a href="" class="btn head-btn2" style="align-left;padding: 20px;">Search</a>
-              <input type="submit" name="search" value="submit" class="u-form-control-hidden">
-            </div>
-          </form>
-        </div>
+<section class="u-clearfix u-section-2" id="sec-a8b6" style="height: 150px;">
+   <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-form u-form-1">
+         <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" source="custom" name="form" style="padding: 10px;">
+             <input type="hidden" id="siteId" name="siteId" value="170795794">
+             <input type="hidden" id="pageId" name="pageId" value="206021425">
+             <div class="u-form-group u-form-name">
+                <label for="name-9c33" class="u-form-control-hidden u-label"></label>
+                <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+             </div>
+             <div class="u-align-left u-form-group u-form-submit">
+                <a href="" class="btn head-btn2" style="align-left;padding: 20px;">Search</a>
+                <input type="submit" name="search" value="submit" class="u-form-control-hidden">
+             </div>
+         </form>
       </div>
-    </section>
-    <div class="card">
-    <section class="u-clearfix u-section-3" id="sec-41fd" style="align-left">
+   </div>
+</section>
+<div class="card">
+   <section class="u-clearfix u-section-3" id="sec-41fd" style="align-left">
       <div class="u-align-left u-clearfix u-sheet u-sheet-1">
 
 
@@ -394,8 +377,8 @@ if (isset($_POST['search'])){
             </div>
 
   <?php          
-           }
-}else{
+     }
+  }else{
 
    $per_page=5;  
                 
@@ -436,7 +419,8 @@ if (isset($_POST['search'])){
      $Location = $row['Location'];
      $Job_posted = $row['Job_posted'];
      $Job_time = $row['Job_time'];
-     $Job_description = substr($row['Job_description'],0,500);
+     $Job_description = $row['Job_description'];
+     // $Job_description = substr($row['Job_description'],0,500);
 
 
 ?>
@@ -450,7 +434,8 @@ if (isset($_POST['search'])){
 
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
-                <p class="u-text u-text-2"> <?php echo $Job_description; ?> ....</p>
+                <!-- <p class="u-text u-text-2"> <?php echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
+                <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $row["Job_description"]; ?></textarea></p>
               </div>
           </div>
         </div>
@@ -458,8 +443,10 @@ if (isset($_POST['search'])){
         <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" target="_blank">Apply Now</a>
     </div>
 
-
-    <?php  }  } ?>
+    <?php
+}
+       }
+    ?>
 
           </div>
     </section>

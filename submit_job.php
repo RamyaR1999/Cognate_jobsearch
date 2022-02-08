@@ -121,8 +121,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
- <link rel="stylesheet" href="nicepage.css" media="screen">
- <link rel="stylesheet" href="SignIn.css" media="screen">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="SignIn.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
@@ -133,7 +133,7 @@
 
  <!-- Profile Icon -->
  <link rel="stylesheet" href="assets/css/shared/style.css">
- <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+ <!-- <script src="assets/vendors/js/vendor.bundle.base.js"></script> -->
 
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -226,69 +226,70 @@
        </nav>
       </div>         
 <!--header button-->
+
 <div class="header-btn d-none f-right d-lg-block">
 
   <?php
 
-    if(isset($_SESSION['Email']) == $db_Email){
+      if(isset($_SESSION['Email']) == $db_Email){
 
   ?> 
-        <a href="Register-Member.php" class="btn head-btn1">Register</a>
+      <a href="Register-Member.php" class="btn head-btn1">Register</a>
   
-        <a href="Member-Login.php" class="btn head-btn2">Login</a>
+      <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
- <?php 
+  <?php 
               
       }else{
               
-    ?>  
+  ?> 
 
-<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-    <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+    <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+      <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
 
-<?php 
+  <?php 
 
-    if(isset($_SESSION['id'])){
+      if(isset($_SESSION['id'])){
 
-     $db_id =  $_SESSION['id'];       
+        $db_id =  $_SESSION['id'];       
         
-     $query="SELECT * FROM users WHERE id = '{$db_id}' ";
-     $select_user_profile = mysqli_query($connection,$query);
-
+        $query="SELECT * FROM users WHERE id = '{$db_id}' ";
+        $select_user_profile = mysqli_query($connection,$query);
       
-     while($row=mysqli_fetch_array($select_user_profile)){
+        while($row=mysqli_fetch_array($select_user_profile)){
 
            $Image=  $row['Image'];
            $Login_Fullname=  $row['Fullname'];
+        }
+
       }
-  }
-?>
+   ?>
 
 
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
-    </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-            <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+       <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+       </a>
+       <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+          <div class="dropdown-header text-center">
+             <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
 
-                  <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                      <?php
+                <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
+                   <?php
                       
-                      if(isset($_SESSION['Fullname'])){
+                       if(isset($_SESSION['Fullname'])){
                           
-                        echo $Login_Fullname; 
+                          echo $Login_Fullname; 
                          
-                      }
+                       }
                       
-                      ?>
+                   ?>
                       
-                    </p>     
-            </div>
+                </p>     
+          </div>
             <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
             <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-        </div>
-</li>
+       </div>
+    </li>
 
 <?php 
               
@@ -298,7 +299,7 @@
 
 
 
-        </div>
+</div>
     </div>
 </div>
                      <!--mobile button--> 
@@ -401,9 +402,9 @@
                         
                         <span style="color:#ff0000"><?php echo $message_Job_title ; ?></span>
                     </div>
-               <div class="form-group">
+                   <div class="form-group">
                         <label for="">Job description *</label>
-                        <textarea class="form-control"  rows="8" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
+                        <textarea type="textarea" class="form-control"  rows="8" name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
 
                         <span style="color:#ff0000"><?php echo $message_Job_description; ?></span>
                     </div>
@@ -544,8 +545,23 @@ function copyToClipboard(e) {
 
 </script>
 
-
 </body>
+
+<script>
+
+    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
+    window.addEventListener("DOMContentLoaded", function(){
+      ac.attach({
+        target: "Skills",
+        data: "search.php",
+        post: { type: "Skills" },
+        // OPTIONAL
+        delay : 50,
+        min : 1
+      });
+    });
+    
+</script>
 
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
@@ -568,28 +584,14 @@ function copyToClipboard(e) {
             H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
           </a>
         </div>
-      </div><!-- </footer> -->
+      </div>
+</footer>
     <section class="u-backlink u-clearfix u-footer">
       <main>
         <p>Copyright &copy; Cognate Global alphabet 2021</p>
       </main>
     </section>
 
-<script>
-
-    // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
-    window.addEventListener("DOMContentLoaded", function(){
-      ac.attach({
-        target: "Skills",
-        data: "search.php",
-        post: { type: "Skills" },
-        // OPTIONAL
-        delay : 50,
-        min : 1
-      });
-    });
-    
-</script>
 
 <!-- Profile Icon -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
