@@ -465,7 +465,7 @@
 
 <div class="container">
   <!-- .modal -->
-  <div class="modal fade show in" id="Mymodal">
+  <div class="modal fade show in" id="Mymodal" style="padding-top: 180px;">
     <div class="modal-dialog">
       <div class="modal-content" style="min-width: 500px;">
     <form action="" method="POST">
