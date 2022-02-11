@@ -471,11 +471,11 @@
     <form action="" method="POST">
         <div class="modal-header">
           <h6 class="modal-title" style="color:green">
-           Job is successfully submitted Copy the link to share
+           Job submitted successfully
           </h6>                                                             
         </div>
 
-        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to open </a></div>
+        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to view</a></div>
         <div class="modal-body" ><a href="submit_job.php" >click here to Submit another Job</a></div>
         <div class="modal-footer"> 
           <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
