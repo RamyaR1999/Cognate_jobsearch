@@ -295,11 +295,11 @@ if (isset($_POST['submit'])){
 }
 
 </style>
-<section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
+<!-- <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
         <img src="images/about-us.jpg" alt="" width=1500>
 </section> 
 <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-fa03">
-  <h2  style="color:Crimson;font-size:40px;">About us..</h2>
+  <h3  style="color:Crimson;font-size:40px;">About us..</h3>
   <div class="u-list u-list-1">
     <div class="u-repeater u-repeater-1">
       <div class="u-container-style u-list-item u-repeater-item">
@@ -331,12 +331,12 @@ if (isset($_POST['submit'])){
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="u-align-center u-clearfix u-grey-5 u-section-1" id="sec-fa03">
     <div class="section-tittle section-tittle2" ><br>
-      <h2 style="color:Crimson;font-size:40px;">Welcome to Cognate Global Business Solution</h2>
+      <h3 style="color:Crimson;font-size:40px;padding-top: 50px;">Welcome to Cognate Global Business Solution</h3>
       <strong>Let’s Start your Business</strong>
-      <p class="u-align-center ">Cognate Global is a IT Staffing and Managed resourcing provider<br> with offices in Bangalore and USA and have strong capabilities <br>to support European locations. We also do Onsite Staffing and <br>Remote Staffing solutions,Contract Staffing, Placement Solutions <br>across multiple geographies.</p>
+      <p class="u-align-centre ">Cognate Global is a IT Staffing and Managed resourcing provider with offices in Bangalore and USA and have strong capabilities to support European locations. <br>We also do Onsite Staffing and emote Staffing solutions,Contract Staffing,<br>Placement Solutions across multiple geographies.</p>
     </div>
   </section>
   <div class="support-company-area support-padding fix">
@@ -344,7 +344,7 @@ if (isset($_POST['submit'])){
       <div class="row align-items-center">
         <div class="col-xl-6 col-lg-6">
           <div class="support-location-img">
-            <img src="assets/img/service/global-img.jpg" alt=""width="500" height="550">
+            <img src="assets/img/service/global-img.jpg" alt=""width="500" height="400">
             <div class="support-img-cap text-center">
               <p>Since</p>
               <span>2018</span>
@@ -355,7 +355,7 @@ if (isset($_POST['submit'])){
           <div class="right-caption">
             <!-- Section Tittle -->
             <div class="section-tittle section-tittle2" >
-              <h2 id="Our History" style="color:Crimson;font-size:40px;">Our History</h2>
+              <h3 id="Our History" style="color:Crimson;font-size:40px;">Our History</h3>
             </div>
             <div class="support-caption">
               <p class="pera-top">Business history and international business are cognate subjects. There are few, ifany, studies of international business that do not require a proper study of context.<p>
@@ -373,7 +373,7 @@ if (isset($_POST['submit'])){
           <div class="col-xl-6 col-lg-6">
             <div class="right-caption">
               <div class="section-tittle section-tittle2">
-                <h2 style="color:Crimson;font-size:40px;">Growth</h2>
+                <h3 style="color:Crimson;font-size:40px;">Growth</h3>
               </div>
               <div class="support-caption">
                 <p>Their growth can be expanded into the different markets and go beyond borders, and acquisition of other small companies. It could also be an affiliation with other brands for more exposure; the purpose is never-ending growth.</p>
@@ -385,7 +385,7 @@ if (isset($_POST['submit'])){
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
                 <!-- <span>Our History</span> -->
-                <h2 style="color:Crimson;font-size:40px;">Innovation</h2>
+                <h3 style="color:Crimson;font-size:40px;">Innovation</h3>
               </div>
               <div class="support-caption">
                 <p>The very foundation of a startup company is innovation and creativity. It doesn’t mean the process stops after the establishment of the company. Instead, it’s the beginning of the innovative approaches. If you compare the old interface of Facebook with a new current app, then you’d see the huge difference.</p>
@@ -402,7 +402,7 @@ if (isset($_POST['submit'])){
             <div class="right-caption">
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
-                <h2 style="color:Crimson;font-size:40px;">Team</h2>
+                <h3 style="color:Crimson;font-size:40px;">Team</h3>
               </div>
               <div class="support-caption">
                 <p>One of the main differences between entrepreneurship and startup is a team. Entrepreneurship is all about the work of one person. Startup, on the other hand, requires highly skilled, talented and speedy individuals who have an understanding with one another. They’re willing to work together collectively as a team by sharing responsibilities.
@@ -414,7 +414,7 @@ if (isset($_POST['submit'])){
             <div class="right-caption">
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
-                <h2 style="color:Crimson;font-size:40px;">Tech-Oriented</h2>
+                <h3 style="color:Crimson;font-size:40px;">Tech-Oriented</h3>
               </div>
               <div class="support-caption">
                 <p >Startup companies are usually tech-oriented, and their founders are also highly technically skilled people. The question is why tech. It’s because tech is the only industry that doesn’t care about manner, behavior, dressing codes, or wealthy background. It only requires extraordinary skill and unique ideas. If you have both qualities, test and launch it. If it’s good, then you’ll acquire the market share very quickly whether it’s paid or ads. Bigger market share would attract new investors, and the expansion process continues.</p>
@@ -431,7 +431,7 @@ if (isset($_POST['submit'])){
             <div class="right-caption">
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
-                <h2 style="color:Crimson;font-size:40px;">Resources</h2>
+                <h3 style="color:Crimson;font-size:40px;">Resources</h3>
               </div>
               <div class="support-caption">
                 <p>Having discussed earlier the tech nature of startup companies, therefore, they don’t require the conventional and traditional economic and physical resources. All they require is the investor and financial resources to carry out different operations.</p>
@@ -443,7 +443,7 @@ if (isset($_POST['submit'])){
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
                 <!-- <span>Our History</span> -->
-                <h2 style="color:Crimson;font-size:40px;">Partnerships</h2>
+                <h3 style="color:Crimson;font-size:40px;">Partnerships</h3>
               </div>
               <div class="support-caption">
                 <p>Tech startup companies usually have limited resources in the beginning. Therefore, they either partner up with other skilled personals to get things done or they hire some third party. For instance, the reason for alliances and partnerships is building a website or an online platform of an android application.</p>
@@ -460,7 +460,7 @@ if (isset($_POST['submit'])){
             <div class="right-caption">
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
-                <h2 style="color:Crimson;font-size:40px;">Risk</h2>
+                <h3 style="color:Crimson;font-size:40px;">Risk</h3>
               </div>
               <div class="support-caption">
                 <p>Investment in the startup companies is usually very risky because they have a very high failure rate. The reason for having a failure rate is because they rely heavily on the external factors.</p>
@@ -472,7 +472,7 @@ if (isset($_POST['submit'])){
               <!-- Section Tittle -->
               <div class="section-tittle section-tittle2"><br>
                 <!-- <span>Our History</span> -->
-                <h2 style="color:Crimson;font-size:40px;">Adaptability</h2>
+                <h3 style="color:Crimson;font-size:40px;">Adaptability</h3>
               </div>
               <div class="support-caption">
                 <p>Having the tech nature of startup companies, they’re very susceptible to environmental changes. Therefore, they have to be highly adaptive to the changing market trends. If they ignore it, then they’d lose the market share gradually.</p>
@@ -488,7 +488,7 @@ if (isset($_POST['submit'])){
           <div class="col-xl-6 col-lg-6">
             <div class="right-caption">
               <div class="section-tittle section-tittle2">
-                <h2 id="our story"class="u-align-left"style="color:Crimson;font-size:40px;">Our story.....</h2>
+                <h3 id="our story"class="u-align-left"style="color:Crimson;font-size:40px;">Our story.....</h3>
               </div>
               <p >One of the early stage challenges is to get more engineering resources at quicker turnaround time and reasonable prices. Early stage start-ups need to feel confident about the hire and get more done at reasonable cost.</p>
               <p> We can get you started by providing you highly skilled Individual contributors or you can take advantage of handpicked Dev teams, QE teams, DevOps teams, High specialized engineering resources. These are the best engineers that India has to offer.</p>

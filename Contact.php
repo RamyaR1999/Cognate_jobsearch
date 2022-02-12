@@ -371,20 +371,16 @@
 <section class="u-clearfix u-custom-color-2 u-section-2" id="sec-2d18">
   <div style="background: linear-gradient(to right, #0033cc 0%, #ff99ff 100%);">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-align-left u-text u-text-default u-text-1">Share your details below</h1>
-        <h1 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">we'd love to connect.</h1>
-        <p class="u-align-left u-text u-text-default u-text-3"> This form is only for companies looking to hire roles.<br>If you are a job seeker, please share your profile at<br>
-Submit Your CV</p>
+        <h2 class="u-align-left u-text u-text-default u-text-1">Share your details below</h2>
+        <h2 class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-2">We would love to connect.</h2>
       </div>
     </div>
     </section>
-
-    <section class="u-clearfix u-gradient u-section-1" id="sec-6065">
-    <div class="u-align-left card-header bg-transparent border-0">
-          <h3 class="mb-0" style="font-weight: 400;text-align: left; padding-top: 10px;"><i class=""></i>Share Your Details Below:</h3>
-          </div>
-
-      <div class="u-clearfix u-sheet u-sheet-1">
+          
+<br><br>
+      <section class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="mb-0" style="font-weight: 400;text-align: left;"><i class=""></i>Share Your Details Below:</h3>
+        <br>
         <div class="u-form u-radius-10 u-#f2f2f2 u-form-1">
           <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-8 u-form-vertical u-inner-form" source="custom" name="form" redirect="true">
             <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
@@ -525,8 +521,7 @@ Submit Your CV</p>
              -->
           </form>
         </div>
-      </div>
-    </section> 
+    </section>
 <br><br>
     <!-- <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
