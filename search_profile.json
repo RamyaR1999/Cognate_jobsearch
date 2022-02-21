@@ -64,19 +64,6 @@
      "Skills": ["Git, Jenkins, Ansible, Docker, Kubernetes, Terraform, packer, RedHat Linux"],
      "Experience_years": "2.5 years",
      "university": ["Arya Institute of Engineering and Technology"]
-},
-
-{
-     "id": "164",
-     "Fullname": "Ramya Rajendiran",
-     "Email": "07.ramyar@gmail.com",
-     "Phone": "9799590308",
-     "Image": "profile.png",
-     "Education": "BCA",
-     "Function": "IT Software - Client Server",
-     "Skills": ["PHP,python,MySQL,HTML,CSS"],
-     "Experience_years": "1 year",
-     "university": ["Mother Gnanamma Women's College of Artsand Science"]
 }
 
 ]
