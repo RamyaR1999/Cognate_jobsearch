@@ -1,0 +1,82 @@
+[
+
+{
+     "id": "2",
+     "Fullname": "Abhishek B D",
+     "Email": "abhishekbd5656@gmail.com",
+     "Phone": "8105020825",
+     "Image": "profile.png",
+     "Education": "BE",
+     "Function": "Beauty / Fitness / Spa Services",
+     "Skills": ["Kubernetes","Jenkins, gitlabee , gitlabee pipeline","Makefile, Android Makefile","GIT, GITHUB", "Docker", "Pytorch, Ansible, Linux/Unix, windows","Shell Script","JIRA","Sonarqube, Artifactory"],
+     "Experience_years": "3 years",
+     "university": ["Malnad College of Engineering"]
+},
+
+{
+     "id": "3",
+     "Fullname": "Ameer Shaik",
+     "Email": "shaikameer965@gmail.com",
+     "Phone": "+91-9700735779",
+     "Image": "profile.png",
+     "Education": "B.Tech",
+     "Function": "Fashion / Garments / Merchandising",
+     "Skills": [
+         "Linux ,Windows",
+         "Git",
+         "Service-Now, Jira",
+         "Jenkins",
+         "AWS (EC2, S3, IAM, ELB)",
+         "Docker",
+         "Ansible"],
+     "Experience_years": "9.3 years",
+     "university": ["JNTU Kakinada"]
+},
+
+{
+     "id": "4",
+     "Fullname": "AMIT CHAND",
+     "Email": "amitchand254@gmail.com",
+     "Phone": "+91 8650267925",
+     "Image": "profile.png",
+     "Education": "B.Tech",
+     "Function": "Architects / Interior Design / Naval Arch",
+     "Skills": [
+         "Bitbucket, Bamboo, JIRA, Confluence, Chef, Basics Docker, Linux (RHEL 7), Bash Scripting, Splunk etc",
+         "AWS, MS Azure AZ-900 certified",
+         "IBM WAS (WebSphere Application Server)",
+         "IBM HTTP Server (IHS)",
+         "Bash Scripting",
+         "IBM DB2",
+         "Linux, Windows"],
+     "Experience_years": "3 years",
+     "university": ["gujarat university", "wuhan university"]
+},
+
+{
+     "id": "5",
+     "Fullname": "AMIT RAY",
+     "Email": "amitroy9615@gmail.com",
+     "Phone": "9799590308",
+     "Image": "profile.png",
+     "Education": "B.Tech",
+     "Function": "IT Software - Client Server",
+     "Skills": ["Git, Jenkins, Ansible, Docker, Kubernetes, Terraform, packer, RedHat Linux"],
+     "Experience_years": "2.5 years",
+     "university": ["Arya Institute of Engineering and Technology"]
+},
+
+{
+     "id": "164",
+     "Fullname": "Ramya Rajendiran",
+     "Email": "07.ramyar@gmail.com",
+     "Phone": "9799590308",
+     "Image": "profile.png",
+     "Education": "BCA",
+     "Function": "IT Software - Client Server",
+     "Skills": ["PHP,python,MySQL,HTML,CSS"],
+     "Experience_years": "1 year",
+     "university": ["Mother Gnanamma Women's College of Artsand Science"]
+}
+
+]
