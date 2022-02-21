@@ -434,7 +434,7 @@ if (isset($_POST['search'])){
 
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
-                <!-- <p class="u-text u-text-2"> <?php echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
+                <!-- <p class="u-text u-text-2"> <?php //echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
                 <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p>
               </div>
           </div>

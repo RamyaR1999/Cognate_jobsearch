@@ -7,9 +7,9 @@
 
 if(isset($_GET['profile'])){
 
-  $id = $_GET['profile'];  
+  $Email = $_GET['profile'];  
            
-     $query="SELECT * FROM users WHERE id = '{$id}' ";
+     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -51,44 +51,44 @@ if(isset($_GET['profile'])){
            $Current_Salary_thousand =$_POST['Current_Salary_thousand'];
            $Expected_Salary_lakhs =$_POST['Expected_Salary_lakhs'];
            $Expected_Salary_thousand =$_POST['Expected_Salary_thousand'];
-           $Image = $_FILES['image']['name'];
-           $user_image_tempname = $_FILES['image']['tmp_name'];
-           $CV = $_FILES['file']['name'];
-           $upload = $_FILES['file']['tmp_name'];
+           // $Image = $_FILES['image']['name'];
+           // $user_image_tempname = $_FILES['image']['tmp_name'];
+           // $CV = $_FILES['file']['name'];
+           // $upload = $_FILES['file']['tmp_name'];
 
-             move_uploaded_file($user_image_tempname,"images/$Image");
-             move_uploaded_file($upload,"cv/$CV");
+           //   move_uploaded_file($user_image_tempname,"images/$Image");
+           //   move_uploaded_file($upload,"cv/$CV");
         
-           if(empty($Image)){
+          //  if(empty($Image)){
             
-            $query = "SELECT * FROM users WHERE id = $id ";
-            $select_image = mysqli_query($connection,$query);
+          //   $query = "SELECT * FROM users WHERE Email = $Email ";
+          //   $select_image = mysqli_query($connection,$query);
                 
-            while($row = mysqli_fetch_array($select_image)){
+          //   while($row = mysqli_fetch_array($select_image)){
                 
-            $Image = $row['Image'];
-            $CV = $row['CV'];
+          //   $Image = $row['Image'];
+          //   $CV = $row['CV'];
               
-               }
+          //      }
             
-          }
-          if(empty($CV)){
+          // }
+          // if(empty($CV)){
 
-            $query = "SELECT * FROM users WHERE id = $id ";
-            $select_cv = mysqli_query($connection,$query);
+          //   $query = "SELECT * FROM users WHERE Email = $Email ";
+          //   $select_cv = mysqli_query($connection,$query);
                 
-            while($row = mysqli_fetch_array($select_cv)){
+          //   while($row = mysqli_fetch_array($select_cv)){
 
-            $CV = $row['CV'];
+          //   $CV = $row['CV'];
               
-               }
+          //      }
 
-            }
+          //   }
        
         if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
          
               
-    $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";  
+    $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE Email= '{$Email}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -97,7 +97,7 @@ if(isset($_GET['profile'])){
             die("Query Failed" . mysqli_error($connection));
         }           
           
-           header("Location:Jobseeker_full_profile.php?profile=$id"); 
+           header("Location:Jobseeker_full_profile.php?profile=$Email"); 
 
           }else{
               $message_Fullname ="Only Alphabets are allowed in Fullname";

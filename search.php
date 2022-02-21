@@ -66,14 +66,32 @@ switch ($_POST['type']) {
         
      $query = "SELECT Location FROM jobs  WHERE Location LIKE '%" . $_POST['search'] . "%' ";
     
-    $statement=mysqli_query($connection,$query);
+     $statement=mysqli_query($connection,$query);
     
-    while($row=mysqli_fetch_assoc($statement)){
+     while($row=mysqli_fetch_assoc($statement)){
         
         $data[] = $row["Location"];
     
-    }
+     }
          break;
+
+     case "Skill":
+
+      $datas = file_get_contents("search_profile.json");
+      $datas = json_decode($datas, true);
+
+      foreach($datas as $row)
+      {
+         $Skills=$row['Skills'];
+         
+         $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
+         $Skills3= preg_replace('/\"\]/i', '', $Skills2);
+         $Skills4= preg_replace('/"/i', '', $Skills3);
+
+         $data[]=$Skills4;
+
+      }
+
 }
 
 if (count($data)==0) { $data = null; }

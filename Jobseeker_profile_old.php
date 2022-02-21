@@ -294,6 +294,9 @@
 <form action="" method="post" autocomplete="off">
     <div class="input-group">
        <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
+       <!-- <button name="submit" class="btn head-btn2" style="padding: 0.4rem 2rem;" type="submit">
+          <i class="fa fa-search"></i>
+       </button> -->
    </div>
 </form>
 </div>
@@ -303,40 +306,7 @@
 <div class="input-group" style="width: 140px;">
          <select type="text" class="form-control" name="Experience_years"id="Experience_years">
                       
-                  <?php   
-                      // $data = file_get_contents("search_profile.json");  
-                      // $data = json_decode($data, true);
-
-                      // foreach($data as $row)
-                      // {
-
-                      //    $experience=$row['Experience_years'];
-
-                      //    if($experience == $Experience_years) {
-                        
-                      //       echo "<option value='$Experienced'>$experience</option>";
-                           
-                      //    }else{
-                                
-                      //       echo "<option value='$experience'>$experience</option>";
-                 
-                      //     }
-
-                      // }
-
-                      //   $Experienced=$_POST['Experience_years'];
-
-                      //   if(!empty($Experienced)){
-
-                      //     echo "<option selected value='$Experienced'> $Experienced </option>";
-                           
-                      //   }else{
-
-                      //     echo "<option selected value='Select Experience'>Select Experience</option>";
-                          
-                      //   }
-
-                  ?>
+             
                         <?php      
 
                             $query="SELECT Experience FROM experience";
@@ -394,13 +364,47 @@
 
             $Skill=$_POST['Skills'];
             $Experienced=$_POST['Experience_years'];
+            // $Educate=$_POST['Education'];
+            // $Functions=$_POST['Function'];
+            // $search=$_POST['Fullname'];
+            // $Industries=$_POST['Industry'];
+            
 
-            $json = file_get_contents("search_profile.json");
-            $json_output = json_decode($json, true);
+             // if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
+            // $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
 
             if($Skill != "" || $Experienced != ""){
-            foreach($json_output as $row)
-             {
+
+              $users="SELECT * FROM users WHERE Skills = '$Skill' || Experience_years='$Experienced' "; 
+
+              $search_users=mysqli_query($connection, $users); 
+
+                 if(!$search_users){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($search_users);
+                if($count == 0){
+
+             ?>
+
+          <center><div class="col-md-1">
+           <?php   echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
+          </div></center>
+
+          <br>
+
+             <?php
+
+                echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
+                    
+            }
+           else{
+            echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";
+   ?>
+   <br>
+   <br>
+   <?php
+             while($row=mysqli_fetch_assoc($search_users)){
 
                     $id=$row['id'];
                     $Fullname=$row['Fullname'];
@@ -410,20 +414,18 @@
                     $Phone=$row['Phone'];
                     $City=$row['City'];
                     $Education=$row['Education'];
+                    // $Industry=substr($row['Industry'],0,37);
+                    // $Function=substr($row['Function'],0,37);
                     $Industry=$row['Industry'];
                     $Skills=$row['Skills'];
                     $Function=$row['Function'];
                     $Experience_years=$row['Experience_years'];
                     $Experience_months =$row['Experience_months'];
 
-                    $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
-                    $Skills3= preg_replace('/\"\]/i', '', $Skills2);
-                    $Skills4= preg_replace('/"/i', '', $Skills3);
+if($User_type == "Job Seeker"){
 
-               if ($Skills4 == $Skill || $row['Experience_years'] == $Experienced){
-   ?>
-   <br>
-   <br>
+?>
+
 
 <div class="card">
 <div class="container">
@@ -431,7 +433,7 @@
         <div class="u-align-left" style="width: 520px;">
 
         <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills4; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
 
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
@@ -440,14 +442,14 @@
   <div class="u-align-center" style="padding-left: 40px;"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
              <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
+           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
           </div>
         </li>
      </div>  
@@ -457,33 +459,23 @@
 </div>
 
 <?php 
-}else{
-?>
-
-    <!-- <center><div class="col-md-1">
-    <?php   //echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
-    </div></center>
-
-    <br> -->
-
-     <?php
-
-        // echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
-
-  }
 }
-}else{
 
+      } 
+    }
+  }else{
+    
     header("Location:Jobseeker_profile.php");
 
   }
+
 }else{
 
-  $data = file_get_contents("search_profile.json");
-  $data = json_decode($data, true);
 
-  foreach($data as $row)
-  {
+  $query = "SELECT * FROM users WHERE User_type='Job Seeker'";
+  $artist_id = mysqli_query($connection,$query);
+
+  while($row=mysqli_fetch_array($artist_id)){
 
         $id=$row['id'];
         $Fullname=$row['Fullname'];
@@ -493,15 +485,15 @@
         $Phone=$row['Phone'];
         $City=$row['City'];
         $Education=$row['Education'];
+        // $Industry=substr($row['Industry'],0,37);
+        // $Function=substr($row['Function'],0,37);
         $Industry=$row['Industry'];
         $Skills=$row['Skills'];
         $Function=$row['Function'];
         $Experience_years=$row['Experience_years'];
         $Experience_months =$row['Experience_months'];
 
-       $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
-       $Skills3= preg_replace('/\"\]/i', '', $Skills2);
-       $Skills4= preg_replace('/"/i', '', $Skills3);
+
 ?>
 
 <div class="card">
@@ -510,23 +502,23 @@
         <div class="u-align-left" style="width: 480px;">
 
         <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills4; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
 
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
 
   </div>
-  <div class="u-align-center" style="padding-left: 40px;">
+  <div class="u-align-center" style="padding-left: 40px;"> 
      <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
      <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
      </div>
      <div class="u-align-right" style="width: 50px;">
         <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
              <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
+           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
           </div>
         </li>
      </div>  
@@ -541,8 +533,8 @@
 <?php
 
      if(isset($_GET['delete'])){
-         $Email=$_GET['delete'];
-         $query="DELETE FROM users WHERE Email={$Email}";
+         $id=$_GET['delete'];
+         $query="DELETE FROM users WHERE id={$id}";
          $delete_query=mysqli_query($connection,$query);
          header("Location:Jobseeker_profile.php");
      }
@@ -618,7 +610,7 @@
       ac.attach({
         target: "Skills",
         data: "search.php",
-        post: { type: "Skill" },
+        post: { type: "Skills" },
         // OPTIONAL
         delay : 50,
         min : 1

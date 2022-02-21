@@ -7,9 +7,9 @@
 
   if(isset($_GET['profile'])){
 
-  $id = $_GET['profile'];     
+  $Email = $_GET['profile'];     
         
-     $query="SELECT * FROM users WHERE id = '{$id}' ";
+     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -324,7 +324,7 @@
         ?>
 
             <center>
-            <a href="Jobseeker_edit_profile.php?profile=<?php echo $id; ?>" class="btn head-btn1">Edit Profile</a>
+            <a href="Jobseeker_edit_profile.php?profile=<?php echo $Email; ?>" class="btn head-btn1">Edit Profile</a>
             </center>
         <?php
 
