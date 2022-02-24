@@ -362,8 +362,8 @@
 
  if (isset($_POST['submit'])){
 
-            $Skill=$_POST['Skills'];
-            $Experienced=$_POST['Experience_years'];
+            $Skill=trim($_POST['Skills']);
+            $Experienced=trim($_POST['Experience_years']);
             // $Educate=$_POST['Education'];
             // $Functions=$_POST['Function'];
             // $search=$_POST['Fullname'];
