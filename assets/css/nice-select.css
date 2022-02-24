@@ -55,11 +55,21 @@
         -ms-transform: rotate(-135deg);
             transform: rotate(-135deg); }
   .nice-select.open .list {
+
+    background-color: #ffffff;
+    width: auto;
+    height: 310px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
     opacity: 1;
     pointer-events: auto;
     -webkit-transform: scale(1) translateY(0);
         -ms-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0); }
+            transform: scale(1) translateY(0); 
+
+  }
+
   .nice-select.disabled {
     border-color: #ededed;
     color: #999;
