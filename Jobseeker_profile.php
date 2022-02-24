@@ -291,267 +291,255 @@
       <h6 class="" style="font-weight: 500; font-size: 0.90rem;">Search CVs</h6>
    </div>
    <div class="u-layout-row">
-       <div class="col-md-2">
-          <!-- <h6 style="font-size: 0.90rem;">Skills</h6> -->
-          <form action="" method="post" autocomplete="off">
-             <div class="input-group">
-                <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
-             </div>
-          </form>
-       </div>
+      <div class="col-md-2">
+         <form action="" method="post" autocomplete="off">
+            <div class="input-group">
+               <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
+            </div>
+         </form>
+      </div>
 
-<!-- <div class="col-md-3"> -->
-<!-- <h6 style="font-size: 0.90rem;">Experience</h6> -->
-<div class="input-group" style="width: 140px;">
+      <div class="input-group" style="width: 140px;">
          <select type="text" class="form-control" name="Experience_years"id="Experience_years">
-                      
-                  <?php   
-                      // $data = file_get_contents("search_profile.json");  
-                      // $data = json_decode($data, true);
 
-                      // foreach($data as $row)
-                      // {
+            <?php      
 
-                      //    $experience=$row['Experience_years'];
+                $query="SELECT Experience FROM experience";
+                $select_experience=mysqli_query($connection,$query);
 
-                      //    if($experience == $Experience_years) {
-                        
-                      //       echo "<option value='$Experienced'>$experience</option>";
-                           
-                      //    }else{
-                                
-                      //       echo "<option value='$experience'>$experience</option>";
-                 
-                      //     }
+                  if(!$select_experience) {
 
-                      // }
+                    die("Query Failed" . mysqli_error($connection));
 
-                      //   $Experienced=$_POST['Experience_years'];
+                  } 
 
-                      //   if(!empty($Experienced)){
+                while($row=mysqli_fetch_assoc($select_experience)){
 
-                      //     echo "<option selected value='$Experienced'> $Experienced </option>";
-                           
-                      //   }else{
+                  $experience=$row['Experience'];               
 
-                      //     echo "<option selected value='Select Experience'>Select Experience</option>";
-                          
-                      //   }
+                  if($experience == $Experience_years) {
+                    
+                    echo "<option value='$Experienced'>$experience</option>";
+               
+                  }
+                  else{
+                    
+                    echo "<option value='$experience'>$experience</option>";
+     
+                  }     
+                } 
+               
+                $Experienced=$_POST['Experience_years'];
 
-                  ?>
-                        <?php      
+                if(!empty($Experienced)){
 
-                            $query="SELECT Experience FROM experience";
-                            $select_experience=mysqli_query($connection,$query);
+                  echo "<option selected value='$Experienced'> $Experienced </option>";
+                   
+                }
+                else{
 
-                             if(!$select_experience) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
+                  echo "<option selected value='Select Experience'>Select Experience</option>";
+                  
+                }
+                
+            ?>
+         </select>        
+      </div>
 
-                            while($row=mysqli_fetch_assoc($select_experience)){
+      <button name="submit" style="padding: 0.2rem 1rem;" class="btn head-btn2" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
 
-                            $experience=$row['Experience'];               
-
-                           if($experience == $Experience_years) {
-                            
-                         echo "<option value='$Experienced'>$experience</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$experience'>$experience</option>";
-             
-                         }     
-                        } 
-                       
-                        $Experienced=$_POST['Experience_years'];
-
-                        if(!empty($Experienced)){
-
-                          echo "<option selected value='$Experienced'> $Experienced </option>";
-                           
-                        }else{
-
-                          echo "<option selected value='Select Experience'>Select Experience</option>";
-                          
-                        }
-                        
-                     ?>
-         </select>
-         
- </div>
- <!-- </div> -->
-  <button name="submit" style="padding: 0.2rem 1rem;" class="btn head-btn2" type="submit">
-    <i class="fa fa-search"></i>
-  </button>
-
-</div>
+   </div>
 </form>
 <br>
 <div class="row justify-content-md-center align-items-center h-100">
-<div class="u-layout-row">
+   <div class="u-layout-row">
+
+    <?php
+
+     if (isset($_POST['submit'])){
+
+        $Skill=trim($_POST['Skills']);
+        $Experienced=trim($_POST['Experience_years']);
+
+        $json = file_get_contents("search_profile.json");
+        $json_output = json_decode($json, true);
+
+        if($Skill != "" || $Experienced != ""){
+          foreach($json_output as $row)
+          {
+
+              $id=trim($row['id']);
+              $Fullname=trim($row['Fullname']);
+              $Image=trim($row['Image']);
+              $Email=trim($row['Email']);
+              $User_type=trim($row['User_type']);
+              $Phone=trim($row['Phone']);
+              $City=trim($row['City']);
+              $Education=trim($row['Education']);
+              $Industry=trim($row['Industry']);
+              $Skills=$row['Skills'];
+              $Function=trim($row['Function']);
+              $Experience_years=trim($row['Experience_years']);
+              $Experience_months =trim($row['Experience_months']);
+
+              $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
+              $Skills3= preg_replace('/\"\]/i', '', $Skills2);
+              $Skills4= preg_replace('/"/i', '', $Skills3);
+
+              if ($Skills4 == $Skill || $row['Experience_years'] == $Experienced){
+    ?>
+    <br>
+    <br>
+
+    <div class="card">
+      <div class="container">
+        <div class="u-layout-row">
+          <div class="u-align-left" style="width: 520px;">
+
+            <h6><b><?php echo $Fullname; ?></b></h6><br>
+
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Skills:&nbsp;&nbsp;</span>
+                    <?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Experience:&nbsp;&nbsp;</span>
+                    <?php echo $Experience_years; ?>
+                </p>
+
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Function:&nbsp;&nbsp;</span>
+                    <?php echo $Function; ?>
+                </p>
+
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Email:&nbsp;&nbsp;</span>
+                    <?php echo $Email; ?>
+                </p>
+
+          </div>
+          <div class="u-align-center" style="padding-left: 40px;"> 
+             <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+             <br>
+             <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+         </div>
+         <div class="u-align-right" style="width: 50px;">
+             <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                 <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                  <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
+                </div>
+             </li>
+         </div>  
+      
+        </div>
+      </div>
+    </div>
+
+       <?php 
+             }
+             else{
+       ?>
+
+            <!-- <center><div class="col-md-1">
+            <?php   //echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
+            </div></center>
+
+            <br> -->
+
+      <?php
+
+          // echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
+
+            }
+          }
+      }
+      else{
+
+        header("Location:Jobseeker_profile.php");
+
+      }
+     }
+     else{
+
+        $data = file_get_contents("search_profile.json");
+        $data = json_decode($data, true);
+
+        foreach($data as $row)
+        {
+
+            $id=trim($row['id']);
+            $Fullname=trim($row['Fullname']);
+            $Image=trim($row['Image']);
+            $Email=trim($row['Email']);
+            $User_type=trim($row['User_type']);
+            $Phone=trim($row['Phone']);
+            $City=trim($row['City']);
+            $Education=trim($row['Education']);
+            $Industry=trim($row['Industry']);
+            $Skills=$row['Skills'];
+            $Function=trim($row['Function']);
+            $Experience_years=trim($row['Experience_years']);
+            $Experience_months =trim($row['Experience_months']);
+
+            $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
+            $Skills3= preg_replace('/\"\]/i', '', $Skills2);
+            $Skills4= preg_replace('/"/i', '', $Skills3);
+?>
+
+    <div class="card">
+    <div class="container">
+        <div class="u-layout-row">
+            <div class="u-align-left" style="width: 480px;">
+
+            <h6><b><?php echo $Fullname; ?></b></h6><br>
+
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Skills:&nbsp;&nbsp;</span>
+                <?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Experience:&nbsp;&nbsp;</span>
+                <?php echo $Experience_years; ?>
+            </p>
+
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Function:&nbsp;&nbsp;</span>
+                <?php echo $Function; ?>
+            </p>
+
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Email:&nbsp;&nbsp;</span>
+                <?php echo $Email; ?>
+            </p>
+
+      </div>
+      <div class="u-align-center" style="padding-left: 40px;">
+         <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+         <br>
+         <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+         </div>
+         <div class="u-align-right" style="width: 50px;">
+            <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                  <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                 <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+               <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
+              </div>
+            </li>
+         </div>  
+      
+    </div>
+    </div>
+    </div>
+
+
 <?php
 
- if (isset($_POST['submit'])){
+        }
 
-            $Skill=trim($_POST['Skills']);
-            $Experienced=trim($_POST['Experience_years']);
+     }
 
-            $json = file_get_contents("search_profile.json");
-            $json_output = json_decode($json, true);
-
-            if($Skill != "" || $Experienced != ""){
-            foreach($json_output as $row)
-             {
-
-                    $id=trim($row['id']);
-                    $Fullname=trim($row['Fullname']);
-                    $Image=trim($row['Image']);
-                    $Email=trim($row['Email']);
-                    $User_type=trim($row['User_type']);
-                    $Phone=trim($row['Phone']);
-                    $City=trim($row['City']);
-                    $Education=trim($row['Education']);
-                    $Industry=trim($row['Industry']);
-                    $Skills=$row['Skills'];
-                    $Function=trim($row['Function']);
-                    $Experience_years=trim($row['Experience_years']);
-                    $Experience_months =trim($row['Experience_months']);
-
-                    $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
-                    $Skills3= preg_replace('/\"\]/i', '', $Skills2);
-                    $Skills4= preg_replace('/"/i', '', $Skills3);
-
-               if ($Skills4 == $Skill || $row['Experience_years'] == $Experienced){
-   ?>
-   <br>
-   <br>
-
-<div class="card">
-<div class="container">
-    <div class="u-layout-row">
-        <div class="u-align-left" style="width: 520px;">
-
-        <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills4; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
-
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
-
-  </div>
-  <div class="u-align-center" style="padding-left: 40px;"> 
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
-     <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
-     </div>
-     <div class="u-align-right" style="width: 50px;">
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-             <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
-          </div>
-        </li>
-     </div>  
-  
-</div>
-  </div>
-</div>
-
-<?php 
-}else{
 ?>
-
-    <!-- <center><div class="col-md-1">
-    <?php   //echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
-    </div></center>
-
-    <br> -->
-
-     <?php
-
-        // echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
-
-  }
-}
-}else{
-
-    header("Location:Jobseeker_profile.php");
-
-  }
-}else{
-
-  $data = file_get_contents("search_profile.json");
-  $data = json_decode($data, true);
-
-  foreach($data as $row)
-  {
-
-        $id=trim($row['id']);
-        $Fullname=trim($row['Fullname']);
-        $Image=trim($row['Image']);
-        $Email=trim($row['Email']);
-        $User_type=trim($row['User_type']);
-        $Phone=trim($row['Phone']);
-        $City=trim($row['City']);
-        $Education=trim($row['Education']);
-        $Industry=trim($row['Industry']);
-        $Skills=$row['Skills'];
-        $Function=trim($row['Function']);
-        $Experience_years=trim($row['Experience_years']);
-        $Experience_months =trim($row['Experience_months']);
-
-       $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
-       $Skills3= preg_replace('/\"\]/i', '', $Skills2);
-       $Skills4= preg_replace('/"/i', '', $Skills3);
-?>
-
-<div class="card">
-<div class="container">
-    <div class="u-layout-row">
-        <div class="u-align-left" style="width: 480px;">
-
-        <h6><b><?php echo $Fullname; ?></b></h6><br>
-
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
-            <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Skills:&nbsp;&nbsp;</span>
-            <?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Experience:&nbsp;&nbsp;</span>
-            <?php echo $Experience_years; ?>
-        </p>
-
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
-            <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Function:&nbsp;&nbsp;</span>
-            <?php echo $Function; ?>
-        </p>
-
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
-            <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Email:&nbsp;&nbsp;</span>
-            <?php echo $Email; ?>
-        </p>
-
-  </div>
-  <div class="u-align-center" style="padding-left: 40px;">
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
-     <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
-     </div>
-     <div class="u-align-right" style="width: 50px;">
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-             <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
-          </div>
-        </li>
-     </div>  
-  
-</div>
-  </div>
-</div>
-
-
-<?php } } ?>
 
 <?php
 
