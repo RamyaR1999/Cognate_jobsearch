@@ -292,7 +292,7 @@
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-9">Job description</h2>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11"><?php echo $Job_title; ?></h2>
                 <!-- <p class="u-align-left u-text u-text-10"><?php echo $Job_description; ?></p> -->
-                <p class="u-align-left u-text u-text-10"><textarea class="textarea" rows="10" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p>
+                <p class="u-align-left u-text u-text-10"><textarea id="cryTextArea" class="textarea" rows="10" style="border: none; height: auto; width: 100%;"><?php echo $Job_description; ?></textarea></p>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">Skills</h2>
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
                 <p class="u-align-left u-text u-text-10">posted :&nbsp; <?php echo $Job_posted; ?></p>
@@ -300,6 +300,54 @@
                 <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>" class="btn head-btn1">apply now</a>
       </div>
     </section>
-    
+
+
+<script>
+
+var observe;
+if (window.attachEvent) {
+  observe = function(element, event, handler) {
+    element.attachEvent('on' + event, handler);
+  };
+} else {
+  observe = function(element, event, handler) {
+    element.addEventListener(event, handler, false);
+  };
+}
+var firstHeight = 0;
+var storeH = 0;
+var storeH2 = 0;
+function init() {
+  var text = document.getElementById('cryTextArea');
+
+  function resize() {
+    //console.log(text.scrollHeight);
+    text.style.height = 'auto';
+    if (storeH != text.scrollHeight) {
+      text.style.height = text.scrollHeight + 'px';
+      storeH = text.scrollHeight;
+      if (storeH2 != storeH) {
+        console.log("SENT->" + storeH);
+        storeH2 = storeH;
+      }
+    }
+  }
+  /* 0-timeout to get the already changed text */
+  function delayedResize() {
+    window.setTimeout(resize, 0);
+  }
+  observe(text, 'change', resize);
+  observe(text, 'cut', delayedResize);
+  observe(text, 'paste', delayedResize);
+  observe(text, 'drop', delayedResize);
+  observe(text, 'keydown', delayedResize);
+
+  // text.focus();
+  // text.select();
+  resize();
+}
+init();
+
+</script>
     
  <?php include "footer.php"; ?>

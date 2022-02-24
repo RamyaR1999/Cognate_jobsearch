@@ -392,8 +392,8 @@
 
  if (isset($_POST['submit'])){
 
-            $Skill=$_POST['Skills'];
-            $Experienced=$_POST['Experience_years'];
+            $Skill=trim($_POST['Skills']);
+            $Experienced=trim($_POST['Experience_years']);
 
             $json = file_get_contents("search_profile.json");
             $json_output = json_decode($json, true);
@@ -402,19 +402,19 @@
             foreach($json_output as $row)
              {
 
-                    $id=$row['id'];
-                    $Fullname=$row['Fullname'];
-                    $Image=$row['Image'];
-                    $Email=$row['Email'];
-                    $User_type=$row['User_type'];
-                    $Phone=$row['Phone'];
-                    $City=$row['City'];
-                    $Education=$row['Education'];
-                    $Industry=$row['Industry'];
+                    $id=trim($row['id']);
+                    $Fullname=trim($row['Fullname']);
+                    $Image=trim($row['Image']);
+                    $Email=trim($row['Email']);
+                    $User_type=trim($row['User_type']);
+                    $Phone=trim($row['Phone']);
+                    $City=trim($row['City']);
+                    $Education=trim($row['Education']);
+                    $Industry=trim($row['Industry']);
                     $Skills=$row['Skills'];
-                    $Function=$row['Function'];
-                    $Experience_years=$row['Experience_years'];
-                    $Experience_months =$row['Experience_months'];
+                    $Function=trim($row['Function']);
+                    $Experience_years=trim($row['Experience_years']);
+                    $Experience_months =trim($row['Experience_months']);
 
                     $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
                     $Skills3= preg_replace('/\"\]/i', '', $Skills2);
@@ -485,19 +485,19 @@
   foreach($data as $row)
   {
 
-        $id=$row['id'];
-        $Fullname=$row['Fullname'];
-        $Image=$row['Image'];
-        $Email=$row['Email'];
-        $User_type=$row['User_type'];
-        $Phone=$row['Phone'];
-        $City=$row['City'];
-        $Education=$row['Education'];
-        $Industry=$row['Industry'];
+        $id=trim($row['id']);
+        $Fullname=trim($row['Fullname']);
+        $Image=trim($row['Image']);
+        $Email=trim($row['Email']);
+        $User_type=trim($row['User_type']);
+        $Phone=trim($row['Phone']);
+        $City=trim($row['City']);
+        $Education=trim($row['Education']);
+        $Industry=trim($row['Industry']);
         $Skills=$row['Skills'];
-        $Function=$row['Function'];
-        $Experience_years=$row['Experience_years'];
-        $Experience_months =$row['Experience_months'];
+        $Function=trim($row['Function']);
+        $Experience_years=trim($row['Experience_years']);
+        $Experience_months =trim($row['Experience_months']);
 
        $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
        $Skills3= preg_replace('/\"\]/i', '', $Skills2);
@@ -510,7 +510,7 @@
         <div class="u-align-left" style="width: 480px;">
 
         <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills4; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
 
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
         <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
@@ -614,16 +614,16 @@
       });
     });
 
-    window.addEventListener("DOMContentLoaded", function(){
-      ac.attach({
-        target: "Skills",
-        data: "search.php",
-        post: { type: "Skill" },
-        // OPTIONAL
-        delay : 50,
-        min : 1
-      });
-    });
+    // window.addEventListener("DOMContentLoaded", function(){
+    //   ac.attach({
+    //     target: "Skills",
+    //     data: "search.php",
+    //     post: { type: "Skill" },
+    //     // OPTIONAL
+    //     delay : 50,
+    //     min : 1
+    //   });
+    // });
 </script>
 
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">

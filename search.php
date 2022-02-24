@@ -49,7 +49,7 @@ switch ($_POST['type']) {
     }
          break;
 
-    case "Skills":
+    case "Job_Skills":
         
      $query = "SELECT Skills FROM jobs  WHERE Skills LIKE '%" . $_POST['search'] . "%' ";
     

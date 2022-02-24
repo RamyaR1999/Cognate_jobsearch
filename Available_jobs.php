@@ -337,7 +337,7 @@ if (isset($_POST['search'])){
 
   if(isset($_GET['jobs'])){
 
-  $id = $_GET['jobs'];     
+  $id = $_GET['jobs'];    
         
      $query="SELECT * FROM jobs WHERE id = '{$id}' ";
      $select_user_profile = mysqli_query($connection,$query);
@@ -369,10 +369,14 @@ if (isset($_POST['search'])){
                 </p>
                 <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
                 <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
-                <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p><br>
+                <!-- <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p> -->
+                <p class="u-text u-text-4"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p><br>
                 <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
                 <p class="u-align-left u-text u-text-11"><?php echo $Skills; ?></p>
-                    <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn2" style="align-right" target="_blank">Apply Now</a>
+                <br>
+                <div class="container" style="padding-left: 101px;">
+                    <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" style="align-right" target="_blank">Apply Now</a>
+                </div>
               </div>
             </div>
 
@@ -439,15 +443,35 @@ if (isset($_POST['search'])){
               </div>
           </div>
         </div>
+        <br>
         <div class="container" style="align-right">
         <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" target="_blank">Apply Now</a>
-    </div>
+        <?php
+
+        if($_SESSION['User_type'] == 'Admin'){
+
+         echo "<a class='btn head-btn1' onClick=\"javascript:return confirm('Are you Sure you want to delete $Job_title Job');\"href='Available_jobs.php?delete={$the_id}'>Delete this job</a>";
+
+         }
+
+        ?>
+       </div>
 
 <?php
 
   }
   }
   
+?>
+
+<?php
+
+     if(isset($_GET['delete'])){
+         $the_id=$_GET['delete'];
+         $query="DELETE FROM jobs WHERE id={$the_id}";
+         $delete_query=mysqli_query($connection,$query);
+         header("Location:Available_jobs.php");
+     }
 ?>
 
           </div>
