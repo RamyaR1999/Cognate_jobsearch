@@ -207,7 +207,7 @@ $mail->SMTPSecure='tls';
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
     </li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Search Candidates</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
 
@@ -218,7 +218,7 @@ $mail->SMTPSecure='tls';
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li>
+    <li><a href="Jobseeker_profile.php">Search Candidates</a></li>
     
     <?php
         

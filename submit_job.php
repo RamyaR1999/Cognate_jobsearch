@@ -97,7 +97,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Submit Job</title>
+    <title>CGBS-Create Job</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
@@ -179,7 +179,7 @@
   <ul class="u-nav u-unstyled u-nav-1" id="navigation">
     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
     </li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Search Candidates</a>
+<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
 
   <ul class="submenu">
 
@@ -190,7 +190,7 @@
 
     ?>
 
-    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
+    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
     
     <?php
         
@@ -391,7 +391,7 @@
 
         <div class="card fat">
             <div class="card-body">
-                <h4 class="card-title">Submit job</h4>
+                <h4 class="card-title">Create Job</h4>
   
   <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
 

@@ -19,7 +19,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Job seekers profile</title>
+    <title>CGBS-Search Candidates</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -101,7 +101,7 @@
                 <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
                 </li>
 
-                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="Job_seeker.php">Search Candidates</a>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="Job_seeker.php">Job Seeker</a>
 
                   <ul class="submenu">
 
@@ -113,7 +113,7 @@
 
                         ?>
 
-                    <li><a href="Jobseeker_profile.php">Job Seeker Profile</a></li><br>
+                    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
                     
                         <?php
                             
