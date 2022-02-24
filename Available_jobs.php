@@ -129,7 +129,7 @@ if (isset($_POST['search'])){
       <ul class="u-nav u-unstyled u-nav-1" id="navigation">
          <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
          </li>
-         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
+         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Search Candidates</a>
 
            <ul class="submenu">
 
@@ -158,7 +158,7 @@ if (isset($_POST['search'])){
 
            <ul class="submenu">
          
-             <li><a href="submit_job.php">Submit Job</a></li><br>
+             <li><a href="submit_job.php">Create Job</a></li><br>
             <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
              <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
              <li><a href="ourSolution.php">Our Solutions</a></li> -->
