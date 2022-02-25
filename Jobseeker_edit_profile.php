@@ -117,7 +117,7 @@ if(isset($_GET['profile'])){
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CGBS-Edit Profile</title>
+    <title>CGBS-Candidates Edit Profile</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- image in title-->
