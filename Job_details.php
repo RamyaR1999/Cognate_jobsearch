@@ -297,10 +297,23 @@
                 <p class="u-align-left u-text u-text-12"><?php echo $Skills; ?></p>
                 <p class="u-align-left u-text u-text-10">posted :&nbsp; <?php echo $Job_posted; ?></p>
                 <p class="u-align-left u-text u-text-10">location : <?php echo $Location_country; ?></p> <br>
-                <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>" class="btn head-btn1">apply now</a>
+                <button onclick="copyToClipboard()" class="btn head-btn1">
+            Copy Link
+          </button>
+                <a href="Apply_Job.php?Job_details=<?php echo $id ?>&<?php echo $Job_title ?>"class="btn head-btn1">apply now</a>
       </div>
     </section>
-
+<script>
+function copyToClipboard(text) {
+var inputc = document.body.appendChild(document.createElement("input"));
+inputc.value = window.location.href;
+inputc.focus();
+inputc.select();
+document.execCommand('copy');
+inputc.parentNode.removeChild(inputc);
+alert("URL Copied.");
+}
+</script>
 
 <script>
 
