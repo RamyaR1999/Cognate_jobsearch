@@ -26,6 +26,10 @@
           user-select: none;
   white-space: nowrap;
   width: auto; }
+.input-group .nice-select{
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
   .nice-select:hover {
     border-color: #dbdbdb; }
   .nice-select:active, .nice-select.open, .nice-select:focus {
