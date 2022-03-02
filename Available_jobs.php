@@ -32,7 +32,7 @@ if (isset($_POST['search'])){
             $Skills=$row['Skills'];
             $Location=$row['Location'];
             
-            header ("Location: Available_jobs.php?jobs=$id ");
+            header ("Location: Available_jobs.php?jobs=$Job_title ");
 
           }
 
@@ -337,9 +337,10 @@ if (isset($_POST['search'])){
 
   if(isset($_GET['jobs'])){
 
-  $id = $_GET['jobs'];    
+  $Location = $_GET['jobs'];
+  $Job_title = $_GET['jobs'];
         
-     $query="SELECT * FROM jobs WHERE id = '{$id}' ";
+     $query="SELECT * FROM jobs WHERE Location = '{$Location}' || Job_title = '{$Job_title}' ORDER BY id DESC ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -352,6 +353,7 @@ if (isset($_POST['search'])){
              $Job_type=  $row['Job_type'];
              $Company_name=  $row['Company_name'];
              $Location =  $row['Location'];
+             $Location_country =  $row['Location_country'];
              $Service = $row['Service'];
              $Job_title = $row['Job_title'];
              $Sector = $row['Sector'];
@@ -379,6 +381,8 @@ if (isset($_POST['search'])){
                 </div>
               </div>
             </div>
+            <br>
+            <br>
 
   <?php          
      }

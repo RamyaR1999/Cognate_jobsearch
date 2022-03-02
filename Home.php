@@ -8,12 +8,42 @@
 if (isset($_POST['submit'])){
 
             $search=$_POST['Job_title'];
-            $Search=$_POST['Skills'];
+            $skills=$_POST['Skills'];
             $location=$_POST['Location'];
 
-  if($search !="" || $Search !="" || $location !=""){
+       if($search !="" && $location !=""){
 
-      $jobs="SELECT * FROM jobs WHERE Job_title = '$search' || Skills='$Search' || Location='$location' ";
+        $jobs="SELECT * FROM jobs WHERE Job_title = '{$search}' AND Location = '{$location}' ";
+
+              $search_jobs=mysqli_query($connection, $jobs); 
+
+                 if(!$search_jobs){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($search_jobs);
+                if($count == 0){
+
+               header ("Location: Available_jobs.php?jobs=$search");
+                       
+            }else{
+              while($row=mysqli_fetch_assoc($search_jobs)){
+
+                    $id=$row['id'];
+                    $Job_title=$row['Job_title'];
+                    $Location=$row['Location'];
+                    $Skills=$row['Skills'];
+
+                    // $_SESSION['Job_title']=$Job_title;
+                    // $_SESSION['Location']=$Location;
+            
+            header ("Location: Available_jobs.php?jobs=$Job_title & $Location");
+
+            }
+
+        }
+       }elseif($skills !="" || $location !=""){
+
+      $jobs="SELECT * FROM jobs WHERE Job_title = '$search' || Skills='$skills' || Location='$location' ";
 
               $search_jobs=mysqli_query($connection, $jobs); 
 
@@ -30,15 +60,47 @@ if (isset($_POST['submit'])){
 
                     $id=$row['id'];
                     $Job_title=$row['Job_title'];
+                    $Location=$row['Location'];
                     $Skills=$row['Skills'];
+
+                    $_SESSION['Location']=$Location;
+                    $_SESSION['Job_title']=$Job_title;
             
-            header ("Location: Available_jobs.php?jobs=$id ");
+            header ("Location: Available_jobs.php?jobs=$Location ");
 
             }
 
         }
-      }else{
-        header ("Location: Available_jobs.php");
+      }elseif($search !=""){
+        $jobs="SELECT * FROM jobs WHERE Job_title = '$search'";
+
+              $search_jobs=mysqli_query($connection, $jobs); 
+
+                 if(!$search_jobs){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($search_jobs);
+                if($count == 0){
+
+               // header ("Location: Available_jobs.php");
+                       
+            }else{
+              while($row=mysqli_fetch_assoc($search_jobs)){
+
+                    $id=$row['id'];
+                    $Job_title=$row['Job_title'];
+                    $Location=$row['Location'];
+                    $Skills=$row['Skills'];
+
+                    $_SESSION['Job_title']=$Job_title;
+            
+            header ("Location: Available_jobs.php?jobs=$Job_title ");
+
+            }
+
+        }
+       }else{
+          header ("Location: Available_jobs.php");
         }
       }
 
@@ -554,7 +616,7 @@ if (isset($_POST['submit'])){
       ac.attach({
         target: "Location",
         data: "search.php",
-        post: { type: "Location" },
+        post: { type: "Location_india" },
         // OPTIONAL
         delay : 50,
         min : 1

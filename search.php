@@ -75,6 +75,19 @@ switch ($_POST['type']) {
      }
          break;
 
+    case "Location_india":
+        
+     $query = "SELECT Location_india FROM location_india  WHERE location_india LIKE '%" . $_POST['search'] . "%' ";
+    
+     $statement=mysqli_query($connection,$query);
+    
+     while($row=mysqli_fetch_assoc($statement)){
+        
+        $data[] = $row["Location_india"];
+    
+     }
+         break;
+
      case "Skill":
 
       $datas = file_get_contents("search_profile.json");
