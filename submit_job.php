@@ -127,23 +127,27 @@
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
- 
- <!-- Password Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
- <!-- Profile Icon -->
- <link rel="stylesheet" href="assets/css/shared/style.css">
- <!-- <script src="assets/vendors/js/vendor.bundle.base.js"></script> -->
+     <!-- Copy Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     
+     <!-- Password Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
- <!-- Font Awesome Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Profile Icon -->
+    <link rel="stylesheet" href="assets/css/shared/style.css">
+     <!-- <script src="assets/vendors/js/vendor.bundle.base.js"></script> -->
 
- <!-- Autocomplete -->
- <script type='text/javascript' src='js/autocomplete.js'></script>
- <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+     <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <!--jQuery libary -->
- <script src="js/jquery.min.js"></script>
+     <!-- Autocomplete -->
+    <script type='text/javascript' src='js/autocomplete.js'></script>
+    <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+
+     <!--jQuery libary -->
+    <script src="js/jquery.min.js"></script>
 
    </head>
 
@@ -351,6 +355,49 @@
     color: #fb246a;
 }
 
+.nice-select.open .list {
+    background-color: #ffffff;
+    width: auto;
+    height: 162px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+
+.nice-select .list {
+    width: auto;
+    height: 162px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgb(68 68 68 / 11%);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.acWrap .acSuggest ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    width: auto;
+    height: 175px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 </style>
 
 <script>
@@ -475,12 +522,14 @@
           </h6>                                                             
         </div>
 
-        <div class="modal-body" id="copyContent"><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to view</a></div>
+        <div class="modal-body" id=""><a href="<?php echo $_SESSION['Apply_Job']; ?>" >click here to view</a></div>
         <div class="modal-body" ><a href="submit_job.php" >click here to Submit another Job</a></div>
+        <div class="modal-body" id="copyContent" style="font-size: 12px;"><?php echo $_SESSION['Apply_Job']; ?></div>
+
         <div class="modal-footer"> 
-          <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
-            Click to Copy
+          <button type="button" id="clickCopy" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">Copy
           </button>
+          <!-- <span class="fa fa-copy"></span> -->
           <a href="Available_jobs.php" type="button" style="font-size: 14px; font-weight: 300; padding: 17px 34px; border-radius: 4px;" class="btn head-btn1">
             View JobList
           </a>                         

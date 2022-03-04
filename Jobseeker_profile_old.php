@@ -8,7 +8,7 @@
    
       header("Location:Job_seeker.php");
   
-  }
+    }
 
 ?>
 
@@ -22,61 +22,59 @@
     <title>CGBS-Search Candidates</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- image in title-->
+
+   <!-- image in title-->
    <link rel="shortcut icon" type="image/x-icon" href="image/cognate.png">
 
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/price_rangs.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/responsive.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/slicknav.css">
+   <link rel="stylesheet" href="assets/css/price_rangs.css">
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+   <link rel="stylesheet" href="assets/css/themify-icons.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
 
 
-     <link rel="stylesheet" href="nicepage.css" media="screen">
+   <link rel="stylesheet" href="nicepage.css" media="screen">
 
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+   <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+   <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
- <!-- Profile Icon -->
+   <!-- Profile Icon -->
+   <link rel="stylesheet" href="assets/css/shared/style.css">
+   <script src="assets/vendors/js/vendor.bundle.base.js"></script>
 
- <link rel="stylesheet" href="assets/css/shared/style.css">
- <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+   <!-- pager -->
+   <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
-<!-- pager -->
- <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <!-- Font Awesome Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Autocomplete -->
+   <script type='text/javascript' src='js/autocomplete.js'></script>
+   <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
 
+</head>
 
-
-<!-- Autocomplete -->
-<script type='text/javascript' src='js/autocomplete.js'></script>
-<link rel="stylesheet" type='text/css' href="css/autocomplete.css">
-
-   </head>
-
-   <body>
-       <!--loading time image-->
-       <div id="preloader-active">
-       <div class="preloader d-flex align-items-center justify-content-center">
-       <div class="preloader-inner position-relative">
-       <div class="preloader-circle"></div>
+<body>
+   <!--loading time image-->
+   <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+     <div class="preloader-inner position-relative">
+      <div class="preloader-circle"></div>
        <div class="preloader-img pere-text">
-       <img src="image/cognate.png" alt="">
-</div>
-</div>
-</div>
-</div>
+        <img src="image/cognate.png" alt="">
+       </div>
+     </div>
+    </div>
+   </div>
 
 <header>
 <div class="header-area header-transparrent">
@@ -84,67 +82,72 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-3 col-md-2">
+
     <!--logoo-->
-<div class="logo">
-<a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
-</div>  
-</div>  
+    <div class="logo">
+    <a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+    </div>
+
+</div>
+
 <div class="col-lg-9 col-md-9">
-<div class="menu-wrapper">
-     <!-- Main-menu -->
-<div class="main-menu u-custom-menu u-nav-container">
-  <nav class="d-none d-lg-block">
-  <ul class="u-nav u-unstyled u-nav-1" id="navigation">
-    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
-    </li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="Job_seeker.php">Job Seeker</a>
+    <div class="menu-wrapper">
 
-  <ul class="submenu">
+       <!-- Main-menu -->
+       <div class="main-menu u-custom-menu u-nav-container">
+          <nav class="d-none d-lg-block">
+             <ul class="u-nav u-unstyled u-nav-1" id="navigation">
 
-    <li><a href="submit_cv.php">Submit CV</a></li><br>
-    
-    <?php
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
+                </li>
 
-       if($_SESSION['User_type'] == 'Admin'){     
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="Job_seeker.php">Job Seeker</a>
 
-    ?>
+                  <ul class="submenu">
 
-    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
-    
-    <?php
-        
-       }
+                    <li><a href="submit_cv.php">Submit CV</a></li><br>
+                    
+                        <?php
 
-    ?>
+                           if($_SESSION['User_type'] == 'Admin'){     
 
-    <li><a href="Available_jobs.php">Find Jobs</a></li>
-   <!--  <li><a href="career_hub.php">Career Hub</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="security_advice.php">Security Advice</a></li> -->
-     
-  </ul>      
-</li>
-<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Services.php">Services</a>
+                        ?>
 
-  <ul class="submenu">
-         
-    <li><a href="submit_job.php">Create Job</a></li><br>
-   <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li> -->
-    <li><a href="Contact.php">Contact</a></li>
-     
-  </ul>
+                    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
+                    
+                        <?php
+                            
+                           }
 
-</li>
-     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
+                        ?>
 
+                    <li><a href="Available_jobs.php">Find Jobs</a></li>
+                    <!-- <li><a href="career_hub.php">Career Hub</a></li>
+                    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+                    <li><a href="security_advice.php">Security Advice</a></li> -->
+                     
+                  </ul>      
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Services.php">Services</a>
 
-</li>
+                  <ul class="submenu">
+                         
+                    <li><a href="submit_job.php">Create Job</a></li><br>
+                   <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
+                    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+                    <li><a href="ourSolution.php">Our Solutions</a></li> -->
+                    <li><a href="Contact.php">Contact</a></li>
+                     
+                  </ul>
+
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
+                </li>
  
-     </ul>
-       </nav>
-      </div>         
+             </ul>
+          </nav>
+       </div>
+
 <!--header button-->
 <div class="header-btn d-none f-right d-lg-block">
 
@@ -157,16 +160,16 @@
       <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
- <?php 
+  <?php 
               
-      }else{
+    }else{
               
-    ?>
+  ?>
     
-<li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-    <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+  <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+     <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
 
-<?php 
+  <?php 
 
     if(isset($_SESSION['id'])){
 
@@ -178,21 +181,21 @@
       
      while($row=mysqli_fetch_array($select_user_profile)){
 
-           $Image=  $row['Image'];
-           $Login_Fullname=  $row['Fullname'];
+       $Image=  $row['Image'];
+       $Login_Fullname=  $row['Fullname'];
       }
-  }
-?>
+    }
+
+  ?>
 
 
-        <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+      <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
     </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-            <div class="dropdown-header text-center">
-                   <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
-
-                  <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                      <?php
+      <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+         <div class="dropdown-header text-center">
+            <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+               <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
+                  <?php
                       
                       if(isset($_SESSION['Fullname'])){
                           
@@ -200,43 +203,43 @@
                          
                       }
                       
-                      ?>
+                  ?>
                       
-                    </p>     
-            </div>
+               </p>     
+         </div>
             <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
             <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-        </div>
-</li>
+      </div>
+  </li>
 
-<?php 
+  <?php 
               
       }
 
-?> 
+  ?> 
 
 
 
         </div>
     </div>
 </div>
-                     <!--mobile button--> 
-                     <div class="col-12">
-                          <div class="mobile_menu d-block d-lg-none"></div>
-                      </div>
-                  </div>
-              </div>
-         </div>
-     </div>
-      <!-- Header End -->
-  </header>
+                <!--mobile button--> 
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+</header>
 
 <style>
 
   .head-btn1 {
     margin-right: 5px;
-}
-.btn {
+  }
+  .btn {
     background: #fb246a;
     -moz-user-select: none;
     text-transform: capitalize;
@@ -258,286 +261,312 @@
     border: 0;
     overflow: hidden;
     margin: 0;
-}
+  }
 
-.btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-}
-.head-btn2 {
+  }
+  .head-btn2 {
     background: none;
     border: 1px solid #fb246a;
     color: #fb246a;
-}
+  }
 
 </style>
 
 <style>
+
   span{
     font-family: "Barlow",sans-serif;
-   font-weight: 400;
+    font-weight: 400;
   }
+
 </style>
 
 <section class="u-clearfix u-section-1" id="sec-8459">
-    
-      <div class="u-clearfix u-sheet u-sheet-1">
-
-
-<form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
+   <div class="u-clearfix u-sheet u-sheet-1">
+      <form action="" autocomplete="off" method="POST" source="custom" name="form" redirect="true">
 <br>
-<div class="col-md-4">
- <h6 class="" style="font-weight: 500; font-size: 0.90rem;">Search CVs</h6>
-</div>
-<div class="u-layout-row">
-<div class="col-md-2">
-<!-- <h6 style="font-size: 0.90rem;">Skills</h6> -->
-<form action="" method="post" autocomplete="off">
-    <div class="input-group">
-       <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
-       <!-- <button name="submit" class="btn head-btn2" style="padding: 0.4rem 2rem;" type="submit">
-          <i class="fa fa-search"></i>
-       </button> -->
+   <div class="col-md-4">
+      <h6 class="" style="font-weight: 500; font-size: 0.90rem;">Search CVs</h6>
    </div>
-</form>
-</div>
+   <div class="u-layout-row">
+      <div class="col-md-2">
+         <form action="" method="post" autocomplete="off">
+            <div class="input-group">
+               <input name="Skills" id="Skills" type="text" placeholder="Search for Skills" class="form-control">
+            </div>
+         </form>
+      </div>
 
-<!-- <div class="col-md-3"> -->
-<!-- <h6 style="font-size: 0.90rem;">Experience</h6> -->
-<div class="input-group" style="width: 140px;">
+      <div class="input-group" style="width: 140px;">
          <select type="text" class="form-control" name="Experience_years"id="Experience_years">
-                      
-             
-                        <?php      
 
-                            $query="SELECT Experience FROM experience";
-                            $select_experience=mysqli_query($connection,$query);
+            <?php      
 
-                             if(!$select_experience) {
-            
-                              die("Query Failed" . mysqli_error($connection));
-                          } 
+                $query="SELECT Experience FROM experience";
+                $select_experience=mysqli_query($connection,$query);
 
-                            while($row=mysqli_fetch_assoc($select_experience)){
+                  if(!$select_experience) {
 
-                            $experience=$row['Experience'];               
+                    die("Query Failed" . mysqli_error($connection));
 
-                           if($experience == $Experience_years) {
-                            
-                         echo "<option value='$Experienced'>$experience</option>";
-                       
-                        }else{
-                            
-                        echo "<option value='$experience'>$experience</option>";
-             
-                         }     
-                        } 
-                       
-                        $Experienced=$_POST['Experience_years'];
+                  } 
 
-                        if(!empty($Experienced)){
+                while($row=mysqli_fetch_assoc($select_experience)){
 
-                          echo "<option selected value='$Experienced'> $Experienced </option>";
-                           
-                        }else{
+                  $experience=$row['Experience'];               
 
-                          echo "<option selected value='Select Experience'>Select Experience</option>";
-                          
-                        }
-                        
-                     ?>
-         </select>
-         
- </div>
- <!-- </div> -->
-  <button name="submit" style="padding: 0.2rem 1rem;" class="btn head-btn2" type="submit">
-    <i class="fa fa-search"></i>
-  </button>
+                  if($experience == $Experience_years) {
+                    
+                    echo "<option value='$Experienced'>$experience</option>";
+               
+                  }
+                  else{
+                    
+                    echo "<option value='$experience'>$experience</option>";
+     
+                  }     
+                } 
+               
+                $Experienced=$_POST['Experience_years'];
 
-</div>
+                if(!empty($Experienced)){
+
+                  echo "<option selected value='$Experienced'> $Experienced </option>";
+                   
+                }
+                else{
+
+                  echo "<option selected value='Select Experience'>Select Experience</option>";
+                  
+                }
+                
+            ?>
+         </select>        
+      </div>
+
+      <button name="submit" style="padding: 0.2rem 1rem;" class="btn head-btn2" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+
+   </div>
 </form>
 <br>
 <div class="row justify-content-md-center align-items-center h-100">
-<div class="u-layout-row">
-<?php
+   <div class="u-layout-row">
 
- if (isset($_POST['submit'])){
+    <?php
 
-            $Skill=trim($_POST['Skills']);
-            $Experienced=trim($_POST['Experience_years']);
-            // $Educate=$_POST['Education'];
-            // $Functions=$_POST['Function'];
-            // $search=$_POST['Fullname'];
-            // $Industries=$_POST['Industry'];
-            
+     if (isset($_POST['submit'])){
 
-             // if($search !="" || $Industries !="" || $Educate !="" || $Functions != "" || $Skill != ""){
-            // $users="SELECT * FROM users WHERE Fullname = '$search' || Industry='$Industries' || Education='$Educate'  || Function='$Functions' || Skills='$Skill' "; 
+        $Skill=trim($_POST['Skills']);
+        $Experienced=trim($_POST['Experience_years']);
 
-            if($Skill != "" || $Experienced != ""){
+        $json = file_get_contents("search_profile.json");
+        $json_output = json_decode($json, true);
 
-              $users="SELECT * FROM users WHERE Skills = '$Skill' || Experience_years='$Experienced' "; 
+        if($Skill != "" || $Experienced != ""){
+          foreach($json_output as $row)
+          {
 
-              $search_users=mysqli_query($connection, $users); 
+              $id=trim($row['id']);
+              $Fullname=trim($row['Fullname']);
+              $Image=trim($row['Image']);
+              $Email=trim($row['Email']);
+              $User_type=trim($row['User_type']);
+              $Phone=trim($row['Phone']);
+              $City=trim($row['City']);
+              $Education=trim($row['Education']);
+              $Industry=trim($row['Industry']);
+              $Skills=$row['Skills'];
+              $Function=trim($row['Function']);
+              $Experience_years=trim($row['Experience_years']);
+              $Experience_months =trim($row['Experience_months']);
 
-                 if(!$search_users){
-                    die("QUERY FAILED" . mysqli_error($connection));
-                }
-                $count=mysqli_num_rows($search_users);
-                if($count == 0){
+              $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
+              $Skills3= preg_replace('/\"\]/i', '', $Skills2);
+              $Skills4= preg_replace('/"/i', '', $Skills3);
 
-             ?>
+              if ($Skills4 == $Skill || $row['Experience_years'] == $Experienced){
+    ?>
+    <br>
+    <br>
 
-          <center><div class="col-md-1">
-           <?php   echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
-          </div></center>
+    <div class="card">
+      <div class="container">
+        <div class="u-layout-row">
+          <div class="u-align-left" style="width: 520px;">
 
-          <br>
+            <h6><b><?php echo $Fullname; ?></b></h6><br>
 
-             <?php
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Skills:&nbsp;&nbsp;</span>
+                    <?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Experience:&nbsp;&nbsp;</span>
+                    <?php echo $Experience_years; ?>
+                </p>
 
-                echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
-                    
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Function:&nbsp;&nbsp;</span>
+                    <?php echo $Function; ?>
+                </p>
+
+                <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                    <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Email:&nbsp;&nbsp;</span>
+                    <?php echo $Email; ?>
+                </p>
+
+          </div>
+          <div class="u-align-center" style="padding-left: 40px;"> 
+             <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+             <br>
+             <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+         </div>
+         <div class="u-align-right" style="width: 50px;">
+             <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                 <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                  <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$Email}' class='dropdown-item'>Delete</a>" ?>
+                </div>
+             </li>
+         </div>  
+      
+        </div>
+      </div>
+    </div>
+
+       <?php 
+             }
+             else{
+       ?>
+
+            <!-- <center><div class="col-md-1">
+            <?php   //echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";   ?>
+            </div></center>
+
+            <br> -->
+
+      <?php
+
+          // echo "<h3 style='color:#b0b5b1'>No Users Available on your search</h3>";
+
             }
-           else{
-            echo "<a class='btn head-btn2' style='padding: 1.2rem 2rem;' href='Jobseeker_profile.php'>Back</a>";
-   ?>
-   <br>
-   <br>
-   <?php
-             while($row=mysqli_fetch_assoc($search_users)){
+          }
+      }
+      else{
 
-                    $id=$row['id'];
-                    $Fullname=$row['Fullname'];
-                    $Image=$row['Image'];
-                    $Email=$row['Email'];
-                    $User_type=$row['User_type'];
-                    $Phone=$row['Phone'];
-                    $City=$row['City'];
-                    $Education=$row['Education'];
-                    // $Industry=substr($row['Industry'],0,37);
-                    // $Function=substr($row['Function'],0,37);
-                    $Industry=$row['Industry'];
-                    $Skills=$row['Skills'];
-                    $Function=$row['Function'];
-                    $Experience_years=$row['Experience_years'];
-                    $Experience_months =$row['Experience_months'];
+        header("Location:Jobseeker_profile.php");
 
-if($User_type == "Job Seeker"){
+      }
+     }
+     else{
 
+        $data = file_get_contents("search_profile.json");
+        $data = json_decode($data, true);
+
+        foreach($data as $row)
+        {
+
+            $id=trim($row['id']);
+            $Fullname=trim($row['Fullname']);
+            $Image=trim($row['Image']);
+            $Email=trim($row['Email']);
+            $User_type=trim($row['User_type']);
+            $Phone=trim($row['Phone']);
+            $City=trim($row['City']);
+            $Education=trim($row['Education']);
+            $Industry=trim($row['Industry']);
+            $Skills=$row['Skills'];
+            $Function=trim($row['Function']);
+            $Experience_years=trim($row['Experience_years']);
+            $Experience_months =trim($row['Experience_months']);
+
+            $Skills2= preg_replace('/\[\"/i', '', json_encode($Skills));
+            $Skills3= preg_replace('/\"\]/i', '', $Skills2);
+            $Skills4= preg_replace('/"/i', '', $Skills3);
 ?>
 
+    <div class="card">
+    <div class="container">
+        <div class="u-layout-row">
+            <div class="u-align-left" style="width: 480px;">
 
-<div class="card">
-<div class="container">
-    <div class="u-layout-row">
-        <div class="u-align-left" style="width: 520px;">
+            <h6><b><?php echo $Fullname; ?></b></h6><br>
 
-        <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Skills:&nbsp;&nbsp;</span>
+                <?php echo trim($Skills4); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Experience:&nbsp;&nbsp;</span>
+                <?php echo $Experience_years; ?>
+            </p>
 
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Function:&nbsp;&nbsp;</span>
+                <?php echo $Function; ?>
+            </p>
 
-  </div>
-  <div class="u-align-center" style="padding-left: 40px;"> 
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
-     <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
-     </div>
-     <div class="u-align-right" style="width: 50px;">
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-             <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
-          </div>
-        </li>
-     </div>  
-  
-</div>
-  </div>
-</div>
+            <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem; color: #656669;">
+                <span style="font-weight: 500; font-size: 0.86rem; color: #000000;">Email:&nbsp;&nbsp;</span>
+                <?php echo $Email; ?>
+            </p>
 
-<?php 
-}
+      </div>
+      <div class="u-align-center" style="padding-left: 40px;">
+         <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
+         <br>
+         <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $Email; ?>'>View Profile</a>
+         </div>
+         <div class="u-align-right" style="width: 50px;">
+            <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                  <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                 <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+               <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
+                <!-- <a class="btn btn-danger" href="Jobseeker_profile.php?id=<?php echo $id?>">Delete</a> -->
+              </div>
+            </li>
+         </div>  
+      
+    </div>
+    </div>
+    </div>
 
-      } 
-    }
-  }else{
-    
-    header("Location:Jobseeker_profile.php");
-
-  }
-
-}else{
-
-
-  $query = "SELECT * FROM users WHERE User_type='Job Seeker'";
-  $artist_id = mysqli_query($connection,$query);
-
-  while($row=mysqli_fetch_array($artist_id)){
-
-        $id=$row['id'];
-        $Fullname=$row['Fullname'];
-        $Image=$row['Image'];
-        $Email=$row['Email'];
-        $User_type=$row['User_type'];
-        $Phone=$row['Phone'];
-        $City=$row['City'];
-        $Education=$row['Education'];
-        // $Industry=substr($row['Industry'],0,37);
-        // $Function=substr($row['Function'],0,37);
-        $Industry=$row['Industry'];
-        $Skills=$row['Skills'];
-        $Function=$row['Function'];
-        $Experience_years=$row['Experience_years'];
-        $Experience_months =$row['Experience_months'];
-
-
-?>
-
-<div class="card">
-<div class="container">
-    <div class="u-layout-row">
-        <div class="u-align-left" style="width: 480px;">
-
-        <h6><b><?php echo $Fullname; ?></b></h6><br>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Skills:&nbsp;&nbsp;<?php echo $Skills; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience:&nbsp;&nbsp;<?php echo $Experience_years; ?>  </p>
-
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;">Function:&nbsp;&nbsp;<?php echo $Function; ?></p>
-        <p style="margin-top: -20px; margin-bottom: 20px; font-size: 0.795rem;"><?php echo $Email; ?></p>
-
-  </div>
-  <div class="u-align-center" style="padding-left: 40px;"> 
-     <img src="images/<?php echo $Image ?>" style="width:50px; height:50px; border-radius:10%;">
-     <br>
-     <a class='btn head-btn2' style='padding: 0.8rem 0.1rem; margin-top: 40px;' href='Jobseeker_full_profile.php?profile=<?php echo $id; ?>'>View Profile</a>
-     </div>
-     <div class="u-align-right" style="width: 50px;">
-        <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-              <a class="u-nav-link" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
-             <i style="font-size:22px" class="fa fa-ellipsis-v"></i></a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-           <?php echo "<a onClick=\"javascript:return confirm('Are you Sure you want to delete $Fullname profile');\"href='Jobseeker_profile.php?delete={$id}' class='dropdown-item'>Delete</a>" ?>
-          </div>
-        </li>
-     </div>  
-  
-</div>
-  </div>
-</div>
-
-
-<?php } } ?>
 
 <?php
 
-     if(isset($_GET['delete'])){
-         $id=$_GET['delete'];
-         $query="DELETE FROM users WHERE id={$id}";
-         $delete_query=mysqli_query($connection,$query);
-         header("Location:Jobseeker_profile.php");
+        }
+
      }
+
+?>
+
+<?php
+ if(isset($_GET['id'])){
+    $id = $_GET['id'];
+ 
+    $data = file_get_contents('search_profile.json');
+    $json = json_decode($data);
+ 
+    unset($json[$id]);
+ 
+    $json = json_encode($json, JSON_PRETTY_PRINT);
+    file_put_contents('search_profile.json', $json);
+ 
+    header('location: Jobseeker_profile.php');
+ }
+
+?>
+
+<?php
+
+     // if(isset($_GET['delete'])){
+     //     $Email=$_GET['delete'];
+     //     $query="DELETE FROM users WHERE Email={$Email}";
+     //     $delete_query=mysqli_query($connection,$query);
+     //     header("Location:Jobseeker_profile.php");
+     // }
 ?>
 
   </div>       
@@ -606,16 +635,16 @@ if($User_type == "Job Seeker"){
       });
     });
 
-    window.addEventListener("DOMContentLoaded", function(){
-      ac.attach({
-        target: "Skills",
-        data: "search.php",
-        post: { type: "Skills" },
-        // OPTIONAL
-        delay : 50,
-        min : 1
-      });
-    });
+    // window.addEventListener("DOMContentLoaded", function(){
+    //   ac.attach({
+    //     target: "Skills",
+    //     data: "search.php",
+    //     post: { type: "Skill" },
+    //     // OPTIONAL
+    //     delay : 50,
+    //     min : 1
+    //   });
+    // });
 </script>
 
 <footer class="u-clearfix u-footer" id="sec-ff43"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">

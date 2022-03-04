@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
                 $count=mysqli_num_rows($search_jobs);
                 if($count == 0){
 
-               header ("Location: Available_jobs.php?jobs=$search");
+               header ("Location: Available_jobs.php");
                        
             }else{
               while($row=mysqli_fetch_assoc($search_jobs)){
@@ -41,9 +41,9 @@ if (isset($_POST['submit'])){
             }
 
         }
-       }elseif($skills !="" || $location !=""){
+       }elseif($location !=""){
 
-      $jobs="SELECT * FROM jobs WHERE Job_title = '$search' || Skills='$skills' || Location='$location' ";
+      $jobs="SELECT * FROM jobs WHERE Job_title = '$search' || Location='$location' ";
 
               $search_jobs=mysqli_query($connection, $jobs); 
 

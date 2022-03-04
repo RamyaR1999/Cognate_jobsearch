@@ -7,9 +7,10 @@
 
 if(isset($_GET['profile'])){
 
-  $Email = $_GET['profile'];  
+  // $Email = $_GET['profile'];
+  $id = $_GET['profile'];
            
-     $query="SELECT * FROM users WHERE Email = '{$Email}' ";
+     $query="SELECT * FROM users WHERE id = '{$id}' ";
      $select_user_profile = mysqli_query($connection,$query);
 
       
@@ -88,7 +89,7 @@ if(isset($_GET['profile'])){
         if(preg_match('/^[\p{L} ]+$/u', $Fullname)) {
          
               
-    $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE Email= '{$Email}' ";  
+    $query="UPDATE users SET Fullname= '{$Fullname}', Image= '{$Image}', Email= '{$Email}',Phone= '{$Phone}',City='{$City}', Industry='{$Industry}',Function='{$Function}',Education='{$Education}',Experience_years='{$Experience_years}',Experience_months='{$Experience_months}',Current_Salary_lakhs='{$Current_Salary_lakhs}',Current_Salary_thousand='{$Current_Salary_thousand}',Expected_Salary_lakhs='{$Expected_Salary_lakhs}',Expected_Salary_thousand='{$Expected_Salary_thousand}',CV='{$CV}'  WHERE id= '{$id}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
 
@@ -97,7 +98,7 @@ if(isset($_GET['profile'])){
             die("Query Failed" . mysqli_error($connection));
         }           
           
-           header("Location:Jobseeker_full_profile.php?profile=$Email"); 
+           header("Location:Jobseeker_full_profile.php?profile=$id"); 
 
           }else{
               $message_Fullname ="Only Alphabets are allowed in Fullname";
