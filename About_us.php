@@ -185,7 +185,6 @@ if (isset($_POST['submit'])){
                                                     class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                                                     href="About_us.php">About</a>
 
-
                                             </li>
 
                                         </ul>
