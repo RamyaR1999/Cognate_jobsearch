@@ -215,43 +215,39 @@
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li> -->
 
-<<<<<<< HEAD
-                                                </ul>
+                                                    <<<<<<< HEAD </ul>
                                             </li>
                                             <li class="u-nav-item"><a
                                                     class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                                                     href="Services.php">Services</a>
 
+
+
+
+
                                                 <ul class="submenu">
 
-                                                    <li><a href="submit_job.php">Create Job</a></li><br>
-                                                    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li> -->
-                                                    <li><a href="Contact.php">Contact</a></li>
+                                                    <li><a href="submit_job.php"><i class="fa-solid fa-file-signature"
+                                                                style="color:crimson"></i>&nbsp; Create Job</a></li><br>
 
+                                                    <li><a href="Register-Member.php"><i class="fas fa-user-plus"
+                                                                style="color:crimson"></i>&nbsp;Add Candidate</a></li>
+                                                    <li><a href="Contact.php"><i class="fas fa-envelope"
+                                                                style="color:crimson"></i>&nbsp;&nbsp;Contact</a></li>
                                                 </ul>
-=======
-  <ul class="submenu">
-         
-  <li><a href="submit_job.php"><i class="fa-solid fa-file-signature" style="color:crimson"></i>&nbsp; Create Job</a></li><br>
-
-<li><a href="Register-Member.php"><i class="fas fa-user-plus" style="color:crimson"></i>&nbsp;Add Candidate</a></li>
-<li><a href="Contact.php"><i class="fas fa-envelope"style="color:crimson"></i>&nbsp;&nbsp;Contact</a></li>   
-</ul>
-
-</li>
-     
-  </ul>
->>>>>>> b418c06b992f4042d0a59dc328e6eaa7ca9c0bad
 
                                             </li>
-                                            <li class="u-nav-item"><a
-                                                    class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                                    href="About_us.php">About</a>
+
+                                        </ul>
 
 
-                                            </li>
+                                        </li>
+                                        <li class="u-nav-item"><a
+                                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                                                href="About_us.php">About</a>
+
+
+                                        </li>
 
                                         </ul>
                                     </nav>
