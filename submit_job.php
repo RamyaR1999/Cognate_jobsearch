@@ -571,7 +571,7 @@
                                         </div>
                                         <div class="form-group">
                                             &nbsp;
-                                            <label for="">Skills </label>
+                                            <label for="">Skills <span style="color:red"> *</span></label>
                                             <textarea class="form-control" rows="4" id="Skills" style="width: 320px;"
                                                 name="Skills"><?php echo isset($_POST["Skills"]) ? $_POST["Skills"] : ''; ?></textarea>
 
