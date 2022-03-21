@@ -467,13 +467,13 @@
 
                         <div class="card fat">
                             <div class="card-body">
-                                <h4 class="card-title">Create Job</h4>
+                                <h4 class="card-title"><span style="color:crimson">Create Job</span></h4>
 
                                 <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
 
                                 <form method="POST" class="my-login-validation" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="text">Job title *</label>
+                                        <label for="text">Job title<span style="color:red"> *</span></label>
                                         <input type="text"
                                             value="<?php echo isset($_POST["Job_title"]) ? $_POST["Job_title"] : ''; ?>"
                                             class="form-control" name="Job_title" required autofocus>
@@ -481,15 +481,15 @@
                                         <span style="color:#ff0000"><?php echo $message_Job_title ; ?></span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Job description *</label>
-                                        <textarea type="textarea" class="form-control" rows="8"
+                                        <label for="">Job description <span style="color:red"> *</span></label>
+                                        <textarea type=" textarea" class="form-control" rows="8"
                                             name="Job_description"><?php echo isset($_POST["Job_description"]) ? $_POST["Job_description"] : ''; ?></textarea>
 
                                         <span style="color:#ff0000"><?php echo $message_Job_description; ?></span>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="">Location *</label>
+                                        <label for="">Location <span style="color:red"> *</span></label>
                                         <div style="position:relative" id="">
                                             <select type="text" id="Location_country" onclick="Location_country_Code ()"
                                                 name="Location_country"
@@ -557,7 +557,7 @@
                                         </div>
                                         <div class="form-group">
                                             &nbsp;
-                                            <label for="">Job type *</label>
+                                            <label for="">Job type <span style="color:red"> *</span></label>
                                             <select type="text" class="form-control" name="Job_type" id="Job_type">
                                                 <option value="">-- please select job type --</option>
                                                 <option value="Fulltime - Onsite">Fulltime - Onsite</option>
