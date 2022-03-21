@@ -215,7 +215,7 @@
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li> -->
 
-                                                    <<<<<<< HEAD </ul>
+                                                </ul>
                                             </li>
                                             <li class="u-nav-item"><a
                                                     class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
