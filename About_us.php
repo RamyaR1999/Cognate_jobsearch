@@ -168,15 +168,15 @@ if (isset($_POST['submit'])){
                                                     <li><a href="Register-Member.php">
                                                             <i class="fas fa-user-plus" style="color:crimson"></i>&nbsp;
                                                             Add
-                                                            Applicant</a>
+                                                            Canditate</a>
                                                     </li>
-                                                    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li> -->
 
                                                     <li><a href="Contact.php"><i class="fas fa-envelope"
                                                                 style="color:crimson"></i>&nbsp;&nbsp;Contact</a>
                                                     </li>
+                                                    <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
+    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
+    <li><a href="ourSolution.php">Our Solutions</a></li> -->
 
                                                 </ul>
 

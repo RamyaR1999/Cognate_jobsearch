@@ -152,6 +152,8 @@ $mail->SMTPSecure='tls';
 
  <!-- Font Awesome Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/fontawesome.min.css">
 
 <!-- Autocomplete -->
 <script type='text/javascript' src='js/autocomplete.js'></script>
@@ -220,11 +222,18 @@ $mail->SMTPSecure='tls';
 
   <ul class="submenu">
          
-    <li><a href="submit_job.php">Create Job</a></li><br>
-   <!--  <li><a href="request_callback.php">Request A Call Back</a></li>
-    <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
-    <li><a href="ourSolution.php">Our Solutions</a></li> -->
-    <li><a href="Contact.php">Contact</a></li>
+  <li><a href="submit_job.php"> <i class="fa-solid fa-file-signature"
+                                                                style="color:crimson"></i>&nbsp; Create Job</a></li><br>
+
+                                                    <li><a href="Register-Member.php">
+                                                            <i class="fas fa-user-plus" style="color:crimson"></i>&nbsp;
+                                                            Add
+                                                            Canditate</a>
+                                                    </li>
+                                                    
+                                                    <li><a href="Contact.php"><i class="fas fa-envelope"
+                                                                style="color:crimson"></i>&nbsp;&nbsp;Contact</a>
+                                                    </li>
      
   </ul>
 
