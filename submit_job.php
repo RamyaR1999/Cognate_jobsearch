@@ -196,21 +196,27 @@
 
                                                 <ul class="submenu">
 
-                                                    <li><a href="submit_cv.php">Submit CV</a></li><br>
+                                                    <li><a href="submit_cv.php"><i class="fa-solid fa-file"
+                                                                style="color:crimson"></i> &nbsp;&nbsp;Submit
+                                                            CV</a></li><br>
                                                     <?php
 
        if($_SESSION['User_type'] == 'Admin'){     
 
     ?>
 
-                                                    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
+                                                    <li><a href="Jobseeker_profile.php"><i class="fa-solid fa-users"
+                                                                style="color:crimson"></i> &nbsp;Search Candidates</a>
+                                                    </li><br>
 
                                                     <?php
         
        }
 
     ?>
-                                                    <li><a href="Available_jobs.php">Find Jobs</a></li>
+                                                    <li><a href="Available_jobs.php"><i class="fa-solid fa-earth-asia"
+                                                                style="color:crimson"></i>&nbsp; &nbsp;Find Jobs</a>
+                                                    </li>
                                                     <!--  <li><a href="career_hub.php">Career Hub</a></li>
     <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
     <li><a href="security_advice.php">Security Advice</a></li> -->
@@ -467,7 +473,7 @@
 
                         <div class="card fat">
                             <div class="card-body">
-                                <h4 class="card-title"><span style="color:crimson">Create Job</span></h4>
+                                <h4 class="card-title" style="color:crimson">Create Job</h4>
 
                                 <h6 class="" style="color:#ff0017"><?php echo $message; ?></h6>
 
