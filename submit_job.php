@@ -197,7 +197,7 @@
                                                 <ul class="submenu">
 
                                                     <li><a href="submit_cv.php"><i class="fa-solid fa-file"
-                                                                style="color:crimson"></i> &nbsp;&nbsp;Submit
+                                                                style="color:crimson"></i> &nbsp;&nbsp;&nbsp;Submit
                                                             CV</a></li><br>
                                                     <?php
 
@@ -206,7 +206,7 @@
     ?>
 
                                                     <li><a href="Jobseeker_profile.php"><i class="fa-solid fa-users"
-                                                                style="color:crimson"></i> &nbsp;Search Candidates</a>
+                                                                style="color:crimson"></i>&nbsp;Search Candidates</a>
                                                     </li><br>
 
                                                     <?php
