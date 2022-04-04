@@ -48,6 +48,7 @@ if (isset($_POST['search'])){
 <html class="no-js" lang="zxx">
 
 <!--tittle-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -77,8 +78,9 @@ if (isset($_POST['search'])){
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
     <!-- Profile Icon -->
     <link rel="stylesheet" href="assets/css/shared/style.css">
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
@@ -101,64 +103,70 @@ if (isset($_POST['search'])){
 <body>
     <!--loading time image-->
     <div id="preloader-active">
-       <div class="preloader d-flex align-items-center justify-content-center">
-          <div class="preloader-inner position-relative">
-             <div class="preloader-circle"></div>
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                  <img src="image/cognate.png" alt="">
+                    <img src="image/cognate.png" alt="">
                 </div>
-          </div>
-       </div>
+            </div>
+        </div>
     </div>
 
-<header>
-   <div class="header-area header-transparrent">
-      <div class="headder-top header-sticky">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-3 col-md-2">
-                  <!--logoo-->
-                  <div class="logo">
-                    <a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
-                  </div>  
-               </div>  
-<div class="col-lg-9 col-md-9">
-<div class="menu-wrapper">
-  
-     <!-- Main-menu -->
-<div class="main-menu u-custom-menu u-nav-container">
-   <nav class="d-none d-lg-block">
-      <ul class="u-nav u-unstyled u-nav-1" id="navigation">
-         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php">Home</a>
-         </li>
-         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Job_seeker.php">Job Seeker</a>
+    <header>
+        <div class="header-area header-transparrent">
+            <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-2">
+                            <!--logoo-->
+                            <div class="logo">
+                                <a href="Home.php"><img src="image/cognate.png" alt="" width="150px"> </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="menu-wrapper">
 
-           <ul class="submenu">
+                                <!-- Main-menu -->
+                                <div class="main-menu u-custom-menu u-nav-container">
+                                    <nav class="d-none d-lg-block">
+                                        <ul class="u-nav u-unstyled u-nav-1" id="navigation">
+                                            <li class="u-nav-item"><a
+                                                    class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                                                    href="Home.php">Home</a>
+                                            </li>
+                                            <li class="u-nav-item"><a
+                                                    class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                                                    href="Job_seeker.php">Job Seeker</a>
 
-             <li><a href="submit_cv.php">Submit CV</a></li><br>    
-                <?php
+                                                <ul class="submenu">
+
+                                                    <li><a href="submit_cv.php">Submit CV</a></li><br>
+                                                    <?php
 
                    if($_SESSION['User_type'] == 'Admin'){     
 
                 ?>
 
-             <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
-            
-                <?php
+                                                    <li><a href="Jobseeker_profile.php">Search Candidates</a></li><br>
+
+                                                    <?php
                     
                    }
 
                 ?>
-            <li><a href="Available_jobs.php">Find Jobs</a></li>
-            <!-- <li><a href="career_hub.php">Career Hub</a></li>
+                                                    <li><a href="Available_jobs.php">Find Jobs</a></li>
+                                                    <!-- <li><a href="career_hub.php">Career Hub</a></li>
             <li><a href="areas_of_expertise.php">Areas of Expertise</a></li>
             <li><a href="security_advice.php">Security Advice</a></li> -->
-             
-           </ul>      
-         </li>
-         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Services.php">Services</a>
 
-         <li><a href="submit_job.php"> <i class="fa-solid fa-file-signature"
+                                                </ul>
+                                            </li>
+                                            <li class="u-nav-item"><a
+                                                    class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                                                    href="Services.php">Services</a>
+                                                <ul class="submenu">
+                                                    <li><a href="submit_job.php"> <i class="fa-solid fa-file-signature"
                                                                 style="color:crimson"></i>&nbsp; Create Job</a></li><br>
 
                                                     <li><a href="Register-Member.php">
@@ -166,44 +174,47 @@ if (isset($_POST['search'])){
                                                             Add
                                                             Canditate</a>
                                                     </li>
-                                                    
+
                                                     <li><a href="Contact.php"><i class="fas fa-envelope"
                                                                 style="color:crimson"></i>&nbsp;&nbsp;Contact</a>
                                                     </li>
-     
-           </ul>
 
-         </li>
-         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About_us.php">About</a>
-         </li>
- 
-      </ul>
-    </nav>
-</div>        
-<!--header button-->
+                                                </ul>
 
-<div class="header-btn d-none f-right d-lg-block">
+                                            </li>
+                                            <li class="u-nav-item"><a
+                                                    class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                                                    href="About_us.php">About</a>
+                                            </li>
 
-  <?php
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!--header button-->
+
+                                <div class="header-btn d-none f-right d-lg-block">
+
+                                    <?php
 
       if(isset($_SESSION['Email']) == $db_Email){
 
-  ?> 
-      <a href="Register-Member.php" class="btn head-btn1">Register</a>
-  
-      <a href="Member-Login.php" class="btn head-btn2">Login</a>
+  ?>
+                                    <a href="Register-Member.php" class="btn head-btn1">Register</a>
+
+                                    <a href="Member-Login.php" class="btn head-btn2">Login</a>
 
 
-  <?php 
+                                    <?php 
               
       }else{
               
-  ?> 
+  ?>
 
-    <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
-      <a class="u-nav-link dropdown-toggle" id="UserDropdown" href="" data-toggle="dropdown" aria-expanded="false">
+                                    <li class="u-nav-item dropdown d-none d-xl-inline-block user-dropdown">
+                                        <a class="u-nav-link dropdown-toggle" id="UserDropdown" href=""
+                                            data-toggle="dropdown" aria-expanded="false">
 
-  <?php 
+                                            <?php 
 
       if(isset($_SESSION['id'])){
 
@@ -222,14 +233,17 @@ if (isset($_POST['search'])){
    ?>
 
 
-       <img class="" style="width:40px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
-       </a>
-       <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-          <div class="dropdown-header text-center">
-             <img class="" style="width:60px; border-radius: 100%;" src ='images/<?php echo $Image ?>' alt="">
+                                            <img class="" style="width:40px; border-radius: 100%;"
+                                                src='images/<?php echo $Image ?>' alt="">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                                            aria-labelledby="UserDropdown">
+                                            <div class="dropdown-header text-center">
+                                                <img class="" style="width:60px; border-radius: 100%;"
+                                                    src='images/<?php echo $Image ?>' alt="">
 
-                <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
-                   <?php
+                                                <p class="mb-1 mt-3 font-weight-semibold" style="color:darkblue;">
+                                                    <?php
                       
                        if(isset($_SESSION['Fullname'])){
                           
@@ -238,109 +252,114 @@ if (isset($_POST['search'])){
                        }
                       
                    ?>
-                      
-                </p>     
-          </div>
-            <a class="dropdown-item" href="profile.php"><i class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
-            <a class="dropdown-item" href="Logout.php"><i class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
-       </div>
-    </li>
 
-<?php 
+                                                </p>
+                                            </div>
+                                            <a class="dropdown-item" href="profile.php"><i
+                                                    class="dropdown-item-icon ti-dashboard"></i> My Profile</a>
+                                            <a class="dropdown-item" href="Logout.php"><i
+                                                    class="dropdown-item-icon ti-power-off"></i> Sign Out</a>
+                                        </div>
+                                    </li>
+
+                                    <?php 
               
       }
 
-?> 
+?>
 
 
 
-</div>
-</div>
-</div>
-               <!--mobile button--> 
-               <div class="col-12">
-                  <div class="mobile_menu d-block d-lg-none"></div>
-               </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--mobile button-->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-<!-- Header End -->
-</header>
+        </div>
+        <!-- Header End -->
+    </header>
 
-<style>
+    <style>
+    .head-btn1 {
+        margin-right: 5px;
+    }
 
-  .head-btn1 {
-    margin-right: 5px;
-  }
-  .btn {
-    background: #fb246a;
-    -moz-user-select: none;
-    text-transform: capitalize;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 0;
-    margin-bottom: 0;
-    padding: 27px 44px;
-    border-radius: 0px;
-    margin: 10px;
-    cursor: pointer;
-    transition: color 0.4s linear;
-    position: relative;
-    z-index: 1;
-    border: 0;
-    overflow: hidden;
-    margin: 0;
-  }
+    .btn {
+        background: #fb246a;
+        -moz-user-select: none;
+        text-transform: capitalize;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 0;
+        margin-bottom: 0;
+        padding: 27px 44px;
+        border-radius: 0px;
+        margin: 10px;
+        cursor: pointer;
+        transition: color 0.4s linear;
+        position: relative;
+        z-index: 1;
+        border: 0;
+        overflow: hidden;
+        margin: 0;
+    }
 
-  .btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
-  .head-btn2 {
-    background: none;
-    border: 1px solid #fb246a;
-    color: #fb246a;
-  }
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
 
-</style>
+    .head-btn2 {
+        background: none;
+        border: 1px solid #fb246a;
+        color: #fb246a;
+    }
+    </style>
 
-<style>    
-  .u-form-horizontal .u-input {
-    width: 300px;
-    flex-grow: 1;
-    flex-shrink: 1;
+    <style>
+    .u-form-horizontal .u-input {
+        width: 300px;
+        flex-grow: 1;
+        flex-shrink: 1;
 
-  }
-</style>
+    }
+    </style>
 
-<section class="u-clearfix u-section-2" id="sec-a8b6" style="height: 150px;">
-   <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-form u-form-1">
-         <form action="" autocomplete="off" method="POST" class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form" source="custom" name="form" style="padding: 10px;">
-             <input type="hidden" id="siteId" name="siteId" value="170795794">
-             <input type="hidden" id="pageId" name="pageId" value="206021425">
-             <div class="u-form-group u-form-name">
-                <label for="name-9c33" class="u-form-control-hidden u-label"></label>
-                <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-             </div>
-             <div class="u-align-left u-form-group u-form-submit">
-                <a href="" class="btn head-btn2" style="align-left;padding: 20px;">Search</a>
-                <input type="submit" name="search" value="submit" class="u-form-control-hidden">
-             </div>
-         </form>
-      </div>
-   </div>
-</section>
-<div class="card">
-   <section class="u-clearfix u-section-3" id="sec-41fd" style="align-left">
-      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+    <section class="u-clearfix u-section-2" id="sec-a8b6" style="height: 150px;">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-form u-form-1">
+                <form action="" autocomplete="off" method="POST"
+                    class="u-clearfix u-form-custom-backend u-form-horizontal u-form-spacing-2 u-inner-form"
+                    source="custom" name="form" style="padding: 10px;">
+                    <input type="hidden" id="siteId" name="siteId" value="170795794">
+                    <input type="hidden" id="pageId" name="pageId" value="206021425">
+                    <div class="u-form-group u-form-name">
+                        <label for="name-9c33" class="u-form-control-hidden u-label"></label>
+                        <input type="text" placeholder="Search Job title" id="Jobtitle" name="Job_title"
+                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                        <a href="" class="btn head-btn2" style="align-left;padding: 20px;">Search</a>
+                        <input type="submit" name="search" value="submit" class="u-form-control-hidden">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="card">
+        <section class="u-clearfix u-section-3" id="sec-41fd" style="align-left">
+            <div class="u-align-left u-clearfix u-sheet u-sheet-1">
 
 
-<?php
+                <?php
 
   if(isset($_GET['jobs'])){
 
@@ -370,28 +389,32 @@ if (isset($_POST['search'])){
              $Job_posted = $row['Job_posted'];
 ?>
 
-    <div class="u-container-style u-list-item u-repeater-item" style="align-left">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-               <br><br>
-                <p class="u-text u-text-default u-text-1">
-                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
-                </p>
-                <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
-                <!-- <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p> -->
-                <p class="u-text u-text-4"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p><br>
-                <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
-                <p class="u-align-left u-text u-text-11"><?php echo $Skills; ?></p>
-                <br>
-                <div class="container" style="padding-left: 101px;">
-                    <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" style="align-right" target="_blank">Apply Now</a>
+                <div class="u-container-style u-list-item u-repeater-item" style="align-left">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <br><br>
+                        <p class="u-text u-text-default u-text-1">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
+                                href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>"
+                                target="_blank"><?php echo $Job_title; ?></a>
+                        </p>
+                        <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
+                        <p class="u-text u-text-default u-text-3"><?php echo $Location ?></p>
+                        <!-- <p class="u-text u-text-4"> <?php echo $Job_description; ?> ....</p> -->
+                        <p class="u-text u-text-4"><textarea class="textarea" rows="8" cols="120"
+                                style="border: none;"><?php echo $Job_description; ?></textarea></p><br>
+                        <h2 class="u-align-left u-text u-text-custom-color-1 u-text-11">skills</h2>
+                        <p class="u-align-left u-text u-text-11"><?php echo $Skills; ?></p>
+                        <br>
+                        <div class="container" style="padding-left: 101px;">
+                            <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>"
+                                class="btn head-btn1" style="align-right" target="_blank">Apply Now</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <br>
-            <br>
+                <br>
+                <br>
 
-  <?php          
+                <?php          
      }
   }else{
 
@@ -440,24 +463,28 @@ if (isset($_POST['search'])){
 
 ?>
 
-    
-          <div class="u-container-style u-list-item u-repeater-item" style="align-left">
-              <div class="u-container-layout u-similar-container u-container-layout-1" style="align-left">
-                <div class="card" style="align-left">
-                <br>
-                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" target="_blank"><?php echo $Job_title; ?></a>
 
-                <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
-                <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
-                <!-- <p class="u-text u-text-2"> <?php //echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
-                <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120" style="border: none;"><?php echo $Job_description; ?></textarea></p>
-              </div>
-          </div>
-        </div>
-        <br>
-        <div class="container" style="align-right">
-        <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>" class="btn head-btn1" target="_blank">Apply Now</a>
-        <?php
+                <div class="u-container-style u-list-item u-repeater-item" style="align-left">
+                    <div class="u-container-layout u-similar-container u-container-layout-1" style="align-left">
+                        <div class="card" style="align-left">
+                            <br>
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
+                                href="Job_details.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>"
+                                target="_blank"><?php echo $Job_title; ?></a>
+
+                            <p class="u-text u-text-default u-text-2"><?php echo $Job_posted ?></p>
+                            <p class="u-text u-text-default u-text-2"><?php echo $Location ?></p>
+                            <!-- <p class="u-text u-text-2"> <?php //echo str_replace ("\n", " ", stripslashes ($Job_description)); ?> ....</p> -->
+                            <p class="u-text u-text-2"><textarea class="textarea" rows="8" cols="120"
+                                    style="border: none;"><?php echo $Job_description; ?></textarea></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container" style="align-right">
+                    <a href="Apply_Job.php?Job_details=<?php echo $the_id ?>&<?php echo $Job_title ?>"
+                        class="btn head-btn1" target="_blank">Apply Now</a>
+                    <?php
 
         if($_SESSION['User_type'] == 'Admin'){
 
@@ -466,16 +493,16 @@ if (isset($_POST['search'])){
          }
 
         ?>
-       </div>
+                </div>
 
-<?php
+                <?php
 
   }
   }
   
 ?>
 
-<?php
+                <?php
 
      if(isset($_GET['delete'])){
          $the_id=$_GET['delete'];
@@ -485,13 +512,13 @@ if (isset($_POST['search'])){
      }
 ?>
 
-          </div>
-    </section>
-</div>
+            </div>
+        </section>
+    </div>
 
-<ul class="pager">
+    <ul class="pager">
 
-<?php
+        <?php
                  
               
               for($i=1; $i<=$count; $i++){
@@ -510,22 +537,24 @@ if (isset($_POST['search'])){
 
 
           ?>
-</ul>
+    </ul>
 
- <?php include "footer.php"; ?>
+    <?php include "footer.php"; ?>
 
 
-<!-- Autocomplete Script -->
-<script>
+    <!-- Autocomplete Script -->
+    <script>
     // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
-    window.addEventListener("DOMContentLoaded", function(){
-      ac.attach({
-        target: "Jobtitle",
-        data: "search.php",
-        post: { type: "Name" },
-        // OPTIONAL
-        delay : 50,
-        min : 1
-      });
+    window.addEventListener("DOMContentLoaded", function() {
+        ac.attach({
+            target: "Jobtitle",
+            data: "search.php",
+            post: {
+                type: "Name"
+            },
+            // OPTIONAL
+            delay: 50,
+            min: 1
+        });
     });
-</script>
+    </script>
